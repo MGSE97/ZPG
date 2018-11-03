@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="ProgramDataKey_8h" kind="file" language="C++">
+    <compoundname>ProgramDataKey.h</compoundname>
+    <includes local="no">string</includes>
+    <includes refid="Shader_8h" local="yes">Shader.h</includes>
+    <incdepgraph>
+      <node id="1779">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="1780" relation="include">
+        </childnode>
+        <childnode refid="1781" relation="include">
+        </childnode>
+        <childnode refid="1782" relation="include">
+        </childnode>
+        <childnode refid="1783" relation="include">
+        </childnode>
+        <childnode refid="1784" relation="include">
+        </childnode>
+        <childnode refid="1778" relation="include">
+        </childnode>
+      </node>
+      <node id="1778">
+        <label>string</label>
+      </node>
+      <node id="1780">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="1784">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="1781">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="1782">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="1783">
+        <label>xstring</label>
+      </node>
+      <node id="1777">
+        <label>ZPG/ProgramDataKey.h</label>
+        <link refid="ProgramDataKey_8h"/>
+        <childnode refid="1778" relation="include">
+        </childnode>
+        <childnode refid="1779" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classProgramDataKey" prot="public">ProgramDataKey</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Shader_8h" kindref="compound">Shader.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="classProgramDataKey" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classProgramDataKey" kindref="compound">ProgramDataKey</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="8" refid="classProgramDataKey_1ab2378434a42d81c34f97912197ad9a8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classProgramDataKey_1ab2378434a42d81c34f97912197ad9a8d" kindref="member">ProgramDataKey</ref>(Engine::Components::Shader*<sp/>shader,<sp/>std::string<sp/>property)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classProgramDataKey_1ac8797a9070abe91cea6ad8615d60fa90" kindref="member">Shader</ref><sp/>=<sp/>shader;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classProperty" kindref="compound">Property</ref><sp/>=<sp/>property;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="13" refid="classProgramDataKey_1ac8797a9070abe91cea6ad8615d60fa90" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Engine::Components::Shader*<sp/><ref refid="classProgramDataKey_1ac8797a9070abe91cea6ad8615d60fa90" kindref="member">Shader</ref>;</highlight></codeline>
+<codeline lineno="14" refid="classProgramDataKey_1a34706c7a5f763c8ecb8b5b1d70b41226" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classProgramDataKey_1a34706c7a5f763c8ecb8b5b1d70b41226" kindref="member">Property</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ZPG/ProgramDataKey.h"/>
+  </compounddef>
+</doxygen>

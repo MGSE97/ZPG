@@ -1,0 +1,189 @@
+\hypertarget{classGeneric_1_1Dictionary}{}\section{Generic\+:\+:Dictionary$<$ T\+Key, T\+Value $>$ Class Template Reference}
+\label{classGeneric_1_1Dictionary}\index{Generic\+::\+Dictionary$<$ T\+Key, T\+Value $>$@{Generic\+::\+Dictionary$<$ T\+Key, T\+Value $>$}}
+
+
+{\ttfamily \#include $<$Dictionary.\+h$>$}
+
+
+
+Inheritance diagram for Generic\+:\+:Dictionary$<$ T\+Key, T\+Value $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGeneric_1_1Dictionary__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Generic\+:\+:Dictionary$<$ T\+Key, T\+Value $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classGeneric_1_1Dictionary__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Dictionary}} \& \mbox{\hyperlink{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}{Add}} (T\+Key key, T\+Value value)
+\item 
+T\+Value \& \mbox{\hyperlink{classGeneric_1_1Dictionary_ab368d54de28e7a3514e1add4bb5b3a36}{First}} (T\+Value \+\_\+default=nullptr)
+\item 
+T\+Value \& \mbox{\hyperlink{classGeneric_1_1Dictionary_ad018bc166486129b48e9ededce313984}{Get}} (const T\+Key key, T\+Value \+\_\+default=nullptr)
+\item 
+T\+Value \& \mbox{\hyperlink{classGeneric_1_1Dictionary_ab4c4fca6ab2ea15fcccd88fe2213575e}{Last}} ()
+\item 
+T\+Value \& \mbox{\hyperlink{classGeneric_1_1Dictionary_a215ba40a8ff1006d0bf288a317758d3f}{operator\mbox{[}$\,$\mbox{]}}} (T\+Key key)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T\+Key, class T\+Value$>$\newline
+class Generic\+::\+Dictionary$<$ T\+Key, T\+Value $>$}
+
+
+
+Definition at line 7 of file Dictionary.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}\label{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}} 
+\index{Generic\+::\+Dictionary@{Generic\+::\+Dictionary}!Add@{Add}}
+\index{Add@{Add}!Generic\+::\+Dictionary@{Generic\+::\+Dictionary}}
+\subsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily template$<$typename T\+Key, class T\+Value$>$ \\
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Dictionary}}\& \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ T\+Key, T\+Value $>$\+::Add (\begin{DoxyParamCaption}\item[{T\+Key}]{key,  }\item[{T\+Value}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 10 of file Dictionary.\+h.
+
+
+
+Referenced by Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse(), and Application\+::\+Engines\+::\+Light\+Engine\+::\+Init().
+
+
+\begin{DoxyCode}
+11         \{
+12             \textcolor{keyword}{auto} pair = this->find(key);
+13             \textcolor{keywordflow}{if} (pair == this->end())
+14                 this->insert(std::pair<TKey, TValue>(key, value));
+15             \textcolor{keywordflow}{else}
+16                 pair->second = value;
+17             
+18             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+19         \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGeneric_1_1Dictionary_ab368d54de28e7a3514e1add4bb5b3a36}\label{classGeneric_1_1Dictionary_ab368d54de28e7a3514e1add4bb5b3a36}} 
+\index{Generic\+::\+Dictionary@{Generic\+::\+Dictionary}!First@{First}}
+\index{First@{First}!Generic\+::\+Dictionary@{Generic\+::\+Dictionary}}
+\subsubsection{\texorpdfstring{First()}{First()}}
+{\footnotesize\ttfamily template$<$typename T\+Key, class T\+Value$>$ \\
+T\+Value\& \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ T\+Key, T\+Value $>$\+::First (\begin{DoxyParamCaption}\item[{T\+Value}]{\+\_\+default = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 29 of file Dictionary.\+h.
+
+
+
+Referenced by Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler\+::\+Handle\+Keys(), and Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init().
+
+
+\begin{DoxyCode}
+30         \{
+31             \textcolor{keywordflow}{if} (this->size() == 0)
+32                 \textcolor{keywordflow}{return} \_default;
+33             \textcolor{keywordflow}{return} this->begin()->second;
+34         \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGeneric_1_1Dictionary_ab368d54de28e7a3514e1add4bb5b3a36_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGeneric_1_1Dictionary_ad018bc166486129b48e9ededce313984}\label{classGeneric_1_1Dictionary_ad018bc166486129b48e9ededce313984}} 
+\index{Generic\+::\+Dictionary@{Generic\+::\+Dictionary}!Get@{Get}}
+\index{Get@{Get}!Generic\+::\+Dictionary@{Generic\+::\+Dictionary}}
+\subsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily template$<$typename T\+Key, class T\+Value$>$ \\
+T\+Value\& \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ T\+Key, T\+Value $>$\+::Get (\begin{DoxyParamCaption}\item[{const T\+Key}]{key,  }\item[{T\+Value}]{\+\_\+default = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 21 of file Dictionary.\+h.
+
+
+
+Referenced by Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse(), main(), and Generic\+::\+Dictionary$<$ std\+::string, Engine\+::\+Base\+Engine $\ast$$>$\+::operator\mbox{[}$\,$\mbox{]}().
+
+
+\begin{DoxyCode}
+22         \{
+23             \textcolor{keyword}{auto} r = this->find(key);
+24             \textcolor{keywordflow}{if}(r != this->end())
+25                 \textcolor{keywordflow}{return} r->second;
+26             \textcolor{keywordflow}{return} \_default;
+27         \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGeneric_1_1Dictionary_ad018bc166486129b48e9ededce313984_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGeneric_1_1Dictionary_ab4c4fca6ab2ea15fcccd88fe2213575e}\label{classGeneric_1_1Dictionary_ab4c4fca6ab2ea15fcccd88fe2213575e}} 
+\index{Generic\+::\+Dictionary@{Generic\+::\+Dictionary}!Last@{Last}}
+\index{Last@{Last}!Generic\+::\+Dictionary@{Generic\+::\+Dictionary}}
+\subsubsection{\texorpdfstring{Last()}{Last()}}
+{\footnotesize\ttfamily template$<$typename T\+Key, class T\+Value$>$ \\
+T\+Value\& \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ T\+Key, T\+Value $>$\+::Last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 36 of file Dictionary.\+h.
+
+
+\begin{DoxyCode}
+37         \{
+38             \textcolor{keywordflow}{return} this->end()->second;
+39         \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classGeneric_1_1Dictionary_a215ba40a8ff1006d0bf288a317758d3f}\label{classGeneric_1_1Dictionary_a215ba40a8ff1006d0bf288a317758d3f}} 
+\index{Generic\+::\+Dictionary@{Generic\+::\+Dictionary}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Generic\+::\+Dictionary@{Generic\+::\+Dictionary}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename T\+Key, class T\+Value$>$ \\
+T\+Value\& \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ T\+Key, T\+Value $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{T\+Key}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 41 of file Dictionary.\+h.
+
+
+\begin{DoxyCode}
+42         \{
+43             \textcolor{keywordflow}{return} \mbox{\hyperlink{classGeneric_1_1Dictionary_ad018bc166486129b48e9ededce313984}{Get}}(key);
+44         \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{Dictionary_8h}{Dictionary.\+h}}\end{DoxyCompactItemize}

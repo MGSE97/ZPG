@@ -1,0 +1,59 @@
+\hypertarget{namespaceEngine_1_1Components}{}\section{Engine\+:\+:Components Namespace Reference}
+\label{namespaceEngine_1_1Components}\index{Engine\+::\+Components@{Engine\+::\+Components}}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespaceEngine_1_1Components_1_1Graphics}{Graphics}}
+\item 
+ \mbox{\hyperlink{namespaceEngine_1_1Components_1_1Objects}{Objects}}
+\end{DoxyCompactItemize}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classEngine_1_1Components_1_1BaseInputHandler}{Base\+Input\+Handler}}
+\item 
+class \mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}}
+\item 
+class \mbox{\hyperlink{classEngine_1_1Components_1_1Scene}{Scene}}
+\item 
+class \mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Window}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual bool \mbox{\hyperlink{namespaceEngine_1_1Components_a9a8cd7405775f5dee0a0944c4019cc93}{Handle\+Mouse}} (\mbox{\hyperlink{classEngine_1_1BaseEngine}{Base\+Engine}} $\ast$engine, \mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Window}} $\ast$window, \mbox{\hyperlink{classEngine_1_1Components_1_1Scene}{Scene}} $\ast$scene, double x, double y, \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ short, bool $>$ \&keys, int keys\+Active)=0
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+interface \mbox{\hyperlink{namespaceEngine_1_1Components_ac8d3da616707b57e065fd62e6701415f}{I\+Input\+Handler}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{namespaceEngine_1_1Components_a9a8cd7405775f5dee0a0944c4019cc93}\label{namespaceEngine_1_1Components_a9a8cd7405775f5dee0a0944c4019cc93}} 
+\index{Engine\+::\+Components@{Engine\+::\+Components}!Handle\+Mouse@{Handle\+Mouse}}
+\index{Handle\+Mouse@{Handle\+Mouse}!Engine\+::\+Components@{Engine\+::\+Components}}
+\subsubsection{\texorpdfstring{Handle\+Mouse()}{HandleMouse()}}
+{\footnotesize\ttfamily virtual bool Engine\+::\+Components\+::\+Handle\+Mouse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1BaseEngine}{Base\+Engine}} $\ast$}]{engine,  }\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Window}} $\ast$}]{window,  }\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Scene}{Scene}} $\ast$}]{scene,  }\item[{double}]{x,  }\item[{double}]{y,  }\item[{\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ short, bool $>$ \&}]{keys,  }\item[{int}]{keys\+Active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{namespaceEngine_1_1Components_ac8d3da616707b57e065fd62e6701415f}\label{namespaceEngine_1_1Components_ac8d3da616707b57e065fd62e6701415f}} 
+\index{Engine\+::\+Components@{Engine\+::\+Components}!I\+Input\+Handler@{I\+Input\+Handler}}
+\index{I\+Input\+Handler@{I\+Input\+Handler}!Engine\+::\+Components@{Engine\+::\+Components}}
+\subsubsection{\texorpdfstring{I\+Input\+Handler}{IInputHandler}}
+{\footnotesize\ttfamily \+\_\+\+\_\+interface \mbox{\hyperlink{classEngine_1_1Components_1_1IInputHandler}{Engine\+::\+Components\+::\+I\+Input\+Handler}}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+\{
+        \textcolor{keyword}{public}:
+            \textcolor{keyword}{virtual} \textcolor{keywordtype}{bool} HandleKeys(BaseEngine* engine, Window* window, Scene* scene, 
+      \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic::Dictionary<short,bool>}}& keys, \textcolor{keywordtype}{int} keysActive) = 0
+\end{DoxyCode}
+
+
+Definition at line 13 of file I\+Input\+Handler.\+h.
+

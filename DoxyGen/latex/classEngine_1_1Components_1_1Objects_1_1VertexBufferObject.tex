@@ -1,0 +1,199 @@
+\hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject}{}\section{Engine\+:\+:Components\+:\+:Objects\+:\+:Vertex\+Buffer\+Object Class Reference}
+\label{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject}\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object}}
+
+
+{\ttfamily \#include $<$Vertex\+Buffer\+Object.\+h$>$}
+
+
+
+Collaboration diagram for Engine\+:\+:Components\+:\+:Objects\+:\+:Vertex\+Buffer\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=224pt]{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_ac6ca88e30800d79295ca9ea285101a3c}{Vertex\+Buffer\+Object}} (float $\ast$points, int size)
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_a477c0af2a3eaaae725a1347027ef87a4}{$\sim$\+Vertex\+Buffer\+Object}} ()
+\item 
+G\+Luint \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_abf4805d63271ee1c56a15214cd75077d}{Get}} ()
+\item 
+int \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_ada22635c60245448346653b0e82f5d9c}{Get\+Id}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_a07adfeae7d3b23285d49b8005437ed77}{\+\_\+\+Id}}
+\item 
+G\+Luint \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_a0014c1ab3ceb3c3437003057638b279f}{\+\_\+\+V\+BO}} = 0
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_aee6f39eda87eb0f8c0e6644afdd72000}{\+\_\+id}} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 11 of file Vertex\+Buffer\+Object.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_ac6ca88e30800d79295ca9ea285101a3c}\label{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_ac6ca88e30800d79295ca9ea285101a3c}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object}!Vertex\+Buffer\+Object@{Vertex\+Buffer\+Object}}
+\index{Vertex\+Buffer\+Object@{Vertex\+Buffer\+Object}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object}}
+\subsubsection{\texorpdfstring{Vertex\+Buffer\+Object()}{VertexBufferObject()}}
+{\footnotesize\ttfamily Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object\+::\+Vertex\+Buffer\+Object (\begin{DoxyParamCaption}\item[{float $\ast$}]{points,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file Vertex\+Buffer\+Object.\+cpp.
+
+
+
+References \+\_\+\+Id, \+\_\+id, and \+\_\+\+V\+BO.
+
+
+\begin{DoxyCode}
+7 \{
+8     \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_a07adfeae7d3b23285d49b8005437ed77}{\_Id}} = ++\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_aee6f39eda87eb0f8c0e6644afdd72000}{\_id}};
+9     glGenBuffers(\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_a07adfeae7d3b23285d49b8005437ed77}{\_Id}}, &\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_a0014c1ab3ceb3c3437003057638b279f}{\_VBO}}); \textcolor{comment}{// generate the VBO}
+10     glBindBuffer(GL\_ARRAY\_BUFFER, \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_a0014c1ab3ceb3c3437003057638b279f}{\_VBO}});
+11     glBufferData(GL\_ARRAY\_BUFFER, size * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}), points, GL\_STATIC\_DRAW);
+12 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_a477c0af2a3eaaae725a1347027ef87a4}\label{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_a477c0af2a3eaaae725a1347027ef87a4}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object}!````~Vertex\+Buffer\+Object@{$\sim$\+Vertex\+Buffer\+Object}}
+\index{````~Vertex\+Buffer\+Object@{$\sim$\+Vertex\+Buffer\+Object}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object}}
+\subsubsection{\texorpdfstring{$\sim$\+Vertex\+Buffer\+Object()}{~VertexBufferObject()}}
+{\footnotesize\ttfamily Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object\+::$\sim$\+Vertex\+Buffer\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file Vertex\+Buffer\+Object.\+cpp.
+
+
+\begin{DoxyCode}
+16 \{
+17     \textcolor{keyword}{delete} &\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_a07adfeae7d3b23285d49b8005437ed77}{\_Id}};
+18     \textcolor{keyword}{delete} &\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_a0014c1ab3ceb3c3437003057638b279f}{\_VBO}};
+19 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_abf4805d63271ee1c56a15214cd75077d}\label{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_abf4805d63271ee1c56a15214cd75077d}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object}!Get@{Get}}
+\index{Get@{Get}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object}}
+\subsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily G\+Luint Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object\+::\+Get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 21 of file Vertex\+Buffer\+Object.\+cpp.
+
+
+
+Referenced by Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object\+::\+Vertex\+Attribute\+Object().
+
+
+\begin{DoxyCode}
+22 \{
+23     \textcolor{keywordflow}{return} \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_a0014c1ab3ceb3c3437003057638b279f}{\_VBO}};
+24 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_abf4805d63271ee1c56a15214cd75077d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_ada22635c60245448346653b0e82f5d9c}\label{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_ada22635c60245448346653b0e82f5d9c}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object}!Get\+Id@{Get\+Id}}
+\index{Get\+Id@{Get\+Id}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object}}
+\subsubsection{\texorpdfstring{Get\+Id()}{GetId()}}
+{\footnotesize\ttfamily int Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object\+::\+Get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 26 of file Vertex\+Buffer\+Object.\+cpp.
+
+
+
+Referenced by Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object\+::\+Vertex\+Attribute\+Object().
+
+
+\begin{DoxyCode}
+27 \{
+28     \textcolor{keywordflow}{return} \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_a07adfeae7d3b23285d49b8005437ed77}{\_Id}};
+29 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_ada22635c60245448346653b0e82f5d9c_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_a07adfeae7d3b23285d49b8005437ed77}\label{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_a07adfeae7d3b23285d49b8005437ed77}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object}!\+\_\+\+Id@{\+\_\+\+Id}}
+\index{\+\_\+\+Id@{\+\_\+\+Id}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object}}
+\subsubsection{\texorpdfstring{\+\_\+\+Id}{\_Id}}
+{\footnotesize\ttfamily int Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object\+::\+\_\+\+Id\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 20 of file Vertex\+Buffer\+Object.\+h.
+
+
+
+Referenced by Vertex\+Buffer\+Object().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_aee6f39eda87eb0f8c0e6644afdd72000}\label{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_aee6f39eda87eb0f8c0e6644afdd72000}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object}!\+\_\+id@{\+\_\+id}}
+\index{\+\_\+id@{\+\_\+id}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object}}
+\subsubsection{\texorpdfstring{\+\_\+id}{\_id}}
+{\footnotesize\ttfamily int Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object\+::\+\_\+id = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 21 of file Vertex\+Buffer\+Object.\+h.
+
+
+
+Referenced by Vertex\+Buffer\+Object().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_a0014c1ab3ceb3c3437003057638b279f}\label{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_a0014c1ab3ceb3c3437003057638b279f}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object}!\+\_\+\+V\+BO@{\+\_\+\+V\+BO}}
+\index{\+\_\+\+V\+BO@{\+\_\+\+V\+BO}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object}}
+\subsubsection{\texorpdfstring{\+\_\+\+V\+BO}{\_VBO}}
+{\footnotesize\ttfamily G\+Luint Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object\+::\+\_\+\+V\+BO = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 19 of file Vertex\+Buffer\+Object.\+h.
+
+
+
+Referenced by Vertex\+Buffer\+Object().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{VertexBufferObject_8h}{Vertex\+Buffer\+Object.\+h}}\item 
+Z\+P\+G/\mbox{\hyperlink{VertexBufferObject_8cpp}{Vertex\+Buffer\+Object.\+cpp}}\end{DoxyCompactItemize}

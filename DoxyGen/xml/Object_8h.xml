@@ -1,0 +1,465 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="Object_8h" kind="file" language="C++">
+    <compoundname>Object.h</compoundname>
+    <includes refid="VertexObject_8h" local="yes">VertexObject.h</includes>
+    <includedby refid="Scene_8h" local="yes">ZPG/Scene.h</includedby>
+    <includedby refid="Light_8h" local="yes">ZPG/Light.h</includedby>
+    <includedby refid="Sphere_8h" local="yes">ZPG/Sphere.h</includedby>
+    <includedby refid="Object_8cpp" local="yes">ZPG/Object.cpp</includedby>
+    <includedby refid="ZPGEngine_8cpp" local="yes">ZPG/ZPGEngine.cpp</includedby>
+    <incdepgraph>
+      <node id="1536">
+        <label>list</label>
+      </node>
+      <node id="1522">
+        <label>VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="1523" relation="include">
+        </childnode>
+        <childnode refid="1526" relation="include">
+        </childnode>
+        <childnode refid="1528" relation="include">
+        </childnode>
+        <childnode refid="1539" relation="include">
+        </childnode>
+      </node>
+      <node id="1540">
+        <label>MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="1535" relation="include">
+        </childnode>
+        <childnode refid="1530" relation="include">
+        </childnode>
+        <childnode refid="1534" relation="include">
+        </childnode>
+        <childnode refid="1541" relation="include">
+        </childnode>
+      </node>
+      <node id="1526">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="1524" relation="include">
+        </childnode>
+        <childnode refid="1523" relation="include">
+        </childnode>
+        <childnode refid="1527" relation="include">
+        </childnode>
+      </node>
+      <node id="1530">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="1524" relation="include">
+        </childnode>
+        <childnode refid="1531" relation="include">
+        </childnode>
+        <childnode refid="1532" relation="include">
+        </childnode>
+        <childnode refid="1533" relation="include">
+        </childnode>
+        <childnode refid="1534" relation="include">
+        </childnode>
+        <childnode refid="1535" relation="include">
+        </childnode>
+      </node>
+      <node id="1523">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="1524" relation="include">
+        </childnode>
+        <childnode refid="1525" relation="include">
+        </childnode>
+      </node>
+      <node id="1535">
+        <label>string</label>
+      </node>
+      <node id="1524">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="1538">
+        <label>map</label>
+      </node>
+      <node id="1541">
+        <label>MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="1524" relation="include">
+        </childnode>
+        <childnode refid="1530" relation="include">
+        </childnode>
+      </node>
+      <node id="1521">
+        <label>ZPG/Object.h</label>
+        <link refid="Object_8h"/>
+        <childnode refid="1522" relation="include">
+        </childnode>
+      </node>
+      <node id="1534">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="1531">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="1525">
+        <label>vector</label>
+      </node>
+      <node id="1529">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="1530" relation="include">
+        </childnode>
+        <childnode refid="1536" relation="include">
+        </childnode>
+      </node>
+      <node id="1539">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="1537" relation="include">
+        </childnode>
+        <childnode refid="1535" relation="include">
+        </childnode>
+        <childnode refid="1540" relation="include">
+        </childnode>
+        <childnode refid="1528" relation="include">
+        </childnode>
+        <childnode refid="1530" relation="include">
+        </childnode>
+      </node>
+      <node id="1527">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="1532">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="1528">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="1524" relation="include">
+        </childnode>
+        <childnode refid="1529" relation="include">
+        </childnode>
+        <childnode refid="1537" relation="include">
+        </childnode>
+        <childnode refid="1535" relation="include">
+        </childnode>
+      </node>
+      <node id="1537">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="1538" relation="include">
+        </childnode>
+      </node>
+      <node id="1533">
+        <label>xstring</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1555">
+        <label>ZPG/LigtEngine.h</label>
+        <link refid="LigtEngine_8h"/>
+        <childnode refid="1554" relation="include">
+        </childnode>
+        <childnode refid="1547" relation="include">
+        </childnode>
+        <childnode refid="1556" relation="include">
+        </childnode>
+        <childnode refid="1557" relation="include">
+        </childnode>
+      </node>
+      <node id="1546">
+        <label>ZPG/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="1570">
+        <label>ZPG/SphereScene.h</label>
+        <link refid="SphereScene_8h"/>
+        <childnode refid="1551" relation="include">
+        </childnode>
+        <childnode refid="1553" relation="include">
+        </childnode>
+        <childnode refid="1557" relation="include">
+        </childnode>
+        <childnode refid="1558" relation="include">
+        </childnode>
+        <childnode refid="1560" relation="include">
+        </childnode>
+      </node>
+      <node id="1553">
+        <label>ZPG/CameraEngine.cpp</label>
+        <link refid="CameraEngine_8cpp"/>
+      </node>
+      <node id="1571">
+        <label>ZPG/Camera.cpp</label>
+        <link refid="Camera_8cpp"/>
+      </node>
+      <node id="1575">
+        <label>ZPG/Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="1543" relation="include">
+        </childnode>
+        <childnode refid="1576" relation="include">
+        </childnode>
+        <childnode refid="1574" relation="include">
+        </childnode>
+      </node>
+      <node id="1572">
+        <label>ZPG/CameraScene.h</label>
+        <link refid="CameraScene_8h"/>
+        <childnode refid="1573" relation="include">
+        </childnode>
+      </node>
+      <node id="1562">
+        <label>ZPG/ZPGEngine.h</label>
+        <link refid="ZPGEngine_8h"/>
+        <childnode refid="1563" relation="include">
+        </childnode>
+      </node>
+      <node id="1544">
+        <label>ZPG/BaseEngine.h</label>
+        <link refid="BaseEngine_8h"/>
+        <childnode refid="1545" relation="include">
+        </childnode>
+        <childnode refid="1549" relation="include">
+        </childnode>
+        <childnode refid="1550" relation="include">
+        </childnode>
+        <childnode refid="1552" relation="include">
+        </childnode>
+        <childnode refid="1554" relation="include">
+        </childnode>
+        <childnode refid="1555" relation="include">
+        </childnode>
+        <childnode refid="1558" relation="include">
+        </childnode>
+        <childnode refid="1559" relation="include">
+        </childnode>
+        <childnode refid="1561" relation="include">
+        </childnode>
+        <childnode refid="1562" relation="include">
+        </childnode>
+      </node>
+      <node id="1564">
+        <label>ZPG/IInputHandler.h</label>
+        <link refid="IInputHandler_8h"/>
+        <childnode refid="1544" relation="include">
+        </childnode>
+        <childnode refid="1549" relation="include">
+        </childnode>
+        <childnode refid="1565" relation="include">
+        </childnode>
+        <childnode refid="1568" relation="include">
+        </childnode>
+      </node>
+      <node id="1542">
+        <label>ZPG/Object.h</label>
+        <link refid="Object_8h"/>
+        <childnode refid="1543" relation="include">
+        </childnode>
+        <childnode refid="1575" relation="include">
+        </childnode>
+        <childnode refid="1577" relation="include">
+        </childnode>
+        <childnode refid="1579" relation="include">
+        </childnode>
+        <childnode refid="1563" relation="include">
+        </childnode>
+      </node>
+      <node id="1567">
+        <label>ZPG/LightingChangeInputHandler.h</label>
+        <link refid="LightingChangeInputHandler_8h"/>
+        <childnode refid="1556" relation="include">
+        </childnode>
+        <childnode refid="1557" relation="include">
+        </childnode>
+      </node>
+      <node id="1574">
+        <label>ZPG/Scene.cpp</label>
+        <link refid="Scene_8cpp"/>
+      </node>
+      <node id="1559">
+        <label>ZPG/TriangleEngine.h</label>
+        <link refid="TriangleEngine_8h"/>
+        <childnode refid="1560" relation="include">
+        </childnode>
+      </node>
+      <node id="1560">
+        <label>ZPG/TriangleEngine.cpp</label>
+        <link refid="TriangleEngine_8cpp"/>
+      </node>
+      <node id="1565">
+        <label>ZPG/BaseInputHandler.h</label>
+        <link refid="BaseInputHandler_8h"/>
+        <childnode refid="1566" relation="include">
+        </childnode>
+        <childnode refid="1567" relation="include">
+        </childnode>
+      </node>
+      <node id="1577">
+        <label>ZPG/Sphere.h</label>
+        <link refid="Sphere_8h"/>
+        <childnode refid="1554" relation="include">
+        </childnode>
+        <childnode refid="1578" relation="include">
+        </childnode>
+        <childnode refid="1558" relation="include">
+        </childnode>
+      </node>
+      <node id="1566">
+        <label>ZPG/BaseInputHandler.cpp</label>
+        <link refid="BaseInputHandler_8cpp"/>
+      </node>
+      <node id="1561">
+        <label>ZPG/TriangleScene.cpp</label>
+        <link refid="TriangleScene_8cpp"/>
+      </node>
+      <node id="1545">
+        <label>ZPG/Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="1546" relation="include">
+        </childnode>
+        <childnode refid="1547" relation="include">
+        </childnode>
+        <childnode refid="1548" relation="include">
+        </childnode>
+      </node>
+      <node id="1543">
+        <label>ZPG/Scene.h</label>
+        <link refid="Scene_8h"/>
+        <childnode refid="1544" relation="include">
+        </childnode>
+        <childnode refid="1564" relation="include">
+        </childnode>
+        <childnode refid="1569" relation="include">
+        </childnode>
+        <childnode refid="1570" relation="include">
+        </childnode>
+        <childnode refid="1571" relation="include">
+        </childnode>
+        <childnode refid="1572" relation="include">
+        </childnode>
+        <childnode refid="1574" relation="include">
+        </childnode>
+      </node>
+      <node id="1563">
+        <label>ZPG/ZPGEngine.cpp</label>
+        <link refid="ZPGEngine_8cpp"/>
+      </node>
+      <node id="1557">
+        <label>ZPG/LigtEngine.cpp</label>
+        <link refid="LigtEngine_8cpp"/>
+      </node>
+      <node id="1547">
+        <label>ZPG/EngineRegistry.cpp</label>
+        <link refid="EngineRegistry_8cpp"/>
+      </node>
+      <node id="1569">
+        <label>ZPG/TriangleScene.h</label>
+        <link refid="TriangleScene_8h"/>
+        <childnode refid="1551" relation="include">
+        </childnode>
+        <childnode refid="1553" relation="include">
+        </childnode>
+        <childnode refid="1557" relation="include">
+        </childnode>
+        <childnode refid="1560" relation="include">
+        </childnode>
+        <childnode refid="1561" relation="include">
+        </childnode>
+        <childnode refid="1563" relation="include">
+        </childnode>
+      </node>
+      <node id="1552">
+        <label>ZPG/CameraEngine.h</label>
+        <link refid="CameraEngine_8h"/>
+        <childnode refid="1553" relation="include">
+        </childnode>
+        <childnode refid="1547" relation="include">
+        </childnode>
+      </node>
+      <node id="1578">
+        <label>ZPG/Sphere.cpp</label>
+        <link refid="Sphere_8cpp"/>
+      </node>
+      <node id="1549">
+        <label>ZPG/BaseEngine.cpp</label>
+        <link refid="BaseEngine_8cpp"/>
+      </node>
+      <node id="1551">
+        <label>ZPG/BasicEngine.cpp</label>
+        <link refid="BasicEngine_8cpp"/>
+      </node>
+      <node id="1579">
+        <label>ZPG/Object.cpp</label>
+        <link refid="Object_8cpp"/>
+      </node>
+      <node id="1558">
+        <label>ZPG/SphereScene.cpp</label>
+        <link refid="SphereScene_8cpp"/>
+      </node>
+      <node id="1573">
+        <label>ZPG/CameraScene.cpp</label>
+        <link refid="CameraScene_8cpp"/>
+      </node>
+      <node id="1556">
+        <label>ZPG/LightingChangeInputHandler.cpp</label>
+        <link refid="LightingChangeInputHandler_8cpp"/>
+      </node>
+      <node id="1576">
+        <label>ZPG/Light.cpp</label>
+        <link refid="Light_8cpp"/>
+      </node>
+      <node id="1548">
+        <label>ZPG/Main.cpp</label>
+        <link refid="Main_8cpp"/>
+      </node>
+      <node id="1568">
+        <label>ZPG/CameraInputHandler.h</label>
+        <link refid="CameraInputHandler_8h"/>
+        <childnode refid="1554" relation="include">
+        </childnode>
+        <childnode refid="1557" relation="include">
+        </childnode>
+      </node>
+      <node id="1554">
+        <label>ZPG/CameraInputHandler.cpp</label>
+        <link refid="CameraInputHandler_8cpp"/>
+      </node>
+      <node id="1550">
+        <label>ZPG/BasicEngine.h</label>
+        <link refid="BasicEngine_8h"/>
+        <childnode refid="1551" relation="include">
+        </childnode>
+        <childnode refid="1547" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classEngine_1_1Objects_1_1Object" prot="public">Engine::Objects::Object</innerclass>
+    <innernamespace refid="namespaceEngine">Engine</innernamespace>
+    <innernamespace refid="namespaceEngine_1_1Objects">Engine::Objects</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VertexObject_8h" kindref="compound">VertexObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceEngine" kindref="compound">Engine</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6" refid="namespaceEngine_1_1Objects" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Objects</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8" refid="classEngine_1_1Objects_1_1Object" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classEngine_1_1Objects_1_1Object" kindref="compound">Object</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexObject" kindref="compound">Components::Objects::VertexObject</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11" refid="classEngine_1_1Objects_1_1Object_1acf41cc091fa270053245ed26bc28c8a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::mat4*<sp/><ref refid="classEngine_1_1Objects_1_1Object_1acf41cc091fa270053245ed26bc28c8a4" kindref="member">ModelMatrix</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Objects_1_1Object_1a4798ee926dcbd761e7e88fdeb73f2f0a" kindref="member">Object</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Material" kindref="compound">Components::Graphics::Material</ref>*<sp/>material,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>points,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dimensions<sp/>=<sp/>3,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>startArrayIndex<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Objects_1_1Object_1a4798ee926dcbd761e7e88fdeb73f2f0a" kindref="member">Object</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Material" kindref="compound">Components::Graphics::Material</ref>*<sp/>material,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>points,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dimensions,<sp/><ref refid="classGeneric_1_1Collection" kindref="compound">Generic::Collection&lt;Components::Objects::VAOConfig*&gt;</ref><sp/>configs);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Objects_1_1Object_1a5fc9cc004cae8e63c4fb1d2b6d1cea88" kindref="member">~Object</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="ZPG/Object.h"/>
+  </compounddef>
+</doxygen>

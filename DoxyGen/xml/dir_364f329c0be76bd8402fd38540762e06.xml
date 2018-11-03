@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_364f329c0be76bd8402fd38540762e06" kind="dir">
+    <compoundname>ZPG</compoundname>
+    <innerdir refid="dir_5fc0f325ca21891156aae547ea277511">ZPG/Assets</innerdir>
+    <innerfile refid="Application_8cpp">Application.cpp</innerfile>
+    <innerfile refid="Application_8h">Application.h</innerfile>
+    <innerfile refid="Assets_8cpp">Assets.cpp</innerfile>
+    <innerfile refid="Assets_8h">Assets.h</innerfile>
+    <innerfile refid="BaseEngine_8cpp">BaseEngine.cpp</innerfile>
+    <innerfile refid="BaseEngine_8h">BaseEngine.h</innerfile>
+    <innerfile refid="BaseInputHandler_8cpp">BaseInputHandler.cpp</innerfile>
+    <innerfile refid="BaseInputHandler_8h">BaseInputHandler.h</innerfile>
+    <innerfile refid="BasicEngine_8cpp">BasicEngine.cpp</innerfile>
+    <innerfile refid="BasicEngine_8h">BasicEngine.h</innerfile>
+    <innerfile refid="Camera_8cpp">Camera.cpp</innerfile>
+    <innerfile refid="Camera_8h">Camera.h</innerfile>
+    <innerfile refid="CameraEngine_8cpp">CameraEngine.cpp</innerfile>
+    <innerfile refid="CameraEngine_8h">CameraEngine.h</innerfile>
+    <innerfile refid="CameraInputHandler_8cpp">CameraInputHandler.cpp</innerfile>
+    <innerfile refid="CameraInputHandler_8h">CameraInputHandler.h</innerfile>
+    <innerfile refid="CameraScene_8cpp">CameraScene.cpp</innerfile>
+    <innerfile refid="CameraScene_8h">CameraScene.h</innerfile>
+    <innerfile refid="Collection_8cpp">Collection.cpp</innerfile>
+    <innerfile refid="Collection_8h">Collection.h</innerfile>
+    <innerfile refid="Dictionary_8cpp">Dictionary.cpp</innerfile>
+    <innerfile refid="Dictionary_8h">Dictionary.h</innerfile>
+    <innerfile refid="EngineRegistry_8cpp">EngineRegistry.cpp</innerfile>
+    <innerfile refid="EngineRegistry_8h">EngineRegistry.h</innerfile>
+    <innerfile refid="gmlExtensions_8h">gmlExtensions.h</innerfile>
+    <innerfile refid="IInputHandler_8h">IInputHandler.h</innerfile>
+    <innerfile refid="Light_8cpp">Light.cpp</innerfile>
+    <innerfile refid="Light_8h">Light.h</innerfile>
+    <innerfile refid="LightingChangeInputHandler_8cpp">LightingChangeInputHandler.cpp</innerfile>
+    <innerfile refid="LightingChangeInputHandler_8h">LightingChangeInputHandler.h</innerfile>
+    <innerfile refid="LigtEngine_8cpp">LigtEngine.cpp</innerfile>
+    <innerfile refid="LigtEngine_8h">LigtEngine.h</innerfile>
+    <innerfile refid="Main_8cpp">Main.cpp</innerfile>
+    <innerfile refid="Material_8cpp">Material.cpp</innerfile>
+    <innerfile refid="Material_8h">Material.h</innerfile>
+    <innerfile refid="MaterialBindedValue_8cpp">MaterialBindedValue.cpp</innerfile>
+    <innerfile refid="MaterialBindedValue_8h">MaterialBindedValue.h</innerfile>
+    <innerfile refid="MaterialValue_8cpp">MaterialValue.cpp</innerfile>
+    <innerfile refid="MaterialValue_8h">MaterialValue.h</innerfile>
+    <innerfile refid="MaterialValueBase_8cpp">MaterialValueBase.cpp</innerfile>
+    <innerfile refid="MaterialValueBase_8h">MaterialValueBase.h</innerfile>
+    <innerfile refid="MaterialValueType_8cpp">MaterialValueType.cpp</innerfile>
+    <innerfile refid="MaterialValueType_8h">MaterialValueType.h</innerfile>
+    <innerfile refid="Object_8cpp">Object.cpp</innerfile>
+    <innerfile refid="Object_8h">Object.h</innerfile>
+    <innerfile refid="Observable_8cpp">Observable.cpp</innerfile>
+    <innerfile refid="Observable_8h">Observable.h</innerfile>
+    <innerfile refid="Observer_8cpp">Observer.cpp</innerfile>
+    <innerfile refid="Observer_8h">Observer.h</innerfile>
+    <innerfile refid="Program_8cpp">Program.cpp</innerfile>
+    <innerfile refid="Program_8h">Program.h</innerfile>
+    <innerfile refid="ProgramData_8cpp">ProgramData.cpp</innerfile>
+    <innerfile refid="ProgramData_8h">ProgramData.h</innerfile>
+    <innerfile refid="ProgramDataKey_8cpp">ProgramDataKey.cpp</innerfile>
+    <innerfile refid="ProgramDataKey_8h">ProgramDataKey.h</innerfile>
+    <innerfile refid="Property_8cpp">Property.cpp</innerfile>
+    <innerfile refid="Property_8h">Property.h</innerfile>
+    <innerfile refid="ReadOnlyProperty_8cpp">ReadOnlyProperty.cpp</innerfile>
+    <innerfile refid="ReadOnlyProperty_8h">ReadOnlyProperty.h</innerfile>
+    <innerfile refid="resource_8h">resource.h</innerfile>
+    <innerfile refid="Scene_8cpp">Scene.cpp</innerfile>
+    <innerfile refid="Scene_8h">Scene.h</innerfile>
+    <innerfile refid="Shader_8cpp">Shader.cpp</innerfile>
+    <innerfile refid="Shader_8h">Shader.h</innerfile>
+    <innerfile refid="Sphere_8cpp">Sphere.cpp</innerfile>
+    <innerfile refid="Sphere_8h">Sphere.h</innerfile>
+    <innerfile refid="SphereScene_8cpp">SphereScene.cpp</innerfile>
+    <innerfile refid="SphereScene_8h">SphereScene.h</innerfile>
+    <innerfile refid="Transform_8cpp">Transform.cpp</innerfile>
+    <innerfile refid="Transform_8h">Transform.h</innerfile>
+    <innerfile refid="TriangleEngine_8cpp">TriangleEngine.cpp</innerfile>
+    <innerfile refid="TriangleEngine_8h">TriangleEngine.h</innerfile>
+    <innerfile refid="TriangleScene_8cpp">TriangleScene.cpp</innerfile>
+    <innerfile refid="TriangleScene_8h">TriangleScene.h</innerfile>
+    <innerfile refid="VertexAttributeObject_8cpp">VertexAttributeObject.cpp</innerfile>
+    <innerfile refid="VertexAttributeObject_8h">VertexAttributeObject.h</innerfile>
+    <innerfile refid="VertexBufferObject_8cpp">VertexBufferObject.cpp</innerfile>
+    <innerfile refid="VertexBufferObject_8h">VertexBufferObject.h</innerfile>
+    <innerfile refid="VertexObject_8cpp">VertexObject.cpp</innerfile>
+    <innerfile refid="VertexObject_8h">VertexObject.h</innerfile>
+    <innerfile refid="Window_8cpp">Window.cpp</innerfile>
+    <innerfile refid="Window_8h">Window.h</innerfile>
+    <innerfile refid="ZPGEngine_8cpp">ZPGEngine.cpp</innerfile>
+    <innerfile refid="ZPGEngine_8h">ZPGEngine.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ZPG/"/>
+  </compounddef>
+</doxygen>

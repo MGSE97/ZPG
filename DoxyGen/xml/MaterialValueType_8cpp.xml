@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="MaterialValueType_8cpp" kind="file" language="C++">
+    <compoundname>MaterialValueType.cpp</compoundname>
+    <includes refid="MaterialValueType_8h" local="yes">MaterialValueType.h</includes>
+    <incdepgraph>
+      <node id="1431">
+        <label>ZPG/MaterialValueType.cpp</label>
+        <link refid="MaterialValueType_8cpp"/>
+        <childnode refid="1432" relation="include">
+        </childnode>
+      </node>
+      <node id="1432">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MaterialValueType_8h" kindref="compound">MaterialValueType.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ZPG/MaterialValueType.cpp"/>
+  </compounddef>
+</doxygen>

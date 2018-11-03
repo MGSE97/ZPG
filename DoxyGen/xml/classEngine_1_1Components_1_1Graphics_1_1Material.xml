@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classEngine_1_1Components_1_1Graphics_1_1Material" kind="class" language="C++" prot="public">
+    <compoundname>Engine::Components::Graphics::Material</compoundname>
+    <includes refid="Material_8h" local="no">Material.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Graphics_1_1Material_1a2a4084db93bb70cd65032baf296803d6" prot="public" static="no" mutable="no">
+        <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref> *</type>
+        <definition>Program* Engine::Components::Graphics::Material::Program</definition>
+        <argsstring></argsstring>
+        <name>Program</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Material.h" line="17" column="1" bodyfile="ZPG/Material.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1Objects_1_1Object_1a4798ee926dcbd761e7e88fdeb73f2f0a" compoundref="Object_8cpp" startline="4" endline="13">Engine::Objects::Object::Object</referencedby>
+        <referencedby refid="classLight_1a3ee17fe1c669589285bd5c8b29b13721" compoundref="Light_8cpp" startline="25" endline="39">Light::Use</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Graphics_1_1Material_1a34335608ba1e6eb2c2dba5032107eab0" prot="public" static="no" mutable="no">
+        <type><ref refid="classGeneric_1_1Collection" kindref="compound">Generic::Collection</ref>&lt; <ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase" kindref="compound">MaterialValueBase</ref> * &gt; *</type>
+        <definition>Generic::Collection&lt;MaterialValueBase*&gt;* Engine::Components::Graphics::Material::Values</definition>
+        <argsstring></argsstring>
+        <name>Values</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Material.h" line="21" column="1" bodyfile="ZPG/Material.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1ab06fa94ce5265dc06abb645ea29850bd" compoundref="CameraInputHandler_8cpp" startline="53" endline="104">Application::Input::Handlers::CameraInputHandler::HandleMouse</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1CameraEngine_1a0c7723b93afbdef70394961a4624813d" compoundref="CameraEngine_8cpp" startline="9" endline="73">Application::Engines::CameraEngine::Init</referencedby>
+        <referencedby refid="classLight_1af33c52703fccd3142a2826893027884c" compoundref="Light_8cpp" startline="6" endline="23">Light::Light</referencedby>
+        <referencedby refid="classEngine_1_1Components_1_1Graphics_1_1Material_1aefc17351f5af8ca7227e2a8144e141de" compoundref="Material_8cpp" startline="5" endline="9">Material</referencedby>
+        <referencedby refid="classEngine_1_1Objects_1_1Object_1a4798ee926dcbd761e7e88fdeb73f2f0a" compoundref="Object_8cpp" startline="4" endline="13">Engine::Objects::Object::Object</referencedby>
+        <referencedby refid="classLight_1a3ee17fe1c669589285bd5c8b29b13721" compoundref="Light_8cpp" startline="25" endline="39">Light::Use</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Material_1aefc17351f5af8ca7227e2a8144e141de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Components::Graphics::Material::Material</definition>
+        <argsstring>(Graphics::Program *program)</argsstring>
+        <name>Material</name>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Graphics::Program</ref> *</type>
+          <declname>program</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Material.h" line="18" column="1" bodyfile="ZPG/Material.cpp" bodystart="5" bodyend="9"/>
+        <references refid="classEngine_1_1Components_1_1Graphics_1_1Material_1a34335608ba1e6eb2c2dba5032107eab0" compoundref="Material_8h" startline="21">Values</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Material_1a30532acd75ec38c01db2b5c21776710b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Components::Graphics::Material::~Material</definition>
+        <argsstring>()</argsstring>
+        <name>~Material</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Material.h" line="19" column="1" bodyfile="ZPG/Material.cpp" bodystart="12" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Material_1aac7709d6bda9b0b16b771fa6530d140e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Material" kindref="compound">Engine::Components::Graphics::Material</ref> *</type>
+        <definition>Engine::Components::Graphics::Material* Engine::Components::Graphics::Material::Add</definition>
+        <argsstring>(Shader *shader, const GLchar *property, T *value)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref> *</type>
+          <declname>shader</declname>
+        </param>
+        <param>
+          <type>const GLchar *</type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Material.cpp" line="19" column="1" bodyfile="ZPG/Material.cpp" bodystart="19" bodyend="23"/>
+        <references refid="classEngine_1_1Components_1_1Graphics_1_1Material_1ace1e6c024847604594bc4f3d99d0be08">Add</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Material_1ace1e6c024847604594bc4f3d99d0be08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Material" kindref="compound">Material</ref> *</type>
+        <definition>Material* Engine::Components::Graphics::Material::Add</definition>
+        <argsstring>(Shader *shader, const GLchar *property, T *value)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref> *</type>
+          <declname>shader</declname>
+        </param>
+        <param>
+          <type>const GLchar *</type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type>T *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Material.h" line="23" column="1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Graphics_1_1Material_1aac7709d6bda9b0b16b771fa6530d140e" compoundref="Material_8cpp" startline="19" endline="23">Add</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Material_1aef1dd6fbbf0268d4f3e6c371a2f1aa8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Material" kindref="compound">Material</ref> *</type>
+        <definition>Engine::Components::Graphics::Material * Engine::Components::Graphics::Material::Use</definition>
+        <argsstring>()</argsstring>
+        <name>Use</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Material.h" line="20" column="1" bodyfile="ZPG/Material.cpp" bodystart="25" bodyend="31"/>
+        <references refid="classEngine_1_1Components_1_1Graphics_1_1Program_1aed02e665619dda6c6cf80e03cb1f1543" compoundref="Program_8cpp" startline="45" endline="49">Engine::Components::Graphics::Program::Use</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="386">
+        <label>std::list&lt; Engine::Components::Graphics::MaterialValueBase *  &gt;</label>
+      </node>
+      <node id="392">
+        <label>Generic::Dictionary&lt; TKey, TValue &gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="393" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="393">
+        <label>std::map&lt; TKey, TValue &gt;</label>
+      </node>
+      <node id="388">
+        <label>std::list&lt; T &gt;</label>
+      </node>
+      <node id="387">
+        <label>Generic::Collection&lt; T &gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="388" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="395">
+        <label>GLuint</label>
+      </node>
+      <node id="385">
+        <label>Generic::Collection&lt; Engine::Components::Graphics::MaterialValueBase *&gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="386" relation="public-inheritance">
+        </childnode>
+        <childnode refid="387" relation="template-instance">
+          <edgelabel>&lt; Engine::Components::Graphics::MaterialValueBase *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="391">
+        <label>std::map&lt; std::string, Engine::Components::Graphics::Shader * &gt;</label>
+      </node>
+      <node id="390">
+        <label>Generic::Dictionary&lt; std::string, Engine::Components::Graphics::Shader *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="391" relation="public-inheritance">
+        </childnode>
+        <childnode refid="392" relation="template-instance">
+          <edgelabel>&lt; std::string, Engine::Components::Graphics::Shader *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="384">
+        <label>Engine::Components::Graphics::Material</label>
+        <link refid="classEngine_1_1Components_1_1Graphics_1_1Material"/>
+        <childnode refid="385" relation="usage">
+          <edgelabel>+Values</edgelabel>
+        </childnode>
+        <childnode refid="389" relation="usage">
+          <edgelabel>+Program</edgelabel>
+        </childnode>
+      </node>
+      <node id="394">
+        <label>bool</label>
+      </node>
+      <node id="389">
+        <label>Engine::Components::Graphics::Program</label>
+        <link refid="classEngine_1_1Components_1_1Graphics_1_1Program"/>
+        <childnode refid="390" relation="usage">
+          <edgelabel>+Shaders</edgelabel>
+        </childnode>
+        <childnode refid="394" relation="usage">
+          <edgelabel>-_linked</edgelabel>
+        </childnode>
+        <childnode refid="395" relation="usage">
+          <edgelabel>-_program</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/Material.h" line="15" column="1" bodyfile="ZPG/Material.h" bodystart="14" bodyend="24"/>
+    <listofallmembers>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Material_1ace1e6c024847604594bc4f3d99d0be08" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Material</scope><name>Add</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Material_1aac7709d6bda9b0b16b771fa6530d140e" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Material</scope><name>Add</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Material_1aefc17351f5af8ca7227e2a8144e141de" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Material</scope><name>Material</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Material_1a2a4084db93bb70cd65032baf296803d6" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Material</scope><name>Program</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Material_1aef1dd6fbbf0268d4f3e6c371a2f1aa8d" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Material</scope><name>Use</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Material_1a34335608ba1e6eb2c2dba5032107eab0" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Material</scope><name>Values</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Material_1a30532acd75ec38c01db2b5c21776710b" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Material</scope><name>~Material</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,48 @@
+.TH "ZPG/Main.cpp" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ZPG/Main.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <GL/glew\&.h>\fP
+.br
+\fC#include 'Application\&.h'\fP
+.br
+\fC#include <iostream>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "int \fBmain\fP (void)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "int main (void)"
+
+.PP
+Definition at line 8 of file Main\&.cpp\&.
+.PP
+References Application::Application::Engines, Generic::Dictionary< TKey, TValue >::Get(), Application::Application::GetIntance(), Application::Application::Init(), Engine::BaseEngine::Init(), and Engine::BaseEngine::Start()\&.
+.PP
+.nf
+9 {
+10     Application::Application::GetIntance()->Init()
+11         ->Engines
+12         //->Get("basic")
+13         //->Get("camera")
+14         ->Get("light")
+15         ->Init(stdout)
+16         ->Start();
+17 
+18     int v;
+19     std::cin >> v;
+20 }
+.fi
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

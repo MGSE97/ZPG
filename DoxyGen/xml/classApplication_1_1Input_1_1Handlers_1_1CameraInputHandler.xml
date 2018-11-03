@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler" kind="class" language="C++" prot="public">
+    <compoundname>Application::Input::Handlers::CameraInputHandler</compoundname>
+    <basecompoundref refid="classEngine_1_1Components_1_1IInputHandler" prot="public" virt="non-virtual">IInputHandler</basecompoundref>
+    <includes refid="CameraInputHandler_8h" local="no">CameraInputHandler.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1ae8e329dd433afb42e5f53b5937a927fb" prot="private" static="no" mutable="no">
+        <type>glm::vec2</type>
+        <definition>glm::vec2 Application::Input::Handlers::CameraInputHandler::_lastMousePosition</definition>
+        <argsstring></argsstring>
+        <name>_lastMousePosition</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/CameraInputHandler.h" line="14" column="1" bodyfile="ZPG/CameraInputHandler.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a1863bafdf1002ddebe45795112c4c324" compoundref="CameraInputHandler_8cpp" startline="15" endline="20">CameraInputHandler</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a0157ef737743b53e5db833012cd27372" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Application::Input::Handlers::CameraInputHandler::_pitch</definition>
+        <argsstring></argsstring>
+        <name>_pitch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/CameraInputHandler.h" line="15" column="1" bodyfile="ZPG/CameraInputHandler.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a1863bafdf1002ddebe45795112c4c324" compoundref="CameraInputHandler_8cpp" startline="15" endline="20">CameraInputHandler</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a2fa09dcae6ed67d452d374a9fb629349" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Application::Input::Handlers::CameraInputHandler::_yaw</definition>
+        <argsstring></argsstring>
+        <name>_yaw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/CameraInputHandler.h" line="16" column="1" bodyfile="ZPG/CameraInputHandler.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a1863bafdf1002ddebe45795112c4c324" compoundref="CameraInputHandler_8cpp" startline="15" endline="20">CameraInputHandler</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a1863bafdf1002ddebe45795112c4c324" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Application::Input::Handlers::CameraInputHandler::CameraInputHandler</definition>
+        <argsstring>()</argsstring>
+        <name>CameraInputHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/CameraInputHandler.h" line="18" column="1" bodyfile="ZPG/CameraInputHandler.cpp" bodystart="15" bodyend="20"/>
+        <references refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1ae8e329dd433afb42e5f53b5937a927fb" compoundref="CameraInputHandler_8h" startline="14">_lastMousePosition</references>
+        <references refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a0157ef737743b53e5db833012cd27372" compoundref="CameraInputHandler_8h" startline="15">_pitch</references>
+        <references refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a2fa09dcae6ed67d452d374a9fb629349" compoundref="CameraInputHandler_8h" startline="16">_yaw</references>
+      </memberdef>
+      <memberdef kind="function" id="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a08ccb4be5e9da5e461b3b1905a8da90d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Application::Input::Handlers::CameraInputHandler::~CameraInputHandler</definition>
+        <argsstring>()</argsstring>
+        <name>~CameraInputHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/CameraInputHandler.h" line="19" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a149884ea2dc9deea39d3dcd10dfa74b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application::Input::Handlers::CameraInputHandler::HandleKeys</definition>
+        <argsstring>(Engine::BaseEngine *engine, Engine::Components::Window *window, Engine::Components::Scene *scene, Generic::Dictionary&lt; short, bool &gt; &amp;keys, int keysActive) override</argsstring>
+        <name>HandleKeys</name>
+        <param>
+          <type><ref refid="classEngine_1_1BaseEngine" kindref="compound">Engine::BaseEngine</ref> *</type>
+          <declname>engine</declname>
+        </param>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Engine::Components::Window</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Engine::Components::Scene</ref> *</type>
+          <declname>scene</declname>
+        </param>
+        <param>
+          <type><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary</ref>&lt; short, bool &gt; &amp;</type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>keysActive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/CameraInputHandler.h" line="20" column="1" bodyfile="ZPG/CameraInputHandler.cpp" bodystart="25" bodyend="50"/>
+        <references refid="classEngine_1_1Components_1_1Scene_1a9408befee37d89e2c001d25b9e4ed75a" compoundref="Scene_8h" startline="30">Engine::Components::Scene::ActiveCamera</references>
+        <references refid="classEngine_1_1Components_1_1Camera_1a23619a66046258f1158313f0c790ffa2" compoundref="Camera_8h" startline="18">Engine::Components::Camera::Direction</references>
+        <references refid="classEngine_1_1Components_1_1Camera_1a9d8692aa379c9ab00f69df10d1d3651b" compoundref="Camera_8h" startline="21">Engine::Components::Camera::Front</references>
+        <references refid="classEngine_1_1Components_1_1Camera_1ab2c3ed9a1321a95db8fca95bc7f4b290" compoundref="Camera_8h" startline="17">Engine::Components::Camera::Position</references>
+        <references refid="classEngine_1_1Components_1_1Camera_1a10b30289c89694d13918a979bade13d9" compoundref="Camera_8h" startline="20">Engine::Components::Camera::Right</references>
+        <references refid="classEngine_1_1Components_1_1Camera_1a84a4199b9c60579a0f148b9980e05200" compoundref="Camera_8h" startline="19">Engine::Components::Camera::Up</references>
+        <references refid="classEngine_1_1Components_1_1Camera_1a364f5e22921e3d234b31297a64c7d932" compoundref="Camera_8cpp" startline="43" endline="49">Engine::Components::Camera::Update</references>
+      </memberdef>
+      <memberdef kind="function" id="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1ab06fa94ce5265dc06abb645ea29850bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application::Input::Handlers::CameraInputHandler::HandleMouse</definition>
+        <argsstring>(Engine::BaseEngine *engine, Engine::Components::Window *window, Engine::Components::Scene *scene, double x, double y, Generic::Dictionary&lt; short, bool &gt; &amp;keys, int keysActive) override</argsstring>
+        <name>HandleMouse</name>
+        <param>
+          <type><ref refid="classEngine_1_1BaseEngine" kindref="compound">Engine::BaseEngine</ref> *</type>
+          <declname>engine</declname>
+        </param>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Engine::Components::Window</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Engine::Components::Scene</ref> *</type>
+          <declname>scene</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary</ref>&lt; short, bool &gt; &amp;</type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>keysActive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/CameraInputHandler.h" line="21" column="1" bodyfile="ZPG/CameraInputHandler.cpp" bodystart="53" bodyend="104"/>
+        <references refid="classEngine_1_1Components_1_1Scene_1a9408befee37d89e2c001d25b9e4ed75a" compoundref="Scene_8h" startline="30">Engine::Components::Scene::ActiveCamera</references>
+        <references refid="classGeneric_1_1Dictionary_1ae7cb006f801b21c172e8fbac8794fa99" compoundref="Dictionary_8h" startline="10" endline="19">Generic::Dictionary&lt; TKey, TValue &gt;::Add</references>
+        <references refid="classEngine_1_1Components_1_1Camera_1a23619a66046258f1158313f0c790ffa2" compoundref="Camera_8h" startline="18">Engine::Components::Camera::Direction</references>
+        <references refid="classGeneric_1_1Dictionary_1ad018bc166486129b48e9ededce313984" compoundref="Dictionary_8h" startline="21" endline="27">Generic::Dictionary&lt; TKey, TValue &gt;::Get</references>
+        <references refid="classEngine_1_1Components_1_1Window_1ad9cf40200634bff27dbc7ae9a841bb99" compoundref="Window_8h" startline="25">Engine::Components::Window::Height</references>
+        <references refid="IInputHandler_8h_1a4cf9deae4ce7e88bc5a97b5678aa24d0" compoundref="IInputHandler_8h" startline="5">MK_R</references>
+        <references refid="classEngine_1_1Components_1_1Scene_1a23481feabaaa56bf5613765db03af4da" compoundref="Scene_8h" startline="27">Engine::Components::Scene::Objects</references>
+        <references refid="classEngine_1_1BaseEngine_1ae0f86360ea3a384caefe443dd8f88601" compoundref="BaseEngine_8h" startline="28">Engine::BaseEngine::Programs</references>
+        <references refid="classEngine_1_1Components_1_1Camera_1a10b30289c89694d13918a979bade13d9" compoundref="Camera_8h" startline="20">Engine::Components::Camera::Right</references>
+        <references refid="classEngine_1_1BaseEngine_1a2582dee3f73da82bb422b43317b85e3b" compoundref="BaseEngine_8h" startline="29">Engine::BaseEngine::Shaders</references>
+        <references refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" compoundref="2_2sphere_8h" startline="3">sphere</references>
+        <references refid="classEngine_1_1Components_1_1Camera_1a84a4199b9c60579a0f148b9980e05200" compoundref="Camera_8h" startline="19">Engine::Components::Camera::Up</references>
+        <references refid="classEngine_1_1Components_1_1Camera_1a364f5e22921e3d234b31297a64c7d932" compoundref="Camera_8cpp" startline="43" endline="49">Engine::Components::Camera::Update</references>
+        <references refid="classEngine_1_1Components_1_1Graphics_1_1Material_1a34335608ba1e6eb2c2dba5032107eab0" compoundref="Material_8h" startline="21">Engine::Components::Graphics::Material::Values</references>
+        <references refid="classEngine_1_1Components_1_1Window_1ad5f71bfbb06ff5452b63bddf4b0c20b1" compoundref="Window_8h" startline="24">Engine::Components::Window::Width</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="213">
+        <label>Application::Input::Handlers::CameraInputHandler</label>
+        <link refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler"/>
+        <childnode refid="214" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="214">
+        <label>Engine::Components::IInputHandler</label>
+        <link refid="classEngine_1_1Components_1_1IInputHandler"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="218">
+        <label>vec2</label>
+      </node>
+      <node id="217">
+        <label>float</label>
+      </node>
+      <node id="215">
+        <label>Application::Input::Handlers::CameraInputHandler</label>
+        <link refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler"/>
+        <childnode refid="216" relation="public-inheritance">
+        </childnode>
+        <childnode refid="217" relation="usage">
+          <edgelabel>-_yaw</edgelabel>
+          <edgelabel>-_pitch</edgelabel>
+        </childnode>
+        <childnode refid="218" relation="usage">
+          <edgelabel>-_lastMousePosition</edgelabel>
+        </childnode>
+      </node>
+      <node id="216">
+        <label>Engine::Components::IInputHandler</label>
+        <link refid="classEngine_1_1Components_1_1IInputHandler"/>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/CameraInputHandler.h" line="12" column="1" bodyfile="ZPG/CameraInputHandler.h" bodystart="11" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1ae8e329dd433afb42e5f53b5937a927fb" prot="private" virt="non-virtual"><scope>Application::Input::Handlers::CameraInputHandler</scope><name>_lastMousePosition</name></member>
+      <member refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a0157ef737743b53e5db833012cd27372" prot="private" virt="non-virtual"><scope>Application::Input::Handlers::CameraInputHandler</scope><name>_pitch</name></member>
+      <member refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a2fa09dcae6ed67d452d374a9fb629349" prot="private" virt="non-virtual"><scope>Application::Input::Handlers::CameraInputHandler</scope><name>_yaw</name></member>
+      <member refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a1863bafdf1002ddebe45795112c4c324" prot="public" virt="non-virtual"><scope>Application::Input::Handlers::CameraInputHandler</scope><name>CameraInputHandler</name></member>
+      <member refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a149884ea2dc9deea39d3dcd10dfa74b1" prot="public" virt="non-virtual"><scope>Application::Input::Handlers::CameraInputHandler</scope><name>HandleKeys</name></member>
+      <member refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1ab06fa94ce5265dc06abb645ea29850bd" prot="public" virt="non-virtual"><scope>Application::Input::Handlers::CameraInputHandler</scope><name>HandleMouse</name></member>
+      <member refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a08ccb4be5e9da5e461b3b1905a8da90d" prot="public" virt="non-virtual"><scope>Application::Input::Handlers::CameraInputHandler</scope><name>~CameraInputHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

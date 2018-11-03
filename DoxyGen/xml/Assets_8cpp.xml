@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="Assets_8cpp" kind="file" language="C++">
+    <compoundname>Assets.cpp</compoundname>
+    <includes refid="Assets_8h" local="yes">Assets.h</includes>
+    <incdepgraph>
+      <node id="81">
+        <label>string</label>
+      </node>
+      <node id="80">
+        <label>Assets.h</label>
+        <link refid="Assets_8h"/>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>ZPG/Assets.cpp</label>
+        <link refid="Assets_8cpp"/>
+        <childnode refid="80" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Assets_8h" kindref="compound">Assets.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classAssets_1a2b541c116af365350c686285cb115d07" kindref="member">Assets::Directory</ref><sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string(R</highlight><highlight class="stringliteral">&quot;(Assets\)&quot;);</highlight></codeline>
+<codeline lineno="4"><highlight class="stringliteral"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classAssets_1af94075606cda6aef8b4bdcbe17169af3" kindref="member">Assets::Shaders</ref><sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string(R</highlight><highlight class="stringliteral">&quot;(Assets\Shaders\)&quot;);</highlight></codeline>
+<codeline lineno="5"><highlight class="stringliteral"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classAssets_1abb1ca75a8a9c7b942232df4aff9bb6c9" kindref="member">Assets::ShadersFragment</ref><sp/>=<sp/><sp/><sp/><sp/><sp/>std::string(R</highlight><highlight class="stringliteral">&quot;(Assets\Shaders\Fragment\)&quot;);</highlight></codeline>
+<codeline lineno="6"><highlight class="stringliteral"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classAssets_1ac712d5aca276086a3734e2e9f74cfc6b" kindref="member">Assets::ShadersVertex</ref><sp/>=<sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string(R</highlight><highlight class="stringliteral">&quot;(Assets\Shaders\Vertex\)&quot;);</highlight></codeline>
+    </programlisting>
+    <location file="ZPG/Assets.cpp"/>
+  </compounddef>
+</doxygen>

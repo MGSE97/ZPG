@@ -1,0 +1,6 @@
+<map id="Generic::Collection&lt; T &gt;" name="Generic::Collection&lt; T &gt;">
+<area shape="rect" id="node3" href="$classGeneric_1_1Collection.html" title="{Generic::Collection\l\&lt; Engine::Components\l::Graphics::MaterialValueBase *\&gt;\n||+ Add()\l+ First()\l}" alt="" coords="5,301,221,423"/>
+<area shape="rect" id="node4" href="$classGeneric_1_1Collection.html" title="{Generic::Collection\l\&lt; Components::IInputHandler *\&gt;\n||+ Add()\l+ First()\l}" alt="" coords="246,309,453,415"/>
+<area shape="rect" id="node5" href="$classGeneric_1_1Collection.html" title="{Generic::Collection\l\&lt; Observer\&lt; T \&gt; *\&gt;\n||+ Add()\l+ First()\l}" alt="" coords="503,309,636,415"/>
+<area shape="rect" id="node6" href="$classGeneric_1_1Collection.html" title="{Generic::Collection\l\&lt; Observer\&lt; Camera \&gt; *\&gt;\n||+ Add()\l+ First()\l}" alt="" coords="660,309,831,415"/>
+</map>

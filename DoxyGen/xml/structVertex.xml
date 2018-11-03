@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structVertex" kind="struct" language="C++" prot="public">
+    <compoundname>Vertex</compoundname>
+    <includes refid="bedna_8h" local="no">bedna.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structVertex_1a21d39482cfec221ea8ed9e9fab50b13e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Vertex::Normal</definition>
+        <argsstring>[3]</argsstring>
+        <name>Normal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Assets/Models/bedna.h" line="4" column="1" bodyfile="ZPG/Assets/Models/bedna.h" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structVertex_1a85b45e0a1f35880b510cd5c3cd5a5296" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Vertex::Position</definition>
+        <argsstring>[3]</argsstring>
+        <name>Position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Assets/Models/bedna.h" line="3" column="1" bodyfile="ZPG/Assets/Models/bedna.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="622">
+        <label>Vertex</label>
+        <link refid="structVertex"/>
+        <childnode refid="623" relation="usage">
+          <edgelabel>+Normal</edgelabel>
+          <edgelabel>+Position</edgelabel>
+        </childnode>
+      </node>
+      <node id="623">
+        <label>float</label>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/Assets/Models/bedna.h" line="2" column="1" bodyfile="ZPG/Assets/Models/bedna.h" bodystart="1" bodyend="5"/>
+    <listofallmembers>
+      <member refid="structVertex_1a21d39482cfec221ea8ed9e9fab50b13e" prot="public" virt="non-virtual"><scope>Vertex</scope><name>Normal</name></member>
+      <member refid="structVertex_1a85b45e0a1f35880b510cd5c3cd5a5296" prot="public" virt="non-virtual"><scope>Vertex</scope><name>Position</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,324 @@
+\hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexObject}{}\section{Engine\+:\+:Components\+:\+:Objects\+:\+:Vertex\+Object Class Reference}
+\label{classEngine_1_1Components_1_1Objects_1_1VertexObject}\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}}
+
+
+{\ttfamily \#include $<$Vertex\+Object.\+h$>$}
+
+
+
+Inheritance diagram for Engine\+:\+:Components\+:\+:Objects\+:\+:Vertex\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{classEngine_1_1Components_1_1Objects_1_1VertexObject__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Engine\+:\+:Components\+:\+:Objects\+:\+:Vertex\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classEngine_1_1Components_1_1Objects_1_1VertexObject__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a2cd67c7ea4baefd945c5045d2a775a5d}{Vertex\+Object}} (\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material}{Graphics\+::\+Material}} $\ast$material, const float $\ast$points, int size, int dimensions, \mbox{\hyperlink{classGeneric_1_1Collection}{Generic\+::\+Collection}}$<$ \mbox{\hyperlink{structEngine_1_1Components_1_1Objects_1_1VAOConfig}{V\+A\+O\+Config}} $\ast$$>$ $\ast$configs=nullptr)
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a90ab6da3110fffb6343790de9ba5b0de}{$\sim$\+Vertex\+Object}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject}{Vertex\+Object}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a53a8f546ee082720579e2c33be6cedec}{Draw}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material}{Graphics\+::\+Material}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a86c1fced4cdc5e59a66a635390a17eca}{Material}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject}{Vertex\+Object}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a18550cae56ca1066792528a7dcf5d28a}{Add}} (int size, int offset)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a401aa1eb0254e57d8295c2287749eed5}{\+\_\+attribute\+\_\+id}}
+\item 
+int \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_aa76ac755e9e37853a778795f0a0ad15e}{\+\_\+\+Id}}
+\item 
+G\+Luint \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_ae85ac9d5ded8f54d58feb7fb78e75130}{\+\_\+\+V\+AO}} = 0
+\item 
+G\+Luint \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a79e171ffe4b9342d76c0c729a9836fd2}{\+\_\+\+V\+BO}} = 0
+\item 
+int \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_ae5bb104a878dc8a3c909ec9b0ee799c1}{Dimensions}}
+\item 
+int \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a13ec6e4a92520bdd1b33ad6de757cb92}{Size}}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_aef076731df98a4806c644a3ac4400ae2}{\+\_\+object\+\_\+id}} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 15 of file Vertex\+Object.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexObject_a2cd67c7ea4baefd945c5045d2a775a5d}\label{classEngine_1_1Components_1_1Objects_1_1VertexObject_a2cd67c7ea4baefd945c5045d2a775a5d}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}!Vertex\+Object@{Vertex\+Object}}
+\index{Vertex\+Object@{Vertex\+Object}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}}
+\subsubsection{\texorpdfstring{Vertex\+Object()}{VertexObject()}}
+{\footnotesize\ttfamily Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object\+::\+Vertex\+Object (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material}{Graphics\+::\+Material}} $\ast$}]{material,  }\item[{const float $\ast$}]{points,  }\item[{int}]{size,  }\item[{int}]{dimensions,  }\item[{\mbox{\hyperlink{classGeneric_1_1Collection}{Generic\+::\+Collection}}$<$ \mbox{\hyperlink{structEngine_1_1Components_1_1Objects_1_1VAOConfig}{V\+A\+O\+Config}} $\ast$$>$ $\ast$}]{configs = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file Vertex\+Object.\+cpp.
+
+
+\begin{DoxyCode}
+20 \{
+21     \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a401aa1eb0254e57d8295c2287749eed5}{\_attribute\_id}} = 0;
+22     \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_ae5bb104a878dc8a3c909ec9b0ee799c1}{Dimensions}} = dimensions;
+23     \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a13ec6e4a92520bdd1b33ad6de757cb92}{Size}} = size/(dimensions*2);
+24     \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_aa76ac755e9e37853a778795f0a0ad15e}{\_Id}} = ++\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_aef076731df98a4806c644a3ac4400ae2}{\_object\_id}};
+25     \textcolor{comment}{/*glGenBuffers(1, &\_VBO); // generate the VBO}
+26 \textcolor{comment}{    glBindBuffer(GL\_ARRAY\_BUFFER, \_VBO);}
+27 \textcolor{comment}{    glBufferData(GL\_ARRAY\_BUFFER, size, points, GL\_STATIC\_DRAW);}
+28 \textcolor{comment}{}
+29 \textcolor{comment}{    glGenVertexArrays(1, &\_VAO); //generate the VAO}
+30 \textcolor{comment}{    glBindVertexArray(\_VAO); //bind the VAO}
+31 \textcolor{comment}{    glEnableVertexAttribArray(0); //enable vertex attributes}
+32 \textcolor{comment}{    glBindBuffer(GL\_ARRAY\_BUFFER, \_VBO);}
+33 \textcolor{comment}{    glVertexAttribPointer(\_attribute\_id, *Dimensions, GL\_FLOAT, GL\_FALSE, 3*sizeof(float), nullptr);}
+34 \textcolor{comment}{    \_attribute\_id++;*/}
+35 
+36     glGenVertexArrays(1, &\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_ae85ac9d5ded8f54d58feb7fb78e75130}{\_VAO}});
+37     glBindVertexArray(\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_ae85ac9d5ded8f54d58feb7fb78e75130}{\_VAO}});
+38 
+39     glGenBuffers(1, &\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a79e171ffe4b9342d76c0c729a9836fd2}{\_VBO}});
+40     glBindBuffer(GL\_ARRAY\_BUFFER, \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a79e171ffe4b9342d76c0c729a9836fd2}{\_VBO}});
+41     glBufferData(GL\_ARRAY\_BUFFER, size * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}), points, GL\_STATIC\_DRAW);
+42 
+43     glEnableVertexAttribArray(0);
+44     glVertexAttribPointer(0, 3, GL\_FLOAT, GL\_FALSE, 6 * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}), (GLvoid*)0);
+45 
+46     glEnableVertexAttribArray(1);
+47     glVertexAttribPointer(1, 3, GL\_FLOAT, GL\_FALSE, 6 * \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}), (GLvoid*)(3*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float})));
+48 
+49     \textcolor{comment}{/*VBO = new VertexBufferObject(points, size);}
+50 \textcolor{comment}{    VAOs = new Generic::Collection<VertexAttributeObject*>();*/}
+51     \textcolor{comment}{/*if (configs != nullptr)}
+52 \textcolor{comment}{        for(auto config: *configs)}
+53 \textcolor{comment}{        /*\{}
+54 \textcolor{comment}{            glGenVertexArrays(1, &\_VAO); //generate the VAO}
+55 \textcolor{comment}{            glBindVertexArray(\_VAO); //bind the VAO}
+56 \textcolor{comment}{            glEnableVertexAttribArray(\_attribute\_id++); //enable vertex attributes}
+57 \textcolor{comment}{        \}*/}
+58         \textcolor{comment}{/*  Add(config->Size, config->Offset);}
+59 \textcolor{comment}{    /*\_attribute\_id = 0;}
+60 \textcolor{comment}{    glBindBuffer(GL\_ARRAY\_BUFFER, \_VBO);}
+61 \textcolor{comment}{    if (configs != nullptr)}
+62 \textcolor{comment}{        for (auto config : *configs)}
+63 \textcolor{comment}{        \{}
+64 \textcolor{comment}{            glVertexAttribPointer(\_attribute\_id++, *Dimensions, GL\_FLOAT, GL\_FALSE, config->Size *
+       sizeof(float), (GLvoid*)(config->Offset));}
+65 \textcolor{comment}{        \}*/}
+66     \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a86c1fced4cdc5e59a66a635390a17eca}{Material}} = material;
+67 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexObject_a90ab6da3110fffb6343790de9ba5b0de}\label{classEngine_1_1Components_1_1Objects_1_1VertexObject_a90ab6da3110fffb6343790de9ba5b0de}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}!````~Vertex\+Object@{$\sim$\+Vertex\+Object}}
+\index{````~Vertex\+Object@{$\sim$\+Vertex\+Object}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}}
+\subsubsection{\texorpdfstring{$\sim$\+Vertex\+Object()}{~VertexObject()}}
+{\footnotesize\ttfamily Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object\+::$\sim$\+Vertex\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 69 of file Vertex\+Object.\+cpp.
+
+
+\begin{DoxyCode}
+70 \{
+71     \textcolor{keyword}{delete} &\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a79e171ffe4b9342d76c0c729a9836fd2}{\_VBO}};
+72     \textcolor{keyword}{delete} &\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_ae85ac9d5ded8f54d58feb7fb78e75130}{\_VAO}};
+73     \textcolor{keyword}{delete} \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a86c1fced4cdc5e59a66a635390a17eca}{Material}};
+74 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexObject_a18550cae56ca1066792528a7dcf5d28a}\label{classEngine_1_1Components_1_1Objects_1_1VertexObject_a18550cae56ca1066792528a7dcf5d28a}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}!Add@{Add}}
+\index{Add@{Add}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}}
+\subsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject}{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}} $\ast$ Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object\+::\+Add (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{offset }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 6 of file Vertex\+Object.\+cpp.
+
+
+
+References \+\_\+attribute\+\_\+id, and Dimensions.
+
+
+\begin{DoxyCode}
+7 \{
+8 
+9     \textcolor{comment}{/*glEnableVertexAttribArray(\_attribute\_id); //enable vertex attributes}
+10 \textcolor{comment}{    glBindBuffer(GL\_ARRAY\_BUFFER, \_VBO);}
+11 \textcolor{comment}{    glVertexAttribPointer(\_attribute\_id++, *Dimensions, GL\_FLOAT, GL\_FALSE, size * sizeof(float), (GLvoid*
+      )offset);*/}
+12     glEnableVertexAttribArray(\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a401aa1eb0254e57d8295c2287749eed5}{\_attribute\_id}});
+13     glVertexAttribPointer(\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a401aa1eb0254e57d8295c2287749eed5}{\_attribute\_id}}, \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_ae5bb104a878dc8a3c909ec9b0ee799c1}{Dimensions}}, GL\_FLOAT, GL\_FALSE, size, (\textcolor{keywordtype}{void}
+      *)offset);
+14     \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a401aa1eb0254e57d8295c2287749eed5}{\_attribute\_id}}++;
+15     \textcolor{comment}{//VAOs->Add(new VertexAttributeObject(VAOi++, VBO, *Dimensions, size, offset));}
+16     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+17 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexObject_a53a8f546ee082720579e2c33be6cedec}\label{classEngine_1_1Components_1_1Objects_1_1VertexObject_a53a8f546ee082720579e2c33be6cedec}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}!Draw@{Draw}}
+\index{Draw@{Draw}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}}
+\subsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject}{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}} $\ast$ Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 76 of file Vertex\+Object.\+cpp.
+
+
+
+Referenced by Engine\+::\+Objects\+::\+Sphere\+::\+Draw().
+
+
+\begin{DoxyCode}
+77 \{
+78     \textcolor{comment}{// use material}
+79     \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a86c1fced4cdc5e59a66a635390a17eca}{Material}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material_aef1dd6fbbf0268d4f3e6c371a2f1aa8d}{Use}}();
+80 
+81 
+82     glBindVertexArray(\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_ae85ac9d5ded8f54d58feb7fb78e75130}{\_VAO}});
+83     \textcolor{comment}{// draw triangles}
+84     glDrawArrays(GL\_TRIANGLES, 0, \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexObject_a13ec6e4a92520bdd1b33ad6de757cb92}{Size}});
+85     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+86 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Objects_1_1VertexObject_a53a8f546ee082720579e2c33be6cedec_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexObject_a401aa1eb0254e57d8295c2287749eed5}\label{classEngine_1_1Components_1_1Objects_1_1VertexObject_a401aa1eb0254e57d8295c2287749eed5}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}!\+\_\+attribute\+\_\+id@{\+\_\+attribute\+\_\+id}}
+\index{\+\_\+attribute\+\_\+id@{\+\_\+attribute\+\_\+id}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}}
+\subsubsection{\texorpdfstring{\+\_\+attribute\+\_\+id}{\_attribute\_id}}
+{\footnotesize\ttfamily int Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object\+::\+\_\+attribute\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 24 of file Vertex\+Object.\+h.
+
+
+
+Referenced by Add().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexObject_aa76ac755e9e37853a778795f0a0ad15e}\label{classEngine_1_1Components_1_1Objects_1_1VertexObject_aa76ac755e9e37853a778795f0a0ad15e}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}!\+\_\+\+Id@{\+\_\+\+Id}}
+\index{\+\_\+\+Id@{\+\_\+\+Id}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}}
+\subsubsection{\texorpdfstring{\+\_\+\+Id}{\_Id}}
+{\footnotesize\ttfamily int Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object\+::\+\_\+\+Id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 23 of file Vertex\+Object.\+h.
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexObject_aef076731df98a4806c644a3ac4400ae2}\label{classEngine_1_1Components_1_1Objects_1_1VertexObject_aef076731df98a4806c644a3ac4400ae2}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}!\+\_\+object\+\_\+id@{\+\_\+object\+\_\+id}}
+\index{\+\_\+object\+\_\+id@{\+\_\+object\+\_\+id}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}}
+\subsubsection{\texorpdfstring{\+\_\+object\+\_\+id}{\_object\_id}}
+{\footnotesize\ttfamily int Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object\+::\+\_\+object\+\_\+id = 0\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+Definition at line 26 of file Vertex\+Object.\+h.
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexObject_ae85ac9d5ded8f54d58feb7fb78e75130}\label{classEngine_1_1Components_1_1Objects_1_1VertexObject_ae85ac9d5ded8f54d58feb7fb78e75130}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}!\+\_\+\+V\+AO@{\+\_\+\+V\+AO}}
+\index{\+\_\+\+V\+AO@{\+\_\+\+V\+AO}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}}
+\subsubsection{\texorpdfstring{\+\_\+\+V\+AO}{\_VAO}}
+{\footnotesize\ttfamily G\+Luint Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object\+::\+\_\+\+V\+AO = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 22 of file Vertex\+Object.\+h.
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexObject_a79e171ffe4b9342d76c0c729a9836fd2}\label{classEngine_1_1Components_1_1Objects_1_1VertexObject_a79e171ffe4b9342d76c0c729a9836fd2}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}!\+\_\+\+V\+BO@{\+\_\+\+V\+BO}}
+\index{\+\_\+\+V\+BO@{\+\_\+\+V\+BO}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}}
+\subsubsection{\texorpdfstring{\+\_\+\+V\+BO}{\_VBO}}
+{\footnotesize\ttfamily G\+Luint Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object\+::\+\_\+\+V\+BO = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 21 of file Vertex\+Object.\+h.
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexObject_ae5bb104a878dc8a3c909ec9b0ee799c1}\label{classEngine_1_1Components_1_1Objects_1_1VertexObject_ae5bb104a878dc8a3c909ec9b0ee799c1}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}!Dimensions@{Dimensions}}
+\index{Dimensions@{Dimensions}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}}
+\subsubsection{\texorpdfstring{Dimensions}{Dimensions}}
+{\footnotesize\ttfamily int Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object\+::\+Dimensions\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 20 of file Vertex\+Object.\+h.
+
+
+
+Referenced by Add().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexObject_a86c1fced4cdc5e59a66a635390a17eca}\label{classEngine_1_1Components_1_1Objects_1_1VertexObject_a86c1fced4cdc5e59a66a635390a17eca}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}!Material@{Material}}
+\index{Material@{Material}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}}
+\subsubsection{\texorpdfstring{Material}{Material}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material}{Graphics\+::\+Material}}$\ast$ Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object\+::\+Material}
+
+
+
+Definition at line 32 of file Vertex\+Object.\+h.
+
+
+
+Referenced by Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), Light\+::\+Light(), and Engine\+::\+Objects\+::\+Object\+::\+Object().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexObject_a13ec6e4a92520bdd1b33ad6de757cb92}\label{classEngine_1_1Components_1_1Objects_1_1VertexObject_a13ec6e4a92520bdd1b33ad6de757cb92}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}!Size@{Size}}
+\index{Size@{Size}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object}}
+\subsubsection{\texorpdfstring{Size}{Size}}
+{\footnotesize\ttfamily int Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Object\+::\+Size\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 25 of file Vertex\+Object.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{VertexObject_8h}{Vertex\+Object.\+h}}\item 
+Z\+P\+G/\mbox{\hyperlink{VertexObject_8cpp}{Vertex\+Object.\+cpp}}\end{DoxyCompactItemize}

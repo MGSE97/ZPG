@@ -1,0 +1,375 @@
+\hypertarget{classApplication_1_1Scenes_1_1SphereScene}{}\section{Application\+:\+:Scenes\+:\+:Sphere\+Scene Class Reference}
+\label{classApplication_1_1Scenes_1_1SphereScene}\index{Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}}
+
+
+{\ttfamily \#include $<$Sphere\+Scene.\+h$>$}
+
+
+
+Inheritance diagram for Application\+:\+:Scenes\+:\+:Sphere\+Scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classApplication_1_1Scenes_1_1SphereScene__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Application\+:\+:Scenes\+:\+:Sphere\+Scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classApplication_1_1Scenes_1_1SphereScene__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classApplication_1_1Scenes_1_1SphereScene_a5880969092c7164e61a4236860c121c1}{Sphere\+Scene}} ()
+\item 
+\mbox{\hyperlink{classApplication_1_1Scenes_1_1SphereScene_a36617ce2362ace6514125d71d2fe41a9}{$\sim$\+Sphere\+Scene}} ()
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_af18bd334fe66952b8d79b8e9e99ab2d8}{Begin\+Load}} (Base\+Engine $\ast$engine)
+\item 
+void \mbox{\hyperlink{classApplication_1_1Scenes_1_1SphereScene_ad754dea94c77524a79d707436a933c66}{Frame\+Update}} (\mbox{\hyperlink{classEngine_1_1BaseEngine}{Engine\+::\+Base\+Engine}} $\ast$engine) override
+\item 
+void \mbox{\hyperlink{classApplication_1_1Scenes_1_1SphereScene_adf6f95bf2ac8f0e84935d04248407ba4}{Load}} (\mbox{\hyperlink{classEngine_1_1BaseEngine}{Engine\+::\+Base\+Engine}} $\ast$engine) override
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a936218df56c481f3aa12d684cee038f3}{Set\+Active\+Camera}} (Camera $\ast$camera=nullptr)
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a064ce89da5daa483369c3253f04c9d21}{Unload}} (Base\+Engine $\ast$engine)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Camera $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{Active\+Camera}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, Camera $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_aea98ff1ced88ee859878b504e9a2a362}{Cameras}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, \mbox{\hyperlink{classLight}{Light}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}{Lights}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, \mbox{\hyperlink{classEngine_1_1Objects_1_1Object}{Engine\+::\+Objects\+::\+Object}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_ae828757eea5410550f6674421051a783}{Loaded}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 8 of file Sphere\+Scene.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classApplication_1_1Scenes_1_1SphereScene_a5880969092c7164e61a4236860c121c1}\label{classApplication_1_1Scenes_1_1SphereScene_a5880969092c7164e61a4236860c121c1}} 
+\index{Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}!Sphere\+Scene@{Sphere\+Scene}}
+\index{Sphere\+Scene@{Sphere\+Scene}!Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}}
+\subsubsection{\texorpdfstring{Sphere\+Scene()}{SphereScene()}}
+{\footnotesize\ttfamily Application\+::\+Scenes\+::\+Sphere\+Scene\+::\+Sphere\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file Sphere\+Scene.\+cpp.
+
+
+\begin{DoxyCode}
+10 \{
+11 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classApplication_1_1Scenes_1_1SphereScene_a36617ce2362ace6514125d71d2fe41a9}\label{classApplication_1_1Scenes_1_1SphereScene_a36617ce2362ace6514125d71d2fe41a9}} 
+\index{Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}!````~Sphere\+Scene@{$\sim$\+Sphere\+Scene}}
+\index{````~Sphere\+Scene@{$\sim$\+Sphere\+Scene}!Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}}
+\subsubsection{\texorpdfstring{$\sim$\+Sphere\+Scene()}{~SphereScene()}}
+{\footnotesize\ttfamily Application\+::\+Scenes\+::\+Sphere\+Scene\+::$\sim$\+Sphere\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 13 of file Sphere\+Scene.\+cpp.
+
+
+\begin{DoxyCode}
+14 \{
+15     Scene::~Scene();
+16 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_af18bd334fe66952b8d79b8e9e99ab2d8}\label{classEngine_1_1Components_1_1Scene_af18bd334fe66952b8d79b8e9e99ab2d8}} 
+\index{Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}!Begin\+Load@{Begin\+Load}}
+\index{Begin\+Load@{Begin\+Load}!Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}}
+\subsubsection{\texorpdfstring{Begin\+Load()}{BeginLoad()}}
+{\footnotesize\ttfamily void Engine\+::\+Components\+::\+Scene\+::\+Begin\+Load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1BaseEngine}{Base\+Engine}} $\ast$}]{engine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 37 of file Scene.\+cpp.
+
+
+
+Referenced by Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), and Application\+::\+Engines\+::\+Light\+Engine\+::\+Init().
+
+
+\begin{DoxyCode}
+38 \{
+39     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_ae828757eea5410550f6674421051a783}{Loaded}})
+40     \{
+41         \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23c5b23e66646443670a487e7c016e73}{Load}}(engine);
+42         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}} == \textcolor{keyword}{nullptr})
+43             \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a936218df56c481f3aa12d684cee038f3}{SetActiveCamera}}();
+44         \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_ae828757eea5410550f6674421051a783}{Loaded}} = \textcolor{keyword}{true};
+45     \}
+46 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{classEngine_1_1Components_1_1Scene_af18bd334fe66952b8d79b8e9e99ab2d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classApplication_1_1Scenes_1_1SphereScene_ad754dea94c77524a79d707436a933c66}\label{classApplication_1_1Scenes_1_1SphereScene_ad754dea94c77524a79d707436a933c66}} 
+\index{Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}!Frame\+Update@{Frame\+Update}}
+\index{Frame\+Update@{Frame\+Update}!Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}}
+\subsubsection{\texorpdfstring{Frame\+Update()}{FrameUpdate()}}
+{\footnotesize\ttfamily void Application\+::\+Scenes\+::\+Sphere\+Scene\+::\+Frame\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1BaseEngine}{Engine\+::\+Base\+Engine}} $\ast$}]{engine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_abd8fcdcac52dbce6a0a18de3860ab087}{Engine\+::\+Components\+::\+Scene}}.
+
+
+
+Definition at line 62 of file Sphere\+Scene.\+cpp.
+
+
+\begin{DoxyCode}
+63 \{
+64 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classApplication_1_1Scenes_1_1SphereScene_adf6f95bf2ac8f0e84935d04248407ba4}\label{classApplication_1_1Scenes_1_1SphereScene_adf6f95bf2ac8f0e84935d04248407ba4}} 
+\index{Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}!Load@{Load}}
+\index{Load@{Load}!Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily void Application\+::\+Scenes\+::\+Sphere\+Scene\+::\+Load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1BaseEngine}{Engine\+::\+Base\+Engine}} $\ast$}]{engine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23c5b23e66646443670a487e7c016e73}{Engine\+::\+Components\+::\+Scene}}.
+
+
+
+Definition at line 18 of file Sphere\+Scene.\+cpp.
+
+
+
+References Engine\+::\+Base\+Engine\+::\+Programs, Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+Shaders, and sphere.
+
+
+\begin{DoxyCode}
+19 \{
+20     \textcolor{comment}{// define material}
+21     \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Engine::Components::Graphics::Program}}* program = engine->
+      \mbox{\hyperlink{classEngine_1_1BaseEngine_ae0f86360ea3a384caefe443dd8f88601}{Programs}}->Get(\textcolor{stringliteral}{"basic"});
+22 
+23     \textcolor{comment}{// create object}
+24     \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}->\mbox{\hyperlink{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}{Add}}(\textcolor{stringliteral}{"sphere1"}, new ::Engine::Objects::Sphere(\textcolor{keyword}{new} 
+      \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material}{Engine::Components::Graphics::Material}}(program), 
+      \mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}}, 17280, 3));
+25     \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}->\mbox{\hyperlink{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}{Add}}(\textcolor{stringliteral}{"sphere2"}, new ::Engine::Objects::Sphere(\textcolor{keyword}{new} 
+      \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material}{Engine::Components::Graphics::Material}}(program), 
+      \mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}}, 17280, 3));
+26     \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}->\mbox{\hyperlink{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}{Add}}(\textcolor{stringliteral}{"sphere3"}, new ::Engine::Objects::Sphere(\textcolor{keyword}{new} 
+      \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material}{Engine::Components::Graphics::Material}}(program), 
+      \mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}}, 17280, 3));
+27     \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}->\mbox{\hyperlink{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}{Add}}(\textcolor{stringliteral}{"sphere4"}, new ::Engine::Objects::Sphere(\textcolor{keyword}{new} 
+      \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material}{Engine::Components::Graphics::Material}}(program), 
+      \mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}}, 17280, 3));
+28     
+29     \textcolor{keyword}{auto} \mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}} = \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}->\mbox{\hyperlink{classGeneric_1_1Dictionary_ad018bc166486129b48e9ededce313984}{Get}}(\textcolor{stringliteral}{"sphere1"});
+30     \mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}}->Material->Values
+31         ->Add(
+32             \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine::Components::Graphics::MaterialValue<glm::vec4>}}
+      (
+33                 program->\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_aff39fa56fc1fab1bce6c8a5ce29ae161}{Shaders}}->Get(\textcolor{stringliteral}{"fragment"}), \textcolor{stringliteral}{"color"}, \textcolor{keyword}{new} glm::vec4(1.0f, 1.0f, 0.0f, 0.5f))
+34         );
+35     *(\mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}}->ModelMatrix) = glm::translate(*(\mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}}->ModelMatrix), glm::vec3(-2, 0, 0));
+36 
+37     \mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}} = \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}->\mbox{\hyperlink{classGeneric_1_1Dictionary_ad018bc166486129b48e9ededce313984}{Get}}(\textcolor{stringliteral}{"sphere2"});
+38     \mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}}->Material->Values
+39         ->Add(
+40             \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine::Components::Graphics::MaterialValue<glm::vec4>}}
+      (
+41                 program->\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_aff39fa56fc1fab1bce6c8a5ce29ae161}{Shaders}}->Get(\textcolor{stringliteral}{"fragment"}), \textcolor{stringliteral}{"color"}, \textcolor{keyword}{new} glm::vec4(1.0f, 0.0f, 1.0f, 0.5f))
+42         );
+43     *(\mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}}->ModelMatrix) = glm::translate(*(\mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}}->ModelMatrix), glm::vec3(0, 2, 0));
+44 
+45     \mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}} = \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}->\mbox{\hyperlink{classGeneric_1_1Dictionary_ad018bc166486129b48e9ededce313984}{Get}}(\textcolor{stringliteral}{"sphere3"});
+46     \mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}}->Material->Values
+47         ->Add(
+48             \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine::Components::Graphics::MaterialValue<glm::vec4>}}
+      (
+49                 program->\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_aff39fa56fc1fab1bce6c8a5ce29ae161}{Shaders}}->Get(\textcolor{stringliteral}{"fragment"}), \textcolor{stringliteral}{"color"}, \textcolor{keyword}{new} glm::vec4(0.0f, 1.0f, 1.0f, 0.5f))
+50         );
+51     *(\mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}}->ModelMatrix) = glm::translate(*(\mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}}->ModelMatrix), glm::vec3(2, 0, 0));
+52 
+53     \mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}} = \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}->\mbox{\hyperlink{classGeneric_1_1Dictionary_ad018bc166486129b48e9ededce313984}{Get}}(\textcolor{stringliteral}{"sphere4"});
+54     \mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}}->Material->Values
+55         ->Add(
+56             \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine::Components::Graphics::MaterialValue<glm::vec4>}}
+      (
+57                 program->\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_aff39fa56fc1fab1bce6c8a5ce29ae161}{Shaders}}->Get(\textcolor{stringliteral}{"fragment"}), \textcolor{stringliteral}{"color"}, \textcolor{keyword}{new} glm::vec4(1.0f, 1.0f, 1.0f, 0.5f))
+58         );
+59     *(\mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}}->ModelMatrix) = glm::translate(*(\mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}}->ModelMatrix), glm::vec3(0, -2, 0));
+60 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_a936218df56c481f3aa12d684cee038f3}\label{classEngine_1_1Components_1_1Scene_a936218df56c481f3aa12d684cee038f3}} 
+\index{Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}!Set\+Active\+Camera@{Set\+Active\+Camera}}
+\index{Set\+Active\+Camera@{Set\+Active\+Camera}!Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}}
+\subsubsection{\texorpdfstring{Set\+Active\+Camera()}{SetActiveCamera()}}
+{\footnotesize\ttfamily void Engine\+::\+Components\+::\+Scene\+::\+Set\+Active\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}} $\ast$}]{camera = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 52 of file Scene.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Camera\+::\+Update().
+
+
+
+Referenced by Engine\+::\+Components\+::\+Camera\+::\+Set\+Active().
+
+
+\begin{DoxyCode}
+53 \{
+54     \textcolor{keywordflow}{if} (camera == \textcolor{keyword}{nullptr})
+55         \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}} = \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_aea98ff1ced88ee859878b504e9a2a362}{Cameras}}->First();
+56     \textcolor{keywordflow}{else}
+57         \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}} = camera;
+58     \textcolor{keywordflow}{if}(\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}} != \textcolor{keyword}{nullptr})
+59         \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a364f5e22921e3d234b31297a64c7d932}{Update}}();
+60 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Scene_a936218df56c481f3aa12d684cee038f3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Scene_a936218df56c481f3aa12d684cee038f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_a064ce89da5daa483369c3253f04c9d21}\label{classEngine_1_1Components_1_1Scene_a064ce89da5daa483369c3253f04c9d21}} 
+\index{Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}!Unload@{Unload}}
+\index{Unload@{Unload}!Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}}
+\subsubsection{\texorpdfstring{Unload()}{Unload()}}
+{\footnotesize\ttfamily void Engine\+::\+Components\+::\+Scene\+::\+Unload (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1BaseEngine}{Base\+Engine}} $\ast$}]{engine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 29 of file Scene.\+cpp.
+
+
+\begin{DoxyCode}
+30 \{
+31     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}& Object : *\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}})
+32         \textcolor{keyword}{delete} Object.second;
+33     \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}->clear();
+34     \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_ae828757eea5410550f6674421051a783}{Loaded}} = \textcolor{keyword}{false};
+35 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}\label{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}} 
+\index{Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}!Active\+Camera@{Active\+Camera}}
+\index{Active\+Camera@{Active\+Camera}!Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}}
+\subsubsection{\texorpdfstring{Active\+Camera}{ActiveCamera}}
+{\footnotesize\ttfamily Camera$\ast$ Engine\+::\+Components\+::\+Scene\+::\+Active\+Camera\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 30 of file Scene.\+h.
+
+
+
+Referenced by Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler\+::\+Handle\+Keys(), Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Keys(), Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse(), Application\+::\+Engines\+::\+Light\+Engine\+::\+Init(), and Engine\+::\+Components\+::\+Scene\+::\+Scene().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_aea98ff1ced88ee859878b504e9a2a362}\label{classEngine_1_1Components_1_1Scene_aea98ff1ced88ee859878b504e9a2a362}} 
+\index{Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}!Cameras@{Cameras}}
+\index{Cameras@{Cameras}!Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}}
+\subsubsection{\texorpdfstring{Cameras}{Cameras}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$std\+::string, Camera$\ast$$>$$\ast$ Engine\+::\+Components\+::\+Scene\+::\+Cameras\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 28 of file Scene.\+h.
+
+
+
+Referenced by Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Light\+Engine\+::\+Init(), and Engine\+::\+Components\+::\+Scene\+::\+Scene().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}\label{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}} 
+\index{Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}!Lights@{Lights}}
+\index{Lights@{Lights}!Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}}
+\subsubsection{\texorpdfstring{Lights}{Lights}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$std\+::string, \mbox{\hyperlink{classLight}{Light}}$\ast$$>$$\ast$ Engine\+::\+Components\+::\+Scene\+::\+Lights\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 29 of file Scene.\+h.
+
+
+
+Referenced by Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler\+::\+Handle\+Keys(), Application\+::\+Engines\+::\+Light\+Engine\+::\+Init(), and Engine\+::\+Components\+::\+Scene\+::\+Scene().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_ae828757eea5410550f6674421051a783}\label{classEngine_1_1Components_1_1Scene_ae828757eea5410550f6674421051a783}} 
+\index{Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}!Loaded@{Loaded}}
+\index{Loaded@{Loaded}!Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}}
+\subsubsection{\texorpdfstring{Loaded}{Loaded}}
+{\footnotesize\ttfamily bool Engine\+::\+Components\+::\+Scene\+::\+Loaded\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 18 of file Scene.\+h.
+
+
+
+Referenced by Engine\+::\+Components\+::\+Scene\+::\+Scene().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}\label{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}} 
+\index{Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}!Objects@{Objects}}
+\index{Objects@{Objects}!Application\+::\+Scenes\+::\+Sphere\+Scene@{Application\+::\+Scenes\+::\+Sphere\+Scene}}
+\subsubsection{\texorpdfstring{Objects}{Objects}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$std\+::string, \mbox{\hyperlink{classEngine_1_1Objects_1_1Object}{Engine\+::\+Objects\+::\+Object}}$\ast$$>$$\ast$ Engine\+::\+Components\+::\+Scene\+::\+Objects\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 27 of file Scene.\+h.
+
+
+
+Referenced by Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Light\+Engine\+::\+Init(), and Engine\+::\+Components\+::\+Scene\+::\+Scene().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{SphereScene_8h}{Sphere\+Scene.\+h}}\item 
+Z\+P\+G/\mbox{\hyperlink{SphereScene_8cpp}{Sphere\+Scene.\+cpp}}\end{DoxyCompactItemize}

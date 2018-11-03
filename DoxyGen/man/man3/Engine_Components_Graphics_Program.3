@@ -1,0 +1,204 @@
+.TH "Engine::Components::Graphics::Program" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Engine::Components::Graphics::Program
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Program\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProgram\fP ()"
+.br
+.ti -1c
+.RI "\fB~Program\fP ()"
+.br
+.ti -1c
+.RI "\fBProgram\fP * \fBAddShader\fP (std::string key, \fBShader\fP *shader)"
+.br
+.ti -1c
+.RI "\fBProgram\fP * \fBAddShaders\fP (\fBGeneric::Dictionary\fP< std::string, \fBShader\fP *> *shaders)"
+.br
+.ti -1c
+.RI "GLuint * \fBGet\fP ()"
+.br
+.ti -1c
+.RI "\fBProgram\fP * \fBLink\fP ()"
+.br
+.ti -1c
+.RI "\fBProgram\fP * \fBUse\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< std::string, \fBShader\fP * > * \fBShaders\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBCheckLink\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fB_linked\fP"
+.br
+.ti -1c
+.RI "GLuint \fB_program\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 15 of file Program\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Engine::Components::Graphics::Program::Program ()"
+
+.PP
+Definition at line 8 of file Program\&.cpp\&.
+.PP
+References _linked, _program, and Shaders\&.
+.PP
+.nf
+9 {
+10     _program = glCreateProgram();
+11     _linked = false;
+12     Shaders = new Generic::Dictionary<std::string,Shader*>();
+13 }
+.fi
+.SS "Engine::Components::Graphics::Program::~Program ()"
+
+.PP
+Definition at line 16 of file Program\&.cpp\&.
+.PP
+.nf
+17 {
+18     Shaders->clear();
+19     delete Shaders;
+20 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBEngine::Components::Graphics::Program\fP * Engine::Components::Graphics::Program::AddShader (std::string key, \fBShader\fP * shader)"
+
+.PP
+Definition at line 22 of file Program\&.cpp\&.
+.PP
+References Engine::Components::Graphics::Shader::Get()\&.
+.PP
+.nf
+23 {
+24     Shaders->Add(key, shader);
+25     glAttachShader(_program, *shader->Get());
+26     return this;
+27 }
+.fi
+.SS "\fBEngine::Components::Graphics::Program\fP * Engine::Components::Graphics::Program::AddShaders (\fBGeneric::Dictionary\fP< std::string, \fBShader\fP *> * shaders)"
+
+.PP
+Definition at line 29 of file Program\&.cpp\&.
+.PP
+.nf
+30 {
+31     /*for (Shader* shader : *shaders)
+32         AddShader(shader);*/
+33     for (auto it = shaders->begin(); it != shaders->end(); ++it)
+34         AddShader(it->first, it->second);
+35     return this;
+36 }
+.fi
+.SS "bool Engine::Components::Graphics::Program::CheckLink ()\fC [private]\fP"
+
+.PP
+Definition at line 58 of file Program\&.cpp\&.
+.PP
+.nf
+59 {
+60     GLint status;
+61     glGetProgramiv(_program, GL_LINK_STATUS, &status);
+62     if (status == GL_FALSE)
+63     {
+64         GLint infoLogLength;
+65         glGetProgramiv(_program, GL_INFO_LOG_LENGTH, &infoLogLength);
+66         GLchar *strInfoLog = new GLchar[infoLogLength + 1];
+67         glGetProgramInfoLog(_program, infoLogLength, NULL, strInfoLog);
+68         fprintf(stderr, "Linker failure: %s\n", strInfoLog);
+69         delete[] strInfoLog;
+70         return false;
+71     }
+72     return true;
+73 }
+.fi
+.SS "GLuint * Engine::Components::Graphics::Program::Get ()"
+
+.PP
+Definition at line 51 of file Program\&.cpp\&.
+.PP
+Referenced by Engine::Components::Graphics::Shader::SendUniform()\&.
+.PP
+.nf
+52 {
+53     if(!_linked)
+54         Link();
+55     return &_program;
+56 }
+.fi
+.SS "\fBEngine::Components::Graphics::Program\fP * Engine::Components::Graphics::Program::Link ()"
+
+.PP
+Definition at line 38 of file Program\&.cpp\&.
+.PP
+.nf
+39 {
+40     glLinkProgram(_program);
+41     _linked = CheckLink();
+42     return this;
+43 }
+.fi
+.SS "\fBEngine::Components::Graphics::Program\fP * Engine::Components::Graphics::Program::Use ()"
+
+.PP
+Definition at line 45 of file Program\&.cpp\&.
+.PP
+Referenced by Engine::Components::Graphics::Material::Use()\&.
+.PP
+.nf
+46 {
+47     glUseProgram(*Get());
+48     return this;
+49 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "bool Engine::Components::Graphics::Program::_linked\fC [private]\fP"
+
+.PP
+Definition at line 28 of file Program\&.h\&.
+.PP
+Referenced by Program()\&.
+.SS "GLuint Engine::Components::Graphics::Program::_program\fC [private]\fP"
+
+.PP
+Definition at line 27 of file Program\&.h\&.
+.PP
+Referenced by Program()\&.
+.SS "\fBGeneric::Dictionary\fP<std::string, \fBShader\fP*>* Engine::Components::Graphics::Program::Shaders"
+
+.PP
+Definition at line 25 of file Program\&.h\&.
+.PP
+Referenced by Light::Light(), Application::Scenes::TriangleScene::Load(), Application::Scenes::SphereScene::Load(), Engine::Objects::Object::Object(), Program(), and Light::Use()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

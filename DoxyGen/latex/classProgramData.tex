@@ -1,0 +1,106 @@
+\hypertarget{classProgramData}{}\section{Program\+Data$<$ T $>$ Class Template Reference}
+\label{classProgramData}\index{Program\+Data$<$ T $>$@{Program\+Data$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Program\+Data.\+h$>$}
+
+
+
+Collaboration diagram for Program\+Data$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classProgramData__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classProgramData_ac1c5a21a44f037b1c5448378fdbaabd0}{Program\+Data}} ()
+\item 
+\mbox{\hyperlink{classProgramData_a04be8ca855f8898c4ca8297518c70f23}{$\sim$\+Program\+Data}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ \mbox{\hyperlink{classProgramData}{Program\+Data}} $\ast$, T $>$ $\ast$ \mbox{\hyperlink{classProgramData_a1dea8570e013c06776692b248f25a534}{Values}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Program\+Data$<$ T $>$}
+
+
+
+Definition at line 6 of file Program\+Data.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classProgramData_ac1c5a21a44f037b1c5448378fdbaabd0}\label{classProgramData_ac1c5a21a44f037b1c5448378fdbaabd0}} 
+\index{Program\+Data@{Program\+Data}!Program\+Data@{Program\+Data}}
+\index{Program\+Data@{Program\+Data}!Program\+Data@{Program\+Data}}
+\subsubsection{\texorpdfstring{Program\+Data()}{ProgramData()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classProgramData}{Program\+Data}}$<$ T $>$\+::\mbox{\hyperlink{classProgramData}{Program\+Data}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 9 of file Program\+Data.\+h.
+
+
+
+References Program\+Data$<$ T $>$\+::\+Values.
+
+
+\begin{DoxyCode}
+10     \{
+11         \mbox{\hyperlink{classProgramData_a1dea8570e013c06776692b248f25a534}{Values}} = \textcolor{keyword}{new} \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic::Dictionary<ProgramData*, T>}}();
+12     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classProgramData_a04be8ca855f8898c4ca8297518c70f23}\label{classProgramData_a04be8ca855f8898c4ca8297518c70f23}} 
+\index{Program\+Data@{Program\+Data}!````~Program\+Data@{$\sim$\+Program\+Data}}
+\index{````~Program\+Data@{$\sim$\+Program\+Data}!Program\+Data@{Program\+Data}}
+\subsubsection{\texorpdfstring{$\sim$\+Program\+Data()}{~ProgramData()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classProgramData}{Program\+Data}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classProgramData}{Program\+Data}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 13 of file Program\+Data.\+h.
+
+
+
+References Program\+Data$<$ T $>$\+::\+Values.
+
+
+\begin{DoxyCode}
+14     \{
+15         \textcolor{keyword}{delete} \mbox{\hyperlink{classProgramData_a1dea8570e013c06776692b248f25a534}{Values}};
+16     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classProgramData_a1dea8570e013c06776692b248f25a534}\label{classProgramData_a1dea8570e013c06776692b248f25a534}} 
+\index{Program\+Data@{Program\+Data}!Values@{Values}}
+\index{Values@{Values}!Program\+Data@{Program\+Data}}
+\subsubsection{\texorpdfstring{Values}{Values}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$\mbox{\hyperlink{classProgramData}{Program\+Data}}$\ast$, T$>$$\ast$ \mbox{\hyperlink{classProgramData}{Program\+Data}}$<$ T $>$\+::Values}
+
+
+
+Definition at line 17 of file Program\+Data.\+h.
+
+
+
+Referenced by Program\+Data$<$ T $>$\+::\+Program\+Data(), and Program\+Data$<$ T $>$\+::$\sim$\+Program\+Data().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{ProgramData_8h}{Program\+Data.\+h}}\end{DoxyCompactItemize}

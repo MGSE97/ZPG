@@ -1,0 +1,379 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="SphereScene_8cpp" kind="file" language="C++">
+    <compoundname>SphereScene.cpp</compoundname>
+    <includes refid="SphereScene_8h" local="yes">SphereScene.h</includes>
+    <includes refid="BaseEngine_8h" local="yes">BaseEngine.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">glm/ext/quaternion_transform.inl</includes>
+    <includes local="no">glm/detail/type_quat.hpp</includes>
+    <includes refid="Sphere_8h" local="yes">Sphere.h</includes>
+    <includes refid="spheref_8h" local="yes">Assets/Models/2/spheref.h</includes>
+    <incdepgraph>
+      <node id="2096">
+        <label>list</label>
+      </node>
+      <node id="2082">
+        <label>VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="2083" relation="include">
+        </childnode>
+        <childnode refid="2086" relation="include">
+        </childnode>
+        <childnode refid="2088" relation="include">
+        </childnode>
+        <childnode refid="2097" relation="include">
+        </childnode>
+      </node>
+      <node id="2098">
+        <label>MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="2095" relation="include">
+        </childnode>
+        <childnode refid="2090" relation="include">
+        </childnode>
+        <childnode refid="2094" relation="include">
+        </childnode>
+        <childnode refid="2099" relation="include">
+        </childnode>
+      </node>
+      <node id="2086">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="2084" relation="include">
+        </childnode>
+        <childnode refid="2083" relation="include">
+        </childnode>
+        <childnode refid="2087" relation="include">
+        </childnode>
+      </node>
+      <node id="2090">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="2084" relation="include">
+        </childnode>
+        <childnode refid="2091" relation="include">
+        </childnode>
+        <childnode refid="2092" relation="include">
+        </childnode>
+        <childnode refid="2093" relation="include">
+        </childnode>
+        <childnode refid="2094" relation="include">
+        </childnode>
+        <childnode refid="2095" relation="include">
+        </childnode>
+      </node>
+      <node id="2116">
+        <label>Assets/Models/2/spheref.h</label>
+        <link refid="spheref_8h"/>
+      </node>
+      <node id="2077">
+        <label>SphereScene.h</label>
+        <link refid="SphereScene_8h"/>
+        <childnode refid="2078" relation="include">
+        </childnode>
+      </node>
+      <node id="2083">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="2084" relation="include">
+        </childnode>
+        <childnode refid="2085" relation="include">
+        </childnode>
+      </node>
+      <node id="2095">
+        <label>string</label>
+      </node>
+      <node id="2084">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="2109">
+        <label>Window.h</label>
+        <link refid="Window_8h"/>
+        <childnode refid="2084" relation="include">
+        </childnode>
+        <childnode refid="2110" relation="include">
+        </childnode>
+        <childnode refid="2088" relation="include">
+        </childnode>
+        <childnode refid="2082" relation="include">
+        </childnode>
+        <childnode refid="2092" relation="include">
+        </childnode>
+      </node>
+      <node id="2080">
+        <label>map</label>
+      </node>
+      <node id="2105">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="2101" relation="include">
+        </childnode>
+        <childnode refid="2081" relation="include">
+        </childnode>
+        <childnode refid="2106" relation="include">
+        </childnode>
+      </node>
+      <node id="2110">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="2099">
+        <label>MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="2084" relation="include">
+        </childnode>
+        <childnode refid="2090" relation="include">
+        </childnode>
+      </node>
+      <node id="2107">
+        <label>BaseEngine.h</label>
+        <link refid="BaseEngine_8h"/>
+        <childnode refid="2108" relation="include">
+        </childnode>
+        <childnode refid="2079" relation="include">
+        </childnode>
+        <childnode refid="2088" relation="include">
+        </childnode>
+        <childnode refid="2109" relation="include">
+        </childnode>
+        <childnode refid="2078" relation="include">
+        </childnode>
+        <childnode refid="2111" relation="include">
+        </childnode>
+      </node>
+      <node id="2111">
+        <label>IInputHandler.h</label>
+        <link refid="IInputHandler_8h"/>
+        <childnode refid="2109" relation="include">
+        </childnode>
+        <childnode refid="2078" relation="include">
+        </childnode>
+      </node>
+      <node id="2081">
+        <label>Object.h</label>
+        <link refid="Object_8h"/>
+        <childnode refid="2082" relation="include">
+        </childnode>
+      </node>
+      <node id="2106">
+        <label>glm/common.hpp</label>
+      </node>
+      <node id="2108">
+        <label>ostream</label>
+      </node>
+      <node id="2094">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="2103">
+        <label>Observable.h</label>
+        <link refid="Observable_8h"/>
+        <childnode refid="2089" relation="include">
+        </childnode>
+        <childnode refid="2104" relation="include">
+        </childnode>
+        <childnode refid="2085" relation="include">
+        </childnode>
+      </node>
+      <node id="2101">
+        <label>glm/vec3.hpp</label>
+      </node>
+      <node id="2115">
+        <label>Sphere.h</label>
+        <link refid="Sphere_8h"/>
+        <childnode refid="2097" relation="include">
+        </childnode>
+        <childnode refid="2086" relation="include">
+        </childnode>
+        <childnode refid="2082" relation="include">
+        </childnode>
+        <childnode refid="2081" relation="include">
+        </childnode>
+      </node>
+      <node id="2091">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="2078">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+        <childnode refid="2079" relation="include">
+        </childnode>
+        <childnode refid="2081" relation="include">
+        </childnode>
+        <childnode refid="2100" relation="include">
+        </childnode>
+        <childnode refid="2105" relation="include">
+        </childnode>
+      </node>
+      <node id="2085">
+        <label>vector</label>
+      </node>
+      <node id="2089">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="2090" relation="include">
+        </childnode>
+        <childnode refid="2096" relation="include">
+        </childnode>
+      </node>
+      <node id="2097">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="2079" relation="include">
+        </childnode>
+        <childnode refid="2095" relation="include">
+        </childnode>
+        <childnode refid="2098" relation="include">
+        </childnode>
+        <childnode refid="2088" relation="include">
+        </childnode>
+        <childnode refid="2090" relation="include">
+        </childnode>
+      </node>
+      <node id="2087">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="2104">
+        <label>Observer.h</label>
+        <link refid="Observer_8h"/>
+      </node>
+      <node id="2092">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="2112">
+        <label>iostream</label>
+      </node>
+      <node id="2088">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="2084" relation="include">
+        </childnode>
+        <childnode refid="2089" relation="include">
+        </childnode>
+        <childnode refid="2079" relation="include">
+        </childnode>
+        <childnode refid="2095" relation="include">
+        </childnode>
+      </node>
+      <node id="2079">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="2080" relation="include">
+        </childnode>
+      </node>
+      <node id="2093">
+        <label>xstring</label>
+      </node>
+      <node id="2102">
+        <label>glm/mat4x4.hpp</label>
+      </node>
+      <node id="2076">
+        <label>ZPG/SphereScene.cpp</label>
+        <link refid="SphereScene_8cpp"/>
+        <childnode refid="2077" relation="include">
+        </childnode>
+        <childnode refid="2107" relation="include">
+        </childnode>
+        <childnode refid="2112" relation="include">
+        </childnode>
+        <childnode refid="2113" relation="include">
+        </childnode>
+        <childnode refid="2114" relation="include">
+        </childnode>
+        <childnode refid="2115" relation="include">
+        </childnode>
+        <childnode refid="2116" relation="include">
+        </childnode>
+      </node>
+      <node id="2113">
+        <label>glm/ext/quaternion_transform.inl</label>
+      </node>
+      <node id="2100">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="2101" relation="include">
+        </childnode>
+        <childnode refid="2102" relation="include">
+        </childnode>
+        <childnode refid="2103" relation="include">
+        </childnode>
+      </node>
+      <node id="2114">
+        <label>glm/detail/type_quat.hpp</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SphereScene_8h" kindref="compound">SphereScene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="BaseEngine_8h" kindref="compound">BaseEngine.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/ext/quaternion_transform.inl&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/detail/type_quat.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Sphere_8h" kindref="compound">Sphere.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="spheref_8h" kindref="compound">Assets/Models/2/spheref.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classApplication_1_1Scenes_1_1SphereScene_1a5880969092c7164e61a4236860c121c1" refkind="member"><highlight class="normal"><ref refid="classApplication_1_1Scenes_1_1SphereScene_1a5880969092c7164e61a4236860c121c1" kindref="member">Application::Scenes::SphereScene::SphereScene</ref>()</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="classApplication_1_1Scenes_1_1SphereScene_1a36617ce2362ace6514125d71d2fe41a9" refkind="member"><highlight class="normal"><ref refid="classApplication_1_1Scenes_1_1SphereScene_1a36617ce2362ace6514125d71d2fe41a9" kindref="member">Application::Scenes::SphereScene::~SphereScene</ref>()</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>Scene::~Scene();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classApplication_1_1Scenes_1_1SphereScene_1adf6f95bf2ac8f0e84935d04248407ba4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Scenes_1_1SphereScene_1adf6f95bf2ac8f0e84935d04248407ba4" kindref="member">Application::Scenes::SphereScene::Load</ref>(<ref refid="classEngine_1_1BaseEngine" kindref="compound">Engine::BaseEngine</ref>*<sp/>engine)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>define<sp/>material</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Engine::Components::Graphics::Program</ref>*<sp/>program<sp/>=<sp/>engine-&gt;<ref refid="classEngine_1_1BaseEngine_1ae0f86360ea3a384caefe443dd8f88601" kindref="member">Programs</ref>-&gt;Get(</highlight><highlight class="stringliteral">&quot;basic&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>Objects-&gt;Add(</highlight><highlight class="stringliteral">&quot;sphere1&quot;</highlight><highlight class="normal">,<sp/>new<sp/>::Engine::Objects::Sphere(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Material" kindref="compound">Engine::Components::Graphics::Material</ref>(program),<sp/><ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref>,<sp/>17280,<sp/>3));</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>Objects-&gt;Add(</highlight><highlight class="stringliteral">&quot;sphere2&quot;</highlight><highlight class="normal">,<sp/>new<sp/>::Engine::Objects::Sphere(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Material" kindref="compound">Engine::Components::Graphics::Material</ref>(program),<sp/><ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref>,<sp/>17280,<sp/>3));</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>Objects-&gt;Add(</highlight><highlight class="stringliteral">&quot;sphere3&quot;</highlight><highlight class="normal">,<sp/>new<sp/>::Engine::Objects::Sphere(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Material" kindref="compound">Engine::Components::Graphics::Material</ref>(program),<sp/><ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref>,<sp/>17280,<sp/>3));</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>Objects-&gt;Add(</highlight><highlight class="stringliteral">&quot;sphere4&quot;</highlight><highlight class="normal">,<sp/>new<sp/>::Engine::Objects::Sphere(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Material" kindref="compound">Engine::Components::Graphics::Material</ref>(program),<sp/><ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref>,<sp/>17280,<sp/>3));</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref><sp/>=<sp/>Objects-&gt;Get(</highlight><highlight class="stringliteral">&quot;sphere1&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref>-&gt;Material-&gt;Values</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;Add(</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;glm::vec4&gt;</ref>(</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>program-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1aff39fa56fc1fab1bce6c8a5ce29ae161" kindref="member">Shaders</ref>-&gt;Get(</highlight><highlight class="stringliteral">&quot;fragment&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;color&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>glm::vec4(1.0f,<sp/>1.0f,<sp/>0.0f,<sp/>0.5f))</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>*(<ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref>-&gt;ModelMatrix)<sp/>=<sp/>glm::translate(*(<ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref>-&gt;ModelMatrix),<sp/>glm::vec3(-2,<sp/>0,<sp/>0));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref><sp/>=<sp/>Objects-&gt;Get(</highlight><highlight class="stringliteral">&quot;sphere2&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref>-&gt;Material-&gt;Values</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;Add(</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;glm::vec4&gt;</ref>(</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>program-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1aff39fa56fc1fab1bce6c8a5ce29ae161" kindref="member">Shaders</ref>-&gt;Get(</highlight><highlight class="stringliteral">&quot;fragment&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;color&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>glm::vec4(1.0f,<sp/>0.0f,<sp/>1.0f,<sp/>0.5f))</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>*(<ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref>-&gt;ModelMatrix)<sp/>=<sp/>glm::translate(*(<ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref>-&gt;ModelMatrix),<sp/>glm::vec3(0,<sp/>2,<sp/>0));</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref><sp/>=<sp/>Objects-&gt;Get(</highlight><highlight class="stringliteral">&quot;sphere3&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref>-&gt;Material-&gt;Values</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;Add(</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;glm::vec4&gt;</ref>(</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>program-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1aff39fa56fc1fab1bce6c8a5ce29ae161" kindref="member">Shaders</ref>-&gt;Get(</highlight><highlight class="stringliteral">&quot;fragment&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;color&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>glm::vec4(0.0f,<sp/>1.0f,<sp/>1.0f,<sp/>0.5f))</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>*(<ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref>-&gt;ModelMatrix)<sp/>=<sp/>glm::translate(*(<ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref>-&gt;ModelMatrix),<sp/>glm::vec3(2,<sp/>0,<sp/>0));</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref><sp/>=<sp/>Objects-&gt;Get(</highlight><highlight class="stringliteral">&quot;sphere4&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref>-&gt;Material-&gt;Values</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;Add(</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;glm::vec4&gt;</ref>(</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>program-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1aff39fa56fc1fab1bce6c8a5ce29ae161" kindref="member">Shaders</ref>-&gt;Get(</highlight><highlight class="stringliteral">&quot;fragment&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;color&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>glm::vec4(1.0f,<sp/>1.0f,<sp/>1.0f,<sp/>0.5f))</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>*(<ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref>-&gt;ModelMatrix)<sp/>=<sp/>glm::translate(*(<ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref>-&gt;ModelMatrix),<sp/>glm::vec3(0,<sp/>-2,<sp/>0));</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classApplication_1_1Scenes_1_1SphereScene_1ad754dea94c77524a79d707436a933c66" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Scenes_1_1SphereScene_1ad754dea94c77524a79d707436a933c66" kindref="member">Application::Scenes::SphereScene::FrameUpdate</ref>(<ref refid="classEngine_1_1BaseEngine" kindref="compound">Engine::BaseEngine</ref>*<sp/>engine)</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ZPG/SphereScene.cpp"/>
+  </compounddef>
+</doxygen>

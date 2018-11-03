@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="Sphere_8h" kind="file" language="C++">
+    <compoundname>Sphere.h</compoundname>
+    <includes refid="Material_8h" local="yes">Material.h</includes>
+    <includes refid="VertexAttributeObject_8h" local="yes">VertexAttributeObject.h</includes>
+    <includes refid="VertexObject_8h" local="yes">VertexObject.h</includes>
+    <includes refid="Object_8h" local="yes">Object.h</includes>
+    <includedby refid="CameraInputHandler_8cpp" local="yes">ZPG/CameraInputHandler.cpp</includedby>
+    <includedby refid="Sphere_8cpp" local="yes">ZPG/Sphere.cpp</includedby>
+    <includedby refid="SphereScene_8cpp" local="yes">ZPG/SphereScene.cpp</includedby>
+    <incdepgraph>
+      <node id="2065">
+        <label>list</label>
+      </node>
+      <node id="2070">
+        <label>VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="2067" relation="include">
+        </childnode>
+        <childnode refid="2066" relation="include">
+        </childnode>
+        <childnode refid="2063" relation="include">
+        </childnode>
+        <childnode refid="2051" relation="include">
+        </childnode>
+      </node>
+      <node id="2055">
+        <label>MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="2054" relation="include">
+        </childnode>
+        <childnode refid="2056" relation="include">
+        </childnode>
+        <childnode refid="2061" relation="include">
+        </childnode>
+        <childnode refid="2062" relation="include">
+        </childnode>
+      </node>
+      <node id="2066">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="2057" relation="include">
+        </childnode>
+        <childnode refid="2067" relation="include">
+        </childnode>
+        <childnode refid="2069" relation="include">
+        </childnode>
+      </node>
+      <node id="2056">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="2057" relation="include">
+        </childnode>
+        <childnode refid="2058" relation="include">
+        </childnode>
+        <childnode refid="2059" relation="include">
+        </childnode>
+        <childnode refid="2060" relation="include">
+        </childnode>
+        <childnode refid="2061" relation="include">
+        </childnode>
+        <childnode refid="2054" relation="include">
+        </childnode>
+      </node>
+      <node id="2067">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="2057" relation="include">
+        </childnode>
+        <childnode refid="2068" relation="include">
+        </childnode>
+      </node>
+      <node id="2054">
+        <label>string</label>
+      </node>
+      <node id="2057">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="2053">
+        <label>map</label>
+      </node>
+      <node id="2062">
+        <label>MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="2057" relation="include">
+        </childnode>
+        <childnode refid="2056" relation="include">
+        </childnode>
+      </node>
+      <node id="2071">
+        <label>Object.h</label>
+        <link refid="Object_8h"/>
+        <childnode refid="2070" relation="include">
+        </childnode>
+      </node>
+      <node id="2061">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="2050">
+        <label>ZPG/Sphere.h</label>
+        <link refid="Sphere_8h"/>
+        <childnode refid="2051" relation="include">
+        </childnode>
+        <childnode refid="2066" relation="include">
+        </childnode>
+        <childnode refid="2070" relation="include">
+        </childnode>
+        <childnode refid="2071" relation="include">
+        </childnode>
+      </node>
+      <node id="2058">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="2068">
+        <label>vector</label>
+      </node>
+      <node id="2064">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="2056" relation="include">
+        </childnode>
+        <childnode refid="2065" relation="include">
+        </childnode>
+      </node>
+      <node id="2051">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="2052" relation="include">
+        </childnode>
+        <childnode refid="2054" relation="include">
+        </childnode>
+        <childnode refid="2055" relation="include">
+        </childnode>
+        <childnode refid="2063" relation="include">
+        </childnode>
+        <childnode refid="2056" relation="include">
+        </childnode>
+      </node>
+      <node id="2069">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="2059">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="2063">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="2057" relation="include">
+        </childnode>
+        <childnode refid="2064" relation="include">
+        </childnode>
+        <childnode refid="2052" relation="include">
+        </childnode>
+        <childnode refid="2054" relation="include">
+        </childnode>
+      </node>
+      <node id="2052">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="2053" relation="include">
+        </childnode>
+      </node>
+      <node id="2060">
+        <label>xstring</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2072">
+        <label>ZPG/Sphere.h</label>
+        <link refid="Sphere_8h"/>
+        <childnode refid="2073" relation="include">
+        </childnode>
+        <childnode refid="2074" relation="include">
+        </childnode>
+        <childnode refid="2075" relation="include">
+        </childnode>
+      </node>
+      <node id="2074">
+        <label>ZPG/Sphere.cpp</label>
+        <link refid="Sphere_8cpp"/>
+      </node>
+      <node id="2075">
+        <label>ZPG/SphereScene.cpp</label>
+        <link refid="SphereScene_8cpp"/>
+      </node>
+      <node id="2073">
+        <label>ZPG/CameraInputHandler.cpp</label>
+        <link refid="CameraInputHandler_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classEngine_1_1Objects_1_1Sphere" prot="public">Engine::Objects::Sphere</innerclass>
+    <innernamespace refid="namespaceEngine">Engine</innernamespace>
+    <innernamespace refid="namespaceEngine_1_1Objects">Engine::Objects</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Material_8h" kindref="compound">Material.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VertexAttributeObject_8h" kindref="compound">VertexAttributeObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VertexObject_8h" kindref="compound">VertexObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Object_8h" kindref="compound">Object.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceEngine" kindref="compound">Engine</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Objects</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11" refid="classEngine_1_1Objects_1_1Sphere" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classEngine_1_1Objects_1_1Sphere" kindref="compound">Sphere</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Objects_1_1Object" kindref="compound">Objects::Object</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Objects_1_1Sphere_1ae305cb7304701062e6930a6c48dd6d97" kindref="member">~Sphere</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Objects_1_1Sphere_1a88f7519c022db552a6b4fa8e07d7718f" kindref="member">Sphere</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Material" kindref="compound">Components::Graphics::Material</ref>*<sp/>material,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>points,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dimensions);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Objects_1_1Sphere" kindref="compound">Sphere</ref>*<sp/><ref refid="classEngine_1_1Objects_1_1Sphere_1a7cc1ef27c2634c763273ed84065b217a" kindref="member">Draw</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="ZPG/Sphere.h"/>
+  </compounddef>
+</doxygen>

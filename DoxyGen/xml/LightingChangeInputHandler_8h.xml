@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="LightingChangeInputHandler_8h" kind="file" language="C++">
+    <compoundname>LightingChangeInputHandler.h</compoundname>
+    <includes refid="BaseInputHandler_8h" local="yes">BaseInputHandler.h</includes>
+    <includedby refid="LightingChangeInputHandler_8cpp" local="yes">ZPG/LightingChangeInputHandler.cpp</includedby>
+    <includedby refid="LigtEngine_8cpp" local="yes">ZPG/LigtEngine.cpp</includedby>
+    <incdepgraph>
+      <node id="1038">
+        <label>list</label>
+      </node>
+      <node id="1041">
+        <label>VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="1042" relation="include">
+        </childnode>
+        <childnode refid="1044" relation="include">
+        </childnode>
+        <childnode refid="1030" relation="include">
+        </childnode>
+        <childnode refid="1046" relation="include">
+        </childnode>
+      </node>
+      <node id="1047">
+        <label>MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="1037" relation="include">
+        </childnode>
+        <childnode refid="1032" relation="include">
+        </childnode>
+        <childnode refid="1036" relation="include">
+        </childnode>
+        <childnode refid="1048" relation="include">
+        </childnode>
+      </node>
+      <node id="1044">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="1028" relation="include">
+        </childnode>
+        <childnode refid="1042" relation="include">
+        </childnode>
+        <childnode refid="1045" relation="include">
+        </childnode>
+      </node>
+      <node id="1032">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="1028" relation="include">
+        </childnode>
+        <childnode refid="1033" relation="include">
+        </childnode>
+        <childnode refid="1034" relation="include">
+        </childnode>
+        <childnode refid="1035" relation="include">
+        </childnode>
+        <childnode refid="1036" relation="include">
+        </childnode>
+        <childnode refid="1037" relation="include">
+        </childnode>
+      </node>
+      <node id="1042">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="1028" relation="include">
+        </childnode>
+        <childnode refid="1043" relation="include">
+        </childnode>
+      </node>
+      <node id="1037">
+        <label>string</label>
+      </node>
+      <node id="1028">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="1027">
+        <label>Window.h</label>
+        <link refid="Window_8h"/>
+        <childnode refid="1028" relation="include">
+        </childnode>
+        <childnode refid="1029" relation="include">
+        </childnode>
+        <childnode refid="1030" relation="include">
+        </childnode>
+        <childnode refid="1041" relation="include">
+        </childnode>
+        <childnode refid="1034" relation="include">
+        </childnode>
+      </node>
+      <node id="1040">
+        <label>map</label>
+      </node>
+      <node id="1056">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="1052" relation="include">
+        </childnode>
+        <childnode refid="1050" relation="include">
+        </childnode>
+        <childnode refid="1057" relation="include">
+        </childnode>
+      </node>
+      <node id="1029">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="1048">
+        <label>MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="1028" relation="include">
+        </childnode>
+        <childnode refid="1032" relation="include">
+        </childnode>
+      </node>
+      <node id="1026">
+        <label>IInputHandler.h</label>
+        <link refid="IInputHandler_8h"/>
+        <childnode refid="1027" relation="include">
+        </childnode>
+        <childnode refid="1049" relation="include">
+        </childnode>
+      </node>
+      <node id="1050">
+        <label>Object.h</label>
+        <link refid="Object_8h"/>
+        <childnode refid="1041" relation="include">
+        </childnode>
+      </node>
+      <node id="1057">
+        <label>glm/common.hpp</label>
+      </node>
+      <node id="1036">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="1024">
+        <label>ZPG/LightingChangeInputHandler.h</label>
+        <link refid="LightingChangeInputHandler_8h"/>
+        <childnode refid="1025" relation="include">
+        </childnode>
+      </node>
+      <node id="1054">
+        <label>Observable.h</label>
+        <link refid="Observable_8h"/>
+        <childnode refid="1031" relation="include">
+        </childnode>
+        <childnode refid="1055" relation="include">
+        </childnode>
+        <childnode refid="1043" relation="include">
+        </childnode>
+      </node>
+      <node id="1025">
+        <label>BaseInputHandler.h</label>
+        <link refid="BaseInputHandler_8h"/>
+        <childnode refid="1026" relation="include">
+        </childnode>
+      </node>
+      <node id="1052">
+        <label>glm/vec3.hpp</label>
+      </node>
+      <node id="1033">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="1049">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+        <childnode refid="1039" relation="include">
+        </childnode>
+        <childnode refid="1050" relation="include">
+        </childnode>
+        <childnode refid="1051" relation="include">
+        </childnode>
+        <childnode refid="1056" relation="include">
+        </childnode>
+      </node>
+      <node id="1043">
+        <label>vector</label>
+      </node>
+      <node id="1031">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="1032" relation="include">
+        </childnode>
+        <childnode refid="1038" relation="include">
+        </childnode>
+      </node>
+      <node id="1046">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="1039" relation="include">
+        </childnode>
+        <childnode refid="1037" relation="include">
+        </childnode>
+        <childnode refid="1047" relation="include">
+        </childnode>
+        <childnode refid="1030" relation="include">
+        </childnode>
+        <childnode refid="1032" relation="include">
+        </childnode>
+      </node>
+      <node id="1045">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="1055">
+        <label>Observer.h</label>
+        <link refid="Observer_8h"/>
+      </node>
+      <node id="1034">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="1030">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="1028" relation="include">
+        </childnode>
+        <childnode refid="1031" relation="include">
+        </childnode>
+        <childnode refid="1039" relation="include">
+        </childnode>
+        <childnode refid="1037" relation="include">
+        </childnode>
+      </node>
+      <node id="1039">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="1040" relation="include">
+        </childnode>
+      </node>
+      <node id="1035">
+        <label>xstring</label>
+      </node>
+      <node id="1053">
+        <label>glm/mat4x4.hpp</label>
+      </node>
+      <node id="1051">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="1052" relation="include">
+        </childnode>
+        <childnode refid="1053" relation="include">
+        </childnode>
+        <childnode refid="1054" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1058">
+        <label>ZPG/LightingChangeInputHandler.h</label>
+        <link refid="LightingChangeInputHandler_8h"/>
+        <childnode refid="1059" relation="include">
+        </childnode>
+        <childnode refid="1060" relation="include">
+        </childnode>
+      </node>
+      <node id="1060">
+        <label>ZPG/LigtEngine.cpp</label>
+        <link refid="LigtEngine_8cpp"/>
+      </node>
+      <node id="1059">
+        <label>ZPG/LightingChangeInputHandler.cpp</label>
+        <link refid="LightingChangeInputHandler_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler" prot="public">Application::Input::Handlers::LightingChangeInputHandler</innerclass>
+    <innernamespace refid="namespaceApplication">Application</innernamespace>
+    <innernamespace refid="namespaceApplication_1_1Input">Application::Input</innernamespace>
+    <innernamespace refid="namespaceApplication_1_1Input_1_1Handlers">Application::Input::Handlers</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="BaseInputHandler_8h" kindref="compound">BaseInputHandler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceApplication" kindref="compound">Application</ref><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Input<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Handlers</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8" refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler" kindref="compound">LightingChangeInputHandler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1BaseInputHandler" kindref="compound">Engine::Components::BaseInputHandler</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a5017479d6edea9d6bedf3093cf49cb24" kindref="member">HandleKeys</ref>(<ref refid="classEngine_1_1BaseEngine" kindref="compound">Engine::BaseEngine</ref>*<sp/>engine,<sp/><ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Engine::Components::Window</ref>*<sp/>window,<sp/><ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Engine::Components::Scene</ref>*<sp/>scene,<sp/><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary&lt;short, bool&gt;</ref>&amp;<sp/>keys,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keysActive)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13" refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a9d2d27b234fd09b3add304963534b719" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classLight" kindref="compound">Light</ref>*<sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a9d2d27b234fd09b3add304963534b719" kindref="member">_selectedLight</ref><sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="ZPG/LightingChangeInputHandler.h"/>
+  </compounddef>
+</doxygen>

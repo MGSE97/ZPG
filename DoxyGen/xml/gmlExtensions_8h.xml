@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="gmlExtensions_8h" kind="file" language="C++">
+    <compoundname>gmlExtensions.h</compoundname>
+    <includes local="no">glm/vec3.hpp</includes>
+    <includedby refid="CameraInputHandler_8cpp" local="yes">ZPG/CameraInputHandler.cpp</includedby>
+    <incdepgraph>
+      <node id="837">
+        <label>ZPG/gmlExtensions.h</label>
+        <link refid="gmlExtensions_8h"/>
+        <childnode refid="838" relation="include">
+        </childnode>
+      </node>
+      <node id="838">
+        <label>glm/vec3.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="839">
+        <label>ZPG/gmlExtensions.h</label>
+        <link refid="gmlExtensions_8h"/>
+        <childnode refid="840" relation="include">
+        </childnode>
+      </node>
+      <node id="840">
+        <label>ZPG/CameraInputHandler.cpp</label>
+        <link refid="CameraInputHandler_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespaceglm">glm</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/vec3.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="namespaceglm" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceglm" kindref="compound">glm</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7" refid="namespaceglm_1a877b2ed5ef3e542d953a0768f9494f2b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="namespaceglm_1a877b2ed5ef3e542d953a0768f9494f2b" kindref="member">simplify</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>vector,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>1.f)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vector<sp/>&gt;<sp/>0)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>value;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(vector<sp/>&lt;<sp/>0)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>-value;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0.f;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="namespaceglm_1a1b1223920ce15b9bc024049ebc24ac25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>vec3<sp/><ref refid="namespaceglm_1a877b2ed5ef3e542d953a0768f9494f2b" kindref="member">simplify</ref>(glm::vec3<sp/>vector,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>1.f)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>vector;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v.x<sp/>=<sp/><ref refid="namespaceglm_1a877b2ed5ef3e542d953a0768f9494f2b" kindref="member">simplify</ref>(v.x,value);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v.y<sp/>=<sp/><ref refid="namespaceglm_1a877b2ed5ef3e542d953a0768f9494f2b" kindref="member">simplify</ref>(v.y,<sp/>value);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v.z<sp/>=<sp/><ref refid="namespaceglm_1a877b2ed5ef3e542d953a0768f9494f2b" kindref="member">simplify</ref>(v.z,<sp/>value);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24" refid="namespaceglm_1a091978f9c1c830d7388c42251c59dad4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>vec2<sp/><ref refid="namespaceglm_1a877b2ed5ef3e542d953a0768f9494f2b" kindref="member">simplify</ref>(glm::vec2<sp/>vector,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>value<sp/>=<sp/>1.f)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>v<sp/>=<sp/>vector;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v.x<sp/>=<sp/><ref refid="namespaceglm_1a877b2ed5ef3e542d953a0768f9494f2b" kindref="member">simplify</ref>(v.x,<sp/>value);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>v.y<sp/>=<sp/><ref refid="namespaceglm_1a877b2ed5ef3e542d953a0768f9494f2b" kindref="member">simplify</ref>(v.y,<sp/>value);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="namespaceglm_1a885c1f58e3aeeb85a2bfacd2c741e8d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/>vec2<sp/><ref refid="namespaceglm_1a885c1f58e3aeeb85a2bfacd2c741e8d3" kindref="member">rotateAround</ref>(vec2<sp/>center,<sp/>vec2<sp/>point,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>angle)<sp/>{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>vec2(cos(angle)<sp/>*<sp/>(point.x<sp/>-<sp/>center.x)<sp/>-<sp/>sin(angle)<sp/>*<sp/>(point.y<sp/>-<sp/>center.y)<sp/>+<sp/>center.x,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sin(angle)<sp/>*<sp/>(point.x<sp/>-<sp/>center.x)<sp/>+<sp/>cos(angle)<sp/>*<sp/>(point.y<sp/>-<sp/>center.y)<sp/>+<sp/>center.y);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>vec3<sp/><ref refid="namespaceglm_1a35741e27838ab920dff5fbaba619829e" kindref="member">Up</ref>(0,<sp/>1,<sp/>0);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>vec3<sp/><ref refid="namespaceglm_1a7cc55d622858c4483a942b659dbee30d" kindref="member">Down</ref>(0,<sp/>-1,<sp/>0);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>vec3<sp/><ref refid="namespaceglm_1a23fef243f5fe738c94f80aad5bf5087d" kindref="member">Left</ref>(-1,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>vec3<sp/><ref refid="namespaceglm_1a8726baea7dc7bb32e57d33b0333d1def" kindref="member">Right</ref>(1,<sp/>0,<sp/>0);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>vec3<sp/><ref refid="namespaceglm_1a95e780de06846d0eee634d15187b87ab" kindref="member">Front</ref>(0,<sp/>0,<sp/>-1);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>vec3<sp/><ref refid="namespaceglm_1a26fcf2bcb45df5795587d13a4e30e74e" kindref="member">Back</ref>(0,<sp/>0,<sp/>1);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ZPG/gmlExtensions.h"/>
+  </compounddef>
+</doxygen>

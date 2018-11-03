@@ -1,0 +1,204 @@
+\hypertarget{classEngine_1_1Components_1_1Graphics_1_1Material}{}\section{Engine\+:\+:Components\+:\+:Graphics\+:\+:Material Class Reference}
+\label{classEngine_1_1Components_1_1Graphics_1_1Material}\index{Engine\+::\+Components\+::\+Graphics\+::\+Material@{Engine\+::\+Components\+::\+Graphics\+::\+Material}}
+
+
+{\ttfamily \#include $<$Material.\+h$>$}
+
+
+
+Collaboration diagram for Engine\+:\+:Components\+:\+:Graphics\+:\+:Material\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Graphics_1_1Material__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material_aefc17351f5af8ca7227e2a8144e141de}{Material}} (\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Graphics\+::\+Program}} $\ast$program)
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material_a30532acd75ec38c01db2b5c21776710b}{$\sim$\+Material}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material}{Engine\+::\+Components\+::\+Graphics\+::\+Material}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material_aac7709d6bda9b0b16b771fa6530d140e}{Add}} (\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Shader}} $\ast$shader, const G\+Lchar $\ast$property, T $\ast$value)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material}{Material}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material_ace1e6c024847604594bc4f3d99d0be08}{Add}} (\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Shader}} $\ast$shader, const G\+Lchar $\ast$property, T $\ast$value)
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material}{Material}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material_aef1dd6fbbf0268d4f3e6c371a2f1aa8d}{Use}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material_a2a4084db93bb70cd65032baf296803d6}{Program}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Collection}{Generic\+::\+Collection}}$<$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase}{Material\+Value\+Base}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material_a34335608ba1e6eb2c2dba5032107eab0}{Values}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 14 of file Material.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Material_aefc17351f5af8ca7227e2a8144e141de}\label{classEngine_1_1Components_1_1Graphics_1_1Material_aefc17351f5af8ca7227e2a8144e141de}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Material@{Engine\+::\+Components\+::\+Graphics\+::\+Material}!Material@{Material}}
+\index{Material@{Material}!Engine\+::\+Components\+::\+Graphics\+::\+Material@{Engine\+::\+Components\+::\+Graphics\+::\+Material}}
+\subsubsection{\texorpdfstring{Material()}{Material()}}
+{\footnotesize\ttfamily Engine\+::\+Components\+::\+Graphics\+::\+Material\+::\+Material (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Graphics\+::\+Program}} $\ast$}]{program }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file Material.\+cpp.
+
+
+
+References Values.
+
+
+\begin{DoxyCode}
+6 \{
+7     \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material_a34335608ba1e6eb2c2dba5032107eab0}{Values}} = \textcolor{keyword}{new} \mbox{\hyperlink{classGeneric_1_1Collection}{Generic::Collection<MaterialValueBase*>}}();
+8     \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material_a2a4084db93bb70cd65032baf296803d6}{Program}} = program;
+9 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Material_a30532acd75ec38c01db2b5c21776710b}\label{classEngine_1_1Components_1_1Graphics_1_1Material_a30532acd75ec38c01db2b5c21776710b}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Material@{Engine\+::\+Components\+::\+Graphics\+::\+Material}!````~Material@{$\sim$\+Material}}
+\index{````~Material@{$\sim$\+Material}!Engine\+::\+Components\+::\+Graphics\+::\+Material@{Engine\+::\+Components\+::\+Graphics\+::\+Material}}
+\subsubsection{\texorpdfstring{$\sim$\+Material()}{~Material()}}
+{\footnotesize\ttfamily Engine\+::\+Components\+::\+Graphics\+::\+Material\+::$\sim$\+Material (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file Material.\+cpp.
+
+
+\begin{DoxyCode}
+13 \{
+14     \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material_a34335608ba1e6eb2c2dba5032107eab0}{Values}}->clear();
+15     \textcolor{keyword}{delete} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material_a34335608ba1e6eb2c2dba5032107eab0}{Values}};
+16 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Material_aac7709d6bda9b0b16b771fa6530d140e}\label{classEngine_1_1Components_1_1Graphics_1_1Material_aac7709d6bda9b0b16b771fa6530d140e}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Material@{Engine\+::\+Components\+::\+Graphics\+::\+Material}!Add@{Add}}
+\index{Add@{Add}!Engine\+::\+Components\+::\+Graphics\+::\+Material@{Engine\+::\+Components\+::\+Graphics\+::\+Material}}
+\subsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material}{Engine\+::\+Components\+::\+Graphics\+::\+Material}}$\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Material\+::\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Shader}} $\ast$}]{shader,  }\item[{const G\+Lchar $\ast$}]{property,  }\item[{T $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file Material.\+cpp.
+
+
+
+References Add().
+
+
+\begin{DoxyCode}
+20 \{
+21     \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material_a34335608ba1e6eb2c2dba5032107eab0}{Values}}->Add(\textcolor{keyword}{new} MaterialValue<T>(shader, property, value));
+22     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+23 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Graphics_1_1Material_aac7709d6bda9b0b16b771fa6530d140e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Material_ace1e6c024847604594bc4f3d99d0be08}\label{classEngine_1_1Components_1_1Graphics_1_1Material_ace1e6c024847604594bc4f3d99d0be08}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Material@{Engine\+::\+Components\+::\+Graphics\+::\+Material}!Add@{Add}}
+\index{Add@{Add}!Engine\+::\+Components\+::\+Graphics\+::\+Material@{Engine\+::\+Components\+::\+Graphics\+::\+Material}}
+\subsubsection{\texorpdfstring{Add()}{Add()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material}{Material}}$\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Material\+::\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Shader}} $\ast$}]{shader,  }\item[{const G\+Lchar $\ast$}]{property,  }\item[{T $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Referenced by Add().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Graphics_1_1Material_ace1e6c024847604594bc4f3d99d0be08_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Material_aef1dd6fbbf0268d4f3e6c371a2f1aa8d}\label{classEngine_1_1Components_1_1Graphics_1_1Material_aef1dd6fbbf0268d4f3e6c371a2f1aa8d}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Material@{Engine\+::\+Components\+::\+Graphics\+::\+Material}!Use@{Use}}
+\index{Use@{Use}!Engine\+::\+Components\+::\+Graphics\+::\+Material@{Engine\+::\+Components\+::\+Graphics\+::\+Material}}
+\subsubsection{\texorpdfstring{Use()}{Use()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material}{Engine\+::\+Components\+::\+Graphics\+::\+Material}} $\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Material\+::\+Use (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file Material.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+Use().
+
+
+\begin{DoxyCode}
+26 \{
+27     \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material_a2a4084db93bb70cd65032baf296803d6}{Program}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_aed02e665619dda6c6cf80e03cb1f1543}{Use}}();
+28     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}& value : *\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material_a34335608ba1e6eb2c2dba5032107eab0}{Values}})
+29         value->Set(\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material_a2a4084db93bb70cd65032baf296803d6}{Program}});
+30     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+31 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Graphics_1_1Material_aef1dd6fbbf0268d4f3e6c371a2f1aa8d_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Material_a2a4084db93bb70cd65032baf296803d6}\label{classEngine_1_1Components_1_1Graphics_1_1Material_a2a4084db93bb70cd65032baf296803d6}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Material@{Engine\+::\+Components\+::\+Graphics\+::\+Material}!Program@{Program}}
+\index{Program@{Program}!Engine\+::\+Components\+::\+Graphics\+::\+Material@{Engine\+::\+Components\+::\+Graphics\+::\+Material}}
+\subsubsection{\texorpdfstring{Program}{Program}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}}$\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Material\+::\+Program}
+
+
+
+Definition at line 17 of file Material.\+h.
+
+
+
+Referenced by Engine\+::\+Objects\+::\+Object\+::\+Object(), and Light\+::\+Use().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Material_a34335608ba1e6eb2c2dba5032107eab0}\label{classEngine_1_1Components_1_1Graphics_1_1Material_a34335608ba1e6eb2c2dba5032107eab0}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Material@{Engine\+::\+Components\+::\+Graphics\+::\+Material}!Values@{Values}}
+\index{Values@{Values}!Engine\+::\+Components\+::\+Graphics\+::\+Material@{Engine\+::\+Components\+::\+Graphics\+::\+Material}}
+\subsubsection{\texorpdfstring{Values}{Values}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Collection}{Generic\+::\+Collection}}$<$\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase}{Material\+Value\+Base}}$\ast$$>$$\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Material\+::\+Values}
+
+
+
+Definition at line 21 of file Material.\+h.
+
+
+
+Referenced by Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), Light\+::\+Light(), Material(), Engine\+::\+Objects\+::\+Object\+::\+Object(), and Light\+::\+Use().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{Material_8h}{Material.\+h}}\item 
+Z\+P\+G/\mbox{\hyperlink{Material_8cpp}{Material.\+cpp}}\end{DoxyCompactItemize}

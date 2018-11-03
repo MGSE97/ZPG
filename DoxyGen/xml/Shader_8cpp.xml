@@ -1,0 +1,364 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="Shader_8cpp" kind="file" language="C++">
+    <compoundname>Shader.cpp</compoundname>
+    <includes refid="Shader_8h" local="yes">Shader.h</includes>
+    <includes local="no">cstddef</includes>
+    <includes local="no">glm/gtc/type_ptr.hpp</includes>
+    <includes local="no">glm/gtx/string_cast.hpp</includes>
+    <includes local="no">cstdio</includes>
+    <includes refid="Program_8h" local="yes">Program.h</includes>
+    <includes refid="MaterialValueType_8h" local="yes">MaterialValueType.h</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">vector</includes>
+    <incdepgraph>
+      <node id="1951">
+        <label>list</label>
+      </node>
+      <node id="1938">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="1939" relation="include">
+        </childnode>
+        <childnode refid="1940" relation="include">
+        </childnode>
+        <childnode refid="1941" relation="include">
+        </childnode>
+        <childnode refid="1942" relation="include">
+        </childnode>
+        <childnode refid="1943" relation="include">
+        </childnode>
+        <childnode refid="1944" relation="include">
+        </childnode>
+      </node>
+      <node id="1944">
+        <label>string</label>
+      </node>
+      <node id="1939">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="1953">
+        <label>map</label>
+      </node>
+      <node id="1955">
+        <label>fstream</label>
+      </node>
+      <node id="1943">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="1947">
+        <label>glm/gtx/string_cast.hpp</label>
+      </node>
+      <node id="1948">
+        <label>cstdio</label>
+      </node>
+      <node id="1946">
+        <label>glm/gtc/type_ptr.hpp</label>
+      </node>
+      <node id="1940">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="1956">
+        <label>vector</label>
+      </node>
+      <node id="1937">
+        <label>ZPG/Shader.cpp</label>
+        <link refid="Shader_8cpp"/>
+        <childnode refid="1938" relation="include">
+        </childnode>
+        <childnode refid="1945" relation="include">
+        </childnode>
+        <childnode refid="1946" relation="include">
+        </childnode>
+        <childnode refid="1947" relation="include">
+        </childnode>
+        <childnode refid="1948" relation="include">
+        </childnode>
+        <childnode refid="1949" relation="include">
+        </childnode>
+        <childnode refid="1943" relation="include">
+        </childnode>
+        <childnode refid="1954" relation="include">
+        </childnode>
+        <childnode refid="1955" relation="include">
+        </childnode>
+        <childnode refid="1956" relation="include">
+        </childnode>
+      </node>
+      <node id="1954">
+        <label>sstream</label>
+      </node>
+      <node id="1950">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="1938" relation="include">
+        </childnode>
+        <childnode refid="1951" relation="include">
+        </childnode>
+      </node>
+      <node id="1941">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="1949">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="1939" relation="include">
+        </childnode>
+        <childnode refid="1950" relation="include">
+        </childnode>
+        <childnode refid="1952" relation="include">
+        </childnode>
+        <childnode refid="1944" relation="include">
+        </childnode>
+      </node>
+      <node id="1945">
+        <label>cstddef</label>
+      </node>
+      <node id="1952">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="1953" relation="include">
+        </childnode>
+      </node>
+      <node id="1942">
+        <label>xstring</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="Shader_8cpp_1abd75661fe7969e19439052a5f69ba5d1" prot="public" static="no">
+        <name>GLM_ENABLE_EXPERIMENTAL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Shader.cpp" line="1" column="9" bodyfile="ZPG/Shader.cpp" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="Shader_8cpp_1abd75661fe7969e19439052a5f69ba5d1" refkind="member"><highlight class="preprocessor">#define<sp/>GLM_ENABLE_EXPERIMENTAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Shader_8h" kindref="compound">Shader.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/gtc/type_ptr.hpp&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>glm::value_ptr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/gtx/string_cast.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdio&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Program_8h" kindref="compound">Program.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MaterialValueType_8h" kindref="compound">MaterialValueType.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a4935f2ee3ebdd8af6fc78cf42f63d915" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a4935f2ee3ebdd8af6fc78cf42f63d915" kindref="member">Engine::Components::Graphics::Shader::Shader</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type,<sp/>std::string<sp/>filename)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a675c32a04d4eb33117d6ff2b988e13b5" kindref="member">_compiled</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ifstream<sp/>file(filename,<sp/>std::ios::in);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(file.is_open())</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::stringstream<sp/>buffer;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>buffer<sp/>&lt;&lt;<sp/>file.rdbuf();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>sh<sp/>=<sp/>buffer.str();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>file.close();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>version<sp/>=<sp/>sh.find_first_of(</highlight><highlight class="charliteral">&apos;#&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sh<sp/>=<sp/>sh.substr(version,<sp/>sh.length()<sp/>-<sp/>version);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>shader<sp/>=<sp/>sh.data();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a4494d72a65715eb9f02e06a533684872" kindref="member">_shader</ref><sp/>=<sp/>glCreateShader(type);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glShaderSource(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a4494d72a65715eb9f02e06a533684872" kindref="member">_shader</ref>,<sp/>1,<sp/>&amp;shader,<sp/>NULL);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glCompileShader(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a4494d72a65715eb9f02e06a533684872" kindref="member">_shader</ref>);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Handle<sp/>Error</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLint<sp/>isCompiled<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGetShaderiv(_shader,<sp/>GL_COMPILE_STATUS,<sp/>&amp;isCompiled);</highlight></codeline>
+<codeline lineno="35"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(isCompiled<sp/>==<sp/>GL_FALSE)</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLint<sp/>maxLength<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGetShaderiv(_shader,<sp/>GL_INFO_LOG_LENGTH,<sp/>&amp;maxLength);</highlight></codeline>
+<codeline lineno="39"><highlight class="comment"></highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;GLchar&gt;<sp/>errorLog(maxLength);</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGetShaderInfoLog(_shader,<sp/>maxLength,<sp/>&amp;maxLength,<sp/>&amp;errorLog[0]);</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"></highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/>&quot;Shader<sp/>%u<sp/>Compilation<sp/>failed:\nCode:\n%s\nErrors:\n%s\n&quot;,<sp/>_shader,<sp/>shader,<sp/>errorLog.data());</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_compiled<sp/>=<sp/>isCompiled<sp/>!=<sp/>GL_FALSE;*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1af0014ee53239fa71cddfae086d0a1781" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a4935f2ee3ebdd8af6fc78cf42f63d915" kindref="member">Engine::Components::Graphics::Shader::Shader</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>shader)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>_shader<sp/>=<sp/>glCreateShader(type);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>glShaderSource(_shader,<sp/>1,<sp/>&amp;shader,<sp/>NULL);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a9a82a7a62443e928d9d95e3a0e4f1407" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a9a82a7a62443e928d9d95e3a0e4f1407" kindref="member">Engine::Components::Graphics::Shader::~Shader</ref>()</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*delete<sp/>_code;</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/><sp/><sp/>delete<sp/>&amp;_compiled;</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/><sp/><sp/>delete<sp/>&amp;_shader;*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62" refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a348854b43d99bfe43e3d2b0cad5f103d" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Engine::Components::Graphics::Shader</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a348854b43d99bfe43e3d2b0cad5f103d" kindref="member">Engine::Components::Graphics::Shader::Compile</ref>()</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>glCompileShader(_shader);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>GLint<sp/>isCompiled<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>glGetShaderiv(_shader,<sp/>GL_COMPILE_STATUS,<sp/>&amp;isCompiled);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isCompiled<sp/>==<sp/>GL_FALSE)</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLint<sp/>maxLength<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGetShaderiv(_shader,<sp/>GL_INFO_LOG_LENGTH,<sp/>&amp;maxLength);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>The<sp/>maxLength<sp/>includes<sp/>the<sp/>NULL<sp/>character</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;GLchar&gt;<sp/>errorLog(maxLength);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGetShaderInfoLog(_shader,<sp/>maxLength,<sp/>&amp;maxLength,<sp/>&amp;errorLog[0]);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Shader<sp/>%u<sp/>Compilation<sp/>failed:\nCode:\n%s\nErrors:\n%s\n&quot;</highlight><highlight class="normal">,<sp/>_shader,<sp/>_code,<sp/>errorLog.data());</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>_compiled<sp/>=<sp/>isCompiled<sp/>!=<sp/>GL_FALSE;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1ad7c094ce0d42b3399e3533b3652a33fe" refkind="member"><highlight class="normal">GLuint*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1ad7c094ce0d42b3399e3533b3652a33fe" kindref="member">Engine::Components::Graphics::Shader::Get</ref>()</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!_compiled)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Compile();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>&amp;_shader;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a24131f3622fe536794de21e0fb499276" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Engine::Components::Graphics::Shader</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a24131f3622fe536794de21e0fb499276" kindref="member">Engine::Components::Graphics::Shader::SendUniform</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref>*<sp/>program,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GLchar*<sp/>name,<sp/>glm::mat4*<sp/>data)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;SET<sp/>MAT4:<sp/>%s<sp/>(0x%p)<sp/>value<sp/>\n%s\n&quot;</highlight><highlight class="normal">,<sp/>name,<sp/>data,<sp/>Mat4ToString(*data).c_str());</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>GLint<sp/>uniformID<sp/>=<sp/>glGetUniformLocation(*(program-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" kindref="member">Get</ref>()),<sp/>name);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(uniformID<sp/>&gt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUniformMatrix4fv(uniformID,<sp/>1,<sp/>GL_FALSE,<sp/>value_ptr(*data));</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;ERROR:<sp/>program<sp/>0x%p:%u<sp/>mat4<sp/>variable<sp/>%s<sp/>not<sp/>found\n&quot;</highlight><highlight class="normal">,<sp/>program,<sp/>*(program-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" kindref="member">Get</ref>()),<sp/>name);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a39cbcddb61ef315da0d24a11a650f09a" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Engine::Components::Graphics::Shader</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a24131f3622fe536794de21e0fb499276" kindref="member">Engine::Components::Graphics::Shader::SendUniform</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref>*<sp/>program,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GLchar*<sp/>name,<sp/>glm::vec4*<sp/>data)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;SET<sp/>VEC4:<sp/>%s<sp/>(0x%p)<sp/>value<sp/>\n(%f,<sp/>%f,<sp/>%f,<sp/>%f)\n&quot;</highlight><highlight class="normal">,<sp/>name,<sp/>data,<sp/>data-&gt;x,<sp/>data-&gt;y,<sp/>data-&gt;z,<sp/>data-&gt;w);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>GLint<sp/>uniformID<sp/>=<sp/>glGetUniformLocation(*(program-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" kindref="member">Get</ref>()),<sp/>name);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(uniformID<sp/>&gt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUniform4f(uniformID,<sp/>data-&gt;x,<sp/>data-&gt;y,<sp/>data-&gt;z,<sp/>data-&gt;w);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;ERROR:<sp/>program<sp/>0x%p:%u<sp/>vec4<sp/>variable<sp/>%s<sp/>not<sp/>found\n&quot;</highlight><highlight class="normal">,<sp/>program,<sp/>*(program-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" kindref="member">Get</ref>()),<sp/>name);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a650108330666f299b13b8336140bca92" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Engine::Components::Graphics::Shader</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a24131f3622fe536794de21e0fb499276" kindref="member">Engine::Components::Graphics::Shader::SendUniform</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref>*<sp/>program,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GLchar*<sp/>name,<sp/>glm::vec3*<sp/>data)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;SET<sp/>VEC3:<sp/>%s<sp/>(0x%p)<sp/>value<sp/>\n(%f,<sp/>%f,<sp/>%f)\n&quot;</highlight><highlight class="normal">,<sp/>name,<sp/>data,<sp/>data-&gt;x,<sp/>data-&gt;y,<sp/>data-&gt;z);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>GLint<sp/>uniformID<sp/>=<sp/>glGetUniformLocation(*(program-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" kindref="member">Get</ref>()),<sp/>name);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(uniformID<sp/>&gt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUniform3f(uniformID,<sp/>data-&gt;x,data-&gt;y,data-&gt;z);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;ERROR:<sp/>program<sp/>0x%p:%u<sp/>vec3<sp/>variable<sp/>%s<sp/>not<sp/>found\n&quot;</highlight><highlight class="normal">,<sp/>program,<sp/>*(program-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" kindref="member">Get</ref>()),<sp/>name);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a12769923328fcb0f970458cf3feed273" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Engine::Components::Graphics::Shader</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a24131f3622fe536794de21e0fb499276" kindref="member">Engine::Components::Graphics::Shader::SendUniform</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref>*<sp/>program,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GLchar*<sp/>name,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>data)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;SET<sp/>FLOAT:<sp/>%s<sp/>(0x%x)<sp/>value<sp/>%f\n&quot;</highlight><highlight class="normal">,<sp/>name,<sp/>data,<sp/>*data);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>GLint<sp/>uniformID<sp/>=<sp/>glGetUniformLocation(*(program-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" kindref="member">Get</ref>()),<sp/>name);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(uniformID<sp/>&gt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUniform1f(uniformID,<sp/>*data);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;ERROR:<sp/>program<sp/>0x%p:%u<sp/>float<sp/>variable<sp/>%s<sp/>not<sp/>found\n&quot;</highlight><highlight class="normal">,<sp/>program,<sp/>*(program-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" kindref="member">Get</ref>()),<sp/>name);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154" refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a60af0a0142b5a1ea44923c3f438a179a" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Engine::Components::Graphics::Shader</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a24131f3622fe536794de21e0fb499276" kindref="member">Engine::Components::Graphics::Shader::SendUniform</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref>*<sp/>program,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GLchar*<sp/>name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>data)</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;SET<sp/>INT:<sp/>%s<sp/>(0x%p)<sp/>value<sp/>%d\n&quot;</highlight><highlight class="normal">,<sp/>name,<sp/>data,<sp/>*data);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>GLint<sp/>uniformID<sp/>=<sp/>glGetUniformLocation(*(program-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" kindref="member">Get</ref>()),<sp/>name);</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(uniformID<sp/>&gt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUniform1i(uniformID,<sp/>*data);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;ERROR:<sp/>program<sp/>0x%p:%u<sp/>int<sp/>variable<sp/>%s<sp/>not<sp/>found\n&quot;</highlight><highlight class="normal">,<sp/>program,<sp/>*(program-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" kindref="member">Get</ref>()),<sp/>name);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a9894564e19539e2d152df99ea9e5bc29" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Engine::Components::Graphics::Shader</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a24131f3622fe536794de21e0fb499276" kindref="member">Engine::Components::Graphics::Shader::SendUniform</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref>*<sp/>program,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GLchar*<sp/>name,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>data)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#ifdef<sp/>DEBUG</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;SET<sp/>BOOL:<sp/>%s<sp/>(0x%p)<sp/>value<sp/>%b\n&quot;</highlight><highlight class="normal">,<sp/>name,<sp/>data,<sp/>*data);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/>GLint<sp/>uniformID<sp/>=<sp/>glGetUniformLocation(*(program-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" kindref="member">Get</ref>()),<sp/>name);</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(uniformID<sp/>&gt;=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glUniform1i(uniformID,<sp/>*data);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;ERROR:<sp/>program<sp/>0x%p:%u<sp/>int<sp/>variable<sp/>%s<sp/>not<sp/>found\n&quot;</highlight><highlight class="normal">,<sp/>program,<sp/>*(program-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" kindref="member">Get</ref>()),<sp/>name);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186" refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a169ed9f71afd5f59160e35708e51fe7e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a169ed9f71afd5f59160e35708e51fe7e" kindref="member">Engine::Components::Graphics::Shader::setData</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref>*<sp/>program,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GLchar*<sp/>property,<sp/><ref refid="namespaceEngine_1_1Components_1_1Graphics_1a44f5a2b57ee82aed849896c8311e403b" kindref="member">MaterialValueType</ref><sp/>type,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>value)</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(type)</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceEngine_1_1Components_1_1Graphics_1a44f5a2b57ee82aed849896c8311e403ba97d63336b89a741ffe735bc436147cc6" kindref="member">Int</ref>:</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SendUniform(program,<sp/>property,<sp/>static_cast&lt;int*&gt;(value));</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceEngine_1_1Components_1_1Graphics_1a44f5a2b57ee82aed849896c8311e403bafe29186f6aeccd144f81352b67ea9c51" kindref="member">Float</ref>:</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SendUniform(program,<sp/>property,<sp/>static_cast&lt;float*&gt;(value));</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespaceEngine_1_1Components_1_1Graphics_1a44f5a2b57ee82aed849896c8311e403babbf41bb0de18f4e8481bfb1372a99767" kindref="member">Matrix4x4</ref>:</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SendUniform(program,<sp/>property,<sp/>static_cast&lt;glm::mat4*&gt;(value));</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202" refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a6d0f90b445c605f12eab980827b8d430" refkind="member"><highlight class="normal">std::string<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a6d0f90b445c605f12eab980827b8d430" kindref="member">Engine::Components::Graphics::Shader::Mat4ToString</ref>(glm::mat4&amp;<sp/>mat)</highlight></codeline>
+<codeline lineno="203"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>txt<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">[200];</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>sprintf_s(txt,<sp/>200,<sp/></highlight><highlight class="stringliteral">&quot;%6.4f\t%6.4f\t%6.4f\t%6.4f\n%6.4f\t%6.4f\t%6.4f\t%6.4f\n%6.4f\t%6.4f\t%6.4f\t%6.4f\n%6.4f\t%6.4f\t%6.4f\t%6.4f&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mat[0][0],<sp/>mat[0][1],<sp/>mat[0][2],<sp/>mat[0][3],</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mat[1][0],<sp/>mat[1][1],<sp/>mat[1][2],<sp/>mat[1][3],</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mat[2][0],<sp/>mat[2][1],<sp/>mat[2][2],<sp/>mat[2][3],</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mat[3][0],<sp/>mat[3][1],<sp/>mat[3][2],<sp/>mat[3][3]);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*txt<sp/>&lt;&lt;<sp/>mat[0][0]<sp/>&lt;&lt;<sp/>&quot;\t\t&quot;<sp/>&lt;&lt;<sp/>mat[0][1]<sp/>&lt;&lt;<sp/>&quot;\t\t&quot;<sp/>&lt;&lt;<sp/>mat[0][2]<sp/>&lt;&lt;<sp/>&quot;\t\t&quot;<sp/>&lt;&lt;<sp/>mat[0][3]<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="211"><highlight class="comment"><sp/><sp/><sp/><sp/>txt<sp/>&lt;&lt;<sp/>mat[1][0]<sp/>&lt;&lt;<sp/>&quot;\t\t&quot;<sp/>&lt;&lt;<sp/>mat[1][1]<sp/>&lt;&lt;<sp/>&quot;\t\t&quot;<sp/>&lt;&lt;<sp/>mat[1][2]<sp/>&lt;&lt;<sp/>&quot;\t\t&quot;<sp/>&lt;&lt;<sp/>mat[1][3]<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="212"><highlight class="comment"><sp/><sp/><sp/><sp/>txt<sp/>&lt;&lt;<sp/>mat[2][0]<sp/>&lt;&lt;<sp/>&quot;\t\t&quot;<sp/>&lt;&lt;<sp/>mat[2][1]<sp/>&lt;&lt;<sp/>&quot;\t\t&quot;<sp/>&lt;&lt;<sp/>mat[2][2]<sp/>&lt;&lt;<sp/>&quot;\t\t&quot;<sp/>&lt;&lt;<sp/>mat[2][3]<sp/>&lt;&lt;<sp/>std::endl;<sp/></highlight></codeline>
+<codeline lineno="213"><highlight class="comment"><sp/><sp/><sp/><sp/>txt<sp/>&lt;&lt;<sp/>mat[3][0]<sp/>&lt;&lt;<sp/>&quot;\t\t&quot;<sp/>&lt;&lt;<sp/>mat[3][1]<sp/>&lt;&lt;<sp/>&quot;\t\t&quot;<sp/>&lt;&lt;<sp/>mat[3][2]<sp/>&lt;&lt;<sp/>&quot;\t\t&quot;<sp/>&lt;&lt;<sp/>mat[3][3]<sp/>&lt;&lt;<sp/>std::endl;*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>std::string(txt);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="ZPG/Shader.cpp"/>
+  </compounddef>
+</doxygen>

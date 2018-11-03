@@ -1,0 +1,175 @@
+\hypertarget{classTransform}{}\section{Transform Class Reference}
+\label{classTransform}\index{Transform@{Transform}}
+
+
+{\ttfamily \#include $<$Transform.\+h$>$}
+
+
+
+Collaboration diagram for Transform\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{classTransform__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTransform_aa08ca4266efabc768973cdeea51945ab}{Transform}} ()
+\item 
+\mbox{\hyperlink{classTransform_aa72e286c069850db80927b0e6554cd3e}{$\sim$\+Transform}} ()
+\item 
+glm\+::mat4 \mbox{\hyperlink{classTransform_ac71c79e10f11990100cd219f25879dd0}{Get\+Matrix}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::vec3 \mbox{\hyperlink{classTransform_a1ee81ac62c423e027d979454a373b991}{Position}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{classTransform_a0b39a3cad853ab427a91b761d82440d2}{Rotation}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{classTransform_a337690a3de8862de2f930e9ee1323365}{Scale}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 5 of file Transform.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTransform_aa08ca4266efabc768973cdeea51945ab}\label{classTransform_aa08ca4266efabc768973cdeea51945ab}} 
+\index{Transform@{Transform}!Transform@{Transform}}
+\index{Transform@{Transform}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{Transform()}{Transform()}}
+{\footnotesize\ttfamily Transform\+::\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 33 of file Transform.\+cpp.
+
+
+\begin{DoxyCode}
+33                       \{
+34 
+35 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classTransform_aa72e286c069850db80927b0e6554cd3e}\label{classTransform_aa72e286c069850db80927b0e6554cd3e}} 
+\index{Transform@{Transform}!````~Transform@{$\sim$\+Transform}}
+\index{````~Transform@{$\sim$\+Transform}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{$\sim$\+Transform()}{~Transform()}}
+{\footnotesize\ttfamily Transform\+::$\sim$\+Transform (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 37 of file Transform.\+cpp.
+
+
+\begin{DoxyCode}
+37                        \{
+38 
+39 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classTransform_ac71c79e10f11990100cd219f25879dd0}\label{classTransform_ac71c79e10f11990100cd219f25879dd0}} 
+\index{Transform@{Transform}!Get\+Matrix@{Get\+Matrix}}
+\index{Get\+Matrix@{Get\+Matrix}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{Get\+Matrix()}{GetMatrix()}}
+{\footnotesize\ttfamily glm\+::mat4 Transform\+::\+Get\+Matrix (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file Transform.\+cpp.
+
+
+
+References Position, Rotation, and Scale.
+
+
+\begin{DoxyCode}
+4                              \{
+5 
+6     \textcolor{keywordflow}{return}
+7         \textcolor{comment}{// Velikost}
+8         glm::scale(
+9             \textcolor{comment}{// Rotace Z}
+10             glm::rotate(
+11                 \textcolor{comment}{// Rotace Y}
+12                 glm::rotate(
+13                     \textcolor{comment}{// Rotace X}
+14                     glm::rotate(
+15                         \textcolor{comment}{// Posun na pozici}
+16                         glm::translate(
+17                             glm::mat4(1.f),
+18                             \mbox{\hyperlink{classTransform_a1ee81ac62c423e027d979454a373b991}{Position}}
+19                         ),
+20                         \mbox{\hyperlink{classTransform_a0b39a3cad853ab427a91b761d82440d2}{Rotation}}.x,
+21                         glm::vec3(1, 0, 0)
+22                     ),
+23                     \mbox{\hyperlink{classTransform_a0b39a3cad853ab427a91b761d82440d2}{Rotation}}.y,
+24                     glm::vec3(0, 1, 0)
+25                 ),
+26                 \mbox{\hyperlink{classTransform_a0b39a3cad853ab427a91b761d82440d2}{Rotation}}.z,
+27                 glm::vec3(0, 0, 1)
+28             ),
+29             \mbox{\hyperlink{classTransform_a337690a3de8862de2f930e9ee1323365}{Scale}}
+30         );
+31 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classTransform_a1ee81ac62c423e027d979454a373b991}\label{classTransform_a1ee81ac62c423e027d979454a373b991}} 
+\index{Transform@{Transform}!Position@{Position}}
+\index{Position@{Position}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{Position}{Position}}
+{\footnotesize\ttfamily glm\+::vec3 Transform\+::\+Position}
+
+
+
+Definition at line 7 of file Transform.\+h.
+
+
+
+Referenced by Get\+Matrix().
+
+\mbox{\Hypertarget{classTransform_a0b39a3cad853ab427a91b761d82440d2}\label{classTransform_a0b39a3cad853ab427a91b761d82440d2}} 
+\index{Transform@{Transform}!Rotation@{Rotation}}
+\index{Rotation@{Rotation}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{Rotation}{Rotation}}
+{\footnotesize\ttfamily glm\+::vec3 Transform\+::\+Rotation}
+
+
+
+Definition at line 9 of file Transform.\+h.
+
+
+
+Referenced by Get\+Matrix().
+
+\mbox{\Hypertarget{classTransform_a337690a3de8862de2f930e9ee1323365}\label{classTransform_a337690a3de8862de2f930e9ee1323365}} 
+\index{Transform@{Transform}!Scale@{Scale}}
+\index{Scale@{Scale}!Transform@{Transform}}
+\subsubsection{\texorpdfstring{Scale}{Scale}}
+{\footnotesize\ttfamily glm\+::vec3 Transform\+::\+Scale}
+
+
+
+Definition at line 11 of file Transform.\+h.
+
+
+
+Referenced by Get\+Matrix().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{Transform_8h}{Transform.\+h}}\item 
+Z\+P\+G/\mbox{\hyperlink{Transform_8cpp}{Transform.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="Observable&lt; T &gt;" name="Observable&lt; T &gt;">
+<area shape="rect" id="node2" href="$classObservable.html" title="{Observable\&lt; Camera \&gt;\n|&#45; _observers\l|+ Observable()\l+ ~Observable()\l+ Bind()\l+ Notify()\l+ UnBind()\l}" alt="" coords="5,204,160,340"/>
+<area shape="rect" id="node3" href="$classEngine_1_1Components_1_1Camera.html" title="{Engine::Components\l::Camera\n|+ Direction\l+ Front\l+ Position\l+ Right\l+ Up\l+ Value\l|+ Camera()\l+ ~Camera()\l+ Get()\l+ SetActive()\l+ SetDirection()\l+ SetPosition()\l+ SetUp()\l+ Update()\l+ UpdateVectors()\l}" alt="" coords="11,389,154,672"/>
+</map>

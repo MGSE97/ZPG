@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classEngine_1_1Components_1_1BaseInputHandler" kind="class" language="C++" prot="public">
+    <compoundname>Engine::Components::BaseInputHandler</compoundname>
+    <basecompoundref refid="classEngine_1_1Components_1_1IInputHandler" prot="public" virt="non-virtual">IInputHandler</basecompoundref>
+    <derivedcompoundref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler" prot="public" virt="non-virtual">Application::Input::Handlers::LightingChangeInputHandler</derivedcompoundref>
+    <includes refid="BaseInputHandler_8h" local="no">BaseInputHandler.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEngine_1_1Components_1_1BaseInputHandler_1a6a40d61a56fa4f49ae7e6f8cd63c4877" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Components::BaseInputHandler::BaseInputHandler</definition>
+        <argsstring>()=default</argsstring>
+        <name>BaseInputHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseInputHandler.h" line="11" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1BaseInputHandler_1a538dba6ed33f86a6394c53bd5fb50abe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Components::BaseInputHandler::~BaseInputHandler</definition>
+        <argsstring>()=default</argsstring>
+        <name>~BaseInputHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseInputHandler.h" line="12" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1BaseInputHandler_1af7deea3367074324fdbefe48119d40ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Engine::Components::BaseInputHandler::HandleKeys</definition>
+        <argsstring>(BaseEngine *engine, Window *window, Scene *scene, Generic::Dictionary&lt; short, bool &gt; &amp;keys, int keysActive) override</argsstring>
+        <name>HandleKeys</name>
+        <reimplementedby refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a5017479d6edea9d6bedf3093cf49cb24">HandleKeys</reimplementedby>
+        <param>
+          <type><ref refid="classEngine_1_1BaseEngine" kindref="compound">BaseEngine</ref> *</type>
+          <declname>engine</declname>
+        </param>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Window</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Scene</ref> *</type>
+          <declname>scene</declname>
+        </param>
+        <param>
+          <type><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary</ref>&lt; short, bool &gt; &amp;</type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>keysActive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseInputHandler.h" line="13" column="1" bodyfile="ZPG/BaseInputHandler.cpp" bodystart="3" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1BaseInputHandler_1a8b50fb66d01573616072d708075a721e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Engine::Components::BaseInputHandler::HandleMouse</definition>
+        <argsstring>(BaseEngine *engine, Window *window, Scene *scene, double x, double y, Generic::Dictionary&lt; short, bool &gt; &amp;keys, int keysActive) override</argsstring>
+        <name>HandleMouse</name>
+        <param>
+          <type><ref refid="classEngine_1_1BaseEngine" kindref="compound">BaseEngine</ref> *</type>
+          <declname>engine</declname>
+        </param>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Window</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Scene</ref> *</type>
+          <declname>scene</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary</ref>&lt; short, bool &gt; &amp;</type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>keysActive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseInputHandler.h" line="14" column="1" bodyfile="ZPG/BaseInputHandler.cpp" bodystart="8" bodyend="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="366">
+        <label>Application::Input::Handlers::LightingChangeInputHandler</label>
+        <link refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler"/>
+        <childnode refid="364" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="365">
+        <label>IInputHandler</label>
+        <link refid="classEngine_1_1Components_1_1IInputHandler"/>
+      </node>
+      <node id="364">
+        <label>Engine::Components::BaseInputHandler</label>
+        <link refid="classEngine_1_1Components_1_1BaseInputHandler"/>
+        <childnode refid="365" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="368">
+        <label>IInputHandler</label>
+        <link refid="classEngine_1_1Components_1_1IInputHandler"/>
+      </node>
+      <node id="367">
+        <label>Engine::Components::BaseInputHandler</label>
+        <link refid="classEngine_1_1Components_1_1BaseInputHandler"/>
+        <childnode refid="368" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/BaseInputHandler.h" line="9" column="1" bodyfile="ZPG/BaseInputHandler.h" bodystart="8" bodyend="15"/>
+    <listofallmembers>
+      <member refid="classEngine_1_1Components_1_1BaseInputHandler_1a6a40d61a56fa4f49ae7e6f8cd63c4877" prot="public" virt="non-virtual"><scope>Engine::Components::BaseInputHandler</scope><name>BaseInputHandler</name></member>
+      <member refid="classEngine_1_1Components_1_1BaseInputHandler_1af7deea3367074324fdbefe48119d40ce" prot="public" virt="virtual"><scope>Engine::Components::BaseInputHandler</scope><name>HandleKeys</name></member>
+      <member refid="classEngine_1_1Components_1_1BaseInputHandler_1a8b50fb66d01573616072d708075a721e" prot="public" virt="virtual"><scope>Engine::Components::BaseInputHandler</scope><name>HandleMouse</name></member>
+      <member refid="classEngine_1_1Components_1_1BaseInputHandler_1a538dba6ed33f86a6394c53bd5fb50abe" prot="public" virt="non-virtual"><scope>Engine::Components::BaseInputHandler</scope><name>~BaseInputHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

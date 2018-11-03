@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="Transform_8h" kind="file" language="C++">
+    <compoundname>Transform.h</compoundname>
+    <includedby refid="Transform_8cpp" local="yes">ZPG/Transform.cpp</includedby>
+    <invincdepgraph>
+      <node id="2158">
+        <label>ZPG/Transform.h</label>
+        <link refid="Transform_8h"/>
+        <childnode refid="2159" relation="include">
+        </childnode>
+      </node>
+      <node id="2159">
+        <label>ZPG/Transform.cpp</label>
+        <link refid="Transform_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classTransform" prot="public">Transform</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_TRANSFORM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_TRANSFORM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="classTransform" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classTransform" kindref="compound">Transform</ref><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="7" refid="classTransform_1a1ee81ac62c423e027d979454a373b991" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>glm::vec3<sp/><ref refid="classTransform_1a1ee81ac62c423e027d979454a373b991" kindref="member">Position</ref>;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classTransform_1a0b39a3cad853ab427a91b761d82440d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>glm::vec3<sp/><ref refid="classTransform_1a0b39a3cad853ab427a91b761d82440d2" kindref="member">Rotation</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="classTransform_1a337690a3de8862de2f930e9ee1323365" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>glm::vec3<sp/><ref refid="classTransform_1a337690a3de8862de2f930e9ee1323365" kindref="member">Scale</ref>;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>glm::mat4<sp/><ref refid="classTransform_1ac71c79e10f11990100cd219f25879dd0" kindref="member">GetMatrix</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="classTransform_1aa08ca4266efabc768973cdeea51945ab" kindref="member">Transform</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="classTransform_1aa72e286c069850db80927b0e6554cd3e" kindref="member">~Transform</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="ZPG/Transform.h"/>
+  </compounddef>
+</doxygen>

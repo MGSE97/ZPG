@@ -1,0 +1,258 @@
+.TH "Light" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Light
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Light\&.h>\fP
+.PP
+Inherits \fBEngine::Objects::Object\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLight\fP (\fBEngine::Components::Graphics::Program\fP *program, glm::vec3 position, float power=1\&.f, glm::vec3 color=glm::vec3(1\&.f, 1\&.f, 1\&.f))"
+.br
+.ti -1c
+.RI "\fB~Light\fP ()"
+.br
+.ti -1c
+.RI "\fBVertexObject\fP * \fBDraw\fP ()"
+.br
+.ti -1c
+.RI "\fBLight\fP * \fBUse\fP (\fBEngine::Components::Graphics::Material\fP *material)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "glm::vec3 \fBColor\fP"
+.br
+.ti -1c
+.RI "glm::vec4 \fBfColor\fP"
+.br
+.ti -1c
+.RI "Graphics::Material * \fBMaterial\fP"
+.br
+.ti -1c
+.RI "glm::mat4 * \fBModelMatrix\fP"
+.br
+.ti -1c
+.RI "glm::vec3 \fBPosition\fP"
+.br
+.ti -1c
+.RI "float \fBPower\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVertexObject\fP * \fBAdd\fP (int size, int offset)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fB_attribute_id\fP"
+.br
+.ti -1c
+.RI "int \fB_Id\fP"
+.br
+.ti -1c
+.RI "GLuint \fB_VAO\fP = 0"
+.br
+.ti -1c
+.RI "GLuint \fB_VBO\fP = 0"
+.br
+.ti -1c
+.RI "int \fBDimensions\fP"
+.br
+.ti -1c
+.RI "int \fBSize\fP"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fB_object_id\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 15 of file Light\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Light::Light (\fBEngine::Components::Graphics::Program\fP * program, glm::vec3 position, float power = \fC1\&.f\fP, glm::vec3 color = \fCglm::vec3(1\&.f, 1\&.f, 1\&.f)\fP)"
+
+.PP
+Definition at line 6 of file Light\&.cpp\&.
+.PP
+References Color, fColor, Engine::Components::Objects::VertexObject::Material, Engine::Objects::Object::ModelMatrix, Position, Power, Engine::Components::Graphics::Program::Shaders, and Engine::Components::Graphics::Material::Values\&.
+.PP
+.nf
+6                                                                                                    : Object(new Engine::Components::Graphics::Material(program), sphere, 17280)
+7 {
+8     Position = position;
+9     Power = power;
+10     Color = color;
+11 
+12     fColor = glm::vec4(255\&.f*color\&.x, 255\&.f*color\&.y, 255\&.f*color\&.z, power);
+13 
+14     *ModelMatrix = *(new glm::mat4(glm::scale(glm::translate(*ModelMatrix, position), glm::vec3(0\&.2*power, 0\&.2*power, 0\&.2*power))));
+15 
+16     Material->Values->Add(
+17         new Engine::Components::Graphics::MaterialValue<glm::vec4>(
+18             program->Shaders->Get("fragment"), "color", &fColor)
+19     )\&.Add(new Engine::Components::Graphics::MaterialValue<bool>(
+20         program->Shaders->Get("fragment"), "useLighting", new bool(false)
+21     ));;
+22     //Use(Material);
+23 }
+.fi
+.SS "Light::~Light ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBEngine::Components::Objects::VertexObject\fP * Engine::Components::Objects::VertexObject::Add (int size, int offset)\fC [protected]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 6 of file VertexObject\&.cpp\&.
+.PP
+References Engine::Components::Objects::VertexObject::_attribute_id, and Engine::Components::Objects::VertexObject::Dimensions\&.
+.PP
+.nf
+7 {
+8 
+9     /*glEnableVertexAttribArray(_attribute_id); //enable vertex attributes
+10     glBindBuffer(GL_ARRAY_BUFFER, _VBO);
+11     glVertexAttribPointer(_attribute_id++, *Dimensions, GL_FLOAT, GL_FALSE, size * sizeof(float), (GLvoid*)offset);*/
+12     glEnableVertexAttribArray(_attribute_id);
+13     glVertexAttribPointer(_attribute_id, Dimensions, GL_FLOAT, GL_FALSE, size, (void*)offset);
+14     _attribute_id++;
+15     //VAOs->Add(new VertexAttributeObject(VAOi++, VBO, *Dimensions, size, offset));
+16     return this;
+17 }
+.fi
+.SS "\fBEngine::Components::Objects::VertexObject\fP * Engine::Components::Objects::VertexObject::Draw ()\fC [inherited]\fP"
+
+.PP
+Definition at line 76 of file VertexObject\&.cpp\&.
+.PP
+Referenced by Engine::Objects::Sphere::Draw()\&.
+.PP
+.nf
+77 {
+78     // use material
+79     Material->Use();
+80 
+81 
+82     glBindVertexArray(_VAO);
+83     // draw triangles
+84     glDrawArrays(GL_TRIANGLES, 0, Size);
+85     return this;
+86 }
+.fi
+.SS "\fBLight\fP * Light::Use (\fBEngine::Components::Graphics::Material\fP * material)"
+
+.PP
+Definition at line 25 of file Light\&.cpp\&.
+.PP
+References Color, Position, Power, Engine::Components::Graphics::Material::Program, Engine::Components::Graphics::Program::Shaders, and Engine::Components::Graphics::Material::Values\&.
+.PP
+.nf
+26 {
+27     material->Values->Add(
+28         new Engine::Components::Graphics::MaterialValue<glm::vec3>(
+29             material->Program->Shaders->Get("vertex"), "lightPos", &Position)
+30     )\&.Add(
+31         new Engine::Components::Graphics::MaterialValue<float>(
+32             material->Program->Shaders->Get("fragment"), "lightStrength", &Power)
+33     )\&.Add(
+34         new Engine::Components::Graphics::MaterialValue<glm::vec3>(
+35             material->Program->Shaders->Get("fragment"), "lightColor", &Color)
+36     );
+37 
+38     return this;
+39 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "int Engine::Components::Objects::VertexObject::_attribute_id\fC [protected]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 24 of file VertexObject\&.h\&.
+.PP
+Referenced by Engine::Components::Objects::VertexObject::Add()\&.
+.SS "int Engine::Components::Objects::VertexObject::_Id\fC [protected]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 23 of file VertexObject\&.h\&.
+.SS "int Engine::Components::Objects::VertexObject::_object_id = 0\fC [static]\fP, \fC [protected]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 26 of file VertexObject\&.h\&.
+.SS "GLuint Engine::Components::Objects::VertexObject::_VAO = 0\fC [protected]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 22 of file VertexObject\&.h\&.
+.SS "GLuint Engine::Components::Objects::VertexObject::_VBO = 0\fC [protected]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 21 of file VertexObject\&.h\&.
+.SS "glm::vec3 Light::Color"
+
+.PP
+Definition at line 20 of file Light\&.h\&.
+.PP
+Referenced by Light(), and Use()\&.
+.SS "int Engine::Components::Objects::VertexObject::Dimensions\fC [protected]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 20 of file VertexObject\&.h\&.
+.PP
+Referenced by Engine::Components::Objects::VertexObject::Add()\&.
+.SS "glm::vec4 Light::fColor"
+
+.PP
+Definition at line 21 of file Light\&.h\&.
+.PP
+Referenced by Light()\&.
+.SS "Graphics::Material* Engine::Components::Objects::VertexObject::Material\fC [inherited]\fP"
+
+.PP
+Definition at line 32 of file VertexObject\&.h\&.
+.PP
+Referenced by Application::Engines::CameraEngine::Init(), Light(), and Engine::Objects::Object::Object()\&.
+.SS "glm::mat4* Engine::Objects::Object::ModelMatrix\fC [inherited]\fP"
+
+.PP
+Definition at line 11 of file Object\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::LightingChangeInputHandler::HandleKeys(), Light(), and Engine::Objects::Object::Object()\&.
+.SS "glm::vec3 Light::Position"
+
+.PP
+Definition at line 18 of file Light\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::LightingChangeInputHandler::HandleKeys(), Light(), and Use()\&.
+.SS "float Light::Power"
+
+.PP
+Definition at line 19 of file Light\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::LightingChangeInputHandler::HandleKeys(), Light(), and Use()\&.
+.SS "int Engine::Components::Objects::VertexObject::Size\fC [protected]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 25 of file VertexObject\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

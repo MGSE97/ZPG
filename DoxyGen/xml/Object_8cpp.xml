@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="Object_8cpp" kind="file" language="C++">
+    <compoundname>Object.cpp</compoundname>
+    <includes refid="Object_8h" local="yes">Object.h</includes>
+    <includes refid="Program_8h" local="yes">Program.h</includes>
+    <incdepgraph>
+      <node id="1514">
+        <label>list</label>
+      </node>
+      <node id="1500">
+        <label>VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="1501" relation="include">
+        </childnode>
+        <childnode refid="1504" relation="include">
+        </childnode>
+        <childnode refid="1506" relation="include">
+        </childnode>
+        <childnode refid="1517" relation="include">
+        </childnode>
+      </node>
+      <node id="1518">
+        <label>MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="1513" relation="include">
+        </childnode>
+        <childnode refid="1508" relation="include">
+        </childnode>
+        <childnode refid="1512" relation="include">
+        </childnode>
+        <childnode refid="1519" relation="include">
+        </childnode>
+      </node>
+      <node id="1504">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="1502" relation="include">
+        </childnode>
+        <childnode refid="1501" relation="include">
+        </childnode>
+        <childnode refid="1505" relation="include">
+        </childnode>
+      </node>
+      <node id="1508">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="1502" relation="include">
+        </childnode>
+        <childnode refid="1509" relation="include">
+        </childnode>
+        <childnode refid="1510" relation="include">
+        </childnode>
+        <childnode refid="1511" relation="include">
+        </childnode>
+        <childnode refid="1512" relation="include">
+        </childnode>
+        <childnode refid="1513" relation="include">
+        </childnode>
+      </node>
+      <node id="1501">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="1502" relation="include">
+        </childnode>
+        <childnode refid="1503" relation="include">
+        </childnode>
+      </node>
+      <node id="1513">
+        <label>string</label>
+      </node>
+      <node id="1502">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="1516">
+        <label>map</label>
+      </node>
+      <node id="1519">
+        <label>MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="1502" relation="include">
+        </childnode>
+        <childnode refid="1508" relation="include">
+        </childnode>
+      </node>
+      <node id="1499">
+        <label>Object.h</label>
+        <link refid="Object_8h"/>
+        <childnode refid="1500" relation="include">
+        </childnode>
+      </node>
+      <node id="1512">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="1509">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="1503">
+        <label>vector</label>
+      </node>
+      <node id="1507">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="1508" relation="include">
+        </childnode>
+        <childnode refid="1514" relation="include">
+        </childnode>
+      </node>
+      <node id="1517">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="1515" relation="include">
+        </childnode>
+        <childnode refid="1513" relation="include">
+        </childnode>
+        <childnode refid="1518" relation="include">
+        </childnode>
+        <childnode refid="1506" relation="include">
+        </childnode>
+        <childnode refid="1508" relation="include">
+        </childnode>
+      </node>
+      <node id="1505">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="1510">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="1506">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="1502" relation="include">
+        </childnode>
+        <childnode refid="1507" relation="include">
+        </childnode>
+        <childnode refid="1515" relation="include">
+        </childnode>
+        <childnode refid="1513" relation="include">
+        </childnode>
+      </node>
+      <node id="1515">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="1516" relation="include">
+        </childnode>
+      </node>
+      <node id="1511">
+        <label>xstring</label>
+      </node>
+      <node id="1498">
+        <label>ZPG/Object.cpp</label>
+        <link refid="Object_8cpp"/>
+        <childnode refid="1499" relation="include">
+        </childnode>
+        <childnode refid="1506" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Object_8h" kindref="compound">Object.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Program_8h" kindref="compound">Program.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="classEngine_1_1Objects_1_1Object_1a4798ee926dcbd761e7e88fdeb73f2f0a" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Objects_1_1Object_1a4798ee926dcbd761e7e88fdeb73f2f0a" kindref="member">Engine::Objects::Object::Object</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Material" kindref="compound">Components::Graphics::Material</ref>*<sp/>material,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>points,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dimensions,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>startArrayIndex):<sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>VertexObject(material,<sp/>points,<sp/>size,<sp/>dimensions,<sp/>&amp;((new<sp/><ref refid="namespaceGeneric" kindref="compound">Generic</ref>::Collection&lt;Components::Objects::VAOConfig*&gt;())</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;Add(new<sp/><ref refid="namespaceEngine" kindref="compound">Engine</ref>::Components::Objects::VAOConfig(0,<sp/>startArrayIndex))</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>))</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Objects_1_1Object_1acf41cc091fa270053245ed26bc28c8a4" kindref="member">ModelMatrix</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>glm::mat4(1.f);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a86c1fced4cdc5e59a66a635390a17eca" kindref="member">Material</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Material_1a34335608ba1e6eb2c2dba5032107eab0" kindref="member">Values</ref>-&gt;Add(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;glm::mat4&gt;</ref>(</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a86c1fced4cdc5e59a66a635390a17eca" kindref="member">Material</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Material_1a2a4084db93bb70cd65032baf296803d6" kindref="member">Program</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1aff39fa56fc1fab1bce6c8a5ce29ae161" kindref="member">Shaders</ref>-&gt;Get(</highlight><highlight class="stringliteral">&quot;vertex&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;modelMatrix&quot;</highlight><highlight class="normal">,<sp/><ref refid="classEngine_1_1Objects_1_1Object_1acf41cc091fa270053245ed26bc28c8a4" kindref="member">ModelMatrix</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>));</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classEngine_1_1Objects_1_1Object_1af69cb6c57955cec7b1a94604136a4c51" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Objects_1_1Object_1a4798ee926dcbd761e7e88fdeb73f2f0a" kindref="member">Engine::Objects::Object::Object</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Material" kindref="compound">Components::Graphics::Material</ref>*<sp/>material,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>points,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dimensions,<sp/><ref refid="classGeneric_1_1Collection" kindref="compound">Generic::Collection&lt;Components::Objects::VAOConfig*&gt;</ref><sp/>configs)<sp/>:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>VertexObject(material,<sp/>points,<sp/>size,<sp/>dimensions,<sp/>&amp;configs)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Objects_1_1Object_1acf41cc091fa270053245ed26bc28c8a4" kindref="member">ModelMatrix</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>glm::mat4(1.f);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a86c1fced4cdc5e59a66a635390a17eca" kindref="member">Material</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Material_1a34335608ba1e6eb2c2dba5032107eab0" kindref="member">Values</ref>-&gt;Add(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;glm::mat4&gt;</ref>(</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a86c1fced4cdc5e59a66a635390a17eca" kindref="member">Material</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Material_1a2a4084db93bb70cd65032baf296803d6" kindref="member">Program</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1aff39fa56fc1fab1bce6c8a5ce29ae161" kindref="member">Shaders</ref>-&gt;Get(</highlight><highlight class="stringliteral">&quot;vertex&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;modelMatrix&quot;</highlight><highlight class="normal">,<sp/><ref refid="classEngine_1_1Objects_1_1Object_1acf41cc091fa270053245ed26bc28c8a4" kindref="member">ModelMatrix</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>));</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><ref refid="classEngine_1_1Objects_1_1Object_1a5fc9cc004cae8e63c4fb1d2b6d1cea88" kindref="member">Engine::Objects::Object::~Object</ref>()</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+    </programlisting>
+    <location file="ZPG/Object.cpp"/>
+  </compounddef>
+</doxygen>

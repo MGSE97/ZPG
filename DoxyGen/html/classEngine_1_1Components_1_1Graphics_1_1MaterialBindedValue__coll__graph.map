@@ -1,0 +1,4 @@
+<map id="Engine::Components::Graphics::MaterialBindedValue&lt; T &gt;" name="Engine::Components::Graphics::MaterialBindedValue&lt; T &gt;">
+<area shape="rect" id="node2" href="$classObserver.html" title="{Observer\&lt; T \&gt;\n||+ Observer()\l+ ~Observer()\l+ Update()\l}" alt="" coords="5,226,109,333"/>
+<area shape="rect" id="node4" href="$classEngine_1_1Components_1_1Graphics_1_1Shader.html" title="{Engine::Components\l::Graphics::Shader\n||+ Shader()\l+ Shader()\l+ ~Shader()\l+ Compile()\l+ Get()\l+ SendUniform()\l+ SendUniform()\l+ SendUniform()\l+ SendUniform()\l+ SendUniform()\l+ SendUniform()\l+ setData()\l&#45; Mat4ToString()\l}" alt="" coords="287,145,430,413"/>
+</map>

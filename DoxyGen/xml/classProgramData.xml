@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classProgramData" kind="class" language="C++" prot="public">
+    <compoundname>ProgramData</compoundname>
+    <includes refid="ProgramData_8h" local="no">ProgramData.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classProgramData_1a1dea8570e013c06776692b248f25a534" prot="public" static="no" mutable="no">
+        <type><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary</ref>&lt; <ref refid="classProgramData" kindref="compound">ProgramData</ref> *, T &gt; *</type>
+        <definition>Generic::Dictionary&lt;ProgramData*, T&gt;* ProgramData&lt; T &gt;::Values</definition>
+        <argsstring></argsstring>
+        <name>Values</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/ProgramData.h" line="17" column="1" bodyfile="ZPG/ProgramData.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="classProgramData_1ac1c5a21a44f037b1c5448378fdbaabd0" compoundref="ProgramData_8h" startline="9" endline="12">ProgramData&lt; T &gt;::ProgramData</referencedby>
+        <referencedby refid="classProgramData_1a04be8ca855f8898c4ca8297518c70f23" compoundref="ProgramData_8h" startline="13" endline="16">ProgramData&lt; T &gt;::~ProgramData</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classProgramData_1ac1c5a21a44f037b1c5448378fdbaabd0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ProgramData&lt; T &gt;::ProgramData</definition>
+        <argsstring>()</argsstring>
+        <name>ProgramData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/ProgramData.h" line="9" column="1" bodyfile="ZPG/ProgramData.h" bodystart="9" bodyend="12"/>
+        <references refid="classProgramData_1a1dea8570e013c06776692b248f25a534" compoundref="ProgramData_8h" startline="17">ProgramData&lt; T &gt;::Values</references>
+      </memberdef>
+      <memberdef kind="function" id="classProgramData_1a04be8ca855f8898c4ca8297518c70f23" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ProgramData&lt; T &gt;::~ProgramData</definition>
+        <argsstring>()</argsstring>
+        <name>~ProgramData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/ProgramData.h" line="13" column="1" bodyfile="ZPG/ProgramData.h" bodystart="13" bodyend="16"/>
+        <references refid="classProgramData_1a1dea8570e013c06776692b248f25a534" compoundref="ProgramData_8h" startline="17">ProgramData&lt; T &gt;::Values</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="606">
+        <label>Generic::Dictionary&lt; TKey, TValue &gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="607" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="607">
+        <label>std::map&lt; TKey, TValue &gt;</label>
+      </node>
+      <node id="605">
+        <label>std::map&lt; ProgramData * , T  &gt;</label>
+      </node>
+      <node id="604">
+        <label>Generic::Dictionary&lt; ProgramData *, T &gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="605" relation="public-inheritance">
+        </childnode>
+        <childnode refid="606" relation="template-instance">
+          <edgelabel>&lt; ProgramData *, T &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="603">
+        <label>ProgramData&lt; T &gt;</label>
+        <link refid="classProgramData"/>
+        <childnode refid="604" relation="usage">
+          <edgelabel>+Values</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/ProgramData.h" line="7" column="1" bodyfile="ZPG/ProgramData.h" bodystart="6" bodyend="18"/>
+    <listofallmembers>
+      <member refid="classProgramData_1ac1c5a21a44f037b1c5448378fdbaabd0" prot="public" virt="non-virtual"><scope>ProgramData</scope><name>ProgramData</name></member>
+      <member refid="classProgramData_1a1dea8570e013c06776692b248f25a534" prot="public" virt="non-virtual"><scope>ProgramData</scope><name>Values</name></member>
+      <member refid="classProgramData_1a04be8ca855f8898c4ca8297518c70f23" prot="public" virt="non-virtual"><scope>ProgramData</scope><name>~ProgramData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

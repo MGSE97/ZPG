@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespaceEngine_1_1Components_1_1Graphics" kind="namespace" language="C++">
+    <compoundname>Engine::Components::Graphics</compoundname>
+    <innerclass refid="classEngine_1_1Components_1_1Graphics_1_1Material" prot="public">Engine::Components::Graphics::Material</innerclass>
+    <innerclass refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue" prot="public">Engine::Components::Graphics::MaterialBindedValue</innerclass>
+    <innerclass refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" prot="public">Engine::Components::Graphics::MaterialValue</innerclass>
+    <innerclass refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase" prot="public">Engine::Components::Graphics::MaterialValueBase</innerclass>
+    <innerclass refid="classEngine_1_1Components_1_1Graphics_1_1Program" prot="public">Engine::Components::Graphics::Program</innerclass>
+    <innerclass refid="classEngine_1_1Components_1_1Graphics_1_1Shader" prot="public">Engine::Components::Graphics::Shader</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespaceEngine_1_1Components_1_1Graphics_1a44f5a2b57ee82aed849896c8311e403b" prot="public" static="no" strong="no">
+        <type></type>
+        <name>MaterialValueType</name>
+        <enumvalue id="namespaceEngine_1_1Components_1_1Graphics_1a44f5a2b57ee82aed849896c8311e403ba97d63336b89a741ffe735bc436147cc6" prot="public">
+          <name>Int</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceEngine_1_1Components_1_1Graphics_1a44f5a2b57ee82aed849896c8311e403bafe29186f6aeccd144f81352b67ea9c51" prot="public">
+          <name>Float</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespaceEngine_1_1Components_1_1Graphics_1a44f5a2b57ee82aed849896c8311e403babbf41bb0de18f4e8481bfb1372a99767" prot="public">
+          <name>Matrix4x4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/MaterialValueType.h" line="10" column="1" bodyfile="ZPG/MaterialValueType.h" bodystart="9" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ZPG/Light.h" line="9" column="1"/>
+  </compounddef>
+</doxygen>

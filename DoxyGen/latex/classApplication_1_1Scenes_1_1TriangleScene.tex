@@ -1,0 +1,415 @@
+\hypertarget{classApplication_1_1Scenes_1_1TriangleScene}{}\section{Application\+:\+:Scenes\+:\+:Triangle\+Scene Class Reference}
+\label{classApplication_1_1Scenes_1_1TriangleScene}\index{Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}}
+
+
+{\ttfamily \#include $<$Triangle\+Scene.\+h$>$}
+
+
+
+Inheritance diagram for Application\+:\+:Scenes\+:\+:Triangle\+Scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=187pt]{classApplication_1_1Scenes_1_1TriangleScene__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Application\+:\+:Scenes\+:\+:Triangle\+Scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classApplication_1_1Scenes_1_1TriangleScene__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_a36015fc65ca3005d57f23a1e2f34f016}{Triangle\+Scene}} ()
+\item 
+\mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_a5b1166cd574db6efeea5de8029672437}{$\sim$\+Triangle\+Scene}} ()
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_af18bd334fe66952b8d79b8e9e99ab2d8}{Begin\+Load}} (Base\+Engine $\ast$engine)
+\item 
+void \mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_a5622996232a2ad52735251c8398b0c9a}{Frame\+Update}} (\mbox{\hyperlink{classEngine_1_1BaseEngine}{Engine\+::\+Base\+Engine}} $\ast$engine) override
+\item 
+void \mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_a4bfd44cab6aa0eafe47f379dafe3843e}{Load}} (\mbox{\hyperlink{classEngine_1_1BaseEngine}{Engine\+::\+Base\+Engine}} $\ast$engine) override
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a936218df56c481f3aa12d684cee038f3}{Set\+Active\+Camera}} (Camera $\ast$camera=nullptr)
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a064ce89da5daa483369c3253f04c9d21}{Unload}} (Base\+Engine $\ast$engine)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Camera $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{Active\+Camera}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, Camera $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_aea98ff1ced88ee859878b504e9a2a362}{Cameras}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, \mbox{\hyperlink{classLight}{Light}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}{Lights}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, \mbox{\hyperlink{classEngine_1_1Objects_1_1Object}{Engine\+::\+Objects\+::\+Object}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_ae828757eea5410550f6674421051a783}{Loaded}}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float $\ast$ \mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_a398daba41c0317ccb019d714bec0c795}{angle}}
+\item 
+float $\ast$ \mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_ab5d8bb91e423f50a7c54979853cfcbc9}{color}}
+\item 
+glm\+::mat4 $\ast$ \mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_a2c270015fd60f4aeb281474ddfdcd692}{model\+Matrix}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 7 of file Triangle\+Scene.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classApplication_1_1Scenes_1_1TriangleScene_a36015fc65ca3005d57f23a1e2f34f016}\label{classApplication_1_1Scenes_1_1TriangleScene_a36015fc65ca3005d57f23a1e2f34f016}} 
+\index{Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}!Triangle\+Scene@{Triangle\+Scene}}
+\index{Triangle\+Scene@{Triangle\+Scene}!Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}}
+\subsubsection{\texorpdfstring{Triangle\+Scene()}{TriangleScene()}}
+{\footnotesize\ttfamily Application\+::\+Scenes\+::\+Triangle\+Scene\+::\+Triangle\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 7 of file Triangle\+Scene.\+cpp.
+
+
+
+References angle, color, and model\+Matrix.
+
+
+\begin{DoxyCode}
+8 \{
+9     \mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_a2c270015fd60f4aeb281474ddfdcd692}{modelMatrix}} = \textcolor{keyword}{new} glm::mat4(1.0f);
+10     \mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_a398daba41c0317ccb019d714bec0c795}{angle}} = \textcolor{keyword}{new} float(0.0f);
+11     \mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_ab5d8bb91e423f50a7c54979853cfcbc9}{color}} = \textcolor{keyword}{new} float(0.0f);
+12 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classApplication_1_1Scenes_1_1TriangleScene_a5b1166cd574db6efeea5de8029672437}\label{classApplication_1_1Scenes_1_1TriangleScene_a5b1166cd574db6efeea5de8029672437}} 
+\index{Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}!````~Triangle\+Scene@{$\sim$\+Triangle\+Scene}}
+\index{````~Triangle\+Scene@{$\sim$\+Triangle\+Scene}!Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}}
+\subsubsection{\texorpdfstring{$\sim$\+Triangle\+Scene()}{~TriangleScene()}}
+{\footnotesize\ttfamily Application\+::\+Scenes\+::\+Triangle\+Scene\+::$\sim$\+Triangle\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 14 of file Triangle\+Scene.\+cpp.
+
+
+\begin{DoxyCode}
+15 \{
+16     \textcolor{keyword}{delete} \mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_a2c270015fd60f4aeb281474ddfdcd692}{modelMatrix}};
+17     \textcolor{keyword}{delete} \mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_a398daba41c0317ccb019d714bec0c795}{angle}};
+18     Scene::~Scene();
+19 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_af18bd334fe66952b8d79b8e9e99ab2d8}\label{classEngine_1_1Components_1_1Scene_af18bd334fe66952b8d79b8e9e99ab2d8}} 
+\index{Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}!Begin\+Load@{Begin\+Load}}
+\index{Begin\+Load@{Begin\+Load}!Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}}
+\subsubsection{\texorpdfstring{Begin\+Load()}{BeginLoad()}}
+{\footnotesize\ttfamily void Engine\+::\+Components\+::\+Scene\+::\+Begin\+Load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1BaseEngine}{Base\+Engine}} $\ast$}]{engine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 37 of file Scene.\+cpp.
+
+
+
+Referenced by Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), and Application\+::\+Engines\+::\+Light\+Engine\+::\+Init().
+
+
+\begin{DoxyCode}
+38 \{
+39     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_ae828757eea5410550f6674421051a783}{Loaded}})
+40     \{
+41         \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23c5b23e66646443670a487e7c016e73}{Load}}(engine);
+42         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}} == \textcolor{keyword}{nullptr})
+43             \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a936218df56c481f3aa12d684cee038f3}{SetActiveCamera}}();
+44         \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_ae828757eea5410550f6674421051a783}{Loaded}} = \textcolor{keyword}{true};
+45     \}
+46 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{classEngine_1_1Components_1_1Scene_af18bd334fe66952b8d79b8e9e99ab2d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classApplication_1_1Scenes_1_1TriangleScene_a5622996232a2ad52735251c8398b0c9a}\label{classApplication_1_1Scenes_1_1TriangleScene_a5622996232a2ad52735251c8398b0c9a}} 
+\index{Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}!Frame\+Update@{Frame\+Update}}
+\index{Frame\+Update@{Frame\+Update}!Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}}
+\subsubsection{\texorpdfstring{Frame\+Update()}{FrameUpdate()}}
+{\footnotesize\ttfamily void Application\+::\+Scenes\+::\+Triangle\+Scene\+::\+Frame\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1BaseEngine}{Engine\+::\+Base\+Engine}} $\ast$}]{engine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_abd8fcdcac52dbce6a0a18de3860ab087}{Engine\+::\+Components\+::\+Scene}}.
+
+
+
+Definition at line 53 of file Triangle\+Scene.\+cpp.
+
+
+\begin{DoxyCode}
+54 \{
+55     *\mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_a398daba41c0317ccb019d714bec0c795}{angle}} += 0.1f;
+56     *\mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_ab5d8bb91e423f50a7c54979853cfcbc9}{color}} = *\mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_a398daba41c0317ccb019d714bec0c795}{angle}} - \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{long}\textcolor{keyword}{>}(*angle);
+57 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classApplication_1_1Scenes_1_1TriangleScene_a4bfd44cab6aa0eafe47f379dafe3843e}\label{classApplication_1_1Scenes_1_1TriangleScene_a4bfd44cab6aa0eafe47f379dafe3843e}} 
+\index{Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}!Load@{Load}}
+\index{Load@{Load}!Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily void Application\+::\+Scenes\+::\+Triangle\+Scene\+::\+Load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1BaseEngine}{Engine\+::\+Base\+Engine}} $\ast$}]{engine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23c5b23e66646443670a487e7c016e73}{Engine\+::\+Components\+::\+Scene}}.
+
+
+
+Definition at line 21 of file Triangle\+Scene.\+cpp.
+
+
+
+References Engine\+::\+Base\+Engine\+::\+Programs, and Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+Shaders.
+
+
+\begin{DoxyCode}
+22 \{
+23     \textcolor{keyword}{delete} \mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_a2c270015fd60f4aeb281474ddfdcd692}{modelMatrix}};
+24     \textcolor{keyword}{delete} \mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_a398daba41c0317ccb019d714bec0c795}{angle}};
+25     \mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_a2c270015fd60f4aeb281474ddfdcd692}{modelMatrix}} = \textcolor{keyword}{new} glm::mat4(1.0f);
+26     \mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_a398daba41c0317ccb019d714bec0c795}{angle}} = \textcolor{keyword}{new} float(1.0f);
+27 
+28     \textcolor{comment}{// define mesh}
+29     \textcolor{keywordtype}{float} points[] = \{
+30         0.0f, 0.5f, 0.0f,
+31         0.5f, -0.5f, 0.0f,
+32         -0.5f, -0.5f, 0.0f
+33     \};
+34     \textcolor{keywordtype}{float}* p = points;
+35 
+36     \textcolor{comment}{// define material}
+37     \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Engine::Components::Graphics::Program}}* program = engine->
+      \mbox{\hyperlink{classEngine_1_1BaseEngine_ae0f86360ea3a384caefe443dd8f88601}{Programs}}->Get(\textcolor{stringliteral}{"basic"});
+38     \textcolor{keyword}{auto} material = \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material}{Engine::Components::Graphics::Material}}(
+      program);
+39     material->Values\textcolor{comment}{/*}
+40 \textcolor{comment}{    ->Add(}
+41 \textcolor{comment}{        new Engine::Components::Graphics::MaterialValue<glm::mat4>(}
+42 \textcolor{comment}{        program->Shaders->Get("vertex"), "modelMatrix", modelMatrix)}
+43 \textcolor{comment}{    )*/}
+44     ->Add(
+45         \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine::Components::Graphics::MaterialValue<glm::vec4>}}
+      (
+46             program->\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_aff39fa56fc1fab1bce6c8a5ce29ae161}{Shaders}}->Get(\textcolor{stringliteral}{"fragment"}), \textcolor{stringliteral}{"color"}, \textcolor{keyword}{new} glm::vec4(1.0f, 1.0f, 1.0f, 1.0f))
+47     );
+48 
+49     \textcolor{comment}{// create object}
+50     \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}->\mbox{\hyperlink{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}{Add}}(\textcolor{stringliteral}{"triangle"}, new ::Engine::Objects::Object(material, p, 9));
+51 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_a936218df56c481f3aa12d684cee038f3}\label{classEngine_1_1Components_1_1Scene_a936218df56c481f3aa12d684cee038f3}} 
+\index{Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}!Set\+Active\+Camera@{Set\+Active\+Camera}}
+\index{Set\+Active\+Camera@{Set\+Active\+Camera}!Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}}
+\subsubsection{\texorpdfstring{Set\+Active\+Camera()}{SetActiveCamera()}}
+{\footnotesize\ttfamily void Engine\+::\+Components\+::\+Scene\+::\+Set\+Active\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}} $\ast$}]{camera = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 52 of file Scene.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Camera\+::\+Update().
+
+
+
+Referenced by Engine\+::\+Components\+::\+Camera\+::\+Set\+Active().
+
+
+\begin{DoxyCode}
+53 \{
+54     \textcolor{keywordflow}{if} (camera == \textcolor{keyword}{nullptr})
+55         \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}} = \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_aea98ff1ced88ee859878b504e9a2a362}{Cameras}}->First();
+56     \textcolor{keywordflow}{else}
+57         \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}} = camera;
+58     \textcolor{keywordflow}{if}(\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}} != \textcolor{keyword}{nullptr})
+59         \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a364f5e22921e3d234b31297a64c7d932}{Update}}();
+60 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Scene_a936218df56c481f3aa12d684cee038f3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Scene_a936218df56c481f3aa12d684cee038f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_a064ce89da5daa483369c3253f04c9d21}\label{classEngine_1_1Components_1_1Scene_a064ce89da5daa483369c3253f04c9d21}} 
+\index{Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}!Unload@{Unload}}
+\index{Unload@{Unload}!Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}}
+\subsubsection{\texorpdfstring{Unload()}{Unload()}}
+{\footnotesize\ttfamily void Engine\+::\+Components\+::\+Scene\+::\+Unload (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1BaseEngine}{Base\+Engine}} $\ast$}]{engine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 29 of file Scene.\+cpp.
+
+
+\begin{DoxyCode}
+30 \{
+31     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}& Object : *\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}})
+32         \textcolor{keyword}{delete} Object.second;
+33     \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}->clear();
+34     \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_ae828757eea5410550f6674421051a783}{Loaded}} = \textcolor{keyword}{false};
+35 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}\label{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}} 
+\index{Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}!Active\+Camera@{Active\+Camera}}
+\index{Active\+Camera@{Active\+Camera}!Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}}
+\subsubsection{\texorpdfstring{Active\+Camera}{ActiveCamera}}
+{\footnotesize\ttfamily Camera$\ast$ Engine\+::\+Components\+::\+Scene\+::\+Active\+Camera\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 30 of file Scene.\+h.
+
+
+
+Referenced by Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler\+::\+Handle\+Keys(), Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Keys(), Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse(), Application\+::\+Engines\+::\+Light\+Engine\+::\+Init(), and Engine\+::\+Components\+::\+Scene\+::\+Scene().
+
+\mbox{\Hypertarget{classApplication_1_1Scenes_1_1TriangleScene_a398daba41c0317ccb019d714bec0c795}\label{classApplication_1_1Scenes_1_1TriangleScene_a398daba41c0317ccb019d714bec0c795}} 
+\index{Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}!angle@{angle}}
+\index{angle@{angle}!Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}}
+\subsubsection{\texorpdfstring{angle}{angle}}
+{\footnotesize\ttfamily float$\ast$ Application\+::\+Scenes\+::\+Triangle\+Scene\+::angle\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 16 of file Triangle\+Scene.\+h.
+
+
+
+Referenced by Triangle\+Scene().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_aea98ff1ced88ee859878b504e9a2a362}\label{classEngine_1_1Components_1_1Scene_aea98ff1ced88ee859878b504e9a2a362}} 
+\index{Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}!Cameras@{Cameras}}
+\index{Cameras@{Cameras}!Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}}
+\subsubsection{\texorpdfstring{Cameras}{Cameras}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$std\+::string, Camera$\ast$$>$$\ast$ Engine\+::\+Components\+::\+Scene\+::\+Cameras\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 28 of file Scene.\+h.
+
+
+
+Referenced by Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Light\+Engine\+::\+Init(), and Engine\+::\+Components\+::\+Scene\+::\+Scene().
+
+\mbox{\Hypertarget{classApplication_1_1Scenes_1_1TriangleScene_ab5d8bb91e423f50a7c54979853cfcbc9}\label{classApplication_1_1Scenes_1_1TriangleScene_ab5d8bb91e423f50a7c54979853cfcbc9}} 
+\index{Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}!color@{color}}
+\index{color@{color}!Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}}
+\subsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily float$\ast$ Application\+::\+Scenes\+::\+Triangle\+Scene\+::color\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 17 of file Triangle\+Scene.\+h.
+
+
+
+Referenced by Triangle\+Scene().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}\label{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}} 
+\index{Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}!Lights@{Lights}}
+\index{Lights@{Lights}!Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}}
+\subsubsection{\texorpdfstring{Lights}{Lights}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$std\+::string, \mbox{\hyperlink{classLight}{Light}}$\ast$$>$$\ast$ Engine\+::\+Components\+::\+Scene\+::\+Lights\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 29 of file Scene.\+h.
+
+
+
+Referenced by Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler\+::\+Handle\+Keys(), Application\+::\+Engines\+::\+Light\+Engine\+::\+Init(), and Engine\+::\+Components\+::\+Scene\+::\+Scene().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_ae828757eea5410550f6674421051a783}\label{classEngine_1_1Components_1_1Scene_ae828757eea5410550f6674421051a783}} 
+\index{Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}!Loaded@{Loaded}}
+\index{Loaded@{Loaded}!Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}}
+\subsubsection{\texorpdfstring{Loaded}{Loaded}}
+{\footnotesize\ttfamily bool Engine\+::\+Components\+::\+Scene\+::\+Loaded\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 18 of file Scene.\+h.
+
+
+
+Referenced by Engine\+::\+Components\+::\+Scene\+::\+Scene().
+
+\mbox{\Hypertarget{classApplication_1_1Scenes_1_1TriangleScene_a2c270015fd60f4aeb281474ddfdcd692}\label{classApplication_1_1Scenes_1_1TriangleScene_a2c270015fd60f4aeb281474ddfdcd692}} 
+\index{Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}!model\+Matrix@{model\+Matrix}}
+\index{model\+Matrix@{model\+Matrix}!Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}}
+\subsubsection{\texorpdfstring{model\+Matrix}{modelMatrix}}
+{\footnotesize\ttfamily glm\+::mat4$\ast$ Application\+::\+Scenes\+::\+Triangle\+Scene\+::model\+Matrix\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 15 of file Triangle\+Scene.\+h.
+
+
+
+Referenced by Triangle\+Scene().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}\label{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}} 
+\index{Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}!Objects@{Objects}}
+\index{Objects@{Objects}!Application\+::\+Scenes\+::\+Triangle\+Scene@{Application\+::\+Scenes\+::\+Triangle\+Scene}}
+\subsubsection{\texorpdfstring{Objects}{Objects}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$std\+::string, \mbox{\hyperlink{classEngine_1_1Objects_1_1Object}{Engine\+::\+Objects\+::\+Object}}$\ast$$>$$\ast$ Engine\+::\+Components\+::\+Scene\+::\+Objects\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 27 of file Scene.\+h.
+
+
+
+Referenced by Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Light\+Engine\+::\+Init(), and Engine\+::\+Components\+::\+Scene\+::\+Scene().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{TriangleScene_8h}{Triangle\+Scene.\+h}}\item 
+Z\+P\+G/\mbox{\hyperlink{TriangleScene_8cpp}{Triangle\+Scene.\+cpp}}\end{DoxyCompactItemize}

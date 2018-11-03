@@ -1,0 +1,309 @@
+\hypertarget{classEngine_1_1Components_1_1Graphics_1_1Program}{}\section{Engine\+:\+:Components\+:\+:Graphics\+:\+:Program Class Reference}
+\label{classEngine_1_1Components_1_1Graphics_1_1Program}\index{Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}}
+
+
+{\ttfamily \#include $<$Program.\+h$>$}
+
+
+
+Collaboration diagram for Engine\+:\+:Components\+:\+:Graphics\+:\+:Program\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classEngine_1_1Components_1_1Graphics_1_1Program__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_ad54457a5a04a41fcfdd356a0a42427ba}{Program}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_ac7c50fa362e7d460d652dac07175e750}{$\sim$\+Program}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_a95af201a6fab77be50b5fdefbf3bbe63}{Add\+Shader}} (std\+::string key, \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Shader}} $\ast$shader)
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_ad0db30a829b9492418177179d4ae16e7}{Add\+Shaders}} (\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Shader}} $\ast$$>$ $\ast$shaders)
+\item 
+G\+Luint $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_a2f8a229f633939c001fcfc46f7b7fd0b}{Get}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_aca3b3c45bf67386dc5fb3c25d687593a}{Link}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_aed02e665619dda6c6cf80e03cb1f1543}{Use}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Shader}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_aff39fa56fc1fab1bce6c8a5ce29ae161}{Shaders}}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_a1f4c378d3e4663b0a41bb0c2ad4ace3f}{Check\+Link}} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_abd46071ffae3fccf2730393cecad9646}{\+\_\+linked}}
+\item 
+G\+Luint \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_a23fb9432b8cd14e9cfa27e23f483712d}{\+\_\+program}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 15 of file Program.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Program_ad54457a5a04a41fcfdd356a0a42427ba}\label{classEngine_1_1Components_1_1Graphics_1_1Program_ad54457a5a04a41fcfdd356a0a42427ba}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}!Program@{Program}}
+\index{Program@{Program}!Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}}
+\subsubsection{\texorpdfstring{Program()}{Program()}}
+{\footnotesize\ttfamily Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file Program.\+cpp.
+
+
+
+References \+\_\+linked, \+\_\+program, and Shaders.
+
+
+\begin{DoxyCode}
+9 \{
+10     \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_a23fb9432b8cd14e9cfa27e23f483712d}{\_program}} = glCreateProgram();
+11     \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_abd46071ffae3fccf2730393cecad9646}{\_linked}} = \textcolor{keyword}{false};
+12     \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_aff39fa56fc1fab1bce6c8a5ce29ae161}{Shaders}} = \textcolor{keyword}{new} \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic::Dictionary<std::string,Shader*>}}()
+      ;
+13 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Program_ac7c50fa362e7d460d652dac07175e750}\label{classEngine_1_1Components_1_1Graphics_1_1Program_ac7c50fa362e7d460d652dac07175e750}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}!````~Program@{$\sim$\+Program}}
+\index{````~Program@{$\sim$\+Program}!Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}}
+\subsubsection{\texorpdfstring{$\sim$\+Program()}{~Program()}}
+{\footnotesize\ttfamily Engine\+::\+Components\+::\+Graphics\+::\+Program\+::$\sim$\+Program (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 16 of file Program.\+cpp.
+
+
+\begin{DoxyCode}
+17 \{
+18     \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_aff39fa56fc1fab1bce6c8a5ce29ae161}{Shaders}}->clear();
+19     \textcolor{keyword}{delete} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_aff39fa56fc1fab1bce6c8a5ce29ae161}{Shaders}};
+20 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Program_a95af201a6fab77be50b5fdefbf3bbe63}\label{classEngine_1_1Components_1_1Graphics_1_1Program_a95af201a6fab77be50b5fdefbf3bbe63}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}!Add\+Shader@{Add\+Shader}}
+\index{Add\+Shader@{Add\+Shader}!Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}}
+\subsubsection{\texorpdfstring{Add\+Shader()}{AddShader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Engine\+::\+Components\+::\+Graphics\+::\+Program}} $\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+Add\+Shader (\begin{DoxyParamCaption}\item[{std\+::string}]{key,  }\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Shader}} $\ast$}]{shader }\end{DoxyParamCaption})}
+
+
+
+Definition at line 22 of file Program.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Graphics\+::\+Shader\+::\+Get().
+
+
+\begin{DoxyCode}
+23 \{
+24     \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_aff39fa56fc1fab1bce6c8a5ce29ae161}{Shaders}}->Add(key, shader);
+25     glAttachShader(\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_a23fb9432b8cd14e9cfa27e23f483712d}{\_program}}, *shader->Get());
+26     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+27 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{classEngine_1_1Components_1_1Graphics_1_1Program_a95af201a6fab77be50b5fdefbf3bbe63_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Program_ad0db30a829b9492418177179d4ae16e7}\label{classEngine_1_1Components_1_1Graphics_1_1Program_ad0db30a829b9492418177179d4ae16e7}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}!Add\+Shaders@{Add\+Shaders}}
+\index{Add\+Shaders@{Add\+Shaders}!Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}}
+\subsubsection{\texorpdfstring{Add\+Shaders()}{AddShaders()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Engine\+::\+Components\+::\+Graphics\+::\+Program}} $\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+Add\+Shaders (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Shader}} $\ast$$>$ $\ast$}]{shaders }\end{DoxyParamCaption})}
+
+
+
+Definition at line 29 of file Program.\+cpp.
+
+
+\begin{DoxyCode}
+30 \{
+31     \textcolor{comment}{/*for (Shader* shader : *shaders)}
+32 \textcolor{comment}{        AddShader(shader);*/}
+33     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = shaders->begin(); it != shaders->end(); ++it)
+34         \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_a95af201a6fab77be50b5fdefbf3bbe63}{AddShader}}(it->first, it->second);
+35     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+36 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Program_a1f4c378d3e4663b0a41bb0c2ad4ace3f}\label{classEngine_1_1Components_1_1Graphics_1_1Program_a1f4c378d3e4663b0a41bb0c2ad4ace3f}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}!Check\+Link@{Check\+Link}}
+\index{Check\+Link@{Check\+Link}!Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}}
+\subsubsection{\texorpdfstring{Check\+Link()}{CheckLink()}}
+{\footnotesize\ttfamily bool Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+Check\+Link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 58 of file Program.\+cpp.
+
+
+\begin{DoxyCode}
+59 \{
+60     GLint status;
+61     glGetProgramiv(\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_a23fb9432b8cd14e9cfa27e23f483712d}{\_program}}, GL\_LINK\_STATUS, &status);
+62     \textcolor{keywordflow}{if} (status == GL\_FALSE)
+63     \{
+64         GLint infoLogLength;
+65         glGetProgramiv(\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_a23fb9432b8cd14e9cfa27e23f483712d}{\_program}}, GL\_INFO\_LOG\_LENGTH, &infoLogLength);
+66         GLchar *strInfoLog = \textcolor{keyword}{new} GLchar[infoLogLength + 1];
+67         glGetProgramInfoLog(\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_a23fb9432b8cd14e9cfa27e23f483712d}{\_program}}, infoLogLength, NULL, strInfoLog);
+68         fprintf(stderr, \textcolor{stringliteral}{"Linker failure: %s\(\backslash\)n"}, strInfoLog);
+69         \textcolor{keyword}{delete}[] strInfoLog;
+70         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+71     \}
+72     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+73 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Program_a2f8a229f633939c001fcfc46f7b7fd0b}\label{classEngine_1_1Components_1_1Graphics_1_1Program_a2f8a229f633939c001fcfc46f7b7fd0b}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}!Get@{Get}}
+\index{Get@{Get}!Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}}
+\subsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily G\+Luint $\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+Get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 51 of file Program.\+cpp.
+
+
+
+Referenced by Engine\+::\+Components\+::\+Graphics\+::\+Shader\+::\+Send\+Uniform().
+
+
+\begin{DoxyCode}
+52 \{
+53     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_abd46071ffae3fccf2730393cecad9646}{\_linked}})
+54         \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_aca3b3c45bf67386dc5fb3c25d687593a}{Link}}();
+55     \textcolor{keywordflow}{return} &\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_a23fb9432b8cd14e9cfa27e23f483712d}{\_program}};
+56 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Graphics_1_1Program_a2f8a229f633939c001fcfc46f7b7fd0b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Program_aca3b3c45bf67386dc5fb3c25d687593a}\label{classEngine_1_1Components_1_1Graphics_1_1Program_aca3b3c45bf67386dc5fb3c25d687593a}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}!Link@{Link}}
+\index{Link@{Link}!Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}}
+\subsubsection{\texorpdfstring{Link()}{Link()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Engine\+::\+Components\+::\+Graphics\+::\+Program}} $\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+Link (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 38 of file Program.\+cpp.
+
+
+\begin{DoxyCode}
+39 \{
+40     glLinkProgram(\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_a23fb9432b8cd14e9cfa27e23f483712d}{\_program}});
+41     \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_abd46071ffae3fccf2730393cecad9646}{\_linked}} = \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_a1f4c378d3e4663b0a41bb0c2ad4ace3f}{CheckLink}}();
+42     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+43 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Program_aed02e665619dda6c6cf80e03cb1f1543}\label{classEngine_1_1Components_1_1Graphics_1_1Program_aed02e665619dda6c6cf80e03cb1f1543}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}!Use@{Use}}
+\index{Use@{Use}!Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}}
+\subsubsection{\texorpdfstring{Use()}{Use()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Engine\+::\+Components\+::\+Graphics\+::\+Program}} $\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+Use (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 45 of file Program.\+cpp.
+
+
+
+Referenced by Engine\+::\+Components\+::\+Graphics\+::\+Material\+::\+Use().
+
+
+\begin{DoxyCode}
+46 \{
+47     glUseProgram(*\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program_a2f8a229f633939c001fcfc46f7b7fd0b}{Get}}());
+48     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+49 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Graphics_1_1Program_aed02e665619dda6c6cf80e03cb1f1543_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Program_abd46071ffae3fccf2730393cecad9646}\label{classEngine_1_1Components_1_1Graphics_1_1Program_abd46071ffae3fccf2730393cecad9646}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}!\+\_\+linked@{\+\_\+linked}}
+\index{\+\_\+linked@{\+\_\+linked}!Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}}
+\subsubsection{\texorpdfstring{\+\_\+linked}{\_linked}}
+{\footnotesize\ttfamily bool Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+\_\+linked\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 28 of file Program.\+h.
+
+
+
+Referenced by Program().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Program_a23fb9432b8cd14e9cfa27e23f483712d}\label{classEngine_1_1Components_1_1Graphics_1_1Program_a23fb9432b8cd14e9cfa27e23f483712d}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}!\+\_\+program@{\+\_\+program}}
+\index{\+\_\+program@{\+\_\+program}!Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}}
+\subsubsection{\texorpdfstring{\+\_\+program}{\_program}}
+{\footnotesize\ttfamily G\+Luint Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+\_\+program\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 27 of file Program.\+h.
+
+
+
+Referenced by Program().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Program_aff39fa56fc1fab1bce6c8a5ce29ae161}\label{classEngine_1_1Components_1_1Graphics_1_1Program_aff39fa56fc1fab1bce6c8a5ce29ae161}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}!Shaders@{Shaders}}
+\index{Shaders@{Shaders}!Engine\+::\+Components\+::\+Graphics\+::\+Program@{Engine\+::\+Components\+::\+Graphics\+::\+Program}}
+\subsubsection{\texorpdfstring{Shaders}{Shaders}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$std\+::string, \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Shader}}$\ast$$>$$\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+Shaders}
+
+
+
+Definition at line 25 of file Program.\+h.
+
+
+
+Referenced by Light\+::\+Light(), Application\+::\+Scenes\+::\+Triangle\+Scene\+::\+Load(), Application\+::\+Scenes\+::\+Sphere\+Scene\+::\+Load(), Engine\+::\+Objects\+::\+Object\+::\+Object(), Program(), and Light\+::\+Use().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{Program_8h}{Program.\+h}}\item 
+Z\+P\+G/\mbox{\hyperlink{Program_8cpp}{Program.\+cpp}}\end{DoxyCompactItemize}

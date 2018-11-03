@@ -1,0 +1,206 @@
+.TH "Engine::Components::Scene" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Engine::Components::Scene
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Scene\&.h>\fP
+.PP
+Inherited by \fBApplication::Scenes::CameraScene\fP, \fBApplication::Scenes::SphereScene\fP, and \fBApplication::Scenes::TriangleScene\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBScene\fP ()"
+.br
+.ti -1c
+.RI "\fB~Scene\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBBeginLoad\fP (\fBBaseEngine\fP *engine)"
+.br
+.ti -1c
+.RI "virtual void \fBFrameUpdate\fP (\fBBaseEngine\fP *engine)"
+.br
+.ti -1c
+.RI "virtual void \fBLoad\fP (\fBBaseEngine\fP *engine)"
+.br
+.ti -1c
+.RI "virtual void \fBSetActiveCamera\fP (\fBCamera\fP *camera=nullptr)"
+.br
+.ti -1c
+.RI "virtual void \fBUnload\fP (\fBBaseEngine\fP *engine)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBCamera\fP * \fBActiveCamera\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< std::string, \fBCamera\fP * > * \fBCameras\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< std::string, \fBLight\fP * > * \fBLights\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< std::string, \fBEngine::Objects::Object\fP * > * \fBObjects\fP"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBLoaded\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 15 of file Scene\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Engine::Components::Scene::Scene ()"
+
+.PP
+Definition at line 5 of file Scene\&.cpp\&.
+.PP
+References ActiveCamera, Cameras, Lights, Loaded, and Objects\&.
+.PP
+.nf
+6 {
+7     Objects = new Generic::Dictionary<std::string, Engine::Objects::Object*>();
+8     Cameras = new Generic::Dictionary<std::string, Camera*>();
+9     Lights = new Generic::Dictionary<std::string, Light*>();
+10     Loaded = false;
+11     ActiveCamera = nullptr;
+12 }
+.fi
+.SS "Engine::Components::Scene::~Scene ()"
+
+.PP
+Definition at line 15 of file Scene\&.cpp\&.
+.PP
+.nf
+16 {
+17     Objects->clear();
+18     delete Objects;
+19     Cameras->clear();
+20     delete Cameras;
+21     Lights->clear();
+22     delete Lights;
+23 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void Engine::Components::Scene::BeginLoad (\fBBaseEngine\fP * engine)\fC [virtual]\fP"
+
+.PP
+Definition at line 37 of file Scene\&.cpp\&.
+.PP
+Referenced by Application::Engines::CameraEngine::Init(), and Application::Engines::LightEngine::Init()\&.
+.PP
+.nf
+38 {
+39     if (!Loaded)
+40     {
+41         Load(engine);
+42         if (ActiveCamera == nullptr)
+43             SetActiveCamera();
+44         Loaded = true;
+45     }
+46 }
+.fi
+.SS "void Engine::Components::Scene::FrameUpdate (\fBBaseEngine\fP * engine)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBApplication::Scenes::SphereScene\fP, \fBApplication::Scenes::CameraScene\fP, and \fBApplication::Scenes::TriangleScene\fP\&.
+.PP
+Definition at line 48 of file Scene\&.cpp\&.
+.PP
+.nf
+49 {
+50 }
+.fi
+.SS "void Engine::Components::Scene::Load (\fBBaseEngine\fP * engine)\fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBApplication::Scenes::SphereScene\fP, \fBApplication::Scenes::CameraScene\fP, and \fBApplication::Scenes::TriangleScene\fP\&.
+.PP
+Definition at line 25 of file Scene\&.cpp\&.
+.PP
+.nf
+26 {
+27 }
+.fi
+.SS "void Engine::Components::Scene::SetActiveCamera (\fBCamera\fP * camera = \fCnullptr\fP)\fC [virtual]\fP"
+
+.PP
+Definition at line 52 of file Scene\&.cpp\&.
+.PP
+References Engine::Components::Camera::Update()\&.
+.PP
+Referenced by Engine::Components::Camera::SetActive()\&.
+.PP
+.nf
+53 {
+54     if (camera == nullptr)
+55         ActiveCamera = Cameras->First();
+56     else
+57         ActiveCamera = camera;
+58     if(ActiveCamera != nullptr)
+59         ActiveCamera->Update();
+60 }
+.fi
+.SS "void Engine::Components::Scene::Unload (\fBBaseEngine\fP * engine)\fC [virtual]\fP"
+
+.PP
+Definition at line 29 of file Scene\&.cpp\&.
+.PP
+.nf
+30 {
+31     for (auto& Object : *Objects)
+32         delete Object\&.second;
+33     Objects->clear();
+34     Loaded = false;
+35 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBCamera\fP* Engine::Components::Scene::ActiveCamera"
+
+.PP
+Definition at line 30 of file Scene\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::LightingChangeInputHandler::HandleKeys(), Application::Input::Handlers::CameraInputHandler::HandleKeys(), Application::Input::Handlers::CameraInputHandler::HandleMouse(), Application::Engines::LightEngine::Init(), and Scene()\&.
+.SS "\fBGeneric::Dictionary\fP<std::string, \fBCamera\fP*>* Engine::Components::Scene::Cameras"
+
+.PP
+Definition at line 28 of file Scene\&.h\&.
+.PP
+Referenced by Application::Engines::CameraEngine::Init(), Application::Engines::LightEngine::Init(), and Scene()\&.
+.SS "\fBGeneric::Dictionary\fP<std::string, \fBLight\fP*>* Engine::Components::Scene::Lights"
+
+.PP
+Definition at line 29 of file Scene\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::LightingChangeInputHandler::HandleKeys(), Application::Engines::LightEngine::Init(), and Scene()\&.
+.SS "bool Engine::Components::Scene::Loaded\fC [protected]\fP"
+
+.PP
+Definition at line 18 of file Scene\&.h\&.
+.PP
+Referenced by Scene()\&.
+.SS "\fBGeneric::Dictionary\fP<std::string, \fBEngine::Objects::Object\fP*>* Engine::Components::Scene::Objects"
+
+.PP
+Definition at line 27 of file Scene\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::CameraInputHandler::HandleMouse(), Application::Engines::CameraEngine::Init(), Application::Engines::LightEngine::Init(), and Scene()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

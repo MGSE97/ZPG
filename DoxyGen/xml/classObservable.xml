@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classObservable" kind="class" language="C++" prot="public">
+    <compoundname>Observable</compoundname>
+    <includes refid="Observable_8h" local="no">Observable.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classObservable_1ae6028589035c86e8a9c4375306dca702" prot="private" static="no" mutable="no">
+        <type><ref refid="classGeneric_1_1Collection" kindref="compound">Generic::Collection</ref>&lt; <ref refid="classObserver" kindref="compound">Observer</ref>&lt; T &gt; * &gt; *</type>
+        <definition>Generic::Collection&lt;Observer&lt;T&gt;*&gt;* Observable&lt; T &gt;::_observers</definition>
+        <argsstring></argsstring>
+        <name>_observers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Observable.h" line="33" column="1" bodyfile="ZPG/Observable.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="classObservable_1aedd54eccbfad67066226ee0b958347ba" compoundref="Observable_8h" startline="19" endline="22">Observable&lt; Camera &gt;::Bind</referencedby>
+        <referencedby refid="classObservable_1afaa016d6c6b8a6fad20bb388d35ca014" compoundref="Observable_8h" startline="27" endline="31">Observable&lt; Camera &gt;::Notify</referencedby>
+        <referencedby refid="classObservable_1a6cec7a5329100b5d45b078ff4bcd5f88" compoundref="Observable_8h" startline="10" endline="13">Observable&lt; Camera &gt;::Observable</referencedby>
+        <referencedby refid="classObservable_1a141ac9aaacb2bf98b41349413c3487c0" compoundref="Observable_8h" startline="23" endline="26">Observable&lt; Camera &gt;::UnBind</referencedby>
+        <referencedby refid="classObservable_1a6d06df1c0feb2ce5a30c6fb7119c4045" compoundref="Observable_8h" startline="14" endline="18">Observable&lt; Camera &gt;::~Observable</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classObservable_1a6cec7a5329100b5d45b078ff4bcd5f88" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Observable&lt; T &gt;::Observable</definition>
+        <argsstring>()</argsstring>
+        <name>Observable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Observable.h" line="10" column="1" bodyfile="ZPG/Observable.h" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classObservable_1a6d06df1c0feb2ce5a30c6fb7119c4045" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Observable&lt; T &gt;::~Observable</definition>
+        <argsstring>()</argsstring>
+        <name>~Observable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Observable.h" line="14" column="1" bodyfile="ZPG/Observable.h" bodystart="14" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classObservable_1aedd54eccbfad67066226ee0b958347ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Observable&lt; T &gt;::Bind</definition>
+        <argsstring>(Observer&lt; T &gt; &amp;observer)</argsstring>
+        <name>Bind</name>
+        <param>
+          <type><ref refid="classObserver" kindref="compound">Observer</ref>&lt; T &gt; &amp;</type>
+          <declname>observer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Observable.h" line="19" column="1" bodyfile="ZPG/Observable.h" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classObservable_1afaa016d6c6b8a6fad20bb388d35ca014" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Observable&lt; T &gt;::Notify</definition>
+        <argsstring>()</argsstring>
+        <name>Notify</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Observable.h" line="27" column="1" bodyfile="ZPG/Observable.h" bodystart="27" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classObservable_1a141ac9aaacb2bf98b41349413c3487c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Observable&lt; T &gt;::UnBind</definition>
+        <argsstring>(Observer&lt; T &gt; &amp;observer)</argsstring>
+        <name>UnBind</name>
+        <param>
+          <type><ref refid="classObserver" kindref="compound">Observer</ref>&lt; T &gt; &amp;</type>
+          <declname>observer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Observable.h" line="23" column="1" bodyfile="ZPG/Observable.h" bodystart="23" bodyend="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="593">
+        <label>Engine::Components::Camera</label>
+        <link refid="classEngine_1_1Components_1_1Camera"/>
+        <childnode refid="592" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="592">
+        <label>Observable&lt; Camera &gt;</label>
+        <link refid="classObservable"/>
+        <childnode refid="591" relation="template-instance">
+          <edgelabel>&lt; Camera &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="591">
+        <label>Observable&lt; T &gt;</label>
+        <link refid="classObservable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="596">
+        <label>std::list&lt; Observer&lt; T &gt; * &gt;</label>
+      </node>
+      <node id="595">
+        <label>Generic::Collection&lt; Observer&lt; T &gt; *&gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="596" relation="public-inheritance">
+        </childnode>
+        <childnode refid="597" relation="template-instance">
+          <edgelabel>&lt; Observer&lt; T &gt; *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="598">
+        <label>std::list&lt; T &gt;</label>
+      </node>
+      <node id="597">
+        <label>Generic::Collection&lt; T &gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="598" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="594">
+        <label>Observable&lt; T &gt;</label>
+        <link refid="classObservable"/>
+        <childnode refid="595" relation="usage">
+          <edgelabel>-_observers</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/Observable.h" line="8" column="1" bodyfile="ZPG/Observable.h" bodystart="7" bodyend="34"/>
+    <listofallmembers>
+      <member refid="classObservable_1ae6028589035c86e8a9c4375306dca702" prot="private" virt="non-virtual"><scope>Observable</scope><name>_observers</name></member>
+      <member refid="classObservable_1aedd54eccbfad67066226ee0b958347ba" prot="public" virt="non-virtual"><scope>Observable</scope><name>Bind</name></member>
+      <member refid="classObservable_1afaa016d6c6b8a6fad20bb388d35ca014" prot="public" virt="non-virtual"><scope>Observable</scope><name>Notify</name></member>
+      <member refid="classObservable_1a6cec7a5329100b5d45b078ff4bcd5f88" prot="public" virt="non-virtual"><scope>Observable</scope><name>Observable</name></member>
+      <member refid="classObservable_1a141ac9aaacb2bf98b41349413c3487c0" prot="public" virt="non-virtual"><scope>Observable</scope><name>UnBind</name></member>
+      <member refid="classObservable_1a6d06df1c0feb2ce5a30c6fb7119c4045" prot="public" virt="virtual"><scope>Observable</scope><name>~Observable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

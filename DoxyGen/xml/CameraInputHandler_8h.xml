@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="CameraInputHandler_8h" kind="file" language="C++">
+    <compoundname>CameraInputHandler.h</compoundname>
+    <includes refid="IInputHandler_8h" local="yes">IInputHandler.h</includes>
+    <includes local="no">glm/gtc/quaternion.hpp</includes>
+    <includedby refid="CameraInputHandler_8cpp" local="yes">ZPG/CameraInputHandler.cpp</includedby>
+    <includedby refid="LigtEngine_8cpp" local="yes">ZPG/LigtEngine.cpp</includedby>
+    <incdepgraph>
+      <node id="577">
+        <label>list</label>
+      </node>
+      <node id="580">
+        <label>VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="581" relation="include">
+        </childnode>
+        <childnode refid="583" relation="include">
+        </childnode>
+        <childnode refid="569" relation="include">
+        </childnode>
+        <childnode refid="585" relation="include">
+        </childnode>
+      </node>
+      <node id="586">
+        <label>MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="576" relation="include">
+        </childnode>
+        <childnode refid="571" relation="include">
+        </childnode>
+        <childnode refid="575" relation="include">
+        </childnode>
+        <childnode refid="587" relation="include">
+        </childnode>
+      </node>
+      <node id="583">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="581" relation="include">
+        </childnode>
+        <childnode refid="584" relation="include">
+        </childnode>
+      </node>
+      <node id="571">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="572" relation="include">
+        </childnode>
+        <childnode refid="573" relation="include">
+        </childnode>
+        <childnode refid="574" relation="include">
+        </childnode>
+        <childnode refid="575" relation="include">
+        </childnode>
+        <childnode refid="576" relation="include">
+        </childnode>
+      </node>
+      <node id="581">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="582" relation="include">
+        </childnode>
+      </node>
+      <node id="576">
+        <label>string</label>
+      </node>
+      <node id="567">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="566">
+        <label>Window.h</label>
+        <link refid="Window_8h"/>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="568" relation="include">
+        </childnode>
+        <childnode refid="569" relation="include">
+        </childnode>
+        <childnode refid="580" relation="include">
+        </childnode>
+        <childnode refid="573" relation="include">
+        </childnode>
+      </node>
+      <node id="579">
+        <label>map</label>
+      </node>
+      <node id="595">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="591" relation="include">
+        </childnode>
+        <childnode refid="589" relation="include">
+        </childnode>
+        <childnode refid="596" relation="include">
+        </childnode>
+      </node>
+      <node id="568">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="587">
+        <label>MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="571" relation="include">
+        </childnode>
+      </node>
+      <node id="597">
+        <label>glm/gtc/quaternion.hpp</label>
+      </node>
+      <node id="565">
+        <label>IInputHandler.h</label>
+        <link refid="IInputHandler_8h"/>
+        <childnode refid="566" relation="include">
+        </childnode>
+        <childnode refid="588" relation="include">
+        </childnode>
+      </node>
+      <node id="589">
+        <label>Object.h</label>
+        <link refid="Object_8h"/>
+        <childnode refid="580" relation="include">
+        </childnode>
+      </node>
+      <node id="596">
+        <label>glm/common.hpp</label>
+      </node>
+      <node id="575">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="593">
+        <label>Observable.h</label>
+        <link refid="Observable_8h"/>
+        <childnode refid="570" relation="include">
+        </childnode>
+        <childnode refid="594" relation="include">
+        </childnode>
+        <childnode refid="582" relation="include">
+        </childnode>
+      </node>
+      <node id="591">
+        <label>glm/vec3.hpp</label>
+      </node>
+      <node id="572">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="588">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+        <childnode refid="578" relation="include">
+        </childnode>
+        <childnode refid="589" relation="include">
+        </childnode>
+        <childnode refid="590" relation="include">
+        </childnode>
+        <childnode refid="595" relation="include">
+        </childnode>
+      </node>
+      <node id="582">
+        <label>vector</label>
+      </node>
+      <node id="570">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="571" relation="include">
+        </childnode>
+        <childnode refid="577" relation="include">
+        </childnode>
+      </node>
+      <node id="585">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="578" relation="include">
+        </childnode>
+        <childnode refid="576" relation="include">
+        </childnode>
+        <childnode refid="586" relation="include">
+        </childnode>
+        <childnode refid="569" relation="include">
+        </childnode>
+        <childnode refid="571" relation="include">
+        </childnode>
+      </node>
+      <node id="584">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="594">
+        <label>Observer.h</label>
+        <link refid="Observer_8h"/>
+      </node>
+      <node id="573">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="569">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="567" relation="include">
+        </childnode>
+        <childnode refid="570" relation="include">
+        </childnode>
+        <childnode refid="578" relation="include">
+        </childnode>
+        <childnode refid="576" relation="include">
+        </childnode>
+      </node>
+      <node id="578">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="579" relation="include">
+        </childnode>
+      </node>
+      <node id="574">
+        <label>xstring</label>
+      </node>
+      <node id="592">
+        <label>glm/mat4x4.hpp</label>
+      </node>
+      <node id="564">
+        <label>ZPG/CameraInputHandler.h</label>
+        <link refid="CameraInputHandler_8h"/>
+        <childnode refid="565" relation="include">
+        </childnode>
+        <childnode refid="597" relation="include">
+        </childnode>
+      </node>
+      <node id="590">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="591" relation="include">
+        </childnode>
+        <childnode refid="592" relation="include">
+        </childnode>
+        <childnode refid="593" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="600">
+        <label>ZPG/LigtEngine.cpp</label>
+        <link refid="LigtEngine_8cpp"/>
+      </node>
+      <node id="598">
+        <label>ZPG/CameraInputHandler.h</label>
+        <link refid="CameraInputHandler_8h"/>
+        <childnode refid="599" relation="include">
+        </childnode>
+        <childnode refid="600" relation="include">
+        </childnode>
+      </node>
+      <node id="599">
+        <label>ZPG/CameraInputHandler.cpp</label>
+        <link refid="CameraInputHandler_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler" prot="public">Application::Input::Handlers::CameraInputHandler</innerclass>
+    <innernamespace refid="namespaceApplication">Application</innernamespace>
+    <innernamespace refid="namespaceApplication_1_1Input">Application::Input</innernamespace>
+    <innernamespace refid="namespaceApplication_1_1Input_1_1Handlers">Application::Input::Handlers</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="IInputHandler_8h" kindref="compound">IInputHandler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/gtc/quaternion.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceApplication" kindref="compound">Application</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7" refid="namespaceApplication_1_1Input" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Input</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="9" refid="namespaceApplication_1_1Input_1_1Handlers" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Handlers</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11" refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler" kindref="compound">CameraInputHandler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1IInputHandler" kindref="compound">Engine::Components::IInputHandler</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14" refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1ae8e329dd433afb42e5f53b5937a927fb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::vec2<sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1ae8e329dd433afb42e5f53b5937a927fb" kindref="member">_lastMousePosition</ref>;</highlight></codeline>
+<codeline lineno="15" refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a0157ef737743b53e5db833012cd27372" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a0157ef737743b53e5db833012cd27372" kindref="member">_pitch</ref>;</highlight></codeline>
+<codeline lineno="16" refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a2fa09dcae6ed67d452d374a9fb629349" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a2fa09dcae6ed67d452d374a9fb629349" kindref="member">_yaw</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a1863bafdf1002ddebe45795112c4c324" kindref="member">CameraInputHandler</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a08ccb4be5e9da5e461b3b1905a8da90d" kindref="member">~CameraInputHandler</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a149884ea2dc9deea39d3dcd10dfa74b1" kindref="member">HandleKeys</ref>(<ref refid="classEngine_1_1BaseEngine" kindref="compound">Engine::BaseEngine</ref>*<sp/>engine,<sp/><ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Engine::Components::Window</ref>*<sp/>window,<sp/><ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Engine::Components::Scene</ref>*<sp/>scene,<sp/><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary&lt;short,bool&gt;</ref>&amp;<sp/>keys,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keysActive)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1ab06fa94ce5265dc06abb645ea29850bd" kindref="member">HandleMouse</ref>(<ref refid="classEngine_1_1BaseEngine" kindref="compound">Engine::BaseEngine</ref>*<sp/>engine,<sp/><ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Engine::Components::Window</ref>*<sp/>window,<sp/><ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Engine::Components::Scene</ref>*<sp/>scene,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary&lt;short, bool&gt;</ref>&amp;<sp/>keys,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keysActive)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ZPG/CameraInputHandler.h"/>
+  </compounddef>
+</doxygen>

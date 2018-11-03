@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespaceEngine_1_1Objects" kind="namespace" language="C++">
+    <compoundname>Engine::Objects</compoundname>
+    <innerclass refid="classEngine_1_1Objects_1_1Object" prot="public">Engine::Objects::Object</innerclass>
+    <innerclass refid="classEngine_1_1Objects_1_1Sphere" prot="public">Engine::Objects::Sphere</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ZPG/Object.h" line="7" column="1"/>
+  </compounddef>
+</doxygen>

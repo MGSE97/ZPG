@@ -1,0 +1,570 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="Shader_8h" kind="file" language="C++">
+    <compoundname>Shader.h</compoundname>
+    <includes local="no">GL/glew.h</includes>
+    <includes local="no">glm/vec4.hpp</includes>
+    <includes local="no">glm/mat4x2.hpp</includes>
+    <includes local="no">xstring</includes>
+    <includes refid="MaterialValueType_8h" local="yes">MaterialValueType.h</includes>
+    <includes local="no">string</includes>
+    <includedby refid="Collection_8h" local="yes">ZPG/Collection.h</includedby>
+    <includedby refid="MaterialValue_8h" local="yes">ZPG/MaterialValue.h</includedby>
+    <includedby refid="MaterialValueBase_8h" local="yes">ZPG/MaterialValueBase.h</includedby>
+    <includedby refid="Material_8h" local="yes">ZPG/Material.h</includedby>
+    <includedby refid="MaterialBindedValue_8h" local="yes">ZPG/MaterialBindedValue.h</includedby>
+    <includedby refid="MaterialValueBase_8cpp" local="yes">ZPG/MaterialValueBase.cpp</includedby>
+    <includedby refid="Program_8cpp" local="yes">ZPG/Program.cpp</includedby>
+    <includedby refid="ProgramData_8h" local="yes">ZPG/ProgramData.h</includedby>
+    <includedby refid="ProgramDataKey_8h" local="yes">ZPG/ProgramDataKey.h</includedby>
+    <includedby refid="Shader_8cpp" local="yes">ZPG/Shader.cpp</includedby>
+    <incdepgraph>
+      <node id="1958">
+        <label>ZPG/Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="1959" relation="include">
+        </childnode>
+        <childnode refid="1960" relation="include">
+        </childnode>
+        <childnode refid="1961" relation="include">
+        </childnode>
+        <childnode refid="1962" relation="include">
+        </childnode>
+        <childnode refid="1963" relation="include">
+        </childnode>
+        <childnode refid="1964" relation="include">
+        </childnode>
+      </node>
+      <node id="1964">
+        <label>string</label>
+      </node>
+      <node id="1959">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="1963">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="1960">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="1961">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="1962">
+        <label>xstring</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2022">
+        <label>ZPG/MaterialValue.cpp</label>
+        <link refid="MaterialValue_8cpp"/>
+      </node>
+      <node id="1995">
+        <label>ZPG/VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="1988" relation="include">
+        </childnode>
+        <childnode refid="1996" relation="include">
+        </childnode>
+        <childnode refid="2006" relation="include">
+        </childnode>
+        <childnode refid="2009" relation="include">
+        </childnode>
+      </node>
+      <node id="1979">
+        <label>ZPG/LigtEngine.h</label>
+        <link refid="LigtEngine_8h"/>
+        <childnode refid="1978" relation="include">
+        </childnode>
+        <childnode refid="1971" relation="include">
+        </childnode>
+        <childnode refid="1980" relation="include">
+        </childnode>
+        <childnode refid="1981" relation="include">
+        </childnode>
+      </node>
+      <node id="2021">
+        <label>ZPG/MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="2010" relation="include">
+        </childnode>
+        <childnode refid="2022" relation="include">
+        </childnode>
+        <childnode refid="2013" relation="include">
+        </childnode>
+      </node>
+      <node id="1965">
+        <label>ZPG/Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="1966" relation="include">
+        </childnode>
+        <childnode refid="2021" relation="include">
+        </childnode>
+        <childnode refid="2023" relation="include">
+        </childnode>
+        <childnode refid="2010" relation="include">
+        </childnode>
+        <childnode refid="2017" relation="include">
+        </childnode>
+        <childnode refid="2012" relation="include">
+        </childnode>
+        <childnode refid="2013" relation="include">
+        </childnode>
+        <childnode refid="2024" relation="include">
+        </childnode>
+        <childnode refid="2025" relation="include">
+        </childnode>
+        <childnode refid="2014" relation="include">
+        </childnode>
+      </node>
+      <node id="1970">
+        <label>ZPG/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2024">
+        <label>ZPG/ProgramData.h</label>
+        <link refid="ProgramData_8h"/>
+      </node>
+      <node id="1999">
+        <label>ZPG/SphereScene.h</label>
+        <link refid="SphereScene_8h"/>
+        <childnode refid="1975" relation="include">
+        </childnode>
+        <childnode refid="1977" relation="include">
+        </childnode>
+        <childnode refid="1981" relation="include">
+        </childnode>
+        <childnode refid="1982" relation="include">
+        </childnode>
+        <childnode refid="1984" relation="include">
+        </childnode>
+      </node>
+      <node id="1977">
+        <label>ZPG/CameraEngine.cpp</label>
+        <link refid="CameraEngine_8cpp"/>
+      </node>
+      <node id="2000">
+        <label>ZPG/Camera.cpp</label>
+        <link refid="Camera_8cpp"/>
+      </node>
+      <node id="2011">
+        <label>ZPG/Material.cpp</label>
+        <link refid="Material_8cpp"/>
+      </node>
+      <node id="1988">
+        <label>ZPG/Window.h</label>
+        <link refid="Window_8h"/>
+        <childnode refid="1968" relation="include">
+        </childnode>
+        <childnode refid="1989" relation="include">
+        </childnode>
+        <childnode refid="1994" relation="include">
+        </childnode>
+      </node>
+      <node id="2013">
+        <label>ZPG/Program.cpp</label>
+        <link refid="Program_8cpp"/>
+      </node>
+      <node id="2004">
+        <label>ZPG/Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="1997" relation="include">
+        </childnode>
+        <childnode refid="2005" relation="include">
+        </childnode>
+        <childnode refid="2003" relation="include">
+        </childnode>
+      </node>
+      <node id="2001">
+        <label>ZPG/CameraScene.h</label>
+        <link refid="CameraScene_8h"/>
+        <childnode refid="2002" relation="include">
+        </childnode>
+      </node>
+      <node id="1986">
+        <label>ZPG/ZPGEngine.h</label>
+        <link refid="ZPGEngine_8h"/>
+        <childnode refid="1987" relation="include">
+        </childnode>
+      </node>
+      <node id="2023">
+        <label>ZPG/MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="2021" relation="include">
+        </childnode>
+        <childnode refid="2012" relation="include">
+        </childnode>
+      </node>
+      <node id="1968">
+        <label>ZPG/BaseEngine.h</label>
+        <link refid="BaseEngine_8h"/>
+        <childnode refid="1969" relation="include">
+        </childnode>
+        <childnode refid="1973" relation="include">
+        </childnode>
+        <childnode refid="1974" relation="include">
+        </childnode>
+        <childnode refid="1976" relation="include">
+        </childnode>
+        <childnode refid="1978" relation="include">
+        </childnode>
+        <childnode refid="1979" relation="include">
+        </childnode>
+        <childnode refid="1982" relation="include">
+        </childnode>
+        <childnode refid="1983" relation="include">
+        </childnode>
+        <childnode refid="1985" relation="include">
+        </childnode>
+        <childnode refid="1986" relation="include">
+        </childnode>
+      </node>
+      <node id="1989">
+        <label>ZPG/IInputHandler.h</label>
+        <link refid="IInputHandler_8h"/>
+        <childnode refid="1968" relation="include">
+        </childnode>
+        <childnode refid="1973" relation="include">
+        </childnode>
+        <childnode refid="1990" relation="include">
+        </childnode>
+        <childnode refid="1993" relation="include">
+        </childnode>
+      </node>
+      <node id="1996">
+        <label>ZPG/Object.h</label>
+        <link refid="Object_8h"/>
+        <childnode refid="1997" relation="include">
+        </childnode>
+        <childnode refid="2004" relation="include">
+        </childnode>
+        <childnode refid="2006" relation="include">
+        </childnode>
+        <childnode refid="2008" relation="include">
+        </childnode>
+        <childnode refid="1987" relation="include">
+        </childnode>
+      </node>
+      <node id="1992">
+        <label>ZPG/LightingChangeInputHandler.h</label>
+        <link refid="LightingChangeInputHandler_8h"/>
+        <childnode refid="1980" relation="include">
+        </childnode>
+        <childnode refid="1981" relation="include">
+        </childnode>
+      </node>
+      <node id="2015">
+        <label>ZPG/Observable.h</label>
+        <link refid="Observable_8h"/>
+        <childnode refid="2016" relation="include">
+        </childnode>
+        <childnode refid="2017" relation="include">
+        </childnode>
+        <childnode refid="2019" relation="include">
+        </childnode>
+      </node>
+      <node id="2003">
+        <label>ZPG/Scene.cpp</label>
+        <link refid="Scene_8cpp"/>
+      </node>
+      <node id="1983">
+        <label>ZPG/TriangleEngine.h</label>
+        <link refid="TriangleEngine_8h"/>
+        <childnode refid="1984" relation="include">
+        </childnode>
+      </node>
+      <node id="1984">
+        <label>ZPG/TriangleEngine.cpp</label>
+        <link refid="TriangleEngine_8cpp"/>
+      </node>
+      <node id="1990">
+        <label>ZPG/BaseInputHandler.h</label>
+        <link refid="BaseInputHandler_8h"/>
+        <childnode refid="1991" relation="include">
+        </childnode>
+        <childnode refid="1992" relation="include">
+        </childnode>
+      </node>
+      <node id="2009">
+        <label>ZPG/VertexObject.cpp</label>
+        <link refid="VertexObject_8cpp"/>
+      </node>
+      <node id="2012">
+        <label>ZPG/MaterialValueBase.cpp</label>
+        <link refid="MaterialValueBase_8cpp"/>
+      </node>
+      <node id="2006">
+        <label>ZPG/Sphere.h</label>
+        <link refid="Sphere_8h"/>
+        <childnode refid="1978" relation="include">
+        </childnode>
+        <childnode refid="2007" relation="include">
+        </childnode>
+        <childnode refid="1982" relation="include">
+        </childnode>
+      </node>
+      <node id="1991">
+        <label>ZPG/BaseInputHandler.cpp</label>
+        <link refid="BaseInputHandler_8cpp"/>
+      </node>
+      <node id="1985">
+        <label>ZPG/TriangleScene.cpp</label>
+        <link refid="TriangleScene_8cpp"/>
+      </node>
+      <node id="1969">
+        <label>ZPG/Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="1970" relation="include">
+        </childnode>
+        <childnode refid="1971" relation="include">
+        </childnode>
+        <childnode refid="1972" relation="include">
+        </childnode>
+      </node>
+      <node id="1997">
+        <label>ZPG/Scene.h</label>
+        <link refid="Scene_8h"/>
+        <childnode refid="1968" relation="include">
+        </childnode>
+        <childnode refid="1989" relation="include">
+        </childnode>
+        <childnode refid="1998" relation="include">
+        </childnode>
+        <childnode refid="1999" relation="include">
+        </childnode>
+        <childnode refid="2000" relation="include">
+        </childnode>
+        <childnode refid="2001" relation="include">
+        </childnode>
+        <childnode refid="2003" relation="include">
+        </childnode>
+      </node>
+      <node id="1987">
+        <label>ZPG/ZPGEngine.cpp</label>
+        <link refid="ZPGEngine_8cpp"/>
+      </node>
+      <node id="2014">
+        <label>ZPG/Shader.cpp</label>
+        <link refid="Shader_8cpp"/>
+      </node>
+      <node id="1981">
+        <label>ZPG/LigtEngine.cpp</label>
+        <link refid="LigtEngine_8cpp"/>
+      </node>
+      <node id="1966">
+        <label>ZPG/Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="1967" relation="include">
+        </childnode>
+        <childnode refid="2015" relation="include">
+        </childnode>
+        <childnode refid="2020" relation="include">
+        </childnode>
+        <childnode refid="2013" relation="include">
+        </childnode>
+      </node>
+      <node id="2010">
+        <label>ZPG/Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="1995" relation="include">
+        </childnode>
+        <childnode refid="2006" relation="include">
+        </childnode>
+        <childnode refid="2011" relation="include">
+        </childnode>
+      </node>
+      <node id="1994">
+        <label>ZPG/Window.cpp</label>
+        <link refid="Window_8cpp"/>
+      </node>
+      <node id="2018">
+        <label>ZPG/MaterialBindedValue.cpp</label>
+        <link refid="MaterialBindedValue_8cpp"/>
+      </node>
+      <node id="1971">
+        <label>ZPG/EngineRegistry.cpp</label>
+        <link refid="EngineRegistry_8cpp"/>
+      </node>
+      <node id="1998">
+        <label>ZPG/TriangleScene.h</label>
+        <link refid="TriangleScene_8h"/>
+        <childnode refid="1975" relation="include">
+        </childnode>
+        <childnode refid="1977" relation="include">
+        </childnode>
+        <childnode refid="1981" relation="include">
+        </childnode>
+        <childnode refid="1984" relation="include">
+        </childnode>
+        <childnode refid="1985" relation="include">
+        </childnode>
+        <childnode refid="1987" relation="include">
+        </childnode>
+      </node>
+      <node id="1976">
+        <label>ZPG/CameraEngine.h</label>
+        <link refid="CameraEngine_8h"/>
+        <childnode refid="1977" relation="include">
+        </childnode>
+        <childnode refid="1971" relation="include">
+        </childnode>
+      </node>
+      <node id="2007">
+        <label>ZPG/Sphere.cpp</label>
+        <link refid="Sphere_8cpp"/>
+      </node>
+      <node id="1967">
+        <label>ZPG/Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="1968" relation="include">
+        </childnode>
+        <childnode refid="1988" relation="include">
+        </childnode>
+        <childnode refid="1995" relation="include">
+        </childnode>
+        <childnode refid="2010" relation="include">
+        </childnode>
+        <childnode refid="2012" relation="include">
+        </childnode>
+        <childnode refid="2008" relation="include">
+        </childnode>
+        <childnode refid="2013" relation="include">
+        </childnode>
+        <childnode refid="2014" relation="include">
+        </childnode>
+      </node>
+      <node id="2017">
+        <label>ZPG/MaterialBindedValue.h</label>
+        <link refid="MaterialBindedValue_8h"/>
+        <childnode refid="2018" relation="include">
+        </childnode>
+      </node>
+      <node id="1973">
+        <label>ZPG/BaseEngine.cpp</label>
+        <link refid="BaseEngine_8cpp"/>
+      </node>
+      <node id="2025">
+        <label>ZPG/ProgramDataKey.h</label>
+        <link refid="ProgramDataKey_8h"/>
+      </node>
+      <node id="2019">
+        <label>ZPG/Observable.cpp</label>
+        <link refid="Observable_8cpp"/>
+      </node>
+      <node id="1975">
+        <label>ZPG/BasicEngine.cpp</label>
+        <link refid="BasicEngine_8cpp"/>
+      </node>
+      <node id="2008">
+        <label>ZPG/Object.cpp</label>
+        <link refid="Object_8cpp"/>
+      </node>
+      <node id="1982">
+        <label>ZPG/SphereScene.cpp</label>
+        <link refid="SphereScene_8cpp"/>
+      </node>
+      <node id="2002">
+        <label>ZPG/CameraScene.cpp</label>
+        <link refid="CameraScene_8cpp"/>
+      </node>
+      <node id="1980">
+        <label>ZPG/LightingChangeInputHandler.cpp</label>
+        <link refid="LightingChangeInputHandler_8cpp"/>
+      </node>
+      <node id="2005">
+        <label>ZPG/Light.cpp</label>
+        <link refid="Light_8cpp"/>
+      </node>
+      <node id="1972">
+        <label>ZPG/Main.cpp</label>
+        <link refid="Main_8cpp"/>
+      </node>
+      <node id="2020">
+        <label>ZPG/Collection.cpp</label>
+        <link refid="Collection_8cpp"/>
+      </node>
+      <node id="1993">
+        <label>ZPG/CameraInputHandler.h</label>
+        <link refid="CameraInputHandler_8h"/>
+        <childnode refid="1978" relation="include">
+        </childnode>
+        <childnode refid="1981" relation="include">
+        </childnode>
+      </node>
+      <node id="2016">
+        <label>ZPG/Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="1997" relation="include">
+        </childnode>
+        <childnode refid="2000" relation="include">
+        </childnode>
+      </node>
+      <node id="1978">
+        <label>ZPG/CameraInputHandler.cpp</label>
+        <link refid="CameraInputHandler_8cpp"/>
+      </node>
+      <node id="1974">
+        <label>ZPG/BasicEngine.h</label>
+        <link refid="BasicEngine_8h"/>
+        <childnode refid="1975" relation="include">
+        </childnode>
+        <childnode refid="1971" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classEngine_1_1Components_1_1Graphics_1_1Shader" prot="public">Engine::Components::Graphics::Shader</innerclass>
+    <innernamespace refid="namespaceEngine">Engine</innernamespace>
+    <innernamespace refid="namespaceEngine_1_1Components">Engine::Components</innernamespace>
+    <innernamespace refid="namespaceEngine_1_1Components_1_1Graphics">Engine::Components::Graphics</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL/glew.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/vec4.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/mat4x2.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;xstring&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MaterialValueType_8h" kindref="compound">MaterialValueType.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceEngine" kindref="compound">Engine</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Components</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Graphics</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Program;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classEngine_1_1Components_1_1Graphics_1_1Shader" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a4935f2ee3ebdd8af6fc78cf42f63d915" kindref="member">Shader</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type,<sp/>std::string<sp/>filename);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a4935f2ee3ebdd8af6fc78cf42f63d915" kindref="member">Shader</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>shader);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a9a82a7a62443e928d9d95e3a0e4f1407" kindref="member">~Shader</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a348854b43d99bfe43e3d2b0cad5f103d" kindref="member">Compile</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLuint*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1ad7c094ce0d42b3399e3533b3652a33fe" kindref="member">Get</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a24131f3622fe536794de21e0fb499276" kindref="member">SendUniform</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref>*<sp/>program,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GLchar*<sp/>name,<sp/>glm::mat4*<sp/>data);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a24131f3622fe536794de21e0fb499276" kindref="member">SendUniform</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref>*<sp/>program,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GLchar*<sp/>name,<sp/>glm::vec4*<sp/>data);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a24131f3622fe536794de21e0fb499276" kindref="member">SendUniform</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref>*<sp/>program,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GLchar*<sp/>name,<sp/>glm::vec3*<sp/>data);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a24131f3622fe536794de21e0fb499276" kindref="member">SendUniform</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref>*<sp/>program,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GLchar*<sp/>name,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>data);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a24131f3622fe536794de21e0fb499276" kindref="member">SendUniform</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref>*<sp/>program,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GLchar*<sp/>name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>data);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a24131f3622fe536794de21e0fb499276" kindref="member">SendUniform</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref>*<sp/>program,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GLchar*<sp/>name,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">*<sp/>data);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a169ed9f71afd5f59160e35708e51fe7e" kindref="member">setData</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref>*<sp/>program,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GLchar*<sp/>property,<sp/><ref refid="namespaceEngine_1_1Components_1_1Graphics_1a44f5a2b57ee82aed849896c8311e403b" kindref="member">MaterialValueType</ref><sp/>type,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>value);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34" refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a4494d72a65715eb9f02e06a533684872" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLuint<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a4494d72a65715eb9f02e06a533684872" kindref="member">_shader</ref>;</highlight></codeline>
+<codeline lineno="35" refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a675c32a04d4eb33117d6ff2b988e13b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a675c32a04d4eb33117d6ff2b988e13b5" kindref="member">_compiled</ref>;</highlight></codeline>
+<codeline lineno="36" refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a82939e07025096b6b37f1588620863c5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a82939e07025096b6b37f1588620863c5" kindref="member">_code</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a6d0f90b445c605f12eab980827b8d430" kindref="member">Mat4ToString</ref>(glm::mat4&amp;<sp/>mat);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ZPG/Shader.h"/>
+  </compounddef>
+</doxygen>

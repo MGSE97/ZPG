@@ -1,0 +1,335 @@
+\hypertarget{classEngine_1_1Components_1_1Scene}{}\section{Engine\+:\+:Components\+:\+:Scene Class Reference}
+\label{classEngine_1_1Components_1_1Scene}\index{Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}}
+
+
+{\ttfamily \#include $<$Scene.\+h$>$}
+
+
+
+Inheritance diagram for Engine\+:\+:Components\+:\+:Scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Scene__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Engine\+:\+:Components\+:\+:Scene\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Scene__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a64255073fa1568920613cdc10472c335}{Scene}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a418538cc49eced3ac4901a4e31797594}{$\sim$\+Scene}} ()
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_af18bd334fe66952b8d79b8e9e99ab2d8}{Begin\+Load}} (\mbox{\hyperlink{classEngine_1_1BaseEngine}{Base\+Engine}} $\ast$engine)
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_abd8fcdcac52dbce6a0a18de3860ab087}{Frame\+Update}} (\mbox{\hyperlink{classEngine_1_1BaseEngine}{Base\+Engine}} $\ast$engine)
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23c5b23e66646443670a487e7c016e73}{Load}} (\mbox{\hyperlink{classEngine_1_1BaseEngine}{Base\+Engine}} $\ast$engine)
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a936218df56c481f3aa12d684cee038f3}{Set\+Active\+Camera}} (\mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}} $\ast$camera=nullptr)
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a064ce89da5daa483369c3253f04c9d21}{Unload}} (\mbox{\hyperlink{classEngine_1_1BaseEngine}{Base\+Engine}} $\ast$engine)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{Active\+Camera}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, \mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_aea98ff1ced88ee859878b504e9a2a362}{Cameras}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, \mbox{\hyperlink{classLight}{Light}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}{Lights}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, \mbox{\hyperlink{classEngine_1_1Objects_1_1Object}{Engine\+::\+Objects\+::\+Object}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_ae828757eea5410550f6674421051a783}{Loaded}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 15 of file Scene.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_a64255073fa1568920613cdc10472c335}\label{classEngine_1_1Components_1_1Scene_a64255073fa1568920613cdc10472c335}} 
+\index{Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}!Scene@{Scene}}
+\index{Scene@{Scene}!Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}}
+\subsubsection{\texorpdfstring{Scene()}{Scene()}}
+{\footnotesize\ttfamily Engine\+::\+Components\+::\+Scene\+::\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 5 of file Scene.\+cpp.
+
+
+
+References Active\+Camera, Cameras, Lights, Loaded, and Objects.
+
+
+\begin{DoxyCode}
+6 \{
+7     \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}} = \textcolor{keyword}{new} 
+      \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic::Dictionary<std::string, Engine::Objects::Object*>}}
+      ();
+8     \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_aea98ff1ced88ee859878b504e9a2a362}{Cameras}} = \textcolor{keyword}{new} \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic::Dictionary<std::string, Camera*>}}
+      ();
+9     \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}{Lights}} = \textcolor{keyword}{new} \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic::Dictionary<std::string, Light*>}}();
+10     \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_ae828757eea5410550f6674421051a783}{Loaded}} = \textcolor{keyword}{false};
+11     \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}} = \textcolor{keyword}{nullptr};
+12 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_a418538cc49eced3ac4901a4e31797594}\label{classEngine_1_1Components_1_1Scene_a418538cc49eced3ac4901a4e31797594}} 
+\index{Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}!````~Scene@{$\sim$\+Scene}}
+\index{````~Scene@{$\sim$\+Scene}!Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}}
+\subsubsection{\texorpdfstring{$\sim$\+Scene()}{~Scene()}}
+{\footnotesize\ttfamily Engine\+::\+Components\+::\+Scene\+::$\sim$\+Scene (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file Scene.\+cpp.
+
+
+\begin{DoxyCode}
+16 \{
+17     \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}->clear();
+18     \textcolor{keyword}{delete} \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}};
+19     \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_aea98ff1ced88ee859878b504e9a2a362}{Cameras}}->clear();
+20     \textcolor{keyword}{delete} \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_aea98ff1ced88ee859878b504e9a2a362}{Cameras}};
+21     \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}{Lights}}->clear();
+22     \textcolor{keyword}{delete} \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}{Lights}};
+23 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_af18bd334fe66952b8d79b8e9e99ab2d8}\label{classEngine_1_1Components_1_1Scene_af18bd334fe66952b8d79b8e9e99ab2d8}} 
+\index{Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}!Begin\+Load@{Begin\+Load}}
+\index{Begin\+Load@{Begin\+Load}!Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}}
+\subsubsection{\texorpdfstring{Begin\+Load()}{BeginLoad()}}
+{\footnotesize\ttfamily void Engine\+::\+Components\+::\+Scene\+::\+Begin\+Load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1BaseEngine}{Base\+Engine}} $\ast$}]{engine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 37 of file Scene.\+cpp.
+
+
+
+Referenced by Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), and Application\+::\+Engines\+::\+Light\+Engine\+::\+Init().
+
+
+\begin{DoxyCode}
+38 \{
+39     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_ae828757eea5410550f6674421051a783}{Loaded}})
+40     \{
+41         \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23c5b23e66646443670a487e7c016e73}{Load}}(engine);
+42         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}} == \textcolor{keyword}{nullptr})
+43             \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a936218df56c481f3aa12d684cee038f3}{SetActiveCamera}}();
+44         \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_ae828757eea5410550f6674421051a783}{Loaded}} = \textcolor{keyword}{true};
+45     \}
+46 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{classEngine_1_1Components_1_1Scene_af18bd334fe66952b8d79b8e9e99ab2d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_abd8fcdcac52dbce6a0a18de3860ab087}\label{classEngine_1_1Components_1_1Scene_abd8fcdcac52dbce6a0a18de3860ab087}} 
+\index{Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}!Frame\+Update@{Frame\+Update}}
+\index{Frame\+Update@{Frame\+Update}!Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}}
+\subsubsection{\texorpdfstring{Frame\+Update()}{FrameUpdate()}}
+{\footnotesize\ttfamily void Engine\+::\+Components\+::\+Scene\+::\+Frame\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1BaseEngine}{Base\+Engine}} $\ast$}]{engine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classApplication_1_1Scenes_1_1SphereScene_ad754dea94c77524a79d707436a933c66}{Application\+::\+Scenes\+::\+Sphere\+Scene}}, \mbox{\hyperlink{classApplication_1_1Scenes_1_1CameraScene_a92eb1a3eab4de7d18ca108e4aefd7fc7}{Application\+::\+Scenes\+::\+Camera\+Scene}}, and \mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_a5622996232a2ad52735251c8398b0c9a}{Application\+::\+Scenes\+::\+Triangle\+Scene}}.
+
+
+
+Definition at line 48 of file Scene.\+cpp.
+
+
+\begin{DoxyCode}
+49 \{
+50 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_a23c5b23e66646443670a487e7c016e73}\label{classEngine_1_1Components_1_1Scene_a23c5b23e66646443670a487e7c016e73}} 
+\index{Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}!Load@{Load}}
+\index{Load@{Load}!Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}}
+\subsubsection{\texorpdfstring{Load()}{Load()}}
+{\footnotesize\ttfamily void Engine\+::\+Components\+::\+Scene\+::\+Load (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1BaseEngine}{Base\+Engine}} $\ast$}]{engine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classApplication_1_1Scenes_1_1SphereScene_adf6f95bf2ac8f0e84935d04248407ba4}{Application\+::\+Scenes\+::\+Sphere\+Scene}}, \mbox{\hyperlink{classApplication_1_1Scenes_1_1CameraScene_a86f30a60a125f491176ecfca46cd6b8a}{Application\+::\+Scenes\+::\+Camera\+Scene}}, and \mbox{\hyperlink{classApplication_1_1Scenes_1_1TriangleScene_a4bfd44cab6aa0eafe47f379dafe3843e}{Application\+::\+Scenes\+::\+Triangle\+Scene}}.
+
+
+
+Definition at line 25 of file Scene.\+cpp.
+
+
+\begin{DoxyCode}
+26 \{
+27 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_a936218df56c481f3aa12d684cee038f3}\label{classEngine_1_1Components_1_1Scene_a936218df56c481f3aa12d684cee038f3}} 
+\index{Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}!Set\+Active\+Camera@{Set\+Active\+Camera}}
+\index{Set\+Active\+Camera@{Set\+Active\+Camera}!Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}}
+\subsubsection{\texorpdfstring{Set\+Active\+Camera()}{SetActiveCamera()}}
+{\footnotesize\ttfamily void Engine\+::\+Components\+::\+Scene\+::\+Set\+Active\+Camera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}} $\ast$}]{camera = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 52 of file Scene.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Camera\+::\+Update().
+
+
+
+Referenced by Engine\+::\+Components\+::\+Camera\+::\+Set\+Active().
+
+
+\begin{DoxyCode}
+53 \{
+54     \textcolor{keywordflow}{if} (camera == \textcolor{keyword}{nullptr})
+55         \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}} = \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_aea98ff1ced88ee859878b504e9a2a362}{Cameras}}->First();
+56     \textcolor{keywordflow}{else}
+57         \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}} = camera;
+58     \textcolor{keywordflow}{if}(\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}} != \textcolor{keyword}{nullptr})
+59         \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a364f5e22921e3d234b31297a64c7d932}{Update}}();
+60 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Scene_a936218df56c481f3aa12d684cee038f3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Scene_a936218df56c481f3aa12d684cee038f3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_a064ce89da5daa483369c3253f04c9d21}\label{classEngine_1_1Components_1_1Scene_a064ce89da5daa483369c3253f04c9d21}} 
+\index{Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}!Unload@{Unload}}
+\index{Unload@{Unload}!Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}}
+\subsubsection{\texorpdfstring{Unload()}{Unload()}}
+{\footnotesize\ttfamily void Engine\+::\+Components\+::\+Scene\+::\+Unload (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1BaseEngine}{Base\+Engine}} $\ast$}]{engine }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 29 of file Scene.\+cpp.
+
+
+\begin{DoxyCode}
+30 \{
+31     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}& Object : *\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}})
+32         \textcolor{keyword}{delete} Object.second;
+33     \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}->clear();
+34     \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_ae828757eea5410550f6674421051a783}{Loaded}} = \textcolor{keyword}{false};
+35 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}\label{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}} 
+\index{Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}!Active\+Camera@{Active\+Camera}}
+\index{Active\+Camera@{Active\+Camera}!Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}}
+\subsubsection{\texorpdfstring{Active\+Camera}{ActiveCamera}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}}$\ast$ Engine\+::\+Components\+::\+Scene\+::\+Active\+Camera}
+
+
+
+Definition at line 30 of file Scene.\+h.
+
+
+
+Referenced by Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler\+::\+Handle\+Keys(), Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Keys(), Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse(), Application\+::\+Engines\+::\+Light\+Engine\+::\+Init(), and Scene().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_aea98ff1ced88ee859878b504e9a2a362}\label{classEngine_1_1Components_1_1Scene_aea98ff1ced88ee859878b504e9a2a362}} 
+\index{Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}!Cameras@{Cameras}}
+\index{Cameras@{Cameras}!Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}}
+\subsubsection{\texorpdfstring{Cameras}{Cameras}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$std\+::string, \mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}}$\ast$$>$$\ast$ Engine\+::\+Components\+::\+Scene\+::\+Cameras}
+
+
+
+Definition at line 28 of file Scene.\+h.
+
+
+
+Referenced by Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Light\+Engine\+::\+Init(), and Scene().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}\label{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}} 
+\index{Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}!Lights@{Lights}}
+\index{Lights@{Lights}!Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}}
+\subsubsection{\texorpdfstring{Lights}{Lights}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$std\+::string, \mbox{\hyperlink{classLight}{Light}}$\ast$$>$$\ast$ Engine\+::\+Components\+::\+Scene\+::\+Lights}
+
+
+
+Definition at line 29 of file Scene.\+h.
+
+
+
+Referenced by Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler\+::\+Handle\+Keys(), Application\+::\+Engines\+::\+Light\+Engine\+::\+Init(), and Scene().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_ae828757eea5410550f6674421051a783}\label{classEngine_1_1Components_1_1Scene_ae828757eea5410550f6674421051a783}} 
+\index{Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}!Loaded@{Loaded}}
+\index{Loaded@{Loaded}!Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}}
+\subsubsection{\texorpdfstring{Loaded}{Loaded}}
+{\footnotesize\ttfamily bool Engine\+::\+Components\+::\+Scene\+::\+Loaded\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 18 of file Scene.\+h.
+
+
+
+Referenced by Scene().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}\label{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}} 
+\index{Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}!Objects@{Objects}}
+\index{Objects@{Objects}!Engine\+::\+Components\+::\+Scene@{Engine\+::\+Components\+::\+Scene}}
+\subsubsection{\texorpdfstring{Objects}{Objects}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$std\+::string, \mbox{\hyperlink{classEngine_1_1Objects_1_1Object}{Engine\+::\+Objects\+::\+Object}}$\ast$$>$$\ast$ Engine\+::\+Components\+::\+Scene\+::\+Objects}
+
+
+
+Definition at line 27 of file Scene.\+h.
+
+
+
+Referenced by Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Light\+Engine\+::\+Init(), and Scene().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{Scene_8h}{Scene.\+h}}\item 
+Z\+P\+G/\mbox{\hyperlink{Scene_8cpp}{Scene.\+cpp}}\end{DoxyCompactItemize}

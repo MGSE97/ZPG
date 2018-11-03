@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Engine::Components::Graphics::MaterialValueBase</compoundname>
+    <derivedcompoundref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" prot="public" virt="non-virtual">Engine::Components::Graphics::MaterialValue&lt; T &gt;</derivedcompoundref>
+    <includes refid="MaterialValueBase_8h" local="no">MaterialValueBase.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase_1a53f5d1edea5f564931535250d3f5039c" prot="public" static="no" mutable="no">
+        <type>const GLchar *</type>
+        <definition>const GLchar* Engine::Components::Graphics::MaterialValueBase::Property</definition>
+        <argsstring></argsstring>
+        <name>Property</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/MaterialValueBase.h" line="21" column="1" bodyfile="ZPG/MaterialValueBase.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase_1a45fd55d67557a2975f1274aa41045512" prot="public" static="no" mutable="no">
+        <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref> *</type>
+        <definition>Shader* Engine::Components::Graphics::MaterialValueBase::Shader</definition>
+        <argsstring></argsstring>
+        <name>Shader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/MaterialValueBase.h" line="20" column="1" bodyfile="ZPG/MaterialValueBase.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase_1aec4518ee9e8635ab6639609c92d0f89d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Components::Graphics::MaterialValueBase::MaterialValueBase</definition>
+        <argsstring>(Shader *shader, const GLchar *property)</argsstring>
+        <name>MaterialValueBase</name>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref> *</type>
+          <declname>shader</declname>
+        </param>
+        <param>
+          <type>const GLchar *</type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/MaterialValueBase.h" line="14" column="1" bodyfile="ZPG/MaterialValueBase.h" bodystart="14" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase_1a41a10de25ed9c82203560e83b89c250d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual Engine::Components::Graphics::MaterialValueBase::~MaterialValueBase</definition>
+        <argsstring>()=default</argsstring>
+        <name>~MaterialValueBase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/MaterialValueBase.h" line="19" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase_1abc2e449e9067701c927fca5962391afb" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Engine::Components::Graphics::MaterialValueBase::Set</definition>
+        <argsstring>(Graphics::Program *program)=0</argsstring>
+        <name>Set</name>
+        <reimplementedby refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue_1a88dbac3446bf9e78c7411e79c1b58977">Set</reimplementedby>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Graphics::Program</ref> *</type>
+          <declname>program</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/MaterialValueBase.h" line="22" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="418">
+        <label>Engine::Components::Graphics::MaterialValueBase</label>
+        <link refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase"/>
+      </node>
+      <node id="419">
+        <label>Engine::Components::Graphics::MaterialValue&lt; T &gt;</label>
+        <link refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue"/>
+        <childnode refid="418" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="425">
+        <label>const GLchar *</label>
+      </node>
+      <node id="423">
+        <label>char *</label>
+      </node>
+      <node id="420">
+        <label>Engine::Components::Graphics::MaterialValueBase</label>
+        <link refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase"/>
+        <childnode refid="421" relation="usage">
+          <edgelabel>+Shader</edgelabel>
+        </childnode>
+        <childnode refid="425" relation="usage">
+          <edgelabel>+Property</edgelabel>
+        </childnode>
+      </node>
+      <node id="424">
+        <label>GLuint</label>
+      </node>
+      <node id="421">
+        <label>Engine::Components::Graphics::Shader</label>
+        <link refid="classEngine_1_1Components_1_1Graphics_1_1Shader"/>
+        <childnode refid="422" relation="usage">
+          <edgelabel>-_compiled</edgelabel>
+        </childnode>
+        <childnode refid="423" relation="usage">
+          <edgelabel>-_code</edgelabel>
+        </childnode>
+        <childnode refid="424" relation="usage">
+          <edgelabel>-_shader</edgelabel>
+        </childnode>
+      </node>
+      <node id="422">
+        <label>bool</label>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/MaterialValueBase.h" line="12" column="1" bodyfile="ZPG/MaterialValueBase.h" bodystart="11" bodyend="23"/>
+    <listofallmembers>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase_1aec4518ee9e8635ab6639609c92d0f89d" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::MaterialValueBase</scope><name>MaterialValueBase</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase_1a53f5d1edea5f564931535250d3f5039c" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::MaterialValueBase</scope><name>Property</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase_1abc2e449e9067701c927fca5962391afb" prot="public" virt="pure-virtual"><scope>Engine::Components::Graphics::MaterialValueBase</scope><name>Set</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase_1a45fd55d67557a2975f1274aa41045512" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::MaterialValueBase</scope><name>Shader</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase_1a41a10de25ed9c82203560e83b89c250d" prot="public" virt="virtual"><scope>Engine::Components::Graphics::MaterialValueBase</scope><name>~MaterialValueBase</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

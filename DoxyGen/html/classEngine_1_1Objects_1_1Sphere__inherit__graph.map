@@ -1,0 +1,4 @@
+<map id="Engine::Objects::Sphere" name="Engine::Objects::Sphere">
+<area shape="rect" id="node2" href="$classEngine_1_1Objects_1_1Object.html" title="{Engine::Objects::Object\n|+ ModelMatrix\l|+ Object()\l+ Object()\l+ ~Object()\l}" alt="" coords="7,292,168,399"/>
+<area shape="rect" id="node3" href="$classEngine_1_1Components_1_1Objects_1_1VertexObject.html" title="{Engine::Components\l::Objects::VertexObject\n|+ Material\l# _attribute_id\l# _Id\l# _VAO\l# _VBO\l# Dimensions\l# Size\l# _object_id\l|+ VertexObject()\l+ ~VertexObject()\l+ Draw()\l# Add()\l}" alt="" coords="8,5,167,244"/>
+</map>

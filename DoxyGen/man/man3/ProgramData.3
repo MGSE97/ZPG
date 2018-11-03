@@ -1,0 +1,74 @@
+.TH "ProgramData< T >" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ProgramData< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ProgramData\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProgramData\fP ()"
+.br
+.ti -1c
+.RI "\fB~ProgramData\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< \fBProgramData\fP *, T > * \fBValues\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T>
+.br
+class ProgramData< T >"
+
+.PP
+Definition at line 6 of file ProgramData\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename T > \fBProgramData\fP< T >::\fBProgramData\fP ()\fC [inline]\fP"
+
+.PP
+Definition at line 9 of file ProgramData\&.h\&.
+.PP
+References ProgramData< T >::Values\&.
+.PP
+.nf
+10     {
+11         Values = new Generic::Dictionary<ProgramData*, T>();
+12     }
+.fi
+.SS "template<typename T > \fBProgramData\fP< T >::~\fBProgramData\fP ()\fC [inline]\fP"
+
+.PP
+Definition at line 13 of file ProgramData\&.h\&.
+.PP
+References ProgramData< T >::Values\&.
+.PP
+.nf
+14     {
+15         delete Values;
+16     }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename T > \fBGeneric::Dictionary\fP<\fBProgramData\fP*, T>* \fBProgramData\fP< T >::Values"
+
+.PP
+Definition at line 17 of file ProgramData\&.h\&.
+.PP
+Referenced by ProgramData< T >::ProgramData(), and ProgramData< T >::~ProgramData()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

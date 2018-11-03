@@ -1,0 +1,96 @@
+.TH "Engine::Components::Graphics::MaterialValue< T >" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Engine::Components::Graphics::MaterialValue< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MaterialValue\&.h>\fP
+.PP
+Inherits \fBEngine::Components::Graphics::MaterialValueBase\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMaterialValue\fP (\fBGraphics::Shader\fP *shader, const GLchar *property, T *value)"
+.br
+.ti -1c
+.RI "void \fBSet\fP (\fBProgram\fP *program) override"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "const GLchar * \fBProperty\fP"
+.br
+.ti -1c
+.RI "\fBShader\fP * \fBShader\fP"
+.br
+.ti -1c
+.RI "T * \fBValue\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T>
+.br
+class Engine::Components::Graphics::MaterialValue< T >"
+
+.PP
+Definition at line 14 of file MaterialValue\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename T > \fBEngine::Components::Graphics::MaterialValue\fP< T >::\fBMaterialValue\fP (\fBGraphics::Shader\fP * shader, const GLchar * property, T * value)\fC [inline]\fP"
+
+.PP
+Definition at line 17 of file MaterialValue\&.h\&.
+.PP
+References Engine::Components::Graphics::MaterialValue< T >::Value\&.
+.PP
+.nf
+17                                                                                         :
+18                     MaterialValueBase(shader, property)
+19                 {
+20                     Value = value;
+21                 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T > void \fBEngine::Components::Graphics::MaterialValue\fP< T >::Set (\fBProgram\fP * program)\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBEngine::Components::Graphics::MaterialValueBase\fP\&.
+.PP
+Definition at line 23 of file MaterialValue\&.h\&.
+.PP
+References Engine::Components::Graphics::Shader::SendUniform(), and Engine::Components::Graphics::MaterialValue< T >::Value\&.
+.PP
+.nf
+24                 {
+25                     Shader->SendUniform(program, Property, Value);
+26                 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "const GLchar* Engine::Components::Graphics::MaterialValueBase::Property\fC [inherited]\fP"
+
+.PP
+Definition at line 21 of file MaterialValueBase\&.h\&.
+.SS "\fBShader\fP* Engine::Components::Graphics::MaterialValueBase::Shader\fC [inherited]\fP"
+
+.PP
+Definition at line 20 of file MaterialValueBase\&.h\&.
+.SS "template<typename T > T* \fBEngine::Components::Graphics::MaterialValue\fP< T >::Value"
+
+.PP
+Definition at line 22 of file MaterialValue\&.h\&.
+.PP
+Referenced by Engine::Components::Graphics::MaterialValue< T >::MaterialValue(), and Engine::Components::Graphics::MaterialValue< T >::Set()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

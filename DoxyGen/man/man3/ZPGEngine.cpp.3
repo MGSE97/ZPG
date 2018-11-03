@@ -1,0 +1,64 @@
+.TH "ZPG/ZPGEngine.cpp" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ZPG/ZPGEngine.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'ZPGEngine\&.h'\fP
+.br
+\fC#include <iostream>\fP
+.br
+\fC#include 'Object\&.h'\fP
+.br
+\fC#include 'TriangleScene\&.h'\fP
+.br
+
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const char * \fBfragment_shader\fP"
+.br
+.ti -1c
+.RI "const char * \fBvertex_shader\fP"
+.br
+.in -1c
+.SH "Variable Documentation"
+.PP 
+.SS "const char* fragment_shader"
+\fBInitial value:\fP
+.PP
+.nf
+=
+"#version 330\n"
+"uniform float color;"
+"out vec4 frag_colour;"
+"void main () {"
+"     frag_colour = vec4 (color, 1\&.0-color, 0\&.0, 1\&.0);"
+"}"
+.fi
+.PP
+Definition at line 14 of file ZPGEngine\&.cpp\&.
+.PP
+Referenced by Application::Engines::BasicEngine::Init(), Application::Engines::ZPGEngine::Init(), Application::Engines::TriangleEngine::Init(), Application::Engines::CameraEngine::Init(), and Application::Engines::LightEngine::Init()\&.
+.SS "const char* vertex_shader"
+\fBInitial value:\fP
+.PP
+.nf
+=
+"#version 330\n"
+"uniform mat4 modelMatrix;"
+"layout(location=0) in vec3 vp;"
+"void main () {"
+" gl_Position = modelMatrix * vec4 (vp, 1\&.0);"
+"}"
+.fi
+.PP
+Definition at line 6 of file ZPGEngine\&.cpp\&.
+.PP
+Referenced by Application::Engines::BasicEngine::Init(), Application::Engines::ZPGEngine::Init(), Application::Engines::TriangleEngine::Init(), Application::Engines::CameraEngine::Init(), and Application::Engines::LightEngine::Init()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

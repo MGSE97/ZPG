@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="VertexBufferObject_8cpp" kind="file" language="C++">
+    <compoundname>VertexBufferObject.cpp</compoundname>
+    <includes refid="VertexBufferObject_8h" local="yes">VertexBufferObject.h</includes>
+    <includes local="no">cstddef</includes>
+    <incdepgraph>
+      <node id="2372">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="2373" relation="include">
+        </childnode>
+        <childnode refid="2374" relation="include">
+        </childnode>
+      </node>
+      <node id="2373">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="2374">
+        <label>vector</label>
+      </node>
+      <node id="2375">
+        <label>cstddef</label>
+      </node>
+      <node id="2371">
+        <label>ZPG/VertexBufferObject.cpp</label>
+        <link refid="VertexBufferObject_8cpp"/>
+        <childnode refid="2372" relation="include">
+        </childnode>
+        <childnode refid="2375" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VertexBufferObject_8h" kindref="compound">VertexBufferObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1aee6f39eda87eb0f8c0e6644afdd72000" kindref="member">Engine::Components::Objects::VertexBufferObject::_id</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1ac6ca88e30800d79295ca9ea285101a3c" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1ac6ca88e30800d79295ca9ea285101a3c" kindref="member">Engine::Components::Objects::VertexBufferObject::VertexBufferObject</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>points,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1a07adfeae7d3b23285d49b8005437ed77" kindref="member">_Id</ref><sp/>=<sp/>++<ref refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1aee6f39eda87eb0f8c0e6644afdd72000" kindref="member">_id</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>glGenBuffers(<ref refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1a07adfeae7d3b23285d49b8005437ed77" kindref="member">_Id</ref>,<sp/>&amp;<ref refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1a0014c1ab3ceb3c3437003057638b279f" kindref="member">_VBO</ref>);<sp/></highlight><highlight class="comment">//<sp/>generate<sp/>the<sp/>VBO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>glBindBuffer(GL_ARRAY_BUFFER,<sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1a0014c1ab3ceb3c3437003057638b279f" kindref="member">_VBO</ref>);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>glBufferData(GL_ARRAY_BUFFER,<sp/>size<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">),<sp/>points,<sp/>GL_STATIC_DRAW);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1a477c0af2a3eaaae725a1347027ef87a4" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1a477c0af2a3eaaae725a1347027ef87a4" kindref="member">Engine::Components::Objects::VertexBufferObject::~VertexBufferObject</ref>()</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>&amp;_Id;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>&amp;_VBO;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1abf4805d63271ee1c56a15214cd75077d" refkind="member"><highlight class="normal">GLuint<sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1abf4805d63271ee1c56a15214cd75077d" kindref="member">Engine::Components::Objects::VertexBufferObject::Get</ref>()</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_VBO;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1ada22635c60245448346653b0e82f5d9c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1ada22635c60245448346653b0e82f5d9c" kindref="member">Engine::Components::Objects::VertexBufferObject::GetId</ref>()</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_Id;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="ZPG/VertexBufferObject.cpp"/>
+  </compounddef>
+</doxygen>

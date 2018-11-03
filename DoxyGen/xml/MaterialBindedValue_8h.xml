@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="MaterialBindedValue_8h" kind="file" language="C++">
+    <compoundname>MaterialBindedValue.h</compoundname>
+    <includes local="no">string</includes>
+    <includes refid="Shader_8h" local="yes">Shader.h</includes>
+    <includes refid="MaterialValueType_8h" local="yes">MaterialValueType.h</includes>
+    <includes refid="Observer_8h" local="yes">Observer.h</includes>
+    <includes refid="Observable_8h" local="yes">Observable.h</includes>
+    <includedby refid="MaterialBindedValue_8cpp" local="yes">ZPG/MaterialBindedValue.cpp</includedby>
+    <incdepgraph>
+      <node id="1288">
+        <label>list</label>
+      </node>
+      <node id="1279">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="1280" relation="include">
+        </childnode>
+        <childnode refid="1281" relation="include">
+        </childnode>
+        <childnode refid="1282" relation="include">
+        </childnode>
+        <childnode refid="1283" relation="include">
+        </childnode>
+        <childnode refid="1284" relation="include">
+        </childnode>
+        <childnode refid="1278" relation="include">
+        </childnode>
+      </node>
+      <node id="1278">
+        <label>string</label>
+      </node>
+      <node id="1280">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="1284">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="1286">
+        <label>Observable.h</label>
+        <link refid="Observable_8h"/>
+        <childnode refid="1287" relation="include">
+        </childnode>
+        <childnode refid="1285" relation="include">
+        </childnode>
+        <childnode refid="1289" relation="include">
+        </childnode>
+      </node>
+      <node id="1281">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="1289">
+        <label>vector</label>
+      </node>
+      <node id="1287">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="1279" relation="include">
+        </childnode>
+        <childnode refid="1288" relation="include">
+        </childnode>
+      </node>
+      <node id="1285">
+        <label>Observer.h</label>
+        <link refid="Observer_8h"/>
+      </node>
+      <node id="1282">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="1277">
+        <label>ZPG/MaterialBindedValue.h</label>
+        <link refid="MaterialBindedValue_8h"/>
+        <childnode refid="1278" relation="include">
+        </childnode>
+        <childnode refid="1279" relation="include">
+        </childnode>
+        <childnode refid="1284" relation="include">
+        </childnode>
+        <childnode refid="1285" relation="include">
+        </childnode>
+        <childnode refid="1286" relation="include">
+        </childnode>
+      </node>
+      <node id="1283">
+        <label>xstring</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1291">
+        <label>ZPG/MaterialBindedValue.cpp</label>
+        <link refid="MaterialBindedValue_8cpp"/>
+      </node>
+      <node id="1290">
+        <label>ZPG/MaterialBindedValue.h</label>
+        <link refid="MaterialBindedValue_8h"/>
+        <childnode refid="1291" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue" prot="public">Engine::Components::Graphics::MaterialBindedValue</innerclass>
+    <innernamespace refid="namespaceEngine">Engine</innernamespace>
+    <innernamespace refid="namespaceEngine_1_1Components">Engine::Components</innernamespace>
+    <innernamespace refid="namespaceEngine_1_1Components_1_1Graphics">Engine::Components::Graphics</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Shader_8h" kindref="compound">Shader.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MaterialValueType_8h" kindref="compound">MaterialValueType.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Observer_8h" kindref="compound">Observer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Observable_8h" kindref="compound">Observable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceEngine" kindref="compound">Engine</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Components</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Graphics</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="15" refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue" kindref="compound">MaterialBindedValue</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classObserver" kindref="compound">Observer</ref>&lt;T&gt;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18" refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1ad2532a61c245e1d557552e2180e08e72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1ad2532a61c245e1d557552e2180e08e72" kindref="member">MaterialBindedValue</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref>*<sp/>shader,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GLchar*<sp/>property,<sp/><ref refid="namespaceEngine_1_1Components_1_1Graphics_1a44f5a2b57ee82aed849896c8311e403b" kindref="member">MaterialValueType</ref><sp/>type,<sp/><ref refid="classObservable" kindref="compound">Observable&lt;T&gt;</ref><sp/>*observable,<sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/>value)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref><sp/>=<sp/>shader;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classProperty" kindref="compound">Property</ref><sp/>=<sp/>property;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1acb1b73dd34f8cd4ff9d68f0ce483e372" kindref="member">Type</ref><sp/>=<sp/>type;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classObservable" kindref="compound">Observable</ref><sp/>=<sp/>observable;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1a954c91d9f00092782f0ed0b840d92e26" kindref="member">Value</ref><sp/>=<sp/>value;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="26" refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1a2c069aa41aebee61554ce21b54a08ec8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1a2c069aa41aebee61554ce21b54a08ec8" kindref="member">Shader</ref>;</highlight></codeline>
+<codeline lineno="27" refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1aa538707c0eb31482fdb7e06926404b47" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>GLchar*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1aa538707c0eb31482fdb7e06926404b47" kindref="member">Property</ref>;</highlight></codeline>
+<codeline lineno="28" refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1acb1b73dd34f8cd4ff9d68f0ce483e372" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceEngine_1_1Components_1_1Graphics_1a44f5a2b57ee82aed849896c8311e403b" kindref="member">MaterialValueType</ref><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1acb1b73dd34f8cd4ff9d68f0ce483e372" kindref="member">Type</ref>;</highlight></codeline>
+<codeline lineno="29" refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1af217c3d5cb01922019f108b064cb2a69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classObservable" kindref="compound">Observable&lt;T&gt;</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1af217c3d5cb01922019f108b064cb2a69" kindref="member">Observable</ref>;</highlight></codeline>
+<codeline lineno="30" refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1a954c91d9f00092782f0ed0b840d92e26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*<sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1a954c91d9f00092782f0ed0b840d92e26" kindref="member">Value</ref>;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ZPG/MaterialBindedValue.h"/>
+  </compounddef>
+</doxygen>

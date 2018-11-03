@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="VertexObject_8cpp" kind="file" language="C++">
+    <compoundname>VertexObject.cpp</compoundname>
+    <includes refid="VertexObject_8h" local="yes">VertexObject.h</includes>
+    <includes local="no">vector</includes>
+    <incdepgraph>
+      <node id="2441">
+        <label>list</label>
+      </node>
+      <node id="2427">
+        <label>VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="2428" relation="include">
+        </childnode>
+        <childnode refid="2431" relation="include">
+        </childnode>
+        <childnode refid="2433" relation="include">
+        </childnode>
+        <childnode refid="2444" relation="include">
+        </childnode>
+      </node>
+      <node id="2445">
+        <label>MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="2440" relation="include">
+        </childnode>
+        <childnode refid="2435" relation="include">
+        </childnode>
+        <childnode refid="2439" relation="include">
+        </childnode>
+        <childnode refid="2446" relation="include">
+        </childnode>
+      </node>
+      <node id="2431">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="2429" relation="include">
+        </childnode>
+        <childnode refid="2428" relation="include">
+        </childnode>
+        <childnode refid="2432" relation="include">
+        </childnode>
+      </node>
+      <node id="2435">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="2429" relation="include">
+        </childnode>
+        <childnode refid="2436" relation="include">
+        </childnode>
+        <childnode refid="2437" relation="include">
+        </childnode>
+        <childnode refid="2438" relation="include">
+        </childnode>
+        <childnode refid="2439" relation="include">
+        </childnode>
+        <childnode refid="2440" relation="include">
+        </childnode>
+      </node>
+      <node id="2428">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="2429" relation="include">
+        </childnode>
+        <childnode refid="2430" relation="include">
+        </childnode>
+      </node>
+      <node id="2440">
+        <label>string</label>
+      </node>
+      <node id="2429">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="2443">
+        <label>map</label>
+      </node>
+      <node id="2446">
+        <label>MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="2429" relation="include">
+        </childnode>
+        <childnode refid="2435" relation="include">
+        </childnode>
+      </node>
+      <node id="2439">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="2426">
+        <label>ZPG/VertexObject.cpp</label>
+        <link refid="VertexObject_8cpp"/>
+        <childnode refid="2427" relation="include">
+        </childnode>
+        <childnode refid="2430" relation="include">
+        </childnode>
+      </node>
+      <node id="2436">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="2430">
+        <label>vector</label>
+      </node>
+      <node id="2434">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="2435" relation="include">
+        </childnode>
+        <childnode refid="2441" relation="include">
+        </childnode>
+      </node>
+      <node id="2444">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="2442" relation="include">
+        </childnode>
+        <childnode refid="2440" relation="include">
+        </childnode>
+        <childnode refid="2445" relation="include">
+        </childnode>
+        <childnode refid="2433" relation="include">
+        </childnode>
+        <childnode refid="2435" relation="include">
+        </childnode>
+      </node>
+      <node id="2432">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="2437">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="2433">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="2429" relation="include">
+        </childnode>
+        <childnode refid="2434" relation="include">
+        </childnode>
+        <childnode refid="2442" relation="include">
+        </childnode>
+        <childnode refid="2440" relation="include">
+        </childnode>
+      </node>
+      <node id="2442">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="2443" relation="include">
+        </childnode>
+      </node>
+      <node id="2438">
+        <label>xstring</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VertexObject_8h" kindref="compound">VertexObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1aef076731df98a4806c644a3ac4400ae2" kindref="member">Engine::Components::Objects::VertexObject::_object_id</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a18550cae56ca1066792528a7dcf5d28a" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexObject" kindref="compound">Engine::Components::Objects::VertexObject</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a18550cae56ca1066792528a7dcf5d28a" kindref="member">Engine::Components::Objects::VertexObject::Add</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*glEnableVertexAttribArray(_attribute_id);<sp/>//enable<sp/>vertex<sp/>attributes</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/><sp/><sp/><sp/>glBindBuffer(GL_ARRAY_BUFFER,<sp/>_VBO);</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/><sp/><sp/><sp/>glVertexAttribPointer(_attribute_id++,<sp/>*Dimensions,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/>size<sp/>*<sp/>sizeof(float),<sp/>(GLvoid*)offset);*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(<ref refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a401aa1eb0254e57d8295c2287749eed5" kindref="member">_attribute_id</ref>);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>glVertexAttribPointer(<ref refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a401aa1eb0254e57d8295c2287749eed5" kindref="member">_attribute_id</ref>,<sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1ae5bb104a878dc8a3c909ec9b0ee799c1" kindref="member">Dimensions</ref>,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/>size,<sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">*)offset);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a401aa1eb0254e57d8295c2287749eed5" kindref="member">_attribute_id</ref>++;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//VAOs-&gt;Add(new<sp/>VertexAttributeObject(VAOi++,<sp/>VBO,<sp/>*Dimensions,<sp/>size,<sp/>offset));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a2cd67c7ea4baefd945c5045d2a775a5d" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a2cd67c7ea4baefd945c5045d2a775a5d" kindref="member">Engine::Components::Objects::VertexObject::VertexObject</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Material" kindref="compound">Graphics::Material</ref>*<sp/>material,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>points,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dimensions,<sp/><ref refid="classGeneric_1_1Collection" kindref="compound">Generic::Collection&lt;VAOConfig*&gt;</ref>*<sp/>configs)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>_attribute_id<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>Dimensions<sp/>=<sp/>dimensions;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>Size<sp/>=<sp/>size/(dimensions*2);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>_Id<sp/>=<sp/>++_object_id;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*glGenBuffers(1,<sp/>&amp;_VBO);<sp/>//<sp/>generate<sp/>the<sp/>VBO</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/><sp/><sp/>glBindBuffer(GL_ARRAY_BUFFER,<sp/>_VBO);</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/><sp/><sp/>glBufferData(GL_ARRAY_BUFFER,<sp/>size,<sp/>points,<sp/>GL_STATIC_DRAW);</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"></highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/><sp/><sp/><sp/>glGenVertexArrays(1,<sp/>&amp;_VAO);<sp/>//generate<sp/>the<sp/>VAO</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/><sp/><sp/>glBindVertexArray(_VAO);<sp/>//bind<sp/>the<sp/>VAO</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(0);<sp/>//enable<sp/>vertex<sp/>attributes</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/><sp/><sp/>glBindBuffer(GL_ARRAY_BUFFER,<sp/>_VBO);</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/><sp/><sp/>glVertexAttribPointer(_attribute_id,<sp/>*Dimensions,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/>3*sizeof(float),<sp/>nullptr);</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/><sp/>_attribute_id++;*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>glGenVertexArrays(1,<sp/>&amp;_VAO);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>glBindVertexArray(_VAO);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>glGenBuffers(1,<sp/>&amp;_VBO);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>glBindBuffer(GL_ARRAY_BUFFER,<sp/>_VBO);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>glBufferData(GL_ARRAY_BUFFER,<sp/>size<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">),<sp/>points,<sp/>GL_STATIC_DRAW);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(0);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>glVertexAttribPointer(0,<sp/>3,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/>6<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">),<sp/>(GLvoid*)0);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(1);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>glVertexAttribPointer(1,<sp/>3,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/>6<sp/>*<sp/></highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">),<sp/>(GLvoid*)(3*</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)));</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*VBO<sp/>=<sp/>new<sp/>VertexBufferObject(points,<sp/>size);</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/><sp/>VAOs<sp/>=<sp/>new<sp/>Generic::Collection&lt;VertexAttributeObject*&gt;();*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*if<sp/>(configs<sp/>!=<sp/>nullptr)</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for(auto<sp/>config:<sp/>*configs)</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/*{</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGenVertexArrays(1,<sp/>&amp;_VAO);<sp/>//generate<sp/>the<sp/>VAO</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindVertexArray(_VAO);<sp/>//bind<sp/>the<sp/>VAO</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(_attribute_id++);<sp/>//enable<sp/>vertex<sp/>attributes</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/><sp/>Add(config-&gt;Size,<sp/>config-&gt;Offset);</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/><sp/><sp/>/*_attribute_id<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/><sp/><sp/>glBindBuffer(GL_ARRAY_BUFFER,<sp/>_VBO);</highlight></codeline>
+<codeline lineno="61"><highlight class="comment"><sp/><sp/><sp/><sp/>if<sp/>(configs<sp/>!=<sp/>nullptr)</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(auto<sp/>config<sp/>:<sp/>*configs)</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glVertexAttribPointer(_attribute_id++,<sp/>*Dimensions,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/>config-&gt;Size<sp/>*<sp/>sizeof(float),<sp/>(GLvoid*)(config-&gt;Offset));</highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>Material<sp/>=<sp/>material;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a90ab6da3110fffb6343790de9ba5b0de" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a90ab6da3110fffb6343790de9ba5b0de" kindref="member">Engine::Components::Objects::VertexObject::~VertexObject</ref>()</highlight></codeline>
+<codeline lineno="70"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>&amp;_VBO;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>&amp;_VAO;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>Material;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76" refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a53a8f546ee082720579e2c33be6cedec" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexObject" kindref="compound">Engine::Components::Objects::VertexObject</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a53a8f546ee082720579e2c33be6cedec" kindref="member">Engine::Components::Objects::VertexObject::Draw</ref>()</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>use<sp/>material</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>Material-&gt;Use();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>glBindVertexArray(_VAO);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>draw<sp/>triangles</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>glDrawArrays(GL_TRIANGLES,<sp/>0,<sp/>Size);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="structEngine_1_1Components_1_1Objects_1_1VAOConfig_1af0fc55d3a998fd288ef8d5ddb2c808c8" refkind="member"><highlight class="normal"><ref refid="structEngine_1_1Components_1_1Objects_1_1VAOConfig_1af0fc55d3a998fd288ef8d5ddb2c808c8" kindref="member">Engine::Components::Objects::VAOConfig::VAOConfig</ref>()<sp/>:<sp/>Size(0),<sp/>Offset(0)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="structEngine_1_1Components_1_1Objects_1_1VAOConfig_1a6861c27437102022a1108036ddf30062" refkind="member"><highlight class="normal"><ref refid="structEngine_1_1Components_1_1Objects_1_1VAOConfig_1af0fc55d3a998fd288ef8d5ddb2c808c8" kindref="member">Engine::Components::Objects::VAOConfig::VAOConfig</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset)<sp/>:<sp/>Size(size),<sp/>Offset(offset)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="ZPG/VertexObject.cpp"/>
+  </compounddef>
+</doxygen>

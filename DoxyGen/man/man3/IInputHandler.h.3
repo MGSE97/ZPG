@@ -1,0 +1,69 @@
+.TH "ZPG/IInputHandler.h" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ZPG/IInputHandler.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'Window\&.h'\fP
+.br
+\fC#include 'Scene\&.h'\fP
+.br
+
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBEngine\fP"
+.br
+.ti -1c
+.RI " \fBEngine::Components\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBMK_C\fP   2"
+.br
+.ti -1c
+.RI "#define \fBMK_L\fP   0"
+.br
+.ti -1c
+.RI "#define \fBMK_R\fP   1"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBEngine::Components::HandleMouse\fP (BaseEngine *engine, Window *window, Scene *scene, double x, double y, \fBGeneric::Dictionary\fP< short, bool > &keys, int keysActive)=0"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "__interface \fBEngine::Components::IInputHandler\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define MK_C   2"
+
+.PP
+Definition at line 6 of file IInputHandler\&.h\&.
+.SS "#define MK_L   0"
+
+.PP
+Definition at line 4 of file IInputHandler\&.h\&.
+.SS "#define MK_R   1"
+
+.PP
+Definition at line 5 of file IInputHandler\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::CameraInputHandler::HandleMouse()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

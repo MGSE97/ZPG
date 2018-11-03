@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="2_2sphere_8h" kind="file" language="C++">
+    <compoundname>sphere.h</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sphere[]</definition>
+        <argsstring>[]</argsstring>
+        <name>sphere</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Assets/Models/2/sphere.h" line="3" column="1" bodyfile="ZPG/Assets/Models/2/sphere.h" bodystart="3" bodyend="-1"/>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1ab06fa94ce5265dc06abb645ea29850bd" compoundref="CameraInputHandler_8cpp" startline="53" endline="104">Application::Input::Handlers::CameraInputHandler::HandleMouse</referencedby>
+        <referencedby refid="classApplication_1_1Scenes_1_1SphereScene_1adf6f95bf2ac8f0e84935d04248407ba4" compoundref="SphereScene_8cpp" startline="18" endline="60">Application::Scenes::SphereScene::Load</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref>[];</highlight></codeline>
+    </programlisting>
+    <location file="ZPG/Assets/Models/2/sphere.h"/>
+  </compounddef>
+</doxygen>

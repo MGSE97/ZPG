@@ -1,0 +1,264 @@
+.TH "Application::Scenes::TriangleScene" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Application::Scenes::TriangleScene
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <TriangleScene\&.h>\fP
+.PP
+Inherits \fBEngine::Components::Scene\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTriangleScene\fP ()"
+.br
+.ti -1c
+.RI "\fB~TriangleScene\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBBeginLoad\fP (BaseEngine *engine)"
+.br
+.ti -1c
+.RI "void \fBFrameUpdate\fP (\fBEngine::BaseEngine\fP *engine) override"
+.br
+.ti -1c
+.RI "void \fBLoad\fP (\fBEngine::BaseEngine\fP *engine) override"
+.br
+.ti -1c
+.RI "virtual void \fBSetActiveCamera\fP (Camera *camera=nullptr)"
+.br
+.ti -1c
+.RI "virtual void \fBUnload\fP (BaseEngine *engine)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "Camera * \fBActiveCamera\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< std::string, Camera * > * \fBCameras\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< std::string, \fBLight\fP * > * \fBLights\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< std::string, \fBEngine::Objects::Object\fP * > * \fBObjects\fP"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBLoaded\fP"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "float * \fBangle\fP"
+.br
+.ti -1c
+.RI "float * \fBcolor\fP"
+.br
+.ti -1c
+.RI "glm::mat4 * \fBmodelMatrix\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 7 of file TriangleScene\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Application::Scenes::TriangleScene::TriangleScene ()"
+
+.PP
+Definition at line 7 of file TriangleScene\&.cpp\&.
+.PP
+References angle, color, and modelMatrix\&.
+.PP
+.nf
+8 {
+9     modelMatrix = new glm::mat4(1\&.0f);
+10     angle = new float(0\&.0f);
+11     color = new float(0\&.0f);
+12 }
+.fi
+.SS "Application::Scenes::TriangleScene::~TriangleScene ()"
+
+.PP
+Definition at line 14 of file TriangleScene\&.cpp\&.
+.PP
+.nf
+15 {
+16     delete modelMatrix;
+17     delete angle;
+18     Scene::~Scene();
+19 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void Engine::Components::Scene::BeginLoad (\fBBaseEngine\fP * engine)\fC [virtual]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 37 of file Scene\&.cpp\&.
+.PP
+Referenced by Application::Engines::CameraEngine::Init(), and Application::Engines::LightEngine::Init()\&.
+.PP
+.nf
+38 {
+39     if (!Loaded)
+40     {
+41         Load(engine);
+42         if (ActiveCamera == nullptr)
+43             SetActiveCamera();
+44         Loaded = true;
+45     }
+46 }
+.fi
+.SS "void Application::Scenes::TriangleScene::FrameUpdate (\fBEngine::BaseEngine\fP * engine)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBEngine::Components::Scene\fP\&.
+.PP
+Definition at line 53 of file TriangleScene\&.cpp\&.
+.PP
+.nf
+54 {
+55     *angle += 0\&.1f;
+56     *color = *angle - static_cast<long>(*angle);
+57 }
+.fi
+.SS "void Application::Scenes::TriangleScene::Load (\fBEngine::BaseEngine\fP * engine)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBEngine::Components::Scene\fP\&.
+.PP
+Definition at line 21 of file TriangleScene\&.cpp\&.
+.PP
+References Engine::BaseEngine::Programs, and Engine::Components::Graphics::Program::Shaders\&.
+.PP
+.nf
+22 {
+23     delete modelMatrix;
+24     delete angle;
+25     modelMatrix = new glm::mat4(1\&.0f);
+26     angle = new float(1\&.0f);
+27 
+28     // define mesh
+29     float points[] = {
+30         0\&.0f, 0\&.5f, 0\&.0f,
+31         0\&.5f, -0\&.5f, 0\&.0f,
+32         -0\&.5f, -0\&.5f, 0\&.0f
+33     };
+34     float* p = points;
+35 
+36     // define material
+37     Engine::Components::Graphics::Program* program = engine->Programs->Get("basic");
+38     auto material = new Engine::Components::Graphics::Material(program);
+39     material->Values/*
+40     ->Add(
+41         new Engine::Components::Graphics::MaterialValue<glm::mat4>(
+42         program->Shaders->Get("vertex"), "modelMatrix", modelMatrix)
+43     )*/
+44     ->Add(
+45         new Engine::Components::Graphics::MaterialValue<glm::vec4>(
+46             program->Shaders->Get("fragment"), "color", new glm::vec4(1\&.0f, 1\&.0f, 1\&.0f, 1\&.0f))
+47     );
+48 
+49     // create object
+50     Objects->Add("triangle", new ::Engine::Objects::Object(material, p, 9));
+51 }
+.fi
+.SS "void Engine::Components::Scene::SetActiveCamera (\fBCamera\fP * camera = \fCnullptr\fP)\fC [virtual]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 52 of file Scene\&.cpp\&.
+.PP
+References Engine::Components::Camera::Update()\&.
+.PP
+Referenced by Engine::Components::Camera::SetActive()\&.
+.PP
+.nf
+53 {
+54     if (camera == nullptr)
+55         ActiveCamera = Cameras->First();
+56     else
+57         ActiveCamera = camera;
+58     if(ActiveCamera != nullptr)
+59         ActiveCamera->Update();
+60 }
+.fi
+.SS "void Engine::Components::Scene::Unload (\fBBaseEngine\fP * engine)\fC [virtual]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 29 of file Scene\&.cpp\&.
+.PP
+.nf
+30 {
+31     for (auto& Object : *Objects)
+32         delete Object\&.second;
+33     Objects->clear();
+34     Loaded = false;
+35 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "Camera* Engine::Components::Scene::ActiveCamera\fC [inherited]\fP"
+
+.PP
+Definition at line 30 of file Scene\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::LightingChangeInputHandler::HandleKeys(), Application::Input::Handlers::CameraInputHandler::HandleKeys(), Application::Input::Handlers::CameraInputHandler::HandleMouse(), Application::Engines::LightEngine::Init(), and Engine::Components::Scene::Scene()\&.
+.SS "float* Application::Scenes::TriangleScene::angle\fC [private]\fP"
+
+.PP
+Definition at line 16 of file TriangleScene\&.h\&.
+.PP
+Referenced by TriangleScene()\&.
+.SS "\fBGeneric::Dictionary\fP<std::string, Camera*>* Engine::Components::Scene::Cameras\fC [inherited]\fP"
+
+.PP
+Definition at line 28 of file Scene\&.h\&.
+.PP
+Referenced by Application::Engines::CameraEngine::Init(), Application::Engines::LightEngine::Init(), and Engine::Components::Scene::Scene()\&.
+.SS "float* Application::Scenes::TriangleScene::color\fC [private]\fP"
+
+.PP
+Definition at line 17 of file TriangleScene\&.h\&.
+.PP
+Referenced by TriangleScene()\&.
+.SS "\fBGeneric::Dictionary\fP<std::string, \fBLight\fP*>* Engine::Components::Scene::Lights\fC [inherited]\fP"
+
+.PP
+Definition at line 29 of file Scene\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::LightingChangeInputHandler::HandleKeys(), Application::Engines::LightEngine::Init(), and Engine::Components::Scene::Scene()\&.
+.SS "bool Engine::Components::Scene::Loaded\fC [protected]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 18 of file Scene\&.h\&.
+.PP
+Referenced by Engine::Components::Scene::Scene()\&.
+.SS "glm::mat4* Application::Scenes::TriangleScene::modelMatrix\fC [private]\fP"
+
+.PP
+Definition at line 15 of file TriangleScene\&.h\&.
+.PP
+Referenced by TriangleScene()\&.
+.SS "\fBGeneric::Dictionary\fP<std::string, \fBEngine::Objects::Object\fP*>* Engine::Components::Scene::Objects\fC [inherited]\fP"
+
+.PP
+Definition at line 27 of file Scene\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::CameraInputHandler::HandleMouse(), Application::Engines::CameraEngine::Init(), Application::Engines::LightEngine::Init(), and Engine::Components::Scene::Scene()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

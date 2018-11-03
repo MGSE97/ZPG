@@ -1,0 +1,299 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="BaseInputHandler_8h" kind="file" language="C++">
+    <compoundname>BaseInputHandler.h</compoundname>
+    <includes refid="IInputHandler_8h" local="yes">IInputHandler.h</includes>
+    <includedby refid="BaseInputHandler_8cpp" local="yes">ZPG/BaseInputHandler.cpp</includedby>
+    <includedby refid="LightingChangeInputHandler_8h" local="yes">ZPG/LightingChangeInputHandler.h</includedby>
+    <incdepgraph>
+      <node id="252">
+        <label>list</label>
+      </node>
+      <node id="255">
+        <label>VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="256" relation="include">
+        </childnode>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="244" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+      </node>
+      <node id="261">
+        <label>MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="246" relation="include">
+        </childnode>
+        <childnode refid="250" relation="include">
+        </childnode>
+        <childnode refid="262" relation="include">
+        </childnode>
+      </node>
+      <node id="258">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="256" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+      </node>
+      <node id="246">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+        <childnode refid="248" relation="include">
+        </childnode>
+        <childnode refid="249" relation="include">
+        </childnode>
+        <childnode refid="250" relation="include">
+        </childnode>
+        <childnode refid="251" relation="include">
+        </childnode>
+      </node>
+      <node id="256">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+      </node>
+      <node id="251">
+        <label>string</label>
+      </node>
+      <node id="242">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="241">
+        <label>Window.h</label>
+        <link refid="Window_8h"/>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="244" relation="include">
+        </childnode>
+        <childnode refid="255" relation="include">
+        </childnode>
+        <childnode refid="248" relation="include">
+        </childnode>
+      </node>
+      <node id="254">
+        <label>map</label>
+      </node>
+      <node id="270">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="266" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="271" relation="include">
+        </childnode>
+      </node>
+      <node id="243">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="262">
+        <label>MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="246" relation="include">
+        </childnode>
+      </node>
+      <node id="240">
+        <label>IInputHandler.h</label>
+        <link refid="IInputHandler_8h"/>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="263" relation="include">
+        </childnode>
+      </node>
+      <node id="264">
+        <label>Object.h</label>
+        <link refid="Object_8h"/>
+        <childnode refid="255" relation="include">
+        </childnode>
+      </node>
+      <node id="271">
+        <label>glm/common.hpp</label>
+      </node>
+      <node id="250">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="268">
+        <label>Observable.h</label>
+        <link refid="Observable_8h"/>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="257" relation="include">
+        </childnode>
+      </node>
+      <node id="239">
+        <label>ZPG/BaseInputHandler.h</label>
+        <link refid="BaseInputHandler_8h"/>
+        <childnode refid="240" relation="include">
+        </childnode>
+      </node>
+      <node id="266">
+        <label>glm/vec3.hpp</label>
+      </node>
+      <node id="247">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="263">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="264" relation="include">
+        </childnode>
+        <childnode refid="265" relation="include">
+        </childnode>
+        <childnode refid="270" relation="include">
+        </childnode>
+      </node>
+      <node id="257">
+        <label>vector</label>
+      </node>
+      <node id="245">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="246" relation="include">
+        </childnode>
+        <childnode refid="252" relation="include">
+        </childnode>
+      </node>
+      <node id="260">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="251" relation="include">
+        </childnode>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="244" relation="include">
+        </childnode>
+        <childnode refid="246" relation="include">
+        </childnode>
+      </node>
+      <node id="259">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="269">
+        <label>Observer.h</label>
+        <link refid="Observer_8h"/>
+      </node>
+      <node id="248">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="244">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="242" relation="include">
+        </childnode>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="253" relation="include">
+        </childnode>
+        <childnode refid="251" relation="include">
+        </childnode>
+      </node>
+      <node id="253">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="254" relation="include">
+        </childnode>
+      </node>
+      <node id="249">
+        <label>xstring</label>
+      </node>
+      <node id="267">
+        <label>glm/mat4x4.hpp</label>
+      </node>
+      <node id="265">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="266" relation="include">
+        </childnode>
+        <childnode refid="267" relation="include">
+        </childnode>
+        <childnode refid="268" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="274">
+        <label>ZPG/LightingChangeInputHandler.h</label>
+        <link refid="LightingChangeInputHandler_8h"/>
+        <childnode refid="275" relation="include">
+        </childnode>
+        <childnode refid="276" relation="include">
+        </childnode>
+      </node>
+      <node id="272">
+        <label>ZPG/BaseInputHandler.h</label>
+        <link refid="BaseInputHandler_8h"/>
+        <childnode refid="273" relation="include">
+        </childnode>
+        <childnode refid="274" relation="include">
+        </childnode>
+      </node>
+      <node id="273">
+        <label>ZPG/BaseInputHandler.cpp</label>
+        <link refid="BaseInputHandler_8cpp"/>
+      </node>
+      <node id="276">
+        <label>ZPG/LigtEngine.cpp</label>
+        <link refid="LigtEngine_8cpp"/>
+      </node>
+      <node id="275">
+        <label>ZPG/LightingChangeInputHandler.cpp</label>
+        <link refid="LightingChangeInputHandler_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classEngine_1_1Components_1_1BaseInputHandler" prot="public">Engine::Components::BaseInputHandler</innerclass>
+    <innernamespace refid="namespaceEngine">Engine</innernamespace>
+    <innernamespace refid="namespaceEngine_1_1Components">Engine::Components</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="IInputHandler_8h" kindref="compound">IInputHandler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceEngine" kindref="compound">Engine</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6" refid="namespaceEngine_1_1Components" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Components</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8" refid="classEngine_1_1Components_1_1BaseInputHandler" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classEngine_1_1Components_1_1BaseInputHandler" kindref="compound">BaseInputHandler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1IInputHandler" kindref="compound">Engine::Components::IInputHandler</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1BaseInputHandler_1a6a40d61a56fa4f49ae7e6f8cd63c4877" kindref="member">BaseInputHandler</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1BaseInputHandler_1a538dba6ed33f86a6394c53bd5fb50abe" kindref="member">~BaseInputHandler</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1BaseInputHandler_1af7deea3367074324fdbefe48119d40ce" kindref="member">HandleKeys</ref>(<ref refid="classEngine_1_1BaseEngine" kindref="compound">BaseEngine</ref>*<sp/>engine,<sp/><ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Window</ref>*<sp/>window,<sp/><ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Scene</ref>*<sp/>scene,<sp/><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary&lt;short, bool&gt;</ref>&amp;<sp/>keys,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keysActive)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1BaseInputHandler_1a8b50fb66d01573616072d708075a721e" kindref="member">HandleMouse</ref>(<ref refid="classEngine_1_1BaseEngine" kindref="compound">BaseEngine</ref>*<sp/>engine,<sp/><ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Window</ref>*<sp/>window,<sp/><ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Scene</ref>*<sp/>scene,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>y,<sp/><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary&lt;short, bool&gt;</ref>&amp;<sp/>keys,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keysActive)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ZPG/BaseInputHandler.h"/>
+  </compounddef>
+</doxygen>

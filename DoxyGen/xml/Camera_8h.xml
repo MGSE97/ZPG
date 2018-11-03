@@ -1,0 +1,377 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="Camera_8h" kind="file" language="C++">
+    <compoundname>Camera.h</compoundname>
+    <includes local="no">glm/vec3.hpp</includes>
+    <includes local="no">glm/mat4x4.hpp</includes>
+    <includes refid="Observable_8h" local="yes">Observable.h</includes>
+    <includedby refid="Scene_8h" local="yes">ZPG/Scene.h</includedby>
+    <includedby refid="Camera_8cpp" local="yes">ZPG/Camera.cpp</includedby>
+    <incdepgraph>
+      <node id="401">
+        <label>list</label>
+      </node>
+      <node id="394">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="395" relation="include">
+        </childnode>
+        <childnode refid="396" relation="include">
+        </childnode>
+        <childnode refid="397" relation="include">
+        </childnode>
+        <childnode refid="398" relation="include">
+        </childnode>
+        <childnode refid="399" relation="include">
+        </childnode>
+        <childnode refid="400" relation="include">
+        </childnode>
+      </node>
+      <node id="400">
+        <label>string</label>
+      </node>
+      <node id="395">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="399">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="392">
+        <label>Observable.h</label>
+        <link refid="Observable_8h"/>
+        <childnode refid="393" relation="include">
+        </childnode>
+        <childnode refid="402" relation="include">
+        </childnode>
+        <childnode refid="403" relation="include">
+        </childnode>
+      </node>
+      <node id="390">
+        <label>glm/vec3.hpp</label>
+      </node>
+      <node id="396">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="403">
+        <label>vector</label>
+      </node>
+      <node id="393">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="394" relation="include">
+        </childnode>
+        <childnode refid="401" relation="include">
+        </childnode>
+      </node>
+      <node id="402">
+        <label>Observer.h</label>
+        <link refid="Observer_8h"/>
+      </node>
+      <node id="397">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="398">
+        <label>xstring</label>
+      </node>
+      <node id="391">
+        <label>glm/mat4x4.hpp</label>
+      </node>
+      <node id="389">
+        <label>ZPG/Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="390" relation="include">
+        </childnode>
+        <childnode refid="391" relation="include">
+        </childnode>
+        <childnode refid="392" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="417">
+        <label>ZPG/LigtEngine.h</label>
+        <link refid="LigtEngine_8h"/>
+        <childnode refid="416" relation="include">
+        </childnode>
+        <childnode refid="409" relation="include">
+        </childnode>
+        <childnode refid="418" relation="include">
+        </childnode>
+        <childnode refid="419" relation="include">
+        </childnode>
+      </node>
+      <node id="408">
+        <label>ZPG/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="432">
+        <label>ZPG/SphereScene.h</label>
+        <link refid="SphereScene_8h"/>
+        <childnode refid="413" relation="include">
+        </childnode>
+        <childnode refid="415" relation="include">
+        </childnode>
+        <childnode refid="419" relation="include">
+        </childnode>
+        <childnode refid="420" relation="include">
+        </childnode>
+        <childnode refid="422" relation="include">
+        </childnode>
+      </node>
+      <node id="415">
+        <label>ZPG/CameraEngine.cpp</label>
+        <link refid="CameraEngine_8cpp"/>
+      </node>
+      <node id="433">
+        <label>ZPG/Camera.cpp</label>
+        <link refid="Camera_8cpp"/>
+      </node>
+      <node id="434">
+        <label>ZPG/CameraScene.h</label>
+        <link refid="CameraScene_8h"/>
+        <childnode refid="435" relation="include">
+        </childnode>
+      </node>
+      <node id="424">
+        <label>ZPG/ZPGEngine.h</label>
+        <link refid="ZPGEngine_8h"/>
+        <childnode refid="425" relation="include">
+        </childnode>
+      </node>
+      <node id="406">
+        <label>ZPG/BaseEngine.h</label>
+        <link refid="BaseEngine_8h"/>
+        <childnode refid="407" relation="include">
+        </childnode>
+        <childnode refid="411" relation="include">
+        </childnode>
+        <childnode refid="412" relation="include">
+        </childnode>
+        <childnode refid="414" relation="include">
+        </childnode>
+        <childnode refid="416" relation="include">
+        </childnode>
+        <childnode refid="417" relation="include">
+        </childnode>
+        <childnode refid="420" relation="include">
+        </childnode>
+        <childnode refid="421" relation="include">
+        </childnode>
+        <childnode refid="423" relation="include">
+        </childnode>
+        <childnode refid="424" relation="include">
+        </childnode>
+      </node>
+      <node id="426">
+        <label>ZPG/IInputHandler.h</label>
+        <link refid="IInputHandler_8h"/>
+        <childnode refid="406" relation="include">
+        </childnode>
+        <childnode refid="411" relation="include">
+        </childnode>
+        <childnode refid="427" relation="include">
+        </childnode>
+        <childnode refid="430" relation="include">
+        </childnode>
+      </node>
+      <node id="429">
+        <label>ZPG/LightingChangeInputHandler.h</label>
+        <link refid="LightingChangeInputHandler_8h"/>
+        <childnode refid="418" relation="include">
+        </childnode>
+        <childnode refid="419" relation="include">
+        </childnode>
+      </node>
+      <node id="436">
+        <label>ZPG/Scene.cpp</label>
+        <link refid="Scene_8cpp"/>
+      </node>
+      <node id="421">
+        <label>ZPG/TriangleEngine.h</label>
+        <link refid="TriangleEngine_8h"/>
+        <childnode refid="422" relation="include">
+        </childnode>
+      </node>
+      <node id="422">
+        <label>ZPG/TriangleEngine.cpp</label>
+        <link refid="TriangleEngine_8cpp"/>
+      </node>
+      <node id="427">
+        <label>ZPG/BaseInputHandler.h</label>
+        <link refid="BaseInputHandler_8h"/>
+        <childnode refid="428" relation="include">
+        </childnode>
+        <childnode refid="429" relation="include">
+        </childnode>
+      </node>
+      <node id="428">
+        <label>ZPG/BaseInputHandler.cpp</label>
+        <link refid="BaseInputHandler_8cpp"/>
+      </node>
+      <node id="423">
+        <label>ZPG/TriangleScene.cpp</label>
+        <link refid="TriangleScene_8cpp"/>
+      </node>
+      <node id="407">
+        <label>ZPG/Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="408" relation="include">
+        </childnode>
+        <childnode refid="409" relation="include">
+        </childnode>
+        <childnode refid="410" relation="include">
+        </childnode>
+      </node>
+      <node id="405">
+        <label>ZPG/Scene.h</label>
+        <link refid="Scene_8h"/>
+        <childnode refid="406" relation="include">
+        </childnode>
+        <childnode refid="426" relation="include">
+        </childnode>
+        <childnode refid="431" relation="include">
+        </childnode>
+        <childnode refid="432" relation="include">
+        </childnode>
+        <childnode refid="433" relation="include">
+        </childnode>
+        <childnode refid="434" relation="include">
+        </childnode>
+        <childnode refid="436" relation="include">
+        </childnode>
+      </node>
+      <node id="425">
+        <label>ZPG/ZPGEngine.cpp</label>
+        <link refid="ZPGEngine_8cpp"/>
+      </node>
+      <node id="419">
+        <label>ZPG/LigtEngine.cpp</label>
+        <link refid="LigtEngine_8cpp"/>
+      </node>
+      <node id="409">
+        <label>ZPG/EngineRegistry.cpp</label>
+        <link refid="EngineRegistry_8cpp"/>
+      </node>
+      <node id="431">
+        <label>ZPG/TriangleScene.h</label>
+        <link refid="TriangleScene_8h"/>
+        <childnode refid="413" relation="include">
+        </childnode>
+        <childnode refid="415" relation="include">
+        </childnode>
+        <childnode refid="419" relation="include">
+        </childnode>
+        <childnode refid="422" relation="include">
+        </childnode>
+        <childnode refid="423" relation="include">
+        </childnode>
+        <childnode refid="425" relation="include">
+        </childnode>
+      </node>
+      <node id="414">
+        <label>ZPG/CameraEngine.h</label>
+        <link refid="CameraEngine_8h"/>
+        <childnode refid="415" relation="include">
+        </childnode>
+        <childnode refid="409" relation="include">
+        </childnode>
+      </node>
+      <node id="411">
+        <label>ZPG/BaseEngine.cpp</label>
+        <link refid="BaseEngine_8cpp"/>
+      </node>
+      <node id="413">
+        <label>ZPG/BasicEngine.cpp</label>
+        <link refid="BasicEngine_8cpp"/>
+      </node>
+      <node id="420">
+        <label>ZPG/SphereScene.cpp</label>
+        <link refid="SphereScene_8cpp"/>
+      </node>
+      <node id="435">
+        <label>ZPG/CameraScene.cpp</label>
+        <link refid="CameraScene_8cpp"/>
+      </node>
+      <node id="418">
+        <label>ZPG/LightingChangeInputHandler.cpp</label>
+        <link refid="LightingChangeInputHandler_8cpp"/>
+      </node>
+      <node id="410">
+        <label>ZPG/Main.cpp</label>
+        <link refid="Main_8cpp"/>
+      </node>
+      <node id="430">
+        <label>ZPG/CameraInputHandler.h</label>
+        <link refid="CameraInputHandler_8h"/>
+        <childnode refid="416" relation="include">
+        </childnode>
+        <childnode refid="419" relation="include">
+        </childnode>
+      </node>
+      <node id="404">
+        <label>ZPG/Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="405" relation="include">
+        </childnode>
+        <childnode refid="433" relation="include">
+        </childnode>
+      </node>
+      <node id="416">
+        <label>ZPG/CameraInputHandler.cpp</label>
+        <link refid="CameraInputHandler_8cpp"/>
+      </node>
+      <node id="412">
+        <label>ZPG/BasicEngine.h</label>
+        <link refid="BasicEngine_8h"/>
+        <childnode refid="413" relation="include">
+        </childnode>
+        <childnode refid="409" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classEngine_1_1Components_1_1Camera" prot="public">Engine::Components::Camera</innerclass>
+    <innernamespace refid="namespaceEngine">Engine</innernamespace>
+    <innernamespace refid="namespaceEngine_1_1Components">Engine::Components</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/vec3.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/mat4x4.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Observable_8h" kindref="compound">Observable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceEngine" kindref="compound">Engine</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Components</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">Scene;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="classEngine_1_1Components_1_1Camera" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Camera" kindref="compound">Camera</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classObservable" kindref="compound">Observable</ref>&lt;Camera&gt;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Camera_1ae8ad7f42b61412322436eadfa5261d5e" kindref="member">Camera</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Camera_1ac040fa629766d0b0deefa6412f004fad" kindref="member">~Camera</ref>();</highlight></codeline>
+<codeline lineno="17" refid="classEngine_1_1Components_1_1Camera_1ab2c3ed9a1321a95db8fca95bc7f4b290" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::vec3*<sp/><ref refid="classEngine_1_1Components_1_1Camera_1ab2c3ed9a1321a95db8fca95bc7f4b290" kindref="member">Position</ref>;</highlight></codeline>
+<codeline lineno="18" refid="classEngine_1_1Components_1_1Camera_1a23619a66046258f1158313f0c790ffa2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::vec3*<sp/><ref refid="classEngine_1_1Components_1_1Camera_1a23619a66046258f1158313f0c790ffa2" kindref="member">Direction</ref>;</highlight></codeline>
+<codeline lineno="19" refid="classEngine_1_1Components_1_1Camera_1a84a4199b9c60579a0f148b9980e05200" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::vec3*<sp/><ref refid="classEngine_1_1Components_1_1Camera_1a84a4199b9c60579a0f148b9980e05200" kindref="member">Up</ref>;</highlight></codeline>
+<codeline lineno="20" refid="classEngine_1_1Components_1_1Camera_1a10b30289c89694d13918a979bade13d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::vec3*<sp/><ref refid="classEngine_1_1Components_1_1Camera_1a10b30289c89694d13918a979bade13d9" kindref="member">Right</ref>;</highlight></codeline>
+<codeline lineno="21" refid="classEngine_1_1Components_1_1Camera_1a9d8692aa379c9ab00f69df10d1d3651b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::vec3*<sp/><ref refid="classEngine_1_1Components_1_1Camera_1a9d8692aa379c9ab00f69df10d1d3651b" kindref="member">Front</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::mat4*<sp/><ref refid="classEngine_1_1Components_1_1Camera_1ad24b41321813d1757cb6dd0db52e34dd" kindref="member">Get</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Camera" kindref="compound">Camera</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Camera_1aa80448fee84ef021ad89c29d10fbaafa" kindref="member">UpdateVectors</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Camera" kindref="compound">Camera</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Camera_1a364f5e22921e3d234b31297a64c7d932" kindref="member">Update</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Camera" kindref="compound">Camera</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Camera_1ada6e11faa2124d571b7d125fc8a0c72e" kindref="member">SetPosition</ref>(glm::vec3*<sp/>position);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Camera" kindref="compound">Camera</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Camera_1a7fdbe486e45390cbfc3961cb891440bd" kindref="member">SetDirection</ref>(glm::vec3*<sp/>direction);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Camera" kindref="compound">Camera</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Camera_1ac044899d9fbfa3818c99676855ec19fb" kindref="member">SetUp</ref>(glm::vec3*<sp/>up);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Camera" kindref="compound">Camera</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Camera_1af3ce56d4d1a66fa4e45ec8775e4149e7" kindref="member">SetActive</ref>(<ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Scene</ref>*<sp/>scene);</highlight></codeline>
+<codeline lineno="29" refid="classEngine_1_1Components_1_1Camera_1a5d131a78545d9f70496549946503b27a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::mat4*<sp/><ref refid="classEngine_1_1Components_1_1Camera_1a5d131a78545d9f70496549946503b27a" kindref="member">Value</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ZPG/Camera.h"/>
+  </compounddef>
+</doxygen>

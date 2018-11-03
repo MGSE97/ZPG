@@ -1,0 +1,562 @@
+\hypertarget{classApplication_1_1Engines_1_1ZPGEngine}{}\section{Application\+:\+:Engines\+:\+:Z\+P\+G\+Engine Class Reference}
+\label{classApplication_1_1Engines_1_1ZPGEngine}\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+
+
+{\ttfamily \#include $<$Z\+P\+G\+Engine.\+h$>$}
+
+
+
+Inheritance diagram for Application\+:\+:Engines\+:\+:Z\+P\+G\+Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{classApplication_1_1Engines_1_1ZPGEngine__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Application\+:\+:Engines\+:\+:Z\+P\+G\+Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classApplication_1_1Engines_1_1ZPGEngine__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classApplication_1_1Engines_1_1ZPGEngine}{Z\+P\+G\+Engine}} $\ast$ \mbox{\hyperlink{classApplication_1_1Engines_1_1ZPGEngine_a08a065a6200bf4465b71efa08f173cc5}{Init}} (std\+::\+F\+I\+LE $\ast$error\+Stream=stderr) override
+\item 
+void \mbox{\hyperlink{classApplication_1_1Engines_1_1ZPGEngine_a44b3d077ad688846aaa40d95ad14f851}{Update}} (\+::\mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Engine\+::\+Components\+::\+Window}} $\ast$window) override
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1BaseEngine_ad838c97afe1790cb35527f0b58e81e6b}{Base\+Engine}} $\ast$ \mbox{\hyperlink{classEngine_1_1BaseEngine_acd5cd5d2189d24e038b23477b7dce405}{Dispose}} ()
+\item 
+bool \mbox{\hyperlink{classEngine_1_1BaseEngine_a7a1c9b833049b3eb61194cab113dfe89}{Init\+Success}} ()
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1BaseEngine_afc82c6a00d5a9d4714740fc5eab5db86}{Set\+Active\+Scene}} (Components\+::\+Scene $\ast$scene=nullptr)
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1BaseEngine_a525fdc7a1da7eecb514ad5763f06be79}{Start}} ()
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1BaseEngine_a01c23c2073f08939a660f3b7a866852c}{Update}} (Components\+::\+Window $\ast$window)
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1BaseEngine_aace6be2a42d12b64fbd35f1acdb08408}{Update\+Begin}} (Components\+::\+Window $\ast$window)
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1BaseEngine_a7c07c98e583df042a0eb01e0ddec85a1}{Update\+End}} (Components\+::\+Window $\ast$window)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Components\+::\+Scene $\ast$ \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{Active\+Scene}}
+\item 
+float \mbox{\hyperlink{classApplication_1_1Engines_1_1ZPGEngine_adee8aa02ea2c15751eb6222bded1f729}{angle}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Collection}{Generic\+::\+Collection}}$<$ Components\+::\+I\+Input\+Handler $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1BaseEngine_a134fa082c5a64d62b76ddf926647e7cc}{Input\+Handlers}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ short, bool $>$ \mbox{\hyperlink{classEngine_1_1BaseEngine_a65321a97e83f0a6ee90df3efac2d3307}{Keys}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{classApplication_1_1Engines_1_1ZPGEngine_a6e982d6b97e8d538cdf8df9a7f4c6cd0}{M}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ short, bool $>$ \mbox{\hyperlink{classEngine_1_1BaseEngine_a3ee2bdddb66d45b8c808ffd937ba9c50}{Mouse\+Keys}}
+\item 
+double \mbox{\hyperlink{classEngine_1_1BaseEngine_a5fe085152ebe93346900407f6b41a034}{MouseX}}
+\item 
+double \mbox{\hyperlink{classEngine_1_1BaseEngine_a143c9c32dbbdc70bf1546ffe275bf384}{MouseY}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, Components\+::\+Graphics\+::\+Program $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1BaseEngine_ae0f86360ea3a384caefe443dd8f88601}{Programs}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, Components\+::\+Scene $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1BaseEngine_afd02af3c2fbe9bb734db014dec06585a}{Scenes}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, Components\+::\+Graphics\+::\+Shader $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1BaseEngine_a2582dee3f73da82bb422b43317b85e3b}{Shaders}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, Components\+::\+Window $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1BaseEngine_a4a1a4c4dae052e66ecc4f326eeed4d33}{Windows}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 8 of file Z\+P\+G\+Engine.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_acd5cd5d2189d24e038b23477b7dce405}\label{classEngine_1_1BaseEngine_acd5cd5d2189d24e038b23477b7dce405}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1BaseEngine}{Engine\+::\+Base\+Engine}} $\ast$ Engine\+::\+Base\+Engine\+::\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 51 of file Base\+Engine.\+cpp.
+
+
+\begin{DoxyCode}
+52 \{
+53     glfwTerminate();
+54     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+55 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classApplication_1_1Engines_1_1ZPGEngine_a08a065a6200bf4465b71efa08f173cc5}\label{classApplication_1_1Engines_1_1ZPGEngine_a08a065a6200bf4465b71efa08f173cc5}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!Init@{Init}}
+\index{Init@{Init}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classApplication_1_1Engines_1_1ZPGEngine}{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}} $\ast$ Application\+::\+Engines\+::\+Z\+P\+G\+Engine\+::\+Init (\begin{DoxyParamCaption}\item[{std\+::\+F\+I\+LE $\ast$}]{error\+Stream = {\ttfamily stderr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classEngine_1_1BaseEngine_ad9c141fe48c8c91e14e77ed5fcb90196}{Engine\+::\+Base\+Engine}}.
+
+
+
+Definition at line 22 of file Z\+P\+G\+Engine.\+cpp.
+
+
+
+References angle, fragment\+\_\+shader, M, Engine\+::\+Base\+Engine\+::\+Programs, Engine\+::\+Base\+Engine\+::\+Scenes, Engine\+::\+Base\+Engine\+::\+Set\+Active\+Scene(), Engine\+::\+Base\+Engine\+::\+Shaders, vertex\+\_\+shader, and Engine\+::\+Base\+Engine\+::\+Windows.
+
+
+\begin{DoxyCode}
+23 \{
+24     BaseEngine::Init(errorStream);
+25 
+26     \mbox{\hyperlink{classEngine_1_1BaseEngine_a4a1a4c4dae052e66ecc4f326eeed4d33}{Windows}}->Add(\textcolor{stringliteral}{"zpg"}, (new ::Engine::Components::Window(800, 600, \textcolor{stringliteral}{"ZPG"}, 100.0f))
+27         ->Show()
+28         ->Info(std::cout)
+29     );
+30 
+31 
+32     \mbox{\hyperlink{classEngine_1_1BaseEngine_a2582dee3f73da82bb422b43317b85e3b}{Shaders}}->Add(\textcolor{stringliteral}{"vertex"}, new ::Engine::Components::Shader(GL\_VERTEX\_SHADER, 
+      \mbox{\hyperlink{ZPGEngine_8cpp_afc33b8912f9f93d1d2544df04ad4a81a}{vertex\_shader}}));
+33     \mbox{\hyperlink{classEngine_1_1BaseEngine_a2582dee3f73da82bb422b43317b85e3b}{Shaders}}->Add(\textcolor{stringliteral}{"fragment"}, new ::Engine::Components::Shader(GL\_FRAGMENT\_SHADER, 
+      \mbox{\hyperlink{ZPGEngine_8cpp_ab187f2ba2a2f72ea5571921a1a856582}{fragment\_shader}}));
+34 
+35     \mbox{\hyperlink{classEngine_1_1BaseEngine_ae0f86360ea3a384caefe443dd8f88601}{Programs}}->Add(\textcolor{stringliteral}{"shader"}, (new ::Engine::Components::Program())->AddShaders(
+      \mbox{\hyperlink{classEngine_1_1BaseEngine_a2582dee3f73da82bb422b43317b85e3b}{Shaders}}));
+36 
+37     \mbox{\hyperlink{classEngine_1_1BaseEngine_afd02af3c2fbe9bb734db014dec06585a}{Scenes}}->Add((\mbox{\hyperlink{classEngine_1_1Components_1_1Scene}{Engine::Components::Scene}}*) \textcolor{keyword}{new} Scenes::TriangleScene());
+38 
+39     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = Objects->begin(); it != Objects->end(); ++it)
+40 
+41     \mbox{\hyperlink{classEngine_1_1BaseEngine_afc82c6a00d5a9d4714740fc5eab5db86}{SetActiveScene}}();
+42 
+43     \mbox{\hyperlink{classApplication_1_1Engines_1_1ZPGEngine_a6e982d6b97e8d538cdf8df9a7f4c6cd0}{M}} = glm::mat4(1.0f);
+44     \mbox{\hyperlink{classApplication_1_1Engines_1_1ZPGEngine_adee8aa02ea2c15751eb6222bded1f729}{angle}} = 0.0f;
+45     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+46 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classApplication_1_1Engines_1_1ZPGEngine_a08a065a6200bf4465b71efa08f173cc5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a7a1c9b833049b3eb61194cab113dfe89}\label{classEngine_1_1BaseEngine_a7a1c9b833049b3eb61194cab113dfe89}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!Init\+Success@{Init\+Success}}
+\index{Init\+Success@{Init\+Success}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{Init\+Success()}{InitSuccess()}}
+{\footnotesize\ttfamily bool Engine\+::\+Base\+Engine\+::\+Init\+Success (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 46 of file Base\+Engine.\+cpp.
+
+
+\begin{DoxyCode}
+47 \{
+48     \textcolor{keywordflow}{return} \mbox{\hyperlink{classEngine_1_1BaseEngine_a79e265845b321c0e9822fb170c564e55}{\_init}};
+49 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_afc82c6a00d5a9d4714740fc5eab5db86}\label{classEngine_1_1BaseEngine_afc82c6a00d5a9d4714740fc5eab5db86}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!Set\+Active\+Scene@{Set\+Active\+Scene}}
+\index{Set\+Active\+Scene@{Set\+Active\+Scene}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{Set\+Active\+Scene()}{SetActiveScene()}}
+{\footnotesize\ttfamily void Engine\+::\+Base\+Engine\+::\+Set\+Active\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Scene}{Components\+::\+Scene}} $\ast$}]{scene = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 132 of file Base\+Engine.\+cpp.
+
+
+
+Referenced by Application\+::\+Engines\+::\+Basic\+Engine\+::\+Init(), Init(), Application\+::\+Engines\+::\+Triangle\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), and Application\+::\+Engines\+::\+Light\+Engine\+::\+Init().
+
+
+\begin{DoxyCode}
+133 \{
+134     \textcolor{keywordflow}{if} (scene == \textcolor{keyword}{nullptr} && !\mbox{\hyperlink{classEngine_1_1BaseEngine_afd02af3c2fbe9bb734db014dec06585a}{Scenes}}->empty())
+135         \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}} = \mbox{\hyperlink{classEngine_1_1BaseEngine_afd02af3c2fbe9bb734db014dec06585a}{Scenes}}->begin()->second;
+136     \textcolor{keywordflow}{else}
+137         \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}} = scene;     
+138 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classEngine_1_1BaseEngine_afc82c6a00d5a9d4714740fc5eab5db86_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a525fdc7a1da7eecb514ad5763f06be79}\label{classEngine_1_1BaseEngine_a525fdc7a1da7eecb514ad5763f06be79}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!Start@{Start}}
+\index{Start@{Start}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Engine\+::\+Base\+Engine\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 126 of file Base\+Engine.\+cpp.
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+127 \{
+128     system(\textcolor{stringliteral}{"cls"});
+129     \mbox{\hyperlink{classEngine_1_1BaseEngine_aad3c237ca657b9f22f76fccf7fc7561f}{UpdateInternal}}();
+130 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classEngine_1_1BaseEngine_a525fdc7a1da7eecb514ad5763f06be79_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classApplication_1_1Engines_1_1ZPGEngine_a44b3d077ad688846aaa40d95ad14f851}\label{classApplication_1_1Engines_1_1ZPGEngine_a44b3d077ad688846aaa40d95ad14f851}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!Update@{Update}}
+\index{Update@{Update}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{Update()}{Update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Application\+::\+Engines\+::\+Z\+P\+G\+Engine\+::\+Update (\begin{DoxyParamCaption}\item[{\+::\mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Engine\+::\+Components\+::\+Window}} $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 48 of file Z\+P\+G\+Engine.\+cpp.
+
+
+\begin{DoxyCode}
+49 \{
+50     \textcolor{keywordflow}{for}(\textcolor{keyword}{auto} it = Objects->begin(); it != Objects->end(); ++it)
+51     \{
+52         \textcolor{comment}{/*ShaderProgram->Shaders[0]->SendUniform(ShaderProgram, "modelMatrix", M);}
+53 \textcolor{comment}{        ShaderProgram->Shaders[1]->SendUniform(ShaderProgram, "color", \_angle-(long)\_angle);*/}
+54         \textcolor{keyword}{auto} \textcolor{keywordtype}{object} = it->second;
+55         \textcolor{comment}{//Handle Objects}
+56         \textcolor{keywordtype}{object}->Program->Use();
+57         \textcolor{keywordtype}{object}->Program->Shaders->Get(\textcolor{stringliteral}{"vertex"})->SendUniform(object->Program, \textcolor{stringliteral}{"modelMatrix"}, 
+      \mbox{\hyperlink{classApplication_1_1Engines_1_1ZPGEngine_a6e982d6b97e8d538cdf8df9a7f4c6cd0}{M}});
+58         \textcolor{keywordtype}{object}->Program->Shaders->Get(\textcolor{stringliteral}{"fragment"})->SendUniform(object->Program, \textcolor{stringliteral}{"color"}, 
+      \mbox{\hyperlink{classApplication_1_1Engines_1_1ZPGEngine_adee8aa02ea2c15751eb6222bded1f729}{angle}} - (\textcolor{keywordtype}{long})\mbox{\hyperlink{classApplication_1_1Engines_1_1ZPGEngine_adee8aa02ea2c15751eb6222bded1f729}{angle}});
+59         \textcolor{keywordtype}{object}->Draw();
+60         \mbox{\hyperlink{classApplication_1_1Engines_1_1ZPGEngine_adee8aa02ea2c15751eb6222bded1f729}{angle}} += 0.1f;
+61     \}
+62 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a01c23c2073f08939a660f3b7a866852c}\label{classEngine_1_1BaseEngine_a01c23c2073f08939a660f3b7a866852c}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!Update@{Update}}
+\index{Update@{Update}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{Update()}{Update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Engine\+::\+Base\+Engine\+::\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Components\+::\+Window}} $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 112 of file Base\+Engine.\+cpp.
+
+
+\begin{DoxyCode}
+113 \{
+114 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_aace6be2a42d12b64fbd35f1acdb08408}\label{classEngine_1_1BaseEngine_aace6be2a42d12b64fbd35f1acdb08408}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!Update\+Begin@{Update\+Begin}}
+\index{Update\+Begin@{Update\+Begin}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{Update\+Begin()}{UpdateBegin()}}
+{\footnotesize\ttfamily void Engine\+::\+Base\+Engine\+::\+Update\+Begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Components\+::\+Window}} $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 57 of file Base\+Engine.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Window\+::\+Get().
+
+
+\begin{DoxyCode}
+58 \{
+59     \textcolor{comment}{// Scene}
+60     \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_af18bd334fe66952b8d79b8e9e99ab2d8}{BeginLoad}}(\textcolor{keyword}{this});
+61 
+62     \textcolor{comment}{// Buffers}
+63     glEnable(GL\_DEPTH\_TEST);
+64     glDepthFunc(GL\_LESS);
+65     glClear(GL\_COLOR\_BUFFER\_BIT | GL\_DEPTH\_BUFFER\_BIT);
+66 
+67     \textcolor{comment}{// Input}
+68     \textcolor{keywordtype}{short} mouseKeysActive = 0;
+69     glfwGetCursorPos(window->Get(), &\mbox{\hyperlink{classEngine_1_1BaseEngine_a5fe085152ebe93346900407f6b41a034}{MouseX}}, &\mbox{\hyperlink{classEngine_1_1BaseEngine_a143c9c32dbbdc70bf1546ffe275bf384}{MouseY}});
+70     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{short} i = 0; i < 8; i++)
+71     \{
+72         \textcolor{keyword}{const} \textcolor{keywordtype}{int} state = glfwGetMouseButton(window->Get(), i);
+73         \textcolor{keyword}{auto} value = \mbox{\hyperlink{classEngine_1_1BaseEngine_a3ee2bdddb66d45b8c808ffd937ba9c50}{MouseKeys}}[i];
+74         \textcolor{comment}{// flip state}
+75         \textcolor{keywordflow}{if} (state == GLFW\_PRESS && !value)
+76             \mbox{\hyperlink{classEngine_1_1BaseEngine_a3ee2bdddb66d45b8c808ffd937ba9c50}{MouseKeys}}.\mbox{\hyperlink{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}{Add}}(i, \textcolor{keyword}{true});
+77         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (state == GLFW\_RELEASE && value)
+78             \mbox{\hyperlink{classEngine_1_1BaseEngine_a3ee2bdddb66d45b8c808ffd937ba9c50}{MouseKeys}}.\mbox{\hyperlink{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}{Add}}(i, \textcolor{keyword}{false});
+79         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classEngine_1_1BaseEngine_a3ee2bdddb66d45b8c808ffd937ba9c50}{MouseKeys}}[i])
+80             mouseKeysActive++;
+81     \}
+82     \textcolor{keywordtype}{short} keysActive = 0;
+83     SetConsoleCursorPosition(GetStdHandle(STD\_OUTPUT\_HANDLE), \{ 40, keysActive \});
+84     fprintf(\mbox{\hyperlink{classEngine_1_1BaseEngine_a26fd54a1ee2733f9c654af5afcfa96cf}{\_errorStream}}, \textcolor{stringliteral}{"                           "});
+85     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{short} i = 1; i < 512; i++)
+86     \{
+87         \textcolor{keyword}{const} \textcolor{keywordtype}{int} state = glfwGetKey(window->Get(), i);
+88         \textcolor{keyword}{auto} value = \mbox{\hyperlink{classEngine_1_1BaseEngine_a65321a97e83f0a6ee90df3efac2d3307}{Keys}}[i];
+89         \textcolor{comment}{// flip state}
+90         \textcolor{keywordflow}{if} (state == GLFW\_PRESS && !value)
+91             \mbox{\hyperlink{classEngine_1_1BaseEngine_a65321a97e83f0a6ee90df3efac2d3307}{Keys}}.\mbox{\hyperlink{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}{Add}}(i, \textcolor{keyword}{true});
+92         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (state == GLFW\_RELEASE && value)
+93             \mbox{\hyperlink{classEngine_1_1BaseEngine_a65321a97e83f0a6ee90df3efac2d3307}{Keys}}.\mbox{\hyperlink{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}{Add}}(i, \textcolor{keyword}{false});
+94         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classEngine_1_1BaseEngine_a65321a97e83f0a6ee90df3efac2d3307}{Keys}}[i])
+95             keysActive++;
+96     \}
+97     \textcolor{keywordtype}{bool} handleKeys = \textcolor{keyword}{true},
+98          handleMouse = \textcolor{keyword}{true};
+99     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} handler : *\mbox{\hyperlink{classEngine_1_1BaseEngine_a134fa082c5a64d62b76ddf926647e7cc}{InputHandlers}})
+100     \{
+101         \textcolor{keywordflow}{if}(handleKeys)
+102             handleKeys = handler->HandleKeys(\textcolor{keyword}{this}, window, \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}, 
+      \mbox{\hyperlink{classEngine_1_1BaseEngine_a65321a97e83f0a6ee90df3efac2d3307}{Keys}}, keysActive);
+103         \textcolor{keywordflow}{if}(handleMouse)
+104             handleMouse = handler->HandleMouse(\textcolor{keyword}{this}, window, \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}, 
+      \mbox{\hyperlink{classEngine_1_1BaseEngine_a5fe085152ebe93346900407f6b41a034}{MouseX}}, \mbox{\hyperlink{classEngine_1_1BaseEngine_a143c9c32dbbdc70bf1546ffe275bf384}{MouseY}}, \mbox{\hyperlink{classEngine_1_1BaseEngine_a3ee2bdddb66d45b8c808ffd937ba9c50}{MouseKeys}}, mouseKeysActive);
+105         \textcolor{keywordflow}{if}(!handleKeys && !handleMouse)
+106             \textcolor{keywordflow}{break};
+107     \}
+108 
+109     SetConsoleCursorPosition(GetStdHandle(STD\_OUTPUT\_HANDLE), \{ 0,0 \});
+110 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classEngine_1_1BaseEngine_aace6be2a42d12b64fbd35f1acdb08408_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a7c07c98e583df042a0eb01e0ddec85a1}\label{classEngine_1_1BaseEngine_a7c07c98e583df042a0eb01e0ddec85a1}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!Update\+End@{Update\+End}}
+\index{Update\+End@{Update\+End}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{Update\+End()}{UpdateEnd()}}
+{\footnotesize\ttfamily void Engine\+::\+Base\+Engine\+::\+Update\+End (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Components\+::\+Window}} $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 116 of file Base\+Engine.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Window\+::\+Get().
+
+
+\begin{DoxyCode}
+117 \{
+118     \textcolor{comment}{// update other events like input handling}
+119     glfwPollEvents();
+120     \textcolor{comment}{// put the stuff we’ve been drawing onto the display}
+121     glfwSwapBuffers(window->Get());
+122 
+123     \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_abd8fcdcac52dbce6a0a18de3860ab087}{FrameUpdate}}(\textcolor{keyword}{this});
+124 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classEngine_1_1BaseEngine_a7c07c98e583df042a0eb01e0ddec85a1_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}\label{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!Active\+Scene@{Active\+Scene}}
+\index{Active\+Scene@{Active\+Scene}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{Active\+Scene}{ActiveScene}}
+{\footnotesize\ttfamily Components\+::\+Scene$\ast$ Engine\+::\+Base\+Engine\+::\+Active\+Scene\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 34 of file Base\+Engine.\+h.
+
+
+
+Referenced by Engine\+::\+Base\+Engine\+::\+Base\+Engine(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), and Application\+::\+Engines\+::\+Light\+Engine\+::\+Init().
+
+\mbox{\Hypertarget{classApplication_1_1Engines_1_1ZPGEngine_adee8aa02ea2c15751eb6222bded1f729}\label{classApplication_1_1Engines_1_1ZPGEngine_adee8aa02ea2c15751eb6222bded1f729}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!angle@{angle}}
+\index{angle@{angle}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{angle}{angle}}
+{\footnotesize\ttfamily float Application\+::\+Engines\+::\+Z\+P\+G\+Engine\+::angle\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 15 of file Z\+P\+G\+Engine.\+h.
+
+
+
+Referenced by Init().
+
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a134fa082c5a64d62b76ddf926647e7cc}\label{classEngine_1_1BaseEngine_a134fa082c5a64d62b76ddf926647e7cc}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!Input\+Handlers@{Input\+Handlers}}
+\index{Input\+Handlers@{Input\+Handlers}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{Input\+Handlers}{InputHandlers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Collection}{Generic\+::\+Collection}}$<$Components\+::\+I\+Input\+Handler$\ast$$>$$\ast$ Engine\+::\+Base\+Engine\+::\+Input\+Handlers\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 31 of file Base\+Engine.\+h.
+
+
+
+Referenced by Engine\+::\+Base\+Engine\+::\+Base\+Engine(), and Application\+::\+Engines\+::\+Light\+Engine\+::\+Init().
+
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a65321a97e83f0a6ee90df3efac2d3307}\label{classEngine_1_1BaseEngine_a65321a97e83f0a6ee90df3efac2d3307}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!Keys@{Keys}}
+\index{Keys@{Keys}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{Keys}{Keys}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$short, bool$>$ Engine\+::\+Base\+Engine\+::\+Keys\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 32 of file Base\+Engine.\+h.
+
+
+
+Referenced by Engine\+::\+Base\+Engine\+::\+Base\+Engine().
+
+\mbox{\Hypertarget{classApplication_1_1Engines_1_1ZPGEngine_a6e982d6b97e8d538cdf8df9a7f4c6cd0}\label{classApplication_1_1Engines_1_1ZPGEngine_a6e982d6b97e8d538cdf8df9a7f4c6cd0}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!M@{M}}
+\index{M@{M}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{M}{M}}
+{\footnotesize\ttfamily glm\+::mat4 Application\+::\+Engines\+::\+Z\+P\+G\+Engine\+::M\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 14 of file Z\+P\+G\+Engine.\+h.
+
+
+
+Referenced by Init().
+
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a3ee2bdddb66d45b8c808ffd937ba9c50}\label{classEngine_1_1BaseEngine_a3ee2bdddb66d45b8c808ffd937ba9c50}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!Mouse\+Keys@{Mouse\+Keys}}
+\index{Mouse\+Keys@{Mouse\+Keys}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{Mouse\+Keys}{MouseKeys}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$short, bool$>$ Engine\+::\+Base\+Engine\+::\+Mouse\+Keys\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 33 of file Base\+Engine.\+h.
+
+
+
+Referenced by Engine\+::\+Base\+Engine\+::\+Base\+Engine().
+
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a5fe085152ebe93346900407f6b41a034}\label{classEngine_1_1BaseEngine_a5fe085152ebe93346900407f6b41a034}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!MouseX@{MouseX}}
+\index{MouseX@{MouseX}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{MouseX}{MouseX}}
+{\footnotesize\ttfamily double Engine\+::\+Base\+Engine\+::\+MouseX\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 35 of file Base\+Engine.\+h.
+
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a143c9c32dbbdc70bf1546ffe275bf384}\label{classEngine_1_1BaseEngine_a143c9c32dbbdc70bf1546ffe275bf384}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!MouseY@{MouseY}}
+\index{MouseY@{MouseY}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{MouseY}{MouseY}}
+{\footnotesize\ttfamily double Engine\+::\+Base\+Engine\+::\+MouseY\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 36 of file Base\+Engine.\+h.
+
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_ae0f86360ea3a384caefe443dd8f88601}\label{classEngine_1_1BaseEngine_ae0f86360ea3a384caefe443dd8f88601}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!Programs@{Programs}}
+\index{Programs@{Programs}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{Programs}{Programs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$std\+::string, Components\+::\+Graphics\+::\+Program$\ast$$>$$\ast$ Engine\+::\+Base\+Engine\+::\+Programs\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 28 of file Base\+Engine.\+h.
+
+
+
+Referenced by Engine\+::\+Base\+Engine\+::\+Base\+Engine(), Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse(), Init(), Application\+::\+Engines\+::\+Triangle\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Basic\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Light\+Engine\+::\+Init(), Application\+::\+Scenes\+::\+Triangle\+Scene\+::\+Load(), and Application\+::\+Scenes\+::\+Sphere\+Scene\+::\+Load().
+
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_afd02af3c2fbe9bb734db014dec06585a}\label{classEngine_1_1BaseEngine_afd02af3c2fbe9bb734db014dec06585a}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!Scenes@{Scenes}}
+\index{Scenes@{Scenes}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{Scenes}{Scenes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$std\+::string, Components\+::\+Scene$\ast$$>$$\ast$ Engine\+::\+Base\+Engine\+::\+Scenes\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 30 of file Base\+Engine.\+h.
+
+
+
+Referenced by Engine\+::\+Base\+Engine\+::\+Base\+Engine(), Init(), Application\+::\+Engines\+::\+Triangle\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Basic\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), and Application\+::\+Engines\+::\+Light\+Engine\+::\+Init().
+
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a2582dee3f73da82bb422b43317b85e3b}\label{classEngine_1_1BaseEngine_a2582dee3f73da82bb422b43317b85e3b}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!Shaders@{Shaders}}
+\index{Shaders@{Shaders}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{Shaders}{Shaders}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$std\+::string, Components\+::\+Graphics\+::\+Shader$\ast$$>$$\ast$ Engine\+::\+Base\+Engine\+::\+Shaders\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 29 of file Base\+Engine.\+h.
+
+
+
+Referenced by Engine\+::\+Base\+Engine\+::\+Base\+Engine(), Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse(), Application\+::\+Engines\+::\+Triangle\+Engine\+::\+Init(), Init(), Application\+::\+Engines\+::\+Basic\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), and Application\+::\+Engines\+::\+Light\+Engine\+::\+Init().
+
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a4a1a4c4dae052e66ecc4f326eeed4d33}\label{classEngine_1_1BaseEngine_a4a1a4c4dae052e66ecc4f326eeed4d33}} 
+\index{Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}!Windows@{Windows}}
+\index{Windows@{Windows}!Application\+::\+Engines\+::\+Z\+P\+G\+Engine@{Application\+::\+Engines\+::\+Z\+P\+G\+Engine}}
+\subsubsection{\texorpdfstring{Windows}{Windows}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$std\+::string, Components\+::\+Window$\ast$$>$$\ast$ Engine\+::\+Base\+Engine\+::\+Windows\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 27 of file Base\+Engine.\+h.
+
+
+
+Referenced by Engine\+::\+Base\+Engine\+::\+Base\+Engine(), Init(), Application\+::\+Engines\+::\+Triangle\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Basic\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), and Application\+::\+Engines\+::\+Light\+Engine\+::\+Init().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{ZPGEngine_8h}{Z\+P\+G\+Engine.\+h}}\item 
+Z\+P\+G/\mbox{\hyperlink{ZPGEngine_8cpp}{Z\+P\+G\+Engine.\+cpp}}\end{DoxyCompactItemize}

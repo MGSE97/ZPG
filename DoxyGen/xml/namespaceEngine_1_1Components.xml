@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespaceEngine_1_1Components" kind="namespace" language="C++">
+    <compoundname>Engine::Components</compoundname>
+    <innerclass refid="classEngine_1_1Components_1_1BaseInputHandler" prot="public">Engine::Components::BaseInputHandler</innerclass>
+    <innerclass refid="classEngine_1_1Components_1_1Camera" prot="public">Engine::Components::Camera</innerclass>
+    <innerclass refid="classEngine_1_1Components_1_1Scene" prot="public">Engine::Components::Scene</innerclass>
+    <innerclass refid="classEngine_1_1Components_1_1Window" prot="public">Engine::Components::Window</innerclass>
+    <innernamespace refid="namespaceEngine_1_1Components_1_1Graphics">Engine::Components::Graphics</innernamespace>
+    <innernamespace refid="namespaceEngine_1_1Components_1_1Objects">Engine::Components::Objects</innernamespace>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceEngine_1_1Components_1ac8d3da616707b57e065fd62e6701415f" prot="public" static="no" mutable="no">
+        <type>__interface</type>
+        <definition>__interface Engine::Components::IInputHandler</definition>
+        <argsstring></argsstring>
+        <name>IInputHandler</name>
+        <initializer>{
+		public:
+			virtual bool HandleKeys(<ref refid="classEngine_1_1BaseEngine" kindref="compound">BaseEngine</ref>* engine, <ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Window</ref>* window, <ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Scene</ref>* scene, <ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary</ref>&lt;short,bool&gt;&amp; keys, int keysActive) = 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/IInputHandler.h" line="12" column="1" bodyfile="ZPG/IInputHandler.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceEngine_1_1Components_1a9a8cd7405775f5dee0a0944c4019cc93" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool Engine::Components::HandleMouse</definition>
+        <argsstring>(BaseEngine *engine, Window *window, Scene *scene, double x, double y, Generic::Dictionary&lt; short, bool &gt; &amp;keys, int keysActive)=0</argsstring>
+        <name>HandleMouse</name>
+        <param>
+          <type><ref refid="classEngine_1_1BaseEngine" kindref="compound">BaseEngine</ref> *</type>
+          <declname>engine</declname>
+        </param>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Window</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Scene</ref> *</type>
+          <declname>scene</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary</ref>&lt; short, bool &gt; &amp;</type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>keysActive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/IInputHandler.h" line="16" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ZPG/BaseInputHandler.h" line="7" column="1"/>
+  </compounddef>
+</doxygen>

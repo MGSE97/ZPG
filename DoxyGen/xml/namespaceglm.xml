@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespaceglm" kind="namespace" language="C++">
+    <compoundname>glm</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceglm_1a26fcf2bcb45df5795587d13a4e30e74e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vec3</type>
+        <definition>vec3 glm::Back</definition>
+        <argsstring>(0, 0, 1)</argsstring>
+        <name>Back</name>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>1</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/gmlExtensions.h" line="43" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceglm_1a7cc55d622858c4483a942b659dbee30d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vec3</type>
+        <definition>vec3 glm::Down</definition>
+        <argsstring>(0, -1, 0)</argsstring>
+        <name>Down</name>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>-</type>
+          <declname>1</declname>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/gmlExtensions.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceglm_1a95e780de06846d0eee634d15187b87ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vec3</type>
+        <definition>vec3 glm::Front</definition>
+        <argsstring>(0, 0, -1)</argsstring>
+        <name>Front</name>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>-</type>
+          <declname>1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/gmlExtensions.h" line="42" column="1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Camera_1aa80448fee84ef021ad89c29d10fbaafa" compoundref="Camera_8cpp" startline="29" endline="41">Engine::Components::Camera::UpdateVectors</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceglm_1a23fef243f5fe738c94f80aad5bf5087d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vec3</type>
+        <definition>vec3 glm::Left</definition>
+        <argsstring>(-1, 0, 0)</argsstring>
+        <name>Left</name>
+        <param>
+          <type>-</type>
+          <declname>1</declname>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/gmlExtensions.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceglm_1a8726baea7dc7bb32e57d33b0333d1def" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vec3</type>
+        <definition>vec3 glm::Right</definition>
+        <argsstring>(1, 0, 0)</argsstring>
+        <name>Right</name>
+        <param>
+          <type>1</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/gmlExtensions.h" line="41" column="1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Camera_1aa80448fee84ef021ad89c29d10fbaafa" compoundref="Camera_8cpp" startline="29" endline="41">Engine::Components::Camera::UpdateVectors</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceglm_1a885c1f58e3aeeb85a2bfacd2c741e8d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>vec2</type>
+        <definition>vec2 glm::rotateAround</definition>
+        <argsstring>(vec2 center, vec2 point, float angle)</argsstring>
+        <name>rotateAround</name>
+        <param>
+          <type>vec2</type>
+          <declname>center</declname>
+        </param>
+        <param>
+          <type>vec2</type>
+          <declname>point</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>angle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/gmlExtensions.h" line="32" column="1" bodyfile="ZPG/gmlExtensions.h" bodystart="32" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceglm_1a877b2ed5ef3e542d953a0768f9494f2b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float glm::simplify</definition>
+        <argsstring>(float vector, float value=1.f)</argsstring>
+        <name>simplify</name>
+        <param>
+          <type>float</type>
+          <declname>vector</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+          <defval>1.f</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/gmlExtensions.h" line="7" column="1" bodyfile="ZPG/gmlExtensions.h" bodystart="7" bodyend="14"/>
+        <referencedby refid="namespaceglm_1a1b1223920ce15b9bc024049ebc24ac25" compoundref="gmlExtensions_8h" startline="16" endline="23">simplify</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceglm_1a1b1223920ce15b9bc024049ebc24ac25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>vec3</type>
+        <definition>vec3 glm::simplify</definition>
+        <argsstring>(glm::vec3 vector, float value=1.f)</argsstring>
+        <name>simplify</name>
+        <param>
+          <type>glm::vec3</type>
+          <declname>vector</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+          <defval>1.f</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/gmlExtensions.h" line="16" column="1" bodyfile="ZPG/gmlExtensions.h" bodystart="16" bodyend="23"/>
+        <references refid="namespaceglm_1a877b2ed5ef3e542d953a0768f9494f2b" compoundref="gmlExtensions_8h" startline="7" endline="14">simplify</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceglm_1a091978f9c1c830d7388c42251c59dad4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>vec2</type>
+        <definition>vec2 glm::simplify</definition>
+        <argsstring>(glm::vec2 vector, float value=1.f)</argsstring>
+        <name>simplify</name>
+        <param>
+          <type>glm::vec2</type>
+          <declname>vector</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>value</declname>
+          <defval>1.f</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/gmlExtensions.h" line="24" column="1" bodyfile="ZPG/gmlExtensions.h" bodystart="24" bodyend="30"/>
+        <references refid="namespaceglm_1a877b2ed5ef3e542d953a0768f9494f2b" compoundref="gmlExtensions_8h" startline="7" endline="14">simplify</references>
+      </memberdef>
+      <memberdef kind="function" id="namespaceglm_1a35741e27838ab920dff5fbaba619829e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vec3</type>
+        <definition>vec3 glm::Up</definition>
+        <argsstring>(0, 1, 0)</argsstring>
+        <name>Up</name>
+        <param>
+          <type>0</type>
+        </param>
+        <param>
+          <type>1</type>
+        </param>
+        <param>
+          <type>0</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/gmlExtensions.h" line="38" column="1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Camera_1ad24b41321813d1757cb6dd0db52e34dd" compoundref="Camera_8cpp" startline="24" endline="27">Engine::Components::Camera::Get</referencedby>
+        <referencedby refid="classEngine_1_1Components_1_1Camera_1ac044899d9fbfa3818c99676855ec19fb" compoundref="Camera_8cpp" startline="65" endline="70">Engine::Components::Camera::SetUp</referencedby>
+        <referencedby refid="classEngine_1_1Components_1_1Camera_1aa80448fee84ef021ad89c29d10fbaafa" compoundref="Camera_8cpp" startline="29" endline="41">Engine::Components::Camera::UpdateVectors</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ZPG/gmlExtensions.h" line="6" column="1"/>
+  </compounddef>
+</doxygen>

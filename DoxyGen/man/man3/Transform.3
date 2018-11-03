@@ -1,0 +1,124 @@
+.TH "Transform" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Transform
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Transform\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTransform\fP ()"
+.br
+.ti -1c
+.RI "\fB~Transform\fP ()"
+.br
+.ti -1c
+.RI "glm::mat4 \fBGetMatrix\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "glm::vec3 \fBPosition\fP"
+.br
+.ti -1c
+.RI "glm::vec3 \fBRotation\fP"
+.br
+.ti -1c
+.RI "glm::vec3 \fBScale\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 5 of file Transform\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Transform::Transform ()"
+
+.PP
+Definition at line 33 of file Transform\&.cpp\&.
+.PP
+.nf
+33                       {
+34 
+35 }
+.fi
+.SS "Transform::~Transform ()"
+
+.PP
+Definition at line 37 of file Transform\&.cpp\&.
+.PP
+.nf
+37                        {
+38 
+39 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "glm::mat4 Transform::GetMatrix ()"
+
+.PP
+Definition at line 4 of file Transform\&.cpp\&.
+.PP
+References Position, Rotation, and Scale\&.
+.PP
+.nf
+4                              {
+5 
+6     return
+7         // Velikost
+8         glm::scale(
+9             // Rotace Z
+10             glm::rotate(
+11                 // Rotace Y
+12                 glm::rotate(
+13                     // Rotace X
+14                     glm::rotate(
+15                         // Posun na pozici
+16                         glm::translate(
+17                             glm::mat4(1\&.f),
+18                             Position
+19                         ),
+20                         Rotation\&.x,
+21                         glm::vec3(1, 0, 0)
+22                     ),
+23                     Rotation\&.y,
+24                     glm::vec3(0, 1, 0)
+25                 ),
+26                 Rotation\&.z,
+27                 glm::vec3(0, 0, 1)
+28             ),
+29             Scale
+30         );
+31 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "glm::vec3 Transform::Position"
+
+.PP
+Definition at line 7 of file Transform\&.h\&.
+.PP
+Referenced by GetMatrix()\&.
+.SS "glm::vec3 Transform::Rotation"
+
+.PP
+Definition at line 9 of file Transform\&.h\&.
+.PP
+Referenced by GetMatrix()\&.
+.SS "glm::vec3 Transform::Scale"
+
+.PP
+Definition at line 11 of file Transform\&.h\&.
+.PP
+Referenced by GetMatrix()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

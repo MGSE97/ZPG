@@ -1,0 +1,13 @@
+<map id="Application::Input::Handlers::LightingChangeInputHandler" name="Application::Input::Handlers::LightingChangeInputHandler">
+<area shape="rect" id="node2" href="$classEngine_1_1Components_1_1BaseInputHandler.html" title="{Engine::Components\l::BaseInputHandler\n||+ BaseInputHandler()\l+ ~BaseInputHandler()\l+ HandleKeys()\l+ HandleMouse()\l}" alt="" coords="496,1559,648,1695"/>
+<area shape="rect" id="node3" href="$classEngine_1_1Components_1_1IInputHandler.html" title="{IInputHandler\n||}" alt="" coords="453,1389,550,1467"/>
+<area shape="rect" id="node4" href="$classLight.html" title="{Light\n||+ Light()\l+ ~Light()\l+ Use()\l}" alt="" coords="739,1573,818,1680"/>
+<area shape="rect" id="node5" href="$classEngine_1_1Objects_1_1Object.html" title="{Engine::Objects::Object\n||+ Object()\l+ Object()\l+ ~Object()\l}" alt="" coords="574,1375,735,1481"/>
+<area shape="rect" id="node6" href="$classEngine_1_1Components_1_1Objects_1_1VertexObject.html" title="{Engine::Components\l::Objects::VertexObject\n||+ VertexObject()\l+ ~VertexObject()\l+ Draw()\l# Add()\l}" alt="" coords="509,1176,667,1312"/>
+<area shape="rect" id="node8" href="$classEngine_1_1Components_1_1Graphics_1_1Material.html" title="{Engine::Components\l::Graphics::Material\n||+ Material()\l+ ~Material()\l+ Add()\l+ Add()\l+ Use()\l}" alt="" coords="517,904,659,1055"/>
+<area shape="rect" id="node9" href="$classGeneric_1_1Collection.html" title="{Generic::Collection\l\&lt; Engine::Components\l::Graphics::MaterialValueBase *\&gt;\n||+ Add()\l+ First()\l}" alt="" coords="163,669,379,790"/>
+<area shape="rect" id="node11" href="$classGeneric_1_1Collection.html" title="{Generic::Collection\&lt; T \&gt;\n||+ Add()\l+ First()\l}" alt="" coords="189,419,352,511"/>
+<area shape="rect" id="node13" href="$classEngine_1_1Components_1_1Graphics_1_1Program.html" title="{Engine::Components\l::Graphics::Program\n||+ Program()\l+ ~Program()\l+ AddShader()\l+ AddShaders()\l+ Get()\l+ Link()\l+ Use()\l&#45; CheckLink()\l}" alt="" coords="517,632,659,827"/>
+<area shape="rect" id="node14" href="$classGeneric_1_1Dictionary.html" title="{Generic::Dictionary\l\&lt; std::string, Engine\l::Components::Graphics\l::Shader *\&gt;\n||+ Add()\l+ First()\l+ Get()\l+ Last()\l+ operator[]()\l}" alt="" coords="377,375,540,555"/>
+<area shape="rect" id="node16" href="$classGeneric_1_1Dictionary.html" title="{Generic::Dictionary\l\&lt; TKey, TValue \&gt;\n||+ Add()\l+ First()\l+ Get()\l+ Last()\l+ operator[]()\l}" alt="" coords="540,132,673,283"/>
+</map>

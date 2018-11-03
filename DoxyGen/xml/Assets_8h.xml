@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="Assets_8h" kind="file" language="C++">
+    <compoundname>Assets.h</compoundname>
+    <includes local="no">string</includes>
+    <includedby refid="Assets_8cpp" local="yes">ZPG/Assets.cpp</includedby>
+    <includedby refid="BasicEngine_8cpp" local="yes">ZPG/BasicEngine.cpp</includedby>
+    <includedby refid="CameraEngine_8cpp" local="yes">ZPG/CameraEngine.cpp</includedby>
+    <includedby refid="LigtEngine_8cpp" local="yes">ZPG/LigtEngine.cpp</includedby>
+    <incdepgraph>
+      <node id="84">
+        <label>string</label>
+      </node>
+      <node id="83">
+        <label>ZPG/Assets.h</label>
+        <link refid="Assets_8h"/>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="88">
+        <label>ZPG/CameraEngine.cpp</label>
+        <link refid="CameraEngine_8cpp"/>
+      </node>
+      <node id="85">
+        <label>ZPG/Assets.h</label>
+        <link refid="Assets_8h"/>
+        <childnode refid="86" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="88" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>ZPG/Assets.cpp</label>
+        <link refid="Assets_8cpp"/>
+      </node>
+      <node id="89">
+        <label>ZPG/LigtEngine.cpp</label>
+        <link refid="LigtEngine_8cpp"/>
+      </node>
+      <node id="87">
+        <label>ZPG/BasicEngine.cpp</label>
+        <link refid="BasicEngine_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classAssets" prot="public">Assets</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="classAssets" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classAssets" kindref="compound">Assets</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="7" refid="classAssets_1a2b541c116af365350c686285cb115d07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classAssets_1a2b541c116af365350c686285cb115d07" kindref="member">Directory</ref>;</highlight></codeline>
+<codeline lineno="8" refid="classAssets_1af94075606cda6aef8b4bdcbe17169af3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classAssets_1af94075606cda6aef8b4bdcbe17169af3" kindref="member">Shaders</ref>;</highlight></codeline>
+<codeline lineno="9" refid="classAssets_1ac712d5aca276086a3734e2e9f74cfc6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classAssets_1ac712d5aca276086a3734e2e9f74cfc6b" kindref="member">ShadersVertex</ref>;</highlight></codeline>
+<codeline lineno="10" refid="classAssets_1abb1ca75a8a9c7b942232df4aff9bb6c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="classAssets_1abb1ca75a8a9c7b942232df4aff9bb6c9" kindref="member">ShadersFragment</ref>;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+    </programlisting>
+    <location file="ZPG/Assets.h"/>
+  </compounddef>
+</doxygen>

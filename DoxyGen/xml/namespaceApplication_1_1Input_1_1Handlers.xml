@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespaceApplication_1_1Input_1_1Handlers" kind="namespace" language="C++">
+    <compoundname>Application::Input::Handlers</compoundname>
+    <innerclass refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler" prot="public">Application::Input::Handlers::CameraInputHandler</innerclass>
+    <innerclass refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler" prot="public">Application::Input::Handlers::LightingChangeInputHandler</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ZPG/CameraInputHandler.h" line="10" column="1"/>
+  </compounddef>
+</doxygen>

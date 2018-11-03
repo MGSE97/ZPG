@@ -1,0 +1,246 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="Light_8cpp" kind="file" language="C++">
+    <compoundname>Light.cpp</compoundname>
+    <includes refid="Light_8h" local="yes">Light.h</includes>
+    <includes local="no">glm/gtx/transform.hpp</includes>
+    <includes refid="spheref_8h" local="yes">Assets/Models/2/spheref.h</includes>
+    <incdepgraph>
+      <node id="916">
+        <label>list</label>
+      </node>
+      <node id="902">
+        <label>VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="903" relation="include">
+        </childnode>
+        <childnode refid="906" relation="include">
+        </childnode>
+        <childnode refid="908" relation="include">
+        </childnode>
+        <childnode refid="919" relation="include">
+        </childnode>
+      </node>
+      <node id="920">
+        <label>MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="915" relation="include">
+        </childnode>
+        <childnode refid="910" relation="include">
+        </childnode>
+        <childnode refid="914" relation="include">
+        </childnode>
+        <childnode refid="921" relation="include">
+        </childnode>
+      </node>
+      <node id="906">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="904" relation="include">
+        </childnode>
+        <childnode refid="903" relation="include">
+        </childnode>
+        <childnode refid="907" relation="include">
+        </childnode>
+      </node>
+      <node id="910">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="904" relation="include">
+        </childnode>
+        <childnode refid="911" relation="include">
+        </childnode>
+        <childnode refid="912" relation="include">
+        </childnode>
+        <childnode refid="913" relation="include">
+        </childnode>
+        <childnode refid="914" relation="include">
+        </childnode>
+        <childnode refid="915" relation="include">
+        </childnode>
+      </node>
+      <node id="924">
+        <label>Assets/Models/2/spheref.h</label>
+        <link refid="spheref_8h"/>
+      </node>
+      <node id="903">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="904" relation="include">
+        </childnode>
+        <childnode refid="905" relation="include">
+        </childnode>
+      </node>
+      <node id="915">
+        <label>string</label>
+      </node>
+      <node id="904">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="918">
+        <label>map</label>
+      </node>
+      <node id="899">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="900" relation="include">
+        </childnode>
+        <childnode refid="901" relation="include">
+        </childnode>
+        <childnode refid="922" relation="include">
+        </childnode>
+      </node>
+      <node id="921">
+        <label>MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="904" relation="include">
+        </childnode>
+        <childnode refid="910" relation="include">
+        </childnode>
+      </node>
+      <node id="901">
+        <label>Object.h</label>
+        <link refid="Object_8h"/>
+        <childnode refid="902" relation="include">
+        </childnode>
+      </node>
+      <node id="922">
+        <label>glm/common.hpp</label>
+      </node>
+      <node id="914">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="900">
+        <label>glm/vec3.hpp</label>
+      </node>
+      <node id="911">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="905">
+        <label>vector</label>
+      </node>
+      <node id="909">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="910" relation="include">
+        </childnode>
+        <childnode refid="916" relation="include">
+        </childnode>
+      </node>
+      <node id="919">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="917" relation="include">
+        </childnode>
+        <childnode refid="915" relation="include">
+        </childnode>
+        <childnode refid="920" relation="include">
+        </childnode>
+        <childnode refid="908" relation="include">
+        </childnode>
+        <childnode refid="910" relation="include">
+        </childnode>
+      </node>
+      <node id="907">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="912">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="908">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="904" relation="include">
+        </childnode>
+        <childnode refid="909" relation="include">
+        </childnode>
+        <childnode refid="917" relation="include">
+        </childnode>
+        <childnode refid="915" relation="include">
+        </childnode>
+      </node>
+      <node id="917">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="918" relation="include">
+        </childnode>
+      </node>
+      <node id="913">
+        <label>xstring</label>
+      </node>
+      <node id="923">
+        <label>glm/gtx/transform.hpp</label>
+      </node>
+      <node id="898">
+        <label>ZPG/Light.cpp</label>
+        <link refid="Light_8cpp"/>
+        <childnode refid="899" relation="include">
+        </childnode>
+        <childnode refid="923" relation="include">
+        </childnode>
+        <childnode refid="924" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="Light_8cpp_1abd75661fe7969e19439052a5f69ba5d1" prot="public" static="no">
+        <name>GLM_ENABLE_EXPERIMENTAL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Light.cpp" line="2" column="10" bodyfile="ZPG/Light.cpp" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Light_8h" kindref="compound">Light.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="Light_8cpp_1abd75661fe7969e19439052a5f69ba5d1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GLM_ENABLE_EXPERIMENTAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/gtx/transform.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="spheref_8h" kindref="compound">Assets/Models/2/spheref.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="classLight_1af33c52703fccd3142a2826893027884c" refkind="member"><highlight class="normal"><ref refid="classLight_1af33c52703fccd3142a2826893027884c" kindref="member">Light::Light</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Engine::Components::Graphics::Program</ref>*<sp/>program,<sp/>glm::vec3<sp/>position,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>power,<sp/>glm::vec3<sp/>color)<sp/>:<sp/>Object(new<sp/><ref refid="namespaceEngine" kindref="compound">Engine</ref>::Components::Graphics::Material(program),<sp/><ref refid="2_2sphere_8h_1a3663362197033eb86a9dcecea5a9d25f" kindref="member">sphere</ref>,<sp/>17280)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLight_1ab6a04fde7b96f06ab935cd1d53b91e0b" kindref="member">Position</ref><sp/>=<sp/>position;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLight_1a161f4944da390d9bc388091bafd59fe3" kindref="member">Power</ref><sp/>=<sp/>power;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLight_1ae5e1e9cb633cea9ad892e644354bd6d1" kindref="member">Color</ref><sp/>=<sp/>color;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classLight_1a2dc72d90843d70b86165cc11c57cc2c9" kindref="member">fColor</ref><sp/>=<sp/>glm::vec4(255.f*color.x,<sp/>255.f*color.y,<sp/>255.f*color.z,<sp/>power);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>*<ref refid="classEngine_1_1Objects_1_1Object_1acf41cc091fa270053245ed26bc28c8a4" kindref="member">ModelMatrix</ref><sp/>=<sp/>*(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>glm::mat4(glm::scale(glm::translate(*<ref refid="classEngine_1_1Objects_1_1Object_1acf41cc091fa270053245ed26bc28c8a4" kindref="member">ModelMatrix</ref>,<sp/>position),<sp/>glm::vec3(0.2*power,<sp/>0.2*power,<sp/>0.2*power))));</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a86c1fced4cdc5e59a66a635390a17eca" kindref="member">Material</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Material_1a34335608ba1e6eb2c2dba5032107eab0" kindref="member">Values</ref>-&gt;Add(</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;glm::vec4&gt;</ref>(</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>program-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1aff39fa56fc1fab1bce6c8a5ce29ae161" kindref="member">Shaders</ref>-&gt;Get(</highlight><highlight class="stringliteral">&quot;fragment&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;color&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classLight_1a2dc72d90843d70b86165cc11c57cc2c9" kindref="member">fColor</ref>)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>).Add(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;bool&gt;</ref>(</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>program-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1aff39fa56fc1fab1bce6c8a5ce29ae161" kindref="member">Shaders</ref>-&gt;Get(</highlight><highlight class="stringliteral">&quot;fragment&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;useLighting&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>bool(</highlight><highlight class="keyword">false</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>));;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Use(Material);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="classLight_1a3ee17fe1c669589285bd5c8b29b13721" refkind="member"><highlight class="normal"><ref refid="classLight" kindref="compound">Light</ref>*<sp/><ref refid="classLight_1a3ee17fe1c669589285bd5c8b29b13721" kindref="member">Light::Use</ref>(<ref refid="classEngine_1_1Components_1_1Graphics_1_1Material" kindref="compound">Engine::Components::Graphics::Material</ref>*<sp/>material)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>material-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Material_1a34335608ba1e6eb2c2dba5032107eab0" kindref="member">Values</ref>-&gt;Add(</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;glm::vec3&gt;</ref>(</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>material-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Material_1a2a4084db93bb70cd65032baf296803d6" kindref="member">Program</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1aff39fa56fc1fab1bce6c8a5ce29ae161" kindref="member">Shaders</ref>-&gt;Get(</highlight><highlight class="stringliteral">&quot;vertex&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;lightPos&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classLight_1ab6a04fde7b96f06ab935cd1d53b91e0b" kindref="member">Position</ref>)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>).Add(</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;float&gt;</ref>(</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>material-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Material_1a2a4084db93bb70cd65032baf296803d6" kindref="member">Program</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1aff39fa56fc1fab1bce6c8a5ce29ae161" kindref="member">Shaders</ref>-&gt;Get(</highlight><highlight class="stringliteral">&quot;fragment&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;lightStrength&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classLight_1a161f4944da390d9bc388091bafd59fe3" kindref="member">Power</ref>)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>).Add(</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;glm::vec3&gt;</ref>(</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>material-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Material_1a2a4084db93bb70cd65032baf296803d6" kindref="member">Program</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1aff39fa56fc1fab1bce6c8a5ce29ae161" kindref="member">Shaders</ref>-&gt;Get(</highlight><highlight class="stringliteral">&quot;fragment&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;lightColor&quot;</highlight><highlight class="normal">,<sp/>&amp;<ref refid="classLight_1ae5e1e9cb633cea9ad892e644354bd6d1" kindref="member">Color</ref>)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="ZPG/Light.cpp"/>
+  </compounddef>
+</doxygen>

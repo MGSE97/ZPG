@@ -1,0 +1,170 @@
+\hypertarget{classObservable}{}\section{Observable$<$ T $>$ Class Template Reference}
+\label{classObservable}\index{Observable$<$ T $>$@{Observable$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Observable.\+h$>$}
+
+
+
+Inheritance diagram for Observable$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classObservable__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Observable$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classObservable__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classObservable_a6cec7a5329100b5d45b078ff4bcd5f88}{Observable}} ()
+\item 
+virtual \mbox{\hyperlink{classObservable_a6d06df1c0feb2ce5a30c6fb7119c4045}{$\sim$\+Observable}} ()
+\item 
+void \mbox{\hyperlink{classObservable_aedd54eccbfad67066226ee0b958347ba}{Bind}} (\mbox{\hyperlink{classObserver}{Observer}}$<$ T $>$ \&observer)
+\item 
+void \mbox{\hyperlink{classObservable_afaa016d6c6b8a6fad20bb388d35ca014}{Notify}} ()
+\item 
+void \mbox{\hyperlink{classObservable_a141ac9aaacb2bf98b41349413c3487c0}{Un\+Bind}} (\mbox{\hyperlink{classObserver}{Observer}}$<$ T $>$ \&observer)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Collection}{Generic\+::\+Collection}}$<$ \mbox{\hyperlink{classObserver}{Observer}}$<$ T $>$ $\ast$ $>$ $\ast$ \mbox{\hyperlink{classObservable_ae6028589035c86e8a9c4375306dca702}{\+\_\+observers}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Observable$<$ T $>$}
+
+
+
+Definition at line 7 of file Observable.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classObservable_a6cec7a5329100b5d45b078ff4bcd5f88}\label{classObservable_a6cec7a5329100b5d45b078ff4bcd5f88}} 
+\index{Observable@{Observable}!Observable@{Observable}}
+\index{Observable@{Observable}!Observable@{Observable}}
+\subsubsection{\texorpdfstring{Observable()}{Observable()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\mbox{\hyperlink{classObservable}{Observable}}$<$ T $>$\+::\mbox{\hyperlink{classObservable}{Observable}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 10 of file Observable.\+h.
+
+
+\begin{DoxyCode}
+11     \{
+12         \mbox{\hyperlink{classObservable_ae6028589035c86e8a9c4375306dca702}{\_observers}} = \textcolor{keyword}{new} \mbox{\hyperlink{classGeneric_1_1Collection}{Generic::Collection<Observer<T>}}*>();
+13     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classObservable_a6d06df1c0feb2ce5a30c6fb7119c4045}\label{classObservable_a6d06df1c0feb2ce5a30c6fb7119c4045}} 
+\index{Observable@{Observable}!````~Observable@{$\sim$\+Observable}}
+\index{````~Observable@{$\sim$\+Observable}!Observable@{Observable}}
+\subsubsection{\texorpdfstring{$\sim$\+Observable()}{~Observable()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+virtual \mbox{\hyperlink{classObservable}{Observable}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classObservable}{Observable}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Definition at line 14 of file Observable.\+h.
+
+
+\begin{DoxyCode}
+15     \{
+16         \mbox{\hyperlink{classObservable_ae6028589035c86e8a9c4375306dca702}{\_observers}}->clear();
+17         \textcolor{keyword}{delete} \mbox{\hyperlink{classObservable_ae6028589035c86e8a9c4375306dca702}{\_observers}};
+18     \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classObservable_aedd54eccbfad67066226ee0b958347ba}\label{classObservable_aedd54eccbfad67066226ee0b958347ba}} 
+\index{Observable@{Observable}!Bind@{Bind}}
+\index{Bind@{Bind}!Observable@{Observable}}
+\subsubsection{\texorpdfstring{Bind()}{Bind()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+void \mbox{\hyperlink{classObservable}{Observable}}$<$ T $>$\+::Bind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}}$<$ T $>$ \&}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 19 of file Observable.\+h.
+
+
+\begin{DoxyCode}
+20     \{
+21         \mbox{\hyperlink{classObservable_ae6028589035c86e8a9c4375306dca702}{\_observers}}->\mbox{\hyperlink{classGeneric_1_1Collection_a602c700fa46602ce551b5c133793924c}{Add}}(&observer);
+22     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classObservable_afaa016d6c6b8a6fad20bb388d35ca014}\label{classObservable_afaa016d6c6b8a6fad20bb388d35ca014}} 
+\index{Observable@{Observable}!Notify@{Notify}}
+\index{Notify@{Notify}!Observable@{Observable}}
+\subsubsection{\texorpdfstring{Notify()}{Notify()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+void \mbox{\hyperlink{classObservable}{Observable}}$<$ T $>$\+::Notify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 27 of file Observable.\+h.
+
+
+\begin{DoxyCode}
+28     \{
+29         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = \mbox{\hyperlink{classObservable_ae6028589035c86e8a9c4375306dca702}{\_observers}}->begin(); it != \mbox{\hyperlink{classObservable_ae6028589035c86e8a9c4375306dca702}{\_observers}}->end(); ++it)
+30             (*it)->Update(static\_cast<T*>(\textcolor{keyword}{this}));
+31     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classObservable_a141ac9aaacb2bf98b41349413c3487c0}\label{classObservable_a141ac9aaacb2bf98b41349413c3487c0}} 
+\index{Observable@{Observable}!Un\+Bind@{Un\+Bind}}
+\index{Un\+Bind@{Un\+Bind}!Observable@{Observable}}
+\subsubsection{\texorpdfstring{Un\+Bind()}{UnBind()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+void \mbox{\hyperlink{classObservable}{Observable}}$<$ T $>$\+::Un\+Bind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}}$<$ T $>$ \&}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 23 of file Observable.\+h.
+
+
+\begin{DoxyCode}
+24     \{
+25         \mbox{\hyperlink{classObservable_ae6028589035c86e8a9c4375306dca702}{\_observers}}->remove(observer);
+26     \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classObservable_ae6028589035c86e8a9c4375306dca702}\label{classObservable_ae6028589035c86e8a9c4375306dca702}} 
+\index{Observable@{Observable}!\+\_\+observers@{\+\_\+observers}}
+\index{\+\_\+observers@{\+\_\+observers}!Observable@{Observable}}
+\subsubsection{\texorpdfstring{\+\_\+observers}{\_observers}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\mbox{\hyperlink{classGeneric_1_1Collection}{Generic\+::\+Collection}}$<$\mbox{\hyperlink{classObserver}{Observer}}$<$T$>$$\ast$$>$$\ast$ \mbox{\hyperlink{classObservable}{Observable}}$<$ T $>$\+::\+\_\+observers\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 33 of file Observable.\+h.
+
+
+
+Referenced by Observable$<$ Camera $>$\+::\+Bind(), Observable$<$ Camera $>$\+::\+Notify(), Observable$<$ Camera $>$\+::\+Observable(), Observable$<$ Camera $>$\+::\+Un\+Bind(), and Observable$<$ Camera $>$\+::$\sim$\+Observable().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{Observable_8h}{Observable.\+h}}\end{DoxyCompactItemize}

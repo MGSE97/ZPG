@@ -1,0 +1,83 @@
+.TH "Property< T >" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Property< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Property\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~Property\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBoperator T const &\fP () const"
+.br
+.ti -1c
+.RI "virtual T & \fBoperator=\fP (const T &f)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "T \fBvalue\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T>
+.br
+class Property< T >"
+
+.PP
+Definition at line 3 of file Property\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename T > virtual \fBProperty\fP< T >::~\fBProperty\fP ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 5 of file Property\&.h\&.
+.PP
+.nf
+5 {}
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T > virtual \fBProperty\fP< T >::operator T const & () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 7 of file Property\&.h\&.
+.PP
+References Property< T >::value\&.
+.PP
+.nf
+7 { return value; }
+.fi
+.SS "template<typename T > virtual T& \fBProperty\fP< T >::operator= (const T & f)\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 6 of file Property\&.h\&.
+.PP
+References Property< T >::value\&.
+.PP
+.nf
+6 { return value = f; }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename T > T \fBProperty\fP< T >::value\fC [protected]\fP"
+
+.PP
+Definition at line 9 of file Property\&.h\&.
+.PP
+Referenced by Property< T >::operator T const &(), and Property< T >::operator=()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

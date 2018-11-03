@@ -1,0 +1,273 @@
+\hypertarget{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler}{}\section{Application\+:\+:Input\+:\+:Handlers\+:\+:Camera\+Input\+Handler Class Reference}
+\label{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler}\index{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler}}
+
+
+{\ttfamily \#include $<$Camera\+Input\+Handler.\+h$>$}
+
+
+
+Inheritance diagram for Application\+:\+:Input\+:\+:Handlers\+:\+:Camera\+Input\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Application\+:\+:Input\+:\+:Handlers\+:\+:Camera\+Input\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_a1863bafdf1002ddebe45795112c4c324}{Camera\+Input\+Handler}} ()
+\item 
+\mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_a08ccb4be5e9da5e461b3b1905a8da90d}{$\sim$\+Camera\+Input\+Handler}} ()
+\item 
+bool \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_a149884ea2dc9deea39d3dcd10dfa74b1}{Handle\+Keys}} (\mbox{\hyperlink{classEngine_1_1BaseEngine}{Engine\+::\+Base\+Engine}} $\ast$engine, \mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Engine\+::\+Components\+::\+Window}} $\ast$window, \mbox{\hyperlink{classEngine_1_1Components_1_1Scene}{Engine\+::\+Components\+::\+Scene}} $\ast$scene, \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ short, bool $>$ \&keys, int keys\+Active) override
+\item 
+bool \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_ab06fa94ce5265dc06abb645ea29850bd}{Handle\+Mouse}} (\mbox{\hyperlink{classEngine_1_1BaseEngine}{Engine\+::\+Base\+Engine}} $\ast$engine, \mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Engine\+::\+Components\+::\+Window}} $\ast$window, \mbox{\hyperlink{classEngine_1_1Components_1_1Scene}{Engine\+::\+Components\+::\+Scene}} $\ast$scene, double x, double y, \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ short, bool $>$ \&keys, int keys\+Active) override
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::vec2 \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_ae8e329dd433afb42e5f53b5937a927fb}{\+\_\+last\+Mouse\+Position}}
+\item 
+float \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_a0157ef737743b53e5db833012cd27372}{\+\_\+pitch}}
+\item 
+float \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_a2fa09dcae6ed67d452d374a9fb629349}{\+\_\+yaw}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 11 of file Camera\+Input\+Handler.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_a1863bafdf1002ddebe45795112c4c324}\label{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_a1863bafdf1002ddebe45795112c4c324}} 
+\index{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler}!Camera\+Input\+Handler@{Camera\+Input\+Handler}}
+\index{Camera\+Input\+Handler@{Camera\+Input\+Handler}!Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler}}
+\subsubsection{\texorpdfstring{Camera\+Input\+Handler()}{CameraInputHandler()}}
+{\footnotesize\ttfamily Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Camera\+Input\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file Camera\+Input\+Handler.\+cpp.
+
+
+
+References \+\_\+last\+Mouse\+Position, \+\_\+pitch, and \+\_\+yaw.
+
+
+\begin{DoxyCode}
+16 \{
+17     \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_ae8e329dd433afb42e5f53b5937a927fb}{\_lastMousePosition}} = glm::vec2(-1, -1);
+18     \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_a2fa09dcae6ed67d452d374a9fb629349}{\_yaw}} = 0.f;
+19     \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_a0157ef737743b53e5db833012cd27372}{\_pitch}} = 0.f;
+20 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_a08ccb4be5e9da5e461b3b1905a8da90d}\label{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_a08ccb4be5e9da5e461b3b1905a8da90d}} 
+\index{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler}!````~Camera\+Input\+Handler@{$\sim$\+Camera\+Input\+Handler}}
+\index{````~Camera\+Input\+Handler@{$\sim$\+Camera\+Input\+Handler}!Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler}}
+\subsubsection{\texorpdfstring{$\sim$\+Camera\+Input\+Handler()}{~CameraInputHandler()}}
+{\footnotesize\ttfamily Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::$\sim$\+Camera\+Input\+Handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_a149884ea2dc9deea39d3dcd10dfa74b1}\label{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_a149884ea2dc9deea39d3dcd10dfa74b1}} 
+\index{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler}!Handle\+Keys@{Handle\+Keys}}
+\index{Handle\+Keys@{Handle\+Keys}!Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler}}
+\subsubsection{\texorpdfstring{Handle\+Keys()}{HandleKeys()}}
+{\footnotesize\ttfamily bool Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Keys (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1BaseEngine}{Engine\+::\+Base\+Engine}} $\ast$}]{engine,  }\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Engine\+::\+Components\+::\+Window}} $\ast$}]{window,  }\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Scene}{Engine\+::\+Components\+::\+Scene}} $\ast$}]{scene,  }\item[{\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ short, bool $>$ \&}]{keys,  }\item[{int}]{keys\+Active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 25 of file Camera\+Input\+Handler.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Scene\+::\+Active\+Camera, Engine\+::\+Components\+::\+Camera\+::\+Direction, Engine\+::\+Components\+::\+Camera\+::\+Front, Engine\+::\+Components\+::\+Camera\+::\+Position, Engine\+::\+Components\+::\+Camera\+::\+Right, Engine\+::\+Components\+::\+Camera\+::\+Up, and Engine\+::\+Components\+::\+Camera\+::\+Update().
+
+
+\begin{DoxyCode}
+26 \{
+27     \textcolor{keyword}{const} \textcolor{keywordtype}{float} speed = 0.2f;
+28     glm::vec3 change = glm::vec3(0);
+29 
+30     \textcolor{keywordflow}{if} (keys[\textcolor{charliteral}{'W'}])
+31          change -= *(scene->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a9d8692aa379c9ab00f69df10d1d3651b}{Front}}) * speed;
+32     \textcolor{keywordflow}{if} (keys[\textcolor{charliteral}{'S'}])
+33         change += *(scene->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a9d8692aa379c9ab00f69df10d1d3651b}{Front}}) * speed;
+34     \textcolor{keywordflow}{if} (keys[\textcolor{charliteral}{'A'}])
+35         change -= *(scene->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a10b30289c89694d13918a979bade13d9}{Right}}) * speed;
+36     \textcolor{keywordflow}{if} (keys[\textcolor{charliteral}{'D'}])
+37         change += *(scene->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a10b30289c89694d13918a979bade13d9}{Right}}) * speed;
+38     \textcolor{keywordflow}{if} (keys[\textcolor{charliteral}{'E'}])
+39         change -= *(scene->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a84a4199b9c60579a0f148b9980e05200}{Up}}) * speed;
+40     \textcolor{keywordflow}{if} (keys[\textcolor{charliteral}{'Q'}])
+41         change += *(scene->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a84a4199b9c60579a0f148b9980e05200}{Up}}) * speed;
+42 
+43     \textcolor{keywordflow}{if} (change != glm::vec3(0))
+44     \{
+45         *(scene->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_ab2c3ed9a1321a95db8fca95bc7f4b290}{Position}}) += change;
+46         *(scene->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a23619a66046258f1158313f0c790ffa2}{Direction}}) += change;
+47         scene->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a364f5e22921e3d234b31297a64c7d932}{Update}}();
+48     \}
+49     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+50 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_a149884ea2dc9deea39d3dcd10dfa74b1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_ab06fa94ce5265dc06abb645ea29850bd}\label{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_ab06fa94ce5265dc06abb645ea29850bd}} 
+\index{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler}!Handle\+Mouse@{Handle\+Mouse}}
+\index{Handle\+Mouse@{Handle\+Mouse}!Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler}}
+\subsubsection{\texorpdfstring{Handle\+Mouse()}{HandleMouse()}}
+{\footnotesize\ttfamily bool Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1BaseEngine}{Engine\+::\+Base\+Engine}} $\ast$}]{engine,  }\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Engine\+::\+Components\+::\+Window}} $\ast$}]{window,  }\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Scene}{Engine\+::\+Components\+::\+Scene}} $\ast$}]{scene,  }\item[{double}]{x,  }\item[{double}]{y,  }\item[{\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ short, bool $>$ \&}]{keys,  }\item[{int}]{keys\+Active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 53 of file Camera\+Input\+Handler.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Scene\+::\+Active\+Camera, Generic\+::\+Dictionary$<$ T\+Key, T\+Value $>$\+::\+Add(), Engine\+::\+Components\+::\+Camera\+::\+Direction, Generic\+::\+Dictionary$<$ T\+Key, T\+Value $>$\+::\+Get(), Engine\+::\+Components\+::\+Window\+::\+Height, M\+K\+\_\+R, Engine\+::\+Components\+::\+Scene\+::\+Objects, Engine\+::\+Base\+Engine\+::\+Programs, Engine\+::\+Components\+::\+Camera\+::\+Right, Engine\+::\+Base\+Engine\+::\+Shaders, sphere, Engine\+::\+Components\+::\+Camera\+::\+Up, Engine\+::\+Components\+::\+Camera\+::\+Update(), Engine\+::\+Components\+::\+Graphics\+::\+Material\+::\+Values, and Engine\+::\+Components\+::\+Window\+::\+Width.
+
+
+\begin{DoxyCode}
+54 \{
+55     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_ae8e329dd433afb42e5f53b5937a927fb}{\_lastMousePosition}}.x < 0)
+56     \{
+57         \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_ae8e329dd433afb42e5f53b5937a927fb}{\_lastMousePosition}}.x = x;
+58         \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_ae8e329dd433afb42e5f53b5937a927fb}{\_lastMousePosition}}.y = y;
+59     \}
+60     \textcolor{comment}{// Allow Move mouse without camera change}
+61     \textcolor{keywordflow}{if} (keys[\mbox{\hyperlink{IInputHandler_8h_a4cf9deae4ce7e88bc5a97b5678aa24d0}{MK\_R}}])
+62     \{
+63         \textcolor{keyword}{auto} fow = glm::radians(90.f);
+64         \textcolor{keyword}{const} \textcolor{keywordtype}{float} sensitivity = 10.f;
+65 
+66         \textcolor{keyword}{auto} diff = glm::vec2(x, y) - \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_ae8e329dd433afb42e5f53b5937a927fb}{\_lastMousePosition}};
+67         diff.x = diff.x * sensitivity * fow / \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(window->\mbox{\hyperlink{classEngine_1_1Components_1_1Window_ad5f71bfbb06ff5452b63bddf4b0c20b1}{Width}});
+68         diff.y = diff.y * sensitivity * fow / \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{float}\textcolor{keyword}{>}(window->\mbox{\hyperlink{classEngine_1_1Components_1_1Window_ad9cf40200634bff27dbc7ae9a841bb99}{Height}});
+69 
+70         fprintf(stderr, \textcolor{stringliteral}{"Diff: %f, %f\(\backslash\)t"}, diff.x, diff.y);
+71 
+72         \textcolor{keywordflow}{if} (diff.x != 0 || diff.y != 0)
+73         \{
+74             *(scene->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a23619a66046258f1158313f0c790ffa2}{Direction}}) += *(scene->
+      \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a10b30289c89694d13918a979bade13d9}{Right}}) * diff.x;
+75             *(scene->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a23619a66046258f1158313f0c790ffa2}{Direction}}) -= *(scene->
+      \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a84a4199b9c60579a0f148b9980e05200}{Up}}) * diff.y;
+76             scene->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a364f5e22921e3d234b31297a64c7d932}{Update}}();
+77         \}
+78     \}
+79 
+80     \textcolor{comment}{// Draw look point}
+81     \textcolor{keyword}{auto} name = \textcolor{stringliteral}{"target"};
+82     \textcolor{keyword}{auto} obj = scene->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}->\mbox{\hyperlink{classGeneric_1_1Dictionary_ad018bc166486129b48e9ededce313984}{Get}}(name);
+83     \textcolor{keywordflow}{if} (obj == \textcolor{keyword}{nullptr})
+84     \{
+85 
+86         \textcolor{keyword}{auto} mat = \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material}{Engine::Components::Graphics::Material}}(engine
+      ->\mbox{\hyperlink{classEngine_1_1BaseEngine_ae0f86360ea3a384caefe443dd8f88601}{Programs}}->Get(\textcolor{stringliteral}{"basic"}));
+87         mat->\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Material_a34335608ba1e6eb2c2dba5032107eab0}{Values}}->Add(\textcolor{keyword}{new} 
+      \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine::Components::Graphics::MaterialValue<glm::vec4>}}
+      (
+88             engine->\mbox{\hyperlink{classEngine_1_1BaseEngine_a2582dee3f73da82bb422b43317b85e3b}{Shaders}}->Get(\textcolor{stringliteral}{"fragment"}), \textcolor{stringliteral}{"color"}, \textcolor{keyword}{new} glm::vec4(255.f, 0.f, 0.f, 1.f)
+89         )).Add(\textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine::Components::Graphics::MaterialValue<bool>}}
+      (
+90             engine->\mbox{\hyperlink{classEngine_1_1BaseEngine_a2582dee3f73da82bb422b43317b85e3b}{Shaders}}->Get(\textcolor{stringliteral}{"fragment"}), \textcolor{stringliteral}{"useLighting"}, \textcolor{keyword}{new} bool(\textcolor{keyword}{false})
+91         ));
+92         \textcolor{keyword}{const} \textcolor{keyword}{auto} \textcolor{keywordtype}{object} = \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Objects_1_1Sphere}{Engine::Objects::Sphere}}(mat, 
+      \mbox{\hyperlink{2_2sphere_8h_a3663362197033eb86a9dcecea5a9d25f}{sphere}}, 17280, 3);
+93         *(\textcolor{keywordtype}{object}->ModelMatrix) = glm::scale(glm::translate(glm::mat4(1.f), *scene->
+      \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a23619a66046258f1158313f0c790ffa2}{Direction}}), glm::vec3(0.1f, 0.1f, 0.1f));
+94         scene->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}->\mbox{\hyperlink{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}{Add}}(name, \textcolor{keywordtype}{object});
+95     \}
+96     \textcolor{keywordflow}{else}
+97     \{
+98         *(obj->ModelMatrix) = glm::scale(glm::translate(glm::mat4(1.f), *scene->
+      \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a23619a66046258f1158313f0c790ffa2}{Direction}}), glm::vec3(0.1f, 0.1f, 0.1f));
+99     \}
+100 
+101     \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_ae8e329dd433afb42e5f53b5937a927fb}{\_lastMousePosition}}.x = x;
+102     \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_ae8e329dd433afb42e5f53b5937a927fb}{\_lastMousePosition}}.y = y;
+103     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+104 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_ab06fa94ce5265dc06abb645ea29850bd_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_ae8e329dd433afb42e5f53b5937a927fb}\label{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_ae8e329dd433afb42e5f53b5937a927fb}} 
+\index{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler}!\+\_\+last\+Mouse\+Position@{\+\_\+last\+Mouse\+Position}}
+\index{\+\_\+last\+Mouse\+Position@{\+\_\+last\+Mouse\+Position}!Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler}}
+\subsubsection{\texorpdfstring{\+\_\+last\+Mouse\+Position}{\_lastMousePosition}}
+{\footnotesize\ttfamily glm\+::vec2 Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+\_\+last\+Mouse\+Position\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 14 of file Camera\+Input\+Handler.\+h.
+
+
+
+Referenced by Camera\+Input\+Handler().
+
+\mbox{\Hypertarget{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_a0157ef737743b53e5db833012cd27372}\label{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_a0157ef737743b53e5db833012cd27372}} 
+\index{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler}!\+\_\+pitch@{\+\_\+pitch}}
+\index{\+\_\+pitch@{\+\_\+pitch}!Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler}}
+\subsubsection{\texorpdfstring{\+\_\+pitch}{\_pitch}}
+{\footnotesize\ttfamily float Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+\_\+pitch\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 15 of file Camera\+Input\+Handler.\+h.
+
+
+
+Referenced by Camera\+Input\+Handler().
+
+\mbox{\Hypertarget{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_a2fa09dcae6ed67d452d374a9fb629349}\label{classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_a2fa09dcae6ed67d452d374a9fb629349}} 
+\index{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler}!\+\_\+yaw@{\+\_\+yaw}}
+\index{\+\_\+yaw@{\+\_\+yaw}!Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler}}
+\subsubsection{\texorpdfstring{\+\_\+yaw}{\_yaw}}
+{\footnotesize\ttfamily float Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+\_\+yaw\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 16 of file Camera\+Input\+Handler.\+h.
+
+
+
+Referenced by Camera\+Input\+Handler().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{CameraInputHandler_8h}{Camera\+Input\+Handler.\+h}}\item 
+Z\+P\+G/\mbox{\hyperlink{CameraInputHandler_8cpp}{Camera\+Input\+Handler.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,328 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="Main_8cpp" kind="file" language="C++">
+    <compoundname>Main.cpp</compoundname>
+    <includes local="no">GL/glew.h</includes>
+    <includes refid="Application_8h" local="yes">Application.h</includes>
+    <includes local="no">iostream</includes>
+    <incdepgraph>
+      <node id="1163">
+        <label>list</label>
+      </node>
+      <node id="1166">
+        <label>VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="1167" relation="include">
+        </childnode>
+        <childnode refid="1169" relation="include">
+        </childnode>
+        <childnode refid="1156" relation="include">
+        </childnode>
+        <childnode refid="1171" relation="include">
+        </childnode>
+      </node>
+      <node id="1172">
+        <label>MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="1153" relation="include">
+        </childnode>
+        <childnode refid="1158" relation="include">
+        </childnode>
+        <childnode refid="1162" relation="include">
+        </childnode>
+        <childnode refid="1173" relation="include">
+        </childnode>
+      </node>
+      <node id="1169">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="1149" relation="include">
+        </childnode>
+        <childnode refid="1167" relation="include">
+        </childnode>
+        <childnode refid="1170" relation="include">
+        </childnode>
+      </node>
+      <node id="1158">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="1149" relation="include">
+        </childnode>
+        <childnode refid="1159" relation="include">
+        </childnode>
+        <childnode refid="1160" relation="include">
+        </childnode>
+        <childnode refid="1161" relation="include">
+        </childnode>
+        <childnode refid="1162" relation="include">
+        </childnode>
+        <childnode refid="1153" relation="include">
+        </childnode>
+      </node>
+      <node id="1167">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="1149" relation="include">
+        </childnode>
+        <childnode refid="1168" relation="include">
+        </childnode>
+      </node>
+      <node id="1153">
+        <label>string</label>
+      </node>
+      <node id="1149">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="1164">
+        <label>Window.h</label>
+        <link refid="Window_8h"/>
+        <childnode refid="1149" relation="include">
+        </childnode>
+        <childnode refid="1165" relation="include">
+        </childnode>
+        <childnode refid="1156" relation="include">
+        </childnode>
+        <childnode refid="1166" relation="include">
+        </childnode>
+        <childnode refid="1160" relation="include">
+        </childnode>
+      </node>
+      <node id="1152">
+        <label>map</label>
+      </node>
+      <node id="1181">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="1177" relation="include">
+        </childnode>
+        <childnode refid="1175" relation="include">
+        </childnode>
+        <childnode refid="1182" relation="include">
+        </childnode>
+      </node>
+      <node id="1165">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="1173">
+        <label>MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="1149" relation="include">
+        </childnode>
+        <childnode refid="1158" relation="include">
+        </childnode>
+      </node>
+      <node id="1154">
+        <label>BaseEngine.h</label>
+        <link refid="BaseEngine_8h"/>
+        <childnode refid="1155" relation="include">
+        </childnode>
+        <childnode refid="1151" relation="include">
+        </childnode>
+        <childnode refid="1156" relation="include">
+        </childnode>
+        <childnode refid="1164" relation="include">
+        </childnode>
+        <childnode refid="1174" relation="include">
+        </childnode>
+        <childnode refid="1183" relation="include">
+        </childnode>
+      </node>
+      <node id="1183">
+        <label>IInputHandler.h</label>
+        <link refid="IInputHandler_8h"/>
+        <childnode refid="1164" relation="include">
+        </childnode>
+        <childnode refid="1174" relation="include">
+        </childnode>
+      </node>
+      <node id="1175">
+        <label>Object.h</label>
+        <link refid="Object_8h"/>
+        <childnode refid="1166" relation="include">
+        </childnode>
+      </node>
+      <node id="1182">
+        <label>glm/common.hpp</label>
+      </node>
+      <node id="1155">
+        <label>ostream</label>
+      </node>
+      <node id="1162">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="1179">
+        <label>Observable.h</label>
+        <link refid="Observable_8h"/>
+        <childnode refid="1157" relation="include">
+        </childnode>
+        <childnode refid="1180" relation="include">
+        </childnode>
+        <childnode refid="1168" relation="include">
+        </childnode>
+      </node>
+      <node id="1177">
+        <label>glm/vec3.hpp</label>
+      </node>
+      <node id="1159">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="1150">
+        <label>Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="1151" relation="include">
+        </childnode>
+        <childnode refid="1153" relation="include">
+        </childnode>
+        <childnode refid="1154" relation="include">
+        </childnode>
+      </node>
+      <node id="1174">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+        <childnode refid="1151" relation="include">
+        </childnode>
+        <childnode refid="1175" relation="include">
+        </childnode>
+        <childnode refid="1176" relation="include">
+        </childnode>
+        <childnode refid="1181" relation="include">
+        </childnode>
+      </node>
+      <node id="1168">
+        <label>vector</label>
+      </node>
+      <node id="1157">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="1158" relation="include">
+        </childnode>
+        <childnode refid="1163" relation="include">
+        </childnode>
+      </node>
+      <node id="1171">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="1151" relation="include">
+        </childnode>
+        <childnode refid="1153" relation="include">
+        </childnode>
+        <childnode refid="1172" relation="include">
+        </childnode>
+        <childnode refid="1156" relation="include">
+        </childnode>
+        <childnode refid="1158" relation="include">
+        </childnode>
+      </node>
+      <node id="1170">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="1180">
+        <label>Observer.h</label>
+        <link refid="Observer_8h"/>
+      </node>
+      <node id="1160">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="1184">
+        <label>iostream</label>
+      </node>
+      <node id="1156">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="1149" relation="include">
+        </childnode>
+        <childnode refid="1157" relation="include">
+        </childnode>
+        <childnode refid="1151" relation="include">
+        </childnode>
+        <childnode refid="1153" relation="include">
+        </childnode>
+      </node>
+      <node id="1151">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="1152" relation="include">
+        </childnode>
+      </node>
+      <node id="1161">
+        <label>xstring</label>
+      </node>
+      <node id="1178">
+        <label>glm/mat4x4.hpp</label>
+      </node>
+      <node id="1148">
+        <label>ZPG/Main.cpp</label>
+        <link refid="Main_8cpp"/>
+        <childnode refid="1149" relation="include">
+        </childnode>
+        <childnode refid="1150" relation="include">
+        </childnode>
+        <childnode refid="1184" relation="include">
+        </childnode>
+      </node>
+      <node id="1176">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="1177" relation="include">
+        </childnode>
+        <childnode refid="1178" relation="include">
+        </childnode>
+        <childnode refid="1179" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="Main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(void)</argsstring>
+        <name>main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Main.cpp" line="8" column="1" bodyfile="ZPG/Main.cpp" bodystart="8" bodyend="20"/>
+        <references refid="classApplication_1_1Application_1a4f2808bddfc3f8fb2ed3a3fe0d4659ff" compoundref="Application_8h" startline="14">Application::Application::Engines</references>
+        <references refid="classGeneric_1_1Dictionary_1ad018bc166486129b48e9ededce313984" compoundref="Dictionary_8h" startline="21" endline="27">Generic::Dictionary&lt; TKey, TValue &gt;::Get</references>
+        <references refid="classApplication_1_1Application_1ada268208f57ef136e006bb62fb30ffec" compoundref="Application_8cpp" startline="19" endline="23">Application::Application::GetIntance</references>
+        <references refid="classApplication_1_1Application_1a478f6946c4bf5361281681f2b58385c3" compoundref="Application_8cpp" startline="25" endline="29">Application::Application::Init</references>
+        <references refid="classEngine_1_1BaseEngine_1ad9c141fe48c8c91e14e77ed5fcb90196" compoundref="BaseEngine_8cpp" startline="31" endline="44">Engine::BaseEngine::Init</references>
+        <references refid="classEngine_1_1BaseEngine_1a525fdc7a1da7eecb514ad5763f06be79" compoundref="BaseEngine_8cpp" startline="126" endline="130">Engine::BaseEngine::Start</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//Include<sp/>GLEW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL/glew.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//Include<sp/>the<sp/>standard<sp/>C++<sp/>headers<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Application_8h" kindref="compound">Application.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="Main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="Main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" kindref="member">main</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Application_1ada268208f57ef136e006bb62fb30ffec" kindref="member">Application::Application::GetIntance</ref>()-&gt;<ref refid="classApplication_1_1Application_1a478f6946c4bf5361281681f2b58385c3" kindref="member">Init</ref>()</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;<ref refid="classApplication_1_1Application_1a4f2808bddfc3f8fb2ed3a3fe0d4659ff" kindref="member">Engines</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//-&gt;Get(&quot;basic&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//-&gt;Get(&quot;camera&quot;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;<ref refid="classGeneric_1_1Dictionary_1ad018bc166486129b48e9ededce313984" kindref="member">Get</ref>(</highlight><highlight class="stringliteral">&quot;light&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;<ref refid="classEngine_1_1BaseEngine_1ad9c141fe48c8c91e14e77ed5fcb90196" kindref="member">Init</ref>(stdout)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;<ref refid="classEngine_1_1BaseEngine_1a525fdc7a1da7eecb514ad5763f06be79" kindref="member">Start</ref>();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>v;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cin<sp/>&gt;&gt;<sp/>v;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="ZPG/Main.cpp"/>
+  </compounddef>
+</doxygen>

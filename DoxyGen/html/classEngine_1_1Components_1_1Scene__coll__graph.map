@@ -1,0 +1,12 @@
+<map id="Engine::Components::Scene" name="Engine::Components::Scene">
+<area shape="rect" id="node2" href="$classEngine_1_1Components_1_1Camera.html" title="{Engine::Components\l::Camera\n||+ Camera()\l+ ~Camera()\l+ Get()\l+ SetActive()\l+ SetDirection()\l+ SetPosition()\l+ SetUp()\l+ Update()\l+ UpdateVectors()\l}" alt="" coords="343,927,486,1136"/>
+<area shape="rect" id="node3" href="$classObservable.html" title="{Observable\&lt; Camera \&gt;\n||+ Observable()\l+ ~Observable()\l+ Bind()\l+ Notify()\l+ UnBind()\l}" alt="" coords="167,662,321,798"/>
+<area shape="rect" id="node4" href="$classGeneric_1_1Collection.html" title="{Generic::Collection\l\&lt; Observer\&lt; Camera \&gt; *\&gt;\n||+ Add()\l+ First()\l}" alt="" coords="189,287,360,393"/>
+<area shape="rect" id="node6" href="$classGeneric_1_1Collection.html" title="{Generic::Collection\&lt; T \&gt;\n||+ Add()\l+ First()\l}" alt="" coords="168,132,331,224"/>
+<area shape="rect" id="node9" href="$classGeneric_1_1Collection.html" title="{Generic::Collection\l\&lt; Observer\&lt; T \&gt; *\&gt;\n||+ Add()\l+ First()\l}" alt="" coords="32,287,165,393"/>
+<area shape="rect" id="node8" href="$classObservable.html" title="{Observable\&lt; T \&gt;\n||+ Observable()\l+ ~Observable()\l+ Bind()\l+ Notify()\l+ UnBind()\l}" alt="" coords="56,456,173,592"/>
+<area shape="rect" id="node13" href="$classGeneric_1_1Dictionary.html" title="{Generic::Dictionary\l\&lt; std::string, Light *\&gt;\n||+ Add()\l+ First()\l+ Get()\l+ Last()\l+ operator[]()\l}" alt="" coords="549,956,694,1107"/>
+<area shape="rect" id="node15" href="$classGeneric_1_1Dictionary.html" title="{Generic::Dictionary\l\&lt; TKey, TValue \&gt;\n||+ Add()\l+ First()\l+ Get()\l+ Last()\l+ operator[]()\l}" alt="" coords="721,655,855,805"/>
+<area shape="rect" id="node17" href="$classGeneric_1_1Dictionary.html" title="{Generic::Dictionary\l\&lt; std::string, Engine\l::Components::Camera *\&gt;\n||+ Add()\l+ First()\l+ Get()\l+ Last()\l+ operator[]()\l}" alt="" coords="953,949,1127,1114"/>
+<area shape="rect" id="node20" href="$classGeneric_1_1Dictionary.html" title="{Generic::Dictionary\l\&lt; std::string, Engine\l::Objects::Object *\&gt;\n||+ Add()\l+ First()\l+ Get()\l+ Last()\l+ operator[]()\l}" alt="" coords="718,949,858,1114"/>
+</map>

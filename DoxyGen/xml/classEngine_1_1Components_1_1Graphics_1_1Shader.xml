@@ -1,0 +1,391 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classEngine_1_1Components_1_1Graphics_1_1Shader" kind="class" language="C++" prot="public">
+    <compoundname>Engine::Components::Graphics::Shader</compoundname>
+    <includes refid="Shader_8h" local="no">Shader.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Graphics_1_1Shader_1a82939e07025096b6b37f1588620863c5" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* Engine::Components::Graphics::Shader::_code</definition>
+        <argsstring></argsstring>
+        <name>_code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Shader.h" line="36" column="1" bodyfile="ZPG/Shader.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Graphics_1_1Shader_1a675c32a04d4eb33117d6ff2b988e13b5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Engine::Components::Graphics::Shader::_compiled</definition>
+        <argsstring></argsstring>
+        <name>_compiled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Shader.h" line="35" column="1" bodyfile="ZPG/Shader.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a4935f2ee3ebdd8af6fc78cf42f63d915" compoundref="Shader_8cpp" startline="13" endline="47">Shader</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Graphics_1_1Shader_1a4494d72a65715eb9f02e06a533684872" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Engine::Components::Graphics::Shader::_shader</definition>
+        <argsstring></argsstring>
+        <name>_shader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Shader.h" line="34" column="1" bodyfile="ZPG/Shader.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a4935f2ee3ebdd8af6fc78cf42f63d915" compoundref="Shader_8cpp" startline="13" endline="47">Shader</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Shader_1a4935f2ee3ebdd8af6fc78cf42f63d915" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Components::Graphics::Shader::Shader</definition>
+        <argsstring>(int type, std::string filename)</argsstring>
+        <name>Shader</name>
+        <param>
+          <type>int</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Shader.h" line="21" column="1" bodyfile="ZPG/Shader.cpp" bodystart="13" bodyend="47"/>
+        <references refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a675c32a04d4eb33117d6ff2b988e13b5" compoundref="Shader_8h" startline="35">_compiled</references>
+        <references refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a4494d72a65715eb9f02e06a533684872" compoundref="Shader_8h" startline="34">_shader</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Shader_1af0014ee53239fa71cddfae086d0a1781" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Components::Graphics::Shader::Shader</definition>
+        <argsstring>(int type, const char *shader)</argsstring>
+        <name>Shader</name>
+        <param>
+          <type>int</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>shader</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Shader.h" line="22" column="1" bodyfile="ZPG/Shader.cpp" bodystart="49" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Shader_1a9a82a7a62443e928d9d95e3a0e4f1407" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Components::Graphics::Shader::~Shader</definition>
+        <argsstring>()</argsstring>
+        <name>~Shader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Shader.h" line="23" column="1" bodyfile="ZPG/Shader.cpp" bodystart="55" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Shader_1a348854b43d99bfe43e3d2b0cad5f103d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref> *</type>
+        <definition>Engine::Components::Graphics::Shader * Engine::Components::Graphics::Shader::Compile</definition>
+        <argsstring>()</argsstring>
+        <name>Compile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Shader.h" line="24" column="1" bodyfile="ZPG/Shader.cpp" bodystart="62" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Shader_1ad7c094ce0d42b3399e3533b3652a33fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GLuint *</type>
+        <definition>GLuint * Engine::Components::Graphics::Shader::Get</definition>
+        <argsstring>()</argsstring>
+        <name>Get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Shader.h" line="25" column="1" bodyfile="ZPG/Shader.cpp" bodystart="82" bodyend="87"/>
+        <referencedby refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a95af201a6fab77be50b5fdefbf3bbe63" compoundref="Program_8cpp" startline="22" endline="27">Engine::Components::Graphics::Program::AddShader</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Shader_1a24131f3622fe536794de21e0fb499276" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref> *</type>
+        <definition>Engine::Components::Graphics::Shader * Engine::Components::Graphics::Shader::SendUniform</definition>
+        <argsstring>(Program *program, const GLchar *name, glm::mat4 *data)</argsstring>
+        <name>SendUniform</name>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref> *</type>
+          <declname>program</declname>
+        </param>
+        <param>
+          <type>const GLchar *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>glm::mat4 *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Shader.h" line="26" column="1" bodyfile="ZPG/Shader.cpp" bodystart="89" bodyend="103"/>
+        <references refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" compoundref="Program_8cpp" startline="51" endline="56">Engine::Components::Graphics::Program::Get</references>
+        <referencedby refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue_1a88dbac3446bf9e78c7411e79c1b58977" compoundref="MaterialValue_8h" startline="23" endline="26">Engine::Components::Graphics::MaterialValue&lt; T &gt;::Set</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Shader_1a39cbcddb61ef315da0d24a11a650f09a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref> *</type>
+        <definition>Engine::Components::Graphics::Shader * Engine::Components::Graphics::Shader::SendUniform</definition>
+        <argsstring>(Program *program, const GLchar *name, glm::vec4 *data)</argsstring>
+        <name>SendUniform</name>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref> *</type>
+          <declname>program</declname>
+        </param>
+        <param>
+          <type>const GLchar *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>glm::vec4 *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Shader.h" line="27" column="1" bodyfile="ZPG/Shader.cpp" bodystart="105" bodyend="119"/>
+        <references refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" compoundref="Program_8cpp" startline="51" endline="56">Engine::Components::Graphics::Program::Get</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Shader_1a650108330666f299b13b8336140bca92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref> *</type>
+        <definition>Engine::Components::Graphics::Shader * Engine::Components::Graphics::Shader::SendUniform</definition>
+        <argsstring>(Program *program, const GLchar *name, glm::vec3 *data)</argsstring>
+        <name>SendUniform</name>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref> *</type>
+          <declname>program</declname>
+        </param>
+        <param>
+          <type>const GLchar *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>glm::vec3 *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Shader.h" line="28" column="1" bodyfile="ZPG/Shader.cpp" bodystart="121" bodyend="135"/>
+        <references refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" compoundref="Program_8cpp" startline="51" endline="56">Engine::Components::Graphics::Program::Get</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Shader_1a12769923328fcb0f970458cf3feed273" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref> *</type>
+        <definition>Engine::Components::Graphics::Shader * Engine::Components::Graphics::Shader::SendUniform</definition>
+        <argsstring>(Program *program, const GLchar *name, float *data)</argsstring>
+        <name>SendUniform</name>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref> *</type>
+          <declname>program</declname>
+        </param>
+        <param>
+          <type>const GLchar *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Shader.h" line="29" column="1" bodyfile="ZPG/Shader.cpp" bodystart="138" bodyend="152"/>
+        <references refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" compoundref="Program_8cpp" startline="51" endline="56">Engine::Components::Graphics::Program::Get</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Shader_1a60af0a0142b5a1ea44923c3f438a179a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref> *</type>
+        <definition>Engine::Components::Graphics::Shader * Engine::Components::Graphics::Shader::SendUniform</definition>
+        <argsstring>(Program *program, const GLchar *name, int *data)</argsstring>
+        <name>SendUniform</name>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref> *</type>
+          <declname>program</declname>
+        </param>
+        <param>
+          <type>const GLchar *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Shader.h" line="30" column="1" bodyfile="ZPG/Shader.cpp" bodystart="154" bodyend="168"/>
+        <references refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" compoundref="Program_8cpp" startline="51" endline="56">Engine::Components::Graphics::Program::Get</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Shader_1a9894564e19539e2d152df99ea9e5bc29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref> *</type>
+        <definition>Engine::Components::Graphics::Shader * Engine::Components::Graphics::Shader::SendUniform</definition>
+        <argsstring>(Program *program, const GLchar *name, bool *data)</argsstring>
+        <name>SendUniform</name>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref> *</type>
+          <declname>program</declname>
+        </param>
+        <param>
+          <type>const GLchar *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool *</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Shader.h" line="31" column="1" bodyfile="ZPG/Shader.cpp" bodystart="170" bodyend="184"/>
+        <references refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" compoundref="Program_8cpp" startline="51" endline="56">Engine::Components::Graphics::Program::Get</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Shader_1a169ed9f71afd5f59160e35708e51fe7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Engine::Components::Graphics::Shader::setData</definition>
+        <argsstring>(Program *program, const GLchar *property, MaterialValueType type, void *value)</argsstring>
+        <name>setData</name>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref> *</type>
+          <declname>program</declname>
+        </param>
+        <param>
+          <type>const GLchar *</type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceEngine_1_1Components_1_1Graphics_1a44f5a2b57ee82aed849896c8311e403b" kindref="member">MaterialValueType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Shader.h" line="32" column="1" bodyfile="ZPG/Shader.cpp" bodystart="186" bodyend="200"/>
+        <references refid="namespaceEngine_1_1Components_1_1Graphics_1a44f5a2b57ee82aed849896c8311e403bafe29186f6aeccd144f81352b67ea9c51" compoundref="MaterialValueType_8h" startline="12">Engine::Components::Graphics::Float</references>
+        <references refid="namespaceEngine_1_1Components_1_1Graphics_1a44f5a2b57ee82aed849896c8311e403ba97d63336b89a741ffe735bc436147cc6" compoundref="MaterialValueType_8h" startline="11">Engine::Components::Graphics::Int</references>
+        <references refid="namespaceEngine_1_1Components_1_1Graphics_1a44f5a2b57ee82aed849896c8311e403babbf41bb0de18f4e8481bfb1372a99767" compoundref="MaterialValueType_8h" startline="13">Engine::Components::Graphics::Matrix4x4</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Shader_1a6d0f90b445c605f12eab980827b8d430" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Engine::Components::Graphics::Shader::Mat4ToString</definition>
+        <argsstring>(glm::mat4 &amp;mat)</argsstring>
+        <name>Mat4ToString</name>
+        <param>
+          <type>glm::mat4 &amp;</type>
+          <declname>mat</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Shader.h" line="37" column="1" bodyfile="ZPG/Shader.cpp" bodystart="202" bodyend="215"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="437">
+        <label>char *</label>
+      </node>
+      <node id="438">
+        <label>GLuint</label>
+      </node>
+      <node id="435">
+        <label>Engine::Components::Graphics::Shader</label>
+        <link refid="classEngine_1_1Components_1_1Graphics_1_1Shader"/>
+        <childnode refid="436" relation="usage">
+          <edgelabel>-_compiled</edgelabel>
+        </childnode>
+        <childnode refid="437" relation="usage">
+          <edgelabel>-_code</edgelabel>
+        </childnode>
+        <childnode refid="438" relation="usage">
+          <edgelabel>-_shader</edgelabel>
+        </childnode>
+      </node>
+      <node id="436">
+        <label>bool</label>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/Shader.h" line="19" column="1" bodyfile="ZPG/Shader.h" bodystart="18" bodyend="38"/>
+    <listofallmembers>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a82939e07025096b6b37f1588620863c5" prot="private" virt="non-virtual"><scope>Engine::Components::Graphics::Shader</scope><name>_code</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a675c32a04d4eb33117d6ff2b988e13b5" prot="private" virt="non-virtual"><scope>Engine::Components::Graphics::Shader</scope><name>_compiled</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a4494d72a65715eb9f02e06a533684872" prot="private" virt="non-virtual"><scope>Engine::Components::Graphics::Shader</scope><name>_shader</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a348854b43d99bfe43e3d2b0cad5f103d" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Shader</scope><name>Compile</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1ad7c094ce0d42b3399e3533b3652a33fe" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Shader</scope><name>Get</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a6d0f90b445c605f12eab980827b8d430" prot="private" virt="non-virtual"><scope>Engine::Components::Graphics::Shader</scope><name>Mat4ToString</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a24131f3622fe536794de21e0fb499276" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Shader</scope><name>SendUniform</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a39cbcddb61ef315da0d24a11a650f09a" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Shader</scope><name>SendUniform</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a650108330666f299b13b8336140bca92" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Shader</scope><name>SendUniform</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a12769923328fcb0f970458cf3feed273" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Shader</scope><name>SendUniform</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a60af0a0142b5a1ea44923c3f438a179a" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Shader</scope><name>SendUniform</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a9894564e19539e2d152df99ea9e5bc29" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Shader</scope><name>SendUniform</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a169ed9f71afd5f59160e35708e51fe7e" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Shader</scope><name>setData</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a4935f2ee3ebdd8af6fc78cf42f63d915" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Shader</scope><name>Shader</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1af0014ee53239fa71cddfae086d0a1781" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Shader</scope><name>Shader</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a9a82a7a62443e928d9d95e3a0e4f1407" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Shader</scope><name>~Shader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

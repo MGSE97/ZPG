@@ -1,0 +1,225 @@
+.TH "Engine::Components::Objects::VertexObject" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Engine::Components::Objects::VertexObject
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <VertexObject\&.h>\fP
+.PP
+Inherited by \fBEngine::Objects::Object\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVertexObject\fP (\fBGraphics::Material\fP *material, const float *points, int size, int dimensions, \fBGeneric::Collection\fP< \fBVAOConfig\fP *> *configs=nullptr)"
+.br
+.ti -1c
+.RI "\fB~VertexObject\fP ()"
+.br
+.ti -1c
+.RI "\fBVertexObject\fP * \fBDraw\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBGraphics::Material\fP * \fBMaterial\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVertexObject\fP * \fBAdd\fP (int size, int offset)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fB_attribute_id\fP"
+.br
+.ti -1c
+.RI "int \fB_Id\fP"
+.br
+.ti -1c
+.RI "GLuint \fB_VAO\fP = 0"
+.br
+.ti -1c
+.RI "GLuint \fB_VBO\fP = 0"
+.br
+.ti -1c
+.RI "int \fBDimensions\fP"
+.br
+.ti -1c
+.RI "int \fBSize\fP"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fB_object_id\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 15 of file VertexObject\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Engine::Components::Objects::VertexObject::VertexObject (\fBGraphics::Material\fP * material, const float * points, int size, int dimensions, \fBGeneric::Collection\fP< \fBVAOConfig\fP *> * configs = \fCnullptr\fP)"
+
+.PP
+Definition at line 19 of file VertexObject\&.cpp\&.
+.PP
+.nf
+20 {
+21     _attribute_id = 0;
+22     Dimensions = dimensions;
+23     Size = size/(dimensions*2);
+24     _Id = ++_object_id;
+25     /*glGenBuffers(1, &_VBO); // generate the VBO
+26     glBindBuffer(GL_ARRAY_BUFFER, _VBO);
+27     glBufferData(GL_ARRAY_BUFFER, size, points, GL_STATIC_DRAW);
+28 
+29     glGenVertexArrays(1, &_VAO); //generate the VAO
+30     glBindVertexArray(_VAO); //bind the VAO
+31     glEnableVertexAttribArray(0); //enable vertex attributes
+32     glBindBuffer(GL_ARRAY_BUFFER, _VBO);
+33     glVertexAttribPointer(_attribute_id, *Dimensions, GL_FLOAT, GL_FALSE, 3*sizeof(float), nullptr);
+34     _attribute_id++;*/
+35 
+36     glGenVertexArrays(1, &_VAO);
+37     glBindVertexArray(_VAO);
+38 
+39     glGenBuffers(1, &_VBO);
+40     glBindBuffer(GL_ARRAY_BUFFER, _VBO);
+41     glBufferData(GL_ARRAY_BUFFER, size * sizeof(float), points, GL_STATIC_DRAW);
+42 
+43     glEnableVertexAttribArray(0);
+44     glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (GLvoid*)0);
+45 
+46     glEnableVertexAttribArray(1);
+47     glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (GLvoid*)(3*sizeof(float)));
+48 
+49     /*VBO = new VertexBufferObject(points, size);
+50     VAOs = new Generic::Collection<VertexAttributeObject*>();*/
+51     /*if (configs != nullptr)
+52         for(auto config: *configs)
+53         /*{
+54             glGenVertexArrays(1, &_VAO); //generate the VAO
+55             glBindVertexArray(_VAO); //bind the VAO
+56             glEnableVertexAttribArray(_attribute_id++); //enable vertex attributes
+57         }*/
+58         /*  Add(config->Size, config->Offset);
+59     /*_attribute_id = 0;
+60     glBindBuffer(GL_ARRAY_BUFFER, _VBO);
+61     if (configs != nullptr)
+62         for (auto config : *configs)
+63         {
+64             glVertexAttribPointer(_attribute_id++, *Dimensions, GL_FLOAT, GL_FALSE, config->Size * sizeof(float), (GLvoid*)(config->Offset));
+65         }*/
+66     Material = material;
+67 }
+.fi
+.SS "Engine::Components::Objects::VertexObject::~VertexObject ()"
+
+.PP
+Definition at line 69 of file VertexObject\&.cpp\&.
+.PP
+.nf
+70 {
+71     delete &_VBO;
+72     delete &_VAO;
+73     delete Material;
+74 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBEngine::Components::Objects::VertexObject\fP * Engine::Components::Objects::VertexObject::Add (int size, int offset)\fC [protected]\fP"
+
+.PP
+Definition at line 6 of file VertexObject\&.cpp\&.
+.PP
+References _attribute_id, and Dimensions\&.
+.PP
+.nf
+7 {
+8 
+9     /*glEnableVertexAttribArray(_attribute_id); //enable vertex attributes
+10     glBindBuffer(GL_ARRAY_BUFFER, _VBO);
+11     glVertexAttribPointer(_attribute_id++, *Dimensions, GL_FLOAT, GL_FALSE, size * sizeof(float), (GLvoid*)offset);*/
+12     glEnableVertexAttribArray(_attribute_id);
+13     glVertexAttribPointer(_attribute_id, Dimensions, GL_FLOAT, GL_FALSE, size, (void*)offset);
+14     _attribute_id++;
+15     //VAOs->Add(new VertexAttributeObject(VAOi++, VBO, *Dimensions, size, offset));
+16     return this;
+17 }
+.fi
+.SS "\fBEngine::Components::Objects::VertexObject\fP * Engine::Components::Objects::VertexObject::Draw ()"
+
+.PP
+Definition at line 76 of file VertexObject\&.cpp\&.
+.PP
+Referenced by Engine::Objects::Sphere::Draw()\&.
+.PP
+.nf
+77 {
+78     // use material
+79     Material->Use();
+80 
+81 
+82     glBindVertexArray(_VAO);
+83     // draw triangles
+84     glDrawArrays(GL_TRIANGLES, 0, Size);
+85     return this;
+86 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "int Engine::Components::Objects::VertexObject::_attribute_id\fC [protected]\fP"
+
+.PP
+Definition at line 24 of file VertexObject\&.h\&.
+.PP
+Referenced by Add()\&.
+.SS "int Engine::Components::Objects::VertexObject::_Id\fC [protected]\fP"
+
+.PP
+Definition at line 23 of file VertexObject\&.h\&.
+.SS "int Engine::Components::Objects::VertexObject::_object_id = 0\fC [static]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 26 of file VertexObject\&.h\&.
+.SS "GLuint Engine::Components::Objects::VertexObject::_VAO = 0\fC [protected]\fP"
+
+.PP
+Definition at line 22 of file VertexObject\&.h\&.
+.SS "GLuint Engine::Components::Objects::VertexObject::_VBO = 0\fC [protected]\fP"
+
+.PP
+Definition at line 21 of file VertexObject\&.h\&.
+.SS "int Engine::Components::Objects::VertexObject::Dimensions\fC [protected]\fP"
+
+.PP
+Definition at line 20 of file VertexObject\&.h\&.
+.PP
+Referenced by Add()\&.
+.SS "\fBGraphics::Material\fP* Engine::Components::Objects::VertexObject::Material"
+
+.PP
+Definition at line 32 of file VertexObject\&.h\&.
+.PP
+Referenced by Application::Engines::CameraEngine::Init(), Light::Light(), and Engine::Objects::Object::Object()\&.
+.SS "int Engine::Components::Objects::VertexObject::Size\fC [protected]\fP"
+
+.PP
+Definition at line 25 of file VertexObject\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

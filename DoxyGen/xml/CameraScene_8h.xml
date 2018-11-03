@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="CameraScene_8h" kind="file" language="C++">
+    <compoundname>CameraScene.h</compoundname>
+    <includes refid="Scene_8h" local="yes">Scene.h</includes>
+    <includedby refid="CameraScene_8cpp" local="yes">ZPG/CameraScene.cpp</includedby>
+    <incdepgraph>
+      <node id="652">
+        <label>list</label>
+      </node>
+      <node id="638">
+        <label>VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="639" relation="include">
+        </childnode>
+        <childnode refid="642" relation="include">
+        </childnode>
+        <childnode refid="644" relation="include">
+        </childnode>
+        <childnode refid="653" relation="include">
+        </childnode>
+      </node>
+      <node id="654">
+        <label>MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="651" relation="include">
+        </childnode>
+        <childnode refid="646" relation="include">
+        </childnode>
+        <childnode refid="650" relation="include">
+        </childnode>
+        <childnode refid="655" relation="include">
+        </childnode>
+      </node>
+      <node id="642">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="640" relation="include">
+        </childnode>
+        <childnode refid="639" relation="include">
+        </childnode>
+        <childnode refid="643" relation="include">
+        </childnode>
+      </node>
+      <node id="646">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="640" relation="include">
+        </childnode>
+        <childnode refid="647" relation="include">
+        </childnode>
+        <childnode refid="648" relation="include">
+        </childnode>
+        <childnode refid="649" relation="include">
+        </childnode>
+        <childnode refid="650" relation="include">
+        </childnode>
+        <childnode refid="651" relation="include">
+        </childnode>
+      </node>
+      <node id="639">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="640" relation="include">
+        </childnode>
+        <childnode refid="641" relation="include">
+        </childnode>
+      </node>
+      <node id="651">
+        <label>string</label>
+      </node>
+      <node id="640">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="636">
+        <label>map</label>
+      </node>
+      <node id="661">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="657" relation="include">
+        </childnode>
+        <childnode refid="637" relation="include">
+        </childnode>
+        <childnode refid="662" relation="include">
+        </childnode>
+      </node>
+      <node id="633">
+        <label>ZPG/CameraScene.h</label>
+        <link refid="CameraScene_8h"/>
+        <childnode refid="634" relation="include">
+        </childnode>
+      </node>
+      <node id="655">
+        <label>MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="640" relation="include">
+        </childnode>
+        <childnode refid="646" relation="include">
+        </childnode>
+      </node>
+      <node id="637">
+        <label>Object.h</label>
+        <link refid="Object_8h"/>
+        <childnode refid="638" relation="include">
+        </childnode>
+      </node>
+      <node id="662">
+        <label>glm/common.hpp</label>
+      </node>
+      <node id="650">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="659">
+        <label>Observable.h</label>
+        <link refid="Observable_8h"/>
+        <childnode refid="645" relation="include">
+        </childnode>
+        <childnode refid="660" relation="include">
+        </childnode>
+        <childnode refid="641" relation="include">
+        </childnode>
+      </node>
+      <node id="657">
+        <label>glm/vec3.hpp</label>
+      </node>
+      <node id="647">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="634">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+        <childnode refid="635" relation="include">
+        </childnode>
+        <childnode refid="637" relation="include">
+        </childnode>
+        <childnode refid="656" relation="include">
+        </childnode>
+        <childnode refid="661" relation="include">
+        </childnode>
+      </node>
+      <node id="641">
+        <label>vector</label>
+      </node>
+      <node id="645">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="646" relation="include">
+        </childnode>
+        <childnode refid="652" relation="include">
+        </childnode>
+      </node>
+      <node id="653">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="635" relation="include">
+        </childnode>
+        <childnode refid="651" relation="include">
+        </childnode>
+        <childnode refid="654" relation="include">
+        </childnode>
+        <childnode refid="644" relation="include">
+        </childnode>
+        <childnode refid="646" relation="include">
+        </childnode>
+      </node>
+      <node id="643">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="660">
+        <label>Observer.h</label>
+        <link refid="Observer_8h"/>
+      </node>
+      <node id="648">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="644">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="640" relation="include">
+        </childnode>
+        <childnode refid="645" relation="include">
+        </childnode>
+        <childnode refid="635" relation="include">
+        </childnode>
+        <childnode refid="651" relation="include">
+        </childnode>
+      </node>
+      <node id="635">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="636" relation="include">
+        </childnode>
+      </node>
+      <node id="649">
+        <label>xstring</label>
+      </node>
+      <node id="658">
+        <label>glm/mat4x4.hpp</label>
+      </node>
+      <node id="656">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="657" relation="include">
+        </childnode>
+        <childnode refid="658" relation="include">
+        </childnode>
+        <childnode refid="659" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="663">
+        <label>ZPG/CameraScene.h</label>
+        <link refid="CameraScene_8h"/>
+        <childnode refid="664" relation="include">
+        </childnode>
+      </node>
+      <node id="664">
+        <label>ZPG/CameraScene.cpp</label>
+        <link refid="CameraScene_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classApplication_1_1Scenes_1_1CameraScene" prot="public">Application::Scenes::CameraScene</innerclass>
+    <innernamespace refid="namespaceApplication">Application</innernamespace>
+    <innernamespace refid="namespaceApplication_1_1Scenes">Application::Scenes</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Scene_8h" kindref="compound">Scene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceApplication" kindref="compound">Application</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5" refid="namespaceApplication_1_1Scenes" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Scenes</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7" refid="classApplication_1_1Scenes_1_1CameraScene" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classApplication_1_1Scenes_1_1CameraScene" kindref="compound">CameraScene</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Engine::Components::Scene</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Scenes_1_1CameraScene_1a6276ab9be1ea87015c7508668e878edf" kindref="member">CameraScene</ref>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Scenes_1_1CameraScene_1a7ae326096600efbfb172225cb53a0975" kindref="member">~CameraScene</ref>();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Scenes_1_1CameraScene_1a86f30a60a125f491176ecfca46cd6b8a" kindref="member">Load</ref>(<ref refid="classEngine_1_1BaseEngine" kindref="compound">Engine::BaseEngine</ref>*<sp/>engine)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Scenes_1_1CameraScene_1a92eb1a3eab4de7d18ca108e4aefd7fc7" kindref="member">FrameUpdate</ref>(<ref refid="classEngine_1_1BaseEngine" kindref="compound">Engine::BaseEngine</ref>*<sp/>engine)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15" refid="classApplication_1_1Scenes_1_1CameraScene_1ac62c8a76d7ba9e9e25ec72d8513a46f4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::mat4*<sp/><ref refid="classApplication_1_1Scenes_1_1CameraScene_1ac62c8a76d7ba9e9e25ec72d8513a46f4" kindref="member">modelMatrix</ref>;</highlight></codeline>
+<codeline lineno="16" refid="classApplication_1_1Scenes_1_1CameraScene_1a5b1ed7cbc9e95f0adf9f9ad9a9100d51" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/><ref refid="classApplication_1_1Scenes_1_1CameraScene_1a5b1ed7cbc9e95f0adf9f9ad9a9100d51" kindref="member">angle</ref>;</highlight></codeline>
+<codeline lineno="17" refid="classApplication_1_1Scenes_1_1CameraScene_1a2ecbe017c52a0278302f8b8ffbc519ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/><ref refid="classApplication_1_1Scenes_1_1CameraScene_1a2ecbe017c52a0278302f8b8ffbc519ab" kindref="member">color</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ZPG/CameraScene.h"/>
+  </compounddef>
+</doxygen>

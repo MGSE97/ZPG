@@ -1,0 +1,223 @@
+.TH "Engine::Components::Window" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Engine::Components::Window
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Window\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBWindow\fP (int width, int height, const char *title, float speed=10\&.0f, int swapInterval=1)"
+.br
+.ti -1c
+.RI "\fB~Window\fP ()"
+.br
+.ti -1c
+.RI "GLFWwindow * \fBGet\fP ()"
+.br
+.ti -1c
+.RI "\fBWindow\fP * \fBInfo\fP (std::ostream &stream)"
+.br
+.ti -1c
+.RI "\fBWindow\fP * \fBShow\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBHeight\fP"
+.br
+.ti -1c
+.RI "float \fBSpeed\fP"
+.br
+.ti -1c
+.RI "int \fBSwapInterval\fP"
+.br
+.ti -1c
+.RI "const char * \fBTitle\fP"
+.br
+.ti -1c
+.RI "int \fBWidth\fP"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fB_angle\fP"
+.br
+.ti -1c
+.RI "int \fB_height\fP"
+.br
+.ti -1c
+.RI "float \fB_ratio\fP"
+.br
+.ti -1c
+.RI "int \fB_width\fP"
+.br
+.ti -1c
+.RI "GLFWwindow * \fB_window\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 12 of file Window\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Engine::Components::Window::Window (int width, int height, const char * title, float speed = \fC10\&.0f\fP, int swapInterval = \fC1\fP)"
+
+.PP
+Definition at line 9 of file Window\&.cpp\&.
+.PP
+References Height, Speed, SwapInterval, Title, and Width\&.
+.PP
+.nf
+10 {
+11     Speed = speed;
+12     Width = width;
+13     Height = height;
+14     Title = title;
+15     SwapInterval = swapInterval;
+16     //OnUpdate += Sharp::EventHandler::Bind(&_update, *this);
+17 }
+.fi
+.SS "Engine::Components::Window::~Window ()"
+
+.PP
+Definition at line 95 of file Window\&.cpp\&.
+.PP
+.nf
+96 {
+97     glfwDestroyWindow(_window);
+98     glfwTerminate();
+99     exit(EXIT_SUCCESS);
+100 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "GLFWwindow * Engine::Components::Window::Get ()"
+
+.PP
+Definition at line 78 of file Window\&.cpp\&.
+.PP
+Referenced by Engine::BaseEngine::UpdateBegin(), and Engine::BaseEngine::UpdateEnd()\&.
+.PP
+.nf
+79 {
+80     return _window;
+81 }
+.fi
+.SS "\fBEngine::Components::Window\fP * Engine::Components::Window::Info (std::ostream & stream)"
+
+.PP
+Definition at line 63 of file Window\&.cpp\&.
+.PP
+.nf
+64 {
+65     // get version info
+66     stream << "OpenGL Version: " << glGetString(GL_VERSION) << std::endl;
+67     stream << "Using GLEW " << glewGetString(GLEW_VERSION) << std::endl;
+68     stream << "Vendor " << glGetString(GL_VENDOR) << std::endl;
+69     stream << "Renderer " << glGetString(GL_RENDERER) << std::endl;
+70     stream << "GLSL " << glGetString(GL_SHADING_LANGUAGE_VERSION) << std::endl;
+71     int major, minor, revision;
+72     glfwGetVersion(&major, &minor, &revision);
+73     stream << "Using GLFW " << major << "\&." << minor << "\&." << revision << std::endl;
+74     stream << "W, H, R: " << _width << ", " << _height << ", " << _ratio << std::endl;
+75     return this;
+76 }
+.fi
+.SS "\fBEngine::Components::Window\fP * Engine::Components::Window::Show ()"
+
+.PP
+Definition at line 19 of file Window\&.cpp\&.
+.PP
+.nf
+20 {
+21     //Init GLFW
+22     /*if (!glfwInit()) {
+23         fprintf(stderr, "ERROR: could not start GLFW3\n");
+24         exit(EXIT_FAILURE);
+25     }*/
+26 
+27     _window = glfwCreateWindow(Width, Height, Title, NULL, NULL);
+28     if (!_window)
+29     {
+30         glfwTerminate();
+31         exit(EXIT_FAILURE);
+32     }
+33     glfwMakeContextCurrent(_window);
+34     glfwSwapInterval(SwapInterval);
+35     glfwGetFramebufferSize(_window, &_width, &_height);
+36     _ratio = _width / (float)_height;
+37     glViewport(0, 0, _width, _height);
+38 
+39     // start GLEW extension handler
+40     glewExperimental = GL_TRUE;
+41     glewInit();
+42 
+43     return this;
+44 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "float Engine::Components::Window::_angle\fC [private]\fP"
+
+.PP
+Definition at line 35 of file Window\&.h\&.
+.SS "int Engine::Components::Window::_height\fC [private]\fP"
+
+.PP
+Definition at line 34 of file Window\&.h\&.
+.SS "float Engine::Components::Window::_ratio\fC [private]\fP"
+
+.PP
+Definition at line 32 of file Window\&.h\&.
+.SS "int Engine::Components::Window::_width\fC [private]\fP"
+
+.PP
+Definition at line 33 of file Window\&.h\&.
+.SS "GLFWwindow* Engine::Components::Window::_window\fC [private]\fP"
+
+.PP
+Definition at line 31 of file Window\&.h\&.
+.SS "int Engine::Components::Window::Height"
+
+.PP
+Definition at line 25 of file Window\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::CameraInputHandler::HandleMouse(), Application::Engines::CameraEngine::Update(), and Window()\&.
+.SS "float Engine::Components::Window::Speed"
+
+.PP
+Definition at line 23 of file Window\&.h\&.
+.PP
+Referenced by Window()\&.
+.SS "int Engine::Components::Window::SwapInterval"
+
+.PP
+Definition at line 27 of file Window\&.h\&.
+.PP
+Referenced by Window()\&.
+.SS "const char* Engine::Components::Window::Title"
+
+.PP
+Definition at line 26 of file Window\&.h\&.
+.PP
+Referenced by Window()\&.
+.SS "int Engine::Components::Window::Width"
+
+.PP
+Definition at line 24 of file Window\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::CameraInputHandler::HandleMouse(), Application::Engines::CameraEngine::Update(), and Window()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

@@ -1,0 +1,381 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classEngine_1_1Objects_1_1Sphere" kind="class" language="C++" prot="public">
+    <compoundname>Engine::Objects::Sphere</compoundname>
+    <basecompoundref refid="classEngine_1_1Objects_1_1Object" prot="public" virt="non-virtual">Engine::Objects::Object</basecompoundref>
+    <includes refid="Sphere_8h" local="no">Sphere.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEngine_1_1Objects_1_1Sphere_1a88f7519c022db552a6b4fa8e07d7718f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Objects::Sphere::Sphere</definition>
+        <argsstring>(Components::Graphics::Material *material, const float *points, int size, int dimensions)</argsstring>
+        <name>Sphere</name>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Material" kindref="compound">Components::Graphics::Material</ref> *</type>
+          <declname>material</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dimensions</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Sphere.h" line="15" column="1" bodyfile="ZPG/Sphere.cpp" bodystart="9" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Objects_1_1Sphere_1ae305cb7304701062e6930a6c48dd6d97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Objects::Sphere::~Sphere</definition>
+        <argsstring>()</argsstring>
+        <name>~Sphere</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Sphere.h" line="14" column="1" bodyfile="ZPG/Sphere.cpp" bodystart="4" bodyend="7"/>
+        <references refid="classEngine_1_1Objects_1_1Object_1a5fc9cc004cae8e63c4fb1d2b6d1cea88">Engine::Objects::Object::~Object</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Objects_1_1Sphere_1a7cc1ef27c2634c763273ed84065b217a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Objects_1_1Sphere" kindref="compound">Sphere</ref> *</type>
+        <definition>Engine::Objects::Sphere * Engine::Objects::Sphere::Draw</definition>
+        <argsstring>()</argsstring>
+        <name>Draw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Sphere.h" line="16" column="1" bodyfile="ZPG/Sphere.cpp" bodystart="18" bodyend="22"/>
+        <references refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a53a8f546ee082720579e2c33be6cedec" compoundref="VertexObject_8cpp" startline="76" endline="86">Engine::Components::Objects::VertexObject::Draw</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a86c1fced4cdc5e59a66a635390a17eca" prot="public" static="no" mutable="no">
+        <type>Graphics::Material *</type>
+        <definition>Graphics::Material* Engine::Components::Objects::VertexObject::Material</definition>
+        <argsstring></argsstring>
+        <name>Material</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexObject.h" line="32" column="1" bodyfile="ZPG/VertexObject.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classApplication_1_1Engines_1_1CameraEngine_1a0c7723b93afbdef70394961a4624813d" compoundref="CameraEngine_8cpp" startline="9" endline="73">Application::Engines::CameraEngine::Init</referencedby>
+        <referencedby refid="classLight_1af33c52703fccd3142a2826893027884c" compoundref="Light_8cpp" startline="6" endline="23">Light::Light</referencedby>
+        <referencedby refid="classEngine_1_1Objects_1_1Object_1a4798ee926dcbd761e7e88fdeb73f2f0a" compoundref="Object_8cpp" startline="4" endline="13">Engine::Objects::Object::Object</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Objects_1_1Object_1acf41cc091fa270053245ed26bc28c8a4" prot="public" static="no" mutable="no">
+        <type>glm::mat4 *</type>
+        <definition>glm::mat4* Engine::Objects::Object::ModelMatrix</definition>
+        <argsstring></argsstring>
+        <name>ModelMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Object.h" line="11" column="1" bodyfile="ZPG/Object.h" bodystart="11" bodyend="-1"/>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a5017479d6edea9d6bedf3093cf49cb24" compoundref="LightingChangeInputHandler_8cpp" startline="5" endline="62">Application::Input::Handlers::LightingChangeInputHandler::HandleKeys</referencedby>
+        <referencedby refid="classLight_1af33c52703fccd3142a2826893027884c" compoundref="Light_8cpp" startline="6" endline="23">Light::Light</referencedby>
+        <referencedby refid="classEngine_1_1Objects_1_1Object_1a4798ee926dcbd761e7e88fdeb73f2f0a" compoundref="Object_8cpp" startline="4" endline="13">Engine::Objects::Object::Object</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a401aa1eb0254e57d8295c2287749eed5" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Engine::Components::Objects::VertexObject::_attribute_id</definition>
+        <argsstring></argsstring>
+        <name>_attribute_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexObject.h" line="24" column="1" bodyfile="ZPG/VertexObject.h" bodystart="24" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a18550cae56ca1066792528a7dcf5d28a" compoundref="VertexObject_8cpp" startline="6" endline="17">Engine::Components::Objects::VertexObject::Add</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Objects_1_1VertexObject_1aa76ac755e9e37853a778795f0a0ad15e" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Engine::Components::Objects::VertexObject::_Id</definition>
+        <argsstring></argsstring>
+        <name>_Id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexObject.h" line="23" column="1" bodyfile="ZPG/VertexObject.h" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Objects_1_1VertexObject_1ae85ac9d5ded8f54d58feb7fb78e75130" prot="protected" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Engine::Components::Objects::VertexObject::_VAO</definition>
+        <argsstring></argsstring>
+        <name>_VAO</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexObject.h" line="22" column="1" bodyfile="ZPG/VertexObject.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a79e171ffe4b9342d76c0c729a9836fd2" prot="protected" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Engine::Components::Objects::VertexObject::_VBO</definition>
+        <argsstring></argsstring>
+        <name>_VBO</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexObject.h" line="21" column="1" bodyfile="ZPG/VertexObject.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Objects_1_1VertexObject_1ae5bb104a878dc8a3c909ec9b0ee799c1" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Engine::Components::Objects::VertexObject::Dimensions</definition>
+        <argsstring></argsstring>
+        <name>Dimensions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexObject.h" line="20" column="1" bodyfile="ZPG/VertexObject.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a18550cae56ca1066792528a7dcf5d28a" compoundref="VertexObject_8cpp" startline="6" endline="17">Engine::Components::Objects::VertexObject::Add</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a13ec6e4a92520bdd1b33ad6de757cb92" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Engine::Components::Objects::VertexObject::Size</definition>
+        <argsstring></argsstring>
+        <name>Size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexObject.h" line="25" column="1" bodyfile="ZPG/VertexObject.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Objects_1_1VertexObject_1aef076731df98a4806c644a3ac4400ae2" prot="protected" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Engine::Components::Objects::VertexObject::_object_id</definition>
+        <argsstring></argsstring>
+        <name>_object_id</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexObject.h" line="26" column="1" bodyfile="ZPG/VertexObject.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a18550cae56ca1066792528a7dcf5d28a" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a2cd67c7ea4baefd945c5045d2a775a5d" kindref="member">VertexObject</ref> *</type>
+        <definition>Engine::Components::Objects::VertexObject * Engine::Components::Objects::VertexObject::Add</definition>
+        <argsstring>(int size, int offset)</argsstring>
+        <name>Add</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexObject.h" line="27" column="1" bodyfile="ZPG/VertexObject.cpp" bodystart="6" bodyend="17"/>
+        <references refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a401aa1eb0254e57d8295c2287749eed5" compoundref="VertexObject_8h" startline="24">Engine::Components::Objects::VertexObject::_attribute_id</references>
+        <references refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1ae5bb104a878dc8a3c909ec9b0ee799c1" compoundref="VertexObject_8h" startline="20">Engine::Components::Objects::VertexObject::Dimensions</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="525">
+        <label>Engine::Objects::Object</label>
+        <link refid="classEngine_1_1Objects_1_1Object"/>
+        <childnode refid="526" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="524">
+        <label>Engine::Objects::Sphere</label>
+        <link refid="classEngine_1_1Objects_1_1Sphere"/>
+        <childnode refid="525" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="526">
+        <label>Engine::Components::Objects::VertexObject</label>
+        <link refid="classEngine_1_1Components_1_1Objects_1_1VertexObject"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="533">
+        <label>std::list&lt; Engine::Components::Graphics::MaterialValueBase *  &gt;</label>
+      </node>
+      <node id="539">
+        <label>Generic::Dictionary&lt; TKey, TValue &gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="540" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="543">
+        <label>mat4 *</label>
+      </node>
+      <node id="528">
+        <label>Engine::Objects::Object</label>
+        <link refid="classEngine_1_1Objects_1_1Object"/>
+        <childnode refid="529" relation="public-inheritance">
+        </childnode>
+        <childnode refid="543" relation="usage">
+          <edgelabel>+ModelMatrix</edgelabel>
+        </childnode>
+      </node>
+      <node id="540">
+        <label>std::map&lt; TKey, TValue &gt;</label>
+      </node>
+      <node id="535">
+        <label>std::list&lt; T &gt;</label>
+      </node>
+      <node id="534">
+        <label>Generic::Collection&lt; T &gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="535" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="530">
+        <label>int</label>
+      </node>
+      <node id="542">
+        <label>GLuint</label>
+      </node>
+      <node id="532">
+        <label>Generic::Collection&lt; Engine::Components::Graphics::MaterialValueBase *&gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="533" relation="public-inheritance">
+        </childnode>
+        <childnode refid="534" relation="template-instance">
+          <edgelabel>&lt; Engine::Components::Graphics::MaterialValueBase *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="538">
+        <label>std::map&lt; std::string, Engine::Components::Graphics::Shader * &gt;</label>
+      </node>
+      <node id="527">
+        <label>Engine::Objects::Sphere</label>
+        <link refid="classEngine_1_1Objects_1_1Sphere"/>
+        <childnode refid="528" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="537">
+        <label>Generic::Dictionary&lt; std::string, Engine::Components::Graphics::Shader *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="538" relation="public-inheritance">
+        </childnode>
+        <childnode refid="539" relation="template-instance">
+          <edgelabel>&lt; std::string, Engine::Components::Graphics::Shader *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="531">
+        <label>Engine::Components::Graphics::Material</label>
+        <link refid="classEngine_1_1Components_1_1Graphics_1_1Material"/>
+        <childnode refid="532" relation="usage">
+          <edgelabel>+Values</edgelabel>
+        </childnode>
+        <childnode refid="536" relation="usage">
+          <edgelabel>+Program</edgelabel>
+        </childnode>
+      </node>
+      <node id="541">
+        <label>bool</label>
+      </node>
+      <node id="536">
+        <label>Engine::Components::Graphics::Program</label>
+        <link refid="classEngine_1_1Components_1_1Graphics_1_1Program"/>
+        <childnode refid="537" relation="usage">
+          <edgelabel>+Shaders</edgelabel>
+        </childnode>
+        <childnode refid="541" relation="usage">
+          <edgelabel>-_linked</edgelabel>
+        </childnode>
+        <childnode refid="542" relation="usage">
+          <edgelabel>-_program</edgelabel>
+        </childnode>
+      </node>
+      <node id="529">
+        <label>Engine::Components::Objects::VertexObject</label>
+        <link refid="classEngine_1_1Components_1_1Objects_1_1VertexObject"/>
+        <childnode refid="530" relation="usage">
+          <edgelabel>#_attribute_id</edgelabel>
+          <edgelabel>#Dimensions</edgelabel>
+          <edgelabel>#Size</edgelabel>
+          <edgelabel>#_Id</edgelabel>
+          <edgelabel>#_object_id</edgelabel>
+        </childnode>
+        <childnode refid="531" relation="usage">
+          <edgelabel>+Material</edgelabel>
+        </childnode>
+        <childnode refid="542" relation="usage">
+          <edgelabel>#_VBO</edgelabel>
+          <edgelabel>#_VAO</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/Sphere.h" line="12" column="1" bodyfile="ZPG/Sphere.h" bodystart="11" bodyend="17"/>
+    <listofallmembers>
+      <member refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a401aa1eb0254e57d8295c2287749eed5" prot="protected" virt="non-virtual"><scope>Engine::Objects::Sphere</scope><name>_attribute_id</name></member>
+      <member refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1aa76ac755e9e37853a778795f0a0ad15e" prot="protected" virt="non-virtual"><scope>Engine::Objects::Sphere</scope><name>_Id</name></member>
+      <member refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1aef076731df98a4806c644a3ac4400ae2" prot="protected" virt="non-virtual"><scope>Engine::Objects::Sphere</scope><name>_object_id</name></member>
+      <member refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1ae85ac9d5ded8f54d58feb7fb78e75130" prot="protected" virt="non-virtual"><scope>Engine::Objects::Sphere</scope><name>_VAO</name></member>
+      <member refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a79e171ffe4b9342d76c0c729a9836fd2" prot="protected" virt="non-virtual"><scope>Engine::Objects::Sphere</scope><name>_VBO</name></member>
+      <member refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a18550cae56ca1066792528a7dcf5d28a" prot="protected" virt="non-virtual"><scope>Engine::Objects::Sphere</scope><name>Add</name></member>
+      <member refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1ae5bb104a878dc8a3c909ec9b0ee799c1" prot="protected" virt="non-virtual"><scope>Engine::Objects::Sphere</scope><name>Dimensions</name></member>
+      <member refid="classEngine_1_1Objects_1_1Sphere_1a7cc1ef27c2634c763273ed84065b217a" prot="public" virt="non-virtual"><scope>Engine::Objects::Sphere</scope><name>Draw</name></member>
+      <member refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a86c1fced4cdc5e59a66a635390a17eca" prot="public" virt="non-virtual"><scope>Engine::Objects::Sphere</scope><name>Material</name></member>
+      <member refid="classEngine_1_1Objects_1_1Object_1acf41cc091fa270053245ed26bc28c8a4" prot="public" virt="non-virtual"><scope>Engine::Objects::Sphere</scope><name>ModelMatrix</name></member>
+      <member refid="classEngine_1_1Objects_1_1Object_1a4798ee926dcbd761e7e88fdeb73f2f0a" prot="public" virt="non-virtual"><scope>Engine::Objects::Sphere</scope><name>Object</name></member>
+      <member refid="classEngine_1_1Objects_1_1Object_1af69cb6c57955cec7b1a94604136a4c51" prot="public" virt="non-virtual"><scope>Engine::Objects::Sphere</scope><name>Object</name></member>
+      <member refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a13ec6e4a92520bdd1b33ad6de757cb92" prot="protected" virt="non-virtual"><scope>Engine::Objects::Sphere</scope><name>Size</name></member>
+      <member refid="classEngine_1_1Objects_1_1Sphere_1a88f7519c022db552a6b4fa8e07d7718f" prot="public" virt="non-virtual"><scope>Engine::Objects::Sphere</scope><name>Sphere</name></member>
+      <member refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a2cd67c7ea4baefd945c5045d2a775a5d" prot="public" virt="non-virtual"><scope>Engine::Objects::Sphere</scope><name>VertexObject</name></member>
+      <member refid="classEngine_1_1Objects_1_1Object_1a5fc9cc004cae8e63c4fb1d2b6d1cea88" prot="public" virt="non-virtual"><scope>Engine::Objects::Sphere</scope><name>~Object</name></member>
+      <member refid="classEngine_1_1Objects_1_1Sphere_1ae305cb7304701062e6930a6c48dd6d97" prot="public" virt="non-virtual"><scope>Engine::Objects::Sphere</scope><name>~Sphere</name></member>
+      <member refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a90ab6da3110fffb6343790de9ba5b0de" prot="public" virt="non-virtual"><scope>Engine::Objects::Sphere</scope><name>~VertexObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

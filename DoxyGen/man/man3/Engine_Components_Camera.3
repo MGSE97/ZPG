@@ -1,0 +1,286 @@
+.TH "Engine::Components::Camera" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Engine::Components::Camera
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Camera\&.h>\fP
+.PP
+Inherits \fBObservable< Camera >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCamera\fP ()"
+.br
+.ti -1c
+.RI "\fB~Camera\fP ()"
+.br
+.ti -1c
+.RI "void \fBBind\fP (\fBObserver\fP< \fBCamera\fP > &observer)"
+.br
+.ti -1c
+.RI "glm::mat4 * \fBGet\fP ()"
+.br
+.ti -1c
+.RI "void \fBNotify\fP ()"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBSetActive\fP (\fBScene\fP *scene)"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBSetDirection\fP (glm::vec3 *direction)"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBSetPosition\fP (glm::vec3 *position)"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBSetUp\fP (glm::vec3 *up)"
+.br
+.ti -1c
+.RI "void \fBUnBind\fP (\fBObserver\fP< \fBCamera\fP > &observer)"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBUpdate\fP ()"
+.br
+.ti -1c
+.RI "\fBCamera\fP * \fBUpdateVectors\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "glm::vec3 * \fBDirection\fP"
+.br
+.ti -1c
+.RI "glm::vec3 * \fBFront\fP"
+.br
+.ti -1c
+.RI "glm::vec3 * \fBPosition\fP"
+.br
+.ti -1c
+.RI "glm::vec3 * \fBRight\fP"
+.br
+.ti -1c
+.RI "glm::vec3 * \fBUp\fP"
+.br
+.ti -1c
+.RI "glm::mat4 * \fBValue\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 12 of file Camera\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Engine::Components::Camera::Camera ()"
+
+.PP
+Definition at line 8 of file Camera\&.cpp\&.
+.PP
+References Direction, Front, Get(), Position, Right, Up, and Value\&.
+.PP
+.nf
+9 {
+10     Position = new glm::vec3(1\&.f, 1\&.f, 1\&.f);
+11     Direction = new glm::vec3(0\&.f, 0\&.f, 0\&.f);
+12     Up = new glm::vec3(0\&.f, 0\&.f, 1\&.f);
+13     Front = new glm::vec3(1\&.0, 1\&.0, 0\&.0);
+14     Right = new glm::vec3(0\&.0, 1\&.0, 1\&.0);
+15     Value = Get();
+16 }
+.fi
+.SS "Engine::Components::Camera::~Camera ()"
+
+.PP
+Definition at line 19 of file Camera\&.cpp\&.
+.PP
+.nf
+20 {
+21     delete Value;
+22 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void \fBObservable\fP< \fBCamera\fP  >::Bind (\fBObserver\fP< Camera  > & observer)\fC [inline]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 19 of file Observable\&.h\&.
+.PP
+References Observable< T >::_observers, and Generic::Collection< T >::Add()\&.
+.PP
+.nf
+20     {
+21         _observers->Add(&observer);
+22     }
+.fi
+.SS "glm::mat4 * Engine::Components::Camera::Get ()"
+
+.PP
+Definition at line 24 of file Camera\&.cpp\&.
+.PP
+References glm::Up()\&.
+.PP
+Referenced by Camera()\&.
+.PP
+.nf
+25 {
+26     return new glm::mat4(lookAt(*Position, *Direction, *Up));
+27 }
+.fi
+.SS "void \fBObservable\fP< \fBCamera\fP  >::Notify ()\fC [inline]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 27 of file Observable\&.h\&.
+.PP
+References Observable< T >::_observers\&.
+.PP
+.nf
+28     {
+29         for (auto it = _observers->begin(); it != _observers->end(); ++it)
+30             (*it)->Update(static_cast<T*>(this));
+31     }
+.fi
+.SS "\fBEngine::Components::Camera\fP * Engine::Components::Camera::SetActive (\fBScene\fP * scene)"
+
+.PP
+Definition at line 72 of file Camera\&.cpp\&.
+.PP
+References Engine::Components::Scene::SetActiveCamera()\&.
+.PP
+.nf
+73 {
+74     scene->SetActiveCamera(this);
+75     return this;
+76 }
+.fi
+.SS "\fBEngine::Components::Camera\fP * Engine::Components::Camera::SetDirection (glm::vec3 * direction)"
+
+.PP
+Definition at line 58 of file Camera\&.cpp\&.
+.PP
+.nf
+59 {
+60     *Direction = *direction;
+61     Update();
+62     return this;
+63 }
+.fi
+.SS "\fBEngine::Components::Camera\fP * Engine::Components::Camera::SetPosition (glm::vec3 * position)"
+
+.PP
+Definition at line 51 of file Camera\&.cpp\&.
+.PP
+.nf
+52 {
+53     *Position = *position;
+54     Update();
+55     return this;
+56 }
+.fi
+.SS "\fBEngine::Components::Camera\fP * Engine::Components::Camera::SetUp (glm::vec3 * up)"
+
+.PP
+Definition at line 65 of file Camera\&.cpp\&.
+.PP
+References glm::Up()\&.
+.PP
+.nf
+66 {
+67     *Up = *up;
+68     Update();
+69     return this;
+70 }
+.fi
+.SS "void \fBObservable\fP< \fBCamera\fP  >::UnBind (\fBObserver\fP< Camera  > & observer)\fC [inline]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 23 of file Observable\&.h\&.
+.PP
+References Observable< T >::_observers\&.
+.PP
+.nf
+24     {
+25         _observers->remove(observer);
+26     }
+.fi
+.SS "\fBEngine::Components::Camera\fP * Engine::Components::Camera::Update ()"
+
+.PP
+Definition at line 43 of file Camera\&.cpp\&.
+.PP
+Referenced by Application::Input::Handlers::CameraInputHandler::HandleKeys(), Application::Input::Handlers::CameraInputHandler::HandleMouse(), and Engine::Components::Scene::SetActiveCamera()\&.
+.PP
+.nf
+44 {
+45     *Value = *Get();
+46     UpdateVectors();
+47     Notify();
+48     return this;
+49 }
+.fi
+.SS "\fBEngine::Components::Camera\fP * Engine::Components::Camera::UpdateVectors ()"
+Up = *Position + glm::normalize(*Up - *Position); Direction = *Position + glm::normalize(*Direction - *Position); 
+.PP
+Definition at line 29 of file Camera\&.cpp\&.
+.PP
+References glm::Front(), glm::Right(), and glm::Up()\&.
+.PP
+.nf
+30 {
+31     /*Front->x = Direction->x;
+32     Front->z = Direction->z;
+33     Front->y = Position->y;*/
+36     *Front = glm::normalize(*Position - *Direction);
+37 
+38     *Right = glm::normalize(glm::cross(*Up, *Front));
+39 
+40     return this;
+41 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "glm::vec3* Engine::Components::Camera::Direction"
+
+.PP
+Definition at line 18 of file Camera\&.h\&.
+.PP
+Referenced by Camera(), Application::Input::Handlers::CameraInputHandler::HandleKeys(), and Application::Input::Handlers::CameraInputHandler::HandleMouse()\&.
+.SS "glm::vec3* Engine::Components::Camera::Front"
+
+.PP
+Definition at line 21 of file Camera\&.h\&.
+.PP
+Referenced by Camera(), and Application::Input::Handlers::CameraInputHandler::HandleKeys()\&.
+.SS "glm::vec3* Engine::Components::Camera::Position"
+
+.PP
+Definition at line 17 of file Camera\&.h\&.
+.PP
+Referenced by Camera(), Application::Input::Handlers::CameraInputHandler::HandleKeys(), and Application::Engines::LightEngine::Init()\&.
+.SS "glm::vec3* Engine::Components::Camera::Right"
+
+.PP
+Definition at line 20 of file Camera\&.h\&.
+.PP
+Referenced by Camera(), Application::Input::Handlers::CameraInputHandler::HandleKeys(), and Application::Input::Handlers::CameraInputHandler::HandleMouse()\&.
+.SS "glm::vec3* Engine::Components::Camera::Up"
+
+.PP
+Definition at line 19 of file Camera\&.h\&.
+.PP
+Referenced by Camera(), Application::Input::Handlers::CameraInputHandler::HandleKeys(), and Application::Input::Handlers::CameraInputHandler::HandleMouse()\&.
+.SS "glm::mat4* Engine::Components::Camera::Value"
+
+.PP
+Definition at line 29 of file Camera\&.h\&.
+.PP
+Referenced by Camera(), and Application::Engines::LightEngine::Init()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

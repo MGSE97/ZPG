@@ -1,0 +1,7 @@
+<map id="Engine::Components::Graphics::Material" name="Engine::Components::Graphics::Material">
+<area shape="rect" id="node2" href="$classGeneric_1_1Collection.html" title="{Generic::Collection\l\&lt; Engine::Components\l::Graphics::MaterialValueBase *\&gt;\n||+ Add()\l+ First()\l}" alt="" coords="161,669,377,790"/>
+<area shape="rect" id="node4" href="$classGeneric_1_1Collection.html" title="{Generic::Collection\&lt; T \&gt;\n||+ Add()\l+ First()\l}" alt="" coords="189,419,352,511"/>
+<area shape="rect" id="node6" href="$classEngine_1_1Components_1_1Graphics_1_1Program.html" title="{Engine::Components\l::Graphics::Program\n||+ Program()\l+ ~Program()\l+ AddShader()\l+ AddShaders()\l+ Get()\l+ Link()\l+ Use()\l&#45; CheckLink()\l}" alt="" coords="469,632,611,827"/>
+<area shape="rect" id="node7" href="$classGeneric_1_1Dictionary.html" title="{Generic::Dictionary\l\&lt; std::string, Engine\l::Components::Graphics\l::Shader *\&gt;\n||+ Add()\l+ First()\l+ Get()\l+ Last()\l+ operator[]()\l}" alt="" coords="376,375,539,555"/>
+<area shape="rect" id="node9" href="$classGeneric_1_1Dictionary.html" title="{Generic::Dictionary\l\&lt; TKey, TValue \&gt;\n||+ Add()\l+ First()\l+ Get()\l+ Last()\l+ operator[]()\l}" alt="" coords="540,132,673,283"/>
+</map>

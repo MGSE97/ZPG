@@ -1,0 +1,387 @@
+.TH "Engine::Components::Graphics::Shader" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Engine::Components::Graphics::Shader
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Shader\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBShader\fP (int type, std::string filename)"
+.br
+.ti -1c
+.RI "\fBShader\fP (int type, const char *shader)"
+.br
+.ti -1c
+.RI "\fB~Shader\fP ()"
+.br
+.ti -1c
+.RI "\fBShader\fP * \fBCompile\fP ()"
+.br
+.ti -1c
+.RI "GLuint * \fBGet\fP ()"
+.br
+.ti -1c
+.RI "\fBShader\fP * \fBSendUniform\fP (\fBProgram\fP *program, const GLchar *name, glm::mat4 *data)"
+.br
+.ti -1c
+.RI "\fBShader\fP * \fBSendUniform\fP (\fBProgram\fP *program, const GLchar *name, glm::vec4 *data)"
+.br
+.ti -1c
+.RI "\fBShader\fP * \fBSendUniform\fP (\fBProgram\fP *program, const GLchar *name, glm::vec3 *data)"
+.br
+.ti -1c
+.RI "\fBShader\fP * \fBSendUniform\fP (\fBProgram\fP *program, const GLchar *name, float *data)"
+.br
+.ti -1c
+.RI "\fBShader\fP * \fBSendUniform\fP (\fBProgram\fP *program, const GLchar *name, int *data)"
+.br
+.ti -1c
+.RI "\fBShader\fP * \fBSendUniform\fP (\fBProgram\fP *program, const GLchar *name, bool *data)"
+.br
+.ti -1c
+.RI "void \fBsetData\fP (\fBProgram\fP *program, const GLchar *property, \fBMaterialValueType\fP type, void *value)"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBMat4ToString\fP (glm::mat4 &mat)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "char * \fB_code\fP"
+.br
+.ti -1c
+.RI "bool \fB_compiled\fP"
+.br
+.ti -1c
+.RI "GLuint \fB_shader\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 18 of file Shader\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Engine::Components::Graphics::Shader::Shader (int type, std::string filename)"
+
+.PP
+Definition at line 13 of file Shader\&.cpp\&.
+.PP
+References _compiled, and _shader\&.
+.PP
+.nf
+14 {
+15     _compiled = false;
+16     std::ifstream file(filename, std::ios::in);
+17     if (file\&.is_open())
+18     {
+19         std::stringstream buffer;
+20         buffer << file\&.rdbuf();
+21         std::string sh = buffer\&.str();
+22         file\&.close();
+23         const auto version = sh\&.find_first_of('#');
+24         sh = sh\&.substr(version, sh\&.length() - version);
+25 
+26         const char* shader = sh\&.data();
+27 
+28         _shader = glCreateShader(type);
+29         glShaderSource(_shader, 1, &shader, NULL);
+30         glCompileShader(_shader);
+31         /*
+32         // Handle Error
+33         GLint isCompiled = 0;
+34         glGetShaderiv(_shader, GL_COMPILE_STATUS, &isCompiled);
+35         if (isCompiled == GL_FALSE)
+36         {
+37             GLint maxLength = 0;
+38             glGetShaderiv(_shader, GL_INFO_LOG_LENGTH, &maxLength);
+39 
+40             std::vector<GLchar> errorLog(maxLength);
+41             glGetShaderInfoLog(_shader, maxLength, &maxLength, &errorLog[0]);
+42 
+43             fprintf(stderr, "Shader %u Compilation failed:\nCode:\n%s\nErrors:\n%s\n", _shader, shader, errorLog\&.data());
+44         }
+45         _compiled = isCompiled != GL_FALSE;*/
+46     }
+47 }
+.fi
+.SS "Engine::Components::Graphics::Shader::Shader (int type, const char * shader)"
+
+.PP
+Definition at line 49 of file Shader\&.cpp\&.
+.PP
+.nf
+50 {
+51     _shader = glCreateShader(type);
+52     glShaderSource(_shader, 1, &shader, NULL);
+53 }
+.fi
+.SS "Engine::Components::Graphics::Shader::~Shader ()"
+
+.PP
+Definition at line 55 of file Shader\&.cpp\&.
+.PP
+.nf
+56 {
+57     /*delete _code;
+58     delete &_compiled;
+59     delete &_shader;*/
+60 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBEngine::Components::Graphics::Shader\fP * Engine::Components::Graphics::Shader::Compile ()"
+
+.PP
+Definition at line 62 of file Shader\&.cpp\&.
+.PP
+.nf
+63 {
+64     glCompileShader(_shader);
+65     GLint isCompiled = 0;
+66     glGetShaderiv(_shader, GL_COMPILE_STATUS, &isCompiled);
+67     if (isCompiled == GL_FALSE)
+68     {
+69         GLint maxLength = 0;
+70         glGetShaderiv(_shader, GL_INFO_LOG_LENGTH, &maxLength);
+71 
+72         // The maxLength includes the NULL character
+73         std::vector<GLchar> errorLog(maxLength);
+74         glGetShaderInfoLog(_shader, maxLength, &maxLength, &errorLog[0]);
+75 
+76         fprintf(stderr, "Shader %u Compilation failed:\nCode:\n%s\nErrors:\n%s\n", _shader, _code, errorLog\&.data());
+77     }
+78     _compiled = isCompiled != GL_FALSE;
+79     return this;
+80 }
+.fi
+.SS "GLuint * Engine::Components::Graphics::Shader::Get ()"
+
+.PP
+Definition at line 82 of file Shader\&.cpp\&.
+.PP
+Referenced by Engine::Components::Graphics::Program::AddShader()\&.
+.PP
+.nf
+83 {
+84     if (!_compiled)
+85         Compile();
+86     return &_shader;
+87 }
+.fi
+.SS "std::string Engine::Components::Graphics::Shader::Mat4ToString (glm::mat4 & mat)\fC [private]\fP"
+
+.PP
+Definition at line 202 of file Shader\&.cpp\&.
+.PP
+.nf
+203 {
+204     char* txt = new char[200];
+205     sprintf_s(txt, 200, "%6\&.4f\t%6\&.4f\t%6\&.4f\t%6\&.4f\n%6\&.4f\t%6\&.4f\t%6\&.4f\t%6\&.4f\n%6\&.4f\t%6\&.4f\t%6\&.4f\t%6\&.4f\n%6\&.4f\t%6\&.4f\t%6\&.4f\t%6\&.4f",
+206         mat[0][0], mat[0][1], mat[0][2], mat[0][3],
+207         mat[1][0], mat[1][1], mat[1][2], mat[1][3],
+208         mat[2][0], mat[2][1], mat[2][2], mat[2][3],
+209         mat[3][0], mat[3][1], mat[3][2], mat[3][3]);
+210     /*txt << mat[0][0] << "\t\t" << mat[0][1] << "\t\t" << mat[0][2] << "\t\t" << mat[0][3] << std::endl;
+211     txt << mat[1][0] << "\t\t" << mat[1][1] << "\t\t" << mat[1][2] << "\t\t" << mat[1][3] << std::endl;
+212     txt << mat[2][0] << "\t\t" << mat[2][1] << "\t\t" << mat[2][2] << "\t\t" << mat[2][3] << std::endl; 
+213     txt << mat[3][0] << "\t\t" << mat[3][1] << "\t\t" << mat[3][2] << "\t\t" << mat[3][3] << std::endl;*/
+214     return std::string(txt);
+215 }
+.fi
+.SS "\fBEngine::Components::Graphics::Shader\fP * Engine::Components::Graphics::Shader::SendUniform (\fBProgram\fP * program, const GLchar * name, glm::mat4 * data)"
+
+.PP
+Definition at line 89 of file Shader\&.cpp\&.
+.PP
+References Engine::Components::Graphics::Program::Get()\&.
+.PP
+Referenced by Engine::Components::Graphics::MaterialValue< T >::Set()\&.
+.PP
+.nf
+90 {
+91     #ifdef DEBUG
+92         fprintf(stderr, "SET MAT4: %s (0x%p) value \n%s\n", name, data, Mat4ToString(*data)\&.c_str());
+93     #endif
+94     GLint uniformID = glGetUniformLocation(*(program->Get()), name);
+95     if (uniformID >= 0) {
+96         glUniformMatrix4fv(uniformID, 1, GL_FALSE, value_ptr(*data));
+97     }
+98     else {
+99         fprintf(stderr, "ERROR: program 0x%p:%u mat4 variable %s not found\n", program, *(program->Get()), name);
+100     }
+101 
+102     return this;
+103 }
+.fi
+.SS "\fBEngine::Components::Graphics::Shader\fP * Engine::Components::Graphics::Shader::SendUniform (\fBProgram\fP * program, const GLchar * name, glm::vec4 * data)"
+
+.PP
+Definition at line 105 of file Shader\&.cpp\&.
+.PP
+References Engine::Components::Graphics::Program::Get()\&.
+.PP
+.nf
+106 {
+107     #ifdef DEBUG
+108         fprintf(stderr, "SET VEC4: %s (0x%p) value \n(%f, %f, %f, %f)\n", name, data, data->x, data->y, data->z, data->w);
+109     #endif
+110     GLint uniformID = glGetUniformLocation(*(program->Get()), name);
+111     if (uniformID >= 0) {
+112         glUniform4f(uniformID, data->x, data->y, data->z, data->w);
+113     }
+114     else {
+115         fprintf(stderr, "ERROR: program 0x%p:%u vec4 variable %s not found\n", program, *(program->Get()), name);
+116     }
+117 
+118     return this;
+119 }
+.fi
+.SS "\fBEngine::Components::Graphics::Shader\fP * Engine::Components::Graphics::Shader::SendUniform (\fBProgram\fP * program, const GLchar * name, glm::vec3 * data)"
+
+.PP
+Definition at line 121 of file Shader\&.cpp\&.
+.PP
+References Engine::Components::Graphics::Program::Get()\&.
+.PP
+.nf
+122 {
+123     #ifdef DEBUG
+124         fprintf(stderr, "SET VEC3: %s (0x%p) value \n(%f, %f, %f)\n", name, data, data->x, data->y, data->z);
+125     #endif
+126     GLint uniformID = glGetUniformLocation(*(program->Get()), name);
+127     if (uniformID >= 0) {
+128         glUniform3f(uniformID, data->x,data->y,data->z);
+129     }
+130     else {
+131         fprintf(stderr, "ERROR: program 0x%p:%u vec3 variable %s not found\n", program, *(program->Get()), name);
+132     }
+133 
+134     return this;
+135 }
+.fi
+.SS "\fBEngine::Components::Graphics::Shader\fP * Engine::Components::Graphics::Shader::SendUniform (\fBProgram\fP * program, const GLchar * name, float * data)"
+
+.PP
+Definition at line 138 of file Shader\&.cpp\&.
+.PP
+References Engine::Components::Graphics::Program::Get()\&.
+.PP
+.nf
+139 {
+140     #ifdef DEBUG
+141         fprintf(stderr, "SET FLOAT: %s (0x%x) value %f\n", name, data, *data);
+142     #endif
+143     GLint uniformID = glGetUniformLocation(*(program->Get()), name);
+144     if (uniformID >= 0) {
+145         glUniform1f(uniformID, *data);
+146     }
+147     else {
+148         fprintf(stderr, "ERROR: program 0x%p:%u float variable %s not found\n", program, *(program->Get()), name);
+149     }
+150 
+151     return this;
+152 }
+.fi
+.SS "\fBEngine::Components::Graphics::Shader\fP * Engine::Components::Graphics::Shader::SendUniform (\fBProgram\fP * program, const GLchar * name, int * data)"
+
+.PP
+Definition at line 154 of file Shader\&.cpp\&.
+.PP
+References Engine::Components::Graphics::Program::Get()\&.
+.PP
+.nf
+155 {
+156     #ifdef DEBUG
+157         fprintf(stderr, "SET INT: %s (0x%p) value %d\n", name, data, *data);
+158     #endif
+159     GLint uniformID = glGetUniformLocation(*(program->Get()), name);
+160     if (uniformID >= 0) {
+161         glUniform1i(uniformID, *data);
+162     }
+163     else {
+164         fprintf(stderr, "ERROR: program 0x%p:%u int variable %s not found\n", program, *(program->Get()), name);
+165     }
+166 
+167     return this;
+168 }
+.fi
+.SS "\fBEngine::Components::Graphics::Shader\fP * Engine::Components::Graphics::Shader::SendUniform (\fBProgram\fP * program, const GLchar * name, bool * data)"
+
+.PP
+Definition at line 170 of file Shader\&.cpp\&.
+.PP
+References Engine::Components::Graphics::Program::Get()\&.
+.PP
+.nf
+171 {
+172     #ifdef DEBUG
+173         fprintf(stderr, "SET BOOL: %s (0x%p) value %b\n", name, data, *data);
+174     #endif
+175     GLint uniformID = glGetUniformLocation(*(program->Get()), name);
+176     if (uniformID >= 0) {
+177         glUniform1i(uniformID, *data);
+178     }
+179     else {
+180         fprintf(stderr, "ERROR: program 0x%p:%u int variable %s not found\n", program, *(program->Get()), name);
+181     }
+182 
+183     return this;
+184 }
+.fi
+.SS "void Engine::Components::Graphics::Shader::setData (\fBProgram\fP * program, const GLchar * property, \fBMaterialValueType\fP type, void * value)"
+
+.PP
+Definition at line 186 of file Shader\&.cpp\&.
+.PP
+References Engine::Components::Graphics::Float, Engine::Components::Graphics::Int, and Engine::Components::Graphics::Matrix4x4\&.
+.PP
+.nf
+187 {
+188     switch (type)
+189     {
+190         case Int:
+191             SendUniform(program, property, static_cast<int*>(value));
+192             break;
+193         case Float:
+194             SendUniform(program, property, static_cast<float*>(value));
+195             break;
+196         case Matrix4x4:
+197             SendUniform(program, property, static_cast<glm::mat4*>(value));
+198             break;
+199     }
+200 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "char* Engine::Components::Graphics::Shader::_code\fC [private]\fP"
+
+.PP
+Definition at line 36 of file Shader\&.h\&.
+.SS "bool Engine::Components::Graphics::Shader::_compiled\fC [private]\fP"
+
+.PP
+Definition at line 35 of file Shader\&.h\&.
+.PP
+Referenced by Shader()\&.
+.SS "GLuint Engine::Components::Graphics::Shader::_shader\fC [private]\fP"
+
+.PP
+Definition at line 34 of file Shader\&.h\&.
+.PP
+Referenced by Shader()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structEngine_1_1Components_1_1Objects_1_1VAOConfig" kind="struct" language="C++" prot="public">
+    <compoundname>Engine::Components::Objects::VAOConfig</compoundname>
+    <includes refid="VertexObject_8h" local="no">VertexObject.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structEngine_1_1Components_1_1Objects_1_1VAOConfig_1a6060677b7de418e6f1143a76ddd5ac98" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Engine::Components::Objects::VAOConfig::Offset</definition>
+        <argsstring></argsstring>
+        <name>Offset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexObject.h" line="41" column="1" bodyfile="ZPG/VertexObject.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structEngine_1_1Components_1_1Objects_1_1VAOConfig_1a1591984c2db527f1e17d8965039b9d9c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Engine::Components::Objects::VAOConfig::Size</definition>
+        <argsstring></argsstring>
+        <name>Size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexObject.h" line="40" column="1" bodyfile="ZPG/VertexObject.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structEngine_1_1Components_1_1Objects_1_1VAOConfig_1af0fc55d3a998fd288ef8d5ddb2c808c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Components::Objects::VAOConfig::VAOConfig</definition>
+        <argsstring>()</argsstring>
+        <name>VAOConfig</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexObject.h" line="38" column="1" bodyfile="ZPG/VertexObject.cpp" bodystart="88" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="structEngine_1_1Components_1_1Objects_1_1VAOConfig_1a6861c27437102022a1108036ddf30062" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Components::Objects::VAOConfig::VAOConfig</definition>
+        <argsstring>(int size, int offset)</argsstring>
+        <name>VAOConfig</name>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>offset</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexObject.h" line="39" column="1" bodyfile="ZPG/VertexObject.cpp" bodystart="92" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="445">
+        <label>Engine::Components::Objects::VAOConfig</label>
+        <link refid="structEngine_1_1Components_1_1Objects_1_1VAOConfig"/>
+        <childnode refid="446" relation="usage">
+          <edgelabel>+Offset</edgelabel>
+          <edgelabel>+Size</edgelabel>
+        </childnode>
+      </node>
+      <node id="446">
+        <label>int</label>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/VertexObject.h" line="36" column="1" bodyfile="ZPG/VertexObject.h" bodystart="35" bodyend="42"/>
+    <listofallmembers>
+      <member refid="structEngine_1_1Components_1_1Objects_1_1VAOConfig_1a6060677b7de418e6f1143a76ddd5ac98" prot="public" virt="non-virtual"><scope>Engine::Components::Objects::VAOConfig</scope><name>Offset</name></member>
+      <member refid="structEngine_1_1Components_1_1Objects_1_1VAOConfig_1a1591984c2db527f1e17d8965039b9d9c" prot="public" virt="non-virtual"><scope>Engine::Components::Objects::VAOConfig</scope><name>Size</name></member>
+      <member refid="structEngine_1_1Components_1_1Objects_1_1VAOConfig_1af0fc55d3a998fd288ef8d5ddb2c808c8" prot="public" virt="non-virtual"><scope>Engine::Components::Objects::VAOConfig</scope><name>VAOConfig</name></member>
+      <member refid="structEngine_1_1Components_1_1Objects_1_1VAOConfig_1a6861c27437102022a1108036ddf30062" prot="public" virt="non-virtual"><scope>Engine::Components::Objects::VAOConfig</scope><name>VAOConfig</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

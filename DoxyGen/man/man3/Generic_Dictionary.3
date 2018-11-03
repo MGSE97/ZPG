@@ -1,0 +1,114 @@
+.TH "Generic::Dictionary< TKey, TValue >" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Generic::Dictionary< TKey, TValue >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Dictionary\&.h>\fP
+.PP
+Inherits map< TKey, TValue >\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBDictionary\fP & \fBAdd\fP (TKey key, TValue value)"
+.br
+.ti -1c
+.RI "TValue & \fBFirst\fP (TValue _default=nullptr)"
+.br
+.ti -1c
+.RI "TValue & \fBGet\fP (const TKey key, TValue _default=nullptr)"
+.br
+.ti -1c
+.RI "TValue & \fBLast\fP ()"
+.br
+.ti -1c
+.RI "TValue & \fBoperator[]\fP (TKey key)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename TKey, class TValue>
+.br
+class Generic::Dictionary< TKey, TValue >"
+
+.PP
+Definition at line 7 of file Dictionary\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename TKey, class TValue> \fBDictionary\fP& \fBGeneric::Dictionary\fP< TKey, TValue >::Add (TKey key, TValue value)\fC [inline]\fP"
+
+.PP
+Definition at line 10 of file Dictionary\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::CameraInputHandler::HandleMouse(), and Application::Engines::LightEngine::Init()\&.
+.PP
+.nf
+11         {
+12             auto pair = this->find(key);
+13             if (pair == this->end())
+14                 this->insert(std::pair<TKey, TValue>(key, value));
+15             else
+16                 pair->second = value;
+17             
+18             return *this;
+19         }
+.fi
+.SS "template<typename TKey, class TValue> TValue& \fBGeneric::Dictionary\fP< TKey, TValue >::First (TValue _default = \fCnullptr\fP)\fC [inline]\fP"
+
+.PP
+Definition at line 29 of file Dictionary\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::LightingChangeInputHandler::HandleKeys(), and Application::Engines::CameraEngine::Init()\&.
+.PP
+.nf
+30         {
+31             if (this->size() == 0)
+32                 return _default;
+33             return this->begin()->second;
+34         }
+.fi
+.SS "template<typename TKey, class TValue> TValue& \fBGeneric::Dictionary\fP< TKey, TValue >::Get (const TKey key, TValue _default = \fCnullptr\fP)\fC [inline]\fP"
+
+.PP
+Definition at line 21 of file Dictionary\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::CameraInputHandler::HandleMouse(), main(), and Generic::Dictionary< std::string, Engine::BaseEngine *>::operator[]()\&.
+.PP
+.nf
+22         {
+23             auto r = this->find(key);
+24             if(r != this->end())
+25                 return r->second;
+26             return _default;
+27         }
+.fi
+.SS "template<typename TKey, class TValue> TValue& \fBGeneric::Dictionary\fP< TKey, TValue >::Last ()\fC [inline]\fP"
+
+.PP
+Definition at line 36 of file Dictionary\&.h\&.
+.PP
+.nf
+37         {
+38             return this->end()->second;
+39         }
+.fi
+.SS "template<typename TKey, class TValue> TValue& \fBGeneric::Dictionary\fP< TKey, TValue >::operator[] (TKey key)\fC [inline]\fP"
+
+.PP
+Definition at line 41 of file Dictionary\&.h\&.
+.PP
+.nf
+42         {
+43             return Get(key);
+44         }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

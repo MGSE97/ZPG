@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classReadOnlyProperty" kind="class" language="C++" prot="public">
+    <compoundname>ReadOnlyProperty</compoundname>
+    <includes refid="ReadOnlyProperty_8h" local="no">ReadOnlyProperty.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classReadOnlyProperty_1a2c873d913c72f4a024499e0ff68bb527" prot="protected" static="no" mutable="no">
+        <type>T</type>
+        <definition>T ReadOnlyProperty&lt; T &gt;::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/ReadOnlyProperty.h" line="8" column="1" bodyfile="ZPG/ReadOnlyProperty.h" bodystart="8" bodyend="-1"/>
+        <referencedby refid="classReadOnlyProperty_1a9e46deac4a2cea32d6914ff518fe0fed" compoundref="ReadOnlyProperty_8h" startline="6" endline="6">ReadOnlyProperty&lt; T &gt;::operator T const &amp;</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classReadOnlyProperty_1aa34b40fc62c654174c672fabf07ddf10" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ReadOnlyProperty&lt; T &gt;::~ReadOnlyProperty</definition>
+        <argsstring>()</argsstring>
+        <name>~ReadOnlyProperty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/ReadOnlyProperty.h" line="5" column="1" bodyfile="ZPG/ReadOnlyProperty.h" bodystart="5" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classReadOnlyProperty_1a9e46deac4a2cea32d6914ff518fe0fed" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual ReadOnlyProperty&lt; T &gt;::operator T const &amp;</definition>
+        <argsstring>() const</argsstring>
+        <name>operator T const &amp;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/ReadOnlyProperty.h" line="6" column="1" bodyfile="ZPG/ReadOnlyProperty.h" bodystart="6" bodyend="6"/>
+        <references refid="classReadOnlyProperty_1a2c873d913c72f4a024499e0ff68bb527" compoundref="ReadOnlyProperty_8h" startline="8">ReadOnlyProperty&lt; T &gt;::value</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="617">
+        <label>T</label>
+      </node>
+      <node id="616">
+        <label>ReadOnlyProperty&lt; T &gt;</label>
+        <link refid="classReadOnlyProperty"/>
+        <childnode refid="617" relation="usage">
+          <edgelabel>#value</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/ReadOnlyProperty.h" line="3" column="1" bodyfile="ZPG/ReadOnlyProperty.h" bodystart="3" bodyend="9"/>
+    <listofallmembers>
+      <member refid="classReadOnlyProperty_1a9e46deac4a2cea32d6914ff518fe0fed" prot="public" virt="virtual"><scope>ReadOnlyProperty</scope><name>operator T const &amp;</name></member>
+      <member refid="classReadOnlyProperty_1a2c873d913c72f4a024499e0ff68bb527" prot="protected" virt="non-virtual"><scope>ReadOnlyProperty</scope><name>value</name></member>
+      <member refid="classReadOnlyProperty_1aa34b40fc62c654174c672fabf07ddf10" prot="public" virt="virtual"><scope>ReadOnlyProperty</scope><name>~ReadOnlyProperty</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

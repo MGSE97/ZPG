@@ -1,0 +1,124 @@
+.TH "glm" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+glm
+.SH SYNOPSIS
+.br
+.PP
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "vec3 \fBBack\fP (0, 0, 1)"
+.br
+.ti -1c
+.RI "vec3 \fBDown\fP (0, \-1, 0)"
+.br
+.ti -1c
+.RI "vec3 \fBFront\fP (0, 0, \-1)"
+.br
+.ti -1c
+.RI "vec3 \fBLeft\fP (\-1, 0, 0)"
+.br
+.ti -1c
+.RI "vec3 \fBRight\fP (1, 0, 0)"
+.br
+.ti -1c
+.RI "vec2 \fBrotateAround\fP (vec2 center, vec2 point, float angle)"
+.br
+.ti -1c
+.RI "float \fBsimplify\fP (float vector, float value=1\&.f)"
+.br
+.ti -1c
+.RI "vec3 \fBsimplify\fP (glm::vec3 vector, float value=1\&.f)"
+.br
+.ti -1c
+.RI "vec2 \fBsimplify\fP (glm::vec2 vector, float value=1\&.f)"
+.br
+.ti -1c
+.RI "vec3 \fBUp\fP (0, 1, 0)"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "vec3 glm::Back (0, 0, 1)"
+
+.SS "vec3 glm::Down (0, \- 1, 0)"
+
+.SS "vec3 glm::Front (0, 0, \- 1)"
+
+.PP
+Referenced by Engine::Components::Camera::UpdateVectors()\&.
+.SS "vec3 glm::Left (\- 1, 0, 0)"
+
+.SS "vec3 glm::Right (1, 0, 0)"
+
+.PP
+Referenced by Engine::Components::Camera::UpdateVectors()\&.
+.SS "vec2 glm::rotateAround (vec2 center, vec2 point, float angle)\fC [inline]\fP"
+
+.PP
+Definition at line 32 of file gmlExtensions\&.h\&.
+.PP
+.nf
+32                                                                    {
+33 
+34         return vec2(cos(angle) * (point\&.x - center\&.x) - sin(angle) * (point\&.y - center\&.y) + center\&.x,
+35                     sin(angle) * (point\&.x - center\&.x) + cos(angle) * (point\&.y - center\&.y) + center\&.y);
+36     }
+.fi
+.SS "float glm::simplify (float vector, float value = \fC1\&.f\fP)\fC [inline]\fP"
+
+.PP
+Definition at line 7 of file gmlExtensions\&.h\&.
+.PP
+Referenced by simplify()\&.
+.PP
+.nf
+8     {
+9         if (vector > 0)
+10             return value;
+11         if (vector < 0)
+12             return -value;
+13         return 0\&.f;
+14     }
+.fi
+.SS "vec3 glm::simplify (glm::vec3 vector, float value = \fC1\&.f\fP)\fC [inline]\fP"
+
+.PP
+Definition at line 16 of file gmlExtensions\&.h\&.
+.PP
+References simplify()\&.
+.PP
+.nf
+17     {
+18         auto v = vector;
+19         v\&.x = simplify(v\&.x,value);
+20         v\&.y = simplify(v\&.y, value);
+21         v\&.z = simplify(v\&.z, value);
+22         return v;
+23     }
+.fi
+.SS "vec2 glm::simplify (glm::vec2 vector, float value = \fC1\&.f\fP)\fC [inline]\fP"
+
+.PP
+Definition at line 24 of file gmlExtensions\&.h\&.
+.PP
+References simplify()\&.
+.PP
+.nf
+25     {
+26         auto v = vector;
+27         v\&.x = simplify(v\&.x, value);
+28         v\&.y = simplify(v\&.y, value);
+29         return v;
+30     }
+.fi
+.SS "vec3 glm::Up (0, 1, 0)"
+
+.PP
+Referenced by Engine::Components::Camera::Get(), Engine::Components::Camera::SetUp(), and Engine::Components::Camera::UpdateVectors()\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

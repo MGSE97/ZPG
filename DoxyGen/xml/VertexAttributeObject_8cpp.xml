@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="VertexAttributeObject_8cpp" kind="file" language="C++">
+    <compoundname>VertexAttributeObject.cpp</compoundname>
+    <includes refid="VertexAttributeObject_8h" local="yes">VertexAttributeObject.h</includes>
+    <includes local="no">cstddef</includes>
+    <includes refid="VertexBufferObject_8h" local="yes">VertexBufferObject.h</includes>
+    <incdepgraph>
+      <node id="2315">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="2316" relation="include">
+        </childnode>
+        <childnode refid="2317" relation="include">
+        </childnode>
+        <childnode refid="2319" relation="include">
+        </childnode>
+      </node>
+      <node id="2317">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="2316" relation="include">
+        </childnode>
+        <childnode refid="2318" relation="include">
+        </childnode>
+      </node>
+      <node id="2316">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="2318">
+        <label>vector</label>
+      </node>
+      <node id="2314">
+        <label>ZPG/VertexAttributeObject.cpp</label>
+        <link refid="VertexAttributeObject_8cpp"/>
+        <childnode refid="2315" relation="include">
+        </childnode>
+        <childnode refid="2320" relation="include">
+        </childnode>
+        <childnode refid="2317" relation="include">
+        </childnode>
+      </node>
+      <node id="2319">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="2320">
+        <label>cstddef</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VertexAttributeObject_8h" kindref="compound">VertexAttributeObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstddef&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="VertexBufferObject_8h" kindref="compound">VertexBufferObject.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_1a1439a87dfc4f350a31e97a40a5cc1c3d" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_1a1439a87dfc4f350a31e97a40a5cc1c3d" kindref="member">Engine::Components::Objects::VertexAttributeObject::VertexAttributeObject</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>index,<sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject" kindref="compound">VertexBufferObject</ref>*<sp/>VBO,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dimensions,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_1aa440859216dad8d94b7a56d4d105fadf" kindref="member">Dimensions</ref><sp/>=<sp/>dimensions;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_1a854d40f88b9c4cd8e57be7a3d3f72e39" kindref="member">Index</ref><sp/>=<sp/>index;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_1a2eadc0a67482dfff8bc65d91e2e974b9" kindref="member">Offset</ref><sp/>=<sp/>offset;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_1aadad45ab6562ea5054b5ce9761c1f2d1" kindref="member">Size</ref><sp/>=<sp/>size;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(index<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glGenVertexArrays(VBO-&gt;<ref refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1ada22635c60245448346653b0e82f5d9c" kindref="member">GetId</ref>(),<sp/>&amp;<ref refid="classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_1a66edf6b8734008170901528cb3b07802" kindref="member">_VAO</ref>);<sp/></highlight><highlight class="comment">//generate<sp/>the<sp/>VAO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindVertexArray(<ref refid="classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_1a66edf6b8734008170901528cb3b07802" kindref="member">_VAO</ref>);<sp/></highlight><highlight class="comment">//bind<sp/>the<sp/>VAO</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glBindBuffer(GL_ARRAY_BUFFER,<sp/>VBO-&gt;<ref refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1abf4805d63271ee1c56a15214cd75077d" kindref="member">Get</ref>());</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>glEnableVertexAttribArray(index);<sp/></highlight><highlight class="comment">//enable<sp/>vertex<sp/>attributes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>glVertexAttribPointer(index,<sp/>dimensions,<sp/>GL_FLOAT,<sp/>GL_FALSE,<sp/>size*</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">),<sp/>(GLvoid*)offset);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_1afab852c51905d30eba2c9e470fe621aa" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_1afab852c51905d30eba2c9e470fe621aa" kindref="member">Engine::Components::Objects::VertexAttributeObject::~VertexAttributeObject</ref>()</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>&amp;_VAO;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>&amp;Dimensions;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>&amp;Index;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>&amp;Offset;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>&amp;Size;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_1aa67306f65eb1377693630b05bae4fa70" refkind="member"><highlight class="normal">GLuint<sp/><ref refid="classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_1aa67306f65eb1377693630b05bae4fa70" kindref="member">Engine::Components::Objects::VertexAttributeObject::Get</ref>()</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_VAO;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="ZPG/VertexAttributeObject.cpp"/>
+  </compounddef>
+</doxygen>

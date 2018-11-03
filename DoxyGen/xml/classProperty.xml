@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classProperty" kind="class" language="C++" prot="public">
+    <compoundname>Property</compoundname>
+    <includes refid="Property_8h" local="no">Property.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classProperty_1a2be7b50eb1b49c6fbbb434de219e51fd" prot="protected" static="no" mutable="no">
+        <type>T</type>
+        <definition>T Property&lt; T &gt;::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Property.h" line="9" column="1" bodyfile="ZPG/Property.h" bodystart="9" bodyend="-1"/>
+        <referencedby refid="classProperty_1ac6e42e7bc8389563c1a146ada975537d" compoundref="Property_8h" startline="7" endline="7">Property&lt; T &gt;::operator T const &amp;</referencedby>
+        <referencedby refid="classProperty_1a5544ed373da5ea5aee46217ebed97eb7" compoundref="Property_8h" startline="6" endline="6">Property&lt; T &gt;::operator=</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classProperty_1a07aa35ff914a89ddfa870beb39ed2282" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Property&lt; T &gt;::~Property</definition>
+        <argsstring>()</argsstring>
+        <name>~Property</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Property.h" line="5" column="1" bodyfile="ZPG/Property.h" bodystart="5" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classProperty_1ac6e42e7bc8389563c1a146ada975537d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Property&lt; T &gt;::operator T const &amp;</definition>
+        <argsstring>() const</argsstring>
+        <name>operator T const &amp;</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Property.h" line="7" column="1" bodyfile="ZPG/Property.h" bodystart="7" bodyend="7"/>
+        <references refid="classProperty_1a2be7b50eb1b49c6fbbb434de219e51fd" compoundref="Property_8h" startline="9">Property&lt; T &gt;::value</references>
+      </memberdef>
+      <memberdef kind="function" id="classProperty_1a5544ed373da5ea5aee46217ebed97eb7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>T &amp;</type>
+        <definition>virtual T&amp; Property&lt; T &gt;::operator=</definition>
+        <argsstring>(const T &amp;f)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const T &amp;</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Property.h" line="6" column="1" bodyfile="ZPG/Property.h" bodystart="6" bodyend="6"/>
+        <references refid="classProperty_1a2be7b50eb1b49c6fbbb434de219e51fd" compoundref="Property_8h" startline="9">Property&lt; T &gt;::value</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="614">
+        <label>T</label>
+      </node>
+      <node id="613">
+        <label>Property&lt; T &gt;</label>
+        <link refid="classProperty"/>
+        <childnode refid="614" relation="usage">
+          <edgelabel>#value</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/Property.h" line="3" column="1" bodyfile="ZPG/Property.h" bodystart="3" bodyend="10"/>
+    <listofallmembers>
+      <member refid="classProperty_1ac6e42e7bc8389563c1a146ada975537d" prot="public" virt="virtual"><scope>Property</scope><name>operator T const &amp;</name></member>
+      <member refid="classProperty_1a5544ed373da5ea5aee46217ebed97eb7" prot="public" virt="virtual"><scope>Property</scope><name>operator=</name></member>
+      <member refid="classProperty_1a2be7b50eb1b49c6fbbb434de219e51fd" prot="protected" virt="non-virtual"><scope>Property</scope><name>value</name></member>
+      <member refid="classProperty_1a07aa35ff914a89ddfa870beb39ed2282" prot="public" virt="virtual"><scope>Property</scope><name>~Property</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,67 @@
+.TH "Engine::Components" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Engine::Components
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBGraphics\fP"
+.br
+.ti -1c
+.RI " \fBObjects\fP"
+.br
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBBaseInputHandler\fP"
+.br
+.ti -1c
+.RI "class \fBCamera\fP"
+.br
+.ti -1c
+.RI "class \fBScene\fP"
+.br
+.ti -1c
+.RI "class \fBWindow\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual bool \fBHandleMouse\fP (\fBBaseEngine\fP *engine, \fBWindow\fP *window, \fBScene\fP *scene, double x, double y, \fBGeneric::Dictionary\fP< short, bool > &keys, int keysActive)=0"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "__interface \fBIInputHandler\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "virtual bool Engine::Components::HandleMouse (\fBBaseEngine\fP * engine, \fBWindow\fP * window, \fBScene\fP * scene, double x, double y, \fBGeneric::Dictionary\fP< short, bool > & keys, int keysActive)\fC [pure virtual]\fP"
+
+.SH "Variable Documentation"
+.PP 
+.SS "__interface \fBEngine::Components::IInputHandler\fP"
+\fBInitial value:\fP
+.PP
+.nf
+{
+        public:
+            virtual bool HandleKeys(BaseEngine* engine, Window* window, Scene* scene, Generic::Dictionary<short,bool>& keys, int keysActive) = 0
+.fi
+.PP
+Definition at line 13 of file IInputHandler\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

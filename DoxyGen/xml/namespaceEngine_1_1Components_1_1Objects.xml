@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespaceEngine_1_1Components_1_1Objects" kind="namespace" language="C++">
+    <compoundname>Engine::Components::Objects</compoundname>
+    <innerclass refid="structEngine_1_1Components_1_1Objects_1_1VAOConfig" prot="public">Engine::Components::Objects::VAOConfig</innerclass>
+    <innerclass refid="classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject" prot="public">Engine::Components::Objects::VertexAttributeObject</innerclass>
+    <innerclass refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject" prot="public">Engine::Components::Objects::VertexBufferObject</innerclass>
+    <innerclass refid="classEngine_1_1Components_1_1Objects_1_1VertexObject" prot="public">Engine::Components::Objects::VertexObject</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ZPG/VertexAttributeObject.h" line="11" column="1"/>
+  </compounddef>
+</doxygen>

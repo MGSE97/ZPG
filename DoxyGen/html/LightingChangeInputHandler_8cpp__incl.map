@@ -1,0 +1,26 @@
+<map id="ZPG/LightingChangeInputHandler.cpp" name="ZPG/LightingChangeInputHandler.cpp">
+<area shape="rect" id="node2" href="$LightingChangeInputHandler_8h.html" title="LightingChangeInputHandler.h" alt="" coords="554,80,749,107"/>
+<area shape="rect" id="node37" href="$LigtEngine_8h.html" title="LigtEngine.h" alt="" coords="988,80,1083,107"/>
+<area shape="rect" id="node3" href="$BaseInputHandler_8h.html" title="BaseInputHandler.h" alt="" coords="603,155,737,181"/>
+<area shape="rect" id="node4" href="$IInputHandler_8h.html" title="IInputHandler.h" alt="" coords="832,229,940,256"/>
+<area shape="rect" id="node5" href="$Window_8h.html" title="Window.h" alt="" coords="845,453,924,480"/>
+<area shape="rect" id="node27" href="$Scene_8h.html" title="Scene.h" alt="" coords="673,304,744,331"/>
+<area shape="rect" id="node8" href="$Program_8h.html" title="Program.h" alt="" coords="613,677,695,704"/>
+<area shape="rect" id="node19" href="$VertexObject_8h.html" title="VertexObject.h" alt="" coords="374,528,483,555"/>
+<area shape="rect" id="node9" href="$Collection_8h.html" title="Collection.h" alt="" coords="554,752,645,779"/>
+<area shape="rect" id="node17" href="$Dictionary_8h.html" title="Dictionary.h" alt="" coords="1191,752,1282,779"/>
+<area shape="rect" id="node10" href="$Shader_8h.html" title="Shader.h" alt="" coords="866,827,941,853"/>
+<area shape="rect" id="node14" href="$MaterialValueType_8h.html" title="MaterialValueType.h" alt="" coords="981,901,1121,928"/>
+<area shape="rect" id="node20" href="$VertexBufferObject_8h.html" title="VertexBufferObject.h" alt="" coords="127,677,269,704"/>
+<area shape="rect" id="node22" href="$VertexAttributeObject_8h.html" title="VertexAttributeObject.h" alt="" coords="304,603,463,629"/>
+<area shape="rect" id="node24" href="$Material_8h.html" title="Material.h" alt="" coords="977,603,1056,629"/>
+<area shape="rect" id="node23" href="$ReadOnlyProperty_8h.html" title="ReadOnlyProperty.h" alt="" coords="294,677,433,704"/>
+<area shape="rect" id="node25" href="$MaterialValue_8h.html" title="MaterialValue.h" alt="" coords="894,677,1006,704"/>
+<area shape="rect" id="node26" href="$MaterialValueBase_8h.html" title="MaterialValueBase.h" alt="" coords="821,752,964,779"/>
+<area shape="rect" id="node28" href="$Object_8h.html" title="Object.h" alt="" coords="592,453,663,480"/>
+<area shape="rect" id="node29" href="$Camera_8h.html" title="Camera.h" alt="" coords="413,379,492,405"/>
+<area shape="rect" id="node34" href="$Light_8h.html" title="Light.h" alt="" coords="595,379,657,405"/>
+<area shape="rect" id="node32" href="$Observable_8h.html" title="Observable.h" alt="" coords="5,677,103,704"/>
+<area shape="rect" id="node33" href="$Observer_8h.html" title="Observer.h" alt="" coords="12,752,96,779"/>
+<area shape="rect" id="node38" href="$BaseEngine_8h.html" title="BaseEngine.h" alt="" coords="984,155,1087,181"/>
+</map>

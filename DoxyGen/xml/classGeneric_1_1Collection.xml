@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classGeneric_1_1Collection" kind="class" language="C++" prot="public">
+    <compoundname>Generic::Collection</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::list&lt; T &gt;</basecompoundref>
+    <includes refid="Collection_8h" local="no">Collection.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGeneric_1_1Collection_1a602c700fa46602ce551b5c133793924c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classGeneric_1_1Collection" kindref="compound">Collection</ref>&lt; T &gt; &amp;</type>
+        <definition>Collection&lt;T&gt;&amp; Generic::Collection&lt; T &gt;::Add</definition>
+        <argsstring>(T value)</argsstring>
+        <name>Add</name>
+        <param>
+          <type>T</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Collection.h" line="11" column="1" bodyfile="ZPG/Collection.h" bodystart="11" bodyend="15"/>
+        <referencedby refid="classObservable_1aedd54eccbfad67066226ee0b958347ba" compoundref="Observable_8h" startline="19" endline="22">Observable&lt; Camera &gt;::Bind</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1LightEngine_1ad992d8a300f099c247d7ba8dc38883ea" compoundref="LigtEngine_8cpp" startline="11" endline="211">Application::Engines::LightEngine::Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGeneric_1_1Collection_1abc2e126c8aaaabf8e4ff8da2d35011c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>T</type>
+        <definition>T Generic::Collection&lt; T &gt;::First</definition>
+        <argsstring>()</argsstring>
+        <name>First</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Collection.h" line="16" column="1" bodyfile="ZPG/Collection.h" bodystart="16" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="549">
+        <label>Generic::Collection&lt; Components::IInputHandler *&gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="546" relation="template-instance">
+          <edgelabel>&lt; Components::IInputHandler *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="550">
+        <label>Generic::Collection&lt; Observer&lt; T &gt; *&gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="546" relation="template-instance">
+          <edgelabel>&lt; Observer&lt; T &gt; *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="547">
+        <label>std::list&lt; T &gt;</label>
+      </node>
+      <node id="546">
+        <label>Generic::Collection&lt; T &gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="547" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="548">
+        <label>Generic::Collection&lt; Engine::Components::Graphics::MaterialValueBase *&gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="546" relation="template-instance">
+          <edgelabel>&lt; Engine::Components::Graphics::MaterialValueBase *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="551">
+        <label>Generic::Collection&lt; Observer&lt; Camera &gt; *&gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="546" relation="template-instance">
+          <edgelabel>&lt; Observer&lt; Camera &gt; *&gt;</edgelabel>
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="553">
+        <label>std::list&lt; T &gt;</label>
+      </node>
+      <node id="552">
+        <label>Generic::Collection&lt; T &gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="553" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/Collection.h" line="9" column="1" bodyfile="ZPG/Collection.h" bodystart="8" bodyend="20"/>
+    <listofallmembers>
+      <member refid="classGeneric_1_1Collection_1a602c700fa46602ce551b5c133793924c" prot="public" virt="non-virtual"><scope>Generic::Collection</scope><name>Add</name></member>
+      <member refid="classGeneric_1_1Collection_1abc2e126c8aaaabf8e4ff8da2d35011c3" prot="public" virt="non-virtual"><scope>Generic::Collection</scope><name>First</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

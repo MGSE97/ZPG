@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="ZPGEngine_8h" kind="file" language="C++">
+    <compoundname>ZPGEngine.h</compoundname>
+    <includes refid="BaseEngine_8h" local="yes">BaseEngine.h</includes>
+    <includedby refid="ZPGEngine_8cpp" local="yes">ZPG/ZPGEngine.cpp</includedby>
+    <incdepgraph>
+      <node id="2641">
+        <label>list</label>
+      </node>
+      <node id="2644">
+        <label>VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="2645" relation="include">
+        </childnode>
+        <childnode refid="2647" relation="include">
+        </childnode>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2649" relation="include">
+        </childnode>
+      </node>
+      <node id="2650">
+        <label>MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="2640" relation="include">
+        </childnode>
+        <childnode refid="2635" relation="include">
+        </childnode>
+        <childnode refid="2639" relation="include">
+        </childnode>
+        <childnode refid="2651" relation="include">
+        </childnode>
+      </node>
+      <node id="2647">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="2633" relation="include">
+        </childnode>
+        <childnode refid="2645" relation="include">
+        </childnode>
+        <childnode refid="2648" relation="include">
+        </childnode>
+      </node>
+      <node id="2635">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="2633" relation="include">
+        </childnode>
+        <childnode refid="2636" relation="include">
+        </childnode>
+        <childnode refid="2637" relation="include">
+        </childnode>
+        <childnode refid="2638" relation="include">
+        </childnode>
+        <childnode refid="2639" relation="include">
+        </childnode>
+        <childnode refid="2640" relation="include">
+        </childnode>
+      </node>
+      <node id="2645">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="2633" relation="include">
+        </childnode>
+        <childnode refid="2646" relation="include">
+        </childnode>
+      </node>
+      <node id="2640">
+        <label>string</label>
+      </node>
+      <node id="2633">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="2642">
+        <label>Window.h</label>
+        <link refid="Window_8h"/>
+        <childnode refid="2633" relation="include">
+        </childnode>
+        <childnode refid="2643" relation="include">
+        </childnode>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2644" relation="include">
+        </childnode>
+        <childnode refid="2637" relation="include">
+        </childnode>
+      </node>
+      <node id="2631">
+        <label>map</label>
+      </node>
+      <node id="2659">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="2655" relation="include">
+        </childnode>
+        <childnode refid="2653" relation="include">
+        </childnode>
+        <childnode refid="2660" relation="include">
+        </childnode>
+      </node>
+      <node id="2643">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="2627">
+        <label>ZPG/ZPGEngine.h</label>
+        <link refid="ZPGEngine_8h"/>
+        <childnode refid="2628" relation="include">
+        </childnode>
+      </node>
+      <node id="2651">
+        <label>MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="2633" relation="include">
+        </childnode>
+        <childnode refid="2635" relation="include">
+        </childnode>
+      </node>
+      <node id="2628">
+        <label>BaseEngine.h</label>
+        <link refid="BaseEngine_8h"/>
+        <childnode refid="2629" relation="include">
+        </childnode>
+        <childnode refid="2630" relation="include">
+        </childnode>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2642" relation="include">
+        </childnode>
+        <childnode refid="2652" relation="include">
+        </childnode>
+        <childnode refid="2661" relation="include">
+        </childnode>
+      </node>
+      <node id="2661">
+        <label>IInputHandler.h</label>
+        <link refid="IInputHandler_8h"/>
+        <childnode refid="2642" relation="include">
+        </childnode>
+        <childnode refid="2652" relation="include">
+        </childnode>
+      </node>
+      <node id="2653">
+        <label>Object.h</label>
+        <link refid="Object_8h"/>
+        <childnode refid="2644" relation="include">
+        </childnode>
+      </node>
+      <node id="2660">
+        <label>glm/common.hpp</label>
+      </node>
+      <node id="2629">
+        <label>ostream</label>
+      </node>
+      <node id="2639">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="2657">
+        <label>Observable.h</label>
+        <link refid="Observable_8h"/>
+        <childnode refid="2634" relation="include">
+        </childnode>
+        <childnode refid="2658" relation="include">
+        </childnode>
+        <childnode refid="2646" relation="include">
+        </childnode>
+      </node>
+      <node id="2655">
+        <label>glm/vec3.hpp</label>
+      </node>
+      <node id="2636">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="2652">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+        <childnode refid="2630" relation="include">
+        </childnode>
+        <childnode refid="2653" relation="include">
+        </childnode>
+        <childnode refid="2654" relation="include">
+        </childnode>
+        <childnode refid="2659" relation="include">
+        </childnode>
+      </node>
+      <node id="2646">
+        <label>vector</label>
+      </node>
+      <node id="2634">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="2635" relation="include">
+        </childnode>
+        <childnode refid="2641" relation="include">
+        </childnode>
+      </node>
+      <node id="2649">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="2630" relation="include">
+        </childnode>
+        <childnode refid="2640" relation="include">
+        </childnode>
+        <childnode refid="2650" relation="include">
+        </childnode>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2635" relation="include">
+        </childnode>
+      </node>
+      <node id="2648">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="2658">
+        <label>Observer.h</label>
+        <link refid="Observer_8h"/>
+      </node>
+      <node id="2637">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="2632">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="2633" relation="include">
+        </childnode>
+        <childnode refid="2634" relation="include">
+        </childnode>
+        <childnode refid="2630" relation="include">
+        </childnode>
+        <childnode refid="2640" relation="include">
+        </childnode>
+      </node>
+      <node id="2630">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="2631" relation="include">
+        </childnode>
+      </node>
+      <node id="2638">
+        <label>xstring</label>
+      </node>
+      <node id="2656">
+        <label>glm/mat4x4.hpp</label>
+      </node>
+      <node id="2654">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="2655" relation="include">
+        </childnode>
+        <childnode refid="2656" relation="include">
+        </childnode>
+        <childnode refid="2657" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2662">
+        <label>ZPG/ZPGEngine.h</label>
+        <link refid="ZPGEngine_8h"/>
+        <childnode refid="2663" relation="include">
+        </childnode>
+      </node>
+      <node id="2663">
+        <label>ZPG/ZPGEngine.cpp</label>
+        <link refid="ZPGEngine_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classApplication_1_1Engines_1_1ZPGEngine" prot="public">Application::Engines::ZPGEngine</innerclass>
+    <innernamespace refid="namespaceApplication">Application</innernamespace>
+    <innernamespace refid="namespaceApplication_1_1Engines">Application::Engines</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="BaseEngine_8h" kindref="compound">BaseEngine.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceApplication" kindref="compound">Application</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Engines</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="8" refid="classApplication_1_1Engines_1_1ZPGEngine" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classApplication_1_1Engines_1_1ZPGEngine" kindref="compound">ZPGEngine</ref><sp/>:<sp/><ref refid="classEngine_1_1BaseEngine" kindref="compound">Engine::BaseEngine</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Engines_1_1ZPGEngine" kindref="compound">ZPGEngine</ref>*<sp/><ref refid="classApplication_1_1Engines_1_1ZPGEngine_1a08a065a6200bf4465b71efa08f173cc5" kindref="member">Init</ref>(std::FILE*<sp/>errorStream<sp/>=<sp/>stderr)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Engines_1_1ZPGEngine_1a44b3d077ad688846aaa40d95ad14f851" kindref="member">Update</ref>(::<ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Engine::Components::Window</ref>*<sp/>window)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14" refid="classApplication_1_1Engines_1_1ZPGEngine_1a6e982d6b97e8d538cdf8df9a7f4c6cd0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::mat4<sp/><ref refid="classApplication_1_1Engines_1_1ZPGEngine_1a6e982d6b97e8d538cdf8df9a7f4c6cd0" kindref="member">M</ref>;</highlight></codeline>
+<codeline lineno="15" refid="classApplication_1_1Engines_1_1ZPGEngine_1adee8aa02ea2c15751eb6222bded1f729" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Engines_1_1ZPGEngine_1adee8aa02ea2c15751eb6222bded1f729" kindref="member">angle</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ZPG/ZPGEngine.h"/>
+  </compounddef>
+</doxygen>

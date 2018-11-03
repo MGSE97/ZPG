@@ -1,0 +1,135 @@
+.TH "Application::Application" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Application::Application
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Application\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB~Application\fP ()"
+.br
+.ti -1c
+.RI "\fBApplication\fP * \fBInit\fP ()"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBApplication\fP * \fBGetIntance\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< std::string, \fBEngine::BaseEngine\fP * > * \fBEngines\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBApplication\fP ()"
+.br
+.ti -1c
+.RI "void \fBRegisterEngines\fP ()"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static \fBApplication\fP \fB_instance\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 8 of file Application\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Application::Application::~Application ()"
+
+.PP
+Definition at line 13 of file Application\&.cpp\&.
+.PP
+.nf
+14 {
+15     Engines->clear();
+16     delete Engines;
+17 }
+.fi
+.SS "Application::Application::Application ()\fC [private]\fP"
+
+.PP
+Definition at line 8 of file Application\&.cpp\&.
+.PP
+.nf
+9 {
+10     Engines = new Generic::Dictionary<std::string, Engine::BaseEngine*>();
+11 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBApplication::Application\fP * Application::Application::GetIntance ()\fC [static]\fP"
+
+.PP
+Definition at line 19 of file Application\&.cpp\&.
+.PP
+Referenced by main()\&.
+.PP
+.nf
+20 {
+21     static Application instance;
+22     return &instance;
+23 }
+.fi
+.SS "\fBApplication::Application\fP * Application::Application::Init ()"
+
+.PP
+Definition at line 25 of file Application\&.cpp\&.
+.PP
+Referenced by main()\&.
+.PP
+.nf
+26 {
+27     RegisterEngines();
+28     return this;
+29 }
+.fi
+.SS "void Application::Application::RegisterEngines ()\fC [private]\fP"
+
+.PP
+Definition at line 7 of file EngineRegistry\&.cpp\&.
+.PP
+.nf
+8 {
+9     Engines->
+10          Add("basic", new Engines::BasicEngine())
+11         \&.Add("camera", new Engines::CameraEngine())
+12         \&.Add("light", new Engines::LightEngine())
+13     ;
+14 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBApplication\fP Application::Application::_instance\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 17 of file Application\&.h\&.
+.SS "\fBGeneric::Dictionary\fP<std::string, \fBEngine::BaseEngine\fP*>* Application::Application::Engines"
+
+.PP
+Definition at line 14 of file Application\&.h\&.
+.PP
+Referenced by main()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

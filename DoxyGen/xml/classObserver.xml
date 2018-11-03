@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classObserver" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Observer</compoundname>
+    <derivedcompoundref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue" prot="public" virt="non-virtual">Engine::Components::Graphics::MaterialBindedValue&lt; T &gt;</derivedcompoundref>
+    <includes refid="Observer_8h" local="no">Observer.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classObserver_1a59dd3feed8ad082fd269e2126479c937" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Observer&lt; T &gt;::Observer</definition>
+        <argsstring>()</argsstring>
+        <name>Observer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Observer.h" line="31" column="1" bodyfile="ZPG/Observer.h" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classObserver_1a28d160e9d15f30ff1eb6dc856db01e1a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Observer&lt; T &gt;::~Observer</definition>
+        <argsstring>()</argsstring>
+        <name>~Observer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Observer.h" line="32" column="1" bodyfile="ZPG/Observer.h" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="classObserver_1a3440221897a56f77975c504b0797c0d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Observer&lt; T &gt;::Update</definition>
+        <argsstring>(T *value)=0</argsstring>
+        <name>Update</name>
+        <param>
+          <type>T *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Observer.h" line="33" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="600">
+        <label>Engine::Components::Graphics::MaterialBindedValue&lt; T &gt;</label>
+        <link refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue"/>
+        <childnode refid="599" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="599">
+        <label>Observer&lt; T &gt;</label>
+        <link refid="classObserver"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="601">
+        <label>Observer&lt; T &gt;</label>
+        <link refid="classObserver"/>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/Observer.h" line="29" column="1" bodyfile="ZPG/Observer.h" bodystart="28" bodyend="34"/>
+    <listofallmembers>
+      <member refid="classObserver_1a59dd3feed8ad082fd269e2126479c937" prot="public" virt="non-virtual"><scope>Observer</scope><name>Observer</name></member>
+      <member refid="classObserver_1a3440221897a56f77975c504b0797c0d5" prot="public" virt="pure-virtual"><scope>Observer</scope><name>Update</name></member>
+      <member refid="classObserver_1a28d160e9d15f30ff1eb6dc856db01e1a" prot="public" virt="virtual"><scope>Observer</scope><name>~Observer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

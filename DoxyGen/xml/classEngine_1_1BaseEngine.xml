@@ -1,0 +1,737 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classEngine_1_1BaseEngine" kind="class" language="C++" prot="public">
+    <compoundname>Engine::BaseEngine</compoundname>
+    <derivedcompoundref refid="classApplication_1_1Engines_1_1BasicEngine" prot="public" virt="non-virtual">Application::Engines::BasicEngine</derivedcompoundref>
+    <derivedcompoundref refid="classApplication_1_1Engines_1_1CameraEngine" prot="public" virt="non-virtual">Application::Engines::CameraEngine</derivedcompoundref>
+    <derivedcompoundref refid="classApplication_1_1Engines_1_1LightEngine" prot="public" virt="non-virtual">Application::Engines::LightEngine</derivedcompoundref>
+    <derivedcompoundref refid="classApplication_1_1Engines_1_1TriangleEngine" prot="public" virt="non-virtual">Application::Engines::TriangleEngine</derivedcompoundref>
+    <derivedcompoundref refid="classApplication_1_1Engines_1_1ZPGEngine" prot="private" virt="non-virtual">Application::Engines::ZPGEngine</derivedcompoundref>
+    <includes refid="BaseEngine_8h" local="no">BaseEngine.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" prot="public" static="no" mutable="no">
+        <type><ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Components::Scene</ref> *</type>
+        <definition>Components::Scene* Engine::BaseEngine::ActiveScene</definition>
+        <argsstring></argsstring>
+        <name>ActiveScene</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="34" column="1" bodyfile="ZPG/BaseEngine.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1BaseEngine_1ad838c97afe1790cb35527f0b58e81e6b" compoundref="BaseEngine_8cpp" startline="5" endline="17">BaseEngine</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1CameraEngine_1a0c7723b93afbdef70394961a4624813d" compoundref="CameraEngine_8cpp" startline="9" endline="73">Application::Engines::CameraEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1LightEngine_1ad992d8a300f099c247d7ba8dc38883ea" compoundref="LigtEngine_8cpp" startline="11" endline="211">Application::Engines::LightEngine::Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1BaseEngine_1a134fa082c5a64d62b76ddf926647e7cc" prot="public" static="no" mutable="no">
+        <type><ref refid="classGeneric_1_1Collection" kindref="compound">Generic::Collection</ref>&lt; <ref refid="namespaceEngine_1_1Components_1ac8d3da616707b57e065fd62e6701415f" kindref="member">Components::IInputHandler</ref> * &gt; *</type>
+        <definition>Generic::Collection&lt;Components::IInputHandler*&gt;* Engine::BaseEngine::InputHandlers</definition>
+        <argsstring></argsstring>
+        <name>InputHandlers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="31" column="1" bodyfile="ZPG/BaseEngine.h" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1BaseEngine_1ad838c97afe1790cb35527f0b58e81e6b" compoundref="BaseEngine_8cpp" startline="5" endline="17">BaseEngine</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1LightEngine_1ad992d8a300f099c247d7ba8dc38883ea" compoundref="LigtEngine_8cpp" startline="11" endline="211">Application::Engines::LightEngine::Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1BaseEngine_1a65321a97e83f0a6ee90df3efac2d3307" prot="public" static="no" mutable="no">
+        <type><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary</ref>&lt; short, bool &gt;</type>
+        <definition>Generic::Dictionary&lt;short, bool&gt; Engine::BaseEngine::Keys</definition>
+        <argsstring></argsstring>
+        <name>Keys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="32" column="1" bodyfile="ZPG/BaseEngine.h" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1BaseEngine_1ad838c97afe1790cb35527f0b58e81e6b" compoundref="BaseEngine_8cpp" startline="5" endline="17">BaseEngine</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1BaseEngine_1a3ee2bdddb66d45b8c808ffd937ba9c50" prot="public" static="no" mutable="no">
+        <type><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary</ref>&lt; short, bool &gt;</type>
+        <definition>Generic::Dictionary&lt;short, bool&gt; Engine::BaseEngine::MouseKeys</definition>
+        <argsstring></argsstring>
+        <name>MouseKeys</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="33" column="1" bodyfile="ZPG/BaseEngine.h" bodystart="33" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1BaseEngine_1ad838c97afe1790cb35527f0b58e81e6b" compoundref="BaseEngine_8cpp" startline="5" endline="17">BaseEngine</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1BaseEngine_1a5fe085152ebe93346900407f6b41a034" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Engine::BaseEngine::MouseX</definition>
+        <argsstring></argsstring>
+        <name>MouseX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="35" column="1" bodyfile="ZPG/BaseEngine.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1BaseEngine_1a143c9c32dbbdc70bf1546ffe275bf384" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Engine::BaseEngine::MouseY</definition>
+        <argsstring></argsstring>
+        <name>MouseY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="36" column="1" bodyfile="ZPG/BaseEngine.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1BaseEngine_1ae0f86360ea3a384caefe443dd8f88601" prot="public" static="no" mutable="no">
+        <type><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary</ref>&lt; std::string, <ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Components::Graphics::Program</ref> * &gt; *</type>
+        <definition>Generic::Dictionary&lt;std::string, Components::Graphics::Program*&gt;* Engine::BaseEngine::Programs</definition>
+        <argsstring></argsstring>
+        <name>Programs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="28" column="1" bodyfile="ZPG/BaseEngine.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1BaseEngine_1ad838c97afe1790cb35527f0b58e81e6b" compoundref="BaseEngine_8cpp" startline="5" endline="17">BaseEngine</referencedby>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1ab06fa94ce5265dc06abb645ea29850bd" compoundref="CameraInputHandler_8cpp" startline="53" endline="104">Application::Input::Handlers::CameraInputHandler::HandleMouse</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1TriangleEngine_1a4fc68c683c3beaadf7d41f36627d3492" compoundref="TriangleEngine_8cpp" startline="7" endline="48">Application::Engines::TriangleEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1BasicEngine_1afbdc9f559d1776371f90da00b61ba6ab" compoundref="BasicEngine_8cpp" startline="8" endline="51">Application::Engines::BasicEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1CameraEngine_1a0c7723b93afbdef70394961a4624813d" compoundref="CameraEngine_8cpp" startline="9" endline="73">Application::Engines::CameraEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1ZPGEngine_1a08a065a6200bf4465b71efa08f173cc5" compoundref="ZPGEngine_8cpp" startline="22" endline="46">Application::Engines::ZPGEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1LightEngine_1ad992d8a300f099c247d7ba8dc38883ea" compoundref="LigtEngine_8cpp" startline="11" endline="211">Application::Engines::LightEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Scenes_1_1TriangleScene_1a4bfd44cab6aa0eafe47f379dafe3843e" compoundref="TriangleScene_8cpp" startline="21" endline="51">Application::Scenes::TriangleScene::Load</referencedby>
+        <referencedby refid="classApplication_1_1Scenes_1_1SphereScene_1adf6f95bf2ac8f0e84935d04248407ba4" compoundref="SphereScene_8cpp" startline="18" endline="60">Application::Scenes::SphereScene::Load</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1BaseEngine_1afd02af3c2fbe9bb734db014dec06585a" prot="public" static="no" mutable="no">
+        <type><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary</ref>&lt; std::string, <ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Components::Scene</ref> * &gt; *</type>
+        <definition>Generic::Dictionary&lt;std::string, Components::Scene*&gt;* Engine::BaseEngine::Scenes</definition>
+        <argsstring></argsstring>
+        <name>Scenes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="30" column="1" bodyfile="ZPG/BaseEngine.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1BaseEngine_1ad838c97afe1790cb35527f0b58e81e6b" compoundref="BaseEngine_8cpp" startline="5" endline="17">BaseEngine</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1ZPGEngine_1a08a065a6200bf4465b71efa08f173cc5" compoundref="ZPGEngine_8cpp" startline="22" endline="46">Application::Engines::ZPGEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1CameraEngine_1a0c7723b93afbdef70394961a4624813d" compoundref="CameraEngine_8cpp" startline="9" endline="73">Application::Engines::CameraEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1BasicEngine_1afbdc9f559d1776371f90da00b61ba6ab" compoundref="BasicEngine_8cpp" startline="8" endline="51">Application::Engines::BasicEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1TriangleEngine_1a4fc68c683c3beaadf7d41f36627d3492" compoundref="TriangleEngine_8cpp" startline="7" endline="48">Application::Engines::TriangleEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1LightEngine_1ad992d8a300f099c247d7ba8dc38883ea" compoundref="LigtEngine_8cpp" startline="11" endline="211">Application::Engines::LightEngine::Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1BaseEngine_1a2582dee3f73da82bb422b43317b85e3b" prot="public" static="no" mutable="no">
+        <type><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary</ref>&lt; std::string, <ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Components::Graphics::Shader</ref> * &gt; *</type>
+        <definition>Generic::Dictionary&lt;std::string, Components::Graphics::Shader*&gt;* Engine::BaseEngine::Shaders</definition>
+        <argsstring></argsstring>
+        <name>Shaders</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="29" column="1" bodyfile="ZPG/BaseEngine.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1BaseEngine_1ad838c97afe1790cb35527f0b58e81e6b" compoundref="BaseEngine_8cpp" startline="5" endline="17">BaseEngine</referencedby>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1ab06fa94ce5265dc06abb645ea29850bd" compoundref="CameraInputHandler_8cpp" startline="53" endline="104">Application::Input::Handlers::CameraInputHandler::HandleMouse</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1CameraEngine_1a0c7723b93afbdef70394961a4624813d" compoundref="CameraEngine_8cpp" startline="9" endline="73">Application::Engines::CameraEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1BasicEngine_1afbdc9f559d1776371f90da00b61ba6ab" compoundref="BasicEngine_8cpp" startline="8" endline="51">Application::Engines::BasicEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1ZPGEngine_1a08a065a6200bf4465b71efa08f173cc5" compoundref="ZPGEngine_8cpp" startline="22" endline="46">Application::Engines::ZPGEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1TriangleEngine_1a4fc68c683c3beaadf7d41f36627d3492" compoundref="TriangleEngine_8cpp" startline="7" endline="48">Application::Engines::TriangleEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1LightEngine_1ad992d8a300f099c247d7ba8dc38883ea" compoundref="LigtEngine_8cpp" startline="11" endline="211">Application::Engines::LightEngine::Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1BaseEngine_1a4a1a4c4dae052e66ecc4f326eeed4d33" prot="public" static="no" mutable="no">
+        <type><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary</ref>&lt; std::string, <ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Components::Window</ref> * &gt; *</type>
+        <definition>Generic::Dictionary&lt;std::string, Components::Window*&gt;* Engine::BaseEngine::Windows</definition>
+        <argsstring></argsstring>
+        <name>Windows</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="27" column="1" bodyfile="ZPG/BaseEngine.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1BaseEngine_1ad838c97afe1790cb35527f0b58e81e6b" compoundref="BaseEngine_8cpp" startline="5" endline="17">BaseEngine</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1ZPGEngine_1a08a065a6200bf4465b71efa08f173cc5" compoundref="ZPGEngine_8cpp" startline="22" endline="46">Application::Engines::ZPGEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1CameraEngine_1a0c7723b93afbdef70394961a4624813d" compoundref="CameraEngine_8cpp" startline="9" endline="73">Application::Engines::CameraEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1BasicEngine_1afbdc9f559d1776371f90da00b61ba6ab" compoundref="BasicEngine_8cpp" startline="8" endline="51">Application::Engines::BasicEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1TriangleEngine_1a4fc68c683c3beaadf7d41f36627d3492" compoundref="TriangleEngine_8cpp" startline="7" endline="48">Application::Engines::TriangleEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1LightEngine_1ad992d8a300f099c247d7ba8dc38883ea" compoundref="LigtEngine_8cpp" startline="11" endline="211">Application::Engines::LightEngine::Init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classEngine_1_1BaseEngine_1a26fd54a1ee2733f9c654af5afcfa96cf" prot="private" static="no" mutable="no">
+        <type>std::FILE *</type>
+        <definition>std::FILE* Engine::BaseEngine::_errorStream</definition>
+        <argsstring></argsstring>
+        <name>_errorStream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="40" column="1" bodyfile="ZPG/BaseEngine.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1BaseEngine_1ad838c97afe1790cb35527f0b58e81e6b" compoundref="BaseEngine_8cpp" startline="5" endline="17">BaseEngine</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1BaseEngine_1a79e265845b321c0e9822fb170c564e55" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Engine::BaseEngine::_init</definition>
+        <argsstring></argsstring>
+        <name>_init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="41" column="1" bodyfile="ZPG/BaseEngine.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1BaseEngine_1ad838c97afe1790cb35527f0b58e81e6b" compoundref="BaseEngine_8cpp" startline="5" endline="17">BaseEngine</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEngine_1_1BaseEngine_1ad838c97afe1790cb35527f0b58e81e6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::BaseEngine::BaseEngine</definition>
+        <argsstring>()</argsstring>
+        <name>BaseEngine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="14" column="1" bodyfile="ZPG/BaseEngine.cpp" bodystart="5" bodyend="17"/>
+        <references refid="classEngine_1_1BaseEngine_1a26fd54a1ee2733f9c654af5afcfa96cf" compoundref="BaseEngine_8h" startline="40">_errorStream</references>
+        <references refid="classEngine_1_1BaseEngine_1a79e265845b321c0e9822fb170c564e55" compoundref="BaseEngine_8h" startline="41">_init</references>
+        <references refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" compoundref="BaseEngine_8h" startline="34">ActiveScene</references>
+        <references refid="classEngine_1_1BaseEngine_1a134fa082c5a64d62b76ddf926647e7cc" compoundref="BaseEngine_8h" startline="31">InputHandlers</references>
+        <references refid="classEngine_1_1BaseEngine_1a65321a97e83f0a6ee90df3efac2d3307" compoundref="BaseEngine_8h" startline="32">Keys</references>
+        <references refid="classEngine_1_1BaseEngine_1a3ee2bdddb66d45b8c808ffd937ba9c50" compoundref="BaseEngine_8h" startline="33">MouseKeys</references>
+        <references refid="classEngine_1_1BaseEngine_1ae0f86360ea3a384caefe443dd8f88601" compoundref="BaseEngine_8h" startline="28">Programs</references>
+        <references refid="classEngine_1_1BaseEngine_1afd02af3c2fbe9bb734db014dec06585a" compoundref="BaseEngine_8h" startline="30">Scenes</references>
+        <references refid="classEngine_1_1BaseEngine_1a2582dee3f73da82bb422b43317b85e3b" compoundref="BaseEngine_8h" startline="29">Shaders</references>
+        <references refid="classEngine_1_1BaseEngine_1a4a1a4c4dae052e66ecc4f326eeed4d33" compoundref="BaseEngine_8h" startline="27">Windows</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1BaseEngine_1a8a3ba672021058958d66af5ee432beac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::BaseEngine::~BaseEngine</definition>
+        <argsstring>()</argsstring>
+        <name>~BaseEngine</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="15" column="1" bodyfile="ZPG/BaseEngine.cpp" bodystart="19" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1BaseEngine_1acd5cd5d2189d24e038b23477b7dce405" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1BaseEngine" kindref="compound">BaseEngine</ref> *</type>
+        <definition>Engine::BaseEngine * Engine::BaseEngine::Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="18" column="1" bodyfile="ZPG/BaseEngine.cpp" bodystart="51" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1BaseEngine_1ad9c141fe48c8c91e14e77ed5fcb90196" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classEngine_1_1BaseEngine" kindref="compound">BaseEngine</ref> *</type>
+        <definition>Engine::BaseEngine * Engine::BaseEngine::Init</definition>
+        <argsstring>(std::FILE *errorStream=stderr)</argsstring>
+        <name>Init</name>
+        <reimplementedby refid="classApplication_1_1Engines_1_1ZPGEngine_1a08a065a6200bf4465b71efa08f173cc5">Init</reimplementedby>
+        <reimplementedby refid="classApplication_1_1Engines_1_1TriangleEngine_1a4fc68c683c3beaadf7d41f36627d3492">Init</reimplementedby>
+        <reimplementedby refid="classApplication_1_1Engines_1_1CameraEngine_1a0c7723b93afbdef70394961a4624813d">Init</reimplementedby>
+        <reimplementedby refid="classApplication_1_1Engines_1_1BasicEngine_1afbdc9f559d1776371f90da00b61ba6ab">Init</reimplementedby>
+        <reimplementedby refid="classApplication_1_1Engines_1_1LightEngine_1ad992d8a300f099c247d7ba8dc38883ea">Init</reimplementedby>
+        <param>
+          <type>std::FILE *</type>
+          <declname>errorStream</declname>
+          <defval>stderr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="16" column="1" bodyfile="ZPG/BaseEngine.cpp" bodystart="31" bodyend="44"/>
+        <referencedby refid="Main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="Main_8cpp" startline="8" endline="20">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1BaseEngine_1a7a1c9b833049b3eb61194cab113dfe89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Engine::BaseEngine::InitSuccess</definition>
+        <argsstring>()</argsstring>
+        <name>InitSuccess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="17" column="1" bodyfile="ZPG/BaseEngine.cpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1BaseEngine_1afc82c6a00d5a9d4714740fc5eab5db86" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Engine::BaseEngine::SetActiveScene</definition>
+        <argsstring>(Components::Scene *scene=nullptr)</argsstring>
+        <name>SetActiveScene</name>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Components::Scene</ref> *</type>
+          <declname>scene</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="24" column="1" bodyfile="ZPG/BaseEngine.cpp" bodystart="132" bodyend="138"/>
+        <referencedby refid="classApplication_1_1Engines_1_1BasicEngine_1afbdc9f559d1776371f90da00b61ba6ab" compoundref="BasicEngine_8cpp" startline="8" endline="51">Application::Engines::BasicEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1ZPGEngine_1a08a065a6200bf4465b71efa08f173cc5" compoundref="ZPGEngine_8cpp" startline="22" endline="46">Application::Engines::ZPGEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1CameraEngine_1a0c7723b93afbdef70394961a4624813d" compoundref="CameraEngine_8cpp" startline="9" endline="73">Application::Engines::CameraEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1TriangleEngine_1a4fc68c683c3beaadf7d41f36627d3492" compoundref="TriangleEngine_8cpp" startline="7" endline="48">Application::Engines::TriangleEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1LightEngine_1ad992d8a300f099c247d7ba8dc38883ea" compoundref="LigtEngine_8cpp" startline="11" endline="211">Application::Engines::LightEngine::Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1BaseEngine_1a525fdc7a1da7eecb514ad5763f06be79" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Engine::BaseEngine::Start</definition>
+        <argsstring>()</argsstring>
+        <name>Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="23" column="1" bodyfile="ZPG/BaseEngine.cpp" bodystart="126" bodyend="130"/>
+        <referencedby refid="Main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="Main_8cpp" startline="8" endline="20">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1BaseEngine_1a01c23c2073f08939a660f3b7a866852c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Engine::BaseEngine::Update</definition>
+        <argsstring>(Components::Window *window)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Components::Window</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="21" column="1" bodyfile="ZPG/BaseEngine.cpp" bodystart="112" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1BaseEngine_1aace6be2a42d12b64fbd35f1acdb08408" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Engine::BaseEngine::UpdateBegin</definition>
+        <argsstring>(Components::Window *window)</argsstring>
+        <name>UpdateBegin</name>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Components::Window</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="20" column="1" bodyfile="ZPG/BaseEngine.cpp" bodystart="57" bodyend="110"/>
+        <references refid="classEngine_1_1Components_1_1Window_1a4d5c3ff7df28f77bfa330beb447512f8" compoundref="Window_8cpp" startline="78" endline="81">Engine::Components::Window::Get</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1BaseEngine_1a7c07c98e583df042a0eb01e0ddec85a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Engine::BaseEngine::UpdateEnd</definition>
+        <argsstring>(Components::Window *window)</argsstring>
+        <name>UpdateEnd</name>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Components::Window</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="22" column="1" bodyfile="ZPG/BaseEngine.cpp" bodystart="116" bodyend="124"/>
+        <references refid="classEngine_1_1Components_1_1Window_1a4d5c3ff7df28f77bfa330beb447512f8" compoundref="Window_8cpp" startline="78" endline="81">Engine::Components::Window::Get</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classEngine_1_1BaseEngine_1a3e5950c7d1825f81d7d1fc584cb8b0c1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1BaseEngine" kindref="compound">BaseEngine</ref> *</type>
+        <definition>Engine::BaseEngine * Engine::BaseEngine::InitGLFW</definition>
+        <argsstring>()</argsstring>
+        <name>InitGLFW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="39" column="1" bodyfile="ZPG/BaseEngine.cpp" bodystart="157" bodyend="164"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1BaseEngine_1aad3c237ca657b9f22f76fccf7fc7561f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Engine::BaseEngine::UpdateInternal</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateInternal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseEngine.h" line="42" column="1" bodyfile="ZPG/BaseEngine.cpp" bodystart="166" bodyend="184"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="323">
+        <label>Application::Engines::BasicEngine</label>
+        <link refid="classApplication_1_1Engines_1_1BasicEngine"/>
+        <childnode refid="322" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="326">
+        <label>Application::Engines::TriangleEngine</label>
+        <link refid="classApplication_1_1Engines_1_1TriangleEngine"/>
+        <childnode refid="322" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="322">
+        <label>Engine::BaseEngine</label>
+        <link refid="classEngine_1_1BaseEngine"/>
+      </node>
+      <node id="327">
+        <label>Application::Engines::ZPGEngine</label>
+        <link refid="classApplication_1_1Engines_1_1ZPGEngine"/>
+        <childnode refid="322" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="324">
+        <label>Application::Engines::CameraEngine</label>
+        <link refid="classApplication_1_1Engines_1_1CameraEngine"/>
+        <childnode refid="322" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="325">
+        <label>Application::Engines::LightEngine</label>
+        <link refid="classApplication_1_1Engines_1_1LightEngine"/>
+        <childnode refid="322" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="346">
+        <label>std::list&lt; Observer&lt; Camera &gt; * &gt;</label>
+      </node>
+      <node id="329">
+        <label>Generic::Dictionary&lt; short, bool &gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="330" relation="public-inheritance">
+        </childnode>
+        <childnode refid="331" relation="template-instance">
+          <edgelabel>&lt; short, bool &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="342">
+        <label>Engine::Components::Scene</label>
+        <link refid="classEngine_1_1Components_1_1Scene"/>
+        <childnode refid="343" relation="usage">
+          <edgelabel>+ActiveCamera</edgelabel>
+        </childnode>
+        <childnode refid="352" relation="usage">
+          <edgelabel>+Lights</edgelabel>
+        </childnode>
+        <childnode refid="354" relation="usage">
+          <edgelabel>+Cameras</edgelabel>
+        </childnode>
+        <childnode refid="356" relation="usage">
+          <edgelabel>#Loaded</edgelabel>
+        </childnode>
+        <childnode refid="357" relation="usage">
+          <edgelabel>+Objects</edgelabel>
+        </childnode>
+      </node>
+      <node id="331">
+        <label>Generic::Dictionary&lt; TKey, TValue &gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="332" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="333">
+        <label>Generic::Collection&lt; Components::IInputHandler *&gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="334" relation="public-inheritance">
+        </childnode>
+        <childnode refid="335" relation="template-instance">
+          <edgelabel>&lt; Components::IInputHandler *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="362">
+        <label>std::map&lt; std::string, Engine::Components::Graphics::Program * &gt;</label>
+      </node>
+      <node id="349">
+        <label>std::list&lt; Observer&lt; T &gt; * &gt;</label>
+      </node>
+      <node id="350">
+        <label>mat4 *</label>
+      </node>
+      <node id="348">
+        <label>Generic::Collection&lt; Observer&lt; T &gt; *&gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="349" relation="public-inheritance">
+        </childnode>
+        <childnode refid="335" relation="template-instance">
+          <edgelabel>&lt; Observer&lt; T &gt; *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="352">
+        <label>Generic::Dictionary&lt; std::string, Light *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="353" relation="public-inheritance">
+        </childnode>
+        <childnode refid="331" relation="template-instance">
+          <edgelabel>&lt; std::string, Light *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="332">
+        <label>std::map&lt; TKey, TValue &gt;</label>
+      </node>
+      <node id="330">
+        <label>std::map&lt; short, bool &gt;</label>
+      </node>
+      <node id="343">
+        <label>Engine::Components::Camera</label>
+        <link refid="classEngine_1_1Components_1_1Camera"/>
+        <childnode refid="344" relation="public-inheritance">
+        </childnode>
+        <childnode refid="350" relation="usage">
+          <edgelabel>+Value</edgelabel>
+        </childnode>
+        <childnode refid="351" relation="usage">
+          <edgelabel>+Up</edgelabel>
+          <edgelabel>+Front</edgelabel>
+          <edgelabel>+Direction</edgelabel>
+          <edgelabel>+Right</edgelabel>
+          <edgelabel>+Position</edgelabel>
+        </childnode>
+      </node>
+      <node id="344">
+        <label>Observable&lt; Camera &gt;</label>
+        <link refid="classObservable"/>
+        <childnode refid="345" relation="usage">
+          <edgelabel>-_observers</edgelabel>
+        </childnode>
+        <childnode refid="347" relation="template-instance">
+          <edgelabel>&lt; Camera &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="336">
+        <label>std::list&lt; T &gt;</label>
+      </node>
+      <node id="335">
+        <label>Generic::Collection&lt; T &gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="336" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="328">
+        <label>Engine::BaseEngine</label>
+        <link refid="classEngine_1_1BaseEngine"/>
+        <childnode refid="329" relation="usage">
+          <edgelabel>+MouseKeys</edgelabel>
+          <edgelabel>+Keys</edgelabel>
+        </childnode>
+        <childnode refid="333" relation="usage">
+          <edgelabel>+InputHandlers</edgelabel>
+        </childnode>
+        <childnode refid="337" relation="usage">
+          <edgelabel>+Windows</edgelabel>
+        </childnode>
+        <childnode refid="339" relation="usage">
+          <edgelabel>+MouseX</edgelabel>
+          <edgelabel>+MouseY</edgelabel>
+        </childnode>
+        <childnode refid="340" relation="usage">
+          <edgelabel>+Scenes</edgelabel>
+        </childnode>
+        <childnode refid="342" relation="usage">
+          <edgelabel>+ActiveScene</edgelabel>
+        </childnode>
+        <childnode refid="359" relation="usage">
+          <edgelabel>+Shaders</edgelabel>
+        </childnode>
+        <childnode refid="361" relation="usage">
+          <edgelabel>+Programs</edgelabel>
+        </childnode>
+        <childnode refid="356" relation="usage">
+          <edgelabel>-_init</edgelabel>
+        </childnode>
+        <childnode refid="363" relation="usage">
+          <edgelabel>-_errorStream</edgelabel>
+        </childnode>
+      </node>
+      <node id="357">
+        <label>Generic::Dictionary&lt; std::string, Engine::Objects::Object *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="358" relation="public-inheritance">
+        </childnode>
+        <childnode refid="331" relation="template-instance">
+          <edgelabel>&lt; std::string, Engine::Objects::Object *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="339">
+        <label>double</label>
+      </node>
+      <node id="340">
+        <label>Generic::Dictionary&lt; std::string, Engine::Components::Scene *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="341" relation="public-inheritance">
+        </childnode>
+        <childnode refid="331" relation="template-instance">
+          <edgelabel>&lt; std::string, Engine::Components::Scene *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="355">
+        <label>std::map&lt; std::string, Engine::Components::Camera * &gt;</label>
+      </node>
+      <node id="347">
+        <label>Observable&lt; T &gt;</label>
+        <link refid="classObservable"/>
+        <childnode refid="348" relation="usage">
+          <edgelabel>-_observers</edgelabel>
+        </childnode>
+      </node>
+      <node id="363">
+        <label>FILE *</label>
+      </node>
+      <node id="358">
+        <label>std::map&lt; std::string, Engine::Objects::Object * &gt;</label>
+      </node>
+      <node id="341">
+        <label>std::map&lt; std::string, Engine::Components::Scene * &gt;</label>
+      </node>
+      <node id="360">
+        <label>std::map&lt; std::string, Engine::Components::Graphics::Shader * &gt;</label>
+      </node>
+      <node id="334">
+        <label>std::list&lt; Components::IInputHandler * &gt;</label>
+      </node>
+      <node id="338">
+        <label>std::map&lt; std::string, Engine::Components::Window * &gt;</label>
+      </node>
+      <node id="361">
+        <label>Generic::Dictionary&lt; std::string, Engine::Components::Graphics::Program *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="362" relation="public-inheritance">
+        </childnode>
+        <childnode refid="331" relation="template-instance">
+          <edgelabel>&lt; std::string, Engine::Components::Graphics::Program *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="351">
+        <label>vec3 *</label>
+      </node>
+      <node id="359">
+        <label>Generic::Dictionary&lt; std::string, Engine::Components::Graphics::Shader *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="360" relation="public-inheritance">
+        </childnode>
+        <childnode refid="331" relation="template-instance">
+          <edgelabel>&lt; std::string, Engine::Components::Graphics::Shader *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="354">
+        <label>Generic::Dictionary&lt; std::string, Engine::Components::Camera *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="355" relation="public-inheritance">
+        </childnode>
+        <childnode refid="331" relation="template-instance">
+          <edgelabel>&lt; std::string, Engine::Components::Camera *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="356">
+        <label>bool</label>
+      </node>
+      <node id="345">
+        <label>Generic::Collection&lt; Observer&lt; Camera &gt; *&gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="346" relation="public-inheritance">
+        </childnode>
+        <childnode refid="335" relation="template-instance">
+          <edgelabel>&lt; Observer&lt; Camera &gt; *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="337">
+        <label>Generic::Dictionary&lt; std::string, Engine::Components::Window *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="338" relation="public-inheritance">
+        </childnode>
+        <childnode refid="331" relation="template-instance">
+          <edgelabel>&lt; std::string, Engine::Components::Window *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="353">
+        <label>std::map&lt; std::string, Light * &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/BaseEngine.h" line="12" column="1" bodyfile="ZPG/BaseEngine.h" bodystart="11" bodyend="43"/>
+    <listofallmembers>
+      <member refid="classEngine_1_1BaseEngine_1a26fd54a1ee2733f9c654af5afcfa96cf" prot="private" virt="non-virtual"><scope>Engine::BaseEngine</scope><name>_errorStream</name></member>
+      <member refid="classEngine_1_1BaseEngine_1a79e265845b321c0e9822fb170c564e55" prot="private" virt="non-virtual"><scope>Engine::BaseEngine</scope><name>_init</name></member>
+      <member refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" prot="public" virt="non-virtual"><scope>Engine::BaseEngine</scope><name>ActiveScene</name></member>
+      <member refid="classEngine_1_1BaseEngine_1ad838c97afe1790cb35527f0b58e81e6b" prot="public" virt="non-virtual"><scope>Engine::BaseEngine</scope><name>BaseEngine</name></member>
+      <member refid="classEngine_1_1BaseEngine_1acd5cd5d2189d24e038b23477b7dce405" prot="public" virt="non-virtual"><scope>Engine::BaseEngine</scope><name>Dispose</name></member>
+      <member refid="classEngine_1_1BaseEngine_1ad9c141fe48c8c91e14e77ed5fcb90196" prot="public" virt="virtual"><scope>Engine::BaseEngine</scope><name>Init</name></member>
+      <member refid="classEngine_1_1BaseEngine_1a3e5950c7d1825f81d7d1fc584cb8b0c1" prot="private" virt="non-virtual"><scope>Engine::BaseEngine</scope><name>InitGLFW</name></member>
+      <member refid="classEngine_1_1BaseEngine_1a7a1c9b833049b3eb61194cab113dfe89" prot="public" virt="non-virtual"><scope>Engine::BaseEngine</scope><name>InitSuccess</name></member>
+      <member refid="classEngine_1_1BaseEngine_1a134fa082c5a64d62b76ddf926647e7cc" prot="public" virt="non-virtual"><scope>Engine::BaseEngine</scope><name>InputHandlers</name></member>
+      <member refid="classEngine_1_1BaseEngine_1a65321a97e83f0a6ee90df3efac2d3307" prot="public" virt="non-virtual"><scope>Engine::BaseEngine</scope><name>Keys</name></member>
+      <member refid="classEngine_1_1BaseEngine_1a3ee2bdddb66d45b8c808ffd937ba9c50" prot="public" virt="non-virtual"><scope>Engine::BaseEngine</scope><name>MouseKeys</name></member>
+      <member refid="classEngine_1_1BaseEngine_1a5fe085152ebe93346900407f6b41a034" prot="public" virt="non-virtual"><scope>Engine::BaseEngine</scope><name>MouseX</name></member>
+      <member refid="classEngine_1_1BaseEngine_1a143c9c32dbbdc70bf1546ffe275bf384" prot="public" virt="non-virtual"><scope>Engine::BaseEngine</scope><name>MouseY</name></member>
+      <member refid="classEngine_1_1BaseEngine_1ae0f86360ea3a384caefe443dd8f88601" prot="public" virt="non-virtual"><scope>Engine::BaseEngine</scope><name>Programs</name></member>
+      <member refid="classEngine_1_1BaseEngine_1afd02af3c2fbe9bb734db014dec06585a" prot="public" virt="non-virtual"><scope>Engine::BaseEngine</scope><name>Scenes</name></member>
+      <member refid="classEngine_1_1BaseEngine_1afc82c6a00d5a9d4714740fc5eab5db86" prot="public" virt="virtual"><scope>Engine::BaseEngine</scope><name>SetActiveScene</name></member>
+      <member refid="classEngine_1_1BaseEngine_1a2582dee3f73da82bb422b43317b85e3b" prot="public" virt="non-virtual"><scope>Engine::BaseEngine</scope><name>Shaders</name></member>
+      <member refid="classEngine_1_1BaseEngine_1a525fdc7a1da7eecb514ad5763f06be79" prot="public" virt="virtual"><scope>Engine::BaseEngine</scope><name>Start</name></member>
+      <member refid="classEngine_1_1BaseEngine_1a01c23c2073f08939a660f3b7a866852c" prot="public" virt="virtual"><scope>Engine::BaseEngine</scope><name>Update</name></member>
+      <member refid="classEngine_1_1BaseEngine_1aace6be2a42d12b64fbd35f1acdb08408" prot="public" virt="virtual"><scope>Engine::BaseEngine</scope><name>UpdateBegin</name></member>
+      <member refid="classEngine_1_1BaseEngine_1a7c07c98e583df042a0eb01e0ddec85a1" prot="public" virt="virtual"><scope>Engine::BaseEngine</scope><name>UpdateEnd</name></member>
+      <member refid="classEngine_1_1BaseEngine_1aad3c237ca657b9f22f76fccf7fc7561f" prot="private" virt="non-virtual"><scope>Engine::BaseEngine</scope><name>UpdateInternal</name></member>
+      <member refid="classEngine_1_1BaseEngine_1a4a1a4c4dae052e66ecc4f326eeed4d33" prot="public" virt="non-virtual"><scope>Engine::BaseEngine</scope><name>Windows</name></member>
+      <member refid="classEngine_1_1BaseEngine_1a8a3ba672021058958d66af5ee432beac" prot="public" virt="non-virtual"><scope>Engine::BaseEngine</scope><name>~BaseEngine</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

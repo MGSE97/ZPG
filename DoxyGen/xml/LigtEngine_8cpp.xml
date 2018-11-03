@@ -1,0 +1,578 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="LigtEngine_8cpp" kind="file" language="C++">
+    <compoundname>LigtEngine.cpp</compoundname>
+    <includes refid="LigtEngine_8h" local="yes">LigtEngine.h</includes>
+    <includes refid="TriangleScene_8h" local="yes">TriangleScene.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">glm/ext/matrix_clip_space.hpp</includes>
+    <includes refid="SphereScene_8h" local="yes">SphereScene.h</includes>
+    <includes local="no">windows.h</includes>
+    <includes refid="CameraInputHandler_8h" local="yes">CameraInputHandler.h</includes>
+    <includes refid="Assets_8h" local="yes">Assets.h</includes>
+    <includes refid="LightingChangeInputHandler_8h" local="yes">LightingChangeInputHandler.h</includes>
+    <incdepgraph>
+      <node id="1076">
+        <label>list</label>
+      </node>
+      <node id="1079">
+        <label>VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="1080" relation="include">
+        </childnode>
+        <childnode refid="1082" relation="include">
+        </childnode>
+        <childnode refid="1067" relation="include">
+        </childnode>
+        <childnode refid="1084" relation="include">
+        </childnode>
+      </node>
+      <node id="1062">
+        <label>LigtEngine.h</label>
+        <link refid="LigtEngine_8h"/>
+        <childnode refid="1063" relation="include">
+        </childnode>
+        <childnode refid="1095" relation="include">
+        </childnode>
+      </node>
+      <node id="1085">
+        <label>MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="1075" relation="include">
+        </childnode>
+        <childnode refid="1070" relation="include">
+        </childnode>
+        <childnode refid="1074" relation="include">
+        </childnode>
+        <childnode refid="1086" relation="include">
+        </childnode>
+      </node>
+      <node id="1082">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="1068" relation="include">
+        </childnode>
+        <childnode refid="1080" relation="include">
+        </childnode>
+        <childnode refid="1083" relation="include">
+        </childnode>
+      </node>
+      <node id="1101">
+        <label>windows.h</label>
+      </node>
+      <node id="1070">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="1068" relation="include">
+        </childnode>
+        <childnode refid="1071" relation="include">
+        </childnode>
+        <childnode refid="1072" relation="include">
+        </childnode>
+        <childnode refid="1073" relation="include">
+        </childnode>
+        <childnode refid="1074" relation="include">
+        </childnode>
+        <childnode refid="1075" relation="include">
+        </childnode>
+      </node>
+      <node id="1100">
+        <label>SphereScene.h</label>
+        <link refid="SphereScene_8h"/>
+        <childnode refid="1087" relation="include">
+        </childnode>
+      </node>
+      <node id="1080">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="1068" relation="include">
+        </childnode>
+        <childnode refid="1081" relation="include">
+        </childnode>
+      </node>
+      <node id="1075">
+        <label>string</label>
+      </node>
+      <node id="1068">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="1077">
+        <label>Window.h</label>
+        <link refid="Window_8h"/>
+        <childnode refid="1068" relation="include">
+        </childnode>
+        <childnode refid="1078" relation="include">
+        </childnode>
+        <childnode refid="1067" relation="include">
+        </childnode>
+        <childnode refid="1079" relation="include">
+        </childnode>
+        <childnode refid="1072" relation="include">
+        </childnode>
+      </node>
+      <node id="1066">
+        <label>map</label>
+      </node>
+      <node id="1094">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="1090" relation="include">
+        </childnode>
+        <childnode refid="1088" relation="include">
+        </childnode>
+        <childnode refid="1095" relation="include">
+        </childnode>
+      </node>
+      <node id="1078">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="1086">
+        <label>MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="1068" relation="include">
+        </childnode>
+        <childnode refid="1070" relation="include">
+        </childnode>
+      </node>
+      <node id="1103">
+        <label>glm/gtc/quaternion.hpp</label>
+      </node>
+      <node id="1063">
+        <label>BaseEngine.h</label>
+        <link refid="BaseEngine_8h"/>
+        <childnode refid="1064" relation="include">
+        </childnode>
+        <childnode refid="1065" relation="include">
+        </childnode>
+        <childnode refid="1067" relation="include">
+        </childnode>
+        <childnode refid="1077" relation="include">
+        </childnode>
+        <childnode refid="1087" relation="include">
+        </childnode>
+        <childnode refid="1096" relation="include">
+        </childnode>
+      </node>
+      <node id="1096">
+        <label>IInputHandler.h</label>
+        <link refid="IInputHandler_8h"/>
+        <childnode refid="1077" relation="include">
+        </childnode>
+        <childnode refid="1087" relation="include">
+        </childnode>
+      </node>
+      <node id="1088">
+        <label>Object.h</label>
+        <link refid="Object_8h"/>
+        <childnode refid="1079" relation="include">
+        </childnode>
+      </node>
+      <node id="1095">
+        <label>glm/common.hpp</label>
+      </node>
+      <node id="1064">
+        <label>ostream</label>
+      </node>
+      <node id="1074">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="1105">
+        <label>LightingChangeInputHandler.h</label>
+        <link refid="LightingChangeInputHandler_8h"/>
+        <childnode refid="1106" relation="include">
+        </childnode>
+      </node>
+      <node id="1092">
+        <label>Observable.h</label>
+        <link refid="Observable_8h"/>
+        <childnode refid="1069" relation="include">
+        </childnode>
+        <childnode refid="1093" relation="include">
+        </childnode>
+        <childnode refid="1081" relation="include">
+        </childnode>
+      </node>
+      <node id="1106">
+        <label>BaseInputHandler.h</label>
+        <link refid="BaseInputHandler_8h"/>
+        <childnode refid="1096" relation="include">
+        </childnode>
+      </node>
+      <node id="1104">
+        <label>Assets.h</label>
+        <link refid="Assets_8h"/>
+        <childnode refid="1075" relation="include">
+        </childnode>
+      </node>
+      <node id="1090">
+        <label>glm/vec3.hpp</label>
+      </node>
+      <node id="1071">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="1087">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+        <childnode refid="1065" relation="include">
+        </childnode>
+        <childnode refid="1088" relation="include">
+        </childnode>
+        <childnode refid="1089" relation="include">
+        </childnode>
+        <childnode refid="1094" relation="include">
+        </childnode>
+      </node>
+      <node id="1081">
+        <label>vector</label>
+      </node>
+      <node id="1061">
+        <label>ZPG/LigtEngine.cpp</label>
+        <link refid="LigtEngine_8cpp"/>
+        <childnode refid="1062" relation="include">
+        </childnode>
+        <childnode refid="1097" relation="include">
+        </childnode>
+        <childnode refid="1098" relation="include">
+        </childnode>
+        <childnode refid="1099" relation="include">
+        </childnode>
+        <childnode refid="1100" relation="include">
+        </childnode>
+        <childnode refid="1101" relation="include">
+        </childnode>
+        <childnode refid="1102" relation="include">
+        </childnode>
+        <childnode refid="1104" relation="include">
+        </childnode>
+        <childnode refid="1105" relation="include">
+        </childnode>
+      </node>
+      <node id="1069">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="1070" relation="include">
+        </childnode>
+        <childnode refid="1076" relation="include">
+        </childnode>
+      </node>
+      <node id="1084">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="1065" relation="include">
+        </childnode>
+        <childnode refid="1075" relation="include">
+        </childnode>
+        <childnode refid="1085" relation="include">
+        </childnode>
+        <childnode refid="1067" relation="include">
+        </childnode>
+        <childnode refid="1070" relation="include">
+        </childnode>
+      </node>
+      <node id="1083">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="1097">
+        <label>TriangleScene.h</label>
+        <link refid="TriangleScene_8h"/>
+        <childnode refid="1087" relation="include">
+        </childnode>
+      </node>
+      <node id="1093">
+        <label>Observer.h</label>
+        <link refid="Observer_8h"/>
+      </node>
+      <node id="1072">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="1098">
+        <label>iostream</label>
+      </node>
+      <node id="1067">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="1068" relation="include">
+        </childnode>
+        <childnode refid="1069" relation="include">
+        </childnode>
+        <childnode refid="1065" relation="include">
+        </childnode>
+        <childnode refid="1075" relation="include">
+        </childnode>
+      </node>
+      <node id="1065">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="1066" relation="include">
+        </childnode>
+      </node>
+      <node id="1073">
+        <label>xstring</label>
+      </node>
+      <node id="1091">
+        <label>glm/mat4x4.hpp</label>
+      </node>
+      <node id="1099">
+        <label>glm/ext/matrix_clip_space.hpp</label>
+      </node>
+      <node id="1102">
+        <label>CameraInputHandler.h</label>
+        <link refid="CameraInputHandler_8h"/>
+        <childnode refid="1096" relation="include">
+        </childnode>
+        <childnode refid="1103" relation="include">
+        </childnode>
+      </node>
+      <node id="1089">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="1090" relation="include">
+        </childnode>
+        <childnode refid="1091" relation="include">
+        </childnode>
+        <childnode refid="1092" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="LigtEngine_8h" kindref="compound">LigtEngine.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="TriangleScene_8h" kindref="compound">TriangleScene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/ext/matrix_clip_space.hpp&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SphereScene_8h" kindref="compound">SphereScene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="CameraInputHandler_8h" kindref="compound">CameraInputHandler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Assets_8h" kindref="compound">Assets.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="LightingChangeInputHandler_8h" kindref="compound">LightingChangeInputHandler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="classApplication_1_1Engines_1_1LightEngine_1ad992d8a300f099c247d7ba8dc38883ea" refkind="member"><highlight class="normal"><ref refid="classApplication_1_1Engines_1_1LightEngine" kindref="compound">Application::Engines::LightEngine</ref>*<sp/><ref refid="classApplication_1_1Engines_1_1LightEngine_1ad992d8a300f099c247d7ba8dc38883ea" kindref="member">Application::Engines::LightEngine::Init</ref>(std::FILE*<sp/>errorStream)</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>BaseEngine::Init(errorStream);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="ZPGEngine_8cpp_1afc33b8912f9f93d1d2544df04ad4a81a" kindref="member">vertex_shader</ref><sp/>=</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;#version<sp/>400\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;layout(location=0)<sp/>in<sp/>vec3<sp/>vertexPos;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;layout(location=1)<sp/>in<sp/>vec3<sp/>normal;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;uniform<sp/>mat4<sp/>modelMatrix;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;uniform<sp/>mat4<sp/>viewMatrix;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;uniform<sp/>mat4<sp/>projectionMatrix;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;out<sp/>vec3<sp/>worldPos;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;out<sp/>vec3<sp/>normVec;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;out<sp/>vec3<sp/>lightVec;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;out<sp/>vec3<sp/>eyeVec;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;void<sp/>main<sp/>()<sp/>{&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;gl_Position<sp/>=<sp/>(projectionMatrix<sp/>*<sp/>viewMatrix<sp/>*<sp/>modelMatrix)<sp/>*<sp/>vec4<sp/>(vertexPos,<sp/>1.0);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;vec3<sp/>vertexPosWorld<sp/>=<sp/>(modelMatrix<sp/>*<sp/>vec4(vertexPos,<sp/>1.0)).xyz;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;normVec<sp/>=<sp/>normalize(transpose(inverse(mat3(modelMatrix)))<sp/>*<sp/>normal);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;lightVec<sp/>=<sp/>normalize(vec3(0.0,<sp/>0.0,<sp/>0.0)<sp/>-<sp/>vertexPosWorld);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;worldPos<sp/>=<sp/>vertexPosWorld;&quot;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;}&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//const<sp/>char*<sp/>fragment_shader<sp/>=</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>&quot;#version<sp/>330<sp/>core&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>&quot;out<sp/>vec4<sp/>FragColor;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>&quot;uniform<sp/>float<sp/>color;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>&quot;in<sp/>vec3<sp/>normVec;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>&quot;in<sp/>vec3<sp/>lightVec;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>&quot;in<sp/>vec3<sp/>eyeVec;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>&quot;void<sp/>main()&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>&quot;{&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>&quot;vec3<sp/>lightAmbient<sp/>=<sp/>vec3(1.0);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>&quot;vec3<sp/>lightDiffuse<sp/>=<sp/>vec3(0.0,<sp/>1.0,<sp/>1.0);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>&quot;vec3<sp/>lightSpecular<sp/>=<sp/>vec3(1.0,<sp/>0.0,<sp/>1.0);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>ambient</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>&quot;float<sp/>ambientStrength<sp/>=<sp/>0.1;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>&quot;vec3<sp/>ambient<sp/>=<sp/>ambientStrength<sp/>*<sp/>lightAmbient;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>diffuse<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>&quot;float<sp/>diff<sp/>=<sp/>max(dot(normVec,<sp/>lightVec),<sp/>0.0);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>&quot;vec3<sp/>diffuse<sp/>=<sp/>diff<sp/>*<sp/>lightDiffuse;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>&quot;vec3<sp/>result<sp/>=<sp/>(ambient<sp/>+<sp/>diffuse)<sp/>*<sp/>color;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>&quot;FragColor<sp/>=<sp/>vec4(result,<sp/>1.0);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/>&quot;}&quot;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="ZPGEngine_8cpp_1ab187f2ba2a2f72ea5571921a1a856582" kindref="member">fragment_shader</ref><sp/>=</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;#version<sp/>330\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;uniform<sp/>vec4<sp/>color;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;out<sp/>vec4<sp/>frag_colour;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;in<sp/>vec3<sp/>normVec;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;in<sp/>vec3<sp/>lightVec;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;in<sp/>vec3<sp/>eyeVec;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;in<sp/>vec3<sp/>worldPos;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;void<sp/>main<sp/>()<sp/>{&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;float<sp/>ambientStrength<sp/>=<sp/>0.2;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;vec3<sp/>lightAmbient<sp/>=<sp/>vec3(1.0,<sp/>1.0,<sp/>1.0);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;vec3<sp/>lightDiffuse<sp/>=<sp/>vec3(0.0,<sp/>1.0,<sp/>1.0);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;vec3<sp/>lightSpecular<sp/>=<sp/>vec3(1.0,<sp/>0.0,<sp/>1.0);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;vec3<sp/>ambient<sp/>=<sp/>lightAmbient<sp/>*<sp/>ambientStrength;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//diffuse<sp/>part</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;float<sp/>dotDiff<sp/>=<sp/>max(dot(normVec,<sp/>lightVec),<sp/>0.0);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;vec3<sp/>diffuse<sp/>=<sp/>dotDiff<sp/>*<sp/>lightDiffuse;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//specular<sp/>part</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;vec3<sp/>reflVector<sp/>=<sp/>reflect(-lightVec,<sp/>normVec);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;float<sp/>dotSpec<sp/>=<sp/>pow(max(dot(reflVector,<sp/>eyeVec),<sp/>0.0),<sp/>256);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;vec3<sp/>specular<sp/>=<sp/>dotSpec<sp/>*<sp/>lightSpecular;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;frag_colour<sp/>=<sp/>vec4(ambient<sp/>+<sp/>diffuse<sp/>+<sp/>specular,<sp/>1.0)*color;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&quot;frag_colour<sp/>=<sp/>vec4(worldPos,<sp/>1.0);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&quot;frag_colour<sp/>=<sp/>vec4(normVec,<sp/>1.0);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&quot;frag_colour<sp/>=<sp/>vec4(ambient*color,<sp/>1.0);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&quot;frag_colour<sp/>=<sp/>vec4(diffuse*color,<sp/>1.0);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&quot;frag_colour<sp/>=<sp/>vec4(specular*color,<sp/>1.0);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//&quot;frag_colour<sp/>=<sp/>vec4<sp/>(color,<sp/>1.0-color,<sp/>0.0,<sp/>1.0);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;}&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Engines_1_1LightEngine_1ae9cca787b2b0d5d4dbcc3c63afa196e1" kindref="member">M</ref><sp/>=<sp/>glm::mat4(1.0f);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Engines_1_1LightEngine_1ad729a37b02875c824d6bd2c8630a4520" kindref="member">angle</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Engines_1_1LightEngine_1af97d743158c0e55c754b455e7066e6b0" kindref="member">ambientStrength</ref><sp/>=<sp/>0.2f;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Engines_1_1LightEngine_1ab2f3fb68d22dd1e6386833f4790a8eb6" kindref="member">diffuseStrength</ref><sp/>=<sp/>0.5f;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Engines_1_1LightEngine_1a97dc7516071da727bcbb137e0cb75301" kindref="member">specularStrength</ref><sp/>=<sp/>0.5f;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Engines_1_1LightEngine_1a5da28beed5c8d278c3615974d464f246" kindref="member">specularSize</ref><sp/>=<sp/>16;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Engines_1_1LightEngine_1ab22b7d03d1c3cd19214474fb56bdd2ee" kindref="member">ambientColor</ref><sp/>=<sp/>glm::vec3(1.0,<sp/>1.0,<sp/>1.0);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Engines_1_1LightEngine_1a2247de4ba43b8d0e159ab90edd581363" kindref="member">diffuseColor</ref><sp/>=<sp/>glm::vec3(1.0,<sp/>1.0,<sp/>1.0);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Engines_1_1LightEngine_1ae03347f7ed935e951726dffba52d0fef" kindref="member">specularColor</ref><sp/>=<sp/>glm::vec3(1.0,<sp/>1.0,<sp/>1.0);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>window<sp/>=<sp/>(new<sp/>::Engine::Components::Window(1024,<sp/>768,<sp/></highlight><highlight class="stringliteral">&quot;ZPG<sp/>-<sp/>Camera&quot;</highlight><highlight class="normal">,<sp/>100.0f))</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;Show()</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;Info(std::cout);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1a4a1a4c4dae052e66ecc4f326eeed4d33" kindref="member">Windows</ref>-&gt;Add(</highlight><highlight class="stringliteral">&quot;zpg&quot;</highlight><highlight class="normal">,<sp/>window);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>vertex<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Engine::Components::Graphics::Shader</ref>(GL_VERTEX_SHADER,<sp/><ref refid="classAssets_1ac712d5aca276086a3734e2e9f74cfc6b" kindref="member">Assets::ShadersVertex</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;Light.glsl&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>fragment<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Engine::Components::Graphics::Shader</ref>(GL_FRAGMENT_SHADER,<sp/><ref refid="classAssets_1abb1ca75a8a9c7b942232df4aff9bb6c9" kindref="member">Assets::ShadersFragment</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;Light.glsl&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1a2582dee3f73da82bb422b43317b85e3b" kindref="member">Shaders</ref>-&gt;Add(</highlight><highlight class="stringliteral">&quot;vertex&quot;</highlight><highlight class="normal">,<sp/>vertex);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1a2582dee3f73da82bb422b43317b85e3b" kindref="member">Shaders</ref>-&gt;Add(</highlight><highlight class="stringliteral">&quot;fragment&quot;</highlight><highlight class="normal">,<sp/>fragment);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1ae0f86360ea3a384caefe443dd8f88601" kindref="member">Programs</ref>-&gt;Add(</highlight><highlight class="stringliteral">&quot;basic&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Engine::Components::Graphics::Program</ref>())-&gt;AddShaders(<ref refid="classEngine_1_1BaseEngine_1a2582dee3f73da82bb422b43317b85e3b" kindref="member">Shaders</ref>));</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1afd02af3c2fbe9bb734db014dec06585a" kindref="member">Scenes</ref>-&gt;Add(</highlight><highlight class="stringliteral">&quot;triangle&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Scenes_1_1TriangleScene" kindref="compound">Scenes::TriangleScene</ref>());</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1afd02af3c2fbe9bb734db014dec06585a" kindref="member">Scenes</ref>-&gt;Add(</highlight><highlight class="stringliteral">&quot;sphere&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Scenes_1_1SphereScene" kindref="compound">Scenes::SphereScene</ref>());</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1a134fa082c5a64d62b76ddf926647e7cc" kindref="member">InputHandlers</ref>-&gt;<ref refid="classGeneric_1_1Collection_1a602c700fa46602ce551b5c133793924c" kindref="member">Add</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler" kindref="compound">Input::Handlers::LightingChangeInputHandler</ref>());</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1a134fa082c5a64d62b76ddf926647e7cc" kindref="member">InputHandlers</ref>-&gt;<ref refid="classGeneric_1_1Collection_1a602c700fa46602ce551b5c133793924c" kindref="member">Add</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler" kindref="compound">Input::Handlers::CameraInputHandler</ref>());</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1afc82c6a00d5a9d4714740fc5eab5db86" kindref="member">SetActiveScene</ref>(<ref refid="classEngine_1_1BaseEngine_1afd02af3c2fbe9bb734db014dec06585a" kindref="member">Scenes</ref>-&gt;Get(</highlight><highlight class="stringliteral">&quot;sphere&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1a00f60de2f6c72242a7af0076a3b75e5e" kindref="member">Lights</ref>-&gt;<ref refid="classGeneric_1_1Dictionary_1ae7cb006f801b21c172e8fbac8794fa99" kindref="member">Add</ref>(</highlight><highlight class="stringliteral">&quot;light&quot;</highlight><highlight class="normal"><sp/>,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classLight" kindref="compound">Light</ref>(<ref refid="classEngine_1_1BaseEngine_1ae0f86360ea3a384caefe443dd8f88601" kindref="member">Programs</ref>-&gt;Get(</highlight><highlight class="stringliteral">&quot;basic&quot;</highlight><highlight class="normal">),<sp/>glm::vec3(0,<sp/>0,<sp/>0)));</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1aea98ff1ced88ee859878b504e9a2a362" kindref="member">Cameras</ref>-&gt;Add(</highlight><highlight class="stringliteral">&quot;main&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Camera" kindref="compound">Engine::Components::Camera</ref>())</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//-&gt;SetPosition(new<sp/>glm::vec3(2.5f,<sp/>2.5f,<sp/>2.f))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;SetPosition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>glm::vec3(0.f,<sp/>0.f,<sp/>-4.f))</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;SetDirection(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>glm::vec3(0.f,<sp/>0.f,<sp/>0.f))</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;SetUp(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>glm::vec3(0.f,<sp/>1.f,<sp/>0.f)));</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1af18bd334fe66952b8d79b8e9e99ab2d8" kindref="member">BeginLoad</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/><ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1a23481feabaaa56bf5613765db03af4da" kindref="member">Objects</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>!<ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1a23481feabaaa56bf5613765db03af4da" kindref="member">Objects</ref>-&gt;empty())</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>it<sp/>:<sp/>*<ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1a23481feabaaa56bf5613765db03af4da" kindref="member">Objects</ref>)</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>it.second-&gt;Material-&gt;Values</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;Add(</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;glm::mat4&gt;</ref>(</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertex,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;viewMatrix&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1a9408befee37d89e2c001d25b9e4ed75a" kindref="member">ActiveCamera</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Camera_1a5d131a78545d9f70496549946503b27a" kindref="member">Value</ref>)</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>).Add(</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;glm::mat4&gt;</ref>(</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertex,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;projectionMatrix&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>glm::mat4(glm::perspective(glm::radians(90.0f),<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)window-&gt;Width<sp/>/<sp/>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)window-&gt;Height,<sp/>0.1f,<sp/>100.0f)))</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>).Add(</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;glm::vec3&gt;</ref>(</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertex,</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;cameraPos&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1a9408befee37d89e2c001d25b9e4ed75a" kindref="member">ActiveCamera</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Camera_1ab2c3ed9a1321a95db8fca95bc7f4b290" kindref="member">Position</ref>)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Color<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Add(</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;glm::vec3&gt;</ref>(</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fragment,</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;ambientColor&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classApplication_1_1Engines_1_1LightEngine_1ab22b7d03d1c3cd19214474fb56bdd2ee" kindref="member">ambientColor</ref>)</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>).Add(</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;glm::vec3&gt;</ref>(</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fragment,</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;diffuseColor&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classApplication_1_1Engines_1_1LightEngine_1a2247de4ba43b8d0e159ab90edd581363" kindref="member">diffuseColor</ref>)</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>).Add(</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;glm::vec3&gt;</ref>(</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fragment,</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;specularColor&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classApplication_1_1Engines_1_1LightEngine_1ae03347f7ed935e951726dffba52d0fef" kindref="member">specularColor</ref>)</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Power<sp/>setup</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Add(</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;float&gt;</ref>(</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fragment,</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;ambientStrength&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classApplication_1_1Engines_1_1LightEngine_1af97d743158c0e55c754b455e7066e6b0" kindref="member">ambientStrength</ref>)</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>).Add(</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;float&gt;</ref>(</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fragment,</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;diffuseStrength&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classApplication_1_1Engines_1_1LightEngine_1ab2f3fb68d22dd1e6386833f4790a8eb6" kindref="member">diffuseStrength</ref>)</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>).Add(</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;float&gt;</ref>(</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fragment,</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;specularStrength&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classApplication_1_1Engines_1_1LightEngine_1a97dc7516071da727bcbb137e0cb75301" kindref="member">specularStrength</ref>)</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>).Add(</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;int&gt;</ref>(</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fragment,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;specularSize&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;<ref refid="classApplication_1_1Engines_1_1LightEngine_1a5da28beed5c8d278c3615974d464f246" kindref="member">specularSize</ref>)</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Enable</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.Add(</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;bool&gt;</ref>(</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fragment,</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;useLighting&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">(</highlight><highlight class="keyword">true</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/><ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1a00f60de2f6c72242a7af0076a3b75e5e" kindref="member">Lights</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>!<ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1a00f60de2f6c72242a7af0076a3b75e5e" kindref="member">Lights</ref>-&gt;empty())</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>light<sp/>:<sp/>*<ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1a00f60de2f6c72242a7af0076a3b75e5e" kindref="member">Lights</ref>)</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>light.second-&gt;Use(it.second-&gt;Material);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/><ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1a00f60de2f6c72242a7af0076a3b75e5e" kindref="member">Lights</ref><sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>!<ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1a00f60de2f6c72242a7af0076a3b75e5e" kindref="member">Lights</ref>-&gt;empty())</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>it<sp/>:<sp/>*<ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1a00f60de2f6c72242a7af0076a3b75e5e" kindref="member">Lights</ref>)</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1a23481feabaaa56bf5613765db03af4da" kindref="member">Objects</ref>-&gt;<ref refid="classGeneric_1_1Dictionary_1ae7cb006f801b21c172e8fbac8794fa99" kindref="member">Add</ref>(</highlight><highlight class="stringliteral">&quot;light_&quot;</highlight><highlight class="normal"><sp/>+<sp/>it.first,<sp/>it.second);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="213" refid="classApplication_1_1Engines_1_1LightEngine_1a18575df6f8742099ae543e3b23508ee9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Engines_1_1LightEngine_1a18575df6f8742099ae543e3b23508ee9" kindref="member">Application::Engines::LightEngine::Update</ref>(::<ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Engine::Components::Window</ref>*<sp/>window)</highlight></codeline>
+<codeline lineno="214"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;PS:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>specularSize<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\nSS:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>specularStrength<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\nDS:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>diffuseStrength<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\nAS:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>ambientStrength<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\nLP:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>ActiveScene-&gt;Lights-&gt;First()-&gt;Power<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ActiveScene<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>ActiveScene-&gt;Objects<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>!ActiveScene-&gt;Objects-&gt;empty())</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>it<sp/>:<sp/>*ActiveScene-&gt;Objects)</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*auto<sp/>_fi<sp/>=<sp/>glm::radians(90.f*(MouseX<sp/>/<sp/>window-&gt;Height));</highlight></codeline>
+<codeline lineno="221"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auto<sp/>_psi<sp/>=<sp/>glm::radians(90.f*(MouseY<sp/>/<sp/>window-&gt;Width));</highlight></codeline>
+<codeline lineno="222"><highlight class="comment"></highlight></codeline>
+<codeline lineno="223"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/>&quot;FI:<sp/><sp/>&quot;<sp/>&lt;&lt;<sp/>_fi<sp/>&lt;&lt;<sp/>&quot;\nPSI:<sp/>&quot;<sp/>&lt;&lt;<sp/>_psi<sp/>&lt;&lt;<sp/>&quot;\nObject:<sp/>&quot;<sp/>&lt;&lt;<sp/>it.first<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="224"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//ActiveScene-&gt;Cameras-&gt;First()-&gt;SetDirection(new<sp/>glm::vec3(cos(_fi),<sp/>sin(_fi),<sp/>cos(_psi)));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>=<sp/>it.second;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">-&gt;Draw();</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>angle<sp/>+=<sp/>0.1f;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="ZPG/LigtEngine.cpp"/>
+  </compounddef>
+</doxygen>

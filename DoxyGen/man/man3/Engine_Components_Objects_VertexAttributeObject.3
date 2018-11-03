@@ -1,0 +1,136 @@
+.TH "Engine::Components::Objects::VertexAttributeObject" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Engine::Components::Objects::VertexAttributeObject
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <VertexAttributeObject\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVertexAttributeObject\fP (int index, \fBVertexBufferObject\fP *VBO, int dimensions, int size, int offset)"
+.br
+.ti -1c
+.RI "\fB~VertexAttributeObject\fP ()"
+.br
+.ti -1c
+.RI "GLuint \fBGet\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBDimensions\fP"
+.br
+.ti -1c
+.RI "int \fBIndex\fP"
+.br
+.ti -1c
+.RI "int \fBOffset\fP"
+.br
+.ti -1c
+.RI "int \fBSize\fP"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "GLuint \fB_VAO\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 12 of file VertexAttributeObject\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Engine::Components::Objects::VertexAttributeObject::VertexAttributeObject (int index, \fBVertexBufferObject\fP * VBO, int dimensions, int size, int offset)"
+
+.PP
+Definition at line 6 of file VertexAttributeObject\&.cpp\&.
+.PP
+References _VAO, Dimensions, Engine::Components::Objects::VertexBufferObject::Get(), Engine::Components::Objects::VertexBufferObject::GetId(), Index, Offset, and Size\&.
+.PP
+.nf
+7 {
+8     Dimensions = dimensions;
+9     Index = index;
+10     Offset = offset;
+11     Size = size;
+12     if (index == 0)
+13     {
+14         glGenVertexArrays(VBO->GetId(), &_VAO); //generate the VAO
+15         glBindVertexArray(_VAO); //bind the VAO
+16         glBindBuffer(GL_ARRAY_BUFFER, VBO->Get());
+17     };
+18     glEnableVertexAttribArray(index); //enable vertex attributes
+19     glVertexAttribPointer(index, dimensions, GL_FLOAT, GL_FALSE, size*sizeof(float), (GLvoid*)offset);
+20 }
+.fi
+.SS "Engine::Components::Objects::VertexAttributeObject::~VertexAttributeObject ()"
+
+.PP
+Definition at line 23 of file VertexAttributeObject\&.cpp\&.
+.PP
+.nf
+24 {
+25     delete &_VAO;
+26     delete &Dimensions;
+27     delete &Index;
+28     delete &Offset;
+29     delete &Size;
+30 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "GLuint Engine::Components::Objects::VertexAttributeObject::Get ()"
+
+.PP
+Definition at line 32 of file VertexAttributeObject\&.cpp\&.
+.PP
+.nf
+33 {
+34     return _VAO;
+35 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "GLuint Engine::Components::Objects::VertexAttributeObject::_VAO = 0\fC [private]\fP"
+
+.PP
+Definition at line 23 of file VertexAttributeObject\&.h\&.
+.PP
+Referenced by VertexAttributeObject()\&.
+.SS "int Engine::Components::Objects::VertexAttributeObject::Dimensions"
+
+.PP
+Definition at line 18 of file VertexAttributeObject\&.h\&.
+.PP
+Referenced by VertexAttributeObject()\&.
+.SS "int Engine::Components::Objects::VertexAttributeObject::Index"
+
+.PP
+Definition at line 19 of file VertexAttributeObject\&.h\&.
+.PP
+Referenced by VertexAttributeObject()\&.
+.SS "int Engine::Components::Objects::VertexAttributeObject::Offset"
+
+.PP
+Definition at line 20 of file VertexAttributeObject\&.h\&.
+.PP
+Referenced by VertexAttributeObject()\&.
+.SS "int Engine::Components::Objects::VertexAttributeObject::Size"
+
+.PP
+Definition at line 21 of file VertexAttributeObject\&.h\&.
+.PP
+Referenced by VertexAttributeObject()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

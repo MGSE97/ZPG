@@ -1,0 +1,874 @@
+\hypertarget{classApplication_1_1Engines_1_1LightEngine}{}\section{Application\+:\+:Engines\+:\+:Light\+Engine Class Reference}
+\label{classApplication_1_1Engines_1_1LightEngine}\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+
+
+{\ttfamily \#include $<$Ligt\+Engine.\+h$>$}
+
+
+
+Inheritance diagram for Application\+:\+:Engines\+:\+:Light\+Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classApplication_1_1Engines_1_1LightEngine__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Application\+:\+:Engines\+:\+:Light\+Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classApplication_1_1Engines_1_1LightEngine__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1BaseEngine_ad838c97afe1790cb35527f0b58e81e6b}{Base\+Engine}} $\ast$ \mbox{\hyperlink{classEngine_1_1BaseEngine_acd5cd5d2189d24e038b23477b7dce405}{Dispose}} ()
+\item 
+\mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine}{Light\+Engine}} $\ast$ \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_ad992d8a300f099c247d7ba8dc38883ea}{Init}} (std\+::\+F\+I\+LE $\ast$error\+Stream=stderr) override
+\item 
+bool \mbox{\hyperlink{classEngine_1_1BaseEngine_a7a1c9b833049b3eb61194cab113dfe89}{Init\+Success}} ()
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1BaseEngine_afc82c6a00d5a9d4714740fc5eab5db86}{Set\+Active\+Scene}} (Components\+::\+Scene $\ast$scene=nullptr)
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1BaseEngine_a525fdc7a1da7eecb514ad5763f06be79}{Start}} ()
+\item 
+void \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_a18575df6f8742099ae543e3b23508ee9}{Update}} (\+::\mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Engine\+::\+Components\+::\+Window}} $\ast$window) override
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1BaseEngine_a01c23c2073f08939a660f3b7a866852c}{Update}} (Components\+::\+Window $\ast$window)
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1BaseEngine_aace6be2a42d12b64fbd35f1acdb08408}{Update\+Begin}} (Components\+::\+Window $\ast$window)
+\item 
+virtual void \mbox{\hyperlink{classEngine_1_1BaseEngine_a7c07c98e583df042a0eb01e0ddec85a1}{Update\+End}} (Components\+::\+Window $\ast$window)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Components\+::\+Scene $\ast$ \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{Active\+Scene}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_ab22b7d03d1c3cd19214474fb56bdd2ee}{ambient\+Color}}
+\item 
+float \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_af97d743158c0e55c754b455e7066e6b0}{ambient\+Strength}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_a2247de4ba43b8d0e159ab90edd581363}{diffuse\+Color}}
+\item 
+float \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_ab2f3fb68d22dd1e6386833f4790a8eb6}{diffuse\+Strength}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Collection}{Generic\+::\+Collection}}$<$ Components\+::\+I\+Input\+Handler $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1BaseEngine_a134fa082c5a64d62b76ddf926647e7cc}{Input\+Handlers}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ short, bool $>$ \mbox{\hyperlink{classEngine_1_1BaseEngine_a65321a97e83f0a6ee90df3efac2d3307}{Keys}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ short, bool $>$ \mbox{\hyperlink{classEngine_1_1BaseEngine_a3ee2bdddb66d45b8c808ffd937ba9c50}{Mouse\+Keys}}
+\item 
+double \mbox{\hyperlink{classEngine_1_1BaseEngine_a5fe085152ebe93346900407f6b41a034}{MouseX}}
+\item 
+double \mbox{\hyperlink{classEngine_1_1BaseEngine_a143c9c32dbbdc70bf1546ffe275bf384}{MouseY}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, Components\+::\+Graphics\+::\+Program $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1BaseEngine_ae0f86360ea3a384caefe443dd8f88601}{Programs}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, Components\+::\+Scene $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1BaseEngine_afd02af3c2fbe9bb734db014dec06585a}{Scenes}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, Components\+::\+Graphics\+::\+Shader $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1BaseEngine_a2582dee3f73da82bb422b43317b85e3b}{Shaders}}
+\item 
+glm\+::vec3 \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_ae03347f7ed935e951726dffba52d0fef}{specular\+Color}}
+\item 
+int \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_a5da28beed5c8d278c3615974d464f246}{specular\+Size}}
+\item 
+float \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_a97dc7516071da727bcbb137e0cb75301}{specular\+Strength}}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, Components\+::\+Window $\ast$ $>$ $\ast$ \mbox{\hyperlink{classEngine_1_1BaseEngine_a4a1a4c4dae052e66ecc4f326eeed4d33}{Windows}}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_ad729a37b02875c824d6bd2c8630a4520}{angle}}
+\item 
+glm\+::mat4 \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_ae9cca787b2b0d5d4dbcc3c63afa196e1}{M}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 9 of file Ligt\+Engine.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_acd5cd5d2189d24e038b23477b7dce405}\label{classEngine_1_1BaseEngine_acd5cd5d2189d24e038b23477b7dce405}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!Dispose@{Dispose}}
+\index{Dispose@{Dispose}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{Dispose()}{Dispose()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1BaseEngine}{Engine\+::\+Base\+Engine}} $\ast$ Engine\+::\+Base\+Engine\+::\+Dispose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 51 of file Base\+Engine.\+cpp.
+
+
+\begin{DoxyCode}
+52 \{
+53     glfwTerminate();
+54     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+55 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classApplication_1_1Engines_1_1LightEngine_ad992d8a300f099c247d7ba8dc38883ea}\label{classApplication_1_1Engines_1_1LightEngine_ad992d8a300f099c247d7ba8dc38883ea}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!Init@{Init}}
+\index{Init@{Init}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine}{Application\+::\+Engines\+::\+Light\+Engine}} $\ast$ Application\+::\+Engines\+::\+Light\+Engine\+::\+Init (\begin{DoxyParamCaption}\item[{std\+::\+F\+I\+LE $\ast$}]{error\+Stream = {\ttfamily stderr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\char`\"{}eye\+Vec = normalize(camera\+Pos -\/ vertex\+Pos\+World); \char`\"{} 
+
+Reimplemented from \mbox{\hyperlink{classEngine_1_1BaseEngine_ad9c141fe48c8c91e14e77ed5fcb90196}{Engine\+::\+Base\+Engine}}.
+
+
+
+Definition at line 11 of file Ligt\+Engine.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Scene\+::\+Active\+Camera, Engine\+::\+Base\+Engine\+::\+Active\+Scene, Generic\+::\+Dictionary$<$ T\+Key, T\+Value $>$\+::\+Add(), Generic\+::\+Collection$<$ T $>$\+::\+Add(), ambient\+Color, ambient\+Strength, angle, Engine\+::\+Components\+::\+Scene\+::\+Begin\+Load(), Engine\+::\+Components\+::\+Scene\+::\+Cameras, diffuse\+Color, diffuse\+Strength, fragment\+\_\+shader, Engine\+::\+Base\+Engine\+::\+Input\+Handlers, Engine\+::\+Components\+::\+Scene\+::\+Lights, M, Engine\+::\+Components\+::\+Scene\+::\+Objects, Engine\+::\+Components\+::\+Camera\+::\+Position, Engine\+::\+Base\+Engine\+::\+Programs, Engine\+::\+Base\+Engine\+::\+Scenes, Engine\+::\+Base\+Engine\+::\+Set\+Active\+Scene(), Engine\+::\+Base\+Engine\+::\+Shaders, Assets\+::\+Shaders\+Fragment, Assets\+::\+Shaders\+Vertex, specular\+Color, specular\+Size, specular\+Strength, Engine\+::\+Components\+::\+Camera\+::\+Value, vertex\+\_\+shader, and Engine\+::\+Base\+Engine\+::\+Windows.
+
+
+\begin{DoxyCode}
+12 \{
+13     BaseEngine::Init(errorStream);
+14 
+15     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{ZPGEngine_8cpp_afc33b8912f9f93d1d2544df04ad4a81a}{vertex\_shader}} =
+16         \textcolor{stringliteral}{"#version 400\(\backslash\)n"}
+17         \textcolor{stringliteral}{"layout(location=0) in vec3 vertexPos;"}
+18         \textcolor{stringliteral}{"layout(location=1) in vec3 normal;"}
+19         \textcolor{stringliteral}{"uniform mat4 modelMatrix;"}
+20         \textcolor{stringliteral}{"uniform mat4 viewMatrix;"}
+21         \textcolor{stringliteral}{"uniform mat4 projectionMatrix;"}
+22         \textcolor{stringliteral}{"out vec3 worldPos;"}
+23         \textcolor{stringliteral}{"out vec3 normVec;"}
+24         \textcolor{stringliteral}{"out vec3 lightVec;"}
+25         \textcolor{stringliteral}{"out vec3 eyeVec;"}
+26         \textcolor{stringliteral}{"void main () \{"}
+27             \textcolor{stringliteral}{"gl\_Position = (projectionMatrix * viewMatrix * modelMatrix) * vec4 (vertexPos, 1.0);"}
+28             \textcolor{stringliteral}{"vec3 vertexPosWorld = (modelMatrix * vec4(vertexPos, 1.0)).xyz;"}
+29             \textcolor{stringliteral}{"normVec = normalize(transpose(inverse(mat3(modelMatrix))) * normal);"}
+30             \textcolor{stringliteral}{"lightVec = normalize(vec3(0.0, 0.0, 0.0) - vertexPosWorld);"}
+31             \textcolor{stringliteral}{"worldPos = vertexPosWorld;"}
+33         \textcolor{stringliteral}{"\}"};
+34 
+35     \textcolor{comment}{//const char* fragment\_shader =}
+36     \textcolor{comment}{//  "#version 330 core"}
+37     \textcolor{comment}{//  "out vec4 FragColor;"}
+38     \textcolor{comment}{//  "uniform float color;"}
+39 
+40     \textcolor{comment}{//  "in vec3 normVec;"}
+41     \textcolor{comment}{//  "in vec3 lightVec;"}
+42     \textcolor{comment}{//  "in vec3 eyeVec;"}
+43 
+44     \textcolor{comment}{//  "void main()"}
+45     \textcolor{comment}{//  "\{"}
+46     \textcolor{comment}{//      "vec3 lightAmbient = vec3(1.0);"}
+47     \textcolor{comment}{//      "vec3 lightDiffuse = vec3(0.0, 1.0, 1.0);"}
+48     \textcolor{comment}{//      "vec3 lightSpecular = vec3(1.0, 0.0, 1.0);"}
+49     \textcolor{comment}{//      // ambient}
+50     \textcolor{comment}{//      "float ambientStrength = 0.1;"}
+51     \textcolor{comment}{//      "vec3 ambient = ambientStrength * lightAmbient;"}
+52 
+53     \textcolor{comment}{//      // diffuse }
+54     \textcolor{comment}{//      "float diff = max(dot(normVec, lightVec), 0.0);"}
+55     \textcolor{comment}{//      "vec3 diffuse = diff * lightDiffuse;"}
+56 
+57     \textcolor{comment}{//      "vec3 result = (ambient + diffuse) * color;"}
+58     \textcolor{comment}{//      "FragColor = vec4(result, 1.0);"}
+59     \textcolor{comment}{//  "\}";}
+60 
+61     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{ZPGEngine_8cpp_ab187f2ba2a2f72ea5571921a1a856582}{fragment\_shader}} =
+62         \textcolor{stringliteral}{"#version 330\(\backslash\)n"}
+63         \textcolor{stringliteral}{"uniform vec4 color;"}
+64         \textcolor{stringliteral}{"out vec4 frag\_colour;"}
+65 
+66         \textcolor{stringliteral}{"in vec3 normVec;"}
+67         \textcolor{stringliteral}{"in vec3 lightVec;"}
+68         \textcolor{stringliteral}{"in vec3 eyeVec;"}
+69         \textcolor{stringliteral}{"in vec3 worldPos;"}
+70         \textcolor{stringliteral}{"void main () \{"}
+71             \textcolor{stringliteral}{"float ambientStrength = 0.2;"}
+72             \textcolor{stringliteral}{"vec3 lightAmbient = vec3(1.0, 1.0, 1.0);"}
+73             \textcolor{stringliteral}{"vec3 lightDiffuse = vec3(0.0, 1.0, 1.0);"}
+74             \textcolor{stringliteral}{"vec3 lightSpecular = vec3(1.0, 0.0, 1.0);"}
+75             \textcolor{stringliteral}{"vec3 ambient = lightAmbient * ambientStrength;"}
+76             \textcolor{comment}{//diffuse part}
+77             \textcolor{stringliteral}{"float dotDiff = max(dot(normVec, lightVec), 0.0);"}
+78             \textcolor{stringliteral}{"vec3 diffuse = dotDiff * lightDiffuse;"}
+79             \textcolor{comment}{//specular part}
+80             \textcolor{stringliteral}{"vec3 reflVector = reflect(-lightVec, normVec);"}
+81             \textcolor{stringliteral}{"float dotSpec = pow(max(dot(reflVector, eyeVec), 0.0), 256);"}
+82             \textcolor{stringliteral}{"vec3 specular = dotSpec * lightSpecular;"}
+83             \textcolor{stringliteral}{"frag\_colour = vec4(ambient + diffuse + specular, 1.0)*color;"}
+84             \textcolor{comment}{//"frag\_colour = vec4(worldPos, 1.0);"}
+85             \textcolor{comment}{//"frag\_colour = vec4(normVec, 1.0);"}
+86             \textcolor{comment}{//"frag\_colour = vec4(ambient*color, 1.0);"}
+87             \textcolor{comment}{//"frag\_colour = vec4(diffuse*color, 1.0);"}
+88             \textcolor{comment}{//"frag\_colour = vec4(specular*color, 1.0);"}
+89             \textcolor{comment}{//"frag\_colour = vec4 (color, 1.0-color, 0.0, 1.0);"}
+90         \textcolor{stringliteral}{"\}"};
+91 
+92     \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_ae9cca787b2b0d5d4dbcc3c63afa196e1}{M}} = glm::mat4(1.0f);
+93     \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_ad729a37b02875c824d6bd2c8630a4520}{angle}} = 0.0f;
+94 
+95     \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_af97d743158c0e55c754b455e7066e6b0}{ambientStrength}} = 0.2f;
+96     \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_ab2f3fb68d22dd1e6386833f4790a8eb6}{diffuseStrength}} = 0.5f;
+97     \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_a97dc7516071da727bcbb137e0cb75301}{specularStrength}} = 0.5f;
+98     \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_a5da28beed5c8d278c3615974d464f246}{specularSize}} = 16;
+99     \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_ab22b7d03d1c3cd19214474fb56bdd2ee}{ambientColor}} = glm::vec3(1.0, 1.0, 1.0);
+100     \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_a2247de4ba43b8d0e159ab90edd581363}{diffuseColor}} = glm::vec3(1.0, 1.0, 1.0);
+101     \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_ae03347f7ed935e951726dffba52d0fef}{specularColor}} = glm::vec3(1.0, 1.0, 1.0);
+102 
+103     \textcolor{keyword}{auto} window = (new ::Engine::Components::Window(1024, 768, \textcolor{stringliteral}{"ZPG - Camera"}, 100.0f))
+104         ->Show()
+105         ->Info(std::cout);
+106     \mbox{\hyperlink{classEngine_1_1BaseEngine_a4a1a4c4dae052e66ecc4f326eeed4d33}{Windows}}->Add(\textcolor{stringliteral}{"zpg"}, window);
+107 
+108     \textcolor{keyword}{auto}* vertex = \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Engine::Components::Graphics::Shader}}(
+      GL\_VERTEX\_SHADER, \mbox{\hyperlink{classAssets_ac712d5aca276086a3734e2e9f74cfc6b}{Assets::ShadersVertex}} + \textcolor{stringliteral}{"Light.glsl"});
+109     \textcolor{keyword}{auto}* fragment = \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Engine::Components::Graphics::Shader}}(
+      GL\_FRAGMENT\_SHADER, \mbox{\hyperlink{classAssets_abb1ca75a8a9c7b942232df4aff9bb6c9}{Assets::ShadersFragment}} + \textcolor{stringliteral}{"Light.glsl"});
+110     \mbox{\hyperlink{classEngine_1_1BaseEngine_a2582dee3f73da82bb422b43317b85e3b}{Shaders}}->Add(\textcolor{stringliteral}{"vertex"}, vertex);
+111     \mbox{\hyperlink{classEngine_1_1BaseEngine_a2582dee3f73da82bb422b43317b85e3b}{Shaders}}->Add(\textcolor{stringliteral}{"fragment"}, fragment);
+112 
+113     \mbox{\hyperlink{classEngine_1_1BaseEngine_ae0f86360ea3a384caefe443dd8f88601}{Programs}}->Add(\textcolor{stringliteral}{"basic"}, (\textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Engine::Components::Graphics::Program}}
+      ())->AddShaders(\mbox{\hyperlink{classEngine_1_1BaseEngine_a2582dee3f73da82bb422b43317b85e3b}{Shaders}}));
+114 
+115     \mbox{\hyperlink{classEngine_1_1BaseEngine_afd02af3c2fbe9bb734db014dec06585a}{Scenes}}->Add(\textcolor{stringliteral}{"triangle"}, \textcolor{keyword}{new} Scenes::TriangleScene());
+116     \mbox{\hyperlink{classEngine_1_1BaseEngine_afd02af3c2fbe9bb734db014dec06585a}{Scenes}}->Add(\textcolor{stringliteral}{"sphere"}, \textcolor{keyword}{new} Scenes::SphereScene());
+117 
+118     \mbox{\hyperlink{classEngine_1_1BaseEngine_a134fa082c5a64d62b76ddf926647e7cc}{InputHandlers}}->\mbox{\hyperlink{classGeneric_1_1Collection_a602c700fa46602ce551b5c133793924c}{Add}}(\textcolor{keyword}{new} Input::Handlers::LightingChangeInputHandler());
+119     \mbox{\hyperlink{classEngine_1_1BaseEngine_a134fa082c5a64d62b76ddf926647e7cc}{InputHandlers}}->\mbox{\hyperlink{classGeneric_1_1Collection_a602c700fa46602ce551b5c133793924c}{Add}}(\textcolor{keyword}{new} Input::Handlers::CameraInputHandler());
+120 
+121     \mbox{\hyperlink{classEngine_1_1BaseEngine_afc82c6a00d5a9d4714740fc5eab5db86}{SetActiveScene}}(\mbox{\hyperlink{classEngine_1_1BaseEngine_afd02af3c2fbe9bb734db014dec06585a}{Scenes}}->Get(\textcolor{stringliteral}{"sphere"}));
+122 
+123     \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}{Lights}}->\mbox{\hyperlink{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}{Add}}(\textcolor{stringliteral}{"light"} , \textcolor{keyword}{new} \mbox{\hyperlink{classLight}{Light}}(
+      \mbox{\hyperlink{classEngine_1_1BaseEngine_ae0f86360ea3a384caefe443dd8f88601}{Programs}}->Get(\textcolor{stringliteral}{"basic"}), glm::vec3(0, 0, 0)));
+124 
+125     \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_aea98ff1ced88ee859878b504e9a2a362}{Cameras}}->Add(\textcolor{stringliteral}{"main"}, (\textcolor{keyword}{new} 
+      \mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Engine::Components::Camera}}())
+126         \textcolor{comment}{//->SetPosition(new glm::vec3(2.5f, 2.5f, 2.f))}
+127         ->SetPosition(\textcolor{keyword}{new} glm::vec3(0.f, 0.f, -4.f))
+128         ->SetDirection(\textcolor{keyword}{new} glm::vec3(0.f, 0.f, 0.f))
+129         ->SetUp(\textcolor{keyword}{new} glm::vec3(0.f, 1.f, 0.f)));
+130 
+131     \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_af18bd334fe66952b8d79b8e9e99ab2d8}{BeginLoad}}(\textcolor{keyword}{this});
+132 
+133     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}} != \textcolor{keyword}{nullptr} && \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}} != \textcolor{keyword}{nullptr} && !
+      \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}->empty())
+134         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}& it : *\mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}})
+135         \{
+136             it.second->Material->Values
+137                 ->Add(
+138                     \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine::Components::Graphics::MaterialValue<glm::mat4>}}
+      (
+139                         vertex,
+140                         \textcolor{stringliteral}{"viewMatrix"},
+141                         \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a5d131a78545d9f70496549946503b27a}{Value}})
+142                 ).Add(
+143                     \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine::Components::Graphics::MaterialValue<glm::mat4>}}
+      (
+144                         vertex,
+145                         \textcolor{stringliteral}{"projectionMatrix"},
+146                         \textcolor{keyword}{new} glm::mat4(glm::perspective(glm::radians(90.0f), (\textcolor{keywordtype}{float})window->Width / (\textcolor{keywordtype}{float})
+      window->Height, 0.1f, 100.0f)))
+147                 ).Add(
+148                     \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine::Components::Graphics::MaterialValue<glm::vec3>}}
+      (
+149                         vertex,
+150                         \textcolor{stringliteral}{"cameraPos"},
+151                         \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}}->
+      \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_ab2c3ed9a1321a95db8fca95bc7f4b290}{Position}})
+152                 )
+153                 \textcolor{comment}{// Color setup}
+154                 .Add(
+155                     \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine::Components::Graphics::MaterialValue<glm::vec3>}}
+      (
+156                         fragment,
+157                         \textcolor{stringliteral}{"ambientColor"},
+158                         &\mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_ab22b7d03d1c3cd19214474fb56bdd2ee}{ambientColor}})
+159                 ).Add(
+160                     \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine::Components::Graphics::MaterialValue<glm::vec3>}}
+      (
+161                         fragment,
+162                         \textcolor{stringliteral}{"diffuseColor"},
+163                         &\mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_a2247de4ba43b8d0e159ab90edd581363}{diffuseColor}})
+164                 ).Add(
+165                     \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine::Components::Graphics::MaterialValue<glm::vec3>}}
+      (
+166                         fragment,
+167                         \textcolor{stringliteral}{"specularColor"},
+168                         &\mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_ae03347f7ed935e951726dffba52d0fef}{specularColor}})
+169                 )
+170                 \textcolor{comment}{// Power setup}
+171                 .Add(
+172                     \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine::Components::Graphics::MaterialValue<float>}}
+      (
+173                         fragment,
+174                         \textcolor{stringliteral}{"ambientStrength"},
+175                         &\mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_af97d743158c0e55c754b455e7066e6b0}{ambientStrength}})
+176                 ).Add(
+177                     \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine::Components::Graphics::MaterialValue<float>}}
+      (
+178                         fragment,
+179                         \textcolor{stringliteral}{"diffuseStrength"},
+180                         &\mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_ab2f3fb68d22dd1e6386833f4790a8eb6}{diffuseStrength}})
+181                 ).Add(
+182                     \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine::Components::Graphics::MaterialValue<float>}}
+      (
+183                         fragment,
+184                         \textcolor{stringliteral}{"specularStrength"},
+185                         &\mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_a97dc7516071da727bcbb137e0cb75301}{specularStrength}})
+186                 ).Add(
+187                     \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine::Components::Graphics::MaterialValue<int>}}
+      (
+188                         fragment,
+189                         \textcolor{stringliteral}{"specularSize"},
+190                         &\mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_a5da28beed5c8d278c3615974d464f246}{specularSize}})
+191                 )
+192                 \textcolor{comment}{// Enable}
+193                 .Add(
+194                     \textcolor{keyword}{new} \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine::Components::Graphics::MaterialValue<bool>}}
+      (
+195                         fragment,
+196                         \textcolor{stringliteral}{"useLighting"},
+197                         \textcolor{keyword}{new} \textcolor{keywordtype}{bool}(\textcolor{keyword}{true}))
+198                 );
+199             \textcolor{keywordflow}{if} (\mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}} != \textcolor{keyword}{nullptr} && \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->
+      \mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}{Lights}} != \textcolor{keyword}{nullptr} && !\mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}{Lights}}->empty())
+200                 \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}& light : *\mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}{Lights}})
+201                 \{
+202                     light.second->Use(it.second->Material);
+203                 \}
+204         \}
+205     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}} != \textcolor{keyword}{nullptr} && \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}{Lights}} != \textcolor{keyword}{nullptr} && !
+      \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}{Lights}}->empty())
+206         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}& it : *\mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}{Lights}})
+207         \{
+208             \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}->\mbox{\hyperlink{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}{Add}}(\textcolor{stringliteral}{"light\_"} + it.first, it.second);
+209         \}
+210     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+211 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classApplication_1_1Engines_1_1LightEngine_ad992d8a300f099c247d7ba8dc38883ea_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a7a1c9b833049b3eb61194cab113dfe89}\label{classEngine_1_1BaseEngine_a7a1c9b833049b3eb61194cab113dfe89}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!Init\+Success@{Init\+Success}}
+\index{Init\+Success@{Init\+Success}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{Init\+Success()}{InitSuccess()}}
+{\footnotesize\ttfamily bool Engine\+::\+Base\+Engine\+::\+Init\+Success (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 46 of file Base\+Engine.\+cpp.
+
+
+\begin{DoxyCode}
+47 \{
+48     \textcolor{keywordflow}{return} \mbox{\hyperlink{classEngine_1_1BaseEngine_a79e265845b321c0e9822fb170c564e55}{\_init}};
+49 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_afc82c6a00d5a9d4714740fc5eab5db86}\label{classEngine_1_1BaseEngine_afc82c6a00d5a9d4714740fc5eab5db86}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!Set\+Active\+Scene@{Set\+Active\+Scene}}
+\index{Set\+Active\+Scene@{Set\+Active\+Scene}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{Set\+Active\+Scene()}{SetActiveScene()}}
+{\footnotesize\ttfamily void Engine\+::\+Base\+Engine\+::\+Set\+Active\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Scene}{Components\+::\+Scene}} $\ast$}]{scene = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 132 of file Base\+Engine.\+cpp.
+
+
+
+Referenced by Application\+::\+Engines\+::\+Basic\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Z\+P\+G\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Triangle\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), and Init().
+
+
+\begin{DoxyCode}
+133 \{
+134     \textcolor{keywordflow}{if} (scene == \textcolor{keyword}{nullptr} && !\mbox{\hyperlink{classEngine_1_1BaseEngine_afd02af3c2fbe9bb734db014dec06585a}{Scenes}}->empty())
+135         \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}} = \mbox{\hyperlink{classEngine_1_1BaseEngine_afd02af3c2fbe9bb734db014dec06585a}{Scenes}}->begin()->second;
+136     \textcolor{keywordflow}{else}
+137         \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}} = scene;     
+138 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{classEngine_1_1BaseEngine_afc82c6a00d5a9d4714740fc5eab5db86_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a525fdc7a1da7eecb514ad5763f06be79}\label{classEngine_1_1BaseEngine_a525fdc7a1da7eecb514ad5763f06be79}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!Start@{Start}}
+\index{Start@{Start}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily void Engine\+::\+Base\+Engine\+::\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 126 of file Base\+Engine.\+cpp.
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+127 \{
+128     system(\textcolor{stringliteral}{"cls"});
+129     \mbox{\hyperlink{classEngine_1_1BaseEngine_aad3c237ca657b9f22f76fccf7fc7561f}{UpdateInternal}}();
+130 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classEngine_1_1BaseEngine_a525fdc7a1da7eecb514ad5763f06be79_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classApplication_1_1Engines_1_1LightEngine_a18575df6f8742099ae543e3b23508ee9}\label{classApplication_1_1Engines_1_1LightEngine_a18575df6f8742099ae543e3b23508ee9}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!Update@{Update}}
+\index{Update@{Update}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{Update()}{Update()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Application\+::\+Engines\+::\+Light\+Engine\+::\+Update (\begin{DoxyParamCaption}\item[{\+::\mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Engine\+::\+Components\+::\+Window}} $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Definition at line 213 of file Ligt\+Engine.\+cpp.
+
+
+\begin{DoxyCode}
+214 \{
+215     std::cout << \textcolor{stringliteral}{"PS: "} << \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_a5da28beed5c8d278c3615974d464f246}{specularSize}} << \textcolor{stringliteral}{"\(\backslash\)nSS: "} << 
+      \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_a97dc7516071da727bcbb137e0cb75301}{specularStrength}} << \textcolor{stringliteral}{"\(\backslash\)nDS: "} << \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_ab2f3fb68d22dd1e6386833f4790a8eb6}{diffuseStrength}} << \textcolor{stringliteral}{"\(\backslash\)nAS: "} << 
+      \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_af97d743158c0e55c754b455e7066e6b0}{ambientStrength}} << \textcolor{stringliteral}{"\(\backslash\)nLP: "} << \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}{Lights}}->
+      \mbox{\hyperlink{classGeneric_1_1Dictionary_ab368d54de28e7a3514e1add4bb5b3a36}{First}}()->\mbox{\hyperlink{classLight_a161f4944da390d9bc388091bafd59fe3}{Power}} << std::endl;
+216     
+217     \textcolor{keywordflow}{if} (\mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}} != \textcolor{keyword}{nullptr} && \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}} != \textcolor{keyword}{nullptr} && !
+      \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}}->empty())
+218         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto}& it : *\mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a23481feabaaa56bf5613765db03af4da}{Objects}})
+219         \{
+220             \textcolor{comment}{/*auto \_fi = glm::radians(90.f*(MouseX / window->Height));}
+221 \textcolor{comment}{            auto \_psi = glm::radians(90.f*(MouseY / window->Width));}
+222 \textcolor{comment}{}
+223 \textcolor{comment}{            std::cout << "FI:  " << \_fi << "\(\backslash\)nPSI: " << \_psi << "\(\backslash\)nObject: " << it.first << std::endl;}
+224 \textcolor{comment}{            */}
+225             \textcolor{comment}{//ActiveScene->Cameras->First()->SetDirection(new glm::vec3(cos(\_fi), sin(\_fi), cos(\_psi)));}
+226 
+227             \textcolor{keyword}{auto} \textcolor{keywordtype}{object} = it.second;
+228             \textcolor{keywordtype}{object}->Draw();
+229             
+230             \mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_ad729a37b02875c824d6bd2c8630a4520}{angle}} += 0.1f;
+231         \}
+232 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a01c23c2073f08939a660f3b7a866852c}\label{classEngine_1_1BaseEngine_a01c23c2073f08939a660f3b7a866852c}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!Update@{Update}}
+\index{Update@{Update}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{Update()}{Update()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Engine\+::\+Base\+Engine\+::\+Update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Components\+::\+Window}} $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 112 of file Base\+Engine.\+cpp.
+
+
+\begin{DoxyCode}
+113 \{
+114 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_aace6be2a42d12b64fbd35f1acdb08408}\label{classEngine_1_1BaseEngine_aace6be2a42d12b64fbd35f1acdb08408}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!Update\+Begin@{Update\+Begin}}
+\index{Update\+Begin@{Update\+Begin}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{Update\+Begin()}{UpdateBegin()}}
+{\footnotesize\ttfamily void Engine\+::\+Base\+Engine\+::\+Update\+Begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Components\+::\+Window}} $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 57 of file Base\+Engine.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Window\+::\+Get().
+
+
+\begin{DoxyCode}
+58 \{
+59     \textcolor{comment}{// Scene}
+60     \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_af18bd334fe66952b8d79b8e9e99ab2d8}{BeginLoad}}(\textcolor{keyword}{this});
+61 
+62     \textcolor{comment}{// Buffers}
+63     glEnable(GL\_DEPTH\_TEST);
+64     glDepthFunc(GL\_LESS);
+65     glClear(GL\_COLOR\_BUFFER\_BIT | GL\_DEPTH\_BUFFER\_BIT);
+66 
+67     \textcolor{comment}{// Input}
+68     \textcolor{keywordtype}{short} mouseKeysActive = 0;
+69     glfwGetCursorPos(window->Get(), &\mbox{\hyperlink{classEngine_1_1BaseEngine_a5fe085152ebe93346900407f6b41a034}{MouseX}}, &\mbox{\hyperlink{classEngine_1_1BaseEngine_a143c9c32dbbdc70bf1546ffe275bf384}{MouseY}});
+70     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{short} i = 0; i < 8; i++)
+71     \{
+72         \textcolor{keyword}{const} \textcolor{keywordtype}{int} state = glfwGetMouseButton(window->Get(), i);
+73         \textcolor{keyword}{auto} value = \mbox{\hyperlink{classEngine_1_1BaseEngine_a3ee2bdddb66d45b8c808ffd937ba9c50}{MouseKeys}}[i];
+74         \textcolor{comment}{// flip state}
+75         \textcolor{keywordflow}{if} (state == GLFW\_PRESS && !value)
+76             \mbox{\hyperlink{classEngine_1_1BaseEngine_a3ee2bdddb66d45b8c808ffd937ba9c50}{MouseKeys}}.\mbox{\hyperlink{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}{Add}}(i, \textcolor{keyword}{true});
+77         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (state == GLFW\_RELEASE && value)
+78             \mbox{\hyperlink{classEngine_1_1BaseEngine_a3ee2bdddb66d45b8c808ffd937ba9c50}{MouseKeys}}.\mbox{\hyperlink{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}{Add}}(i, \textcolor{keyword}{false});
+79         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classEngine_1_1BaseEngine_a3ee2bdddb66d45b8c808ffd937ba9c50}{MouseKeys}}[i])
+80             mouseKeysActive++;
+81     \}
+82     \textcolor{keywordtype}{short} keysActive = 0;
+83     SetConsoleCursorPosition(GetStdHandle(STD\_OUTPUT\_HANDLE), \{ 40, keysActive \});
+84     fprintf(\mbox{\hyperlink{classEngine_1_1BaseEngine_a26fd54a1ee2733f9c654af5afcfa96cf}{\_errorStream}}, \textcolor{stringliteral}{"                           "});
+85     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{short} i = 1; i < 512; i++)
+86     \{
+87         \textcolor{keyword}{const} \textcolor{keywordtype}{int} state = glfwGetKey(window->Get(), i);
+88         \textcolor{keyword}{auto} value = \mbox{\hyperlink{classEngine_1_1BaseEngine_a65321a97e83f0a6ee90df3efac2d3307}{Keys}}[i];
+89         \textcolor{comment}{// flip state}
+90         \textcolor{keywordflow}{if} (state == GLFW\_PRESS && !value)
+91             \mbox{\hyperlink{classEngine_1_1BaseEngine_a65321a97e83f0a6ee90df3efac2d3307}{Keys}}.\mbox{\hyperlink{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}{Add}}(i, \textcolor{keyword}{true});
+92         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (state == GLFW\_RELEASE && value)
+93             \mbox{\hyperlink{classEngine_1_1BaseEngine_a65321a97e83f0a6ee90df3efac2d3307}{Keys}}.\mbox{\hyperlink{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}{Add}}(i, \textcolor{keyword}{false});
+94         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classEngine_1_1BaseEngine_a65321a97e83f0a6ee90df3efac2d3307}{Keys}}[i])
+95             keysActive++;
+96     \}
+97     \textcolor{keywordtype}{bool} handleKeys = \textcolor{keyword}{true},
+98          handleMouse = \textcolor{keyword}{true};
+99     \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} handler : *\mbox{\hyperlink{classEngine_1_1BaseEngine_a134fa082c5a64d62b76ddf926647e7cc}{InputHandlers}})
+100     \{
+101         \textcolor{keywordflow}{if}(handleKeys)
+102             handleKeys = handler->HandleKeys(\textcolor{keyword}{this}, window, \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}, 
+      \mbox{\hyperlink{classEngine_1_1BaseEngine_a65321a97e83f0a6ee90df3efac2d3307}{Keys}}, keysActive);
+103         \textcolor{keywordflow}{if}(handleMouse)
+104             handleMouse = handler->HandleMouse(\textcolor{keyword}{this}, window, \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}, 
+      \mbox{\hyperlink{classEngine_1_1BaseEngine_a5fe085152ebe93346900407f6b41a034}{MouseX}}, \mbox{\hyperlink{classEngine_1_1BaseEngine_a143c9c32dbbdc70bf1546ffe275bf384}{MouseY}}, \mbox{\hyperlink{classEngine_1_1BaseEngine_a3ee2bdddb66d45b8c808ffd937ba9c50}{MouseKeys}}, mouseKeysActive);
+105         \textcolor{keywordflow}{if}(!handleKeys && !handleMouse)
+106             \textcolor{keywordflow}{break};
+107     \}
+108 
+109     SetConsoleCursorPosition(GetStdHandle(STD\_OUTPUT\_HANDLE), \{ 0,0 \});
+110 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classEngine_1_1BaseEngine_aace6be2a42d12b64fbd35f1acdb08408_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a7c07c98e583df042a0eb01e0ddec85a1}\label{classEngine_1_1BaseEngine_a7c07c98e583df042a0eb01e0ddec85a1}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!Update\+End@{Update\+End}}
+\index{Update\+End@{Update\+End}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{Update\+End()}{UpdateEnd()}}
+{\footnotesize\ttfamily void Engine\+::\+Base\+Engine\+::\+Update\+End (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Components\+::\+Window}} $\ast$}]{window }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 116 of file Base\+Engine.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Window\+::\+Get().
+
+
+\begin{DoxyCode}
+117 \{
+118     \textcolor{comment}{// update other events like input handling}
+119     glfwPollEvents();
+120     \textcolor{comment}{// put the stuff we’ve been drawing onto the display}
+121     glfwSwapBuffers(window->Get());
+122 
+123     \mbox{\hyperlink{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}{ActiveScene}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_abd8fcdcac52dbce6a0a18de3860ab087}{FrameUpdate}}(\textcolor{keyword}{this});
+124 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classEngine_1_1BaseEngine_a7c07c98e583df042a0eb01e0ddec85a1_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}\label{classEngine_1_1BaseEngine_adb3dbc839da9d821e08b18d8a221698d}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!Active\+Scene@{Active\+Scene}}
+\index{Active\+Scene@{Active\+Scene}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{Active\+Scene}{ActiveScene}}
+{\footnotesize\ttfamily Components\+::\+Scene$\ast$ Engine\+::\+Base\+Engine\+::\+Active\+Scene\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 34 of file Base\+Engine.\+h.
+
+
+
+Referenced by Engine\+::\+Base\+Engine\+::\+Base\+Engine(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), and Init().
+
+\mbox{\Hypertarget{classApplication_1_1Engines_1_1LightEngine_ab22b7d03d1c3cd19214474fb56bdd2ee}\label{classApplication_1_1Engines_1_1LightEngine_ab22b7d03d1c3cd19214474fb56bdd2ee}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!ambient\+Color@{ambient\+Color}}
+\index{ambient\+Color@{ambient\+Color}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{ambient\+Color}{ambientColor}}
+{\footnotesize\ttfamily glm\+::vec3 Application\+::\+Engines\+::\+Light\+Engine\+::ambient\+Color}
+
+
+
+Definition at line 17 of file Ligt\+Engine.\+h.
+
+
+
+Referenced by Init().
+
+\mbox{\Hypertarget{classApplication_1_1Engines_1_1LightEngine_af97d743158c0e55c754b455e7066e6b0}\label{classApplication_1_1Engines_1_1LightEngine_af97d743158c0e55c754b455e7066e6b0}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!ambient\+Strength@{ambient\+Strength}}
+\index{ambient\+Strength@{ambient\+Strength}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{ambient\+Strength}{ambientStrength}}
+{\footnotesize\ttfamily float Application\+::\+Engines\+::\+Light\+Engine\+::ambient\+Strength}
+
+
+
+Definition at line 14 of file Ligt\+Engine.\+h.
+
+
+
+Referenced by Init().
+
+\mbox{\Hypertarget{classApplication_1_1Engines_1_1LightEngine_ad729a37b02875c824d6bd2c8630a4520}\label{classApplication_1_1Engines_1_1LightEngine_ad729a37b02875c824d6bd2c8630a4520}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!angle@{angle}}
+\index{angle@{angle}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{angle}{angle}}
+{\footnotesize\ttfamily float Application\+::\+Engines\+::\+Light\+Engine\+::angle\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 23 of file Ligt\+Engine.\+h.
+
+
+
+Referenced by Init().
+
+\mbox{\Hypertarget{classApplication_1_1Engines_1_1LightEngine_a2247de4ba43b8d0e159ab90edd581363}\label{classApplication_1_1Engines_1_1LightEngine_a2247de4ba43b8d0e159ab90edd581363}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!diffuse\+Color@{diffuse\+Color}}
+\index{diffuse\+Color@{diffuse\+Color}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{diffuse\+Color}{diffuseColor}}
+{\footnotesize\ttfamily glm\+::vec3 Application\+::\+Engines\+::\+Light\+Engine\+::diffuse\+Color}
+
+
+
+Definition at line 18 of file Ligt\+Engine.\+h.
+
+
+
+Referenced by Init().
+
+\mbox{\Hypertarget{classApplication_1_1Engines_1_1LightEngine_ab2f3fb68d22dd1e6386833f4790a8eb6}\label{classApplication_1_1Engines_1_1LightEngine_ab2f3fb68d22dd1e6386833f4790a8eb6}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!diffuse\+Strength@{diffuse\+Strength}}
+\index{diffuse\+Strength@{diffuse\+Strength}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{diffuse\+Strength}{diffuseStrength}}
+{\footnotesize\ttfamily float Application\+::\+Engines\+::\+Light\+Engine\+::diffuse\+Strength}
+
+
+
+Definition at line 15 of file Ligt\+Engine.\+h.
+
+
+
+Referenced by Init().
+
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a134fa082c5a64d62b76ddf926647e7cc}\label{classEngine_1_1BaseEngine_a134fa082c5a64d62b76ddf926647e7cc}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!Input\+Handlers@{Input\+Handlers}}
+\index{Input\+Handlers@{Input\+Handlers}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{Input\+Handlers}{InputHandlers}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Collection}{Generic\+::\+Collection}}$<$Components\+::\+I\+Input\+Handler$\ast$$>$$\ast$ Engine\+::\+Base\+Engine\+::\+Input\+Handlers\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 31 of file Base\+Engine.\+h.
+
+
+
+Referenced by Engine\+::\+Base\+Engine\+::\+Base\+Engine(), and Init().
+
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a65321a97e83f0a6ee90df3efac2d3307}\label{classEngine_1_1BaseEngine_a65321a97e83f0a6ee90df3efac2d3307}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!Keys@{Keys}}
+\index{Keys@{Keys}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{Keys}{Keys}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$short, bool$>$ Engine\+::\+Base\+Engine\+::\+Keys\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 32 of file Base\+Engine.\+h.
+
+
+
+Referenced by Engine\+::\+Base\+Engine\+::\+Base\+Engine().
+
+\mbox{\Hypertarget{classApplication_1_1Engines_1_1LightEngine_ae9cca787b2b0d5d4dbcc3c63afa196e1}\label{classApplication_1_1Engines_1_1LightEngine_ae9cca787b2b0d5d4dbcc3c63afa196e1}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!M@{M}}
+\index{M@{M}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{M}{M}}
+{\footnotesize\ttfamily glm\+::mat4 Application\+::\+Engines\+::\+Light\+Engine\+::M\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 22 of file Ligt\+Engine.\+h.
+
+
+
+Referenced by Init().
+
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a3ee2bdddb66d45b8c808ffd937ba9c50}\label{classEngine_1_1BaseEngine_a3ee2bdddb66d45b8c808ffd937ba9c50}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!Mouse\+Keys@{Mouse\+Keys}}
+\index{Mouse\+Keys@{Mouse\+Keys}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{Mouse\+Keys}{MouseKeys}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$short, bool$>$ Engine\+::\+Base\+Engine\+::\+Mouse\+Keys\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 33 of file Base\+Engine.\+h.
+
+
+
+Referenced by Engine\+::\+Base\+Engine\+::\+Base\+Engine().
+
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a5fe085152ebe93346900407f6b41a034}\label{classEngine_1_1BaseEngine_a5fe085152ebe93346900407f6b41a034}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!MouseX@{MouseX}}
+\index{MouseX@{MouseX}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{MouseX}{MouseX}}
+{\footnotesize\ttfamily double Engine\+::\+Base\+Engine\+::\+MouseX\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 35 of file Base\+Engine.\+h.
+
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a143c9c32dbbdc70bf1546ffe275bf384}\label{classEngine_1_1BaseEngine_a143c9c32dbbdc70bf1546ffe275bf384}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!MouseY@{MouseY}}
+\index{MouseY@{MouseY}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{MouseY}{MouseY}}
+{\footnotesize\ttfamily double Engine\+::\+Base\+Engine\+::\+MouseY\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 36 of file Base\+Engine.\+h.
+
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_ae0f86360ea3a384caefe443dd8f88601}\label{classEngine_1_1BaseEngine_ae0f86360ea3a384caefe443dd8f88601}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!Programs@{Programs}}
+\index{Programs@{Programs}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{Programs}{Programs}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$std\+::string, Components\+::\+Graphics\+::\+Program$\ast$$>$$\ast$ Engine\+::\+Base\+Engine\+::\+Programs\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 28 of file Base\+Engine.\+h.
+
+
+
+Referenced by Engine\+::\+Base\+Engine\+::\+Base\+Engine(), Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse(), Application\+::\+Engines\+::\+Basic\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Z\+P\+G\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Triangle\+Engine\+::\+Init(), Init(), Application\+::\+Scenes\+::\+Triangle\+Scene\+::\+Load(), and Application\+::\+Scenes\+::\+Sphere\+Scene\+::\+Load().
+
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_afd02af3c2fbe9bb734db014dec06585a}\label{classEngine_1_1BaseEngine_afd02af3c2fbe9bb734db014dec06585a}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!Scenes@{Scenes}}
+\index{Scenes@{Scenes}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{Scenes}{Scenes}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$std\+::string, Components\+::\+Scene$\ast$$>$$\ast$ Engine\+::\+Base\+Engine\+::\+Scenes\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 30 of file Base\+Engine.\+h.
+
+
+
+Referenced by Engine\+::\+Base\+Engine\+::\+Base\+Engine(), Application\+::\+Engines\+::\+Z\+P\+G\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Triangle\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Basic\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), and Init().
+
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a2582dee3f73da82bb422b43317b85e3b}\label{classEngine_1_1BaseEngine_a2582dee3f73da82bb422b43317b85e3b}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!Shaders@{Shaders}}
+\index{Shaders@{Shaders}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{Shaders}{Shaders}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$std\+::string, Components\+::\+Graphics\+::\+Shader$\ast$$>$$\ast$ Engine\+::\+Base\+Engine\+::\+Shaders\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 29 of file Base\+Engine.\+h.
+
+
+
+Referenced by Engine\+::\+Base\+Engine\+::\+Base\+Engine(), Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse(), Application\+::\+Engines\+::\+Triangle\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Z\+P\+G\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Basic\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), and Init().
+
+\mbox{\Hypertarget{classApplication_1_1Engines_1_1LightEngine_ae03347f7ed935e951726dffba52d0fef}\label{classApplication_1_1Engines_1_1LightEngine_ae03347f7ed935e951726dffba52d0fef}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!specular\+Color@{specular\+Color}}
+\index{specular\+Color@{specular\+Color}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{specular\+Color}{specularColor}}
+{\footnotesize\ttfamily glm\+::vec3 Application\+::\+Engines\+::\+Light\+Engine\+::specular\+Color}
+
+
+
+Definition at line 19 of file Ligt\+Engine.\+h.
+
+
+
+Referenced by Init().
+
+\mbox{\Hypertarget{classApplication_1_1Engines_1_1LightEngine_a5da28beed5c8d278c3615974d464f246}\label{classApplication_1_1Engines_1_1LightEngine_a5da28beed5c8d278c3615974d464f246}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!specular\+Size@{specular\+Size}}
+\index{specular\+Size@{specular\+Size}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{specular\+Size}{specularSize}}
+{\footnotesize\ttfamily int Application\+::\+Engines\+::\+Light\+Engine\+::specular\+Size}
+
+
+
+Definition at line 20 of file Ligt\+Engine.\+h.
+
+
+
+Referenced by Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler\+::\+Handle\+Keys(), and Init().
+
+\mbox{\Hypertarget{classApplication_1_1Engines_1_1LightEngine_a97dc7516071da727bcbb137e0cb75301}\label{classApplication_1_1Engines_1_1LightEngine_a97dc7516071da727bcbb137e0cb75301}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!specular\+Strength@{specular\+Strength}}
+\index{specular\+Strength@{specular\+Strength}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{specular\+Strength}{specularStrength}}
+{\footnotesize\ttfamily float Application\+::\+Engines\+::\+Light\+Engine\+::specular\+Strength}
+
+
+
+Definition at line 16 of file Ligt\+Engine.\+h.
+
+
+
+Referenced by Init().
+
+\mbox{\Hypertarget{classEngine_1_1BaseEngine_a4a1a4c4dae052e66ecc4f326eeed4d33}\label{classEngine_1_1BaseEngine_a4a1a4c4dae052e66ecc4f326eeed4d33}} 
+\index{Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}!Windows@{Windows}}
+\index{Windows@{Windows}!Application\+::\+Engines\+::\+Light\+Engine@{Application\+::\+Engines\+::\+Light\+Engine}}
+\subsubsection{\texorpdfstring{Windows}{Windows}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$std\+::string, Components\+::\+Window$\ast$$>$$\ast$ Engine\+::\+Base\+Engine\+::\+Windows\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 27 of file Base\+Engine.\+h.
+
+
+
+Referenced by Engine\+::\+Base\+Engine\+::\+Base\+Engine(), Application\+::\+Engines\+::\+Z\+P\+G\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Triangle\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Basic\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), and Init().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{LigtEngine_8h}{Ligt\+Engine.\+h}}\item 
+Z\+P\+G/\mbox{\hyperlink{LigtEngine_8cpp}{Ligt\+Engine.\+cpp}}\end{DoxyCompactItemize}

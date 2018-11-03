@@ -1,0 +1,182 @@
+.TH "Application::Input::Handlers::CameraInputHandler" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Application::Input::Handlers::CameraInputHandler
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <CameraInputHandler\&.h>\fP
+.PP
+Inherits \fBIInputHandler\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCameraInputHandler\fP ()"
+.br
+.ti -1c
+.RI "\fB~CameraInputHandler\fP ()"
+.br
+.ti -1c
+.RI "bool \fBHandleKeys\fP (\fBEngine::BaseEngine\fP *engine, \fBEngine::Components::Window\fP *window, \fBEngine::Components::Scene\fP *scene, \fBGeneric::Dictionary\fP< short, bool > &keys, int keysActive) override"
+.br
+.ti -1c
+.RI "bool \fBHandleMouse\fP (\fBEngine::BaseEngine\fP *engine, \fBEngine::Components::Window\fP *window, \fBEngine::Components::Scene\fP *scene, double x, double y, \fBGeneric::Dictionary\fP< short, bool > &keys, int keysActive) override"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "glm::vec2 \fB_lastMousePosition\fP"
+.br
+.ti -1c
+.RI "float \fB_pitch\fP"
+.br
+.ti -1c
+.RI "float \fB_yaw\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 11 of file CameraInputHandler\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Application::Input::Handlers::CameraInputHandler::CameraInputHandler ()"
+
+.PP
+Definition at line 15 of file CameraInputHandler\&.cpp\&.
+.PP
+References _lastMousePosition, _pitch, and _yaw\&.
+.PP
+.nf
+16 {
+17     _lastMousePosition = glm::vec2(-1, -1);
+18     _yaw = 0\&.f;
+19     _pitch = 0\&.f;
+20 }
+.fi
+.SS "Application::Input::Handlers::CameraInputHandler::~CameraInputHandler ()\fC [default]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Application::Input::Handlers::CameraInputHandler::HandleKeys (\fBEngine::BaseEngine\fP * engine, \fBEngine::Components::Window\fP * window, \fBEngine::Components::Scene\fP * scene, \fBGeneric::Dictionary\fP< short, bool > & keys, int keysActive)\fC [override]\fP"
+
+.PP
+Definition at line 25 of file CameraInputHandler\&.cpp\&.
+.PP
+References Engine::Components::Scene::ActiveCamera, Engine::Components::Camera::Direction, Engine::Components::Camera::Front, Engine::Components::Camera::Position, Engine::Components::Camera::Right, Engine::Components::Camera::Up, and Engine::Components::Camera::Update()\&.
+.PP
+.nf
+26 {
+27     const float speed = 0\&.2f;
+28     glm::vec3 change = glm::vec3(0);
+29 
+30     if (keys['W'])
+31          change -= *(scene->ActiveCamera->Front) * speed;
+32     if (keys['S'])
+33         change += *(scene->ActiveCamera->Front) * speed;
+34     if (keys['A'])
+35         change -= *(scene->ActiveCamera->Right) * speed;
+36     if (keys['D'])
+37         change += *(scene->ActiveCamera->Right) * speed;
+38     if (keys['E'])
+39         change -= *(scene->ActiveCamera->Up) * speed;
+40     if (keys['Q'])
+41         change += *(scene->ActiveCamera->Up) * speed;
+42 
+43     if (change != glm::vec3(0))
+44     {
+45         *(scene->ActiveCamera->Position) += change;
+46         *(scene->ActiveCamera->Direction) += change;
+47         scene->ActiveCamera->Update();
+48     }
+49     return true;
+50 }
+.fi
+.SS "bool Application::Input::Handlers::CameraInputHandler::HandleMouse (\fBEngine::BaseEngine\fP * engine, \fBEngine::Components::Window\fP * window, \fBEngine::Components::Scene\fP * scene, double x, double y, \fBGeneric::Dictionary\fP< short, bool > & keys, int keysActive)\fC [override]\fP"
+
+.PP
+Definition at line 53 of file CameraInputHandler\&.cpp\&.
+.PP
+References Engine::Components::Scene::ActiveCamera, Generic::Dictionary< TKey, TValue >::Add(), Engine::Components::Camera::Direction, Generic::Dictionary< TKey, TValue >::Get(), Engine::Components::Window::Height, MK_R, Engine::Components::Scene::Objects, Engine::BaseEngine::Programs, Engine::Components::Camera::Right, Engine::BaseEngine::Shaders, sphere, Engine::Components::Camera::Up, Engine::Components::Camera::Update(), Engine::Components::Graphics::Material::Values, and Engine::Components::Window::Width\&.
+.PP
+.nf
+54 {
+55     if (_lastMousePosition\&.x < 0)
+56     {
+57         _lastMousePosition\&.x = x;
+58         _lastMousePosition\&.y = y;
+59     }
+60     // Allow Move mouse without camera change
+61     if (keys[MK_R])
+62     {
+63         auto fow = glm::radians(90\&.f);
+64         const float sensitivity = 10\&.f;
+65 
+66         auto diff = glm::vec2(x, y) - _lastMousePosition;
+67         diff\&.x = diff\&.x * sensitivity * fow / static_cast<float>(window->Width);
+68         diff\&.y = diff\&.y * sensitivity * fow / static_cast<float>(window->Height);
+69 
+70         fprintf(stderr, "Diff: %f, %f\t", diff\&.x, diff\&.y);
+71 
+72         if (diff\&.x != 0 || diff\&.y != 0)
+73         {
+74             *(scene->ActiveCamera->Direction) += *(scene->ActiveCamera->Right) * diff\&.x;
+75             *(scene->ActiveCamera->Direction) -= *(scene->ActiveCamera->Up) * diff\&.y;
+76             scene->ActiveCamera->Update();
+77         }
+78     }
+79 
+80     // Draw look point
+81     auto name = "target";
+82     auto obj = scene->Objects->Get(name);
+83     if (obj == nullptr)
+84     {
+85 
+86         auto mat = new Engine::Components::Graphics::Material(engine->Programs->Get("basic"));
+87         mat->Values->Add(new Engine::Components::Graphics::MaterialValue<glm::vec4>(
+88             engine->Shaders->Get("fragment"), "color", new glm::vec4(255\&.f, 0\&.f, 0\&.f, 1\&.f)
+89         ))\&.Add(new Engine::Components::Graphics::MaterialValue<bool>(
+90             engine->Shaders->Get("fragment"), "useLighting", new bool(false)
+91         ));
+92         const auto object = new Engine::Objects::Sphere(mat, sphere, 17280, 3);
+93         *(object->ModelMatrix) = glm::scale(glm::translate(glm::mat4(1\&.f), *scene->ActiveCamera->Direction), glm::vec3(0\&.1f, 0\&.1f, 0\&.1f));
+94         scene->Objects->Add(name, object);
+95     }
+96     else
+97     {
+98         *(obj->ModelMatrix) = glm::scale(glm::translate(glm::mat4(1\&.f), *scene->ActiveCamera->Direction), glm::vec3(0\&.1f, 0\&.1f, 0\&.1f));
+99     }
+100 
+101     _lastMousePosition\&.x = x;
+102     _lastMousePosition\&.y = y;
+103     return true;
+104 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "glm::vec2 Application::Input::Handlers::CameraInputHandler::_lastMousePosition\fC [private]\fP"
+
+.PP
+Definition at line 14 of file CameraInputHandler\&.h\&.
+.PP
+Referenced by CameraInputHandler()\&.
+.SS "float Application::Input::Handlers::CameraInputHandler::_pitch\fC [private]\fP"
+
+.PP
+Definition at line 15 of file CameraInputHandler\&.h\&.
+.PP
+Referenced by CameraInputHandler()\&.
+.SS "float Application::Input::Handlers::CameraInputHandler::_yaw\fC [private]\fP"
+
+.PP
+Definition at line 16 of file CameraInputHandler\&.h\&.
+.PP
+Referenced by CameraInputHandler()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

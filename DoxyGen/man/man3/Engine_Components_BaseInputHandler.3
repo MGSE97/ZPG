@@ -1,0 +1,68 @@
+.TH "Engine::Components::BaseInputHandler" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Engine::Components::BaseInputHandler
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <BaseInputHandler\&.h>\fP
+.PP
+Inherits \fBIInputHandler\fP\&.
+.PP
+Inherited by \fBApplication::Input::Handlers::LightingChangeInputHandler\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBaseInputHandler\fP ()=default"
+.br
+.ti -1c
+.RI "\fB~BaseInputHandler\fP ()=default"
+.br
+.ti -1c
+.RI "virtual bool \fBHandleKeys\fP (\fBBaseEngine\fP *engine, \fBWindow\fP *window, \fBScene\fP *scene, \fBGeneric::Dictionary\fP< short, bool > &keys, int keysActive) override"
+.br
+.ti -1c
+.RI "virtual bool \fBHandleMouse\fP (\fBBaseEngine\fP *engine, \fBWindow\fP *window, \fBScene\fP *scene, double x, double y, \fBGeneric::Dictionary\fP< short, bool > &keys, int keysActive) override"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 8 of file BaseInputHandler\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Engine::Components::BaseInputHandler::BaseInputHandler ()\fC [default]\fP"
+
+.SS "Engine::Components::BaseInputHandler::~BaseInputHandler ()\fC [default]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Engine::Components::BaseInputHandler::HandleKeys (\fBBaseEngine\fP * engine, \fBWindow\fP * window, \fBScene\fP * scene, \fBGeneric::Dictionary\fP< short, bool > & keys, int keysActive)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBApplication::Input::Handlers::LightingChangeInputHandler\fP\&.
+.PP
+Definition at line 3 of file BaseInputHandler\&.cpp\&.
+.PP
+.nf
+4 {
+5     return true;
+6 }
+.fi
+.SS "bool Engine::Components::BaseInputHandler::HandleMouse (\fBBaseEngine\fP * engine, \fBWindow\fP * window, \fBScene\fP * scene, double x, double y, \fBGeneric::Dictionary\fP< short, bool > & keys, int keysActive)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 8 of file BaseInputHandler\&.cpp\&.
+.PP
+.nf
+9 {
+10     return true;
+11 }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

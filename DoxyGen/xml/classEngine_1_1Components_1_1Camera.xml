@@ -1,0 +1,427 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classEngine_1_1Components_1_1Camera" kind="class" language="C++" prot="public">
+    <compoundname>Engine::Components::Camera</compoundname>
+    <basecompoundref refid="classObservable" prot="public" virt="non-virtual">Observable&lt; Camera &gt;</basecompoundref>
+    <includes refid="Camera_8h" local="no">Camera.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Camera_1a23619a66046258f1158313f0c790ffa2" prot="public" static="no" mutable="no">
+        <type>glm::vec3 *</type>
+        <definition>glm::vec3* Engine::Components::Camera::Direction</definition>
+        <argsstring></argsstring>
+        <name>Direction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Camera.h" line="18" column="1" bodyfile="ZPG/Camera.h" bodystart="18" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Camera_1ae8ad7f42b61412322436eadfa5261d5e" compoundref="Camera_8cpp" startline="8" endline="16">Camera</referencedby>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a149884ea2dc9deea39d3dcd10dfa74b1" compoundref="CameraInputHandler_8cpp" startline="25" endline="50">Application::Input::Handlers::CameraInputHandler::HandleKeys</referencedby>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1ab06fa94ce5265dc06abb645ea29850bd" compoundref="CameraInputHandler_8cpp" startline="53" endline="104">Application::Input::Handlers::CameraInputHandler::HandleMouse</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Camera_1a9d8692aa379c9ab00f69df10d1d3651b" prot="public" static="no" mutable="no">
+        <type>glm::vec3 *</type>
+        <definition>glm::vec3* Engine::Components::Camera::Front</definition>
+        <argsstring></argsstring>
+        <name>Front</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Camera.h" line="21" column="1" bodyfile="ZPG/Camera.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Camera_1ae8ad7f42b61412322436eadfa5261d5e" compoundref="Camera_8cpp" startline="8" endline="16">Camera</referencedby>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a149884ea2dc9deea39d3dcd10dfa74b1" compoundref="CameraInputHandler_8cpp" startline="25" endline="50">Application::Input::Handlers::CameraInputHandler::HandleKeys</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Camera_1ab2c3ed9a1321a95db8fca95bc7f4b290" prot="public" static="no" mutable="no">
+        <type>glm::vec3 *</type>
+        <definition>glm::vec3* Engine::Components::Camera::Position</definition>
+        <argsstring></argsstring>
+        <name>Position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Camera.h" line="17" column="1" bodyfile="ZPG/Camera.h" bodystart="17" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Camera_1ae8ad7f42b61412322436eadfa5261d5e" compoundref="Camera_8cpp" startline="8" endline="16">Camera</referencedby>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a149884ea2dc9deea39d3dcd10dfa74b1" compoundref="CameraInputHandler_8cpp" startline="25" endline="50">Application::Input::Handlers::CameraInputHandler::HandleKeys</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1LightEngine_1ad992d8a300f099c247d7ba8dc38883ea" compoundref="LigtEngine_8cpp" startline="11" endline="211">Application::Engines::LightEngine::Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Camera_1a10b30289c89694d13918a979bade13d9" prot="public" static="no" mutable="no">
+        <type>glm::vec3 *</type>
+        <definition>glm::vec3* Engine::Components::Camera::Right</definition>
+        <argsstring></argsstring>
+        <name>Right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Camera.h" line="20" column="1" bodyfile="ZPG/Camera.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Camera_1ae8ad7f42b61412322436eadfa5261d5e" compoundref="Camera_8cpp" startline="8" endline="16">Camera</referencedby>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a149884ea2dc9deea39d3dcd10dfa74b1" compoundref="CameraInputHandler_8cpp" startline="25" endline="50">Application::Input::Handlers::CameraInputHandler::HandleKeys</referencedby>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1ab06fa94ce5265dc06abb645ea29850bd" compoundref="CameraInputHandler_8cpp" startline="53" endline="104">Application::Input::Handlers::CameraInputHandler::HandleMouse</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Camera_1a84a4199b9c60579a0f148b9980e05200" prot="public" static="no" mutable="no">
+        <type>glm::vec3 *</type>
+        <definition>glm::vec3* Engine::Components::Camera::Up</definition>
+        <argsstring></argsstring>
+        <name>Up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Camera.h" line="19" column="1" bodyfile="ZPG/Camera.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Camera_1ae8ad7f42b61412322436eadfa5261d5e" compoundref="Camera_8cpp" startline="8" endline="16">Camera</referencedby>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a149884ea2dc9deea39d3dcd10dfa74b1" compoundref="CameraInputHandler_8cpp" startline="25" endline="50">Application::Input::Handlers::CameraInputHandler::HandleKeys</referencedby>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1ab06fa94ce5265dc06abb645ea29850bd" compoundref="CameraInputHandler_8cpp" startline="53" endline="104">Application::Input::Handlers::CameraInputHandler::HandleMouse</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Camera_1a5d131a78545d9f70496549946503b27a" prot="public" static="no" mutable="no">
+        <type>glm::mat4 *</type>
+        <definition>glm::mat4* Engine::Components::Camera::Value</definition>
+        <argsstring></argsstring>
+        <name>Value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Camera.h" line="29" column="1" bodyfile="ZPG/Camera.h" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Camera_1ae8ad7f42b61412322436eadfa5261d5e" compoundref="Camera_8cpp" startline="8" endline="16">Camera</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1LightEngine_1ad992d8a300f099c247d7ba8dc38883ea" compoundref="LigtEngine_8cpp" startline="11" endline="211">Application::Engines::LightEngine::Init</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Camera_1ae8ad7f42b61412322436eadfa5261d5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Components::Camera::Camera</definition>
+        <argsstring>()</argsstring>
+        <name>Camera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Camera.h" line="15" column="1" bodyfile="ZPG/Camera.cpp" bodystart="8" bodyend="16"/>
+        <references refid="classEngine_1_1Components_1_1Camera_1a23619a66046258f1158313f0c790ffa2" compoundref="Camera_8h" startline="18">Direction</references>
+        <references refid="classEngine_1_1Components_1_1Camera_1a9d8692aa379c9ab00f69df10d1d3651b" compoundref="Camera_8h" startline="21">Front</references>
+        <references refid="classEngine_1_1Components_1_1Camera_1ad24b41321813d1757cb6dd0db52e34dd" compoundref="Camera_8cpp" startline="24" endline="27">Get</references>
+        <references refid="classEngine_1_1Components_1_1Camera_1ab2c3ed9a1321a95db8fca95bc7f4b290" compoundref="Camera_8h" startline="17">Position</references>
+        <references refid="classEngine_1_1Components_1_1Camera_1a10b30289c89694d13918a979bade13d9" compoundref="Camera_8h" startline="20">Right</references>
+        <references refid="classEngine_1_1Components_1_1Camera_1a84a4199b9c60579a0f148b9980e05200" compoundref="Camera_8h" startline="19">Up</references>
+        <references refid="classEngine_1_1Components_1_1Camera_1a5d131a78545d9f70496549946503b27a" compoundref="Camera_8h" startline="29">Value</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Camera_1ac040fa629766d0b0deefa6412f004fad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Components::Camera::~Camera</definition>
+        <argsstring>()</argsstring>
+        <name>~Camera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Camera.h" line="16" column="1" bodyfile="ZPG/Camera.cpp" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classObservable_1aedd54eccbfad67066226ee0b958347ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Observable&lt; Camera  &gt;::Bind</definition>
+        <argsstring>(Observer&lt; Camera &gt; &amp;observer)</argsstring>
+        <name>Bind</name>
+        <param>
+          <type><ref refid="classObserver" kindref="compound">Observer</ref>&lt; <ref refid="classEngine_1_1Components_1_1Camera" kindref="compound">Camera</ref> &gt; &amp;</type>
+          <declname>observer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Observable.h" line="19" column="1" bodyfile="ZPG/Observable.h" bodystart="19" bodyend="22"/>
+        <references refid="classObservable_1ae6028589035c86e8a9c4375306dca702" compoundref="Observable_8h" startline="33">Observable&lt; T &gt;::_observers</references>
+        <references refid="classGeneric_1_1Collection_1a602c700fa46602ce551b5c133793924c" compoundref="Collection_8h" startline="11" endline="15">Generic::Collection&lt; T &gt;::Add</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Camera_1ad24b41321813d1757cb6dd0db52e34dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>glm::mat4 *</type>
+        <definition>glm::mat4 * Engine::Components::Camera::Get</definition>
+        <argsstring>()</argsstring>
+        <name>Get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Camera.h" line="22" column="1" bodyfile="ZPG/Camera.cpp" bodystart="24" bodyend="27"/>
+        <references refid="namespaceglm_1a35741e27838ab920dff5fbaba619829e">glm::Up</references>
+        <referencedby refid="classEngine_1_1Components_1_1Camera_1ae8ad7f42b61412322436eadfa5261d5e" compoundref="Camera_8cpp" startline="8" endline="16">Camera</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classObservable_1afaa016d6c6b8a6fad20bb388d35ca014" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Observable&lt; Camera  &gt;::Notify</definition>
+        <argsstring>()</argsstring>
+        <name>Notify</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Observable.h" line="27" column="1" bodyfile="ZPG/Observable.h" bodystart="27" bodyend="31"/>
+        <references refid="classObservable_1ae6028589035c86e8a9c4375306dca702" compoundref="Observable_8h" startline="33">Observable&lt; T &gt;::_observers</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Camera_1af3ce56d4d1a66fa4e45ec8775e4149e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Components_1_1Camera" kindref="compound">Camera</ref> *</type>
+        <definition>Engine::Components::Camera * Engine::Components::Camera::SetActive</definition>
+        <argsstring>(Scene *scene)</argsstring>
+        <name>SetActive</name>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Scene</ref> *</type>
+          <declname>scene</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Camera.h" line="28" column="1" bodyfile="ZPG/Camera.cpp" bodystart="72" bodyend="76"/>
+        <references refid="classEngine_1_1Components_1_1Scene_1a936218df56c481f3aa12d684cee038f3" compoundref="Scene_8cpp" startline="52" endline="60">Engine::Components::Scene::SetActiveCamera</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Camera_1a7fdbe486e45390cbfc3961cb891440bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Components_1_1Camera" kindref="compound">Camera</ref> *</type>
+        <definition>Engine::Components::Camera * Engine::Components::Camera::SetDirection</definition>
+        <argsstring>(glm::vec3 *direction)</argsstring>
+        <name>SetDirection</name>
+        <param>
+          <type>glm::vec3 *</type>
+          <declname>direction</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Camera.h" line="26" column="1" bodyfile="ZPG/Camera.cpp" bodystart="58" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Camera_1ada6e11faa2124d571b7d125fc8a0c72e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Components_1_1Camera" kindref="compound">Camera</ref> *</type>
+        <definition>Engine::Components::Camera * Engine::Components::Camera::SetPosition</definition>
+        <argsstring>(glm::vec3 *position)</argsstring>
+        <name>SetPosition</name>
+        <param>
+          <type>glm::vec3 *</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Camera.h" line="25" column="1" bodyfile="ZPG/Camera.cpp" bodystart="51" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Camera_1ac044899d9fbfa3818c99676855ec19fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Components_1_1Camera" kindref="compound">Camera</ref> *</type>
+        <definition>Engine::Components::Camera * Engine::Components::Camera::SetUp</definition>
+        <argsstring>(glm::vec3 *up)</argsstring>
+        <name>SetUp</name>
+        <param>
+          <type>glm::vec3 *</type>
+          <declname>up</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Camera.h" line="27" column="1" bodyfile="ZPG/Camera.cpp" bodystart="65" bodyend="70"/>
+        <references refid="namespaceglm_1a35741e27838ab920dff5fbaba619829e">glm::Up</references>
+      </memberdef>
+      <memberdef kind="function" id="classObservable_1a141ac9aaacb2bf98b41349413c3487c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Observable&lt; Camera  &gt;::UnBind</definition>
+        <argsstring>(Observer&lt; Camera &gt; &amp;observer)</argsstring>
+        <name>UnBind</name>
+        <param>
+          <type><ref refid="classObserver" kindref="compound">Observer</ref>&lt; <ref refid="classEngine_1_1Components_1_1Camera" kindref="compound">Camera</ref> &gt; &amp;</type>
+          <declname>observer</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Observable.h" line="23" column="1" bodyfile="ZPG/Observable.h" bodystart="23" bodyend="26"/>
+        <references refid="classObservable_1ae6028589035c86e8a9c4375306dca702" compoundref="Observable_8h" startline="33">Observable&lt; T &gt;::_observers</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Camera_1a364f5e22921e3d234b31297a64c7d932" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Components_1_1Camera" kindref="compound">Camera</ref> *</type>
+        <definition>Engine::Components::Camera * Engine::Components::Camera::Update</definition>
+        <argsstring>()</argsstring>
+        <name>Update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Camera.h" line="24" column="1" bodyfile="ZPG/Camera.cpp" bodystart="43" bodyend="49"/>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1a149884ea2dc9deea39d3dcd10dfa74b1" compoundref="CameraInputHandler_8cpp" startline="25" endline="50">Application::Input::Handlers::CameraInputHandler::HandleKeys</referencedby>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1ab06fa94ce5265dc06abb645ea29850bd" compoundref="CameraInputHandler_8cpp" startline="53" endline="104">Application::Input::Handlers::CameraInputHandler::HandleMouse</referencedby>
+        <referencedby refid="classEngine_1_1Components_1_1Scene_1a936218df56c481f3aa12d684cee038f3" compoundref="Scene_8cpp" startline="52" endline="60">Engine::Components::Scene::SetActiveCamera</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Camera_1aa80448fee84ef021ad89c29d10fbaafa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Components_1_1Camera" kindref="compound">Camera</ref> *</type>
+        <definition>Engine::Components::Camera * Engine::Components::Camera::UpdateVectors</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateVectors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+<para>Up = *Position + glm::normalize(*Up - *Position); Direction = *Position + glm::normalize(*Direction - *Position); </para>        </inbodydescription>
+        <location file="ZPG/Camera.h" line="23" column="1" bodyfile="ZPG/Camera.cpp" bodystart="29" bodyend="41"/>
+        <references refid="namespaceglm_1a95e780de06846d0eee634d15187b87ab">glm::Front</references>
+        <references refid="namespaceglm_1a8726baea7dc7bb32e57d33b0333d1def">glm::Right</references>
+        <references refid="namespaceglm_1a35741e27838ab920dff5fbaba619829e">glm::Up</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="369">
+        <label>Engine::Components::Camera</label>
+        <link refid="classEngine_1_1Components_1_1Camera"/>
+        <childnode refid="370" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="370">
+        <label>Observable&lt; Camera &gt;</label>
+        <link refid="classObservable"/>
+        <childnode refid="371" relation="template-instance">
+          <edgelabel>&lt; Camera &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="371">
+        <label>Observable&lt; T &gt;</label>
+        <link refid="classObservable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="375">
+        <label>std::list&lt; Observer&lt; Camera &gt; * &gt;</label>
+      </node>
+      <node id="380">
+        <label>std::list&lt; Observer&lt; T &gt; * &gt;</label>
+      </node>
+      <node id="381">
+        <label>mat4 *</label>
+      </node>
+      <node id="379">
+        <label>Generic::Collection&lt; Observer&lt; T &gt; *&gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="380" relation="public-inheritance">
+        </childnode>
+        <childnode refid="376" relation="template-instance">
+          <edgelabel>&lt; Observer&lt; T &gt; *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="372">
+        <label>Engine::Components::Camera</label>
+        <link refid="classEngine_1_1Components_1_1Camera"/>
+        <childnode refid="373" relation="public-inheritance">
+        </childnode>
+        <childnode refid="381" relation="usage">
+          <edgelabel>+Value</edgelabel>
+        </childnode>
+        <childnode refid="382" relation="usage">
+          <edgelabel>+Up</edgelabel>
+          <edgelabel>+Front</edgelabel>
+          <edgelabel>+Direction</edgelabel>
+          <edgelabel>+Right</edgelabel>
+          <edgelabel>+Position</edgelabel>
+        </childnode>
+      </node>
+      <node id="373">
+        <label>Observable&lt; Camera &gt;</label>
+        <link refid="classObservable"/>
+        <childnode refid="374" relation="usage">
+          <edgelabel>-_observers</edgelabel>
+        </childnode>
+        <childnode refid="378" relation="template-instance">
+          <edgelabel>&lt; Camera &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="377">
+        <label>std::list&lt; T &gt;</label>
+      </node>
+      <node id="376">
+        <label>Generic::Collection&lt; T &gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="377" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="378">
+        <label>Observable&lt; T &gt;</label>
+        <link refid="classObservable"/>
+        <childnode refid="379" relation="usage">
+          <edgelabel>-_observers</edgelabel>
+        </childnode>
+      </node>
+      <node id="382">
+        <label>vec3 *</label>
+      </node>
+      <node id="374">
+        <label>Generic::Collection&lt; Observer&lt; Camera &gt; *&gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="375" relation="public-inheritance">
+        </childnode>
+        <childnode refid="376" relation="template-instance">
+          <edgelabel>&lt; Observer&lt; Camera &gt; *&gt;</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/Camera.h" line="13" column="1" bodyfile="ZPG/Camera.h" bodystart="12" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classObservable_1aedd54eccbfad67066226ee0b958347ba" prot="public" virt="non-virtual"><scope>Engine::Components::Camera</scope><name>Bind</name></member>
+      <member refid="classEngine_1_1Components_1_1Camera_1ae8ad7f42b61412322436eadfa5261d5e" prot="public" virt="non-virtual"><scope>Engine::Components::Camera</scope><name>Camera</name></member>
+      <member refid="classEngine_1_1Components_1_1Camera_1a23619a66046258f1158313f0c790ffa2" prot="public" virt="non-virtual"><scope>Engine::Components::Camera</scope><name>Direction</name></member>
+      <member refid="classEngine_1_1Components_1_1Camera_1a9d8692aa379c9ab00f69df10d1d3651b" prot="public" virt="non-virtual"><scope>Engine::Components::Camera</scope><name>Front</name></member>
+      <member refid="classEngine_1_1Components_1_1Camera_1ad24b41321813d1757cb6dd0db52e34dd" prot="public" virt="non-virtual"><scope>Engine::Components::Camera</scope><name>Get</name></member>
+      <member refid="classObservable_1afaa016d6c6b8a6fad20bb388d35ca014" prot="public" virt="non-virtual"><scope>Engine::Components::Camera</scope><name>Notify</name></member>
+      <member refid="classObservable_1a6cec7a5329100b5d45b078ff4bcd5f88" prot="public" virt="non-virtual"><scope>Engine::Components::Camera</scope><name>Observable</name></member>
+      <member refid="classEngine_1_1Components_1_1Camera_1ab2c3ed9a1321a95db8fca95bc7f4b290" prot="public" virt="non-virtual"><scope>Engine::Components::Camera</scope><name>Position</name></member>
+      <member refid="classEngine_1_1Components_1_1Camera_1a10b30289c89694d13918a979bade13d9" prot="public" virt="non-virtual"><scope>Engine::Components::Camera</scope><name>Right</name></member>
+      <member refid="classEngine_1_1Components_1_1Camera_1af3ce56d4d1a66fa4e45ec8775e4149e7" prot="public" virt="non-virtual"><scope>Engine::Components::Camera</scope><name>SetActive</name></member>
+      <member refid="classEngine_1_1Components_1_1Camera_1a7fdbe486e45390cbfc3961cb891440bd" prot="public" virt="non-virtual"><scope>Engine::Components::Camera</scope><name>SetDirection</name></member>
+      <member refid="classEngine_1_1Components_1_1Camera_1ada6e11faa2124d571b7d125fc8a0c72e" prot="public" virt="non-virtual"><scope>Engine::Components::Camera</scope><name>SetPosition</name></member>
+      <member refid="classEngine_1_1Components_1_1Camera_1ac044899d9fbfa3818c99676855ec19fb" prot="public" virt="non-virtual"><scope>Engine::Components::Camera</scope><name>SetUp</name></member>
+      <member refid="classObservable_1a141ac9aaacb2bf98b41349413c3487c0" prot="public" virt="non-virtual"><scope>Engine::Components::Camera</scope><name>UnBind</name></member>
+      <member refid="classEngine_1_1Components_1_1Camera_1a84a4199b9c60579a0f148b9980e05200" prot="public" virt="non-virtual"><scope>Engine::Components::Camera</scope><name>Up</name></member>
+      <member refid="classEngine_1_1Components_1_1Camera_1a364f5e22921e3d234b31297a64c7d932" prot="public" virt="non-virtual"><scope>Engine::Components::Camera</scope><name>Update</name></member>
+      <member refid="classEngine_1_1Components_1_1Camera_1aa80448fee84ef021ad89c29d10fbaafa" prot="public" virt="non-virtual"><scope>Engine::Components::Camera</scope><name>UpdateVectors</name></member>
+      <member refid="classEngine_1_1Components_1_1Camera_1a5d131a78545d9f70496549946503b27a" prot="public" virt="non-virtual"><scope>Engine::Components::Camera</scope><name>Value</name></member>
+      <member refid="classEngine_1_1Components_1_1Camera_1ac040fa629766d0b0deefa6412f004fad" prot="public" virt="non-virtual"><scope>Engine::Components::Camera</scope><name>~Camera</name></member>
+      <member refid="classObservable_1a6d06df1c0feb2ce5a30c6fb7119c4045" prot="public" virt="virtual"><scope>Engine::Components::Camera</scope><name>~Observable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

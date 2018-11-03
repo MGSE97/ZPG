@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject" kind="class" language="C++" prot="public">
+    <compoundname>Engine::Components::Objects::VertexBufferObject</compoundname>
+    <includes refid="VertexBufferObject_8h" local="no">VertexBufferObject.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1a07adfeae7d3b23285d49b8005437ed77" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Engine::Components::Objects::VertexBufferObject::_Id</definition>
+        <argsstring></argsstring>
+        <name>_Id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexBufferObject.h" line="20" column="1" bodyfile="ZPG/VertexBufferObject.h" bodystart="20" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1ac6ca88e30800d79295ca9ea285101a3c" compoundref="VertexBufferObject_8cpp" startline="6" endline="12">VertexBufferObject</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1a0014c1ab3ceb3c3437003057638b279f" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Engine::Components::Objects::VertexBufferObject::_VBO</definition>
+        <argsstring></argsstring>
+        <name>_VBO</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexBufferObject.h" line="19" column="1" bodyfile="ZPG/VertexBufferObject.h" bodystart="19" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1ac6ca88e30800d79295ca9ea285101a3c" compoundref="VertexBufferObject_8cpp" startline="6" endline="12">VertexBufferObject</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1aee6f39eda87eb0f8c0e6644afdd72000" prot="private" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int Engine::Components::Objects::VertexBufferObject::_id</definition>
+        <argsstring></argsstring>
+        <name>_id</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexBufferObject.h" line="21" column="1" bodyfile="ZPG/VertexBufferObject.h" bodystart="21" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1ac6ca88e30800d79295ca9ea285101a3c" compoundref="VertexBufferObject_8cpp" startline="6" endline="12">VertexBufferObject</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1ac6ca88e30800d79295ca9ea285101a3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Components::Objects::VertexBufferObject::VertexBufferObject</definition>
+        <argsstring>(float *points, int size)</argsstring>
+        <name>VertexBufferObject</name>
+        <param>
+          <type>float *</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexBufferObject.h" line="14" column="1" bodyfile="ZPG/VertexBufferObject.cpp" bodystart="6" bodyend="12"/>
+        <references refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1a07adfeae7d3b23285d49b8005437ed77" compoundref="VertexBufferObject_8h" startline="20">_Id</references>
+        <references refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1aee6f39eda87eb0f8c0e6644afdd72000" compoundref="VertexBufferObject_8h" startline="21">_id</references>
+        <references refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1a0014c1ab3ceb3c3437003057638b279f" compoundref="VertexBufferObject_8h" startline="19">_VBO</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1a477c0af2a3eaaae725a1347027ef87a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Components::Objects::VertexBufferObject::~VertexBufferObject</definition>
+        <argsstring>()</argsstring>
+        <name>~VertexBufferObject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexBufferObject.h" line="15" column="1" bodyfile="ZPG/VertexBufferObject.cpp" bodystart="15" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1abf4805d63271ee1c56a15214cd75077d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GLuint</type>
+        <definition>GLuint Engine::Components::Objects::VertexBufferObject::Get</definition>
+        <argsstring>()</argsstring>
+        <name>Get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexBufferObject.h" line="16" column="1" bodyfile="ZPG/VertexBufferObject.cpp" bodystart="21" bodyend="24"/>
+        <referencedby refid="classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_1a1439a87dfc4f350a31e97a40a5cc1c3d" compoundref="VertexAttributeObject_8cpp" startline="6" endline="20">Engine::Components::Objects::VertexAttributeObject::VertexAttributeObject</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1ada22635c60245448346653b0e82f5d9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Engine::Components::Objects::VertexBufferObject::GetId</definition>
+        <argsstring>()</argsstring>
+        <name>GetId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/VertexBufferObject.h" line="17" column="1" bodyfile="ZPG/VertexBufferObject.cpp" bodystart="26" bodyend="29"/>
+        <referencedby refid="classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_1a1439a87dfc4f350a31e97a40a5cc1c3d" compoundref="VertexAttributeObject_8cpp" startline="6" endline="20">Engine::Components::Objects::VertexAttributeObject::VertexAttributeObject</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="453">
+        <label>int</label>
+      </node>
+      <node id="454">
+        <label>GLuint</label>
+      </node>
+      <node id="452">
+        <label>Engine::Components::Objects::VertexBufferObject</label>
+        <link refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject"/>
+        <childnode refid="453" relation="usage">
+          <edgelabel>-_Id</edgelabel>
+          <edgelabel>-_id</edgelabel>
+        </childnode>
+        <childnode refid="454" relation="usage">
+          <edgelabel>-_VBO</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/VertexBufferObject.h" line="12" column="1" bodyfile="ZPG/VertexBufferObject.h" bodystart="11" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1a07adfeae7d3b23285d49b8005437ed77" prot="private" virt="non-virtual"><scope>Engine::Components::Objects::VertexBufferObject</scope><name>_Id</name></member>
+      <member refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1aee6f39eda87eb0f8c0e6644afdd72000" prot="private" virt="non-virtual"><scope>Engine::Components::Objects::VertexBufferObject</scope><name>_id</name></member>
+      <member refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1a0014c1ab3ceb3c3437003057638b279f" prot="private" virt="non-virtual"><scope>Engine::Components::Objects::VertexBufferObject</scope><name>_VBO</name></member>
+      <member refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1abf4805d63271ee1c56a15214cd75077d" prot="public" virt="non-virtual"><scope>Engine::Components::Objects::VertexBufferObject</scope><name>Get</name></member>
+      <member refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1ada22635c60245448346653b0e82f5d9c" prot="public" virt="non-virtual"><scope>Engine::Components::Objects::VertexBufferObject</scope><name>GetId</name></member>
+      <member refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1ac6ca88e30800d79295ca9ea285101a3c" prot="public" virt="non-virtual"><scope>Engine::Components::Objects::VertexBufferObject</scope><name>VertexBufferObject</name></member>
+      <member refid="classEngine_1_1Components_1_1Objects_1_1VertexBufferObject_1a477c0af2a3eaaae725a1347027ef87a4" prot="public" virt="non-virtual"><scope>Engine::Components::Objects::VertexBufferObject</scope><name>~VertexBufferObject</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

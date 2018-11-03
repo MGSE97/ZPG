@@ -1,0 +1,4 @@
+<map id="Application::Input::Handlers::LightingChangeInputHandler" name="Application::Input::Handlers::LightingChangeInputHandler">
+<area shape="rect" id="node2" href="$classEngine_1_1Components_1_1BaseInputHandler.html" title="{Engine::Components\l::BaseInputHandler\n||+ BaseInputHandler()\l+ ~BaseInputHandler()\l+ HandleKeys()\l+ HandleMouse()\l}" alt="" coords="19,131,171,267"/>
+<area shape="rect" id="node3" href="$classEngine_1_1Components_1_1IInputHandler.html" title="{IInputHandler\n||}" alt="" coords="46,5,143,83"/>
+</map>

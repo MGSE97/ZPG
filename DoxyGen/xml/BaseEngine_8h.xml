@@ -1,0 +1,449 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="BaseEngine_8h" kind="file" language="C++">
+    <compoundname>BaseEngine.h</compoundname>
+    <includes local="no">ostream</includes>
+    <includes refid="Dictionary_8h" local="yes">Dictionary.h</includes>
+    <includes refid="Program_8h" local="yes">Program.h</includes>
+    <includes refid="Window_8h" local="yes">Window.h</includes>
+    <includes refid="Scene_8h" local="yes">Scene.h</includes>
+    <includes refid="IInputHandler_8h" local="yes">IInputHandler.h</includes>
+    <includedby refid="Application_8h" local="yes">ZPG/Application.h</includedby>
+    <includedby refid="BaseEngine_8cpp" local="yes">ZPG/BaseEngine.cpp</includedby>
+    <includedby refid="BasicEngine_8h" local="yes">ZPG/BasicEngine.h</includedby>
+    <includedby refid="CameraEngine_8h" local="yes">ZPG/CameraEngine.h</includedby>
+    <includedby refid="CameraInputHandler_8cpp" local="yes">ZPG/CameraInputHandler.cpp</includedby>
+    <includedby refid="LigtEngine_8h" local="yes">ZPG/LigtEngine.h</includedby>
+    <includedby refid="SphereScene_8cpp" local="yes">ZPG/SphereScene.cpp</includedby>
+    <includedby refid="TriangleEngine_8h" local="yes">ZPG/TriangleEngine.h</includedby>
+    <includedby refid="TriangleScene_8cpp" local="yes">ZPG/TriangleScene.cpp</includedby>
+    <includedby refid="ZPGEngine_8h" local="yes">ZPG/ZPGEngine.h</includedby>
+    <incdepgraph>
+      <node id="163">
+        <label>list</label>
+      </node>
+      <node id="166">
+        <label>VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="167" relation="include">
+        </childnode>
+        <childnode refid="169" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="171" relation="include">
+        </childnode>
+      </node>
+      <node id="172">
+        <label>MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="162" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+        <childnode refid="173" relation="include">
+        </childnode>
+      </node>
+      <node id="169">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="167" relation="include">
+        </childnode>
+        <childnode refid="170" relation="include">
+        </childnode>
+      </node>
+      <node id="157">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+        <childnode refid="162" relation="include">
+        </childnode>
+      </node>
+      <node id="167">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="168" relation="include">
+        </childnode>
+      </node>
+      <node id="162">
+        <label>string</label>
+      </node>
+      <node id="155">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="164">
+        <label>Window.h</label>
+        <link refid="Window_8h"/>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="165" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="166" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+      </node>
+      <node id="153">
+        <label>map</label>
+      </node>
+      <node id="181">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="175" relation="include">
+        </childnode>
+        <childnode refid="182" relation="include">
+        </childnode>
+      </node>
+      <node id="165">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="173">
+        <label>MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+      </node>
+      <node id="150">
+        <label>ZPG/BaseEngine.h</label>
+        <link refid="BaseEngine_8h"/>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="164" relation="include">
+        </childnode>
+        <childnode refid="174" relation="include">
+        </childnode>
+        <childnode refid="183" relation="include">
+        </childnode>
+      </node>
+      <node id="183">
+        <label>IInputHandler.h</label>
+        <link refid="IInputHandler_8h"/>
+        <childnode refid="164" relation="include">
+        </childnode>
+        <childnode refid="174" relation="include">
+        </childnode>
+      </node>
+      <node id="175">
+        <label>Object.h</label>
+        <link refid="Object_8h"/>
+        <childnode refid="166" relation="include">
+        </childnode>
+      </node>
+      <node id="182">
+        <label>glm/common.hpp</label>
+      </node>
+      <node id="151">
+        <label>ostream</label>
+      </node>
+      <node id="161">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="179">
+        <label>Observable.h</label>
+        <link refid="Observable_8h"/>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
+        <childnode refid="168" relation="include">
+        </childnode>
+      </node>
+      <node id="177">
+        <label>glm/vec3.hpp</label>
+      </node>
+      <node id="158">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="174">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="175" relation="include">
+        </childnode>
+        <childnode refid="176" relation="include">
+        </childnode>
+        <childnode refid="181" relation="include">
+        </childnode>
+      </node>
+      <node id="168">
+        <label>vector</label>
+      </node>
+      <node id="156">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="157" relation="include">
+        </childnode>
+        <childnode refid="163" relation="include">
+        </childnode>
+      </node>
+      <node id="171">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="162" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="157" relation="include">
+        </childnode>
+      </node>
+      <node id="170">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="180">
+        <label>Observer.h</label>
+        <link refid="Observer_8h"/>
+      </node>
+      <node id="159">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="154">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="162" relation="include">
+        </childnode>
+      </node>
+      <node id="152">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="153" relation="include">
+        </childnode>
+      </node>
+      <node id="160">
+        <label>xstring</label>
+      </node>
+      <node id="178">
+        <label>glm/mat4x4.hpp</label>
+      </node>
+      <node id="176">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="178" relation="include">
+        </childnode>
+        <childnode refid="179" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="195">
+        <label>ZPG/LigtEngine.h</label>
+        <link refid="LigtEngine_8h"/>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+      </node>
+      <node id="186">
+        <label>ZPG/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="193">
+        <label>ZPG/CameraEngine.cpp</label>
+        <link refid="CameraEngine_8cpp"/>
+      </node>
+      <node id="202">
+        <label>ZPG/ZPGEngine.h</label>
+        <link refid="ZPGEngine_8h"/>
+        <childnode refid="203" relation="include">
+        </childnode>
+      </node>
+      <node id="184">
+        <label>ZPG/BaseEngine.h</label>
+        <link refid="BaseEngine_8h"/>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="201" relation="include">
+        </childnode>
+        <childnode refid="202" relation="include">
+        </childnode>
+      </node>
+      <node id="199">
+        <label>ZPG/TriangleEngine.h</label>
+        <link refid="TriangleEngine_8h"/>
+        <childnode refid="200" relation="include">
+        </childnode>
+      </node>
+      <node id="200">
+        <label>ZPG/TriangleEngine.cpp</label>
+        <link refid="TriangleEngine_8cpp"/>
+      </node>
+      <node id="201">
+        <label>ZPG/TriangleScene.cpp</label>
+        <link refid="TriangleScene_8cpp"/>
+      </node>
+      <node id="185">
+        <label>ZPG/Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+        <childnode refid="188" relation="include">
+        </childnode>
+      </node>
+      <node id="203">
+        <label>ZPG/ZPGEngine.cpp</label>
+        <link refid="ZPGEngine_8cpp"/>
+      </node>
+      <node id="197">
+        <label>ZPG/LigtEngine.cpp</label>
+        <link refid="LigtEngine_8cpp"/>
+      </node>
+      <node id="187">
+        <label>ZPG/EngineRegistry.cpp</label>
+        <link refid="EngineRegistry_8cpp"/>
+      </node>
+      <node id="192">
+        <label>ZPG/CameraEngine.h</label>
+        <link refid="CameraEngine_8h"/>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+      </node>
+      <node id="189">
+        <label>ZPG/BaseEngine.cpp</label>
+        <link refid="BaseEngine_8cpp"/>
+      </node>
+      <node id="191">
+        <label>ZPG/BasicEngine.cpp</label>
+        <link refid="BasicEngine_8cpp"/>
+      </node>
+      <node id="198">
+        <label>ZPG/SphereScene.cpp</label>
+        <link refid="SphereScene_8cpp"/>
+      </node>
+      <node id="196">
+        <label>ZPG/LightingChangeInputHandler.cpp</label>
+        <link refid="LightingChangeInputHandler_8cpp"/>
+      </node>
+      <node id="188">
+        <label>ZPG/Main.cpp</label>
+        <link refid="Main_8cpp"/>
+      </node>
+      <node id="194">
+        <label>ZPG/CameraInputHandler.cpp</label>
+        <link refid="CameraInputHandler_8cpp"/>
+      </node>
+      <node id="190">
+        <label>ZPG/BasicEngine.h</label>
+        <link refid="BasicEngine_8h"/>
+        <childnode refid="191" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classEngine_1_1BaseEngine" prot="public">Engine::BaseEngine</innerclass>
+    <innernamespace refid="namespaceEngine">Engine</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Dictionary_8h" kindref="compound">Dictionary.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Program_8h" kindref="compound">Program.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Window_8h" kindref="compound">Window.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Scene_8h" kindref="compound">Scene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="IInputHandler_8h" kindref="compound">IInputHandler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="namespaceEngine" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceEngine" kindref="compound">Engine</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11" refid="classEngine_1_1BaseEngine" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classEngine_1_1BaseEngine" kindref="compound">BaseEngine</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1ad838c97afe1790cb35527f0b58e81e6b" kindref="member">BaseEngine</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1a8a3ba672021058958d66af5ee432beac" kindref="member">~BaseEngine</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1BaseEngine" kindref="compound">BaseEngine</ref>*<sp/><ref refid="classEngine_1_1BaseEngine_1ad9c141fe48c8c91e14e77ed5fcb90196" kindref="member">Init</ref>(std::FILE*<sp/>errorStream<sp/>=<sp/>stderr);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1BaseEngine_1a7a1c9b833049b3eb61194cab113dfe89" kindref="member">InitSuccess</ref>();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine" kindref="compound">BaseEngine</ref>*<sp/><ref refid="classEngine_1_1BaseEngine_1acd5cd5d2189d24e038b23477b7dce405" kindref="member">Dispose</ref>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1BaseEngine_1aace6be2a42d12b64fbd35f1acdb08408" kindref="member">UpdateBegin</ref>(<ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Components::Window</ref>*<sp/>window);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1BaseEngine_1a01c23c2073f08939a660f3b7a866852c" kindref="member">Update</ref>(<ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Components::Window</ref>*<sp/>window);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1BaseEngine_1a7c07c98e583df042a0eb01e0ddec85a1" kindref="member">UpdateEnd</ref>(<ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Components::Window</ref>*<sp/>window);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1BaseEngine_1a525fdc7a1da7eecb514ad5763f06be79" kindref="member">Start</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1BaseEngine_1afc82c6a00d5a9d4714740fc5eab5db86" kindref="member">SetActiveScene</ref>(<ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Components::Scene</ref>*<sp/>scene<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//virtual<sp/>void<sp/>WindowKeyCallback(GLFWwindow*<sp/>window,<sp/>int<sp/>key,<sp/>int<sp/>scancode,<sp/>int<sp/>action,<sp/>int<sp/>mods);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classEngine_1_1BaseEngine_1a4a1a4c4dae052e66ecc4f326eeed4d33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary&lt;std::string, Components::Window*&gt;</ref>*<sp/><ref refid="classEngine_1_1BaseEngine_1a4a1a4c4dae052e66ecc4f326eeed4d33" kindref="member">Windows</ref>;</highlight></codeline>
+<codeline lineno="28" refid="classEngine_1_1BaseEngine_1ae0f86360ea3a384caefe443dd8f88601" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary&lt;std::string, Components::Graphics::Program*&gt;</ref>*<sp/><ref refid="classEngine_1_1BaseEngine_1ae0f86360ea3a384caefe443dd8f88601" kindref="member">Programs</ref>;</highlight></codeline>
+<codeline lineno="29" refid="classEngine_1_1BaseEngine_1a2582dee3f73da82bb422b43317b85e3b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary&lt;std::string, Components::Graphics::Shader*&gt;</ref>*<sp/><ref refid="classEngine_1_1BaseEngine_1a2582dee3f73da82bb422b43317b85e3b" kindref="member">Shaders</ref>;</highlight></codeline>
+<codeline lineno="30" refid="classEngine_1_1BaseEngine_1afd02af3c2fbe9bb734db014dec06585a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary&lt;std::string, Components::Scene*&gt;</ref>*<sp/><ref refid="classEngine_1_1BaseEngine_1afd02af3c2fbe9bb734db014dec06585a" kindref="member">Scenes</ref>;</highlight></codeline>
+<codeline lineno="31" refid="classEngine_1_1BaseEngine_1a134fa082c5a64d62b76ddf926647e7cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGeneric_1_1Collection" kindref="compound">Generic::Collection&lt;Components::IInputHandler*&gt;</ref>*<sp/><ref refid="classEngine_1_1BaseEngine_1a134fa082c5a64d62b76ddf926647e7cc" kindref="member">InputHandlers</ref>;</highlight></codeline>
+<codeline lineno="32" refid="classEngine_1_1BaseEngine_1a65321a97e83f0a6ee90df3efac2d3307" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary&lt;short, bool&gt;</ref><sp/><ref refid="classEngine_1_1BaseEngine_1a65321a97e83f0a6ee90df3efac2d3307" kindref="member">Keys</ref>;</highlight></codeline>
+<codeline lineno="33" refid="classEngine_1_1BaseEngine_1a3ee2bdddb66d45b8c808ffd937ba9c50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary&lt;short, bool&gt;</ref><sp/><ref refid="classEngine_1_1BaseEngine_1a3ee2bdddb66d45b8c808ffd937ba9c50" kindref="member">MouseKeys</ref>;</highlight></codeline>
+<codeline lineno="34" refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Components::Scene</ref>*<sp/><ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>;</highlight></codeline>
+<codeline lineno="35" refid="classEngine_1_1BaseEngine_1a5fe085152ebe93346900407f6b41a034" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1BaseEngine_1a5fe085152ebe93346900407f6b41a034" kindref="member">MouseX</ref>;</highlight></codeline>
+<codeline lineno="36" refid="classEngine_1_1BaseEngine_1a143c9c32dbbdc70bf1546ffe275bf384" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1BaseEngine_1a143c9c32dbbdc70bf1546ffe275bf384" kindref="member">MouseY</ref>;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine" kindref="compound">BaseEngine</ref>*<sp/><ref refid="classEngine_1_1BaseEngine_1a3e5950c7d1825f81d7d1fc584cb8b0c1" kindref="member">InitGLFW</ref>();</highlight></codeline>
+<codeline lineno="40" refid="classEngine_1_1BaseEngine_1a26fd54a1ee2733f9c654af5afcfa96cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::FILE*<sp/><ref refid="classEngine_1_1BaseEngine_1a26fd54a1ee2733f9c654af5afcfa96cf" kindref="member">_errorStream</ref>;</highlight></codeline>
+<codeline lineno="41" refid="classEngine_1_1BaseEngine_1a79e265845b321c0e9822fb170c564e55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1BaseEngine_1a79e265845b321c0e9822fb170c564e55" kindref="member">_init</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1BaseEngine_1aad3c237ca657b9f22f76fccf7fc7561f" kindref="member">UpdateInternal</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ZPG/BaseEngine.h"/>
+  </compounddef>
+</doxygen>

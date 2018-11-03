@@ -1,0 +1,485 @@
+\hypertarget{classEngine_1_1Components_1_1Camera}{}\section{Engine\+:\+:Components\+:\+:Camera Class Reference}
+\label{classEngine_1_1Components_1_1Camera}\index{Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}}
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+
+
+Inheritance diagram for Engine\+:\+:Components\+:\+:Camera\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classEngine_1_1Components_1_1Camera__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Engine\+:\+:Components\+:\+:Camera\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classEngine_1_1Components_1_1Camera__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_ae8ad7f42b61412322436eadfa5261d5e}{Camera}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_ac040fa629766d0b0deefa6412f004fad}{$\sim$\+Camera}} ()
+\item 
+void \mbox{\hyperlink{classObservable_aedd54eccbfad67066226ee0b958347ba}{Bind}} (\mbox{\hyperlink{classObserver}{Observer}}$<$ \mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}} $>$ \&observer)
+\item 
+glm\+::mat4 $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_ad24b41321813d1757cb6dd0db52e34dd}{Get}} ()
+\item 
+void \mbox{\hyperlink{classObservable_afaa016d6c6b8a6fad20bb388d35ca014}{Notify}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_af3ce56d4d1a66fa4e45ec8775e4149e7}{Set\+Active}} (\mbox{\hyperlink{classEngine_1_1Components_1_1Scene}{Scene}} $\ast$scene)
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a7fdbe486e45390cbfc3961cb891440bd}{Set\+Direction}} (glm\+::vec3 $\ast$direction)
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_ada6e11faa2124d571b7d125fc8a0c72e}{Set\+Position}} (glm\+::vec3 $\ast$position)
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_ac044899d9fbfa3818c99676855ec19fb}{Set\+Up}} (glm\+::vec3 $\ast$up)
+\item 
+void \mbox{\hyperlink{classObservable_a141ac9aaacb2bf98b41349413c3487c0}{Un\+Bind}} (\mbox{\hyperlink{classObserver}{Observer}}$<$ \mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}} $>$ \&observer)
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a364f5e22921e3d234b31297a64c7d932}{Update}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_aa80448fee84ef021ad89c29d10fbaafa}{Update\+Vectors}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::vec3 $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a23619a66046258f1158313f0c790ffa2}{Direction}}
+\item 
+glm\+::vec3 $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a9d8692aa379c9ab00f69df10d1d3651b}{Front}}
+\item 
+glm\+::vec3 $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_ab2c3ed9a1321a95db8fca95bc7f4b290}{Position}}
+\item 
+glm\+::vec3 $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a10b30289c89694d13918a979bade13d9}{Right}}
+\item 
+glm\+::vec3 $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a84a4199b9c60579a0f148b9980e05200}{Up}}
+\item 
+glm\+::mat4 $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a5d131a78545d9f70496549946503b27a}{Value}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 12 of file Camera.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Camera_ae8ad7f42b61412322436eadfa5261d5e}\label{classEngine_1_1Components_1_1Camera_ae8ad7f42b61412322436eadfa5261d5e}} 
+\index{Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}}
+\subsubsection{\texorpdfstring{Camera()}{Camera()}}
+{\footnotesize\ttfamily Engine\+::\+Components\+::\+Camera\+::\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file Camera.\+cpp.
+
+
+
+References Direction, Front, Get(), Position, Right, Up, and Value.
+
+
+\begin{DoxyCode}
+9 \{
+10     \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_ab2c3ed9a1321a95db8fca95bc7f4b290}{Position}} = \textcolor{keyword}{new} glm::vec3(1.f, 1.f, 1.f);
+11     \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a23619a66046258f1158313f0c790ffa2}{Direction}} = \textcolor{keyword}{new} glm::vec3(0.f, 0.f, 0.f);
+12     \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a84a4199b9c60579a0f148b9980e05200}{Up}} = \textcolor{keyword}{new} glm::vec3(0.f, 0.f, 1.f);
+13     \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a9d8692aa379c9ab00f69df10d1d3651b}{Front}} = \textcolor{keyword}{new} glm::vec3(1.0, 1.0, 0.0);
+14     \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a10b30289c89694d13918a979bade13d9}{Right}} = \textcolor{keyword}{new} glm::vec3(0.0, 1.0, 1.0);
+15     \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a5d131a78545d9f70496549946503b27a}{Value}} = \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_ad24b41321813d1757cb6dd0db52e34dd}{Get}}();
+16 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Camera_ae8ad7f42b61412322436eadfa5261d5e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Camera_ac040fa629766d0b0deefa6412f004fad}\label{classEngine_1_1Components_1_1Camera_ac040fa629766d0b0deefa6412f004fad}} 
+\index{Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}!````~Camera@{$\sim$\+Camera}}
+\index{````~Camera@{$\sim$\+Camera}!Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}}
+\subsubsection{\texorpdfstring{$\sim$\+Camera()}{~Camera()}}
+{\footnotesize\ttfamily Engine\+::\+Components\+::\+Camera\+::$\sim$\+Camera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file Camera.\+cpp.
+
+
+\begin{DoxyCode}
+20 \{
+21     \textcolor{keyword}{delete} \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a5d131a78545d9f70496549946503b27a}{Value}};
+22 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classObservable_aedd54eccbfad67066226ee0b958347ba}\label{classObservable_aedd54eccbfad67066226ee0b958347ba}} 
+\index{Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}!Bind@{Bind}}
+\index{Bind@{Bind}!Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}}
+\subsubsection{\texorpdfstring{Bind()}{Bind()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classObservable}{Observable}}$<$ \mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}}  $>$\+::Bind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}}$<$ Camera  $>$ \&}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 19 of file Observable.\+h.
+
+
+
+References Observable$<$ T $>$\+::\+\_\+observers, and Generic\+::\+Collection$<$ T $>$\+::\+Add().
+
+
+\begin{DoxyCode}
+20     \{
+21         \mbox{\hyperlink{classObservable_ae6028589035c86e8a9c4375306dca702}{\_observers}}->Add(&observer);
+22     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Camera_ad24b41321813d1757cb6dd0db52e34dd}\label{classEngine_1_1Components_1_1Camera_ad24b41321813d1757cb6dd0db52e34dd}} 
+\index{Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}!Get@{Get}}
+\index{Get@{Get}!Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}}
+\subsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily glm\+::mat4 $\ast$ Engine\+::\+Components\+::\+Camera\+::\+Get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file Camera.\+cpp.
+
+
+
+References glm\+::\+Up().
+
+
+
+Referenced by Camera().
+
+
+\begin{DoxyCode}
+25 \{
+26     \textcolor{keywordflow}{return} \textcolor{keyword}{new} glm::mat4(lookAt(*\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_ab2c3ed9a1321a95db8fca95bc7f4b290}{Position}}, *\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a23619a66046258f1158313f0c790ffa2}{Direction}}, *\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a84a4199b9c60579a0f148b9980e05200}{Up}}));
+27 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classEngine_1_1Components_1_1Camera_ad24b41321813d1757cb6dd0db52e34dd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classEngine_1_1Components_1_1Camera_ad24b41321813d1757cb6dd0db52e34dd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classObservable_afaa016d6c6b8a6fad20bb388d35ca014}\label{classObservable_afaa016d6c6b8a6fad20bb388d35ca014}} 
+\index{Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}!Notify@{Notify}}
+\index{Notify@{Notify}!Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}}
+\subsubsection{\texorpdfstring{Notify()}{Notify()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classObservable}{Observable}}$<$ \mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}}  $>$\+::Notify (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 27 of file Observable.\+h.
+
+
+
+References Observable$<$ T $>$\+::\+\_\+observers.
+
+
+\begin{DoxyCode}
+28     \{
+29         \textcolor{keywordflow}{for} (\textcolor{keyword}{auto} it = \mbox{\hyperlink{classObservable_ae6028589035c86e8a9c4375306dca702}{\_observers}}->begin(); it != \mbox{\hyperlink{classObservable_ae6028589035c86e8a9c4375306dca702}{\_observers}}->end(); ++it)
+30             (*it)->Update(static\_cast<T*>(\textcolor{keyword}{this}));
+31     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Camera_af3ce56d4d1a66fa4e45ec8775e4149e7}\label{classEngine_1_1Components_1_1Camera_af3ce56d4d1a66fa4e45ec8775e4149e7}} 
+\index{Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}!Set\+Active@{Set\+Active}}
+\index{Set\+Active@{Set\+Active}!Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}}
+\subsubsection{\texorpdfstring{Set\+Active()}{SetActive()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Engine\+::\+Components\+::\+Camera}} $\ast$ Engine\+::\+Components\+::\+Camera\+::\+Set\+Active (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Scene}{Scene}} $\ast$}]{scene }\end{DoxyParamCaption})}
+
+
+
+Definition at line 72 of file Camera.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Scene\+::\+Set\+Active\+Camera().
+
+
+\begin{DoxyCode}
+73 \{
+74     scene->SetActiveCamera(\textcolor{keyword}{this});
+75     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+76 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Camera_af3ce56d4d1a66fa4e45ec8775e4149e7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Camera_a7fdbe486e45390cbfc3961cb891440bd}\label{classEngine_1_1Components_1_1Camera_a7fdbe486e45390cbfc3961cb891440bd}} 
+\index{Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}!Set\+Direction@{Set\+Direction}}
+\index{Set\+Direction@{Set\+Direction}!Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}}
+\subsubsection{\texorpdfstring{Set\+Direction()}{SetDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Engine\+::\+Components\+::\+Camera}} $\ast$ Engine\+::\+Components\+::\+Camera\+::\+Set\+Direction (\begin{DoxyParamCaption}\item[{glm\+::vec3 $\ast$}]{direction }\end{DoxyParamCaption})}
+
+
+
+Definition at line 58 of file Camera.\+cpp.
+
+
+\begin{DoxyCode}
+59 \{
+60     *\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a23619a66046258f1158313f0c790ffa2}{Direction}} = *direction;
+61     \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a364f5e22921e3d234b31297a64c7d932}{Update}}();
+62     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+63 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Camera_ada6e11faa2124d571b7d125fc8a0c72e}\label{classEngine_1_1Components_1_1Camera_ada6e11faa2124d571b7d125fc8a0c72e}} 
+\index{Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}!Set\+Position@{Set\+Position}}
+\index{Set\+Position@{Set\+Position}!Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}}
+\subsubsection{\texorpdfstring{Set\+Position()}{SetPosition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Engine\+::\+Components\+::\+Camera}} $\ast$ Engine\+::\+Components\+::\+Camera\+::\+Set\+Position (\begin{DoxyParamCaption}\item[{glm\+::vec3 $\ast$}]{position }\end{DoxyParamCaption})}
+
+
+
+Definition at line 51 of file Camera.\+cpp.
+
+
+\begin{DoxyCode}
+52 \{
+53     *\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_ab2c3ed9a1321a95db8fca95bc7f4b290}{Position}} = *position;
+54     \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a364f5e22921e3d234b31297a64c7d932}{Update}}();
+55     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+56 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Camera_ac044899d9fbfa3818c99676855ec19fb}\label{classEngine_1_1Components_1_1Camera_ac044899d9fbfa3818c99676855ec19fb}} 
+\index{Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}!Set\+Up@{Set\+Up}}
+\index{Set\+Up@{Set\+Up}!Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}}
+\subsubsection{\texorpdfstring{Set\+Up()}{SetUp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Engine\+::\+Components\+::\+Camera}} $\ast$ Engine\+::\+Components\+::\+Camera\+::\+Set\+Up (\begin{DoxyParamCaption}\item[{glm\+::vec3 $\ast$}]{up }\end{DoxyParamCaption})}
+
+
+
+Definition at line 65 of file Camera.\+cpp.
+
+
+
+References glm\+::\+Up().
+
+
+\begin{DoxyCode}
+66 \{
+67     *\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a84a4199b9c60579a0f148b9980e05200}{Up}} = *up;
+68     \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a364f5e22921e3d234b31297a64c7d932}{Update}}();
+69     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+70 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classEngine_1_1Components_1_1Camera_ac044899d9fbfa3818c99676855ec19fb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classObservable_a141ac9aaacb2bf98b41349413c3487c0}\label{classObservable_a141ac9aaacb2bf98b41349413c3487c0}} 
+\index{Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}!Un\+Bind@{Un\+Bind}}
+\index{Un\+Bind@{Un\+Bind}!Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}}
+\subsubsection{\texorpdfstring{Un\+Bind()}{UnBind()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{classObservable}{Observable}}$<$ \mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Camera}}  $>$\+::Un\+Bind (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classObserver}{Observer}}$<$ Camera  $>$ \&}]{observer }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 23 of file Observable.\+h.
+
+
+
+References Observable$<$ T $>$\+::\+\_\+observers.
+
+
+\begin{DoxyCode}
+24     \{
+25         \mbox{\hyperlink{classObservable_ae6028589035c86e8a9c4375306dca702}{\_observers}}->remove(observer);
+26     \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Camera_a364f5e22921e3d234b31297a64c7d932}\label{classEngine_1_1Components_1_1Camera_a364f5e22921e3d234b31297a64c7d932}} 
+\index{Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}!Update@{Update}}
+\index{Update@{Update}!Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Engine\+::\+Components\+::\+Camera}} $\ast$ Engine\+::\+Components\+::\+Camera\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 43 of file Camera.\+cpp.
+
+
+
+Referenced by Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Keys(), Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse(), and Engine\+::\+Components\+::\+Scene\+::\+Set\+Active\+Camera().
+
+
+\begin{DoxyCode}
+44 \{
+45     *\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a5d131a78545d9f70496549946503b27a}{Value}} = *\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_ad24b41321813d1757cb6dd0db52e34dd}{Get}}();
+46     \mbox{\hyperlink{classEngine_1_1Components_1_1Camera_aa80448fee84ef021ad89c29d10fbaafa}{UpdateVectors}}();
+47     \mbox{\hyperlink{classObservable_afaa016d6c6b8a6fad20bb388d35ca014}{Notify}}();
+48     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+49 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Camera_a364f5e22921e3d234b31297a64c7d932_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Camera_aa80448fee84ef021ad89c29d10fbaafa}\label{classEngine_1_1Components_1_1Camera_aa80448fee84ef021ad89c29d10fbaafa}} 
+\index{Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}!Update\+Vectors@{Update\+Vectors}}
+\index{Update\+Vectors@{Update\+Vectors}!Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}}
+\subsubsection{\texorpdfstring{Update\+Vectors()}{UpdateVectors()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Camera}{Engine\+::\+Components\+::\+Camera}} $\ast$ Engine\+::\+Components\+::\+Camera\+::\+Update\+Vectors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Up = $\ast$\+Position + glm\+::normalize($\ast$\+Up -\/ $\ast$\+Position); Direction = $\ast$\+Position + glm\+::normalize($\ast$\+Direction -\/ $\ast$\+Position); 
+
+Definition at line 29 of file Camera.\+cpp.
+
+
+
+References glm\+::\+Front(), glm\+::\+Right(), and glm\+::\+Up().
+
+
+\begin{DoxyCode}
+30 \{
+31     \textcolor{comment}{/*Front->x = Direction->x;}
+32 \textcolor{comment}{    Front->z = Direction->z;}
+33 \textcolor{comment}{    Front->y = Position->y;*/}
+36     *\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a9d8692aa379c9ab00f69df10d1d3651b}{Front}} = glm::normalize(*\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_ab2c3ed9a1321a95db8fca95bc7f4b290}{Position}} - *\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a23619a66046258f1158313f0c790ffa2}{Direction}});
+37 
+38     *\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a10b30289c89694d13918a979bade13d9}{Right}} = glm::normalize(glm::cross(*\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a84a4199b9c60579a0f148b9980e05200}{Up}}, *\mbox{\hyperlink{classEngine_1_1Components_1_1Camera_a9d8692aa379c9ab00f69df10d1d3651b}{Front}}));
+39 
+40     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+41 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{classEngine_1_1Components_1_1Camera_aa80448fee84ef021ad89c29d10fbaafa_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Camera_a23619a66046258f1158313f0c790ffa2}\label{classEngine_1_1Components_1_1Camera_a23619a66046258f1158313f0c790ffa2}} 
+\index{Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}!Direction@{Direction}}
+\index{Direction@{Direction}!Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}}
+\subsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily glm\+::vec3$\ast$ Engine\+::\+Components\+::\+Camera\+::\+Direction}
+
+
+
+Definition at line 18 of file Camera.\+h.
+
+
+
+Referenced by Camera(), Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Keys(), and Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Camera_a9d8692aa379c9ab00f69df10d1d3651b}\label{classEngine_1_1Components_1_1Camera_a9d8692aa379c9ab00f69df10d1d3651b}} 
+\index{Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}!Front@{Front}}
+\index{Front@{Front}!Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}}
+\subsubsection{\texorpdfstring{Front}{Front}}
+{\footnotesize\ttfamily glm\+::vec3$\ast$ Engine\+::\+Components\+::\+Camera\+::\+Front}
+
+
+
+Definition at line 21 of file Camera.\+h.
+
+
+
+Referenced by Camera(), and Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Keys().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Camera_ab2c3ed9a1321a95db8fca95bc7f4b290}\label{classEngine_1_1Components_1_1Camera_ab2c3ed9a1321a95db8fca95bc7f4b290}} 
+\index{Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}!Position@{Position}}
+\index{Position@{Position}!Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}}
+\subsubsection{\texorpdfstring{Position}{Position}}
+{\footnotesize\ttfamily glm\+::vec3$\ast$ Engine\+::\+Components\+::\+Camera\+::\+Position}
+
+
+
+Definition at line 17 of file Camera.\+h.
+
+
+
+Referenced by Camera(), Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Keys(), and Application\+::\+Engines\+::\+Light\+Engine\+::\+Init().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Camera_a10b30289c89694d13918a979bade13d9}\label{classEngine_1_1Components_1_1Camera_a10b30289c89694d13918a979bade13d9}} 
+\index{Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}!Right@{Right}}
+\index{Right@{Right}!Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}}
+\subsubsection{\texorpdfstring{Right}{Right}}
+{\footnotesize\ttfamily glm\+::vec3$\ast$ Engine\+::\+Components\+::\+Camera\+::\+Right}
+
+
+
+Definition at line 20 of file Camera.\+h.
+
+
+
+Referenced by Camera(), Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Keys(), and Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Camera_a84a4199b9c60579a0f148b9980e05200}\label{classEngine_1_1Components_1_1Camera_a84a4199b9c60579a0f148b9980e05200}} 
+\index{Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}!Up@{Up}}
+\index{Up@{Up}!Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}}
+\subsubsection{\texorpdfstring{Up}{Up}}
+{\footnotesize\ttfamily glm\+::vec3$\ast$ Engine\+::\+Components\+::\+Camera\+::\+Up}
+
+
+
+Definition at line 19 of file Camera.\+h.
+
+
+
+Referenced by Camera(), Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Keys(), and Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Camera_a5d131a78545d9f70496549946503b27a}\label{classEngine_1_1Components_1_1Camera_a5d131a78545d9f70496549946503b27a}} 
+\index{Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}!Value@{Value}}
+\index{Value@{Value}!Engine\+::\+Components\+::\+Camera@{Engine\+::\+Components\+::\+Camera}}
+\subsubsection{\texorpdfstring{Value}{Value}}
+{\footnotesize\ttfamily glm\+::mat4$\ast$ Engine\+::\+Components\+::\+Camera\+::\+Value}
+
+
+
+Definition at line 29 of file Camera.\+h.
+
+
+
+Referenced by Camera(), and Application\+::\+Engines\+::\+Light\+Engine\+::\+Init().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{Camera_8h}{Camera.\+h}}\item 
+Z\+P\+G/\mbox{\hyperlink{Camera_8cpp}{Camera.\+cpp}}\end{DoxyCompactItemize}

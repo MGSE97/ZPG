@@ -1,0 +1,158 @@
+\hypertarget{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{}\section{Engine\+:\+:Components\+:\+:Graphics\+:\+:Material\+Value$<$ T $>$ Class Template Reference}
+\label{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}\index{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value$<$ T $>$@{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Material\+Value.\+h$>$}
+
+
+
+Inheritance diagram for Engine\+:\+:Components\+:\+:Graphics\+:\+:Material\+Value$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classEngine_1_1Components_1_1Graphics_1_1MaterialValue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Engine\+:\+:Components\+:\+:Graphics\+:\+:Material\+Value$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classEngine_1_1Components_1_1Graphics_1_1MaterialValue__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue_ac360e2391eea68445b15c3fafb536e40}{Material\+Value}} (\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Graphics\+::\+Shader}} $\ast$shader, const G\+Lchar $\ast$property, T $\ast$value)
+\item 
+void \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue_a88dbac3446bf9e78c7411e79c1b58977}{Set}} (\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$program) override
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const G\+Lchar $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase_a53f5d1edea5f564931535250d3f5039c}{Property}}
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Shader}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase_a45fd55d67557a2975f1274aa41045512}{Shader}}
+\item 
+T $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue_a1fbe4d2c3c1cf6c1538cf0012a78cb6e}{Value}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value$<$ T $>$}
+
+
+
+Definition at line 14 of file Material\+Value.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1MaterialValue_ac360e2391eea68445b15c3fafb536e40}\label{classEngine_1_1Components_1_1Graphics_1_1MaterialValue_ac360e2391eea68445b15c3fafb536e40}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value@{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value}!Material\+Value@{Material\+Value}}
+\index{Material\+Value@{Material\+Value}!Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value@{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value}}
+\subsubsection{\texorpdfstring{Material\+Value()}{MaterialValue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value}}$<$ T $>$\+::\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Material\+Value}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Graphics\+::\+Shader}} $\ast$}]{shader,  }\item[{const G\+Lchar $\ast$}]{property,  }\item[{T $\ast$}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 17 of file Material\+Value.\+h.
+
+
+
+References Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value$<$ T $>$\+::\+Value.
+
+
+\begin{DoxyCode}
+17                                                                                         :
+18                     \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase_aec4518ee9e8635ab6639609c92d0f89d}{MaterialValueBase}}(shader, property)
+19                 \{
+20                     \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue_a1fbe4d2c3c1cf6c1538cf0012a78cb6e}{Value}} = value;
+21                 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1MaterialValue_a88dbac3446bf9e78c7411e79c1b58977}\label{classEngine_1_1Components_1_1Graphics_1_1MaterialValue_a88dbac3446bf9e78c7411e79c1b58977}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value@{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value}!Set@{Set}}
+\index{Set@{Set}!Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value@{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value}}
+\subsubsection{\texorpdfstring{Set()}{Set()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value}}$<$ T $>$\+::Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$}]{program }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase_abc2e449e9067701c927fca5962391afb}{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value\+Base}}.
+
+
+
+Definition at line 23 of file Material\+Value.\+h.
+
+
+
+References Engine\+::\+Components\+::\+Graphics\+::\+Shader\+::\+Send\+Uniform(), and Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value$<$ T $>$\+::\+Value.
+
+
+\begin{DoxyCode}
+24                 \{
+25                     \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase_a45fd55d67557a2975f1274aa41045512}{Shader}}->\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a24131f3622fe536794de21e0fb499276}{SendUniform}}(program, \mbox{\hyperlink{classProperty}{Property}}, 
+      \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue_a1fbe4d2c3c1cf6c1538cf0012a78cb6e}{Value}});
+26                 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Graphics_1_1MaterialValue_a88dbac3446bf9e78c7411e79c1b58977_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase_a53f5d1edea5f564931535250d3f5039c}\label{classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase_a53f5d1edea5f564931535250d3f5039c}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value@{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value}!Property@{Property}}
+\index{Property@{Property}!Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value@{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value}}
+\subsubsection{\texorpdfstring{Property}{Property}}
+{\footnotesize\ttfamily const G\+Lchar$\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value\+Base\+::\+Property\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 21 of file Material\+Value\+Base.\+h.
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase_a45fd55d67557a2975f1274aa41045512}\label{classEngine_1_1Components_1_1Graphics_1_1MaterialValueBase_a45fd55d67557a2975f1274aa41045512}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value@{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value}!Shader@{Shader}}
+\index{Shader@{Shader}!Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value@{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value}}
+\subsubsection{\texorpdfstring{Shader}{Shader}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Shader}}$\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value\+Base\+::\+Shader\hspace{0.3cm}{\ttfamily [inherited]}}
+
+
+
+Definition at line 20 of file Material\+Value\+Base.\+h.
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1MaterialValue_a1fbe4d2c3c1cf6c1538cf0012a78cb6e}\label{classEngine_1_1Components_1_1Graphics_1_1MaterialValue_a1fbe4d2c3c1cf6c1538cf0012a78cb6e}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value@{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value}!Value@{Value}}
+\index{Value@{Value}!Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value@{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value}}
+\subsubsection{\texorpdfstring{Value}{Value}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1MaterialValue}{Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value}}$<$ T $>$\+::Value}
+
+
+
+Definition at line 22 of file Material\+Value.\+h.
+
+
+
+Referenced by Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value$<$ T $>$\+::\+Material\+Value(), and Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value$<$ T $>$\+::\+Set().
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{MaterialValue_8h}{Material\+Value.\+h}}\end{DoxyCompactItemize}

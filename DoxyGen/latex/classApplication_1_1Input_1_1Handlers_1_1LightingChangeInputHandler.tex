@@ -1,0 +1,177 @@
+\hypertarget{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler}{}\section{Application\+:\+:Input\+:\+:Handlers\+:\+:Lighting\+Change\+Input\+Handler Class Reference}
+\label{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler}\index{Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler}}
+
+
+{\ttfamily \#include $<$Lighting\+Change\+Input\+Handler.\+h$>$}
+
+
+
+Inheritance diagram for Application\+:\+:Input\+:\+:Handlers\+:\+:Lighting\+Change\+Input\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=214pt]{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Application\+:\+:Input\+:\+:Handlers\+:\+:Lighting\+Change\+Input\+Handler\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a5017479d6edea9d6bedf3093cf49cb24}{Handle\+Keys}} (\mbox{\hyperlink{classEngine_1_1BaseEngine}{Engine\+::\+Base\+Engine}} $\ast$engine, \mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Engine\+::\+Components\+::\+Window}} $\ast$window, \mbox{\hyperlink{classEngine_1_1Components_1_1Scene}{Engine\+::\+Components\+::\+Scene}} $\ast$scene, \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ short, bool $>$ \&keys, int keys\+Active) override
+\item 
+virtual bool \mbox{\hyperlink{classEngine_1_1Components_1_1BaseInputHandler_a8b50fb66d01573616072d708075a721e}{Handle\+Mouse}} (Base\+Engine $\ast$engine, Window $\ast$window, Scene $\ast$scene, double x, double y, \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ short, bool $>$ \&keys, int keys\+Active) override
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLight}{Light}} $\ast$ \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a9d2d27b234fd09b3add304963534b719}{\+\_\+selected\+Light}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 8 of file Lighting\+Change\+Input\+Handler.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a5017479d6edea9d6bedf3093cf49cb24}\label{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a5017479d6edea9d6bedf3093cf49cb24}} 
+\index{Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler}!Handle\+Keys@{Handle\+Keys}}
+\index{Handle\+Keys@{Handle\+Keys}!Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler}}
+\subsubsection{\texorpdfstring{Handle\+Keys()}{HandleKeys()}}
+{\footnotesize\ttfamily bool Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler\+::\+Handle\+Keys (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1BaseEngine}{Engine\+::\+Base\+Engine}} $\ast$}]{engine,  }\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Engine\+::\+Components\+::\+Window}} $\ast$}]{window,  }\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Scene}{Engine\+::\+Components\+::\+Scene}} $\ast$}]{scene,  }\item[{\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ short, bool $>$ \&}]{keys,  }\item[{int}]{keys\+Active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classEngine_1_1Components_1_1BaseInputHandler_af7deea3367074324fdbefe48119d40ce}{Engine\+::\+Components\+::\+Base\+Input\+Handler}}.
+
+
+
+Definition at line 5 of file Lighting\+Change\+Input\+Handler.\+cpp.
+
+
+
+References \+\_\+selected\+Light, Engine\+::\+Components\+::\+Scene\+::\+Active\+Camera, Generic\+::\+Dictionary$<$ T\+Key, T\+Value $>$\+::\+First(), Engine\+::\+Components\+::\+Scene\+::\+Lights, Engine\+::\+Objects\+::\+Object\+::\+Model\+Matrix, Light\+::\+Position, Light\+::\+Power, and Application\+::\+Engines\+::\+Light\+Engine\+::specular\+Size.
+
+
+\begin{DoxyCode}
+6 \{
+7     \textcolor{keywordflow}{if}(keys[\textcolor{charliteral}{'L'}] && dynamic\_cast<Application::Engines::LightEngine*>(engine) != \textcolor{keyword}{nullptr})
+8     \{
+9         \textcolor{keywordflow}{if} (\mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a9d2d27b234fd09b3add304963534b719}{\_selectedLight}} == \textcolor{keyword}{nullptr})
+10             \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a9d2d27b234fd09b3add304963534b719}{\_selectedLight}} = scene->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a00f60de2f6c72242a7af0076a3b75e5e}{Lights}}->\mbox{\hyperlink{classGeneric_1_1Dictionary_ab368d54de28e7a3514e1add4bb5b3a36}{First}}();
+11         \textcolor{keyword}{auto} lightEngine = \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine}{Application::Engines::LightEngine}}*\textcolor{keyword}{
+      >}(engine);
+12 
+13         \textcolor{keyword}{const} \textcolor{keyword}{auto} increment = (keys[\textcolor{charliteral}{'R'}] ? 1 : (keys[\textcolor{charliteral}{'F'}] ? -1 : 0));
+14 
+15         \textcolor{keywordflow}{if} (keys[\textcolor{charliteral}{'V'}])
+16             lightEngine->\mbox{\hyperlink{classApplication_1_1Engines_1_1LightEngine_a5da28beed5c8d278c3615974d464f246}{specularSize}} += increment;
+17         \textcolor{keywordflow}{if} (keys[\textcolor{charliteral}{'C'}])
+18             lightEngine->specularStrength += increment * .005f;
+19         \textcolor{keywordflow}{if} (keys[\textcolor{charliteral}{'X'}])
+20             lightEngine->diffuseStrength += increment * .005f;
+21         \textcolor{keywordflow}{if} (keys[\textcolor{charliteral}{'Z'}])
+22             lightEngine->ambientStrength += increment * .001f;
+23 
+24         \textcolor{keywordflow}{if} (keys[\textcolor{charliteral}{'N'}])
+25         \{
+26             lightEngine->specularStrength = 0.f;
+27             lightEngine->diffuseStrength = 0.f;
+28             lightEngine->ambientStrength = 0.f;
+29         \}
+30         \textcolor{keywordflow}{if} (keys[\textcolor{charliteral}{'M'}])
+31         \{
+32             lightEngine->specularStrength = 0.5f;
+33             lightEngine->diffuseStrength = 0.5f;
+34             lightEngine->ambientStrength = 0.2f;
+35         \}
+36 
+37         \textcolor{keyword}{const} \textcolor{keyword}{auto} camera = scene->\mbox{\hyperlink{classEngine_1_1Components_1_1Scene_a9408befee37d89e2c001d25b9e4ed75a}{ActiveCamera}};
+38         \textcolor{keywordflow}{if} (increment != 0 && keysActive == 2)
+39             \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a9d2d27b234fd09b3add304963534b719}{\_selectedLight}}->\mbox{\hyperlink{classLight_a161f4944da390d9bc388091bafd59fe3}{Power}} += increment * 0.01;
+40 
+41         \textcolor{keyword}{const} \textcolor{keywordtype}{float} speed = 0.2f;
+42         \textcolor{keywordflow}{if} (keys[\textcolor{charliteral}{'W'}])
+43             \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a9d2d27b234fd09b3add304963534b719}{\_selectedLight}}->\mbox{\hyperlink{classLight_ab6a04fde7b96f06ab935cd1d53b91e0b}{Position}} -= *(camera->Front) * speed;
+44         \textcolor{keywordflow}{if} (keys[\textcolor{charliteral}{'S'}])
+45             \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a9d2d27b234fd09b3add304963534b719}{\_selectedLight}}->\mbox{\hyperlink{classLight_ab6a04fde7b96f06ab935cd1d53b91e0b}{Position}} += *(camera->Front) * speed;
+46         \textcolor{keywordflow}{if} (keys[\textcolor{charliteral}{'A'}])
+47             \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a9d2d27b234fd09b3add304963534b719}{\_selectedLight}}->\mbox{\hyperlink{classLight_ab6a04fde7b96f06ab935cd1d53b91e0b}{Position}} -= *(camera->Right) * speed;
+48         \textcolor{keywordflow}{if} (keys[\textcolor{charliteral}{'D'}])
+49             \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a9d2d27b234fd09b3add304963534b719}{\_selectedLight}}->\mbox{\hyperlink{classLight_ab6a04fde7b96f06ab935cd1d53b91e0b}{Position}} += *(camera->Right) * speed;
+50         \textcolor{keywordflow}{if} (keys[\textcolor{charliteral}{'E'}])
+51             \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a9d2d27b234fd09b3add304963534b719}{\_selectedLight}}->\mbox{\hyperlink{classLight_ab6a04fde7b96f06ab935cd1d53b91e0b}{Position}} -= *(camera->Up) * speed;
+52         \textcolor{keywordflow}{if} (keys[\textcolor{charliteral}{'Q'}])
+53             \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a9d2d27b234fd09b3add304963534b719}{\_selectedLight}}->\mbox{\hyperlink{classLight_ab6a04fde7b96f06ab935cd1d53b91e0b}{Position}} += *(camera->Up) * speed;
+54 
+55         *\mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a9d2d27b234fd09b3add304963534b719}{\_selectedLight}}->\mbox{\hyperlink{classEngine_1_1Objects_1_1Object_acf41cc091fa270053245ed26bc28c8a4}{ModelMatrix}} = glm::scale(
+56             glm::translate(glm::mat4(1.f), \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a9d2d27b234fd09b3add304963534b719}{\_selectedLight}}->
+      \mbox{\hyperlink{classLight_ab6a04fde7b96f06ab935cd1d53b91e0b}{Position}}), 
+57             glm::vec3(0.2*\mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a9d2d27b234fd09b3add304963534b719}{\_selectedLight}}->\mbox{\hyperlink{classLight_a161f4944da390d9bc388091bafd59fe3}{Power}}, 0.2*
+      \mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a9d2d27b234fd09b3add304963534b719}{\_selectedLight}}->\mbox{\hyperlink{classLight_a161f4944da390d9bc388091bafd59fe3}{Power}}, 0.2*\mbox{\hyperlink{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a9d2d27b234fd09b3add304963534b719}{\_selectedLight}}->
+      \mbox{\hyperlink{classLight_a161f4944da390d9bc388091bafd59fe3}{Power}})
+58         );
+59         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+60     \}
+61     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+62 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a5017479d6edea9d6bedf3093cf49cb24_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1BaseInputHandler_a8b50fb66d01573616072d708075a721e}\label{classEngine_1_1Components_1_1BaseInputHandler_a8b50fb66d01573616072d708075a721e}} 
+\index{Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler}!Handle\+Mouse@{Handle\+Mouse}}
+\index{Handle\+Mouse@{Handle\+Mouse}!Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler}}
+\subsubsection{\texorpdfstring{Handle\+Mouse()}{HandleMouse()}}
+{\footnotesize\ttfamily bool Engine\+::\+Components\+::\+Base\+Input\+Handler\+::\+Handle\+Mouse (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1BaseEngine}{Base\+Engine}} $\ast$}]{engine,  }\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Window}} $\ast$}]{window,  }\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Scene}{Scene}} $\ast$}]{scene,  }\item[{double}]{x,  }\item[{double}]{y,  }\item[{\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ short, bool $>$ \&}]{keys,  }\item[{int}]{keys\+Active }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [inherited]}}
+
+
+
+Definition at line 8 of file Base\+Input\+Handler.\+cpp.
+
+
+\begin{DoxyCode}
+9 \{
+10     \textcolor{keywordflow}{return} \textcolor{keyword}{true};
+11 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a9d2d27b234fd09b3add304963534b719}\label{classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_a9d2d27b234fd09b3add304963534b719}} 
+\index{Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler}!\+\_\+selected\+Light@{\+\_\+selected\+Light}}
+\index{\+\_\+selected\+Light@{\+\_\+selected\+Light}!Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler@{Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler}}
+\subsubsection{\texorpdfstring{\+\_\+selected\+Light}{\_selectedLight}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classLight}{Light}}$\ast$ Application\+::\+Input\+::\+Handlers\+::\+Lighting\+Change\+Input\+Handler\+::\+\_\+selected\+Light = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 13 of file Lighting\+Change\+Input\+Handler.\+h.
+
+
+
+Referenced by Handle\+Keys().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{LightingChangeInputHandler_8h}{Lighting\+Change\+Input\+Handler.\+h}}\item 
+Z\+P\+G/\mbox{\hyperlink{LightingChangeInputHandler_8cpp}{Lighting\+Change\+Input\+Handler.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="Observable_8cpp" kind="file" language="C++">
+    <compoundname>Observable.cpp</compoundname>
+    <includes refid="Observable_8h" local="yes">Observable.h</includes>
+    <incdepgraph>
+      <node id="1590">
+        <label>list</label>
+      </node>
+      <node id="1583">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="1584" relation="include">
+        </childnode>
+        <childnode refid="1585" relation="include">
+        </childnode>
+        <childnode refid="1586" relation="include">
+        </childnode>
+        <childnode refid="1587" relation="include">
+        </childnode>
+        <childnode refid="1588" relation="include">
+        </childnode>
+        <childnode refid="1589" relation="include">
+        </childnode>
+      </node>
+      <node id="1589">
+        <label>string</label>
+      </node>
+      <node id="1584">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="1588">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="1581">
+        <label>Observable.h</label>
+        <link refid="Observable_8h"/>
+        <childnode refid="1582" relation="include">
+        </childnode>
+        <childnode refid="1591" relation="include">
+        </childnode>
+        <childnode refid="1592" relation="include">
+        </childnode>
+      </node>
+      <node id="1585">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="1592">
+        <label>vector</label>
+      </node>
+      <node id="1582">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="1583" relation="include">
+        </childnode>
+        <childnode refid="1590" relation="include">
+        </childnode>
+      </node>
+      <node id="1591">
+        <label>Observer.h</label>
+        <link refid="Observer_8h"/>
+      </node>
+      <node id="1586">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="1587">
+        <label>xstring</label>
+      </node>
+      <node id="1580">
+        <label>ZPG/Observable.cpp</label>
+        <link refid="Observable_8cpp"/>
+        <childnode refid="1581" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Observable_8h" kindref="compound">Observable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ZPG/Observable.cpp"/>
+  </compounddef>
+</doxygen>

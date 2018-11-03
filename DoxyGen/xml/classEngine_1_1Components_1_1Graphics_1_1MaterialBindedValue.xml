@@ -1,0 +1,225 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Engine::Components::Graphics::MaterialBindedValue</compoundname>
+    <basecompoundref refid="classObserver" prot="public" virt="non-virtual">Observer&lt; T &gt;</basecompoundref>
+    <includes refid="MaterialBindedValue_8h" local="no">MaterialBindedValue.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1af217c3d5cb01922019f108b064cb2a69" prot="public" static="no" mutable="no">
+        <type><ref refid="classObservable" kindref="compound">Observable</ref>&lt; T &gt; *</type>
+        <definition>Observable&lt;T&gt;* Engine::Components::Graphics::MaterialBindedValue&lt; T &gt;::Observable</definition>
+        <argsstring></argsstring>
+        <name>Observable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/MaterialBindedValue.h" line="29" column="1" bodyfile="ZPG/MaterialBindedValue.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1aa538707c0eb31482fdb7e06926404b47" prot="public" static="no" mutable="no">
+        <type>const GLchar *</type>
+        <definition>const GLchar* Engine::Components::Graphics::MaterialBindedValue&lt; T &gt;::Property</definition>
+        <argsstring></argsstring>
+        <name>Property</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/MaterialBindedValue.h" line="27" column="1" bodyfile="ZPG/MaterialBindedValue.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1a2c069aa41aebee61554ce21b54a08ec8" prot="public" static="no" mutable="no">
+        <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref> *</type>
+        <definition>Shader* Engine::Components::Graphics::MaterialBindedValue&lt; T &gt;::Shader</definition>
+        <argsstring></argsstring>
+        <name>Shader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/MaterialBindedValue.h" line="26" column="1" bodyfile="ZPG/MaterialBindedValue.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1acb1b73dd34f8cd4ff9d68f0ce483e372" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceEngine_1_1Components_1_1Graphics_1a44f5a2b57ee82aed849896c8311e403b" kindref="member">MaterialValueType</ref></type>
+        <definition>MaterialValueType Engine::Components::Graphics::MaterialBindedValue&lt; T &gt;::Type</definition>
+        <argsstring></argsstring>
+        <name>Type</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/MaterialBindedValue.h" line="28" column="1" bodyfile="ZPG/MaterialBindedValue.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1ad2532a61c245e1d557552e2180e08e72" compoundref="MaterialBindedValue_8h" startline="18" endline="25">Engine::Components::Graphics::MaterialBindedValue&lt; T &gt;::MaterialBindedValue</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1a954c91d9f00092782f0ed0b840d92e26" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* Engine::Components::Graphics::MaterialBindedValue&lt; T &gt;::Value</definition>
+        <argsstring></argsstring>
+        <name>Value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/MaterialBindedValue.h" line="30" column="1" bodyfile="ZPG/MaterialBindedValue.h" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1ad2532a61c245e1d557552e2180e08e72" compoundref="MaterialBindedValue_8h" startline="18" endline="25">Engine::Components::Graphics::MaterialBindedValue&lt; T &gt;::MaterialBindedValue</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1ad2532a61c245e1d557552e2180e08e72" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Components::Graphics::MaterialBindedValue&lt; T &gt;::MaterialBindedValue</definition>
+        <argsstring>(Shader *shader, const GLchar *property, MaterialValueType type, Observable&lt; T &gt; *observable, void *value)</argsstring>
+        <name>MaterialBindedValue</name>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref> *</type>
+          <declname>shader</declname>
+        </param>
+        <param>
+          <type>const GLchar *</type>
+          <declname>property</declname>
+        </param>
+        <param>
+          <type><ref refid="namespaceEngine_1_1Components_1_1Graphics_1a44f5a2b57ee82aed849896c8311e403b" kindref="member">MaterialValueType</ref></type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type><ref refid="classObservable" kindref="compound">Observable</ref>&lt; T &gt; *</type>
+          <declname>observable</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/MaterialBindedValue.h" line="18" column="1" bodyfile="ZPG/MaterialBindedValue.h" bodystart="18" bodyend="25"/>
+        <references refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1acb1b73dd34f8cd4ff9d68f0ce483e372" compoundref="MaterialBindedValue_8h" startline="28">Engine::Components::Graphics::MaterialBindedValue&lt; T &gt;::Type</references>
+        <references refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1a954c91d9f00092782f0ed0b840d92e26" compoundref="MaterialBindedValue_8h" startline="30">Engine::Components::Graphics::MaterialBindedValue&lt; T &gt;::Value</references>
+      </memberdef>
+      <memberdef kind="function" id="classObserver_1a3440221897a56f77975c504b0797c0d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void Observer&lt; T &gt;::Update</definition>
+        <argsstring>(T *value)=0</argsstring>
+        <name>Update</name>
+        <param>
+          <type>T *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Observer.h" line="33" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="396">
+        <label>Engine::Components::Graphics::MaterialBindedValue&lt; T &gt;</label>
+        <link refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue"/>
+        <childnode refid="397" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="397">
+        <label>Observer&lt; T &gt;</label>
+        <link refid="classObserver"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="398">
+        <label>Engine::Components::Graphics::MaterialBindedValue&lt; T &gt;</label>
+        <link refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue"/>
+        <childnode refid="399" relation="public-inheritance">
+        </childnode>
+        <childnode refid="400" relation="usage">
+          <edgelabel>+Type</edgelabel>
+        </childnode>
+        <childnode refid="401" relation="usage">
+          <edgelabel>+Shader</edgelabel>
+        </childnode>
+        <childnode refid="405" relation="usage">
+          <edgelabel>+Observable</edgelabel>
+        </childnode>
+        <childnode refid="406" relation="usage">
+          <edgelabel>+Value</edgelabel>
+        </childnode>
+        <childnode refid="407" relation="usage">
+          <edgelabel>+Property</edgelabel>
+        </childnode>
+      </node>
+      <node id="406">
+        <label>void *</label>
+      </node>
+      <node id="407">
+        <label>const GLchar *</label>
+      </node>
+      <node id="403">
+        <label>char *</label>
+      </node>
+      <node id="405">
+        <label>Observable&lt; T &gt; *</label>
+      </node>
+      <node id="404">
+        <label>GLuint</label>
+      </node>
+      <node id="400">
+        <label>MaterialValueType</label>
+      </node>
+      <node id="401">
+        <label>Engine::Components::Graphics::Shader</label>
+        <link refid="classEngine_1_1Components_1_1Graphics_1_1Shader"/>
+        <childnode refid="402" relation="usage">
+          <edgelabel>-_compiled</edgelabel>
+        </childnode>
+        <childnode refid="403" relation="usage">
+          <edgelabel>-_code</edgelabel>
+        </childnode>
+        <childnode refid="404" relation="usage">
+          <edgelabel>-_shader</edgelabel>
+        </childnode>
+      </node>
+      <node id="402">
+        <label>bool</label>
+      </node>
+      <node id="399">
+        <label>Observer&lt; T &gt;</label>
+        <link refid="classObserver"/>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/MaterialBindedValue.h" line="16" column="1" bodyfile="ZPG/MaterialBindedValue.h" bodystart="15" bodyend="31"/>
+    <listofallmembers>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1ad2532a61c245e1d557552e2180e08e72" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::MaterialBindedValue</scope><name>MaterialBindedValue</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1af217c3d5cb01922019f108b064cb2a69" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::MaterialBindedValue</scope><name>Observable</name></member>
+      <member refid="classObserver_1a59dd3feed8ad082fd269e2126479c937" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::MaterialBindedValue</scope><name>Observer</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1aa538707c0eb31482fdb7e06926404b47" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::MaterialBindedValue</scope><name>Property</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1a2c069aa41aebee61554ce21b54a08ec8" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::MaterialBindedValue</scope><name>Shader</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1acb1b73dd34f8cd4ff9d68f0ce483e372" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::MaterialBindedValue</scope><name>Type</name></member>
+      <member refid="classObserver_1a3440221897a56f77975c504b0797c0d5" prot="public" virt="pure-virtual"><scope>Engine::Components::Graphics::MaterialBindedValue</scope><name>Update</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1MaterialBindedValue_1a954c91d9f00092782f0ed0b840d92e26" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::MaterialBindedValue</scope><name>Value</name></member>
+      <member refid="classObserver_1a28d160e9d15f30ff1eb6dc856db01e1a" prot="public" virt="virtual"><scope>Engine::Components::Graphics::MaterialBindedValue</scope><name>~Observer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

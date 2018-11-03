@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_4d5d0693d194b6b00075e8d57c882109" kind="dir">
+    <compoundname>ZPG/Assets/Models/2</compoundname>
+    <innerfile refid="plain_8h">plain.h</innerfile>
+    <innerfile refid="2_2sphere_8h">sphere.h</innerfile>
+    <innerfile refid="spheref_8h">spheref.h</innerfile>
+    <innerfile refid="2_2suzi__flat_8h">suzi_flat.h</innerfile>
+    <innerfile refid="2_2suzi__smooth_8h">suzi_smooth.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ZPG/Assets/Models/2/"/>
+  </compounddef>
+</doxygen>

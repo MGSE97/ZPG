@@ -1,0 +1,333 @@
+\hypertarget{classEngine_1_1Components_1_1Window}{}\section{Engine\+:\+:Components\+:\+:Window Class Reference}
+\label{classEngine_1_1Components_1_1Window}\index{Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}}
+
+
+{\ttfamily \#include $<$Window.\+h$>$}
+
+
+
+Collaboration diagram for Engine\+:\+:Components\+:\+:Window\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Window__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Window_aa88c443e1b4cb90949aace6e1150305b}{Window}} (int width, int height, const char $\ast$title, float speed=10.\+0f, int swap\+Interval=1)
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Window_a5f4bd958811d789d9380dd06a359163c}{$\sim$\+Window}} ()
+\item 
+G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a4d5c3ff7df28f77bfa330beb447512f8}{Get}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Window}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a2fbf92d20aae2e10273b15ad43cc8db8}{Info}} (std\+::ostream \&stream)
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Window}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Window_adddcf28e753f81571ba39b4d8f698ada}{Show}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classEngine_1_1Components_1_1Window_ad9cf40200634bff27dbc7ae9a841bb99}{Height}}
+\item 
+float \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a13e154573d91195ef0f545a9fa0e0403}{Speed}}
+\item 
+int \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a99094c227614faf796be6db157cdf7e6}{Swap\+Interval}}
+\item 
+const char $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Window_adedeb611fa5cecb35f940cea40e5badd}{Title}}
+\item 
+int \mbox{\hyperlink{classEngine_1_1Components_1_1Window_ad5f71bfbb06ff5452b63bddf4b0c20b1}{Width}}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a3402f1bd44e0ac341bb6749dbe2fa0b6}{\+\_\+angle}}
+\item 
+int \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a0a50127d5427b543f83d88bb03a99c1e}{\+\_\+height}}
+\item 
+float \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a785d2029ba6e6b10c7adab8513ec88b3}{\+\_\+ratio}}
+\item 
+int \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a65e35d20618664aac50bc7036896b524}{\+\_\+width}}
+\item 
+G\+L\+F\+Wwindow $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a4e37d9a51476443d15d9a395d278237a}{\+\_\+window}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 12 of file Window.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Window_aa88c443e1b4cb90949aace6e1150305b}\label{classEngine_1_1Components_1_1Window_aa88c443e1b4cb90949aace6e1150305b}} 
+\index{Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}!Window@{Window}}
+\index{Window@{Window}!Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}}
+\subsubsection{\texorpdfstring{Window()}{Window()}}
+{\footnotesize\ttfamily Engine\+::\+Components\+::\+Window\+::\+Window (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{const char $\ast$}]{title,  }\item[{float}]{speed = {\ttfamily 10.0f},  }\item[{int}]{swap\+Interval = {\ttfamily 1} }\end{DoxyParamCaption})}
+
+
+
+Definition at line 9 of file Window.\+cpp.
+
+
+
+References Height, Speed, Swap\+Interval, Title, and Width.
+
+
+\begin{DoxyCode}
+10 \{
+11     \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a13e154573d91195ef0f545a9fa0e0403}{Speed}} = speed;
+12     \mbox{\hyperlink{classEngine_1_1Components_1_1Window_ad5f71bfbb06ff5452b63bddf4b0c20b1}{Width}} = width;
+13     \mbox{\hyperlink{classEngine_1_1Components_1_1Window_ad9cf40200634bff27dbc7ae9a841bb99}{Height}} = height;
+14     \mbox{\hyperlink{classEngine_1_1Components_1_1Window_adedeb611fa5cecb35f940cea40e5badd}{Title}} = title;
+15     \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a99094c227614faf796be6db157cdf7e6}{SwapInterval}} = swapInterval;
+16     \textcolor{comment}{//OnUpdate += Sharp::EventHandler::Bind(&\_update, *this);}
+17 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Window_a5f4bd958811d789d9380dd06a359163c}\label{classEngine_1_1Components_1_1Window_a5f4bd958811d789d9380dd06a359163c}} 
+\index{Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}!````~Window@{$\sim$\+Window}}
+\index{````~Window@{$\sim$\+Window}!Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}}
+\subsubsection{\texorpdfstring{$\sim$\+Window()}{~Window()}}
+{\footnotesize\ttfamily Engine\+::\+Components\+::\+Window\+::$\sim$\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 95 of file Window.\+cpp.
+
+
+\begin{DoxyCode}
+96 \{
+97     glfwDestroyWindow(\mbox{\hyperlink{classEngine_1_1Components_1_1Window_a4e37d9a51476443d15d9a395d278237a}{\_window}});
+98     glfwTerminate();
+99     exit(EXIT\_SUCCESS);
+100 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Window_a4d5c3ff7df28f77bfa330beb447512f8}\label{classEngine_1_1Components_1_1Window_a4d5c3ff7df28f77bfa330beb447512f8}} 
+\index{Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}!Get@{Get}}
+\index{Get@{Get}!Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}}
+\subsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily G\+L\+F\+Wwindow $\ast$ Engine\+::\+Components\+::\+Window\+::\+Get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 78 of file Window.\+cpp.
+
+
+
+Referenced by Engine\+::\+Base\+Engine\+::\+Update\+Begin(), and Engine\+::\+Base\+Engine\+::\+Update\+End().
+
+
+\begin{DoxyCode}
+79 \{
+80     \textcolor{keywordflow}{return} \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a4e37d9a51476443d15d9a395d278237a}{\_window}};
+81 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{classEngine_1_1Components_1_1Window_a4d5c3ff7df28f77bfa330beb447512f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Window_a2fbf92d20aae2e10273b15ad43cc8db8}\label{classEngine_1_1Components_1_1Window_a2fbf92d20aae2e10273b15ad43cc8db8}} 
+\index{Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}!Info@{Info}}
+\index{Info@{Info}!Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}}
+\subsubsection{\texorpdfstring{Info()}{Info()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Engine\+::\+Components\+::\+Window}} $\ast$ Engine\+::\+Components\+::\+Window\+::\+Info (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{stream }\end{DoxyParamCaption})}
+
+
+
+Definition at line 63 of file Window.\+cpp.
+
+
+\begin{DoxyCode}
+64 \{
+65     \textcolor{comment}{// get version info}
+66     stream << \textcolor{stringliteral}{"OpenGL Version: "} << glGetString(GL\_VERSION) << std::endl;
+67     stream << \textcolor{stringliteral}{"Using GLEW "} << glewGetString(GLEW\_VERSION) << std::endl;
+68     stream << \textcolor{stringliteral}{"Vendor "} << glGetString(GL\_VENDOR) << std::endl;
+69     stream << \textcolor{stringliteral}{"Renderer "} << glGetString(GL\_RENDERER) << std::endl;
+70     stream << \textcolor{stringliteral}{"GLSL "} << glGetString(GL\_SHADING\_LANGUAGE\_VERSION) << std::endl;
+71     \textcolor{keywordtype}{int} major, minor, revision;
+72     glfwGetVersion(&major, &minor, &revision);
+73     stream << \textcolor{stringliteral}{"Using GLFW "} << major << \textcolor{stringliteral}{"."} << minor << \textcolor{stringliteral}{"."} << revision << std::endl;
+74     stream << \textcolor{stringliteral}{"W, H, R: "} << \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a65e35d20618664aac50bc7036896b524}{\_width}} << \textcolor{stringliteral}{", "} << \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a0a50127d5427b543f83d88bb03a99c1e}{\_height}} << \textcolor{stringliteral}{", "} << 
+      \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a785d2029ba6e6b10c7adab8513ec88b3}{\_ratio}} << std::endl;
+75     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+76 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Window_adddcf28e753f81571ba39b4d8f698ada}\label{classEngine_1_1Components_1_1Window_adddcf28e753f81571ba39b4d8f698ada}} 
+\index{Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}!Show@{Show}}
+\index{Show@{Show}!Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}}
+\subsubsection{\texorpdfstring{Show()}{Show()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Window}{Engine\+::\+Components\+::\+Window}} $\ast$ Engine\+::\+Components\+::\+Window\+::\+Show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 19 of file Window.\+cpp.
+
+
+\begin{DoxyCode}
+20 \{
+21     \textcolor{comment}{//Init GLFW}
+22     \textcolor{comment}{/*if (!glfwInit()) \{}
+23 \textcolor{comment}{        fprintf(stderr, "ERROR: could not start GLFW3\(\backslash\)n");}
+24 \textcolor{comment}{        exit(EXIT\_FAILURE);}
+25 \textcolor{comment}{    \}*/}
+26 
+27     \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a4e37d9a51476443d15d9a395d278237a}{\_window}} = glfwCreateWindow(\mbox{\hyperlink{classEngine_1_1Components_1_1Window_ad5f71bfbb06ff5452b63bddf4b0c20b1}{Width}}, \mbox{\hyperlink{classEngine_1_1Components_1_1Window_ad9cf40200634bff27dbc7ae9a841bb99}{Height}}, \mbox{\hyperlink{classEngine_1_1Components_1_1Window_adedeb611fa5cecb35f940cea40e5badd}{Title}}, NULL, NULL);
+28     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classEngine_1_1Components_1_1Window_a4e37d9a51476443d15d9a395d278237a}{\_window}})
+29     \{
+30         glfwTerminate();
+31         exit(EXIT\_FAILURE);
+32     \}
+33     glfwMakeContextCurrent(\mbox{\hyperlink{classEngine_1_1Components_1_1Window_a4e37d9a51476443d15d9a395d278237a}{\_window}});
+34     glfwSwapInterval(\mbox{\hyperlink{classEngine_1_1Components_1_1Window_a99094c227614faf796be6db157cdf7e6}{SwapInterval}});
+35     glfwGetFramebufferSize(\mbox{\hyperlink{classEngine_1_1Components_1_1Window_a4e37d9a51476443d15d9a395d278237a}{\_window}}, &\mbox{\hyperlink{classEngine_1_1Components_1_1Window_a65e35d20618664aac50bc7036896b524}{\_width}}, &\mbox{\hyperlink{classEngine_1_1Components_1_1Window_a0a50127d5427b543f83d88bb03a99c1e}{\_height}});
+36     \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a785d2029ba6e6b10c7adab8513ec88b3}{\_ratio}} = \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a65e35d20618664aac50bc7036896b524}{\_width}} / (float)\mbox{\hyperlink{classEngine_1_1Components_1_1Window_a0a50127d5427b543f83d88bb03a99c1e}{\_height}};
+37     glViewport(0, 0, \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a65e35d20618664aac50bc7036896b524}{\_width}}, \mbox{\hyperlink{classEngine_1_1Components_1_1Window_a0a50127d5427b543f83d88bb03a99c1e}{\_height}});
+38 
+39     \textcolor{comment}{// start GLEW extension handler}
+40     glewExperimental = GL\_TRUE;
+41     glewInit();
+42 
+43     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+44 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Window_a3402f1bd44e0ac341bb6749dbe2fa0b6}\label{classEngine_1_1Components_1_1Window_a3402f1bd44e0ac341bb6749dbe2fa0b6}} 
+\index{Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}!\+\_\+angle@{\+\_\+angle}}
+\index{\+\_\+angle@{\+\_\+angle}!Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}}
+\subsubsection{\texorpdfstring{\+\_\+angle}{\_angle}}
+{\footnotesize\ttfamily float Engine\+::\+Components\+::\+Window\+::\+\_\+angle\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 35 of file Window.\+h.
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Window_a0a50127d5427b543f83d88bb03a99c1e}\label{classEngine_1_1Components_1_1Window_a0a50127d5427b543f83d88bb03a99c1e}} 
+\index{Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}!\+\_\+height@{\+\_\+height}}
+\index{\+\_\+height@{\+\_\+height}!Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}}
+\subsubsection{\texorpdfstring{\+\_\+height}{\_height}}
+{\footnotesize\ttfamily int Engine\+::\+Components\+::\+Window\+::\+\_\+height\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 34 of file Window.\+h.
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Window_a785d2029ba6e6b10c7adab8513ec88b3}\label{classEngine_1_1Components_1_1Window_a785d2029ba6e6b10c7adab8513ec88b3}} 
+\index{Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}!\+\_\+ratio@{\+\_\+ratio}}
+\index{\+\_\+ratio@{\+\_\+ratio}!Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}}
+\subsubsection{\texorpdfstring{\+\_\+ratio}{\_ratio}}
+{\footnotesize\ttfamily float Engine\+::\+Components\+::\+Window\+::\+\_\+ratio\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 32 of file Window.\+h.
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Window_a65e35d20618664aac50bc7036896b524}\label{classEngine_1_1Components_1_1Window_a65e35d20618664aac50bc7036896b524}} 
+\index{Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}!\+\_\+width@{\+\_\+width}}
+\index{\+\_\+width@{\+\_\+width}!Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}}
+\subsubsection{\texorpdfstring{\+\_\+width}{\_width}}
+{\footnotesize\ttfamily int Engine\+::\+Components\+::\+Window\+::\+\_\+width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 33 of file Window.\+h.
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Window_a4e37d9a51476443d15d9a395d278237a}\label{classEngine_1_1Components_1_1Window_a4e37d9a51476443d15d9a395d278237a}} 
+\index{Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}!\+\_\+window@{\+\_\+window}}
+\index{\+\_\+window@{\+\_\+window}!Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}}
+\subsubsection{\texorpdfstring{\+\_\+window}{\_window}}
+{\footnotesize\ttfamily G\+L\+F\+Wwindow$\ast$ Engine\+::\+Components\+::\+Window\+::\+\_\+window\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 31 of file Window.\+h.
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Window_ad9cf40200634bff27dbc7ae9a841bb99}\label{classEngine_1_1Components_1_1Window_ad9cf40200634bff27dbc7ae9a841bb99}} 
+\index{Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}!Height@{Height}}
+\index{Height@{Height}!Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}}
+\subsubsection{\texorpdfstring{Height}{Height}}
+{\footnotesize\ttfamily int Engine\+::\+Components\+::\+Window\+::\+Height}
+
+
+
+Definition at line 25 of file Window.\+h.
+
+
+
+Referenced by Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Update(), and Window().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Window_a13e154573d91195ef0f545a9fa0e0403}\label{classEngine_1_1Components_1_1Window_a13e154573d91195ef0f545a9fa0e0403}} 
+\index{Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}!Speed@{Speed}}
+\index{Speed@{Speed}!Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}}
+\subsubsection{\texorpdfstring{Speed}{Speed}}
+{\footnotesize\ttfamily float Engine\+::\+Components\+::\+Window\+::\+Speed}
+
+
+
+Definition at line 23 of file Window.\+h.
+
+
+
+Referenced by Window().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Window_a99094c227614faf796be6db157cdf7e6}\label{classEngine_1_1Components_1_1Window_a99094c227614faf796be6db157cdf7e6}} 
+\index{Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}!Swap\+Interval@{Swap\+Interval}}
+\index{Swap\+Interval@{Swap\+Interval}!Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}}
+\subsubsection{\texorpdfstring{Swap\+Interval}{SwapInterval}}
+{\footnotesize\ttfamily int Engine\+::\+Components\+::\+Window\+::\+Swap\+Interval}
+
+
+
+Definition at line 27 of file Window.\+h.
+
+
+
+Referenced by Window().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Window_adedeb611fa5cecb35f940cea40e5badd}\label{classEngine_1_1Components_1_1Window_adedeb611fa5cecb35f940cea40e5badd}} 
+\index{Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}!Title@{Title}}
+\index{Title@{Title}!Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}}
+\subsubsection{\texorpdfstring{Title}{Title}}
+{\footnotesize\ttfamily const char$\ast$ Engine\+::\+Components\+::\+Window\+::\+Title}
+
+
+
+Definition at line 26 of file Window.\+h.
+
+
+
+Referenced by Window().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Window_ad5f71bfbb06ff5452b63bddf4b0c20b1}\label{classEngine_1_1Components_1_1Window_ad5f71bfbb06ff5452b63bddf4b0c20b1}} 
+\index{Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}!Width@{Width}}
+\index{Width@{Width}!Engine\+::\+Components\+::\+Window@{Engine\+::\+Components\+::\+Window}}
+\subsubsection{\texorpdfstring{Width}{Width}}
+{\footnotesize\ttfamily int Engine\+::\+Components\+::\+Window\+::\+Width}
+
+
+
+Definition at line 24 of file Window.\+h.
+
+
+
+Referenced by Application\+::\+Input\+::\+Handlers\+::\+Camera\+Input\+Handler\+::\+Handle\+Mouse(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Update(), and Window().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{Window_8h}{Window.\+h}}\item 
+Z\+P\+G/\mbox{\hyperlink{Window_8cpp}{Window.\+cpp}}\end{DoxyCompactItemize}

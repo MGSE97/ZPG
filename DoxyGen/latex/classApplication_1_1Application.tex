@@ -1,0 +1,204 @@
+\hypertarget{classApplication_1_1Application}{}\section{Application\+:\+:Application Class Reference}
+\label{classApplication_1_1Application}\index{Application\+::\+Application@{Application\+::\+Application}}
+
+
+{\ttfamily \#include $<$Application.\+h$>$}
+
+
+
+Collaboration diagram for Application\+:\+:Application\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classApplication_1_1Application__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classApplication_1_1Application_aeef3ff221435f74e41115640239e6f34}{$\sim$\+Application}} ()
+\item 
+\mbox{\hyperlink{classApplication_1_1Application}{Application}} $\ast$ \mbox{\hyperlink{classApplication_1_1Application_a478f6946c4bf5361281681f2b58385c3}{Init}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classApplication_1_1Application}{Application}} $\ast$ \mbox{\hyperlink{classApplication_1_1Application_ada268208f57ef136e006bb62fb30ffec}{Get\+Intance}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$ std\+::string, \mbox{\hyperlink{classEngine_1_1BaseEngine}{Engine\+::\+Base\+Engine}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{classApplication_1_1Application_a4f2808bddfc3f8fb2ed3a3fe0d4659ff}{Engines}}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classApplication_1_1Application_aa27a092cca399b3ccee7419a7cda4563}{Application}} ()
+\item 
+void \mbox{\hyperlink{classApplication_1_1Application_a877f88238e07698fb9fcc0b71e9f15e7}{Register\+Engines}} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classApplication_1_1Application}{Application}} \mbox{\hyperlink{classApplication_1_1Application_abd6690c71308921648b3b4da20d604d9}{\+\_\+instance}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 8 of file Application.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classApplication_1_1Application_aeef3ff221435f74e41115640239e6f34}\label{classApplication_1_1Application_aeef3ff221435f74e41115640239e6f34}} 
+\index{Application\+::\+Application@{Application\+::\+Application}!````~Application@{$\sim$\+Application}}
+\index{````~Application@{$\sim$\+Application}!Application\+::\+Application@{Application\+::\+Application}}
+\subsubsection{\texorpdfstring{$\sim$\+Application()}{~Application()}}
+{\footnotesize\ttfamily Application\+::\+Application\+::$\sim$\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 13 of file Application.\+cpp.
+
+
+\begin{DoxyCode}
+14 \{
+15     \mbox{\hyperlink{classApplication_1_1Application_a4f2808bddfc3f8fb2ed3a3fe0d4659ff}{Engines}}->clear();
+16     \textcolor{keyword}{delete} \mbox{\hyperlink{classApplication_1_1Application_a4f2808bddfc3f8fb2ed3a3fe0d4659ff}{Engines}};
+17 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classApplication_1_1Application_aa27a092cca399b3ccee7419a7cda4563}\label{classApplication_1_1Application_aa27a092cca399b3ccee7419a7cda4563}} 
+\index{Application\+::\+Application@{Application\+::\+Application}!Application@{Application}}
+\index{Application@{Application}!Application\+::\+Application@{Application\+::\+Application}}
+\subsubsection{\texorpdfstring{Application()}{Application()}}
+{\footnotesize\ttfamily Application\+::\+Application\+::\+Application (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 8 of file Application.\+cpp.
+
+
+\begin{DoxyCode}
+9 \{
+10     \mbox{\hyperlink{classApplication_1_1Application_a4f2808bddfc3f8fb2ed3a3fe0d4659ff}{Engines}} = \textcolor{keyword}{new} \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic::Dictionary<std::string, Engine::BaseEngine*>}}
+      ();
+11 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classApplication_1_1Application_ada268208f57ef136e006bb62fb30ffec}\label{classApplication_1_1Application_ada268208f57ef136e006bb62fb30ffec}} 
+\index{Application\+::\+Application@{Application\+::\+Application}!Get\+Intance@{Get\+Intance}}
+\index{Get\+Intance@{Get\+Intance}!Application\+::\+Application@{Application\+::\+Application}}
+\subsubsection{\texorpdfstring{Get\+Intance()}{GetIntance()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classApplication_1_1Application}{Application\+::\+Application}} $\ast$ Application\+::\+Application\+::\+Get\+Intance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line 19 of file Application.\+cpp.
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+20 \{
+21     \textcolor{keyword}{static} \mbox{\hyperlink{namespaceApplication}{Application}} instance;
+22     \textcolor{keywordflow}{return} &instance;
+23 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classApplication_1_1Application_ada268208f57ef136e006bb62fb30ffec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classApplication_1_1Application_a478f6946c4bf5361281681f2b58385c3}\label{classApplication_1_1Application_a478f6946c4bf5361281681f2b58385c3}} 
+\index{Application\+::\+Application@{Application\+::\+Application}!Init@{Init}}
+\index{Init@{Init}!Application\+::\+Application@{Application\+::\+Application}}
+\subsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classApplication_1_1Application}{Application\+::\+Application}} $\ast$ Application\+::\+Application\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 25 of file Application.\+cpp.
+
+
+
+Referenced by main().
+
+
+\begin{DoxyCode}
+26 \{
+27     \mbox{\hyperlink{classApplication_1_1Application_a877f88238e07698fb9fcc0b71e9f15e7}{RegisterEngines}}();
+28     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+29 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{classApplication_1_1Application_a478f6946c4bf5361281681f2b58385c3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classApplication_1_1Application_a877f88238e07698fb9fcc0b71e9f15e7}\label{classApplication_1_1Application_a877f88238e07698fb9fcc0b71e9f15e7}} 
+\index{Application\+::\+Application@{Application\+::\+Application}!Register\+Engines@{Register\+Engines}}
+\index{Register\+Engines@{Register\+Engines}!Application\+::\+Application@{Application\+::\+Application}}
+\subsubsection{\texorpdfstring{Register\+Engines()}{RegisterEngines()}}
+{\footnotesize\ttfamily void Application\+::\+Application\+::\+Register\+Engines (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 7 of file Engine\+Registry.\+cpp.
+
+
+\begin{DoxyCode}
+8 \{
+9     \mbox{\hyperlink{classApplication_1_1Application_a4f2808bddfc3f8fb2ed3a3fe0d4659ff}{Engines}}->
+10          Add(\textcolor{stringliteral}{"basic"}, \textcolor{keyword}{new} Engines::BasicEngine())
+11         .\mbox{\hyperlink{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}{Add}}(\textcolor{stringliteral}{"camera"}, \textcolor{keyword}{new} Engines::CameraEngine())
+12         .\mbox{\hyperlink{classGeneric_1_1Dictionary_ae7cb006f801b21c172e8fbac8794fa99}{Add}}(\textcolor{stringliteral}{"light"}, \textcolor{keyword}{new} Engines::LightEngine())
+13     ;
+14 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classApplication_1_1Application_abd6690c71308921648b3b4da20d604d9}\label{classApplication_1_1Application_abd6690c71308921648b3b4da20d604d9}} 
+\index{Application\+::\+Application@{Application\+::\+Application}!\+\_\+instance@{\+\_\+instance}}
+\index{\+\_\+instance@{\+\_\+instance}!Application\+::\+Application@{Application\+::\+Application}}
+\subsubsection{\texorpdfstring{\+\_\+instance}{\_instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classApplication_1_1Application}{Application}} Application\+::\+Application\+::\+\_\+instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line 17 of file Application.\+h.
+
+\mbox{\Hypertarget{classApplication_1_1Application_a4f2808bddfc3f8fb2ed3a3fe0d4659ff}\label{classApplication_1_1Application_a4f2808bddfc3f8fb2ed3a3fe0d4659ff}} 
+\index{Application\+::\+Application@{Application\+::\+Application}!Engines@{Engines}}
+\index{Engines@{Engines}!Application\+::\+Application@{Application\+::\+Application}}
+\subsubsection{\texorpdfstring{Engines}{Engines}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGeneric_1_1Dictionary}{Generic\+::\+Dictionary}}$<$std\+::string, \mbox{\hyperlink{classEngine_1_1BaseEngine}{Engine\+::\+Base\+Engine}}$\ast$$>$$\ast$ Application\+::\+Application\+::\+Engines}
+
+
+
+Definition at line 14 of file Application.\+h.
+
+
+
+Referenced by main().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{Application_8h}{Application.\+h}}\item 
+Z\+P\+G/\mbox{\hyperlink{Application_8cpp}{Application.\+cpp}}\item 
+Z\+P\+G/\mbox{\hyperlink{EngineRegistry_8cpp}{Engine\+Registry.\+cpp}}\end{DoxyCompactItemize}

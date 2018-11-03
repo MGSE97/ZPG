@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="Property_8h" kind="file" language="C++">
+    <compoundname>Property.h</compoundname>
+    <includedby refid="Property_8cpp" local="yes">ZPG/Property.cpp</includedby>
+    <invincdepgraph>
+      <node id="1791">
+        <label>ZPG/Property.cpp</label>
+        <link refid="Property_8cpp"/>
+      </node>
+      <node id="1790">
+        <label>ZPG/Property.h</label>
+        <link refid="Property_8h"/>
+        <childnode refid="1791" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classProperty" prot="public">Property</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>&lt;</highlight><highlight class="keyword">typename</highlight><highlight class="normal"><sp/>T&gt;</highlight></codeline>
+<codeline lineno="3" refid="classProperty" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classProperty" kindref="compound">Property</ref><sp/>{</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="5" refid="classProperty_1a07aa35ff914a89ddfa870beb39ed2282" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classProperty_1a07aa35ff914a89ddfa870beb39ed2282" kindref="member">~Property</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="6" refid="classProperty_1a5544ed373da5ea5aee46217ebed97eb7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>T<sp/>&amp;<sp/><ref refid="classProperty_1a5544ed373da5ea5aee46217ebed97eb7" kindref="member">operator = </ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>T<sp/>&amp;f)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classProperty_1a2be7b50eb1b49c6fbbb434de219e51fd" kindref="member">value</ref><sp/>=<sp/>f;<sp/>}</highlight></codeline>
+<codeline lineno="7" refid="classProperty_1ac6e42e7bc8389563c1a146ada975537d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">operator</highlight><highlight class="normal"><sp/>T<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>&amp;<sp/>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classProperty_1a2be7b50eb1b49c6fbbb434de219e51fd" kindref="member">value</ref>;<sp/>}</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9" refid="classProperty_1a2be7b50eb1b49c6fbbb434de219e51fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>T<sp/><ref refid="classProperty_1a2be7b50eb1b49c6fbbb434de219e51fd" kindref="member">value</ref>;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="ZPG/Property.h"/>
+  </compounddef>
+</doxygen>

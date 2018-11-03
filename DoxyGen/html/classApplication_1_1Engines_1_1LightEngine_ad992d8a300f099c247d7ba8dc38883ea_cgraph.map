@@ -1,0 +1,6 @@
+<map id="Application::Engines::LightEngine::Init" name="Application::Engines::LightEngine::Init">
+<area shape="rect" id="node2" href="$classGeneric_1_1Dictionary.html#ae7cb006f801b21c172e8fbac8794fa99" title="Generic::Dictionary::Add" alt="" coords="195,5,359,32"/>
+<area shape="rect" id="node3" href="$classGeneric_1_1Collection.html#a602c700fa46602ce551b5c133793924c" title="Generic::Collection::Add" alt="" coords="195,56,358,83"/>
+<area shape="rect" id="node4" href="$classEngine_1_1Components_1_1Scene.html#af18bd334fe66952b8d79b8e9e99ab2d8" title="Engine::Components\l::Scene::BeginLoad" alt="" coords="205,107,348,149"/>
+<area shape="rect" id="node5" href="$classEngine_1_1BaseEngine.html#afc82c6a00d5a9d4714740fc5eab5db86" title="Engine::BaseEngine\l::SetActiveScene" alt="" coords="207,173,347,214"/>
+</map>

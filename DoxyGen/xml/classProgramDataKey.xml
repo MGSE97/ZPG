@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classProgramDataKey" kind="class" language="C++" prot="public">
+    <compoundname>ProgramDataKey</compoundname>
+    <includes refid="ProgramDataKey_8h" local="no">ProgramDataKey.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classProgramDataKey_1a34706c7a5f763c8ecb8b5b1d70b41226" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ProgramDataKey::Property</definition>
+        <argsstring></argsstring>
+        <name>Property</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/ProgramDataKey.h" line="14" column="1" bodyfile="ZPG/ProgramDataKey.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classProgramDataKey_1ac8797a9070abe91cea6ad8615d60fa90" prot="public" static="no" mutable="no">
+        <type>Engine::Components::Shader *</type>
+        <definition>Engine::Components::Shader* ProgramDataKey::Shader</definition>
+        <argsstring></argsstring>
+        <name>Shader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/ProgramDataKey.h" line="13" column="1" bodyfile="ZPG/ProgramDataKey.h" bodystart="13" bodyend="-1"/>
+        <referencedby refid="classProgramDataKey_1ab2378434a42d81c34f97912197ad9a8d" compoundref="ProgramDataKey_8h" startline="8" endline="12">ProgramDataKey</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classProgramDataKey_1ab2378434a42d81c34f97912197ad9a8d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ProgramDataKey::ProgramDataKey</definition>
+        <argsstring>(Engine::Components::Shader *shader, std::string property)</argsstring>
+        <name>ProgramDataKey</name>
+        <param>
+          <type>Engine::Components::Shader *</type>
+          <declname>shader</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>property</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/ProgramDataKey.h" line="8" column="1" bodyfile="ZPG/ProgramDataKey.h" bodystart="8" bodyend="12"/>
+        <references refid="classProgramDataKey_1ac8797a9070abe91cea6ad8615d60fa90" compoundref="ProgramDataKey_8h" startline="13">Shader</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="610">
+        <label>Shader *</label>
+      </node>
+      <node id="611">
+        <label>string</label>
+      </node>
+      <node id="609">
+        <label>ProgramDataKey</label>
+        <link refid="classProgramDataKey"/>
+        <childnode refid="610" relation="usage">
+          <edgelabel>+Shader</edgelabel>
+        </childnode>
+        <childnode refid="611" relation="usage">
+          <edgelabel>+Property</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/ProgramDataKey.h" line="6" column="1" bodyfile="ZPG/ProgramDataKey.h" bodystart="5" bodyend="15"/>
+    <listofallmembers>
+      <member refid="classProgramDataKey_1ab2378434a42d81c34f97912197ad9a8d" prot="public" virt="non-virtual"><scope>ProgramDataKey</scope><name>ProgramDataKey</name></member>
+      <member refid="classProgramDataKey_1a34706c7a5f763c8ecb8b5b1d70b41226" prot="public" virt="non-virtual"><scope>ProgramDataKey</scope><name>Property</name></member>
+      <member refid="classProgramDataKey_1ac8797a9070abe91cea6ad8615d60fa90" prot="public" virt="non-virtual"><scope>ProgramDataKey</scope><name>Shader</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

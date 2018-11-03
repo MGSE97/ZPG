@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="MaterialBindedValue_8cpp" kind="file" language="C++">
+    <compoundname>MaterialBindedValue.cpp</compoundname>
+    <includes refid="MaterialBindedValue_8h" local="yes">MaterialBindedValue.h</includes>
+    <incdepgraph>
+      <node id="1274">
+        <label>list</label>
+      </node>
+      <node id="1265">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="1266" relation="include">
+        </childnode>
+        <childnode refid="1267" relation="include">
+        </childnode>
+        <childnode refid="1268" relation="include">
+        </childnode>
+        <childnode refid="1269" relation="include">
+        </childnode>
+        <childnode refid="1270" relation="include">
+        </childnode>
+        <childnode refid="1264" relation="include">
+        </childnode>
+      </node>
+      <node id="1264">
+        <label>string</label>
+      </node>
+      <node id="1266">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="1270">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="1272">
+        <label>Observable.h</label>
+        <link refid="Observable_8h"/>
+        <childnode refid="1273" relation="include">
+        </childnode>
+        <childnode refid="1271" relation="include">
+        </childnode>
+        <childnode refid="1275" relation="include">
+        </childnode>
+      </node>
+      <node id="1267">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="1275">
+        <label>vector</label>
+      </node>
+      <node id="1273">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="1265" relation="include">
+        </childnode>
+        <childnode refid="1274" relation="include">
+        </childnode>
+      </node>
+      <node id="1262">
+        <label>ZPG/MaterialBindedValue.cpp</label>
+        <link refid="MaterialBindedValue_8cpp"/>
+        <childnode refid="1263" relation="include">
+        </childnode>
+      </node>
+      <node id="1271">
+        <label>Observer.h</label>
+        <link refid="Observer_8h"/>
+      </node>
+      <node id="1268">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="1263">
+        <label>MaterialBindedValue.h</label>
+        <link refid="MaterialBindedValue_8h"/>
+        <childnode refid="1264" relation="include">
+        </childnode>
+        <childnode refid="1265" relation="include">
+        </childnode>
+        <childnode refid="1270" relation="include">
+        </childnode>
+        <childnode refid="1271" relation="include">
+        </childnode>
+        <childnode refid="1272" relation="include">
+        </childnode>
+      </node>
+      <node id="1269">
+        <label>xstring</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceEngine">Engine</innernamespace>
+    <innernamespace refid="namespaceEngine_1_1Components">Engine::Components</innernamespace>
+    <innernamespace refid="namespaceEngine_1_1Components_1_1Graphics">Engine::Components::Graphics</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MaterialBindedValue_8h" kindref="compound">MaterialBindedValue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceEngine" kindref="compound">Engine</ref><sp/>{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Components<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Graphics<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Engine::Components::Graphics</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Engine::Components</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Engine</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ZPG/MaterialBindedValue.cpp"/>
+  </compounddef>
+</doxygen>

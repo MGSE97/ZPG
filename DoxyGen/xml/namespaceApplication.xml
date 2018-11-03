@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespaceApplication" kind="namespace" language="C++">
+    <compoundname>Application</compoundname>
+    <innerclass refid="classApplication_1_1Application" prot="public">Application::Application</innerclass>
+    <innernamespace refid="namespaceApplication_1_1Engines">Application::Engines</innernamespace>
+    <innernamespace refid="namespaceApplication_1_1Input">Application::Input</innernamespace>
+    <innernamespace refid="namespaceApplication_1_1Scenes">Application::Scenes</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ZPG/Application.h" line="7" column="1"/>
+  </compounddef>
+</doxygen>

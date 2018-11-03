@@ -1,0 +1,124 @@
+.TH "Application::Input::Handlers::LightingChangeInputHandler" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Application::Input::Handlers::LightingChangeInputHandler
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <LightingChangeInputHandler\&.h>\fP
+.PP
+Inherits \fBEngine::Components::BaseInputHandler\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBHandleKeys\fP (\fBEngine::BaseEngine\fP *engine, \fBEngine::Components::Window\fP *window, \fBEngine::Components::Scene\fP *scene, \fBGeneric::Dictionary\fP< short, bool > &keys, int keysActive) override"
+.br
+.ti -1c
+.RI "virtual bool \fBHandleMouse\fP (BaseEngine *engine, Window *window, Scene *scene, double x, double y, \fBGeneric::Dictionary\fP< short, bool > &keys, int keysActive) override"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBLight\fP * \fB_selectedLight\fP = nullptr"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 8 of file LightingChangeInputHandler\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Application::Input::Handlers::LightingChangeInputHandler::HandleKeys (\fBEngine::BaseEngine\fP * engine, \fBEngine::Components::Window\fP * window, \fBEngine::Components::Scene\fP * scene, \fBGeneric::Dictionary\fP< short, bool > & keys, int keysActive)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBEngine::Components::BaseInputHandler\fP\&.
+.PP
+Definition at line 5 of file LightingChangeInputHandler\&.cpp\&.
+.PP
+References _selectedLight, Engine::Components::Scene::ActiveCamera, Generic::Dictionary< TKey, TValue >::First(), Engine::Components::Scene::Lights, Engine::Objects::Object::ModelMatrix, Light::Position, Light::Power, and Application::Engines::LightEngine::specularSize\&.
+.PP
+.nf
+6 {
+7     if(keys['L'] && dynamic_cast<Application::Engines::LightEngine*>(engine) != nullptr)
+8     {
+9         if (_selectedLight == nullptr)
+10             _selectedLight = scene->Lights->First();
+11         auto lightEngine = dynamic_cast<Application::Engines::LightEngine*>(engine);
+12 
+13         const auto increment = (keys['R'] ? 1 : (keys['F'] ? -1 : 0));
+14 
+15         if (keys['V'])
+16             lightEngine->specularSize += increment;
+17         if (keys['C'])
+18             lightEngine->specularStrength += increment * \&.005f;
+19         if (keys['X'])
+20             lightEngine->diffuseStrength += increment * \&.005f;
+21         if (keys['Z'])
+22             lightEngine->ambientStrength += increment * \&.001f;
+23 
+24         if (keys['N'])
+25         {
+26             lightEngine->specularStrength = 0\&.f;
+27             lightEngine->diffuseStrength = 0\&.f;
+28             lightEngine->ambientStrength = 0\&.f;
+29         }
+30         if (keys['M'])
+31         {
+32             lightEngine->specularStrength = 0\&.5f;
+33             lightEngine->diffuseStrength = 0\&.5f;
+34             lightEngine->ambientStrength = 0\&.2f;
+35         }
+36 
+37         const auto camera = scene->ActiveCamera;
+38         if (increment != 0 && keysActive == 2)
+39             _selectedLight->Power += increment * 0\&.01;
+40 
+41         const float speed = 0\&.2f;
+42         if (keys['W'])
+43             _selectedLight->Position -= *(camera->Front) * speed;
+44         if (keys['S'])
+45             _selectedLight->Position += *(camera->Front) * speed;
+46         if (keys['A'])
+47             _selectedLight->Position -= *(camera->Right) * speed;
+48         if (keys['D'])
+49             _selectedLight->Position += *(camera->Right) * speed;
+50         if (keys['E'])
+51             _selectedLight->Position -= *(camera->Up) * speed;
+52         if (keys['Q'])
+53             _selectedLight->Position += *(camera->Up) * speed;
+54 
+55         *_selectedLight->ModelMatrix = glm::scale(
+56             glm::translate(glm::mat4(1\&.f), _selectedLight->Position), 
+57             glm::vec3(0\&.2*_selectedLight->Power, 0\&.2*_selectedLight->Power, 0\&.2*_selectedLight->Power)
+58         );
+59         return false;
+60     }
+61     return true;
+62 }
+.fi
+.SS "bool Engine::Components::BaseInputHandler::HandleMouse (\fBBaseEngine\fP * engine, \fBWindow\fP * window, \fBScene\fP * scene, double x, double y, \fBGeneric::Dictionary\fP< short, bool > & keys, int keysActive)\fC [override]\fP, \fC [virtual]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 8 of file BaseInputHandler\&.cpp\&.
+.PP
+.nf
+9 {
+10     return true;
+11 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBLight\fP* Application::Input::Handlers::LightingChangeInputHandler::_selectedLight = nullptr\fC [private]\fP"
+
+.PP
+Definition at line 13 of file LightingChangeInputHandler\&.h\&.
+.PP
+Referenced by HandleKeys()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

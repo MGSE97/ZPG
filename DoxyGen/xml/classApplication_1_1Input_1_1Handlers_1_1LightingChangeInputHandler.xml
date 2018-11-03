@@ -1,0 +1,290 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler" kind="class" language="C++" prot="public">
+    <compoundname>Application::Input::Handlers::LightingChangeInputHandler</compoundname>
+    <basecompoundref refid="classEngine_1_1Components_1_1BaseInputHandler" prot="public" virt="non-virtual">Engine::Components::BaseInputHandler</basecompoundref>
+    <includes refid="LightingChangeInputHandler_8h" local="no">LightingChangeInputHandler.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a9d2d27b234fd09b3add304963534b719" prot="private" static="no" mutable="no">
+        <type><ref refid="classLight" kindref="compound">Light</ref> *</type>
+        <definition>Light* Application::Input::Handlers::LightingChangeInputHandler::_selectedLight</definition>
+        <argsstring></argsstring>
+        <name>_selectedLight</name>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/LightingChangeInputHandler.h" line="13" column="1" bodyfile="ZPG/LightingChangeInputHandler.h" bodystart="13" bodyend="-1"/>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a5017479d6edea9d6bedf3093cf49cb24" compoundref="LightingChangeInputHandler_8cpp" startline="5" endline="62">HandleKeys</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a5017479d6edea9d6bedf3093cf49cb24" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Application::Input::Handlers::LightingChangeInputHandler::HandleKeys</definition>
+        <argsstring>(Engine::BaseEngine *engine, Engine::Components::Window *window, Engine::Components::Scene *scene, Generic::Dictionary&lt; short, bool &gt; &amp;keys, int keysActive) override</argsstring>
+        <name>HandleKeys</name>
+        <reimplements refid="classEngine_1_1Components_1_1BaseInputHandler_1af7deea3367074324fdbefe48119d40ce">HandleKeys</reimplements>
+        <param>
+          <type><ref refid="classEngine_1_1BaseEngine" kindref="compound">Engine::BaseEngine</ref> *</type>
+          <declname>engine</declname>
+        </param>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Engine::Components::Window</ref> *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Engine::Components::Scene</ref> *</type>
+          <declname>scene</declname>
+        </param>
+        <param>
+          <type><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary</ref>&lt; short, bool &gt; &amp;</type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>keysActive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/LightingChangeInputHandler.h" line="11" column="1" bodyfile="ZPG/LightingChangeInputHandler.cpp" bodystart="5" bodyend="62"/>
+        <references refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a9d2d27b234fd09b3add304963534b719" compoundref="LightingChangeInputHandler_8h" startline="13">_selectedLight</references>
+        <references refid="classEngine_1_1Components_1_1Scene_1a9408befee37d89e2c001d25b9e4ed75a" compoundref="Scene_8h" startline="30">Engine::Components::Scene::ActiveCamera</references>
+        <references refid="classGeneric_1_1Dictionary_1ab368d54de28e7a3514e1add4bb5b3a36" compoundref="Dictionary_8h" startline="29" endline="34">Generic::Dictionary&lt; TKey, TValue &gt;::First</references>
+        <references refid="classEngine_1_1Components_1_1Scene_1a00f60de2f6c72242a7af0076a3b75e5e" compoundref="Scene_8h" startline="29">Engine::Components::Scene::Lights</references>
+        <references refid="classEngine_1_1Objects_1_1Object_1acf41cc091fa270053245ed26bc28c8a4" compoundref="Object_8h" startline="11">Engine::Objects::Object::ModelMatrix</references>
+        <references refid="classLight_1ab6a04fde7b96f06ab935cd1d53b91e0b" compoundref="Light_8h" startline="18">Light::Position</references>
+        <references refid="classLight_1a161f4944da390d9bc388091bafd59fe3" compoundref="Light_8h" startline="19">Light::Power</references>
+        <references refid="classApplication_1_1Engines_1_1LightEngine_1a5da28beed5c8d278c3615974d464f246" compoundref="LigtEngine_8h" startline="20">Application::Engines::LightEngine::specularSize</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1BaseInputHandler_1a8b50fb66d01573616072d708075a721e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Engine::Components::BaseInputHandler::HandleMouse</definition>
+        <argsstring>(BaseEngine *engine, Window *window, Scene *scene, double x, double y, Generic::Dictionary&lt; short, bool &gt; &amp;keys, int keysActive) override</argsstring>
+        <name>HandleMouse</name>
+        <param>
+          <type>BaseEngine *</type>
+          <declname>engine</declname>
+        </param>
+        <param>
+          <type>Window *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>Scene *</type>
+          <declname>scene</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary</ref>&lt; short, bool &gt; &amp;</type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>keysActive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/BaseInputHandler.h" line="14" column="1" bodyfile="ZPG/BaseInputHandler.cpp" bodystart="8" bodyend="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="219">
+        <label>Application::Input::Handlers::LightingChangeInputHandler</label>
+        <link refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler"/>
+        <childnode refid="220" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="221">
+        <label>IInputHandler</label>
+        <link refid="classEngine_1_1Components_1_1IInputHandler"/>
+      </node>
+      <node id="220">
+        <label>Engine::Components::BaseInputHandler</label>
+        <link refid="classEngine_1_1Components_1_1BaseInputHandler"/>
+        <childnode refid="221" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="222">
+        <label>Application::Input::Handlers::LightingChangeInputHandler</label>
+        <link refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler"/>
+        <childnode refid="223" relation="public-inheritance">
+        </childnode>
+        <childnode refid="225" relation="usage">
+          <edgelabel>-_selectedLight</edgelabel>
+        </childnode>
+      </node>
+      <node id="224">
+        <label>IInputHandler</label>
+        <link refid="classEngine_1_1Components_1_1IInputHandler"/>
+      </node>
+      <node id="231">
+        <label>std::list&lt; Engine::Components::Graphics::MaterialValueBase *  &gt;</label>
+      </node>
+      <node id="237">
+        <label>Generic::Dictionary&lt; TKey, TValue &gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="238" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="241">
+        <label>mat4 *</label>
+      </node>
+      <node id="226">
+        <label>Engine::Objects::Object</label>
+        <link refid="classEngine_1_1Objects_1_1Object"/>
+        <childnode refid="227" relation="public-inheritance">
+        </childnode>
+        <childnode refid="241" relation="usage">
+          <edgelabel>+ModelMatrix</edgelabel>
+        </childnode>
+      </node>
+      <node id="243">
+        <label>vec3</label>
+      </node>
+      <node id="244">
+        <label>vec4</label>
+      </node>
+      <node id="242">
+        <label>float</label>
+      </node>
+      <node id="238">
+        <label>std::map&lt; TKey, TValue &gt;</label>
+      </node>
+      <node id="233">
+        <label>std::list&lt; T &gt;</label>
+      </node>
+      <node id="232">
+        <label>Generic::Collection&lt; T &gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="233" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="225">
+        <label>Light</label>
+        <link refid="classLight"/>
+        <childnode refid="226" relation="public-inheritance">
+        </childnode>
+        <childnode refid="242" relation="usage">
+          <edgelabel>+Power</edgelabel>
+        </childnode>
+        <childnode refid="243" relation="usage">
+          <edgelabel>+Color</edgelabel>
+          <edgelabel>+Position</edgelabel>
+        </childnode>
+        <childnode refid="244" relation="usage">
+          <edgelabel>+fColor</edgelabel>
+        </childnode>
+      </node>
+      <node id="228">
+        <label>int</label>
+      </node>
+      <node id="240">
+        <label>GLuint</label>
+      </node>
+      <node id="230">
+        <label>Generic::Collection&lt; Engine::Components::Graphics::MaterialValueBase *&gt;</label>
+        <link refid="classGeneric_1_1Collection"/>
+        <childnode refid="231" relation="public-inheritance">
+        </childnode>
+        <childnode refid="232" relation="template-instance">
+          <edgelabel>&lt; Engine::Components::Graphics::MaterialValueBase *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="236">
+        <label>std::map&lt; std::string, Engine::Components::Graphics::Shader * &gt;</label>
+      </node>
+      <node id="223">
+        <label>Engine::Components::BaseInputHandler</label>
+        <link refid="classEngine_1_1Components_1_1BaseInputHandler"/>
+        <childnode refid="224" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="235">
+        <label>Generic::Dictionary&lt; std::string, Engine::Components::Graphics::Shader *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="236" relation="public-inheritance">
+        </childnode>
+        <childnode refid="237" relation="template-instance">
+          <edgelabel>&lt; std::string, Engine::Components::Graphics::Shader *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="229">
+        <label>Engine::Components::Graphics::Material</label>
+        <link refid="classEngine_1_1Components_1_1Graphics_1_1Material"/>
+        <childnode refid="230" relation="usage">
+          <edgelabel>+Values</edgelabel>
+        </childnode>
+        <childnode refid="234" relation="usage">
+          <edgelabel>+Program</edgelabel>
+        </childnode>
+      </node>
+      <node id="239">
+        <label>bool</label>
+      </node>
+      <node id="234">
+        <label>Engine::Components::Graphics::Program</label>
+        <link refid="classEngine_1_1Components_1_1Graphics_1_1Program"/>
+        <childnode refid="235" relation="usage">
+          <edgelabel>+Shaders</edgelabel>
+        </childnode>
+        <childnode refid="239" relation="usage">
+          <edgelabel>-_linked</edgelabel>
+        </childnode>
+        <childnode refid="240" relation="usage">
+          <edgelabel>-_program</edgelabel>
+        </childnode>
+      </node>
+      <node id="227">
+        <label>Engine::Components::Objects::VertexObject</label>
+        <link refid="classEngine_1_1Components_1_1Objects_1_1VertexObject"/>
+        <childnode refid="228" relation="usage">
+          <edgelabel>#_attribute_id</edgelabel>
+          <edgelabel>#Dimensions</edgelabel>
+          <edgelabel>#Size</edgelabel>
+          <edgelabel>#_Id</edgelabel>
+          <edgelabel>#_object_id</edgelabel>
+        </childnode>
+        <childnode refid="229" relation="usage">
+          <edgelabel>+Material</edgelabel>
+        </childnode>
+        <childnode refid="240" relation="usage">
+          <edgelabel>#_VBO</edgelabel>
+          <edgelabel>#_VAO</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/LightingChangeInputHandler.h" line="9" column="1" bodyfile="ZPG/LightingChangeInputHandler.h" bodystart="8" bodyend="14"/>
+    <listofallmembers>
+      <member refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a9d2d27b234fd09b3add304963534b719" prot="private" virt="non-virtual"><scope>Application::Input::Handlers::LightingChangeInputHandler</scope><name>_selectedLight</name></member>
+      <member refid="classEngine_1_1Components_1_1BaseInputHandler_1a6a40d61a56fa4f49ae7e6f8cd63c4877" prot="public" virt="non-virtual"><scope>Application::Input::Handlers::LightingChangeInputHandler</scope><name>BaseInputHandler</name></member>
+      <member refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a5017479d6edea9d6bedf3093cf49cb24" prot="public" virt="virtual"><scope>Application::Input::Handlers::LightingChangeInputHandler</scope><name>HandleKeys</name></member>
+      <member refid="classEngine_1_1Components_1_1BaseInputHandler_1a8b50fb66d01573616072d708075a721e" prot="public" virt="virtual"><scope>Application::Input::Handlers::LightingChangeInputHandler</scope><name>HandleMouse</name></member>
+      <member refid="classEngine_1_1Components_1_1BaseInputHandler_1a538dba6ed33f86a6394c53bd5fb50abe" prot="public" virt="non-virtual"><scope>Application::Input::Handlers::LightingChangeInputHandler</scope><name>~BaseInputHandler</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

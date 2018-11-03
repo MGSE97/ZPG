@@ -1,0 +1,356 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="LightingChangeInputHandler_8cpp" kind="file" language="C++">
+    <compoundname>LightingChangeInputHandler.cpp</compoundname>
+    <includes refid="LightingChangeInputHandler_8h" local="yes">LightingChangeInputHandler.h</includes>
+    <includes local="no">glm/ext/matrix_transform.hpp</includes>
+    <includes refid="LigtEngine_8h" local="yes">LigtEngine.h</includes>
+    <incdepgraph>
+      <node id="999">
+        <label>list</label>
+      </node>
+      <node id="1002">
+        <label>VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="1003" relation="include">
+        </childnode>
+        <childnode refid="1005" relation="include">
+        </childnode>
+        <childnode refid="991" relation="include">
+        </childnode>
+        <childnode refid="1007" relation="include">
+        </childnode>
+      </node>
+      <node id="1019">
+        <label>glm/ext/matrix_transform.hpp</label>
+      </node>
+      <node id="1020">
+        <label>LigtEngine.h</label>
+        <link refid="LigtEngine_8h"/>
+        <childnode refid="1021" relation="include">
+        </childnode>
+        <childnode refid="1018" relation="include">
+        </childnode>
+      </node>
+      <node id="1008">
+        <label>MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="998" relation="include">
+        </childnode>
+        <childnode refid="993" relation="include">
+        </childnode>
+        <childnode refid="997" relation="include">
+        </childnode>
+        <childnode refid="1009" relation="include">
+        </childnode>
+      </node>
+      <node id="1005">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="989" relation="include">
+        </childnode>
+        <childnode refid="1003" relation="include">
+        </childnode>
+        <childnode refid="1006" relation="include">
+        </childnode>
+      </node>
+      <node id="993">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="989" relation="include">
+        </childnode>
+        <childnode refid="994" relation="include">
+        </childnode>
+        <childnode refid="995" relation="include">
+        </childnode>
+        <childnode refid="996" relation="include">
+        </childnode>
+        <childnode refid="997" relation="include">
+        </childnode>
+        <childnode refid="998" relation="include">
+        </childnode>
+      </node>
+      <node id="1003">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="989" relation="include">
+        </childnode>
+        <childnode refid="1004" relation="include">
+        </childnode>
+      </node>
+      <node id="998">
+        <label>string</label>
+      </node>
+      <node id="989">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="988">
+        <label>Window.h</label>
+        <link refid="Window_8h"/>
+        <childnode refid="989" relation="include">
+        </childnode>
+        <childnode refid="990" relation="include">
+        </childnode>
+        <childnode refid="991" relation="include">
+        </childnode>
+        <childnode refid="1002" relation="include">
+        </childnode>
+        <childnode refid="995" relation="include">
+        </childnode>
+      </node>
+      <node id="1001">
+        <label>map</label>
+      </node>
+      <node id="1017">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="1013" relation="include">
+        </childnode>
+        <childnode refid="1011" relation="include">
+        </childnode>
+        <childnode refid="1018" relation="include">
+        </childnode>
+      </node>
+      <node id="990">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="1009">
+        <label>MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="989" relation="include">
+        </childnode>
+        <childnode refid="993" relation="include">
+        </childnode>
+      </node>
+      <node id="1021">
+        <label>BaseEngine.h</label>
+        <link refid="BaseEngine_8h"/>
+        <childnode refid="1022" relation="include">
+        </childnode>
+        <childnode refid="1000" relation="include">
+        </childnode>
+        <childnode refid="991" relation="include">
+        </childnode>
+        <childnode refid="988" relation="include">
+        </childnode>
+        <childnode refid="1010" relation="include">
+        </childnode>
+        <childnode refid="987" relation="include">
+        </childnode>
+      </node>
+      <node id="987">
+        <label>IInputHandler.h</label>
+        <link refid="IInputHandler_8h"/>
+        <childnode refid="988" relation="include">
+        </childnode>
+        <childnode refid="1010" relation="include">
+        </childnode>
+      </node>
+      <node id="1011">
+        <label>Object.h</label>
+        <link refid="Object_8h"/>
+        <childnode refid="1002" relation="include">
+        </childnode>
+      </node>
+      <node id="1018">
+        <label>glm/common.hpp</label>
+      </node>
+      <node id="1022">
+        <label>ostream</label>
+      </node>
+      <node id="997">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="985">
+        <label>LightingChangeInputHandler.h</label>
+        <link refid="LightingChangeInputHandler_8h"/>
+        <childnode refid="986" relation="include">
+        </childnode>
+      </node>
+      <node id="1015">
+        <label>Observable.h</label>
+        <link refid="Observable_8h"/>
+        <childnode refid="992" relation="include">
+        </childnode>
+        <childnode refid="1016" relation="include">
+        </childnode>
+        <childnode refid="1004" relation="include">
+        </childnode>
+      </node>
+      <node id="986">
+        <label>BaseInputHandler.h</label>
+        <link refid="BaseInputHandler_8h"/>
+        <childnode refid="987" relation="include">
+        </childnode>
+      </node>
+      <node id="1013">
+        <label>glm/vec3.hpp</label>
+      </node>
+      <node id="994">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="1010">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+        <childnode refid="1000" relation="include">
+        </childnode>
+        <childnode refid="1011" relation="include">
+        </childnode>
+        <childnode refid="1012" relation="include">
+        </childnode>
+        <childnode refid="1017" relation="include">
+        </childnode>
+      </node>
+      <node id="1004">
+        <label>vector</label>
+      </node>
+      <node id="992">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="993" relation="include">
+        </childnode>
+        <childnode refid="999" relation="include">
+        </childnode>
+      </node>
+      <node id="1007">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="1000" relation="include">
+        </childnode>
+        <childnode refid="998" relation="include">
+        </childnode>
+        <childnode refid="1008" relation="include">
+        </childnode>
+        <childnode refid="991" relation="include">
+        </childnode>
+        <childnode refid="993" relation="include">
+        </childnode>
+      </node>
+      <node id="1006">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="1016">
+        <label>Observer.h</label>
+        <link refid="Observer_8h"/>
+      </node>
+      <node id="995">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="991">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="989" relation="include">
+        </childnode>
+        <childnode refid="992" relation="include">
+        </childnode>
+        <childnode refid="1000" relation="include">
+        </childnode>
+        <childnode refid="998" relation="include">
+        </childnode>
+      </node>
+      <node id="1000">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="1001" relation="include">
+        </childnode>
+      </node>
+      <node id="996">
+        <label>xstring</label>
+      </node>
+      <node id="1014">
+        <label>glm/mat4x4.hpp</label>
+      </node>
+      <node id="984">
+        <label>ZPG/LightingChangeInputHandler.cpp</label>
+        <link refid="LightingChangeInputHandler_8cpp"/>
+        <childnode refid="985" relation="include">
+        </childnode>
+        <childnode refid="1019" relation="include">
+        </childnode>
+        <childnode refid="1020" relation="include">
+        </childnode>
+      </node>
+      <node id="1012">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="1013" relation="include">
+        </childnode>
+        <childnode refid="1014" relation="include">
+        </childnode>
+        <childnode refid="1015" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="LightingChangeInputHandler_8h" kindref="compound">LightingChangeInputHandler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/ext/matrix_transform.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="LigtEngine_8h" kindref="compound">LigtEngine.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a5017479d6edea9d6bedf3093cf49cb24" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a5017479d6edea9d6bedf3093cf49cb24" kindref="member">Application::Input::Handlers::LightingChangeInputHandler::HandleKeys</ref>(<ref refid="classEngine_1_1BaseEngine" kindref="compound">Engine::BaseEngine</ref>*<sp/>engine,<sp/><ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Engine::Components::Window</ref>*<sp/>window,<sp/><ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Engine::Components::Scene</ref>*<sp/>scene,<sp/><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary&lt;short, bool&gt;</ref>&amp;<sp/>keys,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keysActive)</highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(keys[</highlight><highlight class="charliteral">&apos;L&apos;</highlight><highlight class="normal">]<sp/>&amp;&amp;<sp/>dynamic_cast&lt;Application::Engines::LightEngine*&gt;(engine)<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a9d2d27b234fd09b3add304963534b719" kindref="member">_selectedLight</ref><sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a9d2d27b234fd09b3add304963534b719" kindref="member">_selectedLight</ref><sp/>=<sp/>scene-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1a00f60de2f6c72242a7af0076a3b75e5e" kindref="member">Lights</ref>-&gt;<ref refid="classGeneric_1_1Dictionary_1ab368d54de28e7a3514e1add4bb5b3a36" kindref="member">First</ref>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>lightEngine<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="classApplication_1_1Engines_1_1LightEngine" kindref="compound">Application::Engines::LightEngine</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(engine);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>increment<sp/>=<sp/>(keys[</highlight><highlight class="charliteral">&apos;R&apos;</highlight><highlight class="normal">]<sp/>?<sp/>1<sp/>:<sp/>(keys[</highlight><highlight class="charliteral">&apos;F&apos;</highlight><highlight class="normal">]<sp/>?<sp/>-1<sp/>:<sp/>0));</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(keys[</highlight><highlight class="charliteral">&apos;V&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lightEngine-&gt;<ref refid="classApplication_1_1Engines_1_1LightEngine_1a5da28beed5c8d278c3615974d464f246" kindref="member">specularSize</ref><sp/>+=<sp/>increment;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(keys[</highlight><highlight class="charliteral">&apos;C&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lightEngine-&gt;specularStrength<sp/>+=<sp/>increment<sp/>*<sp/>.005f;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(keys[</highlight><highlight class="charliteral">&apos;X&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lightEngine-&gt;diffuseStrength<sp/>+=<sp/>increment<sp/>*<sp/>.005f;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(keys[</highlight><highlight class="charliteral">&apos;Z&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lightEngine-&gt;ambientStrength<sp/>+=<sp/>increment<sp/>*<sp/>.001f;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(keys[</highlight><highlight class="charliteral">&apos;N&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lightEngine-&gt;specularStrength<sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lightEngine-&gt;diffuseStrength<sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lightEngine-&gt;ambientStrength<sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(keys[</highlight><highlight class="charliteral">&apos;M&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lightEngine-&gt;specularStrength<sp/>=<sp/>0.5f;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lightEngine-&gt;diffuseStrength<sp/>=<sp/>0.5f;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lightEngine-&gt;ambientStrength<sp/>=<sp/>0.2f;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>camera<sp/>=<sp/>scene-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1a9408befee37d89e2c001d25b9e4ed75a" kindref="member">ActiveCamera</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(increment<sp/>!=<sp/>0<sp/>&amp;&amp;<sp/>keysActive<sp/>==<sp/>2)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a9d2d27b234fd09b3add304963534b719" kindref="member">_selectedLight</ref>-&gt;<ref refid="classLight_1a161f4944da390d9bc388091bafd59fe3" kindref="member">Power</ref><sp/>+=<sp/>increment<sp/>*<sp/>0.01;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>speed<sp/>=<sp/>0.2f;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(keys[</highlight><highlight class="charliteral">&apos;W&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a9d2d27b234fd09b3add304963534b719" kindref="member">_selectedLight</ref>-&gt;<ref refid="classLight_1ab6a04fde7b96f06ab935cd1d53b91e0b" kindref="member">Position</ref><sp/>-=<sp/>*(camera-&gt;Front)<sp/>*<sp/>speed;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(keys[</highlight><highlight class="charliteral">&apos;S&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a9d2d27b234fd09b3add304963534b719" kindref="member">_selectedLight</ref>-&gt;<ref refid="classLight_1ab6a04fde7b96f06ab935cd1d53b91e0b" kindref="member">Position</ref><sp/>+=<sp/>*(camera-&gt;Front)<sp/>*<sp/>speed;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(keys[</highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a9d2d27b234fd09b3add304963534b719" kindref="member">_selectedLight</ref>-&gt;<ref refid="classLight_1ab6a04fde7b96f06ab935cd1d53b91e0b" kindref="member">Position</ref><sp/>-=<sp/>*(camera-&gt;Right)<sp/>*<sp/>speed;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(keys[</highlight><highlight class="charliteral">&apos;D&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a9d2d27b234fd09b3add304963534b719" kindref="member">_selectedLight</ref>-&gt;<ref refid="classLight_1ab6a04fde7b96f06ab935cd1d53b91e0b" kindref="member">Position</ref><sp/>+=<sp/>*(camera-&gt;Right)<sp/>*<sp/>speed;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(keys[</highlight><highlight class="charliteral">&apos;E&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a9d2d27b234fd09b3add304963534b719" kindref="member">_selectedLight</ref>-&gt;<ref refid="classLight_1ab6a04fde7b96f06ab935cd1d53b91e0b" kindref="member">Position</ref><sp/>-=<sp/>*(camera-&gt;Up)<sp/>*<sp/>speed;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(keys[</highlight><highlight class="charliteral">&apos;Q&apos;</highlight><highlight class="normal">])</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a9d2d27b234fd09b3add304963534b719" kindref="member">_selectedLight</ref>-&gt;<ref refid="classLight_1ab6a04fde7b96f06ab935cd1d53b91e0b" kindref="member">Position</ref><sp/>+=<sp/>*(camera-&gt;Up)<sp/>*<sp/>speed;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<ref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a9d2d27b234fd09b3add304963534b719" kindref="member">_selectedLight</ref>-&gt;<ref refid="classEngine_1_1Objects_1_1Object_1acf41cc091fa270053245ed26bc28c8a4" kindref="member">ModelMatrix</ref><sp/>=<sp/>glm::scale(</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::translate(glm::mat4(1.f),<sp/><ref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a9d2d27b234fd09b3add304963534b719" kindref="member">_selectedLight</ref>-&gt;<ref refid="classLight_1ab6a04fde7b96f06ab935cd1d53b91e0b" kindref="member">Position</ref>),<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::vec3(0.2*<ref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a9d2d27b234fd09b3add304963534b719" kindref="member">_selectedLight</ref>-&gt;<ref refid="classLight_1a161f4944da390d9bc388091bafd59fe3" kindref="member">Power</ref>,<sp/>0.2*<ref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a9d2d27b234fd09b3add304963534b719" kindref="member">_selectedLight</ref>-&gt;<ref refid="classLight_1a161f4944da390d9bc388091bafd59fe3" kindref="member">Power</ref>,<sp/>0.2*<ref refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a9d2d27b234fd09b3add304963534b719" kindref="member">_selectedLight</ref>-&gt;<ref refid="classLight_1a161f4944da390d9bc388091bafd59fe3" kindref="member">Power</ref>)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="ZPG/LightingChangeInputHandler.cpp"/>
+  </compounddef>
+</doxygen>

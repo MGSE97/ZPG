@@ -1,0 +1,70 @@
+.TH "ReadOnlyProperty< T >" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ReadOnlyProperty< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ReadOnlyProperty\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~ReadOnlyProperty\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBoperator T const &\fP () const"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "T \fBvalue\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T>
+.br
+class ReadOnlyProperty< T >"
+
+.PP
+Definition at line 3 of file ReadOnlyProperty\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<typename T > virtual \fBReadOnlyProperty\fP< T >::~\fBReadOnlyProperty\fP ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 5 of file ReadOnlyProperty\&.h\&.
+.PP
+.nf
+5 {}
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T > virtual \fBReadOnlyProperty\fP< T >::operator T const & () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 6 of file ReadOnlyProperty\&.h\&.
+.PP
+References ReadOnlyProperty< T >::value\&.
+.PP
+.nf
+6 { return value; }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "template<typename T > T \fBReadOnlyProperty\fP< T >::value\fC [protected]\fP"
+
+.PP
+Definition at line 8 of file ReadOnlyProperty\&.h\&.
+.PP
+Referenced by ReadOnlyProperty< T >::operator T const &()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

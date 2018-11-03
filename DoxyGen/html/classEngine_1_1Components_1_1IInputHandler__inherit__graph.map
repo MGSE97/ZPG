@@ -1,0 +1,5 @@
+<map id="IInputHandler" name="IInputHandler">
+<area shape="rect" id="node2" href="$classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler.html" title="{Application::Input\l::Handlers::CameraInputHandler\n|&#45; _lastMousePosition\l&#45; _pitch\l&#45; _yaw\l|+ CameraInputHandler()\l+ ~CameraInputHandler()\l+ HandleKeys()\l+ HandleMouse()\l}" alt="" coords="5,131,212,296"/>
+<area shape="rect" id="node3" href="$classEngine_1_1Components_1_1BaseInputHandler.html" title="{Engine::Components\l::BaseInputHandler\n||+ BaseInputHandler()\l+ ~BaseInputHandler()\l+ HandleKeys()\l+ HandleMouse()\l}" alt="" coords="237,145,389,281"/>
+<area shape="rect" id="node4" href="$classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler.html" title="{Application::Input\l::Handlers::LightingChange\lInputHandler\n|&#45; _selectedLight\l|+ HandleKeys()\l}" alt="" coords="223,344,402,451"/>
+</map>

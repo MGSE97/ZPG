@@ -1,0 +1,188 @@
+.TH "Engine::Objects::Sphere" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Engine::Objects::Sphere
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Sphere\&.h>\fP
+.PP
+Inherits \fBEngine::Objects::Object\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSphere\fP (\fBComponents::Graphics::Material\fP *material, const float *points, int size, int dimensions)"
+.br
+.ti -1c
+.RI "\fB~Sphere\fP ()"
+.br
+.ti -1c
+.RI "\fBSphere\fP * \fBDraw\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "Graphics::Material * \fBMaterial\fP"
+.br
+.ti -1c
+.RI "glm::mat4 * \fBModelMatrix\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVertexObject\fP * \fBAdd\fP (int size, int offset)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fB_attribute_id\fP"
+.br
+.ti -1c
+.RI "int \fB_Id\fP"
+.br
+.ti -1c
+.RI "GLuint \fB_VAO\fP = 0"
+.br
+.ti -1c
+.RI "GLuint \fB_VBO\fP = 0"
+.br
+.ti -1c
+.RI "int \fBDimensions\fP"
+.br
+.ti -1c
+.RI "int \fBSize\fP"
+.br
+.in -1c
+.SS "Static Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fB_object_id\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 11 of file Sphere\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Engine::Objects::Sphere::~Sphere ()"
+
+.PP
+Definition at line 4 of file Sphere\&.cpp\&.
+.PP
+References Engine::Objects::Object::~Object()\&.
+.PP
+.nf
+5 {
+6     Object::~Object();
+7 }
+.fi
+.SS "Engine::Objects::Sphere::Sphere (\fBComponents::Graphics::Material\fP * material, const float * points, int size, int dimensions)"
+
+.PP
+Definition at line 9 of file Sphere\&.cpp\&.
+.PP
+.nf
+9                                                                                                               :
+10     Object(material, points, size, dimensions, (new Generic::Collection<Components::Objects::VAOConfig*>())
+11         ->Add(new Components::Objects::VAOConfig(dimensions*2, 0))
+12         \&.Add(new Components::Objects::VAOConfig(dimensions*2, dimensions))
+13     )
+14 {
+15     
+16 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBEngine::Components::Objects::VertexObject\fP * Engine::Components::Objects::VertexObject::Add (int size, int offset)\fC [protected]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 6 of file VertexObject\&.cpp\&.
+.PP
+References Engine::Components::Objects::VertexObject::_attribute_id, and Engine::Components::Objects::VertexObject::Dimensions\&.
+.PP
+.nf
+7 {
+8 
+9     /*glEnableVertexAttribArray(_attribute_id); //enable vertex attributes
+10     glBindBuffer(GL_ARRAY_BUFFER, _VBO);
+11     glVertexAttribPointer(_attribute_id++, *Dimensions, GL_FLOAT, GL_FALSE, size * sizeof(float), (GLvoid*)offset);*/
+12     glEnableVertexAttribArray(_attribute_id);
+13     glVertexAttribPointer(_attribute_id, Dimensions, GL_FLOAT, GL_FALSE, size, (void*)offset);
+14     _attribute_id++;
+15     //VAOs->Add(new VertexAttributeObject(VAOi++, VBO, *Dimensions, size, offset));
+16     return this;
+17 }
+.fi
+.SS "\fBEngine::Objects::Sphere\fP * Engine::Objects::Sphere::Draw ()"
+
+.PP
+Definition at line 18 of file Sphere\&.cpp\&.
+.PP
+References Engine::Components::Objects::VertexObject::Draw()\&.
+.PP
+.nf
+19 {
+20     Object::Draw();
+21     return this;
+22 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "int Engine::Components::Objects::VertexObject::_attribute_id\fC [protected]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 24 of file VertexObject\&.h\&.
+.PP
+Referenced by Engine::Components::Objects::VertexObject::Add()\&.
+.SS "int Engine::Components::Objects::VertexObject::_Id\fC [protected]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 23 of file VertexObject\&.h\&.
+.SS "int Engine::Components::Objects::VertexObject::_object_id = 0\fC [static]\fP, \fC [protected]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 26 of file VertexObject\&.h\&.
+.SS "GLuint Engine::Components::Objects::VertexObject::_VAO = 0\fC [protected]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 22 of file VertexObject\&.h\&.
+.SS "GLuint Engine::Components::Objects::VertexObject::_VBO = 0\fC [protected]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 21 of file VertexObject\&.h\&.
+.SS "int Engine::Components::Objects::VertexObject::Dimensions\fC [protected]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 20 of file VertexObject\&.h\&.
+.PP
+Referenced by Engine::Components::Objects::VertexObject::Add()\&.
+.SS "Graphics::Material* Engine::Components::Objects::VertexObject::Material\fC [inherited]\fP"
+
+.PP
+Definition at line 32 of file VertexObject\&.h\&.
+.PP
+Referenced by Application::Engines::CameraEngine::Init(), Light::Light(), and Engine::Objects::Object::Object()\&.
+.SS "glm::mat4* Engine::Objects::Object::ModelMatrix\fC [inherited]\fP"
+
+.PP
+Definition at line 11 of file Object\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::LightingChangeInputHandler::HandleKeys(), Light::Light(), and Engine::Objects::Object::Object()\&.
+.SS "int Engine::Components::Objects::VertexObject::Size\fC [protected]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 25 of file VertexObject\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

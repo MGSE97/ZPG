@@ -1,0 +1,72 @@
+\hypertarget{ZPGEngine_8cpp}{}\section{Z\+P\+G/\+Z\+P\+G\+Engine.cpp File Reference}
+\label{ZPGEngine_8cpp}\index{Z\+P\+G/\+Z\+P\+G\+Engine.\+cpp@{Z\+P\+G/\+Z\+P\+G\+Engine.\+cpp}}
+{\ttfamily \#include \char`\"{}Z\+P\+G\+Engine.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}Object.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Triangle\+Scene.\+h\char`\"{}}\newline
+Include dependency graph for Z\+P\+G\+Engine.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ZPGEngine_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \mbox{\hyperlink{ZPGEngine_8cpp_ab187f2ba2a2f72ea5571921a1a856582}{fragment\+\_\+shader}}
+\item 
+const char $\ast$ \mbox{\hyperlink{ZPGEngine_8cpp_afc33b8912f9f93d1d2544df04ad4a81a}{vertex\+\_\+shader}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{ZPGEngine_8cpp_ab187f2ba2a2f72ea5571921a1a856582}\label{ZPGEngine_8cpp_ab187f2ba2a2f72ea5571921a1a856582}} 
+\index{Z\+P\+G\+Engine.\+cpp@{Z\+P\+G\+Engine.\+cpp}!fragment\+\_\+shader@{fragment\+\_\+shader}}
+\index{fragment\+\_\+shader@{fragment\+\_\+shader}!Z\+P\+G\+Engine.\+cpp@{Z\+P\+G\+Engine.\+cpp}}
+\subsubsection{\texorpdfstring{fragment\+\_\+shader}{fragment\_shader}}
+{\footnotesize\ttfamily const char$\ast$ fragment\+\_\+shader}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\textcolor{stringliteral}{"#version 330\(\backslash\)n"}
+\textcolor{stringliteral}{"uniform float color;"}
+\textcolor{stringliteral}{"out vec4 frag\_colour;"}
+\textcolor{stringliteral}{"void main () \{"}
+\textcolor{stringliteral}{"     frag\_colour = vec4 (color, 1.0-color, 0.0, 1.0);"}
+\textcolor{stringliteral}{"\}"}
+\end{DoxyCode}
+
+
+Definition at line 14 of file Z\+P\+G\+Engine.\+cpp.
+
+
+
+Referenced by Application\+::\+Engines\+::\+Basic\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Z\+P\+G\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Triangle\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), and Application\+::\+Engines\+::\+Light\+Engine\+::\+Init().
+
+\mbox{\Hypertarget{ZPGEngine_8cpp_afc33b8912f9f93d1d2544df04ad4a81a}\label{ZPGEngine_8cpp_afc33b8912f9f93d1d2544df04ad4a81a}} 
+\index{Z\+P\+G\+Engine.\+cpp@{Z\+P\+G\+Engine.\+cpp}!vertex\+\_\+shader@{vertex\+\_\+shader}}
+\index{vertex\+\_\+shader@{vertex\+\_\+shader}!Z\+P\+G\+Engine.\+cpp@{Z\+P\+G\+Engine.\+cpp}}
+\subsubsection{\texorpdfstring{vertex\+\_\+shader}{vertex\_shader}}
+{\footnotesize\ttfamily const char$\ast$ vertex\+\_\+shader}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+=
+\textcolor{stringliteral}{"#version 330\(\backslash\)n"}
+\textcolor{stringliteral}{"uniform mat4 modelMatrix;"}
+\textcolor{stringliteral}{"layout(location=0) in vec3 vp;"}
+\textcolor{stringliteral}{"void main () \{"}
+\textcolor{stringliteral}{" gl\_Position = modelMatrix * vec4 (vp, 1.0);"}
+\textcolor{stringliteral}{"\}"}
+\end{DoxyCode}
+
+
+Definition at line 6 of file Z\+P\+G\+Engine.\+cpp.
+
+
+
+Referenced by Application\+::\+Engines\+::\+Basic\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Z\+P\+G\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Triangle\+Engine\+::\+Init(), Application\+::\+Engines\+::\+Camera\+Engine\+::\+Init(), and Application\+::\+Engines\+::\+Light\+Engine\+::\+Init().
+

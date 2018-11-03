@@ -1,0 +1,602 @@
+.TH "Application::Engines::LightEngine" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Application::Engines::LightEngine
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <LigtEngine\&.h>\fP
+.PP
+Inherits \fBEngine::BaseEngine\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBaseEngine\fP * \fBDispose\fP ()"
+.br
+.ti -1c
+.RI "\fBLightEngine\fP * \fBInit\fP (std::FILE *errorStream=stderr) override"
+.br
+.ti -1c
+.RI "bool \fBInitSuccess\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBSetActiveScene\fP (Components::Scene *scene=nullptr)"
+.br
+.ti -1c
+.RI "virtual void \fBStart\fP ()"
+.br
+.ti -1c
+.RI "void \fBUpdate\fP (::\fBEngine::Components::Window\fP *window) override"
+.br
+.ti -1c
+.RI "virtual void \fBUpdate\fP (Components::Window *window)"
+.br
+.ti -1c
+.RI "virtual void \fBUpdateBegin\fP (Components::Window *window)"
+.br
+.ti -1c
+.RI "virtual void \fBUpdateEnd\fP (Components::Window *window)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "Components::Scene * \fBActiveScene\fP"
+.br
+.ti -1c
+.RI "glm::vec3 \fBambientColor\fP"
+.br
+.ti -1c
+.RI "float \fBambientStrength\fP"
+.br
+.ti -1c
+.RI "glm::vec3 \fBdiffuseColor\fP"
+.br
+.ti -1c
+.RI "float \fBdiffuseStrength\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Collection\fP< Components::IInputHandler * > * \fBInputHandlers\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< short, bool > \fBKeys\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< short, bool > \fBMouseKeys\fP"
+.br
+.ti -1c
+.RI "double \fBMouseX\fP"
+.br
+.ti -1c
+.RI "double \fBMouseY\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< std::string, Components::Graphics::Program * > * \fBPrograms\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< std::string, Components::Scene * > * \fBScenes\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< std::string, Components::Graphics::Shader * > * \fBShaders\fP"
+.br
+.ti -1c
+.RI "glm::vec3 \fBspecularColor\fP"
+.br
+.ti -1c
+.RI "int \fBspecularSize\fP"
+.br
+.ti -1c
+.RI "float \fBspecularStrength\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< std::string, Components::Window * > * \fBWindows\fP"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBangle\fP"
+.br
+.ti -1c
+.RI "glm::mat4 \fBM\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 9 of file LigtEngine\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBEngine::BaseEngine\fP * Engine::BaseEngine::Dispose ()\fC [inherited]\fP"
+
+.PP
+Definition at line 51 of file BaseEngine\&.cpp\&.
+.PP
+.nf
+52 {
+53     glfwTerminate();
+54     return this;
+55 }
+.fi
+.SS "\fBApplication::Engines::LightEngine\fP * Application::Engines::LightEngine::Init (std::FILE * errorStream = \fCstderr\fP)\fC [override]\fP, \fC [virtual]\fP"
+'eyeVec = normalize(cameraPos - vertexPosWorld); ' 
+.PP
+Reimplemented from \fBEngine::BaseEngine\fP\&.
+.PP
+Definition at line 11 of file LigtEngine\&.cpp\&.
+.PP
+References Engine::Components::Scene::ActiveCamera, Engine::BaseEngine::ActiveScene, Generic::Dictionary< TKey, TValue >::Add(), Generic::Collection< T >::Add(), ambientColor, ambientStrength, angle, Engine::Components::Scene::BeginLoad(), Engine::Components::Scene::Cameras, diffuseColor, diffuseStrength, fragment_shader, Engine::BaseEngine::InputHandlers, Engine::Components::Scene::Lights, M, Engine::Components::Scene::Objects, Engine::Components::Camera::Position, Engine::BaseEngine::Programs, Engine::BaseEngine::Scenes, Engine::BaseEngine::SetActiveScene(), Engine::BaseEngine::Shaders, Assets::ShadersFragment, Assets::ShadersVertex, specularColor, specularSize, specularStrength, Engine::Components::Camera::Value, vertex_shader, and Engine::BaseEngine::Windows\&.
+.PP
+.nf
+12 {
+13     BaseEngine::Init(errorStream);
+14 
+15     const char* vertex_shader =
+16         "#version 400\n"
+17         "layout(location=0) in vec3 vertexPos;"
+18         "layout(location=1) in vec3 normal;"
+19         "uniform mat4 modelMatrix;"
+20         "uniform mat4 viewMatrix;"
+21         "uniform mat4 projectionMatrix;"
+22         "out vec3 worldPos;"
+23         "out vec3 normVec;"
+24         "out vec3 lightVec;"
+25         "out vec3 eyeVec;"
+26         "void main () {"
+27             "gl_Position = (projectionMatrix * viewMatrix * modelMatrix) * vec4 (vertexPos, 1\&.0);"
+28             "vec3 vertexPosWorld = (modelMatrix * vec4(vertexPos, 1\&.0))\&.xyz;"
+29             "normVec = normalize(transpose(inverse(mat3(modelMatrix))) * normal);"
+30             "lightVec = normalize(vec3(0\&.0, 0\&.0, 0\&.0) - vertexPosWorld);"
+31             "worldPos = vertexPosWorld;"
+33         "}";
+34 
+35     //const char* fragment_shader =
+36     //  "#version 330 core"
+37     //  "out vec4 FragColor;"
+38     //  "uniform float color;"
+39 
+40     //  "in vec3 normVec;"
+41     //  "in vec3 lightVec;"
+42     //  "in vec3 eyeVec;"
+43 
+44     //  "void main()"
+45     //  "{"
+46     //      "vec3 lightAmbient = vec3(1\&.0);"
+47     //      "vec3 lightDiffuse = vec3(0\&.0, 1\&.0, 1\&.0);"
+48     //      "vec3 lightSpecular = vec3(1\&.0, 0\&.0, 1\&.0);"
+49     //      // ambient
+50     //      "float ambientStrength = 0\&.1;"
+51     //      "vec3 ambient = ambientStrength * lightAmbient;"
+52 
+53     //      // diffuse 
+54     //      "float diff = max(dot(normVec, lightVec), 0\&.0);"
+55     //      "vec3 diffuse = diff * lightDiffuse;"
+56 
+57     //      "vec3 result = (ambient + diffuse) * color;"
+58     //      "FragColor = vec4(result, 1\&.0);"
+59     //  "}";
+60 
+61     const char* fragment_shader =
+62         "#version 330\n"
+63         "uniform vec4 color;"
+64         "out vec4 frag_colour;"
+65 
+66         "in vec3 normVec;"
+67         "in vec3 lightVec;"
+68         "in vec3 eyeVec;"
+69         "in vec3 worldPos;"
+70         "void main () {"
+71             "float ambientStrength = 0\&.2;"
+72             "vec3 lightAmbient = vec3(1\&.0, 1\&.0, 1\&.0);"
+73             "vec3 lightDiffuse = vec3(0\&.0, 1\&.0, 1\&.0);"
+74             "vec3 lightSpecular = vec3(1\&.0, 0\&.0, 1\&.0);"
+75             "vec3 ambient = lightAmbient * ambientStrength;"
+76             //diffuse part
+77             "float dotDiff = max(dot(normVec, lightVec), 0\&.0);"
+78             "vec3 diffuse = dotDiff * lightDiffuse;"
+79             //specular part
+80             "vec3 reflVector = reflect(-lightVec, normVec);"
+81             "float dotSpec = pow(max(dot(reflVector, eyeVec), 0\&.0), 256);"
+82             "vec3 specular = dotSpec * lightSpecular;"
+83             "frag_colour = vec4(ambient + diffuse + specular, 1\&.0)*color;"
+84             //"frag_colour = vec4(worldPos, 1\&.0);"
+85             //"frag_colour = vec4(normVec, 1\&.0);"
+86             //"frag_colour = vec4(ambient*color, 1\&.0);"
+87             //"frag_colour = vec4(diffuse*color, 1\&.0);"
+88             //"frag_colour = vec4(specular*color, 1\&.0);"
+89             //"frag_colour = vec4 (color, 1\&.0-color, 0\&.0, 1\&.0);"
+90         "}";
+91 
+92     M = glm::mat4(1\&.0f);
+93     angle = 0\&.0f;
+94 
+95     ambientStrength = 0\&.2f;
+96     diffuseStrength = 0\&.5f;
+97     specularStrength = 0\&.5f;
+98     specularSize = 16;
+99     ambientColor = glm::vec3(1\&.0, 1\&.0, 1\&.0);
+100     diffuseColor = glm::vec3(1\&.0, 1\&.0, 1\&.0);
+101     specularColor = glm::vec3(1\&.0, 1\&.0, 1\&.0);
+102 
+103     auto window = (new ::Engine::Components::Window(1024, 768, "ZPG - Camera", 100\&.0f))
+104         ->Show()
+105         ->Info(std::cout);
+106     Windows->Add("zpg", window);
+107 
+108     auto* vertex = new Engine::Components::Graphics::Shader(GL_VERTEX_SHADER, Assets::ShadersVertex + "Light\&.glsl");
+109     auto* fragment = new Engine::Components::Graphics::Shader(GL_FRAGMENT_SHADER, Assets::ShadersFragment + "Light\&.glsl");
+110     Shaders->Add("vertex", vertex);
+111     Shaders->Add("fragment", fragment);
+112 
+113     Programs->Add("basic", (new Engine::Components::Graphics::Program())->AddShaders(Shaders));
+114 
+115     Scenes->Add("triangle", new Scenes::TriangleScene());
+116     Scenes->Add("sphere", new Scenes::SphereScene());
+117 
+118     InputHandlers->Add(new Input::Handlers::LightingChangeInputHandler());
+119     InputHandlers->Add(new Input::Handlers::CameraInputHandler());
+120 
+121     SetActiveScene(Scenes->Get("sphere"));
+122 
+123     ActiveScene->Lights->Add("light" , new Light(Programs->Get("basic"), glm::vec3(0, 0, 0)));
+124 
+125     ActiveScene->Cameras->Add("main", (new Engine::Components::Camera())
+126         //->SetPosition(new glm::vec3(2\&.5f, 2\&.5f, 2\&.f))
+127         ->SetPosition(new glm::vec3(0\&.f, 0\&.f, -4\&.f))
+128         ->SetDirection(new glm::vec3(0\&.f, 0\&.f, 0\&.f))
+129         ->SetUp(new glm::vec3(0\&.f, 1\&.f, 0\&.f)));
+130 
+131     ActiveScene->BeginLoad(this);
+132 
+133     if (ActiveScene != nullptr && ActiveScene->Objects != nullptr && !ActiveScene->Objects->empty())
+134         for (auto& it : *ActiveScene->Objects)
+135         {
+136             it\&.second->Material->Values
+137                 ->Add(
+138                     new Engine::Components::Graphics::MaterialValue<glm::mat4>(
+139                         vertex,
+140                         "viewMatrix",
+141                         ActiveScene->ActiveCamera->Value)
+142                 )\&.Add(
+143                     new Engine::Components::Graphics::MaterialValue<glm::mat4>(
+144                         vertex,
+145                         "projectionMatrix",
+146                         new glm::mat4(glm::perspective(glm::radians(90\&.0f), (float)window->Width / (float)window->Height, 0\&.1f, 100\&.0f)))
+147                 )\&.Add(
+148                     new Engine::Components::Graphics::MaterialValue<glm::vec3>(
+149                         vertex,
+150                         "cameraPos",
+151                         ActiveScene->ActiveCamera->Position)
+152                 )
+153                 // Color setup
+154                 \&.Add(
+155                     new Engine::Components::Graphics::MaterialValue<glm::vec3>(
+156                         fragment,
+157                         "ambientColor",
+158                         &ambientColor)
+159                 )\&.Add(
+160                     new Engine::Components::Graphics::MaterialValue<glm::vec3>(
+161                         fragment,
+162                         "diffuseColor",
+163                         &diffuseColor)
+164                 )\&.Add(
+165                     new Engine::Components::Graphics::MaterialValue<glm::vec3>(
+166                         fragment,
+167                         "specularColor",
+168                         &specularColor)
+169                 )
+170                 // Power setup
+171                 \&.Add(
+172                     new Engine::Components::Graphics::MaterialValue<float>(
+173                         fragment,
+174                         "ambientStrength",
+175                         &ambientStrength)
+176                 )\&.Add(
+177                     new Engine::Components::Graphics::MaterialValue<float>(
+178                         fragment,
+179                         "diffuseStrength",
+180                         &diffuseStrength)
+181                 )\&.Add(
+182                     new Engine::Components::Graphics::MaterialValue<float>(
+183                         fragment,
+184                         "specularStrength",
+185                         &specularStrength)
+186                 )\&.Add(
+187                     new Engine::Components::Graphics::MaterialValue<int>(
+188                         fragment,
+189                         "specularSize",
+190                         &specularSize)
+191                 )
+192                 // Enable
+193                 \&.Add(
+194                     new Engine::Components::Graphics::MaterialValue<bool>(
+195                         fragment,
+196                         "useLighting",
+197                         new bool(true))
+198                 );
+199             if (ActiveScene != nullptr && ActiveScene->Lights != nullptr && !ActiveScene->Lights->empty())
+200                 for (auto& light : *ActiveScene->Lights)
+201                 {
+202                     light\&.second->Use(it\&.second->Material);
+203                 }
+204         }
+205     if (ActiveScene != nullptr && ActiveScene->Lights != nullptr && !ActiveScene->Lights->empty())
+206         for (auto& it : *ActiveScene->Lights)
+207         {
+208             ActiveScene->Objects->Add("light_" + it\&.first, it\&.second);
+209         }
+210     return this;
+211 }
+.fi
+.SS "bool Engine::BaseEngine::InitSuccess ()\fC [inherited]\fP"
+
+.PP
+Definition at line 46 of file BaseEngine\&.cpp\&.
+.PP
+.nf
+47 {
+48     return _init;
+49 }
+.fi
+.SS "void Engine::BaseEngine::SetActiveScene (\fBComponents::Scene\fP * scene = \fCnullptr\fP)\fC [virtual]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 132 of file BaseEngine\&.cpp\&.
+.PP
+Referenced by Application::Engines::BasicEngine::Init(), Application::Engines::ZPGEngine::Init(), Application::Engines::TriangleEngine::Init(), Application::Engines::CameraEngine::Init(), and Init()\&.
+.PP
+.nf
+133 {
+134     if (scene == nullptr && !Scenes->empty())
+135         ActiveScene = Scenes->begin()->second;
+136     else
+137         ActiveScene = scene;        
+138 }
+.fi
+.SS "void Engine::BaseEngine::Start ()\fC [virtual]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 126 of file BaseEngine\&.cpp\&.
+.PP
+Referenced by main()\&.
+.PP
+.nf
+127 {
+128     system("cls");
+129     UpdateInternal();
+130 }
+.fi
+.SS "void Application::Engines::LightEngine::Update (::\fBEngine::Components::Window\fP * window)\fC [override]\fP"
+
+.PP
+Definition at line 213 of file LigtEngine\&.cpp\&.
+.PP
+.nf
+214 {
+215     std::cout << "PS: " << specularSize << "\nSS: " << specularStrength << "\nDS: " << diffuseStrength << "\nAS: " << ambientStrength << "\nLP: " << ActiveScene->Lights->First()->Power << std::endl;
+216     
+217     if (ActiveScene != nullptr && ActiveScene->Objects != nullptr && !ActiveScene->Objects->empty())
+218         for (auto& it : *ActiveScene->Objects)
+219         {
+220             /*auto _fi = glm::radians(90\&.f*(MouseX / window->Height));
+221             auto _psi = glm::radians(90\&.f*(MouseY / window->Width));
+222 
+223             std::cout << "FI:  " << _fi << "\nPSI: " << _psi << "\nObject: " << it\&.first << std::endl;
+224             */
+225             //ActiveScene->Cameras->First()->SetDirection(new glm::vec3(cos(_fi), sin(_fi), cos(_psi)));
+226 
+227             auto object = it\&.second;
+228             object->Draw();
+229             
+230             angle += 0\&.1f;
+231         }
+232 }
+.fi
+.SS "void Engine::BaseEngine::Update (\fBComponents::Window\fP * window)\fC [virtual]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 112 of file BaseEngine\&.cpp\&.
+.PP
+.nf
+113 {
+114 }
+.fi
+.SS "void Engine::BaseEngine::UpdateBegin (\fBComponents::Window\fP * window)\fC [virtual]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 57 of file BaseEngine\&.cpp\&.
+.PP
+References Engine::Components::Window::Get()\&.
+.PP
+.nf
+58 {
+59     // Scene
+60     ActiveScene->BeginLoad(this);
+61 
+62     // Buffers
+63     glEnable(GL_DEPTH_TEST);
+64     glDepthFunc(GL_LESS);
+65     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+66 
+67     // Input
+68     short mouseKeysActive = 0;
+69     glfwGetCursorPos(window->Get(), &MouseX, &MouseY);
+70     for(short i = 0; i < 8; i++)
+71     {
+72         const int state = glfwGetMouseButton(window->Get(), i);
+73         auto value = MouseKeys[i];
+74         // flip state
+75         if (state == GLFW_PRESS && !value)
+76             MouseKeys\&.Add(i, true);
+77         else if (state == GLFW_RELEASE && value)
+78             MouseKeys\&.Add(i, false);
+79         if (MouseKeys[i])
+80             mouseKeysActive++;
+81     }
+82     short keysActive = 0;
+83     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), { 40, keysActive });
+84     fprintf(_errorStream, "                           ");
+85     for (short i = 1; i < 512; i++)
+86     {
+87         const int state = glfwGetKey(window->Get(), i);
+88         auto value = Keys[i];
+89         // flip state
+90         if (state == GLFW_PRESS && !value)
+91             Keys\&.Add(i, true);
+92         else if (state == GLFW_RELEASE && value)
+93             Keys\&.Add(i, false);
+94         if (Keys[i])
+95             keysActive++;
+96     }
+97     bool handleKeys = true,
+98          handleMouse = true;
+99     for (auto handler : *InputHandlers)
+100     {
+101         if(handleKeys)
+102             handleKeys = handler->HandleKeys(this, window, ActiveScene, Keys, keysActive);
+103         if(handleMouse)
+104             handleMouse = handler->HandleMouse(this, window, ActiveScene, MouseX, MouseY, MouseKeys, mouseKeysActive);
+105         if(!handleKeys && !handleMouse)
+106             break;
+107     }
+108 
+109     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), { 0,0 });
+110 }
+.fi
+.SS "void Engine::BaseEngine::UpdateEnd (\fBComponents::Window\fP * window)\fC [virtual]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 116 of file BaseEngine\&.cpp\&.
+.PP
+References Engine::Components::Window::Get()\&.
+.PP
+.nf
+117 {
+118     // update other events like input handling
+119     glfwPollEvents();
+120     // put the stuff we’ve been drawing onto the display
+121     glfwSwapBuffers(window->Get());
+122 
+123     ActiveScene->FrameUpdate(this);
+124 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "Components::Scene* Engine::BaseEngine::ActiveScene\fC [inherited]\fP"
+
+.PP
+Definition at line 34 of file BaseEngine\&.h\&.
+.PP
+Referenced by Engine::BaseEngine::BaseEngine(), Application::Engines::CameraEngine::Init(), and Init()\&.
+.SS "glm::vec3 Application::Engines::LightEngine::ambientColor"
+
+.PP
+Definition at line 17 of file LigtEngine\&.h\&.
+.PP
+Referenced by Init()\&.
+.SS "float Application::Engines::LightEngine::ambientStrength"
+
+.PP
+Definition at line 14 of file LigtEngine\&.h\&.
+.PP
+Referenced by Init()\&.
+.SS "float Application::Engines::LightEngine::angle\fC [private]\fP"
+
+.PP
+Definition at line 23 of file LigtEngine\&.h\&.
+.PP
+Referenced by Init()\&.
+.SS "glm::vec3 Application::Engines::LightEngine::diffuseColor"
+
+.PP
+Definition at line 18 of file LigtEngine\&.h\&.
+.PP
+Referenced by Init()\&.
+.SS "float Application::Engines::LightEngine::diffuseStrength"
+
+.PP
+Definition at line 15 of file LigtEngine\&.h\&.
+.PP
+Referenced by Init()\&.
+.SS "\fBGeneric::Collection\fP<Components::IInputHandler*>* Engine::BaseEngine::InputHandlers\fC [inherited]\fP"
+
+.PP
+Definition at line 31 of file BaseEngine\&.h\&.
+.PP
+Referenced by Engine::BaseEngine::BaseEngine(), and Init()\&.
+.SS "\fBGeneric::Dictionary\fP<short, bool> Engine::BaseEngine::Keys\fC [inherited]\fP"
+
+.PP
+Definition at line 32 of file BaseEngine\&.h\&.
+.PP
+Referenced by Engine::BaseEngine::BaseEngine()\&.
+.SS "glm::mat4 Application::Engines::LightEngine::M\fC [private]\fP"
+
+.PP
+Definition at line 22 of file LigtEngine\&.h\&.
+.PP
+Referenced by Init()\&.
+.SS "\fBGeneric::Dictionary\fP<short, bool> Engine::BaseEngine::MouseKeys\fC [inherited]\fP"
+
+.PP
+Definition at line 33 of file BaseEngine\&.h\&.
+.PP
+Referenced by Engine::BaseEngine::BaseEngine()\&.
+.SS "double Engine::BaseEngine::MouseX\fC [inherited]\fP"
+
+.PP
+Definition at line 35 of file BaseEngine\&.h\&.
+.SS "double Engine::BaseEngine::MouseY\fC [inherited]\fP"
+
+.PP
+Definition at line 36 of file BaseEngine\&.h\&.
+.SS "\fBGeneric::Dictionary\fP<std::string, Components::Graphics::Program*>* Engine::BaseEngine::Programs\fC [inherited]\fP"
+
+.PP
+Definition at line 28 of file BaseEngine\&.h\&.
+.PP
+Referenced by Engine::BaseEngine::BaseEngine(), Application::Input::Handlers::CameraInputHandler::HandleMouse(), Application::Engines::BasicEngine::Init(), Application::Engines::CameraEngine::Init(), Application::Engines::ZPGEngine::Init(), Application::Engines::TriangleEngine::Init(), Init(), Application::Scenes::TriangleScene::Load(), and Application::Scenes::SphereScene::Load()\&.
+.SS "\fBGeneric::Dictionary\fP<std::string, Components::Scene*>* Engine::BaseEngine::Scenes\fC [inherited]\fP"
+
+.PP
+Definition at line 30 of file BaseEngine\&.h\&.
+.PP
+Referenced by Engine::BaseEngine::BaseEngine(), Application::Engines::ZPGEngine::Init(), Application::Engines::TriangleEngine::Init(), Application::Engines::BasicEngine::Init(), Application::Engines::CameraEngine::Init(), and Init()\&.
+.SS "\fBGeneric::Dictionary\fP<std::string, Components::Graphics::Shader*>* Engine::BaseEngine::Shaders\fC [inherited]\fP"
+
+.PP
+Definition at line 29 of file BaseEngine\&.h\&.
+.PP
+Referenced by Engine::BaseEngine::BaseEngine(), Application::Input::Handlers::CameraInputHandler::HandleMouse(), Application::Engines::TriangleEngine::Init(), Application::Engines::ZPGEngine::Init(), Application::Engines::BasicEngine::Init(), Application::Engines::CameraEngine::Init(), and Init()\&.
+.SS "glm::vec3 Application::Engines::LightEngine::specularColor"
+
+.PP
+Definition at line 19 of file LigtEngine\&.h\&.
+.PP
+Referenced by Init()\&.
+.SS "int Application::Engines::LightEngine::specularSize"
+
+.PP
+Definition at line 20 of file LigtEngine\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::LightingChangeInputHandler::HandleKeys(), and Init()\&.
+.SS "float Application::Engines::LightEngine::specularStrength"
+
+.PP
+Definition at line 16 of file LigtEngine\&.h\&.
+.PP
+Referenced by Init()\&.
+.SS "\fBGeneric::Dictionary\fP<std::string, Components::Window*>* Engine::BaseEngine::Windows\fC [inherited]\fP"
+
+.PP
+Definition at line 27 of file BaseEngine\&.h\&.
+.PP
+Referenced by Engine::BaseEngine::BaseEngine(), Application::Engines::ZPGEngine::Init(), Application::Engines::TriangleEngine::Init(), Application::Engines::BasicEngine::Init(), Application::Engines::CameraEngine::Init(), and Init()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

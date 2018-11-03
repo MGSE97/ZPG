@@ -1,0 +1,120 @@
+.TH "Engine::Components::Graphics::Material" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Engine::Components::Graphics::Material
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Material\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMaterial\fP (\fBGraphics::Program\fP *program)"
+.br
+.ti -1c
+.RI "\fB~Material\fP ()"
+.br
+.ti -1c
+.RI "template<typename T > \fBEngine::Components::Graphics::Material\fP * \fBAdd\fP (\fBShader\fP *shader, const GLchar *property, T *value)"
+.br
+.ti -1c
+.RI "template<typename T > \fBMaterial\fP * \fBAdd\fP (\fBShader\fP *shader, const GLchar *property, T *value)"
+.br
+.ti -1c
+.RI "\fBMaterial\fP * \fBUse\fP ()"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBProgram\fP * \fBProgram\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Collection\fP< \fBMaterialValueBase\fP * > * \fBValues\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 14 of file Material\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Engine::Components::Graphics::Material::Material (\fBGraphics::Program\fP * program)"
+
+.PP
+Definition at line 5 of file Material\&.cpp\&.
+.PP
+References Values\&.
+.PP
+.nf
+6 {
+7     Values = new Generic::Collection<MaterialValueBase*>();
+8     Program = program;
+9 }
+.fi
+.SS "Engine::Components::Graphics::Material::~Material ()"
+
+.PP
+Definition at line 12 of file Material\&.cpp\&.
+.PP
+.nf
+13 {
+14     Values->clear();
+15     delete Values;
+16 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T > \fBEngine::Components::Graphics::Material\fP* Engine::Components::Graphics::Material::Add (\fBShader\fP * shader, const GLchar * property, T * value)"
+
+.PP
+Definition at line 19 of file Material\&.cpp\&.
+.PP
+References Add()\&.
+.PP
+.nf
+20 {
+21     Values->Add(new MaterialValue<T>(shader, property, value));
+22     return this;
+23 }
+.fi
+.SS "template<typename T > \fBMaterial\fP* Engine::Components::Graphics::Material::Add (\fBShader\fP * shader, const GLchar * property, T * value)"
+
+.PP
+Referenced by Add()\&.
+.SS "\fBEngine::Components::Graphics::Material\fP * Engine::Components::Graphics::Material::Use ()"
+
+.PP
+Definition at line 25 of file Material\&.cpp\&.
+.PP
+References Engine::Components::Graphics::Program::Use()\&.
+.PP
+.nf
+26 {
+27     Program->Use();
+28     for (auto& value : *Values)
+29         value->Set(Program);
+30     return this;
+31 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBProgram\fP* Engine::Components::Graphics::Material::Program"
+
+.PP
+Definition at line 17 of file Material\&.h\&.
+.PP
+Referenced by Engine::Objects::Object::Object(), and Light::Use()\&.
+.SS "\fBGeneric::Collection\fP<\fBMaterialValueBase\fP*>* Engine::Components::Graphics::Material::Values"
+
+.PP
+Definition at line 21 of file Material\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::CameraInputHandler::HandleMouse(), Application::Engines::CameraEngine::Init(), Light::Light(), Material(), Engine::Objects::Object::Object(), and Light::Use()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

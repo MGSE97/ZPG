@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="ReadOnlyProperty_8cpp" kind="file" language="C++">
+    <compoundname>ReadOnlyProperty.cpp</compoundname>
+    <includes refid="ReadOnlyProperty_8h" local="yes">ReadOnlyProperty.h</includes>
+    <incdepgraph>
+      <node id="1792">
+        <label>ZPG/ReadOnlyProperty.cpp</label>
+        <link refid="ReadOnlyProperty_8cpp"/>
+        <childnode refid="1793" relation="include">
+        </childnode>
+      </node>
+      <node id="1793">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ReadOnlyProperty_8h" kindref="compound">ReadOnlyProperty.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ZPG/ReadOnlyProperty.cpp"/>
+  </compounddef>
+</doxygen>

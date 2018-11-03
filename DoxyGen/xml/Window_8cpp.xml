@@ -1,0 +1,329 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="Window_8cpp" kind="file" language="C++">
+    <compoundname>Window.cpp</compoundname>
+    <includes local="no">cstdlib</includes>
+    <includes local="no">cstdio</includes>
+    <includes refid="Window_8h" local="yes">Window.h</includes>
+    <includes local="no">glm/mat4x2.hpp</includes>
+    <includes local="no">glm/ext/quaternion_trigonometric.inl</includes>
+    <includes local="no">glm/ext/matrix_transform.inl</includes>
+    <includes local="no">ostream</includes>
+    <incdepgraph>
+      <node id="2524">
+        <label>list</label>
+      </node>
+      <node id="2527">
+        <label>VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="2528" relation="include">
+        </childnode>
+        <childnode refid="2530" relation="include">
+        </childnode>
+        <childnode refid="2516" relation="include">
+        </childnode>
+        <childnode refid="2532" relation="include">
+        </childnode>
+      </node>
+      <node id="2533">
+        <label>MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="2523" relation="include">
+        </childnode>
+        <childnode refid="2518" relation="include">
+        </childnode>
+        <childnode refid="2522" relation="include">
+        </childnode>
+        <childnode refid="2534" relation="include">
+        </childnode>
+      </node>
+      <node id="2530">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="2514" relation="include">
+        </childnode>
+        <childnode refid="2528" relation="include">
+        </childnode>
+        <childnode refid="2531" relation="include">
+        </childnode>
+      </node>
+      <node id="2518">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="2514" relation="include">
+        </childnode>
+        <childnode refid="2519" relation="include">
+        </childnode>
+        <childnode refid="2520" relation="include">
+        </childnode>
+        <childnode refid="2521" relation="include">
+        </childnode>
+        <childnode refid="2522" relation="include">
+        </childnode>
+        <childnode refid="2523" relation="include">
+        </childnode>
+      </node>
+      <node id="2528">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="2514" relation="include">
+        </childnode>
+        <childnode refid="2529" relation="include">
+        </childnode>
+      </node>
+      <node id="2523">
+        <label>string</label>
+      </node>
+      <node id="2514">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="2513">
+        <label>Window.h</label>
+        <link refid="Window_8h"/>
+        <childnode refid="2514" relation="include">
+        </childnode>
+        <childnode refid="2515" relation="include">
+        </childnode>
+        <childnode refid="2516" relation="include">
+        </childnode>
+        <childnode refid="2527" relation="include">
+        </childnode>
+        <childnode refid="2520" relation="include">
+        </childnode>
+      </node>
+      <node id="2526">
+        <label>map</label>
+      </node>
+      <node id="2515">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="2536">
+        <label>glm/ext/matrix_transform.inl</label>
+      </node>
+      <node id="2534">
+        <label>MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="2514" relation="include">
+        </childnode>
+        <childnode refid="2518" relation="include">
+        </childnode>
+      </node>
+      <node id="2537">
+        <label>ostream</label>
+      </node>
+      <node id="2522">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="2512">
+        <label>cstdio</label>
+      </node>
+      <node id="2519">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="2529">
+        <label>vector</label>
+      </node>
+      <node id="2517">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="2518" relation="include">
+        </childnode>
+        <childnode refid="2524" relation="include">
+        </childnode>
+      </node>
+      <node id="2532">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="2525" relation="include">
+        </childnode>
+        <childnode refid="2523" relation="include">
+        </childnode>
+        <childnode refid="2533" relation="include">
+        </childnode>
+        <childnode refid="2516" relation="include">
+        </childnode>
+        <childnode refid="2518" relation="include">
+        </childnode>
+      </node>
+      <node id="2535">
+        <label>glm/ext/quaternion_trigonometric.inl</label>
+      </node>
+      <node id="2510">
+        <label>ZPG/Window.cpp</label>
+        <link refid="Window_8cpp"/>
+        <childnode refid="2511" relation="include">
+        </childnode>
+        <childnode refid="2512" relation="include">
+        </childnode>
+        <childnode refid="2513" relation="include">
+        </childnode>
+        <childnode refid="2520" relation="include">
+        </childnode>
+        <childnode refid="2535" relation="include">
+        </childnode>
+        <childnode refid="2536" relation="include">
+        </childnode>
+        <childnode refid="2537" relation="include">
+        </childnode>
+      </node>
+      <node id="2531">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="2511">
+        <label>cstdlib</label>
+      </node>
+      <node id="2520">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="2516">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="2514" relation="include">
+        </childnode>
+        <childnode refid="2517" relation="include">
+        </childnode>
+        <childnode refid="2525" relation="include">
+        </childnode>
+        <childnode refid="2523" relation="include">
+        </childnode>
+      </node>
+      <node id="2525">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="2526" relation="include">
+        </childnode>
+      </node>
+      <node id="2521">
+        <label>xstring</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdio&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Window_8h" kindref="compound">Window.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/mat4x2.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/ext/quaternion_trigonometric.inl&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/ext/matrix_transform.inl&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classEngine_1_1Components_1_1Window_1aa88c443e1b4cb90949aace6e1150305b" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Window_1aa88c443e1b4cb90949aace6e1150305b" kindref="member">Engine::Components::Window::Window</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>title,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>speed,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>swapInterval)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Window_1a13e154573d91195ef0f545a9fa0e0403" kindref="member">Speed</ref><sp/>=<sp/>speed;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Window_1ad5f71bfbb06ff5452b63bddf4b0c20b1" kindref="member">Width</ref><sp/>=<sp/>width;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Window_1ad9cf40200634bff27dbc7ae9a841bb99" kindref="member">Height</ref><sp/>=<sp/>height;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Window_1adedeb611fa5cecb35f940cea40e5badd" kindref="member">Title</ref><sp/>=<sp/>title;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Window_1a99094c227614faf796be6db157cdf7e6" kindref="member">SwapInterval</ref><sp/>=<sp/>swapInterval;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//OnUpdate<sp/>+=<sp/>Sharp::EventHandler::Bind(&amp;_update,<sp/>*this);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classEngine_1_1Components_1_1Window_1adddcf28e753f81571ba39b4d8f698ada" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Engine::Components::Window</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Window_1adddcf28e753f81571ba39b4d8f698ada" kindref="member">Engine::Components::Window::Show</ref>()</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Init<sp/>GLFW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*if<sp/>(!glfwInit())<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/>&quot;ERROR:<sp/>could<sp/>not<sp/>start<sp/>GLFW3\n&quot;);</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/><sp/>}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>_window<sp/>=<sp/>glfwCreateWindow(Width,<sp/>Height,<sp/>Title,<sp/>NULL,<sp/>NULL);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!_window)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwTerminate();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>glfwMakeContextCurrent(_window);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>glfwSwapInterval(SwapInterval);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>glfwGetFramebufferSize(_window,<sp/>&amp;_width,<sp/>&amp;_height);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>_ratio<sp/>=<sp/>_width<sp/>/<sp/>(float)_height;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>glViewport(0,<sp/>0,<sp/>_width,<sp/>_height);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>start<sp/>GLEW<sp/>extension<sp/>handler</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>glewExperimental<sp/>=<sp/>GL_TRUE;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>glewInit();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="46"><highlight class="comment">Engine::Components::Window*<sp/>Engine::Components::Window::Run(glm::mat4<sp/>M)</highlight></codeline>
+<codeline lineno="47"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/><sp/>_angle<sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/><sp/><sp/><sp/>while<sp/>(!glfwWindowShouldClose(_window))</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Translate<sp/>to<sp/>point</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auto<sp/>m<sp/>=<sp/>glm::translate(M,<sp/>glm::vec3(0.0f,<sp/>0.5f,<sp/>0.0f));</highlight></codeline>
+<codeline lineno="53"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Rotation</highlight></codeline>
+<codeline lineno="54"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m<sp/>=<sp/>glm::rotate(m,<sp/>_angle,<sp/>glm::vec3(0.0f,<sp/>0.0f,<sp/>1.0f));</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Translate<sp/>back</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m<sp/>=<sp/>glm::translate(m,<sp/>glm::vec3(0.0f,<sp/>-0.5f,<sp/>0.0f));</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_update(m);</highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_angle<sp/>+=<sp/>0.001f*Speed;</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="comment"><sp/><sp/><sp/><sp/>return<sp/>this;</highlight></codeline>
+<codeline lineno="61"><highlight class="comment">}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classEngine_1_1Components_1_1Window_1a2fbf92d20aae2e10273b15ad43cc8db8" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Engine::Components::Window</ref>*<sp/><ref refid="classEngine_1_1Components_1_1Window_1a2fbf92d20aae2e10273b15ad43cc8db8" kindref="member">Engine::Components::Window::Info</ref>(std::ostream&amp;<sp/>stream)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>version<sp/>info</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>stream<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;OpenGL<sp/>Version:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>glGetString(GL_VERSION)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>stream<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Using<sp/>GLEW<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>glewGetString(GLEW_VERSION)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>stream<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Vendor<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>glGetString(GL_VENDOR)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>stream<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Renderer<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>glGetString(GL_RENDERER)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>stream<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;GLSL<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>glGetString(GL_SHADING_LANGUAGE_VERSION)<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>major,<sp/>minor,<sp/>revision;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>glfwGetVersion(&amp;major,<sp/>&amp;minor,<sp/>&amp;revision);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>stream<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Using<sp/>GLFW<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>major<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>minor<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>revision<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>stream<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;W,<sp/>H,<sp/>R:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>_width<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>_height<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>_ratio<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classEngine_1_1Components_1_1Window_1a4d5c3ff7df28f77bfa330beb447512f8" refkind="member"><highlight class="normal">GLFWwindow*<sp/><ref refid="classEngine_1_1Components_1_1Window_1a4d5c3ff7df28f77bfa330beb447512f8" kindref="member">Engine::Components::Window::Get</ref>()</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>_window;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="83"><highlight class="comment">Engine::Components::Window*<sp/>Engine::Components::Window::SetProgram(Graphics::Program*<sp/>program)</highlight></codeline>
+<codeline lineno="84"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="85"><highlight class="comment"><sp/><sp/><sp/><sp/>ShaderProgram<sp/>=<sp/>program;</highlight></codeline>
+<codeline lineno="86"><highlight class="comment"><sp/><sp/><sp/><sp/>return<sp/>this;</highlight></codeline>
+<codeline lineno="87"><highlight class="comment">}</highlight></codeline>
+<codeline lineno="88"><highlight class="comment"></highlight></codeline>
+<codeline lineno="89"><highlight class="comment">Engine::Components::Window*<sp/>Engine::Components::Window::SetObject(Objects::VertexObject*<sp/>object)</highlight></codeline>
+<codeline lineno="90"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="91"><highlight class="comment"><sp/><sp/><sp/><sp/>Object<sp/>=<sp/>object;</highlight></codeline>
+<codeline lineno="92"><highlight class="comment"><sp/><sp/><sp/><sp/>return<sp/>this;</highlight></codeline>
+<codeline lineno="93"><highlight class="comment">}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95" refid="classEngine_1_1Components_1_1Window_1a5f4bd958811d789d9380dd06a359163c" refkind="member"><highlight class="normal"><ref refid="classEngine_1_1Components_1_1Window_1a5f4bd958811d789d9380dd06a359163c" kindref="member">Engine::Components::Window::~Window</ref>()</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>glfwDestroyWindow(_window);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>glfwTerminate();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>exit(EXIT_SUCCESS);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">/*void<sp/>Engine::Components::Window::_update(glm::mat4<sp/>M)</highlight></codeline>
+<codeline lineno="103"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="104"><highlight class="comment"><sp/><sp/><sp/><sp/>if<sp/>(ShaderProgram<sp/>==<sp/>NULL<sp/>||<sp/>Object<sp/>==<sp/>NULL)</highlight></codeline>
+<codeline lineno="105"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return;</highlight></codeline>
+<codeline lineno="106"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>clear<sp/>color<sp/>and<sp/>depth<sp/>buffer</highlight></codeline>
+<codeline lineno="107"><highlight class="comment"><sp/><sp/><sp/><sp/>glClear(GL_COLOR_BUFFER_BIT<sp/>|<sp/>GL_DEPTH_BUFFER_BIT);</highlight></codeline>
+<codeline lineno="108"><highlight class="comment"><sp/><sp/><sp/><sp/>glUseProgram(*ShaderProgram-&gt;Get());</highlight></codeline>
+<codeline lineno="109"><highlight class="comment"><sp/><sp/><sp/><sp/>/*ShaderProgram-&gt;Shaders[0]-&gt;SendUniform(ShaderProgram,<sp/>&quot;modelMatrix&quot;,<sp/>M);</highlight></codeline>
+<codeline lineno="110"><highlight class="comment"><sp/><sp/><sp/><sp/>ShaderProgram-&gt;Shaders[1]-&gt;SendUniform(ShaderProgram,<sp/>&quot;color&quot;,<sp/>_angle-(long)_angle);*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*glBindVertexArray(Object-&gt;VAO-&gt;Get());</highlight></codeline>
+<codeline lineno="112"><highlight class="comment"></highlight></codeline>
+<codeline lineno="113"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>draw<sp/>triangles</highlight></codeline>
+<codeline lineno="114"><highlight class="comment"><sp/><sp/><sp/><sp/>glDrawArrays(GL_TRIANGLES,<sp/>Object-&gt;VAO-&gt;StartArrayIndex,<sp/>Object-&gt;VAO-&gt;Dimensions);<sp/>//mode,first,count</highlight></codeline>
+<codeline lineno="115"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>update<sp/>other<sp/>events<sp/>like<sp/>input<sp/>handling</highlight></codeline>
+<codeline lineno="116"><highlight class="comment"><sp/><sp/><sp/><sp/>glfwPollEvents();</highlight></codeline>
+<codeline lineno="117"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>put<sp/>the<sp/>stuff<sp/>we’ve<sp/>been<sp/>drawing<sp/>onto<sp/>the<sp/>display</highlight></codeline>
+<codeline lineno="118"><highlight class="comment"><sp/><sp/><sp/><sp/>glfwSwapBuffers(_window);</highlight></codeline>
+<codeline lineno="119"><highlight class="comment">}*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ZPG/Window.cpp"/>
+  </compounddef>
+</doxygen>

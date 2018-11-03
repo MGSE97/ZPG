@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="TriangleScene_8h" kind="file" language="C++">
+    <compoundname>TriangleScene.h</compoundname>
+    <includes refid="Scene_8h" local="yes">Scene.h</includes>
+    <includedby refid="BasicEngine_8cpp" local="yes">ZPG/BasicEngine.cpp</includedby>
+    <includedby refid="CameraEngine_8cpp" local="yes">ZPG/CameraEngine.cpp</includedby>
+    <includedby refid="LigtEngine_8cpp" local="yes">ZPG/LigtEngine.cpp</includedby>
+    <includedby refid="TriangleEngine_8cpp" local="yes">ZPG/TriangleEngine.cpp</includedby>
+    <includedby refid="TriangleScene_8cpp" local="yes">ZPG/TriangleScene.cpp</includedby>
+    <includedby refid="ZPGEngine_8cpp" local="yes">ZPG/ZPGEngine.cpp</includedby>
+    <incdepgraph>
+      <node id="2296">
+        <label>list</label>
+      </node>
+      <node id="2282">
+        <label>VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="2283" relation="include">
+        </childnode>
+        <childnode refid="2286" relation="include">
+        </childnode>
+        <childnode refid="2288" relation="include">
+        </childnode>
+        <childnode refid="2297" relation="include">
+        </childnode>
+      </node>
+      <node id="2298">
+        <label>MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="2295" relation="include">
+        </childnode>
+        <childnode refid="2290" relation="include">
+        </childnode>
+        <childnode refid="2294" relation="include">
+        </childnode>
+        <childnode refid="2299" relation="include">
+        </childnode>
+      </node>
+      <node id="2286">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="2284" relation="include">
+        </childnode>
+        <childnode refid="2283" relation="include">
+        </childnode>
+        <childnode refid="2287" relation="include">
+        </childnode>
+      </node>
+      <node id="2290">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="2284" relation="include">
+        </childnode>
+        <childnode refid="2291" relation="include">
+        </childnode>
+        <childnode refid="2292" relation="include">
+        </childnode>
+        <childnode refid="2293" relation="include">
+        </childnode>
+        <childnode refid="2294" relation="include">
+        </childnode>
+        <childnode refid="2295" relation="include">
+        </childnode>
+      </node>
+      <node id="2283">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="2284" relation="include">
+        </childnode>
+        <childnode refid="2285" relation="include">
+        </childnode>
+      </node>
+      <node id="2295">
+        <label>string</label>
+      </node>
+      <node id="2284">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="2280">
+        <label>map</label>
+      </node>
+      <node id="2305">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="2301" relation="include">
+        </childnode>
+        <childnode refid="2281" relation="include">
+        </childnode>
+        <childnode refid="2306" relation="include">
+        </childnode>
+      </node>
+      <node id="2299">
+        <label>MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="2284" relation="include">
+        </childnode>
+        <childnode refid="2290" relation="include">
+        </childnode>
+      </node>
+      <node id="2281">
+        <label>Object.h</label>
+        <link refid="Object_8h"/>
+        <childnode refid="2282" relation="include">
+        </childnode>
+      </node>
+      <node id="2306">
+        <label>glm/common.hpp</label>
+      </node>
+      <node id="2294">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="2303">
+        <label>Observable.h</label>
+        <link refid="Observable_8h"/>
+        <childnode refid="2289" relation="include">
+        </childnode>
+        <childnode refid="2304" relation="include">
+        </childnode>
+        <childnode refid="2285" relation="include">
+        </childnode>
+      </node>
+      <node id="2301">
+        <label>glm/vec3.hpp</label>
+      </node>
+      <node id="2291">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="2278">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+        <childnode refid="2279" relation="include">
+        </childnode>
+        <childnode refid="2281" relation="include">
+        </childnode>
+        <childnode refid="2300" relation="include">
+        </childnode>
+        <childnode refid="2305" relation="include">
+        </childnode>
+      </node>
+      <node id="2285">
+        <label>vector</label>
+      </node>
+      <node id="2289">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="2290" relation="include">
+        </childnode>
+        <childnode refid="2296" relation="include">
+        </childnode>
+      </node>
+      <node id="2297">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="2279" relation="include">
+        </childnode>
+        <childnode refid="2295" relation="include">
+        </childnode>
+        <childnode refid="2298" relation="include">
+        </childnode>
+        <childnode refid="2288" relation="include">
+        </childnode>
+        <childnode refid="2290" relation="include">
+        </childnode>
+      </node>
+      <node id="2287">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="2277">
+        <label>ZPG/TriangleScene.h</label>
+        <link refid="TriangleScene_8h"/>
+        <childnode refid="2278" relation="include">
+        </childnode>
+      </node>
+      <node id="2304">
+        <label>Observer.h</label>
+        <link refid="Observer_8h"/>
+      </node>
+      <node id="2292">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="2288">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="2284" relation="include">
+        </childnode>
+        <childnode refid="2289" relation="include">
+        </childnode>
+        <childnode refid="2279" relation="include">
+        </childnode>
+        <childnode refid="2295" relation="include">
+        </childnode>
+      </node>
+      <node id="2279">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="2280" relation="include">
+        </childnode>
+      </node>
+      <node id="2293">
+        <label>xstring</label>
+      </node>
+      <node id="2302">
+        <label>glm/mat4x4.hpp</label>
+      </node>
+      <node id="2300">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="2301" relation="include">
+        </childnode>
+        <childnode refid="2302" relation="include">
+        </childnode>
+        <childnode refid="2303" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2309">
+        <label>ZPG/CameraEngine.cpp</label>
+        <link refid="CameraEngine_8cpp"/>
+      </node>
+      <node id="2311">
+        <label>ZPG/TriangleEngine.cpp</label>
+        <link refid="TriangleEngine_8cpp"/>
+      </node>
+      <node id="2312">
+        <label>ZPG/TriangleScene.cpp</label>
+        <link refid="TriangleScene_8cpp"/>
+      </node>
+      <node id="2313">
+        <label>ZPG/ZPGEngine.cpp</label>
+        <link refid="ZPGEngine_8cpp"/>
+      </node>
+      <node id="2310">
+        <label>ZPG/LigtEngine.cpp</label>
+        <link refid="LigtEngine_8cpp"/>
+      </node>
+      <node id="2307">
+        <label>ZPG/TriangleScene.h</label>
+        <link refid="TriangleScene_8h"/>
+        <childnode refid="2308" relation="include">
+        </childnode>
+        <childnode refid="2309" relation="include">
+        </childnode>
+        <childnode refid="2310" relation="include">
+        </childnode>
+        <childnode refid="2311" relation="include">
+        </childnode>
+        <childnode refid="2312" relation="include">
+        </childnode>
+        <childnode refid="2313" relation="include">
+        </childnode>
+      </node>
+      <node id="2308">
+        <label>ZPG/BasicEngine.cpp</label>
+        <link refid="BasicEngine_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classApplication_1_1Scenes_1_1TriangleScene" prot="public">Application::Scenes::TriangleScene</innerclass>
+    <innernamespace refid="namespaceApplication">Application</innernamespace>
+    <innernamespace refid="namespaceApplication_1_1Scenes">Application::Scenes</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Scene_8h" kindref="compound">Scene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceApplication" kindref="compound">Application</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">Scenes</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="7" refid="classApplication_1_1Scenes_1_1TriangleScene" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classApplication_1_1Scenes_1_1TriangleScene" kindref="compound">TriangleScene</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Scene" kindref="compound">Engine::Components::Scene</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Scenes_1_1TriangleScene_1a36015fc65ca3005d57f23a1e2f34f016" kindref="member">TriangleScene</ref>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Scenes_1_1TriangleScene_1a5b1166cd574db6efeea5de8029672437" kindref="member">~TriangleScene</ref>();</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Scenes_1_1TriangleScene_1a4bfd44cab6aa0eafe47f379dafe3843e" kindref="member">Load</ref>(<ref refid="classEngine_1_1BaseEngine" kindref="compound">Engine::BaseEngine</ref>*<sp/>engine)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Scenes_1_1TriangleScene_1a5622996232a2ad52735251c8398b0c9a" kindref="member">FrameUpdate</ref>(<ref refid="classEngine_1_1BaseEngine" kindref="compound">Engine::BaseEngine</ref>*<sp/>engine)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="15" refid="classApplication_1_1Scenes_1_1TriangleScene_1a2c270015fd60f4aeb281474ddfdcd692" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glm::mat4*<sp/><ref refid="classApplication_1_1Scenes_1_1TriangleScene_1a2c270015fd60f4aeb281474ddfdcd692" kindref="member">modelMatrix</ref>;</highlight></codeline>
+<codeline lineno="16" refid="classApplication_1_1Scenes_1_1TriangleScene_1a398daba41c0317ccb019d714bec0c795" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/><ref refid="classApplication_1_1Scenes_1_1TriangleScene_1a398daba41c0317ccb019d714bec0c795" kindref="member">angle</ref>;</highlight></codeline>
+<codeline lineno="17" refid="classApplication_1_1Scenes_1_1TriangleScene_1ab5d8bb91e423f50a7c54979853cfcbc9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/><ref refid="classApplication_1_1Scenes_1_1TriangleScene_1ab5d8bb91e423f50a7c54979853cfcbc9" kindref="member">color</ref>;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ZPG/TriangleScene.h"/>
+  </compounddef>
+</doxygen>

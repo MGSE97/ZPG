@@ -1,0 +1,61 @@
+.TH "ProgramDataKey" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ProgramDataKey
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ProgramDataKey\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBProgramDataKey\fP (Engine::Components::Shader *shader, std::string property)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBProperty\fP"
+.br
+.ti -1c
+.RI "Engine::Components::Shader * \fBShader\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 5 of file ProgramDataKey\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ProgramDataKey::ProgramDataKey (Engine::Components::Shader * shader, std::string property)\fC [inline]\fP"
+
+.PP
+Definition at line 8 of file ProgramDataKey\&.h\&.
+.PP
+References Shader\&.
+.PP
+.nf
+9     {
+10         Shader = shader;
+11         Property = property;
+12     }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "std::string ProgramDataKey::Property"
+
+.PP
+Definition at line 14 of file ProgramDataKey\&.h\&.
+.SS "Engine::Components::Shader* ProgramDataKey::Shader"
+
+.PP
+Definition at line 13 of file ProgramDataKey\&.h\&.
+.PP
+Referenced by ProgramDataKey()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

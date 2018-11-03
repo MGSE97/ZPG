@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classTransform" kind="class" language="C++" prot="public">
+    <compoundname>Transform</compoundname>
+    <includes refid="Transform_8h" local="no">Transform.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classTransform_1a1ee81ac62c423e027d979454a373b991" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 Transform::Position</definition>
+        <argsstring></argsstring>
+        <name>Position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Transform.h" line="7" column="1" bodyfile="ZPG/Transform.h" bodystart="7" bodyend="-1"/>
+        <referencedby refid="classTransform_1ac71c79e10f11990100cd219f25879dd0" compoundref="Transform_8cpp" startline="4" endline="31">GetMatrix</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classTransform_1a0b39a3cad853ab427a91b761d82440d2" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 Transform::Rotation</definition>
+        <argsstring></argsstring>
+        <name>Rotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Transform.h" line="9" column="1" bodyfile="ZPG/Transform.h" bodystart="9" bodyend="-1"/>
+        <referencedby refid="classTransform_1ac71c79e10f11990100cd219f25879dd0" compoundref="Transform_8cpp" startline="4" endline="31">GetMatrix</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classTransform_1a337690a3de8862de2f930e9ee1323365" prot="public" static="no" mutable="no">
+        <type>glm::vec3</type>
+        <definition>glm::vec3 Transform::Scale</definition>
+        <argsstring></argsstring>
+        <name>Scale</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Transform.h" line="11" column="1" bodyfile="ZPG/Transform.h" bodystart="11" bodyend="-1"/>
+        <referencedby refid="classTransform_1ac71c79e10f11990100cd219f25879dd0" compoundref="Transform_8cpp" startline="4" endline="31">GetMatrix</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classTransform_1aa08ca4266efabc768973cdeea51945ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Transform::Transform</definition>
+        <argsstring>()</argsstring>
+        <name>Transform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Transform.h" line="15" column="1" bodyfile="ZPG/Transform.cpp" bodystart="33" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classTransform_1aa72e286c069850db80927b0e6554cd3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Transform::~Transform</definition>
+        <argsstring>()</argsstring>
+        <name>~Transform</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Transform.h" line="17" column="1" bodyfile="ZPG/Transform.cpp" bodystart="37" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classTransform_1ac71c79e10f11990100cd219f25879dd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>glm::mat4</type>
+        <definition>glm::mat4 Transform::GetMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>GetMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Transform.h" line="13" column="1" bodyfile="ZPG/Transform.cpp" bodystart="4" bodyend="31"/>
+        <references refid="classTransform_1a1ee81ac62c423e027d979454a373b991" compoundref="Transform_8h" startline="7">Position</references>
+        <references refid="classTransform_1a0b39a3cad853ab427a91b761d82440d2" compoundref="Transform_8h" startline="9">Rotation</references>
+        <references refid="classTransform_1a337690a3de8862de2f930e9ee1323365" compoundref="Transform_8h" startline="11">Scale</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="619">
+        <label>Transform</label>
+        <link refid="classTransform"/>
+        <childnode refid="620" relation="usage">
+          <edgelabel>+Rotation</edgelabel>
+          <edgelabel>+Scale</edgelabel>
+          <edgelabel>+Position</edgelabel>
+        </childnode>
+      </node>
+      <node id="620">
+        <label>vec3</label>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/Transform.h" line="5" column="1" bodyfile="ZPG/Transform.h" bodystart="5" bodyend="19"/>
+    <listofallmembers>
+      <member refid="classTransform_1ac71c79e10f11990100cd219f25879dd0" prot="public" virt="non-virtual"><scope>Transform</scope><name>GetMatrix</name></member>
+      <member refid="classTransform_1a1ee81ac62c423e027d979454a373b991" prot="public" virt="non-virtual"><scope>Transform</scope><name>Position</name></member>
+      <member refid="classTransform_1a0b39a3cad853ab427a91b761d82440d2" prot="public" virt="non-virtual"><scope>Transform</scope><name>Rotation</name></member>
+      <member refid="classTransform_1a337690a3de8862de2f930e9ee1323365" prot="public" virt="non-virtual"><scope>Transform</scope><name>Scale</name></member>
+      <member refid="classTransform_1aa08ca4266efabc768973cdeea51945ab" prot="public" virt="non-virtual"><scope>Transform</scope><name>Transform</name></member>
+      <member refid="classTransform_1aa72e286c069850db80927b0e6554cd3e" prot="public" virt="non-virtual"><scope>Transform</scope><name>~Transform</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

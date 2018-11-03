@@ -1,0 +1,6 @@
+<map id="Engine::Components::Camera::Update" name="Engine::Components::Camera::Update">
+<area shape="rect" id="node2" href="$classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler.html#a149884ea2dc9deea39d3dcd10dfa74b1" title="Application::Input\l::Handlers::CameraInputHandler\l::HandleKeys" alt="" coords="196,5,403,61"/>
+<area shape="rect" id="node3" href="$classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler.html#ab06fa94ce5265dc06abb645ea29850bd" title="Application::Input\l::Handlers::CameraInputHandler\l::HandleMouse" alt="" coords="196,85,403,141"/>
+<area shape="rect" id="node4" href="$classEngine_1_1Components_1_1Scene.html#a936218df56c481f3aa12d684cee038f3" title="Engine::Components\l::Scene::SetActiveCamera" alt="" coords="212,166,387,207"/>
+<area shape="rect" id="node5" href="$classEngine_1_1Components_1_1Camera.html#af3ce56d4d1a66fa4e45ec8775e4149e7" title="Engine::Components\l::Camera::SetActive" alt="" coords="451,166,593,207"/>
+</map>

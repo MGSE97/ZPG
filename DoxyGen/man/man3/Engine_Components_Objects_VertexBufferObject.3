@@ -1,0 +1,124 @@
+.TH "Engine::Components::Objects::VertexBufferObject" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Engine::Components::Objects::VertexBufferObject
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <VertexBufferObject\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVertexBufferObject\fP (float *points, int size)"
+.br
+.ti -1c
+.RI "\fB~VertexBufferObject\fP ()"
+.br
+.ti -1c
+.RI "GLuint \fBGet\fP ()"
+.br
+.ti -1c
+.RI "int \fBGetId\fP ()"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fB_Id\fP"
+.br
+.ti -1c
+.RI "GLuint \fB_VBO\fP = 0"
+.br
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "static int \fB_id\fP = 0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 11 of file VertexBufferObject\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Engine::Components::Objects::VertexBufferObject::VertexBufferObject (float * points, int size)"
+
+.PP
+Definition at line 6 of file VertexBufferObject\&.cpp\&.
+.PP
+References _Id, _id, and _VBO\&.
+.PP
+.nf
+7 {
+8     _Id = ++_id;
+9     glGenBuffers(_Id, &_VBO); // generate the VBO
+10     glBindBuffer(GL_ARRAY_BUFFER, _VBO);
+11     glBufferData(GL_ARRAY_BUFFER, size * sizeof(float), points, GL_STATIC_DRAW);
+12 }
+.fi
+.SS "Engine::Components::Objects::VertexBufferObject::~VertexBufferObject ()"
+
+.PP
+Definition at line 15 of file VertexBufferObject\&.cpp\&.
+.PP
+.nf
+16 {
+17     delete &_Id;
+18     delete &_VBO;
+19 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "GLuint Engine::Components::Objects::VertexBufferObject::Get ()"
+
+.PP
+Definition at line 21 of file VertexBufferObject\&.cpp\&.
+.PP
+Referenced by Engine::Components::Objects::VertexAttributeObject::VertexAttributeObject()\&.
+.PP
+.nf
+22 {
+23     return _VBO;
+24 }
+.fi
+.SS "int Engine::Components::Objects::VertexBufferObject::GetId ()"
+
+.PP
+Definition at line 26 of file VertexBufferObject\&.cpp\&.
+.PP
+Referenced by Engine::Components::Objects::VertexAttributeObject::VertexAttributeObject()\&.
+.PP
+.nf
+27 {
+28     return _Id;
+29 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "int Engine::Components::Objects::VertexBufferObject::_Id\fC [private]\fP"
+
+.PP
+Definition at line 20 of file VertexBufferObject\&.h\&.
+.PP
+Referenced by VertexBufferObject()\&.
+.SS "int Engine::Components::Objects::VertexBufferObject::_id = 0\fC [static]\fP, \fC [private]\fP"
+
+.PP
+Definition at line 21 of file VertexBufferObject\&.h\&.
+.PP
+Referenced by VertexBufferObject()\&.
+.SS "GLuint Engine::Components::Objects::VertexBufferObject::_VBO = 0\fC [private]\fP"
+
+.PP
+Definition at line 19 of file VertexBufferObject\&.h\&.
+.PP
+Referenced by VertexBufferObject()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

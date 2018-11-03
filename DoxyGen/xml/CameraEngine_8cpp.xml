@@ -1,0 +1,416 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="CameraEngine_8cpp" kind="file" language="C++">
+    <compoundname>CameraEngine.cpp</compoundname>
+    <includes refid="CameraEngine_8h" local="yes">CameraEngine.h</includes>
+    <includes refid="TriangleScene_8h" local="yes">TriangleScene.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">glm/ext/matrix_clip_space.hpp</includes>
+    <includes refid="SphereScene_8h" local="yes">SphereScene.h</includes>
+    <includes local="no">windows.h</includes>
+    <includes refid="Assets_8h" local="yes">Assets.h</includes>
+    <incdepgraph>
+      <node id="452">
+        <label>list</label>
+      </node>
+      <node id="455">
+        <label>VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="458" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="460" relation="include">
+        </childnode>
+      </node>
+      <node id="461">
+        <label>MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="450" relation="include">
+        </childnode>
+        <childnode refid="462" relation="include">
+        </childnode>
+      </node>
+      <node id="458">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="456" relation="include">
+        </childnode>
+        <childnode refid="459" relation="include">
+        </childnode>
+      </node>
+      <node id="477">
+        <label>windows.h</label>
+      </node>
+      <node id="446">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="447" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+        <childnode refid="449" relation="include">
+        </childnode>
+        <childnode refid="450" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+      </node>
+      <node id="476">
+        <label>SphereScene.h</label>
+        <link refid="SphereScene_8h"/>
+        <childnode refid="463" relation="include">
+        </childnode>
+      </node>
+      <node id="456">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="457" relation="include">
+        </childnode>
+      </node>
+      <node id="437">
+        <label>ZPG/CameraEngine.cpp</label>
+        <link refid="CameraEngine_8cpp"/>
+        <childnode refid="438" relation="include">
+        </childnode>
+        <childnode refid="473" relation="include">
+        </childnode>
+        <childnode refid="474" relation="include">
+        </childnode>
+        <childnode refid="475" relation="include">
+        </childnode>
+        <childnode refid="476" relation="include">
+        </childnode>
+        <childnode refid="477" relation="include">
+        </childnode>
+        <childnode refid="478" relation="include">
+        </childnode>
+      </node>
+      <node id="451">
+        <label>string</label>
+      </node>
+      <node id="444">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="453">
+        <label>Window.h</label>
+        <link refid="Window_8h"/>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="454" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="455" relation="include">
+        </childnode>
+        <childnode refid="448" relation="include">
+        </childnode>
+      </node>
+      <node id="442">
+        <label>map</label>
+      </node>
+      <node id="470">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="466" relation="include">
+        </childnode>
+        <childnode refid="464" relation="include">
+        </childnode>
+        <childnode refid="471" relation="include">
+        </childnode>
+      </node>
+      <node id="454">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="462">
+        <label>MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+      </node>
+      <node id="439">
+        <label>BaseEngine.h</label>
+        <link refid="BaseEngine_8h"/>
+        <childnode refid="440" relation="include">
+        </childnode>
+        <childnode refid="441" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="453" relation="include">
+        </childnode>
+        <childnode refid="463" relation="include">
+        </childnode>
+        <childnode refid="472" relation="include">
+        </childnode>
+      </node>
+      <node id="472">
+        <label>IInputHandler.h</label>
+        <link refid="IInputHandler_8h"/>
+        <childnode refid="453" relation="include">
+        </childnode>
+        <childnode refid="463" relation="include">
+        </childnode>
+      </node>
+      <node id="464">
+        <label>Object.h</label>
+        <link refid="Object_8h"/>
+        <childnode refid="455" relation="include">
+        </childnode>
+      </node>
+      <node id="471">
+        <label>glm/common.hpp</label>
+      </node>
+      <node id="440">
+        <label>ostream</label>
+      </node>
+      <node id="450">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="468">
+        <label>Observable.h</label>
+        <link refid="Observable_8h"/>
+        <childnode refid="445" relation="include">
+        </childnode>
+        <childnode refid="469" relation="include">
+        </childnode>
+        <childnode refid="457" relation="include">
+        </childnode>
+      </node>
+      <node id="478">
+        <label>Assets.h</label>
+        <link refid="Assets_8h"/>
+        <childnode refid="451" relation="include">
+        </childnode>
+      </node>
+      <node id="466">
+        <label>glm/vec3.hpp</label>
+      </node>
+      <node id="447">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="463">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+        <childnode refid="441" relation="include">
+        </childnode>
+        <childnode refid="464" relation="include">
+        </childnode>
+        <childnode refid="465" relation="include">
+        </childnode>
+        <childnode refid="470" relation="include">
+        </childnode>
+      </node>
+      <node id="457">
+        <label>vector</label>
+      </node>
+      <node id="445">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="446" relation="include">
+        </childnode>
+        <childnode refid="452" relation="include">
+        </childnode>
+      </node>
+      <node id="460">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="441" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+        <childnode refid="461" relation="include">
+        </childnode>
+        <childnode refid="443" relation="include">
+        </childnode>
+        <childnode refid="446" relation="include">
+        </childnode>
+      </node>
+      <node id="459">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="473">
+        <label>TriangleScene.h</label>
+        <link refid="TriangleScene_8h"/>
+        <childnode refid="463" relation="include">
+        </childnode>
+      </node>
+      <node id="469">
+        <label>Observer.h</label>
+        <link refid="Observer_8h"/>
+      </node>
+      <node id="438">
+        <label>CameraEngine.h</label>
+        <link refid="CameraEngine_8h"/>
+        <childnode refid="439" relation="include">
+        </childnode>
+      </node>
+      <node id="448">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="474">
+        <label>iostream</label>
+      </node>
+      <node id="443">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="444" relation="include">
+        </childnode>
+        <childnode refid="445" relation="include">
+        </childnode>
+        <childnode refid="441" relation="include">
+        </childnode>
+        <childnode refid="451" relation="include">
+        </childnode>
+      </node>
+      <node id="441">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="442" relation="include">
+        </childnode>
+      </node>
+      <node id="449">
+        <label>xstring</label>
+      </node>
+      <node id="467">
+        <label>glm/mat4x4.hpp</label>
+      </node>
+      <node id="475">
+        <label>glm/ext/matrix_clip_space.hpp</label>
+      </node>
+      <node id="465">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="466" relation="include">
+        </childnode>
+        <childnode refid="467" relation="include">
+        </childnode>
+        <childnode refid="468" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="CameraEngine_8h" kindref="compound">CameraEngine.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="TriangleScene_8h" kindref="compound">TriangleScene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/ext/matrix_clip_space.hpp&gt;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SphereScene_8h" kindref="compound">SphereScene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Assets_8h" kindref="compound">Assets.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classApplication_1_1Engines_1_1CameraEngine_1a0c7723b93afbdef70394961a4624813d" refkind="member"><highlight class="normal"><ref refid="classApplication_1_1Engines_1_1CameraEngine" kindref="compound">Application::Engines::CameraEngine</ref>*<sp/><ref refid="classApplication_1_1Engines_1_1CameraEngine_1a0c7723b93afbdef70394961a4624813d" kindref="member">Application::Engines::CameraEngine::Init</ref>(std::FILE*<sp/>errorStream)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>BaseEngine::Init(errorStream);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="ZPGEngine_8cpp_1afc33b8912f9f93d1d2544df04ad4a81a" kindref="member">vertex_shader</ref><sp/>=</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;#version<sp/>330\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;layout(location=0)<sp/>in<sp/>vec3<sp/>vp;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;out<sp/>vec3<sp/>ex_WorldPos;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;uniform<sp/>mat4<sp/>modelMatrix;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;uniform<sp/>mat4<sp/>viewMatrix;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;uniform<sp/>mat4<sp/>projectionMatrix;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;void<sp/>main<sp/>()<sp/>{&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>gl_Position<sp/>=<sp/>(projectionMatrix<sp/>*<sp/>viewMatrix<sp/>*<sp/>modelMatrix)<sp/>*<sp/>vec4<sp/>(vp,<sp/>1.0);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;}&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="ZPGEngine_8cpp_1ab187f2ba2a2f72ea5571921a1a856582" kindref="member">fragment_shader</ref><sp/>=</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;#version<sp/>330\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;uniform<sp/>float<sp/>color;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;out<sp/>vec4<sp/>frag_colour;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;void<sp/>main<sp/>()<sp/>{&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/>frag_colour<sp/>=<sp/>vec4<sp/>(color,<sp/>1.0-color,<sp/>0.0,<sp/>1.0);&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;}&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Engines_1_1CameraEngine_1a2c5eb2ee7aa78a335df64d77242fb21c" kindref="member">M</ref><sp/>=<sp/>glm::mat4(1.0f);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Engines_1_1CameraEngine_1a5298e9f5fa1a2984e21274c4524f771c" kindref="member">angle</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1a4a1a4c4dae052e66ecc4f326eeed4d33" kindref="member">Windows</ref>-&gt;Add(</highlight><highlight class="stringliteral">&quot;zpg&quot;</highlight><highlight class="normal">,<sp/>(new<sp/>::Engine::Components::Window(800,<sp/>600,<sp/></highlight><highlight class="stringliteral">&quot;ZPG<sp/>-<sp/>Camera&quot;</highlight><highlight class="normal">,<sp/>100.0f))</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;Show()</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;Info(std::cout)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">*<sp/>vertex<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Engine::Components::Graphics::Shader</ref>(GL_VERTEX_SHADER,<sp/><ref refid="classAssets_1ac712d5aca276086a3734e2e9f74cfc6b" kindref="member">Assets::ShadersVertex</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;Camera.glsl&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1a2582dee3f73da82bb422b43317b85e3b" kindref="member">Shaders</ref>-&gt;Add(</highlight><highlight class="stringliteral">&quot;vertex&quot;</highlight><highlight class="normal">,<sp/>vertex);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1a2582dee3f73da82bb422b43317b85e3b" kindref="member">Shaders</ref>-&gt;Add(</highlight><highlight class="stringliteral">&quot;fragment&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Engine::Components::Graphics::Shader</ref>(GL_FRAGMENT_SHADER,<sp/><ref refid="classAssets_1abb1ca75a8a9c7b942232df4aff9bb6c9" kindref="member">Assets::ShadersFragment</ref><sp/>+<sp/></highlight><highlight class="stringliteral">&quot;Basic.glsl&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1ae0f86360ea3a384caefe443dd8f88601" kindref="member">Programs</ref>-&gt;Add(</highlight><highlight class="stringliteral">&quot;basic&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Engine::Components::Graphics::Program</ref>())-&gt;AddShaders(<ref refid="classEngine_1_1BaseEngine_1a2582dee3f73da82bb422b43317b85e3b" kindref="member">Shaders</ref>));</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1afd02af3c2fbe9bb734db014dec06585a" kindref="member">Scenes</ref>-&gt;Add(</highlight><highlight class="stringliteral">&quot;triangle&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Scenes_1_1TriangleScene" kindref="compound">Scenes::TriangleScene</ref>());</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1afd02af3c2fbe9bb734db014dec06585a" kindref="member">Scenes</ref>-&gt;Add(</highlight><highlight class="stringliteral">&quot;sphere&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Scenes_1_1SphereScene" kindref="compound">Scenes::SphereScene</ref>());</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1afc82c6a00d5a9d4714740fc5eab5db86" kindref="member">SetActiveScene</ref>(<ref refid="classEngine_1_1BaseEngine_1afd02af3c2fbe9bb734db014dec06585a" kindref="member">Scenes</ref>-&gt;Get(</highlight><highlight class="stringliteral">&quot;sphere&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1af18bd334fe66952b8d79b8e9e99ab2d8" kindref="member">BeginLoad</ref>(</highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1aea98ff1ced88ee859878b504e9a2a362" kindref="member">Cameras</ref>-&gt;Add(</highlight><highlight class="stringliteral">&quot;main&quot;</highlight><highlight class="normal">,<sp/>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Camera" kindref="compound">Engine::Components::Camera</ref>())</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>-&gt;SetPosition(new<sp/>glm::vec3(2.5f,<sp/>2.5f,<sp/>2.f))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;SetPosition(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>glm::vec3(0.f,<sp/>1.5f,<sp/>4.f))</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;SetDirection(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>glm::vec3(0.f,<sp/>0.f,<sp/>0.f))</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;SetUp(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>glm::vec3(0.f,<sp/>0.f,<sp/>1.f)));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1a23481feabaaa56bf5613765db03af4da" kindref="member">Objects</ref>-&gt;<ref refid="classGeneric_1_1Dictionary_1ab368d54de28e7a3514e1add4bb5b3a36" kindref="member">First</ref>()</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;<ref refid="classEngine_1_1Components_1_1Objects_1_1VertexObject_1a86c1fced4cdc5e59a66a635390a17eca" kindref="member">Material</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Material_1a34335608ba1e6eb2c2dba5032107eab0" kindref="member">Values</ref></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-&gt;Add(</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;glm::mat4&gt;</ref>(</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertex,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;viewMatrix&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1BaseEngine_1adb3dbc839da9d821e08b18d8a221698d" kindref="member">ActiveScene</ref>-&gt;<ref refid="classEngine_1_1Components_1_1Scene_1aea98ff1ced88ee859878b504e9a2a362" kindref="member">Cameras</ref>-&gt;First()-&gt;Value)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>).Add(</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;glm::mat4&gt;</ref>(</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vertex,</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;projectionMatrix&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>glm::mat4(glm::perspective(glm::radians(90.0f),<sp/>4.0f<sp/>/<sp/>3.0f,<sp/>0.1f,<sp/>100.0f)))</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75" refid="classApplication_1_1Engines_1_1CameraEngine_1a48f10aa5b7d87545f5c04d69c37df665" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Engines_1_1CameraEngine_1a48f10aa5b7d87545f5c04d69c37df665" kindref="member">Application::Engines::CameraEngine::Update</ref>(::<ref refid="classEngine_1_1Components_1_1Window" kindref="compound">Engine::Components::Window</ref>*<sp/>window)</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(ActiveScene<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>ActiveScene-&gt;Objects<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>!ActiveScene-&gt;Objects-&gt;empty())</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>it<sp/>:<sp/>*ActiveScene-&gt;Objects)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//auto<sp/>_fi<sp/>=<sp/>atan2(MouseY,<sp/>MouseX);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//auto<sp/>_psi<sp/>=<sp/>atan2(MouseX,<sp/>MouseY);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//auto<sp/>_fi<sp/>=<sp/>glm::radians(MouseX);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//auto<sp/>_psi<sp/>=<sp/>glm::radians(MouseY);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>_fi<sp/>=<sp/>(MouseX<sp/>/<sp/>window-&gt;<ref refid="classEngine_1_1Components_1_1Window_1ad9cf40200634bff27dbc7ae9a841bb99" kindref="member">Height</ref>);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>_psi<sp/>=(MouseY<sp/>/<sp/>window-&gt;<ref refid="classEngine_1_1Components_1_1Window_1ad5f71bfbb06ff5452b63bddf4b0c20b1" kindref="member">Width</ref>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;FI:<sp/><sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>_fi<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\nPSI:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>_psi<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\nObject:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>it.first<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ActiveScene-&gt;Cameras-&gt;First()-&gt;SetDirection(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>glm::vec3(cos(_fi),<sp/>sin(_fi),<sp/>cos(_psi)));</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>=<sp/>it.second;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">-&gt;Draw();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*auto<sp/>pm<sp/>=<sp/>glm::perspective(glm::radians(90.0f),<sp/>4.0f<sp/>/<sp/>3.0f,<sp/>0.1f,<sp/>100.0f);</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>auto<sp/>c<sp/>=<sp/>ActiveScene-&gt;Cameras-&gt;First()-&gt;Value;</highlight></codeline>
+<codeline lineno="96"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Shaders-&gt;Get(&quot;vertex&quot;)-&gt;SendUniform(Programs-&gt;First(),<sp/>&quot;viewMatrix&quot;,<sp/>c);</highlight></codeline>
+<codeline lineno="97"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Shaders-&gt;Get(&quot;vertex&quot;)-&gt;SendUniform(Programs-&gt;First(),<sp/>&quot;projectionMatrix&quot;,<sp/>&amp;pm);*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>angle<sp/>+=<sp/>0.1f;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="ZPG/CameraEngine.cpp"/>
+  </compounddef>
+</doxygen>

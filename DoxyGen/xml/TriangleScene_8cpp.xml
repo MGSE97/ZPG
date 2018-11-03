@@ -1,0 +1,349 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="TriangleScene_8cpp" kind="file" language="C++">
+    <compoundname>TriangleScene.cpp</compoundname>
+    <includes refid="TriangleScene_8h" local="yes">TriangleScene.h</includes>
+    <includes refid="BaseEngine_8h" local="yes">BaseEngine.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">glm/ext/quaternion_transform.inl</includes>
+    <includes local="no">glm/detail/type_quat.hpp</includes>
+    <incdepgraph>
+      <node id="2257">
+        <label>list</label>
+      </node>
+      <node id="2243">
+        <label>VertexObject.h</label>
+        <link refid="VertexObject_8h"/>
+        <childnode refid="2244" relation="include">
+        </childnode>
+        <childnode refid="2247" relation="include">
+        </childnode>
+        <childnode refid="2249" relation="include">
+        </childnode>
+        <childnode refid="2258" relation="include">
+        </childnode>
+      </node>
+      <node id="2259">
+        <label>MaterialValue.h</label>
+        <link refid="MaterialValue_8h"/>
+        <childnode refid="2256" relation="include">
+        </childnode>
+        <childnode refid="2251" relation="include">
+        </childnode>
+        <childnode refid="2255" relation="include">
+        </childnode>
+        <childnode refid="2260" relation="include">
+        </childnode>
+      </node>
+      <node id="2247">
+        <label>VertexAttributeObject.h</label>
+        <link refid="VertexAttributeObject_8h"/>
+        <childnode refid="2245" relation="include">
+        </childnode>
+        <childnode refid="2244" relation="include">
+        </childnode>
+        <childnode refid="2248" relation="include">
+        </childnode>
+      </node>
+      <node id="2251">
+        <label>Shader.h</label>
+        <link refid="Shader_8h"/>
+        <childnode refid="2245" relation="include">
+        </childnode>
+        <childnode refid="2252" relation="include">
+        </childnode>
+        <childnode refid="2253" relation="include">
+        </childnode>
+        <childnode refid="2254" relation="include">
+        </childnode>
+        <childnode refid="2255" relation="include">
+        </childnode>
+        <childnode refid="2256" relation="include">
+        </childnode>
+      </node>
+      <node id="2244">
+        <label>VertexBufferObject.h</label>
+        <link refid="VertexBufferObject_8h"/>
+        <childnode refid="2245" relation="include">
+        </childnode>
+        <childnode refid="2246" relation="include">
+        </childnode>
+      </node>
+      <node id="2256">
+        <label>string</label>
+      </node>
+      <node id="2245">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="2270">
+        <label>Window.h</label>
+        <link refid="Window_8h"/>
+        <childnode refid="2245" relation="include">
+        </childnode>
+        <childnode refid="2271" relation="include">
+        </childnode>
+        <childnode refid="2249" relation="include">
+        </childnode>
+        <childnode refid="2243" relation="include">
+        </childnode>
+        <childnode refid="2253" relation="include">
+        </childnode>
+      </node>
+      <node id="2241">
+        <label>map</label>
+      </node>
+      <node id="2266">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="2262" relation="include">
+        </childnode>
+        <childnode refid="2242" relation="include">
+        </childnode>
+        <childnode refid="2267" relation="include">
+        </childnode>
+      </node>
+      <node id="2271">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="2260">
+        <label>MaterialValueBase.h</label>
+        <link refid="MaterialValueBase_8h"/>
+        <childnode refid="2245" relation="include">
+        </childnode>
+        <childnode refid="2251" relation="include">
+        </childnode>
+      </node>
+      <node id="2268">
+        <label>BaseEngine.h</label>
+        <link refid="BaseEngine_8h"/>
+        <childnode refid="2269" relation="include">
+        </childnode>
+        <childnode refid="2240" relation="include">
+        </childnode>
+        <childnode refid="2249" relation="include">
+        </childnode>
+        <childnode refid="2270" relation="include">
+        </childnode>
+        <childnode refid="2239" relation="include">
+        </childnode>
+        <childnode refid="2272" relation="include">
+        </childnode>
+      </node>
+      <node id="2272">
+        <label>IInputHandler.h</label>
+        <link refid="IInputHandler_8h"/>
+        <childnode refid="2270" relation="include">
+        </childnode>
+        <childnode refid="2239" relation="include">
+        </childnode>
+      </node>
+      <node id="2242">
+        <label>Object.h</label>
+        <link refid="Object_8h"/>
+        <childnode refid="2243" relation="include">
+        </childnode>
+      </node>
+      <node id="2267">
+        <label>glm/common.hpp</label>
+      </node>
+      <node id="2269">
+        <label>ostream</label>
+      </node>
+      <node id="2255">
+        <label>MaterialValueType.h</label>
+        <link refid="MaterialValueType_8h"/>
+      </node>
+      <node id="2264">
+        <label>Observable.h</label>
+        <link refid="Observable_8h"/>
+        <childnode refid="2250" relation="include">
+        </childnode>
+        <childnode refid="2265" relation="include">
+        </childnode>
+        <childnode refid="2246" relation="include">
+        </childnode>
+      </node>
+      <node id="2262">
+        <label>glm/vec3.hpp</label>
+      </node>
+      <node id="2252">
+        <label>glm/vec4.hpp</label>
+      </node>
+      <node id="2237">
+        <label>ZPG/TriangleScene.cpp</label>
+        <link refid="TriangleScene_8cpp"/>
+        <childnode refid="2238" relation="include">
+        </childnode>
+        <childnode refid="2268" relation="include">
+        </childnode>
+        <childnode refid="2273" relation="include">
+        </childnode>
+        <childnode refid="2274" relation="include">
+        </childnode>
+        <childnode refid="2275" relation="include">
+        </childnode>
+      </node>
+      <node id="2239">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+        <childnode refid="2240" relation="include">
+        </childnode>
+        <childnode refid="2242" relation="include">
+        </childnode>
+        <childnode refid="2261" relation="include">
+        </childnode>
+        <childnode refid="2266" relation="include">
+        </childnode>
+      </node>
+      <node id="2246">
+        <label>vector</label>
+      </node>
+      <node id="2250">
+        <label>Collection.h</label>
+        <link refid="Collection_8h"/>
+        <childnode refid="2251" relation="include">
+        </childnode>
+        <childnode refid="2257" relation="include">
+        </childnode>
+      </node>
+      <node id="2258">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+        <childnode refid="2240" relation="include">
+        </childnode>
+        <childnode refid="2256" relation="include">
+        </childnode>
+        <childnode refid="2259" relation="include">
+        </childnode>
+        <childnode refid="2249" relation="include">
+        </childnode>
+        <childnode refid="2251" relation="include">
+        </childnode>
+      </node>
+      <node id="2248">
+        <label>ReadOnlyProperty.h</label>
+        <link refid="ReadOnlyProperty_8h"/>
+      </node>
+      <node id="2238">
+        <label>TriangleScene.h</label>
+        <link refid="TriangleScene_8h"/>
+        <childnode refid="2239" relation="include">
+        </childnode>
+      </node>
+      <node id="2265">
+        <label>Observer.h</label>
+        <link refid="Observer_8h"/>
+      </node>
+      <node id="2253">
+        <label>glm/mat4x2.hpp</label>
+      </node>
+      <node id="2273">
+        <label>iostream</label>
+      </node>
+      <node id="2249">
+        <label>Program.h</label>
+        <link refid="Program_8h"/>
+        <childnode refid="2245" relation="include">
+        </childnode>
+        <childnode refid="2250" relation="include">
+        </childnode>
+        <childnode refid="2240" relation="include">
+        </childnode>
+        <childnode refid="2256" relation="include">
+        </childnode>
+      </node>
+      <node id="2240">
+        <label>Dictionary.h</label>
+        <link refid="Dictionary_8h"/>
+        <childnode refid="2241" relation="include">
+        </childnode>
+      </node>
+      <node id="2254">
+        <label>xstring</label>
+      </node>
+      <node id="2263">
+        <label>glm/mat4x4.hpp</label>
+      </node>
+      <node id="2274">
+        <label>glm/ext/quaternion_transform.inl</label>
+      </node>
+      <node id="2261">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="2262" relation="include">
+        </childnode>
+        <childnode refid="2263" relation="include">
+        </childnode>
+        <childnode refid="2264" relation="include">
+        </childnode>
+      </node>
+      <node id="2275">
+        <label>glm/detail/type_quat.hpp</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="TriangleScene_8h" kindref="compound">TriangleScene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="BaseEngine_8h" kindref="compound">BaseEngine.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/ext/quaternion_transform.inl&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;glm/detail/type_quat.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="classApplication_1_1Scenes_1_1TriangleScene_1a36015fc65ca3005d57f23a1e2f34f016" refkind="member"><highlight class="normal"><ref refid="classApplication_1_1Scenes_1_1TriangleScene_1a36015fc65ca3005d57f23a1e2f34f016" kindref="member">Application::Scenes::TriangleScene::TriangleScene</ref>()</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Scenes_1_1TriangleScene_1a2c270015fd60f4aeb281474ddfdcd692" kindref="member">modelMatrix</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>glm::mat4(1.0f);</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Scenes_1_1TriangleScene_1a398daba41c0317ccb019d714bec0c795" kindref="member">angle</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>float(0.0f);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classApplication_1_1Scenes_1_1TriangleScene_1ab5d8bb91e423f50a7c54979853cfcbc9" kindref="member">color</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>float(0.0f);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classApplication_1_1Scenes_1_1TriangleScene_1a5b1166cd574db6efeea5de8029672437" refkind="member"><highlight class="normal"><ref refid="classApplication_1_1Scenes_1_1TriangleScene_1a5b1166cd574db6efeea5de8029672437" kindref="member">Application::Scenes::TriangleScene::~TriangleScene</ref>()</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>modelMatrix;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>angle;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>Scene::~Scene();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classApplication_1_1Scenes_1_1TriangleScene_1a4bfd44cab6aa0eafe47f379dafe3843e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Scenes_1_1TriangleScene_1a4bfd44cab6aa0eafe47f379dafe3843e" kindref="member">Application::Scenes::TriangleScene::Load</ref>(<ref refid="classEngine_1_1BaseEngine" kindref="compound">Engine::BaseEngine</ref>*<sp/>engine)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>modelMatrix;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>angle;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>modelMatrix<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>glm::mat4(1.0f);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>angle<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>float(1.0f);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>define<sp/>mesh</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>points[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.0f,<sp/>0.5f,<sp/>0.0f,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.5f,<sp/>-0.5f,<sp/>0.0f,</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-0.5f,<sp/>-0.5f,<sp/>0.0f</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal">*<sp/>p<sp/>=<sp/>points;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>define<sp/>material</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Engine::Components::Graphics::Program</ref>*<sp/>program<sp/>=<sp/>engine-&gt;<ref refid="classEngine_1_1BaseEngine_1ae0f86360ea3a384caefe443dd8f88601" kindref="member">Programs</ref>-&gt;Get(</highlight><highlight class="stringliteral">&quot;basic&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>material<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1Material" kindref="compound">Engine::Components::Graphics::Material</ref>(program);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>material-&gt;Values</highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/><sp/><sp/><sp/>-&gt;Add(</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new<sp/>Engine::Components::Graphics::MaterialValue&lt;glm::mat4&gt;(</highlight></codeline>
+<codeline lineno="42"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>program-&gt;Shaders-&gt;Get(&quot;vertex&quot;),<sp/>&quot;modelMatrix&quot;,<sp/>modelMatrix)</highlight></codeline>
+<codeline lineno="43"><highlight class="comment"><sp/><sp/><sp/><sp/>)*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>-&gt;Add(</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classEngine_1_1Components_1_1Graphics_1_1MaterialValue" kindref="compound">Engine::Components::Graphics::MaterialValue&lt;glm::vec4&gt;</ref>(</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>program-&gt;<ref refid="classEngine_1_1Components_1_1Graphics_1_1Program_1aff39fa56fc1fab1bce6c8a5ce29ae161" kindref="member">Shaders</ref>-&gt;Get(</highlight><highlight class="stringliteral">&quot;fragment&quot;</highlight><highlight class="normal">),<sp/></highlight><highlight class="stringliteral">&quot;color&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>glm::vec4(1.0f,<sp/>1.0f,<sp/>1.0f,<sp/>1.0f))</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>Objects-&gt;Add(</highlight><highlight class="stringliteral">&quot;triangle&quot;</highlight><highlight class="normal">,<sp/>new<sp/>::Engine::Objects::Object(material,<sp/>p,<sp/>9));</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classApplication_1_1Scenes_1_1TriangleScene_1a5622996232a2ad52735251c8398b0c9a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1_1Scenes_1_1TriangleScene_1a5622996232a2ad52735251c8398b0c9a" kindref="member">Application::Scenes::TriangleScene::FrameUpdate</ref>(<ref refid="classEngine_1_1BaseEngine" kindref="compound">Engine::BaseEngine</ref>*<sp/>engine)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>*angle<sp/>+=<sp/>0.1f;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>*color<sp/>=<sp/>*angle<sp/>-<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">long</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(*angle);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="ZPG/TriangleScene.cpp"/>
+  </compounddef>
+</doxygen>

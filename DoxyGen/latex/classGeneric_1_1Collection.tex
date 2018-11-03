@@ -1,0 +1,98 @@
+\hypertarget{classGeneric_1_1Collection}{}\section{Generic\+:\+:Collection$<$ T $>$ Class Template Reference}
+\label{classGeneric_1_1Collection}\index{Generic\+::\+Collection$<$ T $>$@{Generic\+::\+Collection$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Collection.\+h$>$}
+
+
+
+Inheritance diagram for Generic\+:\+:Collection$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGeneric_1_1Collection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Generic\+:\+:Collection$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classGeneric_1_1Collection__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGeneric_1_1Collection}{Collection}}$<$ T $>$ \& \mbox{\hyperlink{classGeneric_1_1Collection_a602c700fa46602ce551b5c133793924c}{Add}} (T value)
+\item 
+T \mbox{\hyperlink{classGeneric_1_1Collection_abc2e126c8aaaabf8e4ff8da2d35011c3}{First}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class Generic\+::\+Collection$<$ T $>$}
+
+
+
+Definition at line 8 of file Collection.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classGeneric_1_1Collection_a602c700fa46602ce551b5c133793924c}\label{classGeneric_1_1Collection_a602c700fa46602ce551b5c133793924c}} 
+\index{Generic\+::\+Collection@{Generic\+::\+Collection}!Add@{Add}}
+\index{Add@{Add}!Generic\+::\+Collection@{Generic\+::\+Collection}}
+\subsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+\mbox{\hyperlink{classGeneric_1_1Collection}{Collection}}$<$T$>$\& \mbox{\hyperlink{classGeneric_1_1Collection}{Generic\+::\+Collection}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 11 of file Collection.\+h.
+
+
+
+Referenced by Observable$<$ Camera $>$\+::\+Bind(), and Application\+::\+Engines\+::\+Light\+Engine\+::\+Init().
+
+
+\begin{DoxyCode}
+12         \{
+13             this->push\_back(value);
+14             \textcolor{keywordflow}{return} *\textcolor{keyword}{this};
+15         \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classGeneric_1_1Collection_a602c700fa46602ce551b5c133793924c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGeneric_1_1Collection_abc2e126c8aaaabf8e4ff8da2d35011c3}\label{classGeneric_1_1Collection_abc2e126c8aaaabf8e4ff8da2d35011c3}} 
+\index{Generic\+::\+Collection@{Generic\+::\+Collection}!First@{First}}
+\index{First@{First}!Generic\+::\+Collection@{Generic\+::\+Collection}}
+\subsubsection{\texorpdfstring{First()}{First()}}
+{\footnotesize\ttfamily template$<$class T$>$ \\
+T \mbox{\hyperlink{classGeneric_1_1Collection}{Generic\+::\+Collection}}$<$ T $>$\+::First (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 16 of file Collection.\+h.
+
+
+\begin{DoxyCode}
+17         \{
+18             \textcolor{keywordflow}{return} this->front();
+19         \}
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{Collection_8h}{Collection.\+h}}\end{DoxyCompactItemize}

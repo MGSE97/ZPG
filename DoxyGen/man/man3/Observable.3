@@ -1,0 +1,113 @@
+.TH "Observable< T >" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Observable< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Observable\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBObservable\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~Observable\fP ()"
+.br
+.ti -1c
+.RI "void \fBBind\fP (\fBObserver\fP< T > &observer)"
+.br
+.ti -1c
+.RI "void \fBNotify\fP ()"
+.br
+.ti -1c
+.RI "void \fBUnBind\fP (\fBObserver\fP< T > &observer)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBGeneric::Collection\fP< \fBObserver\fP< T > * > * \fB_observers\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class T>
+.br
+class Observable< T >"
+
+.PP
+Definition at line 7 of file Observable\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<class T> \fBObservable\fP< T >::\fBObservable\fP ()\fC [inline]\fP"
+
+.PP
+Definition at line 10 of file Observable\&.h\&.
+.PP
+.nf
+11     {
+12         _observers = new Generic::Collection<Observer<T>*>();
+13     }
+.fi
+.SS "template<class T> virtual \fBObservable\fP< T >::~\fBObservable\fP ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 14 of file Observable\&.h\&.
+.PP
+.nf
+15     {
+16         _observers->clear();
+17         delete _observers;
+18     }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class T> void \fBObservable\fP< T >::Bind (\fBObserver\fP< T > & observer)\fC [inline]\fP"
+
+.PP
+Definition at line 19 of file Observable\&.h\&.
+.PP
+.nf
+20     {
+21         _observers->Add(&observer);
+22     }
+.fi
+.SS "template<class T> void \fBObservable\fP< T >::Notify ()\fC [inline]\fP"
+
+.PP
+Definition at line 27 of file Observable\&.h\&.
+.PP
+.nf
+28     {
+29         for (auto it = _observers->begin(); it != _observers->end(); ++it)
+30             (*it)->Update(static_cast<T*>(this));
+31     }
+.fi
+.SS "template<class T> void \fBObservable\fP< T >::UnBind (\fBObserver\fP< T > & observer)\fC [inline]\fP"
+
+.PP
+Definition at line 23 of file Observable\&.h\&.
+.PP
+.nf
+24     {
+25         _observers->remove(observer);
+26     }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "template<class T> \fBGeneric::Collection\fP<\fBObserver\fP<T>*>* \fBObservable\fP< T >::_observers\fC [private]\fP"
+
+.PP
+Definition at line 33 of file Observable\&.h\&.
+.PP
+Referenced by Observable< Camera >::Bind(), Observable< Camera >::Notify(), Observable< Camera >::Observable(), Observable< Camera >::UnBind(), and Observable< Camera >::~Observable()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

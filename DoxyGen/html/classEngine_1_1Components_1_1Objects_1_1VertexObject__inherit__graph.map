@@ -1,0 +1,5 @@
+<map id="Engine::Components::Objects::VertexObject" name="Engine::Components::Objects::VertexObject">
+<area shape="rect" id="node2" href="$classEngine_1_1Objects_1_1Object.html" title="{Engine::Objects::Object\n|+ ModelMatrix\l|+ Object()\l+ Object()\l+ ~Object()\l}" alt="" coords="80,292,241,399"/>
+<area shape="rect" id="node3" href="$classEngine_1_1Objects_1_1Sphere.html" title="{Engine::Objects::Sphere\n||+ Sphere()\l+ ~Sphere()\l+ Draw()\l}" alt="" coords="5,469,169,575"/>
+<area shape="rect" id="node4" href="$classLight.html" title="{Light\n|+ Color\l+ fColor\l+ Position\l+ Power\l|+ Light()\l+ ~Light()\l+ Use()\l}" alt="" coords="193,447,275,597"/>
+</map>

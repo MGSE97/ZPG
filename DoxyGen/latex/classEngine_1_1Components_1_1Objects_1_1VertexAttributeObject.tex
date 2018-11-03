@@ -1,0 +1,208 @@
+\hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject}{}\section{Engine\+:\+:Components\+:\+:Objects\+:\+:Vertex\+Attribute\+Object Class Reference}
+\label{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject}\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object}}
+
+
+{\ttfamily \#include $<$Vertex\+Attribute\+Object.\+h$>$}
+
+
+
+Collaboration diagram for Engine\+:\+:Components\+:\+:Objects\+:\+:Vertex\+Attribute\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a1439a87dfc4f350a31e97a40a5cc1c3d}{Vertex\+Attribute\+Object}} (int index, \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject}{Vertex\+Buffer\+Object}} $\ast$V\+BO, int dimensions, int size, int offset)
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_afab852c51905d30eba2c9e470fe621aa}{$\sim$\+Vertex\+Attribute\+Object}} ()
+\item 
+G\+Luint \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_aa67306f65eb1377693630b05bae4fa70}{Get}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_aa440859216dad8d94b7a56d4d105fadf}{Dimensions}}
+\item 
+int \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a854d40f88b9c4cd8e57be7a3d3f72e39}{Index}}
+\item 
+int \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a2eadc0a67482dfff8bc65d91e2e974b9}{Offset}}
+\item 
+int \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_aadad45ab6562ea5054b5ce9761c1f2d1}{Size}}
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+G\+Luint \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a66edf6b8734008170901528cb3b07802}{\+\_\+\+V\+AO}} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 12 of file Vertex\+Attribute\+Object.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a1439a87dfc4f350a31e97a40a5cc1c3d}\label{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a1439a87dfc4f350a31e97a40a5cc1c3d}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object}!Vertex\+Attribute\+Object@{Vertex\+Attribute\+Object}}
+\index{Vertex\+Attribute\+Object@{Vertex\+Attribute\+Object}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object}}
+\subsubsection{\texorpdfstring{Vertex\+Attribute\+Object()}{VertexAttributeObject()}}
+{\footnotesize\ttfamily Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object\+::\+Vertex\+Attribute\+Object (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexBufferObject}{Vertex\+Buffer\+Object}} $\ast$}]{V\+BO,  }\item[{int}]{dimensions,  }\item[{int}]{size,  }\item[{int}]{offset }\end{DoxyParamCaption})}
+
+
+
+Definition at line 6 of file Vertex\+Attribute\+Object.\+cpp.
+
+
+
+References \+\_\+\+V\+AO, Dimensions, Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object\+::\+Get(), Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Buffer\+Object\+::\+Get\+Id(), Index, Offset, and Size.
+
+
+\begin{DoxyCode}
+7 \{
+8     \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_aa440859216dad8d94b7a56d4d105fadf}{Dimensions}} = dimensions;
+9     \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a854d40f88b9c4cd8e57be7a3d3f72e39}{Index}} = index;
+10     \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a2eadc0a67482dfff8bc65d91e2e974b9}{Offset}} = offset;
+11     \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_aadad45ab6562ea5054b5ce9761c1f2d1}{Size}} = size;
+12     \textcolor{keywordflow}{if} (index == 0)
+13     \{
+14         glGenVertexArrays(VBO->GetId(), &\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a66edf6b8734008170901528cb3b07802}{\_VAO}}); \textcolor{comment}{//generate the VAO}
+15         glBindVertexArray(\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a66edf6b8734008170901528cb3b07802}{\_VAO}}); \textcolor{comment}{//bind the VAO}
+16         glBindBuffer(GL\_ARRAY\_BUFFER, VBO->Get());
+17     \};
+18     glEnableVertexAttribArray(index); \textcolor{comment}{//enable vertex attributes}
+19     glVertexAttribPointer(index, dimensions, GL\_FLOAT, GL\_FALSE, size*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{float}), (GLvoid*)offset);
+20 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a1439a87dfc4f350a31e97a40a5cc1c3d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_afab852c51905d30eba2c9e470fe621aa}\label{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_afab852c51905d30eba2c9e470fe621aa}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object}!````~Vertex\+Attribute\+Object@{$\sim$\+Vertex\+Attribute\+Object}}
+\index{````~Vertex\+Attribute\+Object@{$\sim$\+Vertex\+Attribute\+Object}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object}}
+\subsubsection{\texorpdfstring{$\sim$\+Vertex\+Attribute\+Object()}{~VertexAttributeObject()}}
+{\footnotesize\ttfamily Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object\+::$\sim$\+Vertex\+Attribute\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 23 of file Vertex\+Attribute\+Object.\+cpp.
+
+
+\begin{DoxyCode}
+24 \{
+25     \textcolor{keyword}{delete} &\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a66edf6b8734008170901528cb3b07802}{\_VAO}};
+26     \textcolor{keyword}{delete} &\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_aa440859216dad8d94b7a56d4d105fadf}{Dimensions}};
+27     \textcolor{keyword}{delete} &\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a854d40f88b9c4cd8e57be7a3d3f72e39}{Index}};
+28     \textcolor{keyword}{delete} &\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a2eadc0a67482dfff8bc65d91e2e974b9}{Offset}};
+29     \textcolor{keyword}{delete} &\mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_aadad45ab6562ea5054b5ce9761c1f2d1}{Size}};
+30 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_aa67306f65eb1377693630b05bae4fa70}\label{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_aa67306f65eb1377693630b05bae4fa70}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object}!Get@{Get}}
+\index{Get@{Get}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object}}
+\subsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily G\+Luint Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object\+::\+Get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 32 of file Vertex\+Attribute\+Object.\+cpp.
+
+
+\begin{DoxyCode}
+33 \{
+34     \textcolor{keywordflow}{return} \mbox{\hyperlink{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a66edf6b8734008170901528cb3b07802}{\_VAO}};
+35 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a66edf6b8734008170901528cb3b07802}\label{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a66edf6b8734008170901528cb3b07802}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object}!\+\_\+\+V\+AO@{\+\_\+\+V\+AO}}
+\index{\+\_\+\+V\+AO@{\+\_\+\+V\+AO}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object}}
+\subsubsection{\texorpdfstring{\+\_\+\+V\+AO}{\_VAO}}
+{\footnotesize\ttfamily G\+Luint Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object\+::\+\_\+\+V\+AO = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 23 of file Vertex\+Attribute\+Object.\+h.
+
+
+
+Referenced by Vertex\+Attribute\+Object().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_aa440859216dad8d94b7a56d4d105fadf}\label{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_aa440859216dad8d94b7a56d4d105fadf}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object}!Dimensions@{Dimensions}}
+\index{Dimensions@{Dimensions}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object}}
+\subsubsection{\texorpdfstring{Dimensions}{Dimensions}}
+{\footnotesize\ttfamily int Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object\+::\+Dimensions}
+
+
+
+Definition at line 18 of file Vertex\+Attribute\+Object.\+h.
+
+
+
+Referenced by Vertex\+Attribute\+Object().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a854d40f88b9c4cd8e57be7a3d3f72e39}\label{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a854d40f88b9c4cd8e57be7a3d3f72e39}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object}!Index@{Index}}
+\index{Index@{Index}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object}}
+\subsubsection{\texorpdfstring{Index}{Index}}
+{\footnotesize\ttfamily int Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object\+::\+Index}
+
+
+
+Definition at line 19 of file Vertex\+Attribute\+Object.\+h.
+
+
+
+Referenced by Vertex\+Attribute\+Object().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a2eadc0a67482dfff8bc65d91e2e974b9}\label{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_a2eadc0a67482dfff8bc65d91e2e974b9}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object}!Offset@{Offset}}
+\index{Offset@{Offset}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object}}
+\subsubsection{\texorpdfstring{Offset}{Offset}}
+{\footnotesize\ttfamily int Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object\+::\+Offset}
+
+
+
+Definition at line 20 of file Vertex\+Attribute\+Object.\+h.
+
+
+
+Referenced by Vertex\+Attribute\+Object().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_aadad45ab6562ea5054b5ce9761c1f2d1}\label{classEngine_1_1Components_1_1Objects_1_1VertexAttributeObject_aadad45ab6562ea5054b5ce9761c1f2d1}} 
+\index{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object}!Size@{Size}}
+\index{Size@{Size}!Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object@{Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object}}
+\subsubsection{\texorpdfstring{Size}{Size}}
+{\footnotesize\ttfamily int Engine\+::\+Components\+::\+Objects\+::\+Vertex\+Attribute\+Object\+::\+Size}
+
+
+
+Definition at line 21 of file Vertex\+Attribute\+Object.\+h.
+
+
+
+Referenced by Vertex\+Attribute\+Object().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{VertexAttributeObject_8h}{Vertex\+Attribute\+Object.\+h}}\item 
+Z\+P\+G/\mbox{\hyperlink{VertexAttributeObject_8cpp}{Vertex\+Attribute\+Object.\+cpp}}\end{DoxyCompactItemize}

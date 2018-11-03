@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classAssets" kind="class" language="C++" prot="public">
+    <compoundname>Assets</compoundname>
+    <includes refid="Assets_8h" local="no">Assets.h</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classAssets_1a2b541c116af365350c686285cb115d07" prot="public" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Assets::Directory</definition>
+        <argsstring></argsstring>
+        <name>Directory</name>
+        <initializer>=			std::string(R&quot;(Assets\)&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Assets.h" line="7" column="1" bodyfile="ZPG/Assets.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAssets_1af94075606cda6aef8b4bdcbe17169af3" prot="public" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Assets::Shaders</definition>
+        <argsstring></argsstring>
+        <name>Shaders</name>
+        <initializer>=				std::string(R&quot;(Assets\Shaders\)&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Assets.h" line="8" column="1" bodyfile="ZPG/Assets.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classAssets_1abb1ca75a8a9c7b942232df4aff9bb6c9" prot="public" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Assets::ShadersFragment</definition>
+        <argsstring></argsstring>
+        <name>ShadersFragment</name>
+        <initializer>=		std::string(R&quot;(Assets\Shaders\Fragment\)&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Assets.h" line="10" column="1" bodyfile="ZPG/Assets.h" bodystart="10" bodyend="-1"/>
+        <referencedby refid="classApplication_1_1Engines_1_1BasicEngine_1afbdc9f559d1776371f90da00b61ba6ab" compoundref="BasicEngine_8cpp" startline="8" endline="51">Application::Engines::BasicEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1CameraEngine_1a0c7723b93afbdef70394961a4624813d" compoundref="CameraEngine_8cpp" startline="9" endline="73">Application::Engines::CameraEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1LightEngine_1ad992d8a300f099c247d7ba8dc38883ea" compoundref="LigtEngine_8cpp" startline="11" endline="211">Application::Engines::LightEngine::Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classAssets_1ac712d5aca276086a3734e2e9f74cfc6b" prot="public" static="yes" mutable="no">
+        <type>const std::string</type>
+        <definition>const std::string Assets::ShadersVertex</definition>
+        <argsstring></argsstring>
+        <name>ShadersVertex</name>
+        <initializer>=		std::string(R&quot;(Assets\Shaders\Vertex\)&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Assets.h" line="9" column="1" bodyfile="ZPG/Assets.h" bodystart="9" bodyend="-1"/>
+        <referencedby refid="classApplication_1_1Engines_1_1BasicEngine_1afbdc9f559d1776371f90da00b61ba6ab" compoundref="BasicEngine_8cpp" startline="8" endline="51">Application::Engines::BasicEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1CameraEngine_1a0c7723b93afbdef70394961a4624813d" compoundref="CameraEngine_8cpp" startline="9" endline="73">Application::Engines::CameraEngine::Init</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1LightEngine_1ad992d8a300f099c247d7ba8dc38883ea" compoundref="LigtEngine_8cpp" startline="11" endline="211">Application::Engines::LightEngine::Init</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="321">
+        <label>string</label>
+      </node>
+      <node id="320">
+        <label>Assets</label>
+        <link refid="classAssets"/>
+        <childnode refid="321" relation="usage">
+          <edgelabel>+Shaders</edgelabel>
+          <edgelabel>+Directory</edgelabel>
+          <edgelabel>+ShadersVertex</edgelabel>
+          <edgelabel>+ShadersFragment</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/Assets.h" line="5" column="1" bodyfile="ZPG/Assets.h" bodystart="4" bodyend="11"/>
+    <listofallmembers>
+      <member refid="classAssets_1a2b541c116af365350c686285cb115d07" prot="public" virt="non-virtual"><scope>Assets</scope><name>Directory</name></member>
+      <member refid="classAssets_1af94075606cda6aef8b4bdcbe17169af3" prot="public" virt="non-virtual"><scope>Assets</scope><name>Shaders</name></member>
+      <member refid="classAssets_1abb1ca75a8a9c7b942232df4aff9bb6c9" prot="public" virt="non-virtual"><scope>Assets</scope><name>ShadersFragment</name></member>
+      <member refid="classAssets_1ac712d5aca276086a3734e2e9f74cfc6b" prot="public" virt="non-virtual"><scope>Assets</scope><name>ShadersVertex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

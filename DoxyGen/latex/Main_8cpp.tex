@@ -1,0 +1,59 @@
+\hypertarget{Main_8cpp}{}\section{Z\+P\+G/\+Main.cpp File Reference}
+\label{Main_8cpp}\index{Z\+P\+G/\+Main.\+cpp@{Z\+P\+G/\+Main.\+cpp}}
+{\ttfamily \#include $<$G\+L/glew.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Application.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for Main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Main_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{Main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{Main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\label{Main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{Main.\+cpp@{Main.\+cpp}!main@{main}}
+\index{main@{main}!Main.\+cpp@{Main.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 8 of file Main.\+cpp.
+
+
+
+References Application\+::\+Application\+::\+Engines, Generic\+::\+Dictionary$<$ T\+Key, T\+Value $>$\+::\+Get(), Application\+::\+Application\+::\+Get\+Intance(), Application\+::\+Application\+::\+Init(), Engine\+::\+Base\+Engine\+::\+Init(), and Engine\+::\+Base\+Engine\+::\+Start().
+
+
+\begin{DoxyCode}
+9 \{
+10     \mbox{\hyperlink{classApplication_1_1Application_ada268208f57ef136e006bb62fb30ffec}{Application::Application::GetIntance}}()->
+      \mbox{\hyperlink{classApplication_1_1Application_a478f6946c4bf5361281681f2b58385c3}{Init}}()
+11         ->\mbox{\hyperlink{classApplication_1_1Application_a4f2808bddfc3f8fb2ed3a3fe0d4659ff}{Engines}}
+12         \textcolor{comment}{//->Get("basic")}
+13         \textcolor{comment}{//->Get("camera")}
+14         ->\mbox{\hyperlink{classGeneric_1_1Dictionary_ad018bc166486129b48e9ededce313984}{Get}}(\textcolor{stringliteral}{"light"})
+15         ->\mbox{\hyperlink{classEngine_1_1BaseEngine_ad9c141fe48c8c91e14e77ed5fcb90196}{Init}}(stdout)
+16         ->\mbox{\hyperlink{classEngine_1_1BaseEngine_a525fdc7a1da7eecb514ad5763f06be79}{Start}}();
+17 
+18     \textcolor{keywordtype}{int} v;
+19     std::cin >> v;
+20 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{Main_8cpp_a840291bc02cba5474a4cb46a9b9566fe_cgraph}
+\end{center}
+\end{figure}

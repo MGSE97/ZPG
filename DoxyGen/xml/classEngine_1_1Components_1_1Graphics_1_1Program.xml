@@ -1,0 +1,244 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classEngine_1_1Components_1_1Graphics_1_1Program" kind="class" language="C++" prot="public">
+    <compoundname>Engine::Components::Graphics::Program</compoundname>
+    <includes refid="Program_8h" local="no">Program.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Graphics_1_1Program_1aff39fa56fc1fab1bce6c8a5ce29ae161" prot="public" static="no" mutable="no">
+        <type><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary</ref>&lt; std::string, <ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref> * &gt; *</type>
+        <definition>Generic::Dictionary&lt;std::string, Shader*&gt;* Engine::Components::Graphics::Program::Shaders</definition>
+        <argsstring></argsstring>
+        <name>Shaders</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Program.h" line="25" column="1" bodyfile="ZPG/Program.h" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classLight_1af33c52703fccd3142a2826893027884c" compoundref="Light_8cpp" startline="6" endline="23">Light::Light</referencedby>
+        <referencedby refid="classApplication_1_1Scenes_1_1TriangleScene_1a4bfd44cab6aa0eafe47f379dafe3843e" compoundref="TriangleScene_8cpp" startline="21" endline="51">Application::Scenes::TriangleScene::Load</referencedby>
+        <referencedby refid="classApplication_1_1Scenes_1_1SphereScene_1adf6f95bf2ac8f0e84935d04248407ba4" compoundref="SphereScene_8cpp" startline="18" endline="60">Application::Scenes::SphereScene::Load</referencedby>
+        <referencedby refid="classEngine_1_1Objects_1_1Object_1a4798ee926dcbd761e7e88fdeb73f2f0a" compoundref="Object_8cpp" startline="4" endline="13">Engine::Objects::Object::Object</referencedby>
+        <referencedby refid="classEngine_1_1Components_1_1Graphics_1_1Program_1ad54457a5a04a41fcfdd356a0a42427ba" compoundref="Program_8cpp" startline="8" endline="13">Program</referencedby>
+        <referencedby refid="classLight_1a3ee17fe1c669589285bd5c8b29b13721" compoundref="Light_8cpp" startline="25" endline="39">Light::Use</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Graphics_1_1Program_1abd46071ffae3fccf2730393cecad9646" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Engine::Components::Graphics::Program::_linked</definition>
+        <argsstring></argsstring>
+        <name>_linked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Program.h" line="28" column="1" bodyfile="ZPG/Program.h" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Graphics_1_1Program_1ad54457a5a04a41fcfdd356a0a42427ba" compoundref="Program_8cpp" startline="8" endline="13">Program</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classEngine_1_1Components_1_1Graphics_1_1Program_1a23fb9432b8cd14e9cfa27e23f483712d" prot="private" static="no" mutable="no">
+        <type>GLuint</type>
+        <definition>GLuint Engine::Components::Graphics::Program::_program</definition>
+        <argsstring></argsstring>
+        <name>_program</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Program.h" line="27" column="1" bodyfile="ZPG/Program.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classEngine_1_1Components_1_1Graphics_1_1Program_1ad54457a5a04a41fcfdd356a0a42427ba" compoundref="Program_8cpp" startline="8" endline="13">Program</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Program_1ad54457a5a04a41fcfdd356a0a42427ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Components::Graphics::Program::Program</definition>
+        <argsstring>()</argsstring>
+        <name>Program</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Program.h" line="18" column="1" bodyfile="ZPG/Program.cpp" bodystart="8" bodyend="13"/>
+        <references refid="classEngine_1_1Components_1_1Graphics_1_1Program_1abd46071ffae3fccf2730393cecad9646" compoundref="Program_8h" startline="28">_linked</references>
+        <references refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a23fb9432b8cd14e9cfa27e23f483712d" compoundref="Program_8h" startline="27">_program</references>
+        <references refid="classEngine_1_1Components_1_1Graphics_1_1Program_1aff39fa56fc1fab1bce6c8a5ce29ae161" compoundref="Program_8h" startline="25">Shaders</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Program_1ac7c50fa362e7d460d652dac07175e750" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Engine::Components::Graphics::Program::~Program</definition>
+        <argsstring>()</argsstring>
+        <name>~Program</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Program.h" line="19" column="1" bodyfile="ZPG/Program.cpp" bodystart="16" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Program_1a95af201a6fab77be50b5fdefbf3bbe63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref> *</type>
+        <definition>Engine::Components::Graphics::Program * Engine::Components::Graphics::Program::AddShader</definition>
+        <argsstring>(std::string key, Shader *shader)</argsstring>
+        <name>AddShader</name>
+        <param>
+          <type>std::string</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref> *</type>
+          <declname>shader</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Program.h" line="20" column="1" bodyfile="ZPG/Program.cpp" bodystart="22" bodyend="27"/>
+        <references refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1ad7c094ce0d42b3399e3533b3652a33fe" compoundref="Shader_8cpp" startline="82" endline="87">Engine::Components::Graphics::Shader::Get</references>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Program_1ad0db30a829b9492418177179d4ae16e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref> *</type>
+        <definition>Engine::Components::Graphics::Program * Engine::Components::Graphics::Program::AddShaders</definition>
+        <argsstring>(Generic::Dictionary&lt; std::string, Shader *&gt; *shaders)</argsstring>
+        <name>AddShaders</name>
+        <param>
+          <type><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary</ref>&lt; std::string, <ref refid="classEngine_1_1Components_1_1Graphics_1_1Shader" kindref="compound">Shader</ref> *&gt; *</type>
+          <declname>shaders</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Program.h" line="21" column="1" bodyfile="ZPG/Program.cpp" bodystart="29" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>GLuint *</type>
+        <definition>GLuint * Engine::Components::Graphics::Program::Get</definition>
+        <argsstring>()</argsstring>
+        <name>Get</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Program.h" line="24" column="1" bodyfile="ZPG/Program.cpp" bodystart="51" bodyend="56"/>
+        <referencedby refid="classEngine_1_1Components_1_1Graphics_1_1Shader_1a24131f3622fe536794de21e0fb499276" compoundref="Shader_8cpp" startline="89" endline="103">Engine::Components::Graphics::Shader::SendUniform</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Program_1aca3b3c45bf67386dc5fb3c25d687593a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref> *</type>
+        <definition>Engine::Components::Graphics::Program * Engine::Components::Graphics::Program::Link</definition>
+        <argsstring>()</argsstring>
+        <name>Link</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Program.h" line="22" column="1" bodyfile="ZPG/Program.cpp" bodystart="38" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Program_1aed02e665619dda6c6cf80e03cb1f1543" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classEngine_1_1Components_1_1Graphics_1_1Program" kindref="compound">Program</ref> *</type>
+        <definition>Engine::Components::Graphics::Program * Engine::Components::Graphics::Program::Use</definition>
+        <argsstring>()</argsstring>
+        <name>Use</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Program.h" line="23" column="1" bodyfile="ZPG/Program.cpp" bodystart="45" bodyend="49"/>
+        <referencedby refid="classEngine_1_1Components_1_1Graphics_1_1Material_1aef1dd6fbbf0268d4f3e6c371a2f1aa8d" compoundref="Material_8cpp" startline="25" endline="31">Engine::Components::Graphics::Material::Use</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classEngine_1_1Components_1_1Graphics_1_1Program_1a1f4c378d3e4663b0a41bb0c2ad4ace3f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Engine::Components::Graphics::Program::CheckLink</definition>
+        <argsstring>()</argsstring>
+        <name>CheckLink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Program.h" line="29" column="1" bodyfile="ZPG/Program.cpp" bodystart="58" bodyend="73"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="430">
+        <label>Generic::Dictionary&lt; TKey, TValue &gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="431" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="431">
+        <label>std::map&lt; TKey, TValue &gt;</label>
+      </node>
+      <node id="433">
+        <label>GLuint</label>
+      </node>
+      <node id="429">
+        <label>std::map&lt; std::string, Engine::Components::Graphics::Shader * &gt;</label>
+      </node>
+      <node id="428">
+        <label>Generic::Dictionary&lt; std::string, Engine::Components::Graphics::Shader *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="429" relation="public-inheritance">
+        </childnode>
+        <childnode refid="430" relation="template-instance">
+          <edgelabel>&lt; std::string, Engine::Components::Graphics::Shader *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="432">
+        <label>bool</label>
+      </node>
+      <node id="427">
+        <label>Engine::Components::Graphics::Program</label>
+        <link refid="classEngine_1_1Components_1_1Graphics_1_1Program"/>
+        <childnode refid="428" relation="usage">
+          <edgelabel>+Shaders</edgelabel>
+        </childnode>
+        <childnode refid="432" relation="usage">
+          <edgelabel>-_linked</edgelabel>
+        </childnode>
+        <childnode refid="433" relation="usage">
+          <edgelabel>-_program</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/Program.h" line="16" column="1" bodyfile="ZPG/Program.h" bodystart="15" bodyend="30"/>
+    <listofallmembers>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Program_1abd46071ffae3fccf2730393cecad9646" prot="private" virt="non-virtual"><scope>Engine::Components::Graphics::Program</scope><name>_linked</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a23fb9432b8cd14e9cfa27e23f483712d" prot="private" virt="non-virtual"><scope>Engine::Components::Graphics::Program</scope><name>_program</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a95af201a6fab77be50b5fdefbf3bbe63" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Program</scope><name>AddShader</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Program_1ad0db30a829b9492418177179d4ae16e7" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Program</scope><name>AddShaders</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a1f4c378d3e4663b0a41bb0c2ad4ace3f" prot="private" virt="non-virtual"><scope>Engine::Components::Graphics::Program</scope><name>CheckLink</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Program_1a2f8a229f633939c001fcfc46f7b7fd0b" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Program</scope><name>Get</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Program_1aca3b3c45bf67386dc5fb3c25d687593a" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Program</scope><name>Link</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Program_1ad54457a5a04a41fcfdd356a0a42427ba" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Program</scope><name>Program</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Program_1aff39fa56fc1fab1bce6c8a5ce29ae161" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Program</scope><name>Shaders</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Program_1aed02e665619dda6c6cf80e03cb1f1543" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Program</scope><name>Use</name></member>
+      <member refid="classEngine_1_1Components_1_1Graphics_1_1Program_1ac7c50fa362e7d460d652dac07175e750" prot="public" virt="non-virtual"><scope>Engine::Components::Graphics::Program</scope><name>~Program</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

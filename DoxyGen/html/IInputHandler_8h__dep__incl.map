@@ -1,0 +1,26 @@
+<map id="ZPG/IInputHandler.h" name="ZPG/IInputHandler.h">
+<area shape="rect" id="node2" href="$BaseEngine_8h.html" title="ZPG/BaseEngine.h" alt="" coords="845,80,979,107"/>
+<area shape="rect" id="node7" href="$BaseEngine_8cpp.html" title="ZPG/BaseEngine.cpp" alt="" coords="5,155,152,181"/>
+<area shape="rect" id="node22" href="$BaseInputHandler_8h.html" title="ZPG/BaseInputHandler.h" alt="" coords="1783,80,1948,107"/>
+<area shape="rect" id="node25" href="$CameraInputHandler_8h.html" title="ZPG/CameraInputHandler.h" alt="" coords="1549,155,1729,181"/>
+<area shape="rect" id="node3" href="$Application_8h.html" title="ZPG/Application.h" alt="" coords="330,155,457,181"/>
+<area shape="rect" id="node8" href="$BasicEngine_8h.html" title="ZPG/BasicEngine.h" alt="" coords="844,155,980,181"/>
+<area shape="rect" id="node10" href="$CameraEngine_8h.html" title="ZPG/CameraEngine.h" alt="" coords="1005,155,1153,181"/>
+<area shape="rect" id="node12" href="$CameraInputHandler_8cpp.html" title="ZPG/CameraInputHandler.cpp" alt="" coords="1365,229,1560,256"/>
+<area shape="rect" id="node13" href="$LigtEngine_8h.html" title="ZPG/LigtEngine.h" alt="" coords="1401,155,1525,181"/>
+<area shape="rect" id="node16" href="$SphereScene_8cpp.html" title="ZPG/SphereScene.cpp" alt="" coords="481,155,636,181"/>
+<area shape="rect" id="node17" href="$TriangleEngine_8h.html" title="ZPG/TriangleEngine.h" alt="" coords="1177,155,1325,181"/>
+<area shape="rect" id="node19" href="$TriangleScene_8cpp.html" title="ZPG/TriangleScene.cpp" alt="" coords="661,155,819,181"/>
+<area shape="rect" id="node20" href="$ZPGEngine_8h.html" title="ZPG/ZPGEngine.h" alt="" coords="177,155,306,181"/>
+<area shape="rect" id="node4" href="$Application_8cpp.html" title="ZPG/Application.cpp" alt="" coords="323,229,464,256"/>
+<area shape="rect" id="node5" href="$EngineRegistry_8cpp.html" title="ZPG/EngineRegistry.cpp" alt="" coords="803,229,968,256"/>
+<area shape="rect" id="node6" href="$Main_8cpp.html" title="ZPG/Main.cpp" alt="" coords="489,229,594,256"/>
+<area shape="rect" id="node9" href="$BasicEngine_8cpp.html" title="ZPG/BasicEngine.cpp" alt="" coords="627,229,778,256"/>
+<area shape="rect" id="node11" href="$CameraEngine_8cpp.html" title="ZPG/CameraEngine.cpp" alt="" coords="992,229,1155,256"/>
+<area shape="rect" id="node14" href="$LightingChangeInputHandler_8cpp.html" title="ZPG/LightingChangeInputHandler.cpp" alt="" coords="1747,229,1986,256"/>
+<area shape="rect" id="node15" href="$LigtEngine_8cpp.html" title="ZPG/LigtEngine.cpp" alt="" coords="1584,229,1723,256"/>
+<area shape="rect" id="node18" href="$TriangleEngine_8cpp.html" title="ZPG/TriangleEngine.cpp" alt="" coords="1179,229,1341,256"/>
+<area shape="rect" id="node21" href="$ZPGEngine_8cpp.html" title="ZPG/ZPGEngine.cpp" alt="" coords="155,229,298,256"/>
+<area shape="rect" id="node23" href="$BaseInputHandler_8cpp.html" title="ZPG/BaseInputHandler.cpp" alt="" coords="2001,155,2180,181"/>
+<area shape="rect" id="node24" href="$LightingChangeInputHandler_8h.html" title="ZPG/LightingChangeInputHandler.h" alt="" coords="1753,155,1977,181"/>
+</map>

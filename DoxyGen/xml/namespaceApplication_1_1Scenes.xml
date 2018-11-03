@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespaceApplication_1_1Scenes" kind="namespace" language="C++">
+    <compoundname>Application::Scenes</compoundname>
+    <innerclass refid="classApplication_1_1Scenes_1_1CameraScene" prot="public">Application::Scenes::CameraScene</innerclass>
+    <innerclass refid="classApplication_1_1Scenes_1_1SphereScene" prot="public">Application::Scenes::SphereScene</innerclass>
+    <innerclass refid="classApplication_1_1Scenes_1_1TriangleScene" prot="public">Application::Scenes::TriangleScene</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ZPG/CameraScene.h" line="6" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,61 @@
+.TH "Generic::Collection< T >" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Generic::Collection< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Collection\&.h>\fP
+.PP
+Inherits list< T >\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCollection\fP< T > & \fBAdd\fP (T value)"
+.br
+.ti -1c
+.RI "T \fBFirst\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class T>
+.br
+class Generic::Collection< T >"
+
+.PP
+Definition at line 8 of file Collection\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class T> \fBCollection\fP<T>& \fBGeneric::Collection\fP< T >::Add (T value)\fC [inline]\fP"
+
+.PP
+Definition at line 11 of file Collection\&.h\&.
+.PP
+Referenced by Observable< Camera >::Bind(), and Application::Engines::LightEngine::Init()\&.
+.PP
+.nf
+12         {
+13             this->push_back(value);
+14             return *this;
+15         }
+.fi
+.SS "template<class T> T \fBGeneric::Collection\fP< T >::First ()\fC [inline]\fP"
+
+.PP
+Definition at line 16 of file Collection\&.h\&.
+.PP
+.nf
+17         {
+18             return this->front();
+19         }
+.fi
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

@@ -1,0 +1,102 @@
+.TH "Engine::Components::Graphics::MaterialBindedValue< T >" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Engine::Components::Graphics::MaterialBindedValue< T >
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MaterialBindedValue\&.h>\fP
+.PP
+Inherits \fBObserver< T >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMaterialBindedValue\fP (\fBShader\fP *shader, const GLchar *property, \fBMaterialValueType\fP type, \fBObservable\fP< T > *observable, void *value)"
+.br
+.ti -1c
+.RI "virtual void \fBUpdate\fP (T *value)=0"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBObservable\fP< T > * \fBObservable\fP"
+.br
+.ti -1c
+.RI "const GLchar * \fBProperty\fP"
+.br
+.ti -1c
+.RI "\fBShader\fP * \fBShader\fP"
+.br
+.ti -1c
+.RI "\fBMaterialValueType\fP \fBType\fP"
+.br
+.ti -1c
+.RI "void * \fBValue\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class T>
+.br
+class Engine::Components::Graphics::MaterialBindedValue< T >"
+
+.PP
+Definition at line 15 of file MaterialBindedValue\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<class T > \fBEngine::Components::Graphics::MaterialBindedValue\fP< T >::\fBMaterialBindedValue\fP (\fBShader\fP * shader, const GLchar * property, \fBMaterialValueType\fP type, \fBObservable\fP< T > * observable, void * value)\fC [inline]\fP"
+
+.PP
+Definition at line 18 of file MaterialBindedValue\&.h\&.
+.PP
+References Engine::Components::Graphics::MaterialBindedValue< T >::Type, and Engine::Components::Graphics::MaterialBindedValue< T >::Value\&.
+.PP
+.nf
+19                 {
+20                     Shader = shader;
+21                     Property = property;
+22                     Type = type;
+23                     Observable = observable;
+24                     Value = value;
+25                 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class T> virtual void \fBObserver\fP< T >::Update (T * value)\fC [pure virtual]\fP, \fC [inherited]\fP"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "template<class T > \fBObservable\fP<T>* \fBEngine::Components::Graphics::MaterialBindedValue\fP< T >::\fBObservable\fP"
+
+.PP
+Definition at line 29 of file MaterialBindedValue\&.h\&.
+.SS "template<class T > const GLchar* \fBEngine::Components::Graphics::MaterialBindedValue\fP< T >::\fBProperty\fP"
+
+.PP
+Definition at line 27 of file MaterialBindedValue\&.h\&.
+.SS "template<class T > \fBShader\fP* \fBEngine::Components::Graphics::MaterialBindedValue\fP< T >::\fBShader\fP"
+
+.PP
+Definition at line 26 of file MaterialBindedValue\&.h\&.
+.SS "template<class T > \fBMaterialValueType\fP \fBEngine::Components::Graphics::MaterialBindedValue\fP< T >::Type"
+
+.PP
+Definition at line 28 of file MaterialBindedValue\&.h\&.
+.PP
+Referenced by Engine::Components::Graphics::MaterialBindedValue< T >::MaterialBindedValue()\&.
+.SS "template<class T > void* \fBEngine::Components::Graphics::MaterialBindedValue\fP< T >::Value"
+
+.PP
+Definition at line 30 of file MaterialBindedValue\&.h\&.
+.PP
+Referenced by Engine::Components::Graphics::MaterialBindedValue< T >::MaterialBindedValue()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

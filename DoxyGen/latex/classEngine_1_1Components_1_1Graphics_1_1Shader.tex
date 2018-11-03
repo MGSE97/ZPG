@@ -1,0 +1,579 @@
+\hypertarget{classEngine_1_1Components_1_1Graphics_1_1Shader}{}\section{Engine\+:\+:Components\+:\+:Graphics\+:\+:Shader Class Reference}
+\label{classEngine_1_1Components_1_1Graphics_1_1Shader}\index{Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}}
+
+
+{\ttfamily \#include $<$Shader.\+h$>$}
+
+
+
+Collaboration diagram for Engine\+:\+:Components\+:\+:Graphics\+:\+:Shader\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classEngine_1_1Components_1_1Graphics_1_1Shader__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a4935f2ee3ebdd8af6fc78cf42f63d915}{Shader}} (int type, std\+::string filename)
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_af0014ee53239fa71cddfae086d0a1781}{Shader}} (int type, const char $\ast$shader)
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a9a82a7a62443e928d9d95e3a0e4f1407}{$\sim$\+Shader}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Shader}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a348854b43d99bfe43e3d2b0cad5f103d}{Compile}} ()
+\item 
+G\+Luint $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_ad7c094ce0d42b3399e3533b3652a33fe}{Get}} ()
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Shader}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a24131f3622fe536794de21e0fb499276}{Send\+Uniform}} (\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$program, const G\+Lchar $\ast$name, glm\+::mat4 $\ast$data)
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Shader}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a39cbcddb61ef315da0d24a11a650f09a}{Send\+Uniform}} (\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$program, const G\+Lchar $\ast$name, glm\+::vec4 $\ast$data)
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Shader}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a650108330666f299b13b8336140bca92}{Send\+Uniform}} (\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$program, const G\+Lchar $\ast$name, glm\+::vec3 $\ast$data)
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Shader}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a12769923328fcb0f970458cf3feed273}{Send\+Uniform}} (\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$program, const G\+Lchar $\ast$name, float $\ast$data)
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Shader}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a60af0a0142b5a1ea44923c3f438a179a}{Send\+Uniform}} (\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$program, const G\+Lchar $\ast$name, int $\ast$data)
+\item 
+\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Shader}} $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a9894564e19539e2d152df99ea9e5bc29}{Send\+Uniform}} (\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$program, const G\+Lchar $\ast$name, bool $\ast$data)
+\item 
+void \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a169ed9f71afd5f59160e35708e51fe7e}{set\+Data}} (\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$program, const G\+Lchar $\ast$property, \mbox{\hyperlink{namespaceEngine_1_1Components_1_1Graphics_a44f5a2b57ee82aed849896c8311e403b}{Material\+Value\+Type}} type, void $\ast$value)
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a6d0f90b445c605f12eab980827b8d430}{Mat4\+To\+String}} (glm\+::mat4 \&mat)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a82939e07025096b6b37f1588620863c5}{\+\_\+code}}
+\item 
+bool \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a675c32a04d4eb33117d6ff2b988e13b5}{\+\_\+compiled}}
+\item 
+G\+Luint \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a4494d72a65715eb9f02e06a533684872}{\+\_\+shader}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 18 of file Shader.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Shader_a4935f2ee3ebdd8af6fc78cf42f63d915}\label{classEngine_1_1Components_1_1Graphics_1_1Shader_a4935f2ee3ebdd8af6fc78cf42f63d915}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}!Shader@{Shader}}
+\index{Shader@{Shader}!Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{Shader()}{Shader()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Engine\+::\+Components\+::\+Graphics\+::\+Shader\+::\+Shader (\begin{DoxyParamCaption}\item[{int}]{type,  }\item[{std\+::string}]{filename }\end{DoxyParamCaption})}
+
+
+
+Definition at line 13 of file Shader.\+cpp.
+
+
+
+References \+\_\+compiled, and \+\_\+shader.
+
+
+\begin{DoxyCode}
+14 \{
+15     \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a675c32a04d4eb33117d6ff2b988e13b5}{\_compiled}} = \textcolor{keyword}{false};
+16     std::ifstream file(filename, std::ios::in);
+17     \textcolor{keywordflow}{if} (file.is\_open())
+18     \{
+19         std::stringstream buffer;
+20         buffer << file.rdbuf();
+21         std::string sh = buffer.str();
+22         file.close();
+23         \textcolor{keyword}{const} \textcolor{keyword}{auto} version = sh.find\_first\_of(\textcolor{charliteral}{'#'});
+24         sh = sh.substr(version, sh.length() - version);
+25 
+26         \textcolor{keyword}{const} \textcolor{keywordtype}{char}* shader = sh.data();
+27 
+28         \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a4494d72a65715eb9f02e06a533684872}{\_shader}} = glCreateShader(type);
+29         glShaderSource(\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a4494d72a65715eb9f02e06a533684872}{\_shader}}, 1, &shader, NULL);
+30         glCompileShader(\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a4494d72a65715eb9f02e06a533684872}{\_shader}});
+31         \textcolor{comment}{/*}
+32 \textcolor{comment}{        // Handle Error}
+33 \textcolor{comment}{        GLint isCompiled = 0;}
+34 \textcolor{comment}{        glGetShaderiv(\_shader, GL\_COMPILE\_STATUS, &isCompiled);}
+35 \textcolor{comment}{        if (isCompiled == GL\_FALSE)}
+36 \textcolor{comment}{        \{}
+37 \textcolor{comment}{            GLint maxLength = 0;}
+38 \textcolor{comment}{            glGetShaderiv(\_shader, GL\_INFO\_LOG\_LENGTH, &maxLength);}
+39 \textcolor{comment}{}
+40 \textcolor{comment}{            std::vector<GLchar> errorLog(maxLength);}
+41 \textcolor{comment}{            glGetShaderInfoLog(\_shader, maxLength, &maxLength, &errorLog[0]);}
+42 \textcolor{comment}{}
+43 \textcolor{comment}{            fprintf(stderr, "Shader %u Compilation failed:\(\backslash\)nCode:\(\backslash\)n%s\(\backslash\)nErrors:\(\backslash\)n%s\(\backslash\)n", \_shader, shader,
+       errorLog.data());}
+44 \textcolor{comment}{        \}}
+45 \textcolor{comment}{        \_compiled = isCompiled != GL\_FALSE;*/}
+46     \}
+47 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Shader_af0014ee53239fa71cddfae086d0a1781}\label{classEngine_1_1Components_1_1Graphics_1_1Shader_af0014ee53239fa71cddfae086d0a1781}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}!Shader@{Shader}}
+\index{Shader@{Shader}!Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{Shader()}{Shader()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Engine\+::\+Components\+::\+Graphics\+::\+Shader\+::\+Shader (\begin{DoxyParamCaption}\item[{int}]{type,  }\item[{const char $\ast$}]{shader }\end{DoxyParamCaption})}
+
+
+
+Definition at line 49 of file Shader.\+cpp.
+
+
+\begin{DoxyCode}
+50 \{
+51     \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a4494d72a65715eb9f02e06a533684872}{\_shader}} = glCreateShader(type);
+52     glShaderSource(\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a4494d72a65715eb9f02e06a533684872}{\_shader}}, 1, &shader, NULL);
+53 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Shader_a9a82a7a62443e928d9d95e3a0e4f1407}\label{classEngine_1_1Components_1_1Graphics_1_1Shader_a9a82a7a62443e928d9d95e3a0e4f1407}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}!````~Shader@{$\sim$\+Shader}}
+\index{````~Shader@{$\sim$\+Shader}!Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{$\sim$\+Shader()}{~Shader()}}
+{\footnotesize\ttfamily Engine\+::\+Components\+::\+Graphics\+::\+Shader\+::$\sim$\+Shader (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 55 of file Shader.\+cpp.
+
+
+\begin{DoxyCode}
+56 \{
+57     \textcolor{comment}{/*delete \_code;}
+58 \textcolor{comment}{    delete &\_compiled;}
+59 \textcolor{comment}{    delete &\_shader;*/}
+60 \}
+\end{DoxyCode}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Shader_a348854b43d99bfe43e3d2b0cad5f103d}\label{classEngine_1_1Components_1_1Graphics_1_1Shader_a348854b43d99bfe43e3d2b0cad5f103d}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}!Compile@{Compile}}
+\index{Compile@{Compile}!Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{Compile()}{Compile()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Engine\+::\+Components\+::\+Graphics\+::\+Shader}} $\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Shader\+::\+Compile (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 62 of file Shader.\+cpp.
+
+
+\begin{DoxyCode}
+63 \{
+64     glCompileShader(\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a4494d72a65715eb9f02e06a533684872}{\_shader}});
+65     GLint isCompiled = 0;
+66     glGetShaderiv(\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a4494d72a65715eb9f02e06a533684872}{\_shader}}, GL\_COMPILE\_STATUS, &isCompiled);
+67     \textcolor{keywordflow}{if} (isCompiled == GL\_FALSE)
+68     \{
+69         GLint maxLength = 0;
+70         glGetShaderiv(\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a4494d72a65715eb9f02e06a533684872}{\_shader}}, GL\_INFO\_LOG\_LENGTH, &maxLength);
+71 
+72         \textcolor{comment}{// The maxLength includes the NULL character}
+73         std::vector<GLchar> errorLog(maxLength);
+74         glGetShaderInfoLog(\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a4494d72a65715eb9f02e06a533684872}{\_shader}}, maxLength, &maxLength, &errorLog[0]);
+75 
+76         fprintf(stderr, \textcolor{stringliteral}{"Shader %u Compilation failed:\(\backslash\)nCode:\(\backslash\)n%s\(\backslash\)nErrors:\(\backslash\)n%s\(\backslash\)n"}, 
+      \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a4494d72a65715eb9f02e06a533684872}{\_shader}}, \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a82939e07025096b6b37f1588620863c5}{\_code}}, errorLog.data());
+77     \}
+78     \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a675c32a04d4eb33117d6ff2b988e13b5}{\_compiled}} = isCompiled != GL\_FALSE;
+79     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+80 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Shader_ad7c094ce0d42b3399e3533b3652a33fe}\label{classEngine_1_1Components_1_1Graphics_1_1Shader_ad7c094ce0d42b3399e3533b3652a33fe}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}!Get@{Get}}
+\index{Get@{Get}!Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{Get()}{Get()}}
+{\footnotesize\ttfamily G\+Luint $\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Shader\+::\+Get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 82 of file Shader.\+cpp.
+
+
+
+Referenced by Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+Add\+Shader().
+
+
+\begin{DoxyCode}
+83 \{
+84     \textcolor{keywordflow}{if} (!\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a675c32a04d4eb33117d6ff2b988e13b5}{\_compiled}})
+85         \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a348854b43d99bfe43e3d2b0cad5f103d}{Compile}}();
+86     \textcolor{keywordflow}{return} &\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a4494d72a65715eb9f02e06a533684872}{\_shader}};
+87 \}
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{classEngine_1_1Components_1_1Graphics_1_1Shader_ad7c094ce0d42b3399e3533b3652a33fe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Shader_a6d0f90b445c605f12eab980827b8d430}\label{classEngine_1_1Components_1_1Graphics_1_1Shader_a6d0f90b445c605f12eab980827b8d430}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}!Mat4\+To\+String@{Mat4\+To\+String}}
+\index{Mat4\+To\+String@{Mat4\+To\+String}!Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{Mat4\+To\+String()}{Mat4ToString()}}
+{\footnotesize\ttfamily std\+::string Engine\+::\+Components\+::\+Graphics\+::\+Shader\+::\+Mat4\+To\+String (\begin{DoxyParamCaption}\item[{glm\+::mat4 \&}]{mat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 202 of file Shader.\+cpp.
+
+
+\begin{DoxyCode}
+203 \{
+204     \textcolor{keywordtype}{char}* txt = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[200];
+205     sprintf\_s(txt, 200, \textcolor{stringliteral}{"%6.4f\(\backslash\)t%6.4f\(\backslash\)t%6.4f\(\backslash\)t%6.4f\(\backslash\)n%6.4f\(\backslash\)t%6.4f\(\backslash\)t%6.4f\(\backslash\)t%6.4f\(\backslash\)n%6.4f\(\backslash\)t%6.4f\(\backslash\)t%6.4f\(\backslash\)t%6.4f
+      \(\backslash\)n%6.4f\(\backslash\)t%6.4f\(\backslash\)t%6.4f\(\backslash\)t%6.4f"},
+206         mat[0][0], mat[0][1], mat[0][2], mat[0][3],
+207         mat[1][0], mat[1][1], mat[1][2], mat[1][3],
+208         mat[2][0], mat[2][1], mat[2][2], mat[2][3],
+209         mat[3][0], mat[3][1], mat[3][2], mat[3][3]);
+210     \textcolor{comment}{/*txt << mat[0][0] << "\(\backslash\)t\(\backslash\)t" << mat[0][1] << "\(\backslash\)t\(\backslash\)t" << mat[0][2] << "\(\backslash\)t\(\backslash\)t" << mat[0][3] << std::endl;}
+211 \textcolor{comment}{    txt << mat[1][0] << "\(\backslash\)t\(\backslash\)t" << mat[1][1] << "\(\backslash\)t\(\backslash\)t" << mat[1][2] << "\(\backslash\)t\(\backslash\)t" << mat[1][3] << std::endl;}
+212 \textcolor{comment}{    txt << mat[2][0] << "\(\backslash\)t\(\backslash\)t" << mat[2][1] << "\(\backslash\)t\(\backslash\)t" << mat[2][2] << "\(\backslash\)t\(\backslash\)t" << mat[2][3] << std::endl; }
+213 \textcolor{comment}{    txt << mat[3][0] << "\(\backslash\)t\(\backslash\)t" << mat[3][1] << "\(\backslash\)t\(\backslash\)t" << mat[3][2] << "\(\backslash\)t\(\backslash\)t" << mat[3][3] << std::endl;*/}
+214     \textcolor{keywordflow}{return} std::string(txt);
+215 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Shader_a24131f3622fe536794de21e0fb499276}\label{classEngine_1_1Components_1_1Graphics_1_1Shader_a24131f3622fe536794de21e0fb499276}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}!Send\+Uniform@{Send\+Uniform}}
+\index{Send\+Uniform@{Send\+Uniform}!Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{Send\+Uniform()}{SendUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Engine\+::\+Components\+::\+Graphics\+::\+Shader}} $\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Shader\+::\+Send\+Uniform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$}]{program,  }\item[{const G\+Lchar $\ast$}]{name,  }\item[{glm\+::mat4 $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 89 of file Shader.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+Get().
+
+
+
+Referenced by Engine\+::\+Components\+::\+Graphics\+::\+Material\+Value$<$ T $>$\+::\+Set().
+
+
+\begin{DoxyCode}
+90 \{
+91 \textcolor{preprocessor}{    #ifdef DEBUG}
+92         fprintf(stderr, \textcolor{stringliteral}{"SET MAT4: %s (0x%p) value \(\backslash\)n%s\(\backslash\)n"}, name, data, 
+      \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a6d0f90b445c605f12eab980827b8d430}{Mat4ToString}}(*data).c\_str());
+93 \textcolor{preprocessor}{    #endif}
+94     GLint uniformID = glGetUniformLocation(*(program->Get()), name);
+95     \textcolor{keywordflow}{if} (uniformID >= 0) \{
+96         glUniformMatrix4fv(uniformID, 1, GL\_FALSE, value\_ptr(*data));
+97     \}
+98     \textcolor{keywordflow}{else} \{
+99         fprintf(stderr, \textcolor{stringliteral}{"ERROR: program 0x%p:%u mat4 variable %s not found\(\backslash\)n"}, program, *(program->Get()), 
+      name);
+100     \}
+101 
+102     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+103 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classEngine_1_1Components_1_1Graphics_1_1Shader_a24131f3622fe536794de21e0fb499276_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEngine_1_1Components_1_1Graphics_1_1Shader_a24131f3622fe536794de21e0fb499276_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Shader_a39cbcddb61ef315da0d24a11a650f09a}\label{classEngine_1_1Components_1_1Graphics_1_1Shader_a39cbcddb61ef315da0d24a11a650f09a}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}!Send\+Uniform@{Send\+Uniform}}
+\index{Send\+Uniform@{Send\+Uniform}!Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{Send\+Uniform()}{SendUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Engine\+::\+Components\+::\+Graphics\+::\+Shader}} $\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Shader\+::\+Send\+Uniform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$}]{program,  }\item[{const G\+Lchar $\ast$}]{name,  }\item[{glm\+::vec4 $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 105 of file Shader.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+Get().
+
+
+\begin{DoxyCode}
+106 \{
+107 \textcolor{preprocessor}{    #ifdef DEBUG}
+108         fprintf(stderr, \textcolor{stringliteral}{"SET VEC4: %s (0x%p) value \(\backslash\)n(%f, %f, %f, %f)\(\backslash\)n"}, name, data, data->x, data->y, 
+      data->z, data->w);
+109 \textcolor{preprocessor}{    #endif}
+110     GLint uniformID = glGetUniformLocation(*(program->Get()), name);
+111     \textcolor{keywordflow}{if} (uniformID >= 0) \{
+112         glUniform4f(uniformID, data->x, data->y, data->z, data->w);
+113     \}
+114     \textcolor{keywordflow}{else} \{
+115         fprintf(stderr, \textcolor{stringliteral}{"ERROR: program 0x%p:%u vec4 variable %s not found\(\backslash\)n"}, program, *(program->Get()), 
+      name);
+116     \}
+117 
+118     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+119 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classEngine_1_1Components_1_1Graphics_1_1Shader_a39cbcddb61ef315da0d24a11a650f09a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Shader_a650108330666f299b13b8336140bca92}\label{classEngine_1_1Components_1_1Graphics_1_1Shader_a650108330666f299b13b8336140bca92}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}!Send\+Uniform@{Send\+Uniform}}
+\index{Send\+Uniform@{Send\+Uniform}!Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{Send\+Uniform()}{SendUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Engine\+::\+Components\+::\+Graphics\+::\+Shader}} $\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Shader\+::\+Send\+Uniform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$}]{program,  }\item[{const G\+Lchar $\ast$}]{name,  }\item[{glm\+::vec3 $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 121 of file Shader.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+Get().
+
+
+\begin{DoxyCode}
+122 \{
+123 \textcolor{preprocessor}{    #ifdef DEBUG}
+124         fprintf(stderr, \textcolor{stringliteral}{"SET VEC3: %s (0x%p) value \(\backslash\)n(%f, %f, %f)\(\backslash\)n"}, name, data, data->x, data->y, data->z
+      );
+125 \textcolor{preprocessor}{    #endif}
+126     GLint uniformID = glGetUniformLocation(*(program->Get()), name);
+127     \textcolor{keywordflow}{if} (uniformID >= 0) \{
+128         glUniform3f(uniformID, data->x,data->y,data->z);
+129     \}
+130     \textcolor{keywordflow}{else} \{
+131         fprintf(stderr, \textcolor{stringliteral}{"ERROR: program 0x%p:%u vec3 variable %s not found\(\backslash\)n"}, program, *(program->Get()), 
+      name);
+132     \}
+133 
+134     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+135 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classEngine_1_1Components_1_1Graphics_1_1Shader_a650108330666f299b13b8336140bca92_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Shader_a12769923328fcb0f970458cf3feed273}\label{classEngine_1_1Components_1_1Graphics_1_1Shader_a12769923328fcb0f970458cf3feed273}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}!Send\+Uniform@{Send\+Uniform}}
+\index{Send\+Uniform@{Send\+Uniform}!Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{Send\+Uniform()}{SendUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Engine\+::\+Components\+::\+Graphics\+::\+Shader}} $\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Shader\+::\+Send\+Uniform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$}]{program,  }\item[{const G\+Lchar $\ast$}]{name,  }\item[{float $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 138 of file Shader.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+Get().
+
+
+\begin{DoxyCode}
+139 \{
+140 \textcolor{preprocessor}{    #ifdef DEBUG}
+141         fprintf(stderr, \textcolor{stringliteral}{"SET FLOAT: %s (0x%x) value %f\(\backslash\)n"}, name, data, *data);
+142 \textcolor{preprocessor}{    #endif}
+143     GLint uniformID = glGetUniformLocation(*(program->Get()), name);
+144     \textcolor{keywordflow}{if} (uniformID >= 0) \{
+145         glUniform1f(uniformID, *data);
+146     \}
+147     \textcolor{keywordflow}{else} \{
+148         fprintf(stderr, \textcolor{stringliteral}{"ERROR: program 0x%p:%u float variable %s not found\(\backslash\)n"}, program, *(program->Get()),
+       name);
+149     \}
+150 
+151     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+152 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classEngine_1_1Components_1_1Graphics_1_1Shader_a12769923328fcb0f970458cf3feed273_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Shader_a60af0a0142b5a1ea44923c3f438a179a}\label{classEngine_1_1Components_1_1Graphics_1_1Shader_a60af0a0142b5a1ea44923c3f438a179a}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}!Send\+Uniform@{Send\+Uniform}}
+\index{Send\+Uniform@{Send\+Uniform}!Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{Send\+Uniform()}{SendUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Engine\+::\+Components\+::\+Graphics\+::\+Shader}} $\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Shader\+::\+Send\+Uniform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$}]{program,  }\item[{const G\+Lchar $\ast$}]{name,  }\item[{int $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 154 of file Shader.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+Get().
+
+
+\begin{DoxyCode}
+155 \{
+156 \textcolor{preprocessor}{    #ifdef DEBUG}
+157         fprintf(stderr, \textcolor{stringliteral}{"SET INT: %s (0x%p) value %d\(\backslash\)n"}, name, data, *data);
+158 \textcolor{preprocessor}{    #endif}
+159     GLint uniformID = glGetUniformLocation(*(program->Get()), name);
+160     \textcolor{keywordflow}{if} (uniformID >= 0) \{
+161         glUniform1i(uniformID, *data);
+162     \}
+163     \textcolor{keywordflow}{else} \{
+164         fprintf(stderr, \textcolor{stringliteral}{"ERROR: program 0x%p:%u int variable %s not found\(\backslash\)n"}, program, *(program->Get()), 
+      name);
+165     \}
+166 
+167     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+168 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classEngine_1_1Components_1_1Graphics_1_1Shader_a60af0a0142b5a1ea44923c3f438a179a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Shader_a9894564e19539e2d152df99ea9e5bc29}\label{classEngine_1_1Components_1_1Graphics_1_1Shader_a9894564e19539e2d152df99ea9e5bc29}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}!Send\+Uniform@{Send\+Uniform}}
+\index{Send\+Uniform@{Send\+Uniform}!Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{Send\+Uniform()}{SendUniform()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader}{Engine\+::\+Components\+::\+Graphics\+::\+Shader}} $\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Shader\+::\+Send\+Uniform (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$}]{program,  }\item[{const G\+Lchar $\ast$}]{name,  }\item[{bool $\ast$}]{data }\end{DoxyParamCaption})}
+
+
+
+Definition at line 170 of file Shader.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Graphics\+::\+Program\+::\+Get().
+
+
+\begin{DoxyCode}
+171 \{
+172 \textcolor{preprocessor}{    #ifdef DEBUG}
+173         fprintf(stderr, \textcolor{stringliteral}{"SET BOOL: %s (0x%p) value %b\(\backslash\)n"}, name, data, *data);
+174 \textcolor{preprocessor}{    #endif}
+175     GLint uniformID = glGetUniformLocation(*(program->Get()), name);
+176     \textcolor{keywordflow}{if} (uniformID >= 0) \{
+177         glUniform1i(uniformID, *data);
+178     \}
+179     \textcolor{keywordflow}{else} \{
+180         fprintf(stderr, \textcolor{stringliteral}{"ERROR: program 0x%p:%u int variable %s not found\(\backslash\)n"}, program, *(program->Get()), 
+      name);
+181     \}
+182 
+183     \textcolor{keywordflow}{return} \textcolor{keyword}{this};
+184 \}
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{classEngine_1_1Components_1_1Graphics_1_1Shader_a9894564e19539e2d152df99ea9e5bc29_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Shader_a169ed9f71afd5f59160e35708e51fe7e}\label{classEngine_1_1Components_1_1Graphics_1_1Shader_a169ed9f71afd5f59160e35708e51fe7e}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}!set\+Data@{set\+Data}}
+\index{set\+Data@{set\+Data}!Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{set\+Data()}{setData()}}
+{\footnotesize\ttfamily void Engine\+::\+Components\+::\+Graphics\+::\+Shader\+::set\+Data (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Program}{Program}} $\ast$}]{program,  }\item[{const G\+Lchar $\ast$}]{property,  }\item[{\mbox{\hyperlink{namespaceEngine_1_1Components_1_1Graphics_a44f5a2b57ee82aed849896c8311e403b}{Material\+Value\+Type}}}]{type,  }\item[{void $\ast$}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line 186 of file Shader.\+cpp.
+
+
+
+References Engine\+::\+Components\+::\+Graphics\+::\+Float, Engine\+::\+Components\+::\+Graphics\+::\+Int, and Engine\+::\+Components\+::\+Graphics\+::\+Matrix4x4.
+
+
+\begin{DoxyCode}
+187 \{
+188     \textcolor{keywordflow}{switch} (type)
+189     \{
+190         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespaceEngine_1_1Components_1_1Graphics_a44f5a2b57ee82aed849896c8311e403ba97d63336b89a741ffe735bc436147cc6}{Int}}:
+191             \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a24131f3622fe536794de21e0fb499276}{SendUniform}}(program, property, static\_cast<int*>(value));
+192             \textcolor{keywordflow}{break};
+193         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespaceEngine_1_1Components_1_1Graphics_a44f5a2b57ee82aed849896c8311e403bafe29186f6aeccd144f81352b67ea9c51}{Float}}:
+194             \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a24131f3622fe536794de21e0fb499276}{SendUniform}}(program, property, static\_cast<float*>(value));
+195             \textcolor{keywordflow}{break};
+196         \textcolor{keywordflow}{case} \mbox{\hyperlink{namespaceEngine_1_1Components_1_1Graphics_a44f5a2b57ee82aed849896c8311e403babbf41bb0de18f4e8481bfb1372a99767}{Matrix4x4}}:
+197             \mbox{\hyperlink{classEngine_1_1Components_1_1Graphics_1_1Shader_a24131f3622fe536794de21e0fb499276}{SendUniform}}(program, property, static\_cast<glm::mat4*>(value));
+198             \textcolor{keywordflow}{break};
+199     \}
+200 \}
+\end{DoxyCode}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Shader_a82939e07025096b6b37f1588620863c5}\label{classEngine_1_1Components_1_1Graphics_1_1Shader_a82939e07025096b6b37f1588620863c5}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}!\+\_\+code@{\+\_\+code}}
+\index{\+\_\+code@{\+\_\+code}!Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{\+\_\+code}{\_code}}
+{\footnotesize\ttfamily char$\ast$ Engine\+::\+Components\+::\+Graphics\+::\+Shader\+::\+\_\+code\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 36 of file Shader.\+h.
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Shader_a675c32a04d4eb33117d6ff2b988e13b5}\label{classEngine_1_1Components_1_1Graphics_1_1Shader_a675c32a04d4eb33117d6ff2b988e13b5}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}!\+\_\+compiled@{\+\_\+compiled}}
+\index{\+\_\+compiled@{\+\_\+compiled}!Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{\+\_\+compiled}{\_compiled}}
+{\footnotesize\ttfamily bool Engine\+::\+Components\+::\+Graphics\+::\+Shader\+::\+\_\+compiled\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 35 of file Shader.\+h.
+
+
+
+Referenced by Shader().
+
+\mbox{\Hypertarget{classEngine_1_1Components_1_1Graphics_1_1Shader_a4494d72a65715eb9f02e06a533684872}\label{classEngine_1_1Components_1_1Graphics_1_1Shader_a4494d72a65715eb9f02e06a533684872}} 
+\index{Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}!\+\_\+shader@{\+\_\+shader}}
+\index{\+\_\+shader@{\+\_\+shader}!Engine\+::\+Components\+::\+Graphics\+::\+Shader@{Engine\+::\+Components\+::\+Graphics\+::\+Shader}}
+\subsubsection{\texorpdfstring{\+\_\+shader}{\_shader}}
+{\footnotesize\ttfamily G\+Luint Engine\+::\+Components\+::\+Graphics\+::\+Shader\+::\+\_\+shader\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line 34 of file Shader.\+h.
+
+
+
+Referenced by Shader().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Z\+P\+G/\mbox{\hyperlink{Shader_8h}{Shader.\+h}}\item 
+Z\+P\+G/\mbox{\hyperlink{Shader_8cpp}{Shader.\+cpp}}\end{DoxyCompactItemize}

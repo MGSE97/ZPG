@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classEngine_1_1Components_1_1IInputHandler" kind="class" language="C++" prot="public">
+    <compoundname>Engine::Components::IInputHandler</compoundname>
+    <derivedcompoundref refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler" prot="public" virt="non-virtual">Application::Input::Handlers::CameraInputHandler</derivedcompoundref>
+    <derivedcompoundref refid="classEngine_1_1Components_1_1BaseInputHandler" prot="public" virt="non-virtual">Engine::Components::BaseInputHandler</derivedcompoundref>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="442">
+        <label>Application::Input::Handlers::LightingChangeInputHandler</label>
+        <link refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler"/>
+        <childnode refid="441" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="439">
+        <label>IInputHandler</label>
+        <link refid="classEngine_1_1Components_1_1IInputHandler"/>
+      </node>
+      <node id="440">
+        <label>Application::Input::Handlers::CameraInputHandler</label>
+        <link refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler"/>
+        <childnode refid="439" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="441">
+        <label>Engine::Components::BaseInputHandler</label>
+        <link refid="classEngine_1_1Components_1_1BaseInputHandler"/>
+        <childnode refid="439" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="443">
+        <label>IInputHandler</label>
+        <link refid="classEngine_1_1Components_1_1IInputHandler"/>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/CameraInputHandler.h" line="12" column="1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

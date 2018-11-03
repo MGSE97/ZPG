@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classGeneric_1_1Dictionary" kind="class" language="C++" prot="public">
+    <compoundname>Generic::Dictionary</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::map&lt; TKey, TValue &gt;</basecompoundref>
+    <includes refid="Dictionary_8h" local="no">Dictionary.h</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>TKey</declname>
+        <defname>TKey</defname>
+      </param>
+      <param>
+        <type>class</type>
+        <declname>TValue</declname>
+        <defname>TValue</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classGeneric_1_1Dictionary_1ae7cb006f801b21c172e8fbac8794fa99" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classGeneric_1_1Dictionary" kindref="compound">Dictionary</ref> &amp;</type>
+        <definition>Dictionary&amp; Generic::Dictionary&lt; TKey, TValue &gt;::Add</definition>
+        <argsstring>(TKey key, TValue value)</argsstring>
+        <name>Add</name>
+        <param>
+          <type>TKey</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>TValue</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Dictionary.h" line="10" column="1" bodyfile="ZPG/Dictionary.h" bodystart="10" bodyend="19"/>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1ab06fa94ce5265dc06abb645ea29850bd" compoundref="CameraInputHandler_8cpp" startline="53" endline="104">Application::Input::Handlers::CameraInputHandler::HandleMouse</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1LightEngine_1ad992d8a300f099c247d7ba8dc38883ea" compoundref="LigtEngine_8cpp" startline="11" endline="211">Application::Engines::LightEngine::Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGeneric_1_1Dictionary_1ab368d54de28e7a3514e1add4bb5b3a36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TValue &amp;</type>
+        <definition>TValue&amp; Generic::Dictionary&lt; TKey, TValue &gt;::First</definition>
+        <argsstring>(TValue _default=nullptr)</argsstring>
+        <name>First</name>
+        <param>
+          <type>TValue</type>
+          <declname>_default</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Dictionary.h" line="29" column="1" bodyfile="ZPG/Dictionary.h" bodystart="29" bodyend="34"/>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1LightingChangeInputHandler_1a5017479d6edea9d6bedf3093cf49cb24" compoundref="LightingChangeInputHandler_8cpp" startline="5" endline="62">Application::Input::Handlers::LightingChangeInputHandler::HandleKeys</referencedby>
+        <referencedby refid="classApplication_1_1Engines_1_1CameraEngine_1a0c7723b93afbdef70394961a4624813d" compoundref="CameraEngine_8cpp" startline="9" endline="73">Application::Engines::CameraEngine::Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGeneric_1_1Dictionary_1ad018bc166486129b48e9ededce313984" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TValue &amp;</type>
+        <definition>TValue&amp; Generic::Dictionary&lt; TKey, TValue &gt;::Get</definition>
+        <argsstring>(const TKey key, TValue _default=nullptr)</argsstring>
+        <name>Get</name>
+        <param>
+          <type>const TKey</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>TValue</type>
+          <declname>_default</declname>
+          <defval>nullptr</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Dictionary.h" line="21" column="1" bodyfile="ZPG/Dictionary.h" bodystart="21" bodyend="27"/>
+        <referencedby refid="classApplication_1_1Input_1_1Handlers_1_1CameraInputHandler_1ab06fa94ce5265dc06abb645ea29850bd" compoundref="CameraInputHandler_8cpp" startline="53" endline="104">Application::Input::Handlers::CameraInputHandler::HandleMouse</referencedby>
+        <referencedby refid="Main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="Main_8cpp" startline="8" endline="20">main</referencedby>
+        <referencedby refid="classGeneric_1_1Dictionary_1a215ba40a8ff1006d0bf288a317758d3f" compoundref="Dictionary_8h" startline="41" endline="44">Generic::Dictionary&lt; std::string, Engine::BaseEngine *&gt;::operator[]</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classGeneric_1_1Dictionary_1ab4c4fca6ab2ea15fcccd88fe2213575e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TValue &amp;</type>
+        <definition>TValue&amp; Generic::Dictionary&lt; TKey, TValue &gt;::Last</definition>
+        <argsstring>()</argsstring>
+        <name>Last</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Dictionary.h" line="36" column="1" bodyfile="ZPG/Dictionary.h" bodystart="36" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classGeneric_1_1Dictionary_1a215ba40a8ff1006d0bf288a317758d3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>TValue &amp;</type>
+        <definition>TValue&amp; Generic::Dictionary&lt; TKey, TValue &gt;::operator[]</definition>
+        <argsstring>(TKey key)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>TKey</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Dictionary.h" line="41" column="1" bodyfile="ZPG/Dictionary.h" bodystart="41" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="557">
+        <label>Generic::Dictionary&lt; short, bool &gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="554" relation="template-instance">
+          <edgelabel>&lt; short, bool &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="554">
+        <label>Generic::Dictionary&lt; TKey, TValue &gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="555" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="565">
+        <label>Generic::Dictionary&lt; std::string, Engine::BaseEngine *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="554" relation="template-instance">
+          <edgelabel>&lt; std::string, Engine::BaseEngine *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="561">
+        <label>Generic::Dictionary&lt; std::string, Light *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="554" relation="template-instance">
+          <edgelabel>&lt; std::string, Light *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="555">
+        <label>std::map&lt; TKey, TValue &gt;</label>
+      </node>
+      <node id="563">
+        <label>Generic::Dictionary&lt; std::string, Engine::Objects::Object *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="554" relation="template-instance">
+          <edgelabel>&lt; std::string, Engine::Objects::Object *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="559">
+        <label>Generic::Dictionary&lt; std::string, Engine::Components::Scene *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="554" relation="template-instance">
+          <edgelabel>&lt; std::string, Engine::Components::Scene *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="562">
+        <label>Generic::Dictionary&lt; std::string, Engine::Components::Graphics::Program *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="554" relation="template-instance">
+          <edgelabel>&lt; std::string, Engine::Components::Graphics::Program *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="558">
+        <label>Generic::Dictionary&lt; std::string, Engine::Components::Graphics::Shader *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="554" relation="template-instance">
+          <edgelabel>&lt; std::string, Engine::Components::Graphics::Shader *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="564">
+        <label>Generic::Dictionary&lt; std::string, Engine::Components::Camera *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="554" relation="template-instance">
+          <edgelabel>&lt; std::string, Engine::Components::Camera *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="556">
+        <label>Generic::Dictionary&lt; ProgramData *, T &gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="554" relation="template-instance">
+          <edgelabel>&lt; ProgramData *, T &gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="560">
+        <label>Generic::Dictionary&lt; std::string, Engine::Components::Window *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="554" relation="template-instance">
+          <edgelabel>&lt; std::string, Engine::Components::Window *&gt;</edgelabel>
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="566">
+        <label>Generic::Dictionary&lt; TKey, TValue &gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="567" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="567">
+        <label>std::map&lt; TKey, TValue &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/Dictionary.h" line="8" column="1" bodyfile="ZPG/Dictionary.h" bodystart="7" bodyend="45"/>
+    <listofallmembers>
+      <member refid="classGeneric_1_1Dictionary_1ae7cb006f801b21c172e8fbac8794fa99" prot="public" virt="non-virtual"><scope>Generic::Dictionary</scope><name>Add</name></member>
+      <member refid="classGeneric_1_1Dictionary_1ab368d54de28e7a3514e1add4bb5b3a36" prot="public" virt="non-virtual"><scope>Generic::Dictionary</scope><name>First</name></member>
+      <member refid="classGeneric_1_1Dictionary_1ad018bc166486129b48e9ededce313984" prot="public" virt="non-virtual"><scope>Generic::Dictionary</scope><name>Get</name></member>
+      <member refid="classGeneric_1_1Dictionary_1ab4c4fca6ab2ea15fcccd88fe2213575e" prot="public" virt="non-virtual"><scope>Generic::Dictionary</scope><name>Last</name></member>
+      <member refid="classGeneric_1_1Dictionary_1a215ba40a8ff1006d0bf288a317758d3f" prot="public" virt="non-virtual"><scope>Generic::Dictionary</scope><name>operator[]</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

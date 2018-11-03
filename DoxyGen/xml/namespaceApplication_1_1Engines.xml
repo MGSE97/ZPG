@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespaceApplication_1_1Engines" kind="namespace" language="C++">
+    <compoundname>Application::Engines</compoundname>
+    <innerclass refid="classApplication_1_1Engines_1_1BasicEngine" prot="public">Application::Engines::BasicEngine</innerclass>
+    <innerclass refid="classApplication_1_1Engines_1_1CameraEngine" prot="public">Application::Engines::CameraEngine</innerclass>
+    <innerclass refid="classApplication_1_1Engines_1_1LightEngine" prot="public">Application::Engines::LightEngine</innerclass>
+    <innerclass refid="classApplication_1_1Engines_1_1TriangleEngine" prot="public">Application::Engines::TriangleEngine</innerclass>
+    <innerclass refid="classApplication_1_1Engines_1_1ZPGEngine" prot="public">Application::Engines::ZPGEngine</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="ZPG/BasicEngine.h" line="7" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,236 @@
+.TH "Application::Scenes::SphereScene" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Application::Scenes::SphereScene
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <SphereScene\&.h>\fP
+.PP
+Inherits \fBEngine::Components::Scene\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSphereScene\fP ()"
+.br
+.ti -1c
+.RI "\fB~SphereScene\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBBeginLoad\fP (BaseEngine *engine)"
+.br
+.ti -1c
+.RI "void \fBFrameUpdate\fP (\fBEngine::BaseEngine\fP *engine) override"
+.br
+.ti -1c
+.RI "void \fBLoad\fP (\fBEngine::BaseEngine\fP *engine) override"
+.br
+.ti -1c
+.RI "virtual void \fBSetActiveCamera\fP (Camera *camera=nullptr)"
+.br
+.ti -1c
+.RI "virtual void \fBUnload\fP (BaseEngine *engine)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "Camera * \fBActiveCamera\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< std::string, Camera * > * \fBCameras\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< std::string, \fBLight\fP * > * \fBLights\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< std::string, \fBEngine::Objects::Object\fP * > * \fBObjects\fP"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "bool \fBLoaded\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 8 of file SphereScene\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Application::Scenes::SphereScene::SphereScene ()"
+
+.PP
+Definition at line 9 of file SphereScene\&.cpp\&.
+.PP
+.nf
+10 {
+11 }
+.fi
+.SS "Application::Scenes::SphereScene::~SphereScene ()"
+
+.PP
+Definition at line 13 of file SphereScene\&.cpp\&.
+.PP
+.nf
+14 {
+15     Scene::~Scene();
+16 }
+.fi
+.SH "Member Function Documentation"
+.PP 
+.SS "void Engine::Components::Scene::BeginLoad (\fBBaseEngine\fP * engine)\fC [virtual]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 37 of file Scene\&.cpp\&.
+.PP
+Referenced by Application::Engines::CameraEngine::Init(), and Application::Engines::LightEngine::Init()\&.
+.PP
+.nf
+38 {
+39     if (!Loaded)
+40     {
+41         Load(engine);
+42         if (ActiveCamera == nullptr)
+43             SetActiveCamera();
+44         Loaded = true;
+45     }
+46 }
+.fi
+.SS "void Application::Scenes::SphereScene::FrameUpdate (\fBEngine::BaseEngine\fP * engine)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBEngine::Components::Scene\fP\&.
+.PP
+Definition at line 62 of file SphereScene\&.cpp\&.
+.PP
+.nf
+63 {
+64 }
+.fi
+.SS "void Application::Scenes::SphereScene::Load (\fBEngine::BaseEngine\fP * engine)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBEngine::Components::Scene\fP\&.
+.PP
+Definition at line 18 of file SphereScene\&.cpp\&.
+.PP
+References Engine::BaseEngine::Programs, Engine::Components::Graphics::Program::Shaders, and sphere\&.
+.PP
+.nf
+19 {
+20     // define material
+21     Engine::Components::Graphics::Program* program = engine->Programs->Get("basic");
+22 
+23     // create object
+24     Objects->Add("sphere1", new ::Engine::Objects::Sphere(new Engine::Components::Graphics::Material(program), sphere, 17280, 3));
+25     Objects->Add("sphere2", new ::Engine::Objects::Sphere(new Engine::Components::Graphics::Material(program), sphere, 17280, 3));
+26     Objects->Add("sphere3", new ::Engine::Objects::Sphere(new Engine::Components::Graphics::Material(program), sphere, 17280, 3));
+27     Objects->Add("sphere4", new ::Engine::Objects::Sphere(new Engine::Components::Graphics::Material(program), sphere, 17280, 3));
+28     
+29     auto sphere = Objects->Get("sphere1");
+30     sphere->Material->Values
+31         ->Add(
+32             new Engine::Components::Graphics::MaterialValue<glm::vec4>(
+33                 program->Shaders->Get("fragment"), "color", new glm::vec4(1\&.0f, 1\&.0f, 0\&.0f, 0\&.5f))
+34         );
+35     *(sphere->ModelMatrix) = glm::translate(*(sphere->ModelMatrix), glm::vec3(-2, 0, 0));
+36 
+37     sphere = Objects->Get("sphere2");
+38     sphere->Material->Values
+39         ->Add(
+40             new Engine::Components::Graphics::MaterialValue<glm::vec4>(
+41                 program->Shaders->Get("fragment"), "color", new glm::vec4(1\&.0f, 0\&.0f, 1\&.0f, 0\&.5f))
+42         );
+43     *(sphere->ModelMatrix) = glm::translate(*(sphere->ModelMatrix), glm::vec3(0, 2, 0));
+44 
+45     sphere = Objects->Get("sphere3");
+46     sphere->Material->Values
+47         ->Add(
+48             new Engine::Components::Graphics::MaterialValue<glm::vec4>(
+49                 program->Shaders->Get("fragment"), "color", new glm::vec4(0\&.0f, 1\&.0f, 1\&.0f, 0\&.5f))
+50         );
+51     *(sphere->ModelMatrix) = glm::translate(*(sphere->ModelMatrix), glm::vec3(2, 0, 0));
+52 
+53     sphere = Objects->Get("sphere4");
+54     sphere->Material->Values
+55         ->Add(
+56             new Engine::Components::Graphics::MaterialValue<glm::vec4>(
+57                 program->Shaders->Get("fragment"), "color", new glm::vec4(1\&.0f, 1\&.0f, 1\&.0f, 0\&.5f))
+58         );
+59     *(sphere->ModelMatrix) = glm::translate(*(sphere->ModelMatrix), glm::vec3(0, -2, 0));
+60 }
+.fi
+.SS "void Engine::Components::Scene::SetActiveCamera (\fBCamera\fP * camera = \fCnullptr\fP)\fC [virtual]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 52 of file Scene\&.cpp\&.
+.PP
+References Engine::Components::Camera::Update()\&.
+.PP
+Referenced by Engine::Components::Camera::SetActive()\&.
+.PP
+.nf
+53 {
+54     if (camera == nullptr)
+55         ActiveCamera = Cameras->First();
+56     else
+57         ActiveCamera = camera;
+58     if(ActiveCamera != nullptr)
+59         ActiveCamera->Update();
+60 }
+.fi
+.SS "void Engine::Components::Scene::Unload (\fBBaseEngine\fP * engine)\fC [virtual]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 29 of file Scene\&.cpp\&.
+.PP
+.nf
+30 {
+31     for (auto& Object : *Objects)
+32         delete Object\&.second;
+33     Objects->clear();
+34     Loaded = false;
+35 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "Camera* Engine::Components::Scene::ActiveCamera\fC [inherited]\fP"
+
+.PP
+Definition at line 30 of file Scene\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::LightingChangeInputHandler::HandleKeys(), Application::Input::Handlers::CameraInputHandler::HandleKeys(), Application::Input::Handlers::CameraInputHandler::HandleMouse(), Application::Engines::LightEngine::Init(), and Engine::Components::Scene::Scene()\&.
+.SS "\fBGeneric::Dictionary\fP<std::string, Camera*>* Engine::Components::Scene::Cameras\fC [inherited]\fP"
+
+.PP
+Definition at line 28 of file Scene\&.h\&.
+.PP
+Referenced by Application::Engines::CameraEngine::Init(), Application::Engines::LightEngine::Init(), and Engine::Components::Scene::Scene()\&.
+.SS "\fBGeneric::Dictionary\fP<std::string, \fBLight\fP*>* Engine::Components::Scene::Lights\fC [inherited]\fP"
+
+.PP
+Definition at line 29 of file Scene\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::LightingChangeInputHandler::HandleKeys(), Application::Engines::LightEngine::Init(), and Engine::Components::Scene::Scene()\&.
+.SS "bool Engine::Components::Scene::Loaded\fC [protected]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 18 of file Scene\&.h\&.
+.PP
+Referenced by Engine::Components::Scene::Scene()\&.
+.SS "\fBGeneric::Dictionary\fP<std::string, \fBEngine::Objects::Object\fP*>* Engine::Components::Scene::Objects\fC [inherited]\fP"
+
+.PP
+Definition at line 27 of file Scene\&.h\&.
+.PP
+Referenced by Application::Input::Handlers::CameraInputHandler::HandleMouse(), Application::Engines::CameraEngine::Init(), Application::Engines::LightEngine::Init(), and Engine::Components::Scene::Scene()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

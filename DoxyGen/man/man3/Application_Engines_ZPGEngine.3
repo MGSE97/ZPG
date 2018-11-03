@@ -1,0 +1,359 @@
+.TH "Application::Engines::ZPGEngine" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Application::Engines::ZPGEngine
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ZPGEngine\&.h>\fP
+.PP
+Inherits \fBEngine::BaseEngine\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBZPGEngine\fP * \fBInit\fP (std::FILE *errorStream=stderr) override"
+.br
+.ti -1c
+.RI "void \fBUpdate\fP (::\fBEngine::Components::Window\fP *window) override"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBaseEngine\fP * \fBDispose\fP ()"
+.br
+.ti -1c
+.RI "bool \fBInitSuccess\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBSetActiveScene\fP (Components::Scene *scene=nullptr)"
+.br
+.ti -1c
+.RI "virtual void \fBStart\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBUpdate\fP (Components::Window *window)"
+.br
+.ti -1c
+.RI "virtual void \fBUpdateBegin\fP (Components::Window *window)"
+.br
+.ti -1c
+.RI "virtual void \fBUpdateEnd\fP (Components::Window *window)"
+.br
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Components::Scene * \fBActiveScene\fP"
+.br
+.ti -1c
+.RI "float \fBangle\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Collection\fP< Components::IInputHandler * > * \fBInputHandlers\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< short, bool > \fBKeys\fP"
+.br
+.ti -1c
+.RI "glm::mat4 \fBM\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< short, bool > \fBMouseKeys\fP"
+.br
+.ti -1c
+.RI "double \fBMouseX\fP"
+.br
+.ti -1c
+.RI "double \fBMouseY\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< std::string, Components::Graphics::Program * > * \fBPrograms\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< std::string, Components::Scene * > * \fBScenes\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< std::string, Components::Graphics::Shader * > * \fBShaders\fP"
+.br
+.ti -1c
+.RI "\fBGeneric::Dictionary\fP< std::string, Components::Window * > * \fBWindows\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 8 of file ZPGEngine\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBEngine::BaseEngine\fP * Engine::BaseEngine::Dispose ()\fC [inherited]\fP"
+
+.PP
+Definition at line 51 of file BaseEngine\&.cpp\&.
+.PP
+.nf
+52 {
+53     glfwTerminate();
+54     return this;
+55 }
+.fi
+.SS "\fBApplication::Engines::ZPGEngine\fP * Application::Engines::ZPGEngine::Init (std::FILE * errorStream = \fCstderr\fP)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented from \fBEngine::BaseEngine\fP\&.
+.PP
+Definition at line 22 of file ZPGEngine\&.cpp\&.
+.PP
+References angle, fragment_shader, M, Engine::BaseEngine::Programs, Engine::BaseEngine::Scenes, Engine::BaseEngine::SetActiveScene(), Engine::BaseEngine::Shaders, vertex_shader, and Engine::BaseEngine::Windows\&.
+.PP
+.nf
+23 {
+24     BaseEngine::Init(errorStream);
+25 
+26     Windows->Add("zpg", (new ::Engine::Components::Window(800, 600, "ZPG", 100\&.0f))
+27         ->Show()
+28         ->Info(std::cout)
+29     );
+30 
+31 
+32     Shaders->Add("vertex", new ::Engine::Components::Shader(GL_VERTEX_SHADER, vertex_shader));
+33     Shaders->Add("fragment", new ::Engine::Components::Shader(GL_FRAGMENT_SHADER, fragment_shader));
+34 
+35     Programs->Add("shader", (new ::Engine::Components::Program())->AddShaders(Shaders));
+36 
+37     Scenes->Add((Engine::Components::Scene*) new Scenes::TriangleScene());
+38 
+39     for (auto it = Objects->begin(); it != Objects->end(); ++it)
+40 
+41     SetActiveScene();
+42 
+43     M = glm::mat4(1\&.0f);
+44     angle = 0\&.0f;
+45     return this;
+46 }
+.fi
+.SS "bool Engine::BaseEngine::InitSuccess ()\fC [inherited]\fP"
+
+.PP
+Definition at line 46 of file BaseEngine\&.cpp\&.
+.PP
+.nf
+47 {
+48     return _init;
+49 }
+.fi
+.SS "void Engine::BaseEngine::SetActiveScene (\fBComponents::Scene\fP * scene = \fCnullptr\fP)\fC [virtual]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 132 of file BaseEngine\&.cpp\&.
+.PP
+Referenced by Application::Engines::BasicEngine::Init(), Init(), Application::Engines::TriangleEngine::Init(), Application::Engines::CameraEngine::Init(), and Application::Engines::LightEngine::Init()\&.
+.PP
+.nf
+133 {
+134     if (scene == nullptr && !Scenes->empty())
+135         ActiveScene = Scenes->begin()->second;
+136     else
+137         ActiveScene = scene;        
+138 }
+.fi
+.SS "void Engine::BaseEngine::Start ()\fC [virtual]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 126 of file BaseEngine\&.cpp\&.
+.PP
+Referenced by main()\&.
+.PP
+.nf
+127 {
+128     system("cls");
+129     UpdateInternal();
+130 }
+.fi
+.SS "void Application::Engines::ZPGEngine::Update (::\fBEngine::Components::Window\fP * window)\fC [override]\fP"
+
+.PP
+Definition at line 48 of file ZPGEngine\&.cpp\&.
+.PP
+.nf
+49 {
+50     for(auto it = Objects->begin(); it != Objects->end(); ++it)
+51     {
+52         /*ShaderProgram->Shaders[0]->SendUniform(ShaderProgram, "modelMatrix", M);
+53         ShaderProgram->Shaders[1]->SendUniform(ShaderProgram, "color", _angle-(long)_angle);*/
+54         auto object = it->second;
+55         //Handle Objects
+56         object->Program->Use();
+57         object->Program->Shaders->Get("vertex")->SendUniform(object->Program, "modelMatrix", M);
+58         object->Program->Shaders->Get("fragment")->SendUniform(object->Program, "color", angle - (long)angle);
+59         object->Draw();
+60         angle += 0\&.1f;
+61     }
+62 }
+.fi
+.SS "void Engine::BaseEngine::Update (\fBComponents::Window\fP * window)\fC [virtual]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 112 of file BaseEngine\&.cpp\&.
+.PP
+.nf
+113 {
+114 }
+.fi
+.SS "void Engine::BaseEngine::UpdateBegin (\fBComponents::Window\fP * window)\fC [virtual]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 57 of file BaseEngine\&.cpp\&.
+.PP
+References Engine::Components::Window::Get()\&.
+.PP
+.nf
+58 {
+59     // Scene
+60     ActiveScene->BeginLoad(this);
+61 
+62     // Buffers
+63     glEnable(GL_DEPTH_TEST);
+64     glDepthFunc(GL_LESS);
+65     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+66 
+67     // Input
+68     short mouseKeysActive = 0;
+69     glfwGetCursorPos(window->Get(), &MouseX, &MouseY);
+70     for(short i = 0; i < 8; i++)
+71     {
+72         const int state = glfwGetMouseButton(window->Get(), i);
+73         auto value = MouseKeys[i];
+74         // flip state
+75         if (state == GLFW_PRESS && !value)
+76             MouseKeys\&.Add(i, true);
+77         else if (state == GLFW_RELEASE && value)
+78             MouseKeys\&.Add(i, false);
+79         if (MouseKeys[i])
+80             mouseKeysActive++;
+81     }
+82     short keysActive = 0;
+83     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), { 40, keysActive });
+84     fprintf(_errorStream, "                           ");
+85     for (short i = 1; i < 512; i++)
+86     {
+87         const int state = glfwGetKey(window->Get(), i);
+88         auto value = Keys[i];
+89         // flip state
+90         if (state == GLFW_PRESS && !value)
+91             Keys\&.Add(i, true);
+92         else if (state == GLFW_RELEASE && value)
+93             Keys\&.Add(i, false);
+94         if (Keys[i])
+95             keysActive++;
+96     }
+97     bool handleKeys = true,
+98          handleMouse = true;
+99     for (auto handler : *InputHandlers)
+100     {
+101         if(handleKeys)
+102             handleKeys = handler->HandleKeys(this, window, ActiveScene, Keys, keysActive);
+103         if(handleMouse)
+104             handleMouse = handler->HandleMouse(this, window, ActiveScene, MouseX, MouseY, MouseKeys, mouseKeysActive);
+105         if(!handleKeys && !handleMouse)
+106             break;
+107     }
+108 
+109     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), { 0,0 });
+110 }
+.fi
+.SS "void Engine::BaseEngine::UpdateEnd (\fBComponents::Window\fP * window)\fC [virtual]\fP, \fC [inherited]\fP"
+
+.PP
+Definition at line 116 of file BaseEngine\&.cpp\&.
+.PP
+References Engine::Components::Window::Get()\&.
+.PP
+.nf
+117 {
+118     // update other events like input handling
+119     glfwPollEvents();
+120     // put the stuff we’ve been drawing onto the display
+121     glfwSwapBuffers(window->Get());
+122 
+123     ActiveScene->FrameUpdate(this);
+124 }
+.fi
+.SH "Member Data Documentation"
+.PP 
+.SS "Components::Scene* Engine::BaseEngine::ActiveScene\fC [inherited]\fP"
+
+.PP
+Definition at line 34 of file BaseEngine\&.h\&.
+.PP
+Referenced by Engine::BaseEngine::BaseEngine(), Application::Engines::CameraEngine::Init(), and Application::Engines::LightEngine::Init()\&.
+.SS "float Application::Engines::ZPGEngine::angle\fC [private]\fP"
+
+.PP
+Definition at line 15 of file ZPGEngine\&.h\&.
+.PP
+Referenced by Init()\&.
+.SS "\fBGeneric::Collection\fP<Components::IInputHandler*>* Engine::BaseEngine::InputHandlers\fC [inherited]\fP"
+
+.PP
+Definition at line 31 of file BaseEngine\&.h\&.
+.PP
+Referenced by Engine::BaseEngine::BaseEngine(), and Application::Engines::LightEngine::Init()\&.
+.SS "\fBGeneric::Dictionary\fP<short, bool> Engine::BaseEngine::Keys\fC [inherited]\fP"
+
+.PP
+Definition at line 32 of file BaseEngine\&.h\&.
+.PP
+Referenced by Engine::BaseEngine::BaseEngine()\&.
+.SS "glm::mat4 Application::Engines::ZPGEngine::M\fC [private]\fP"
+
+.PP
+Definition at line 14 of file ZPGEngine\&.h\&.
+.PP
+Referenced by Init()\&.
+.SS "\fBGeneric::Dictionary\fP<short, bool> Engine::BaseEngine::MouseKeys\fC [inherited]\fP"
+
+.PP
+Definition at line 33 of file BaseEngine\&.h\&.
+.PP
+Referenced by Engine::BaseEngine::BaseEngine()\&.
+.SS "double Engine::BaseEngine::MouseX\fC [inherited]\fP"
+
+.PP
+Definition at line 35 of file BaseEngine\&.h\&.
+.SS "double Engine::BaseEngine::MouseY\fC [inherited]\fP"
+
+.PP
+Definition at line 36 of file BaseEngine\&.h\&.
+.SS "\fBGeneric::Dictionary\fP<std::string, Components::Graphics::Program*>* Engine::BaseEngine::Programs\fC [inherited]\fP"
+
+.PP
+Definition at line 28 of file BaseEngine\&.h\&.
+.PP
+Referenced by Engine::BaseEngine::BaseEngine(), Application::Input::Handlers::CameraInputHandler::HandleMouse(), Init(), Application::Engines::TriangleEngine::Init(), Application::Engines::BasicEngine::Init(), Application::Engines::CameraEngine::Init(), Application::Engines::LightEngine::Init(), Application::Scenes::TriangleScene::Load(), and Application::Scenes::SphereScene::Load()\&.
+.SS "\fBGeneric::Dictionary\fP<std::string, Components::Scene*>* Engine::BaseEngine::Scenes\fC [inherited]\fP"
+
+.PP
+Definition at line 30 of file BaseEngine\&.h\&.
+.PP
+Referenced by Engine::BaseEngine::BaseEngine(), Init(), Application::Engines::TriangleEngine::Init(), Application::Engines::BasicEngine::Init(), Application::Engines::CameraEngine::Init(), and Application::Engines::LightEngine::Init()\&.
+.SS "\fBGeneric::Dictionary\fP<std::string, Components::Graphics::Shader*>* Engine::BaseEngine::Shaders\fC [inherited]\fP"
+
+.PP
+Definition at line 29 of file BaseEngine\&.h\&.
+.PP
+Referenced by Engine::BaseEngine::BaseEngine(), Application::Input::Handlers::CameraInputHandler::HandleMouse(), Application::Engines::TriangleEngine::Init(), Init(), Application::Engines::BasicEngine::Init(), Application::Engines::CameraEngine::Init(), and Application::Engines::LightEngine::Init()\&.
+.SS "\fBGeneric::Dictionary\fP<std::string, Components::Window*>* Engine::BaseEngine::Windows\fC [inherited]\fP"
+
+.PP
+Definition at line 27 of file BaseEngine\&.h\&.
+.PP
+Referenced by Engine::BaseEngine::BaseEngine(), Init(), Application::Engines::TriangleEngine::Init(), Application::Engines::BasicEngine::Init(), Application::Engines::CameraEngine::Init(), and Application::Engines::LightEngine::Init()\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.

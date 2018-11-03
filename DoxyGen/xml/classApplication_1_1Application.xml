@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classApplication_1_1Application" kind="class" language="C++" prot="public">
+    <compoundname>Application::Application</compoundname>
+    <includes refid="Application_8h" local="no">Application.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classApplication_1_1Application_1a4f2808bddfc3f8fb2ed3a3fe0d4659ff" prot="public" static="no" mutable="no">
+        <type><ref refid="classGeneric_1_1Dictionary" kindref="compound">Generic::Dictionary</ref>&lt; std::string, <ref refid="classEngine_1_1BaseEngine" kindref="compound">Engine::BaseEngine</ref> * &gt; *</type>
+        <definition>Generic::Dictionary&lt;std::string, Engine::BaseEngine*&gt;* Application::Application::Engines</definition>
+        <argsstring></argsstring>
+        <name>Engines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Application.h" line="14" column="1" bodyfile="ZPG/Application.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="Main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="Main_8cpp" startline="8" endline="20">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="classApplication_1_1Application_1abd6690c71308921648b3b4da20d604d9" prot="private" static="yes" mutable="no">
+        <type><ref refid="classApplication_1_1Application" kindref="compound">Application</ref></type>
+        <definition>Application Application::Application::_instance</definition>
+        <argsstring></argsstring>
+        <name>_instance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Application.h" line="17" column="1" bodyfile="ZPG/Application.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classApplication_1_1Application_1aeef3ff221435f74e41115640239e6f34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Application::Application::~Application</definition>
+        <argsstring>()</argsstring>
+        <name>~Application</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Application.h" line="11" column="1" bodyfile="ZPG/Application.cpp" bodystart="13" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classApplication_1_1Application_1a478f6946c4bf5361281681f2b58385c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classApplication_1_1Application" kindref="compound">Application</ref> *</type>
+        <definition>Application::Application * Application::Application::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Application.h" line="13" column="1" bodyfile="ZPG/Application.cpp" bodystart="25" bodyend="29"/>
+        <referencedby refid="Main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="Main_8cpp" startline="8" endline="20">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classApplication_1_1Application_1ada268208f57ef136e006bb62fb30ffec" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classApplication_1_1Application" kindref="compound">Application</ref> *</type>
+        <definition>Application::Application * Application::Application::GetIntance</definition>
+        <argsstring>()</argsstring>
+        <name>GetIntance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Application.h" line="12" column="1" bodyfile="ZPG/Application.cpp" bodystart="19" bodyend="23"/>
+        <referencedby refid="Main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="Main_8cpp" startline="8" endline="20">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classApplication_1_1Application_1aa27a092cca399b3ccee7419a7cda4563" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Application::Application::Application</definition>
+        <argsstring>()</argsstring>
+        <name>Application</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Application.h" line="16" column="1" bodyfile="ZPG/Application.cpp" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classApplication_1_1Application_1a877f88238e07698fb9fcc0b71e9f15e7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application::Application::RegisterEngines</definition>
+        <argsstring>()</argsstring>
+        <name>RegisterEngines</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ZPG/Application.h" line="18" column="1" bodyfile="ZPG/EngineRegistry.cpp" bodystart="7" bodyend="14"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>std::map&lt; std::string, Engine::BaseEngine * &gt;</label>
+      </node>
+      <node id="1">
+        <label>Application::Application</label>
+        <link refid="classApplication_1_1Application"/>
+        <childnode refid="1" relation="usage">
+          <edgelabel>-_instance</edgelabel>
+        </childnode>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+Engines</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Generic::Dictionary&lt; TKey, TValue &gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Generic::Dictionary&lt; std::string, Engine::BaseEngine *&gt;</label>
+        <link refid="classGeneric_1_1Dictionary"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="template-instance">
+          <edgelabel>&lt; std::string, Engine::BaseEngine *&gt;</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>std::map&lt; TKey, TValue &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="ZPG/Application.h" line="9" column="1" bodyfile="ZPG/Application.h" bodystart="8" bodyend="19"/>
+    <listofallmembers>
+      <member refid="classApplication_1_1Application_1abd6690c71308921648b3b4da20d604d9" prot="private" virt="non-virtual"><scope>Application::Application</scope><name>_instance</name></member>
+      <member refid="classApplication_1_1Application_1aa27a092cca399b3ccee7419a7cda4563" prot="private" virt="non-virtual"><scope>Application::Application</scope><name>Application</name></member>
+      <member refid="classApplication_1_1Application_1a4f2808bddfc3f8fb2ed3a3fe0d4659ff" prot="public" virt="non-virtual"><scope>Application::Application</scope><name>Engines</name></member>
+      <member refid="classApplication_1_1Application_1ada268208f57ef136e006bb62fb30ffec" prot="public" virt="non-virtual"><scope>Application::Application</scope><name>GetIntance</name></member>
+      <member refid="classApplication_1_1Application_1a478f6946c4bf5361281681f2b58385c3" prot="public" virt="non-virtual"><scope>Application::Application</scope><name>Init</name></member>
+      <member refid="classApplication_1_1Application_1a877f88238e07698fb9fcc0b71e9f15e7" prot="private" virt="non-virtual"><scope>Application::Application</scope><name>RegisterEngines</name></member>
+      <member refid="classApplication_1_1Application_1aeef3ff221435f74e41115640239e6f34" prot="public" virt="non-virtual"><scope>Application::Application</scope><name>~Application</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

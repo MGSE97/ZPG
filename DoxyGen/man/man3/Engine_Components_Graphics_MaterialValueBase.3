@@ -1,0 +1,73 @@
+.TH "Engine::Components::Graphics::MaterialValueBase" 3 "Sat Nov 3 2018" "Version 4.0" "ZPG" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Engine::Components::Graphics::MaterialValueBase
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <MaterialValueBase\&.h>\fP
+.PP
+Inherited by \fBEngine::Components::Graphics::MaterialValue< T >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMaterialValueBase\fP (\fBShader\fP *shader, const GLchar *property)"
+.br
+.ti -1c
+.RI "virtual \fB~MaterialValueBase\fP ()=default"
+.br
+.ti -1c
+.RI "virtual void \fBSet\fP (\fBGraphics::Program\fP *program)=0"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "const GLchar * \fBProperty\fP"
+.br
+.ti -1c
+.RI "\fBShader\fP * \fBShader\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 11 of file MaterialValueBase\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Engine::Components::Graphics::MaterialValueBase::MaterialValueBase (\fBShader\fP * shader, const GLchar * property)\fC [inline]\fP"
+
+.PP
+Definition at line 14 of file MaterialValueBase\&.h\&.
+.PP
+.nf
+15                 {
+16                     Shader = shader;
+17                     Property = property;
+18                 }
+.fi
+.SS "virtual Engine::Components::Graphics::MaterialValueBase::~MaterialValueBase ()\fC [virtual]\fP, \fC [default]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void Engine::Components::Graphics::MaterialValueBase::Set (\fBGraphics::Program\fP * program)\fC [pure virtual]\fP"
+
+.PP
+Implemented in \fBEngine::Components::Graphics::MaterialValue< T >\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "const GLchar* Engine::Components::Graphics::MaterialValueBase::Property"
+
+.PP
+Definition at line 21 of file MaterialValueBase\&.h\&.
+.SS "\fBShader\fP* Engine::Components::Graphics::MaterialValueBase::Shader"
+
+.PP
+Definition at line 20 of file MaterialValueBase\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for ZPG from the source code\&.
