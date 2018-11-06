@@ -149,9 +149,9 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 						vertex,
 						"cameraPos",
 						ActiveScene->ActiveCamera->Position)
-				)
+				);
 				// Color setup
-				.Add(
+				/*.Add(
 					new Engine::Components::Graphics::MaterialValue<glm::vec3>(
 						fragment,
 						"ambientColor",
@@ -195,7 +195,7 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 						fragment,
 						"useLighting",
 						new bool(true))
-				);
+				);*/
 			if (ActiveScene != nullptr && ActiveScene->Lights != nullptr && !ActiveScene->Lights->empty())
 				for (auto& light : *ActiveScene->Lights)
 				{

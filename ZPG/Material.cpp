@@ -15,12 +15,12 @@ Engine::Components::Graphics::Material::~Material()
 	delete Values;
 }
 
-template<typename T>
+/*template<typename T>
 Engine::Components::Graphics::Material* Engine::Components::Graphics::Material::Add(Shader* shader, const GLchar* property, T* value)
 {
 	Values->Add(new MaterialValue<T>(shader, property, value));
 	return this;
-}
+}*/
 
 Engine::Components::Graphics::Material* Engine::Components::Graphics::Material::Use()
 {

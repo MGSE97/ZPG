@@ -134,6 +134,7 @@
     <ClCompile Include="CameraInputHandler.cpp" />
     <ClCompile Include="EngineRegistry.cpp" />
     <ClCompile Include="Light.cpp" />
+    <ClCompile Include="LightConfiguration.cpp" />
     <ClCompile Include="LightingChangeInputHandler.cpp" />
     <ClCompile Include="LigtEngine.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -144,6 +145,7 @@
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Sphere.cpp" />
     <ClCompile Include="SphereScene.cpp" />
+    <ClCompile Include="StandartMaterial.cpp" />
     <ClCompile Include="TriangleScene.cpp" />
     <ClCompile Include="VertexAttributeObject.cpp" />
     <ClCompile Include="VertexBufferObject.cpp" />
@@ -172,6 +174,7 @@
     <ClInclude Include="gmlExtensions.h" />
     <ClInclude Include="IInputHandler.h" />
     <ClInclude Include="Light.h" />
+    <ClInclude Include="LightConfiguration.h" />
     <ClInclude Include="LightingChangeInputHandler.h" />
     <ClInclude Include="LigtEngine.h" />
     <ClInclude Include="Material.h" />
@@ -191,6 +194,7 @@
     <ClInclude Include="Collection.h" />
     <ClInclude Include="Sphere.h" />
     <ClInclude Include="SphereScene.h" />
+    <ClInclude Include="StandartMaterial.h" />
     <ClInclude Include="TriangleScene.h" />
     <ClInclude Include="VertexAttributeObject.h" />
     <ClInclude Include="VertexBufferObject.h" />
@@ -200,6 +204,9 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ZPG.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,6 +1,7 @@
 ﻿#include "LightingChangeInputHandler.h"
 #include <glm/ext/matrix_transform.hpp>
 #include "LigtEngine.h"
+#include "StandartMaterial.h"
 
 bool Application::Input::Handlers::LightingChangeInputHandler::HandleKeys(Engine::BaseEngine* engine, Engine::Components::Window* window, Engine::Components::Scene* scene, Generic::Dictionary<short, bool>& keys, int keysActive)
 {
@@ -12,6 +13,38 @@ bool Application::Input::Handlers::LightingChangeInputHandler::HandleKeys(Engine
 
 		const auto increment = (keys['R'] ? 1 : (keys['F'] ? -1 : 0));
 
+
+		if (scene != nullptr && scene->Objects != nullptr && !scene->Objects->empty())
+			for (auto& it : *scene->Objects)
+			{
+				auto* material = dynamic_cast<Materials::StandartMaterial*>(it.second->Material);
+				if(material == nullptr)
+					continue;
+
+				auto* mlc = &material->Light;
+				if (keys['V'])
+					mlc->SpecularSize += increment;
+				if (keys['C'])
+					mlc->SpecularStrength += increment * .005f;
+				if (keys['X'])
+					mlc->DiffuseStrength += increment * .005f;
+				if (keys['Z'])
+					mlc->AmbientStrength += increment * .001f;
+
+				if (keys['N'])
+				{
+					mlc->SpecularStrength = 0.f;
+					mlc->DiffuseStrength = 0.f;
+					mlc->AmbientStrength = 0.f;
+				}
+				if (keys['M'])
+				{
+					mlc->SpecularStrength = 0.5f;
+					mlc->DiffuseStrength = 0.5f;
+					mlc->AmbientStrength = 0.2f;
+				}
+			}
+		
 		if (keys['V'])
 			lightEngine->specularSize += increment;
 		if (keys['C'])

@@ -1,7 +1,6 @@
 #pragma once
 #include <string>
 #include "Shader.h"
-#include "MaterialValueType.h"
 #include "MaterialValueBase.h"
 
 namespace Engine
@@ -14,8 +13,7 @@ namespace Engine
 			class MaterialValue : public MaterialValueBase
 			{
 			public:
-				MaterialValue(Graphics::Shader* shader, const GLchar* property, T* value) :
-					MaterialValueBase(shader, property)
+				MaterialValue(Graphics::Shader* shader, std::string property, T* value) : MaterialValueBase(shader, property)
 				{
 					Value = value;
 				}

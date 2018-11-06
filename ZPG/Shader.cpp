@@ -37,7 +37,7 @@ Engine::Components::Graphics::Shader::Shader(int type, std::string filename)
 			GLint maxLength = 0;
 			glGetShaderiv(_shader, GL_INFO_LOG_LENGTH, &maxLength);
 
-			std::vector<GLchar> errorLog(maxLength);
+			std::vector<char> errorLog(maxLength);
 			glGetShaderInfoLog(_shader, maxLength, &maxLength, &errorLog[0]);
 
 			fprintf(stderr, "Shader %u Compilation failed:\nCode:\n%s\nErrors:\n%s\n", _shader, shader, errorLog.data());
@@ -70,7 +70,7 @@ Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::Comp
 		glGetShaderiv(_shader, GL_INFO_LOG_LENGTH, &maxLength);
 
 		// The maxLength includes the NULL character
-		std::vector<GLchar> errorLog(maxLength);
+		std::vector<char> errorLog(maxLength);
 		glGetShaderInfoLog(_shader, maxLength, &maxLength, &errorLog[0]);
 
 		fprintf(stderr, "Shader %u Compilation failed:\nCode:\n%s\nErrors:\n%s\n", _shader, _code, errorLog.data());
@@ -86,117 +86,112 @@ GLuint* Engine::Components::Graphics::Shader::Get()
 	return &_shader;
 }
 
-Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, const GLchar* name, glm::mat4* data)
+Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, std::string name, IMaterialStructure* data)
 {
 	#ifdef DEBUG
-		fprintf(stderr, "SET MAT4: %s (0x%p) value \n%s\n", name, data, Mat4ToString(*data).c_str());
+		fprintf(stderr, "SET IMS: %s (0x%p)\n", name.c_str(), data);
 	#endif
-	GLint uniformID = glGetUniformLocation(*(program->Get()), name);
+
+	data->SetUniforms(this, program, name);
+
+	return this;
+}
+
+Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, std::string name, glm::mat4* data)
+{
+	#ifdef DEBUG
+		fprintf(stderr, "SET MAT4: %s (0x%p) value \n%s\n", name.c_str(), data, Mat4ToString(*data).c_str());
+	#endif
+	GLint uniformID = glGetUniformLocation(*(program->Get()), static_cast<const GLchar*>(name.c_str()));
 	if (uniformID >= 0) {
 		glUniformMatrix4fv(uniformID, 1, GL_FALSE, value_ptr(*data));
 	}
 	else {
-		fprintf(stderr, "ERROR: program 0x%p:%u mat4 variable %s not found\n", program, *(program->Get()), name);
+		fprintf(stderr, "ERROR: program 0x%p:%u mat4 variable %s not found\n", program, *(program->Get()), name.c_str());
 	}
 
 	return this;
 }
 
-Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, const GLchar* name, glm::vec4* data)
+Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, std::string name, glm::vec4* data)
 {
 	#ifdef DEBUG
-		fprintf(stderr, "SET VEC4: %s (0x%p) value \n(%f, %f, %f, %f)\n", name, data, data->x, data->y, data->z, data->w);
+		fprintf(stderr, "SET VEC4: %s (0x%p) value \n(%f, %f, %f, %f)\n", name.c_str(), data, data->x, data->y, data->z, data->w);
 	#endif
-	GLint uniformID = glGetUniformLocation(*(program->Get()), name);
+	GLint uniformID = glGetUniformLocation(*(program->Get()), static_cast<const GLchar*>(name.c_str()));
 	if (uniformID >= 0) {
 		glUniform4f(uniformID, data->x, data->y, data->z, data->w);
 	}
 	else {
-		fprintf(stderr, "ERROR: program 0x%p:%u vec4 variable %s not found\n", program, *(program->Get()), name);
+		fprintf(stderr, "ERROR: program 0x%p:%u vec4 variable %s not found\n", program, *(program->Get()), name.c_str());
 	}
 
 	return this;
 }
 
-Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, const GLchar* name, glm::vec3* data)
+Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, std::string name, glm::vec3* data)
 {
 	#ifdef DEBUG
-		fprintf(stderr, "SET VEC3: %s (0x%p) value \n(%f, %f, %f)\n", name, data, data->x, data->y, data->z);
+		fprintf(stderr, "SET VEC3: %s (0x%p) value \n(%f, %f, %f)\n", name.c_str(), data, data->x, data->y, data->z);
 	#endif
-	GLint uniformID = glGetUniformLocation(*(program->Get()), name);
+	GLint uniformID = glGetUniformLocation(*(program->Get()), static_cast<const GLchar*>(name.c_str()));
 	if (uniformID >= 0) {
 		glUniform3f(uniformID, data->x,data->y,data->z);
 	}
 	else {
-		fprintf(stderr, "ERROR: program 0x%p:%u vec3 variable %s not found\n", program, *(program->Get()), name);
+		fprintf(stderr, "ERROR: program 0x%p:%u vec3 variable %s not found\n", program, *(program->Get()), name.c_str());
 	}
 
 	return this;
 }
 
 
-Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, const GLchar* name, float* data)
+Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, std::string name, float* data)
 {
 	#ifdef DEBUG
-		fprintf(stderr, "SET FLOAT: %s (0x%x) value %f\n", name, data, *data);
+		fprintf(stderr, "SET FLOAT: %s (0x%x) value %f\n", name.c_str(), data, *data);
 	#endif
-	GLint uniformID = glGetUniformLocation(*(program->Get()), name);
+	GLint uniformID = glGetUniformLocation(*(program->Get()), static_cast<const GLchar*>(name.c_str()));
 	if (uniformID >= 0) {
 		glUniform1f(uniformID, *data);
 	}
 	else {
-		fprintf(stderr, "ERROR: program 0x%p:%u float variable %s not found\n", program, *(program->Get()), name);
+		fprintf(stderr, "ERROR: program 0x%p:%u float variable %s not found\n", program, *(program->Get()), name.c_str());
 	}
 
 	return this;
 }
 
-Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, const GLchar* name, int* data)
+Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, std::string name, int* data)
 {
 	#ifdef DEBUG
-		fprintf(stderr, "SET INT: %s (0x%p) value %d\n", name, data, *data);
+		fprintf(stderr, "SET INT: %s (0x%p) value %d\n", name.c_str(), data, *data);
 	#endif
-	GLint uniformID = glGetUniformLocation(*(program->Get()), name);
+	GLint uniformID = glGetUniformLocation(*(program->Get()), static_cast<const GLchar*>(name.c_str()));
 	if (uniformID >= 0) {
 		glUniform1i(uniformID, *data);
 	}
 	else {
-		fprintf(stderr, "ERROR: program 0x%p:%u int variable %s not found\n", program, *(program->Get()), name);
+		fprintf(stderr, "ERROR: program 0x%p:%u int variable %s not found\n", program, *(program->Get()), name.c_str());
 	}
 
 	return this;
 }
 
-Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, const GLchar* name, bool* data)
+Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, std::string name, bool* data)
 {
 	#ifdef DEBUG
-		fprintf(stderr, "SET BOOL: %s (0x%p) value %b\n", name, data, *data);
+		fprintf(stderr, "SET BOOL: %s (0x%p) value %b\n", name.c_str(), data, *data);
 	#endif
-	GLint uniformID = glGetUniformLocation(*(program->Get()), name);
+	GLint uniformID = glGetUniformLocation(*(program->Get()), static_cast<const GLchar*>(name.c_str()));
 	if (uniformID >= 0) {
 		glUniform1i(uniformID, *data);
 	}
 	else {
-		fprintf(stderr, "ERROR: program 0x%p:%u int variable %s not found\n", program, *(program->Get()), name);
+		fprintf(stderr, "ERROR: program 0x%p:%u int variable %s not found\n", program, *(program->Get()), name.c_str());
 	}
 
 	return this;
-}
-
-void Engine::Components::Graphics::Shader::setData(Program* program, const GLchar* property, MaterialValueType type, void* value)
-{
-	switch (type)
-	{
-		case Int:
-			SendUniform(program, property, static_cast<int*>(value));
-			break;
-		case Float:
-			SendUniform(program, property, static_cast<float*>(value));
-			break;
-		case Matrix4x4:
-			SendUniform(program, property, static_cast<glm::mat4*>(value));
-			break;
-	}
 }
 
 std::string Engine::Components::Graphics::Shader::Mat4ToString(glm::mat4& mat)

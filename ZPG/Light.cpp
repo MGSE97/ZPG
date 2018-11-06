@@ -15,9 +15,9 @@ Light::Light(Engine::Components::Graphics::Program* program, glm::vec3 position,
 
 	Material->Values->Add(
 		new Engine::Components::Graphics::MaterialValue<glm::vec4>(
-			program->Shaders->Get("fragment"), "color", &fColor)
+			program->Shaders->Get("fragment"), "material.color", &fColor)
 	).Add(new Engine::Components::Graphics::MaterialValue<bool>(
-		program->Shaders->Get("fragment"), "useLighting", new bool(false)
+		program->Shaders->Get("fragment"), "material.lightConfiguration.useLighting", new bool(false)
 	));;
 	//Use(Material);
 }

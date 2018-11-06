@@ -1,5 +1,4 @@
 #pragma once
-#include <GL/glew.h>
 #include "Shader.h"
 
 namespace Engine
@@ -11,14 +10,14 @@ namespace Engine
 			class MaterialValueBase
 			{
 			public:
-				MaterialValueBase(Shader* shader, const GLchar* property)
+				MaterialValueBase(Shader* shader, std::string property)
 				{
 					Shader = shader;
 					Property = property;
 				}
 				virtual ~MaterialValueBase() = default;
 				Shader* Shader;
-				const GLchar* Property;
+				std::string Property;
 				virtual void Set(Graphics::Program* program) = 0;
 			};
 		}

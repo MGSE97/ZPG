@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Engine::BaseEngine">
+    <Position X="7.5" Y="0.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>BSQQgAAAACEAAAAAzAiAAAAAAgAACRAAABADCAAAAAA=</HashCode>
+      <FileName>BaseEngine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine::Components::BaseInputHandler">
+    <Position X="0.75" Y="10.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAQAAAAAAAAIAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>BaseInputHandler.h</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Engine::Components::Scene">
+    <Position X="9.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgACAAAEAAAAAgAQAAgAAQEAAAAEEAAAAAAASAAA=</HashCode>
+      <FileName>Scene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine::Components::Camera">
+    <Position X="4.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCEAACAAAAAAhgQCAAAAAAAAAAAgAAAACgAIAAAAI=</HashCode>
+      <FileName>Camera.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine::Components::Window">
+    <Position X="18" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAABgCAAEBAAAAAAEABARAEAAAAAAAAiFAAAAA=</HashCode>
+      <FileName>Window.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine::Components::Graphics::Material">
+    <Position X="16.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIAAQAAAAAEAAAAAAAAAAAAAAAEAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Material.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine::Components::Graphics::MaterialBindedValue&lt;T&gt;">
+    <Position X="4.5" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAQAAAAAAAEAAQAgAQAAAAA=</HashCode>
+      <FileName>MaterialBindedValue.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine::Components::Graphics::MaterialValueBase">
+    <Position X="11.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAQAABAAAAAAgAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>MaterialValueBase.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine::Components::Graphics::Shader">
+    <Position X="18" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAEAAAAAAIAIAABAAAAAAAAAAAQAAAAABAAAAAAgAEA=</HashCode>
+      <FileName>Shader.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine::Components::Graphics::Program">
+    <Position X="12.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACEQAAAAAAABBAAICAAAAAAAAEAAAAAAABQAAAAAA=</HashCode>
+      <FileName>Program.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine::Components::Graphics::MaterialValue&lt;T&gt;">
+    <Position X="11.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>MaterialValue.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Light">
+    <Position X="0.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACgAAAAAgAAABAEAAABAAAAgAAAAAA=</HashCode>
+      <FileName>Light.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Observable&lt;T&gt;">
+    <Position X="4.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAAAAAAQAAAAAAABAAAIEAAQAAAA=</HashCode>
+      <FileName>Observable.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Observer&lt;T&gt;">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Observer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Property&lt;T&gt;">
+    <Position X="12.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAACAIAAAgAAAAAAA=</HashCode>
+      <FileName>Property.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReadOnlyProperty&lt;T&gt;">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>ReadOnlyProperty.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Assets">
+    <Position X="19.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAABAAAAAAAAABAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine::Components::Objects::VertexAttributeObject">
+    <Position X="18" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgBBAAAAAAAIgAAAAAAAAAAEAAAAQgAA=</HashCode>
+      <FileName>VertexAttributeObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine::Components::Objects::VertexBufferObject">
+    <Position X="14.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAABBAAABAAAAAAAAAAAAAAAAAAAIFAAA=</HashCode>
+      <FileName>VertexBufferObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine::Components::Objects::VertexObject">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEIBAAAAAAAAghCAAAABAAIAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>VertexObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine::Objects::Object">
+    <Position X="1.5" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Object.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Engine::Objects::Sphere">
+    <Position X="2.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAQAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Sphere.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Generic::Dictionary&lt;TKey, TValue&gt;">
+    <Position X="14.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAQBAAAAAAAAAAAEAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Dictionary.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Generic::Collection&lt;T&gt;">
+    <Position X="12.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Collection.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application::Application">
+    <Position X="19.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMAAAAABAAAAAAAAAAAACAAAACAAAAAAQCAAAAAAA=</HashCode>
+      <FileName>Application.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application::Engines::CameraEngine">
+    <Position X="10.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAJAAAA=</HashCode>
+      <FileName>CameraEngine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application::Engines::LightEngine">
+    <Position X="5.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAAAgAAAAAAAAAAAAAAAAIAAAAAAQACCQAJAAAg=</HashCode>
+      <FileName>LigtEngine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application::Engines::BasicEngine">
+    <Position X="8" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAJAAAA=</HashCode>
+      <FileName>BasicEngine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application::Scenes::SphereScene">
+    <Position X="8.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAgAAAAAAIAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>SphereScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application::Scenes::TriangleScene">
+    <Position X="10.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAgAAAAAAAAAAAAAAAAAACAAAAAECAAAAAAABCAAA=</HashCode>
+      <FileName>TriangleScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Application::Input::Handlers::CameraInputHandler" BaseTypeListCollapsed="true">
+    <Position X="16" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAACwAAAAAAAAAAAAAAAIAAAAAAIAAABA=</HashCode>
+      <FileName>CameraInputHandler.h</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Application::Input::Handlers::LightingChangeInputHandler">
+    <Position X="0.5" Y="13" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LightingChangeInputHandler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Vertex">
+    <Position X="16.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Models\bedna.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Engine::Components::Objects::VAOConfig">
+    <Position X="16.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAAgAA=</HashCode>
+      <FileName>VertexObject.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Interface Name="Engine::Components::IInputHandler">
+    <Position X="14.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IInputHandler.h</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Engine::Components::Graphics::MaterialValueType">
+    <Position X="14.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAgACA=</HashCode>
+      <FileName>MaterialValueType.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

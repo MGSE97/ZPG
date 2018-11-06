@@ -85,6 +85,12 @@
     <Filter Include="Zdrojové soubory\Application\Definitions">
       <UniqueIdentifier>{09a7efbf-762c-4b96-bcd8-14b31443950e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Zdrojové soubory\Application\Materials">
+      <UniqueIdentifier>{7fef4500-1dcb-42df-a812-0d61c27c5d67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hlavičkové soubory\Application\Materials">
+      <UniqueIdentifier>{0c334621-c27c-45ca-a82d-7e65fb982078}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Window.cpp">
@@ -161,6 +167,12 @@
     </ClCompile>
     <ClCompile Include="BaseInputHandler.cpp">
       <Filter>Zdrojové soubory\Engine\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="LightConfiguration.cpp">
+      <Filter>Zdrojové soubory\Engine\Components\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="StandartMaterial.cpp">
+      <Filter>Zdrojové soubory\Application\Materials</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -299,10 +311,19 @@
     <ClInclude Include="BaseInputHandler.h">
       <Filter>Hlavičkové soubory\Engine\Components</Filter>
     </ClInclude>
+    <ClInclude Include="LightConfiguration.h">
+      <Filter>Hlavičkové soubory\Engine\Components\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="StandartMaterial.h">
+      <Filter>Hlavičkové soubory\Application\Materials</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ZPG.rc">
       <Filter>Soubory zdrojů</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>
