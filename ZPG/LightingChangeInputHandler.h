@@ -10,7 +10,7 @@ namespace Application {
 			public:
 				bool HandleKeys(Engine::BaseEngine* engine, Engine::Components::Window* window, Engine::Components::Scene* scene, Generic::Dictionary<short, bool>& keys, int keysActive) override;
 			private:
-				Light* _selectedLight = nullptr;
+				Engine::Components::Light* _selectedLight = nullptr;
 			};
 		}
 	}

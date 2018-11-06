@@ -69,7 +69,7 @@ bool Application::Input::Handlers::LightingChangeInputHandler::HandleKeys(Engine
 
 		const auto camera = scene->ActiveCamera;
 		if (increment != 0 && keysActive == 2)
-			_selectedLight->Power += increment * 0.01;
+			_selectedLight->Configuration.GlobalStrength += increment * 0.01;
 
 		const float speed = 0.2f;
 		if (keys['W'])
@@ -87,9 +87,11 @@ bool Application::Input::Handlers::LightingChangeInputHandler::HandleKeys(Engine
 
 		*_selectedLight->ModelMatrix = glm::scale(
 			glm::translate(glm::mat4(1.f), _selectedLight->Position), 
-			glm::vec3(0.2*_selectedLight->Power, 0.2*_selectedLight->Power, 0.2*_selectedLight->Power)
+			glm::vec3(0.2*_selectedLight->Configuration.GlobalStrength, 0.2*_selectedLight->Configuration.GlobalStrength, 0.2*_selectedLight->Configuration.GlobalStrength)
 		);
 		return false;
 	}
+	if (keys['K'] && keys['C'])
+		system("cls");
 	return true;
 }

@@ -20,10 +20,13 @@ struct Material {
 	LightConfiguration lightConfiguration;
 };
 
-uniform Material material;
+struct Light {
+	LightConfiguration configuration;
+};
 
-uniform float lightStrength;
-uniform vec3 lightColor;
+uniform Material material;// = Material(vec4(1,1,1,1), LightConfiguration(vec3(1,1,1), 1, vec3(1,1,1), 1, vec3(1,1,1), 1, 8, 1, false));
+
+uniform Light light;
 
 out vec4 frag_colour;
 
@@ -57,7 +60,13 @@ void main () {
 		float dotSpec = allowed > -0.4 ? pow(max(dot(reflVector, eyeVec), 0.0), material.lightConfiguration.specularSize) : 0.0;
 		vec3 specular = dotSpec * material.lightConfiguration.specularColor * material.lightConfiguration.specularStrength;
 		//allowed = allowed>0.9?allowed:0;
-		frag_colour = vec4((ambient + diffuse + specular)*lightColor*lightStrength*material.lightConfiguration.globalStrength, 1.0)*material.color;
+		frag_colour = vec4(
+			(
+				(ambient  * (light.configuration.ambientColor  * light.configuration.ambientStrength)) + 
+				(diffuse  * (light.configuration.diffuseColor  * light.configuration.diffuseStrength)) + 
+				(specular * (light.configuration.specularColor * light.configuration.specularStrength))
+			) * material.lightConfiguration.globalStrength
+		, 1.0) * material.color;
 		
 //		if(allowed <= -0.4)
 //			frag_colour = vec4(1); 

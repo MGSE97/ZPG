@@ -120,7 +120,11 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 
 	SetActiveScene(Scenes->Get("sphere"));
 
-	ActiveScene->Lights->Add("light" , new Light(Programs->Get("basic"), glm::vec3(0, 0, 0)));
+	auto* lc = new Engine::Components::Graphics::LightConfiguration();
+	lc->AmbientStrength = 1.f;
+	lc->DiffuseStrength = 1.f;
+	lc->SpecularStrength = 1.f;
+	ActiveScene->Lights->Add("light" , new Engine::Components::Light(Programs->Get("basic"), glm::vec3(0, 0, 0), glm::vec4(1), lc));
 
 	ActiveScene->Cameras->Add("main", (new Engine::Components::Camera())
 		//->SetPosition(new glm::vec3(2.5f, 2.5f, 2.f))
@@ -212,7 +216,7 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 
 void Application::Engines::LightEngine::Update(::Engine::Components::Window* window)
 {
-	std::cout << "PS: " << specularSize << "\nSS: " << specularStrength << "\nDS: " << diffuseStrength << "\nAS: " << ambientStrength << "\nLP: " << ActiveScene->Lights->First()->Power << std::endl;
+	std::cout << "PS: " << specularSize << "\nSS: " << specularStrength << "\nDS: " << diffuseStrength << "\nAS: " << ambientStrength << "\nLP: " << ActiveScene->Lights->First()->Configuration.GlobalStrength << std::endl;
 	
 	if (ActiveScene != nullptr && ActiveScene->Objects != nullptr && !ActiveScene->Objects->empty())
 		for (auto& it : *ActiveScene->Objects)
@@ -223,7 +227,7 @@ void Application::Engines::LightEngine::Update(::Engine::Components::Window* win
 			std::cout << "FI:  " << _fi << "\nPSI: " << _psi << "\nObject: " << it.first << std::endl;
 			*/
 			//ActiveScene->Cameras->First()->SetDirection(new glm::vec3(cos(_fi), sin(_fi), cos(_psi)));
-
+			std::cout << "Object: " << it.first << std::endl;
 			auto object = it.second;
 			object->Draw();
 			

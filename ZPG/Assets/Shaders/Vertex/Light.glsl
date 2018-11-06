@@ -7,7 +7,7 @@ uniform mat4 modelMatrix;
 uniform mat4 viewMatrix;
 uniform mat4 projectionMatrix;
 uniform vec3 cameraPos;
-uniform vec3 lightPos;
+uniform vec3 lightPosition;
 
 out vec3 worldPos;
 out vec3 normVec;
@@ -21,7 +21,7 @@ void main () {
 
     normVec = normalize(transpose(inverse(mat3(modelMatrix))) * normal);
 
-    lightVec = normalize(lightPos - vertexPosWorld);
+    lightVec = normalize(lightPosition - vertexPosWorld);
 
     worldPos = vertexPosWorld;
 
