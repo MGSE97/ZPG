@@ -1,6 +1,7 @@
 ﻿#include "BaseEngine.h"
 #include <windows.h>
 #include "IInputHandler.h"
+#include <glm/ext/matrix_projection.hpp>
 
 Engine::BaseEngine::BaseEngine()
 {
@@ -61,8 +62,10 @@ void Engine::BaseEngine::UpdateBegin(Components::Window* window)
 
 	// Buffers
 	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_STENCIL_TEST);
 	glDepthFunc(GL_LESS);
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glStencilOp(GL_KEEP, GL_KEEP, GL_REPLACE);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
 
 	// Input
 	short mouseKeysActive = 0;
@@ -105,7 +108,6 @@ void Engine::BaseEngine::UpdateBegin(Components::Window* window)
 		if(!handleKeys && !handleMouse)
 			break;
 	}
-
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), { 0,0 });
 }
 
@@ -121,6 +123,26 @@ void Engine::BaseEngine::UpdateEnd(Components::Window* window)
 	glfwSwapBuffers(window->Get());
 
 	ActiveScene->FrameUpdate(this);
+
+	// ToggleClickedObjects
+	const int calculatedY = (int)window->Width - MouseY;
+	GLubyte color[4];
+	GLuint index;
+	GLfloat depth;
+	//glReadPixels(MouseX, calculatedY, 1, 1, GL_RGBA2, GL_UNSIGNED_BYTE, color);
+	glReadPixels(MouseX, MouseY, 1, 1, GL_RGBA, GL_UNSIGNED_BYTE, color);
+	glReadPixels(MouseX, MouseY, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &depth);
+	glReadPixels(MouseX, MouseY, 1, 1, GL_STENCIL_INDEX, GL_UNSIGNED_INT, &index);
+	glm::vec3 screenX = glm::vec3(MouseX, MouseY, depth);
+	glm::mat4* view = ActiveScene->ActiveCamera->Value;
+	glm::mat4* projection = ActiveScene->ActiveCamera->Projection;
+
+	glm::vec4 viewPort = glm::vec4(0, 0, (float)window->Width, (float)window->Height);
+	WorldPosition = glm::unProject(screenX, *view, *projection, viewPort);
+	WorldObject = glm::vec4(color[0] / 256.0, color[1] / 256.0, color[2] / 256.0, color[3] / 256.0);
+
+	fprintf(_errorStream, "WP:\t%f, %f, %f\nWO:\t%.2f %.2f %.2f %.2f\t", WorldPosition.x, WorldPosition.y, WorldPosition.z, WorldObject.x, WorldObject.y, WorldObject.z, WorldObject.w);
+	
 }
 
 void Engine::BaseEngine::Start()

@@ -16,6 +16,8 @@ Engine::Components::Graphics::LightConfiguration::LightConfiguration()
 	GlobalStrength = 1.f;
 
 	UseLighting = true;
+
+	IsLight = false;
 }
 
 void Engine::Components::Graphics::LightConfiguration::SetUniforms(Engine::Components::Graphics::Shader* shader, Engine::Components::Graphics::Program* program, std::string parentName)
@@ -30,8 +32,10 @@ void Engine::Components::Graphics::LightConfiguration::SetUniforms(Engine::Compo
 	shader->SendUniform(program, prefix + "diffuseStrength", &DiffuseStrength);
 	shader->SendUniform(program, prefix + "specularStrength", &SpecularStrength);
 
-	shader->SendUniform(program, prefix + "specularSize", &SpecularSize);
-
 	shader->SendUniform(program, prefix + "globalStrength", &GlobalStrength);
-	shader->SendUniform(program, prefix + "useLighting", &UseLighting);
+	if(!IsLight)
+	{
+		shader->SendUniform(program, prefix + "specularSize", &SpecularSize);
+		shader->SendUniform(program, prefix + "useLighting", &UseLighting);
+	}
 }

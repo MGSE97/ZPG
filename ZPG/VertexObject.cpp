@@ -18,6 +18,7 @@ Engine::Components::Objects::VertexObject* Engine::Components::Objects::VertexOb
 
 Engine::Components::Objects::VertexObject::VertexObject(Graphics::Material* material, const float* points, int size, int dimensions, Generic::Collection<VAOConfig*>* configs)
 {
+	Transform = new Objects::Transform();
 	_attribute_id = 0;
 	Dimensions = dimensions;
 	Size = size/(dimensions*2);
@@ -77,11 +78,13 @@ Engine::Components::Objects::VertexObject* Engine::Components::Objects::VertexOb
 {
 	// use material
 	Material->Use();
+	Transform->Use(Material->Program->Shaders->Get("vertex"), Material->Program);
 
-
+	glStencilFunc(GL_ALWAYS, _VAO, 0xFF);
 	glBindVertexArray(_VAO);
 	// draw triangles
 	glDrawArrays(GL_TRIANGLES, 0, Size);
+
 	return this;
 }
 

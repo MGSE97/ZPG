@@ -34,7 +34,9 @@ namespace Engine
 		Components::Scene* ActiveScene;
 		double MouseX;
 		double MouseY;
-		
+		glm::vec3 WorldPosition;
+		glm::vec4 WorldObject;
+
 	private:
 		BaseEngine* InitGLFW();
 		std::FILE* _errorStream;

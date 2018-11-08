@@ -26,8 +26,12 @@ void Application::Scenes::SphereScene::Load(Engine::BaseEngine* engine)
 	Objects->Add("sphere2", new ::Engine::Objects::Sphere(new Materials::StandartMaterial(program, glm::vec4(1.0f, 0.0f, 1.0f, 0.5f)), sphere, 17280, 3));
 	Objects->Add("sphere3", new ::Engine::Objects::Sphere(new Materials::StandartMaterial(program, glm::vec4(0.0f, 1.0f, 1.0f, 0.5f)), sphere, 17280, 3));
 	Objects->Add("sphere4", new ::Engine::Objects::Sphere(new Materials::StandartMaterial(program, glm::vec4(1.0f, 1.0f, 1.0f, 0.5f)), sphere, 17280, 3));
-	
-	auto sphere = Objects->Get("sphere1");
+
+	Objects->Get("sphere1")->Transform->Position(-2,  0, 0, true);
+	Objects->Get("sphere2")->Transform->Position( 0,  2, 0, true);
+	Objects->Get("sphere3")->Transform->Position( 2,  0, 0, true);
+	Objects->Get("sphere4")->Transform->Position( 0, -2, 0, true);
+	/*auto sphere = Objects->Get("sphere1");
 	*(sphere->ModelMatrix) = glm::translate(*(sphere->ModelMatrix), glm::vec3(-2, 0, 0));
 
 	sphere = Objects->Get("sphere2");
@@ -37,7 +41,7 @@ void Application::Scenes::SphereScene::Load(Engine::BaseEngine* engine)
 	*(sphere->ModelMatrix) = glm::translate(*(sphere->ModelMatrix), glm::vec3(2, 0, 0));
 
 	sphere = Objects->Get("sphere4");
-	*(sphere->ModelMatrix) = glm::translate(*(sphere->ModelMatrix), glm::vec3(0, -2, 0));
+	*(sphere->ModelMatrix) = glm::translate(*(sphere->ModelMatrix), glm::vec3(0, -2, 0));*/
 }
 
 void Application::Scenes::SphereScene::FrameUpdate(Engine::BaseEngine* engine)

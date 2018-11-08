@@ -79,10 +79,14 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>..\Libraries\glm;..\Libraries\glfw\include;..\Libraries\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <BrowseInformation>true</BrowseInformation>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>..\Libraries\glm;..\Libraries\glfw\lib-vc2015;..\Libraries\glew\lib\Release\Win32;..\Libraries\glew\bin\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\Libraries\glm;..\Libraries\glfw\lib-vc2015;..\Libraries\glew\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ShowProgress>NotSet</ShowProgress>
+      <LinkStatus>true</LinkStatus>
+      <TurnOffAssemblyGeneration>false</TurnOffAssemblyGeneration>
     </Link>
     <Bscmake>
       <PreserveSbr>true</PreserveSbr>
@@ -146,6 +150,7 @@
     <ClCompile Include="Sphere.cpp" />
     <ClCompile Include="SphereScene.cpp" />
     <ClCompile Include="StandartMaterial.cpp" />
+    <ClCompile Include="Transform.cpp" />
     <ClCompile Include="TriangleScene.cpp" />
     <ClCompile Include="VertexAttributeObject.cpp" />
     <ClCompile Include="VertexBufferObject.cpp" />
@@ -195,6 +200,7 @@
     <ClInclude Include="Sphere.h" />
     <ClInclude Include="SphereScene.h" />
     <ClInclude Include="StandartMaterial.h" />
+    <ClInclude Include="Transform.h" />
     <ClInclude Include="TriangleScene.h" />
     <ClInclude Include="VertexAttributeObject.h" />
     <ClInclude Include="VertexBufferObject.h" />

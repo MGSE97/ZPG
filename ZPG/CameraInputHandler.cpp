@@ -86,13 +86,16 @@ bool Application::Input::Handlers::CameraInputHandler::HandleMouse(Engine::BaseE
 		auto mat = new Engine::Components::Graphics::Material(engine->Programs->Get("basic"));
 		mat->Add(engine->Shaders->Get("fragment"), "material.color", new glm::vec4(255.f, 0.f, 0.f, 1.f));
 		mat->Add(engine->Shaders->Get("fragment"), "material.lightConfiguration.useLighting", new bool(false));
-		const auto object = new Engine::Objects::Sphere(mat, sphere, 17280, 3);
-		*(object->ModelMatrix) = glm::scale(glm::translate(glm::mat4(1.f), *scene->ActiveCamera->Direction), glm::vec3(0.1f, 0.1f, 0.1f));
-		scene->Objects->Add(name, object);
+		obj = new Engine::Objects::Sphere(mat, sphere, 17280, 3);
+		obj->Transform->Position(*scene->ActiveCamera->Direction, true);
+		obj->Transform->Scale(0.1f, true);
+		//*(object->ModelMatrix) = glm::scale(glm::translate(glm::mat4(1.f), *scene->ActiveCamera->Direction), glm::vec3(0.1f, 0.1f, 0.1f));
+		scene->Objects->Add(name, obj);
 	}
 	else
 	{
-		*(obj->ModelMatrix) = glm::scale(glm::translate(glm::mat4(1.f), *scene->ActiveCamera->Direction), glm::vec3(0.1f, 0.1f, 0.1f));
+		obj->Transform->Position(*scene->ActiveCamera->Direction, true);
+		//*(obj->ModelMatrix) = glm::scale(glm::translate(glm::mat4(1.f), *scene->ActiveCamera->Direction), glm::vec3(0.1f, 0.1f, 0.1f));
 	}
 
 	_lastMousePosition.x = x;

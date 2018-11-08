@@ -19,6 +19,7 @@ namespace Engine
 			glm::vec3* Up;
 			glm::vec3* Right;
 			glm::vec3* Front;
+			glm::mat4* Projection;
 			glm::mat4* Get();
 			Camera* UpdateVectors();
 			Camera* Update();

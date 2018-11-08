@@ -20,7 +20,7 @@ namespace Engine
 				Material* Use();
 				Generic::Collection<MaterialValueBase*>* Values;
 				template<typename T>
-				Material* Add(Shader * shader, const GLchar * property, T * value)
+				Material* Add(Shader * shader, std::string property, T * value)
 				{
 					Values->Add(new MaterialValue<T>(shader, property, value));
 					return this;

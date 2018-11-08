@@ -14,7 +14,7 @@ namespace Engine {
 		class Light : public Engine::Objects::Object
 		{
 		public:
-			glm::vec3 Position;
+			//glm::vec3 Position;
 			Graphics::LightConfiguration Configuration;
 			/*float Power;*/
 			glm::vec4 Color;

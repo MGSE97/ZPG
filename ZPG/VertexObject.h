@@ -3,6 +3,7 @@
 #include "VertexAttributeObject.h"
 #include "Program.h"
 #include "Material.h"
+#include "Transform.h"
 
 namespace Engine
 {
@@ -26,6 +27,7 @@ namespace Engine
 				static int _object_id;
 				VertexObject* Add(int size, int offset);
 			public:
+				Transform* Transform;
 				VertexObject(Graphics::Material* material, const float* points, int size, int dimensions, Generic::Collection<VAOConfig*>* configs = nullptr);
 				~VertexObject();
 				VertexObject* Draw();

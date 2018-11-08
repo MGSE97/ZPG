@@ -28,6 +28,8 @@ uniform Material material;// = Material(vec4(1,1,1,1), LightConfiguration(vec3(1
 
 uniform Light light;
 
+uniform vec4 colorId;
+
 out vec4 frag_colour;
 
 in vec3 normVec;
@@ -65,7 +67,7 @@ void main () {
 				(ambient  * (light.configuration.ambientColor  * light.configuration.ambientStrength)) + 
 				(diffuse  * (light.configuration.diffuseColor  * light.configuration.diffuseStrength)) + 
 				(specular * (light.configuration.specularColor * light.configuration.specularStrength))
-			) * material.lightConfiguration.globalStrength
+			) * material.lightConfiguration.globalStrength * light.configuration.globalStrength
 		, 1.0) * material.color;
 		
 //		if(allowed <= -0.4)

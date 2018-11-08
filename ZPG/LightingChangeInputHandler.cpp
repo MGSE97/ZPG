@@ -18,8 +18,11 @@ bool Application::Input::Handlers::LightingChangeInputHandler::HandleKeys(Engine
 			for (auto& it : *scene->Objects)
 			{
 				auto* material = dynamic_cast<Materials::StandartMaterial*>(it.second->Material);
-				if(material == nullptr)
+				if (material == nullptr)
 					continue;
+
+				if (it.second->IsClicked(engine->WorldObject))
+					material->Color = glm::vec4(1) - material->Color;
 
 				auto* mlc = &material->Light;
 				if (keys['V'])
@@ -31,21 +34,33 @@ bool Application::Input::Handlers::LightingChangeInputHandler::HandleKeys(Engine
 				if (keys['Z'])
 					mlc->AmbientStrength += increment * .001f;
 
-				if (keys['N'])
+				if (keys['K'])
 				{
-					mlc->SpecularStrength = 0.f;
-					mlc->DiffuseStrength = 0.f;
-					mlc->AmbientStrength = 0.f;
-				}
-				if (keys['M'])
-				{
-					mlc->SpecularStrength = 0.5f;
-					mlc->DiffuseStrength = 0.5f;
-					mlc->AmbientStrength = 0.2f;
+					const auto zeroIncrement = increment / 2.0f + 0.5f;
+					if (increment > 0 && keys['V'])
+					{
+						mlc->SpecularStrength = 0.5f;
+						mlc->DiffuseStrength = 0.5f;
+						mlc->AmbientStrength = 0.2f;
+					}
+					else if (increment < 0 && keys['V'])
+					{
+						mlc->SpecularStrength = 0.f;
+						mlc->DiffuseStrength = 0.f;
+						mlc->AmbientStrength = 0.f;
+					}
+					else {
+						if (keys['C'])
+							mlc->SpecularStrength = zeroIncrement;
+						if (keys['X'])
+							mlc->DiffuseStrength = zeroIncrement;
+						if (keys['Z'])
+							mlc->AmbientStrength = zeroIncrement;
+					}
 				}
 			}
 		
-		if (keys['V'])
+		/*if (keys['V'])
 			lightEngine->specularSize += increment;
 		if (keys['C'])
 			lightEngine->specularStrength += increment * .005f;
@@ -65,30 +80,33 @@ bool Application::Input::Handlers::LightingChangeInputHandler::HandleKeys(Engine
 			lightEngine->specularStrength = 0.5f;
 			lightEngine->diffuseStrength = 0.5f;
 			lightEngine->ambientStrength = 0.2f;
-		}
+		}*/
 
 		const auto camera = scene->ActiveCamera;
 		if (increment != 0 && keysActive == 2)
+		{
 			_selectedLight->Configuration.GlobalStrength += increment * 0.01;
+			_selectedLight->Transform->Scale(0.2f * _selectedLight->Configuration.GlobalStrength, true);
+		}
 
 		const float speed = 0.2f;
 		if (keys['W'])
-			_selectedLight->Position -= *(camera->Front) * speed;
+			_selectedLight->Transform->Position(-*(camera->Front) * speed);
 		if (keys['S'])
-			_selectedLight->Position += *(camera->Front) * speed;
+			_selectedLight->Transform->Position(*(camera->Front) * speed);
 		if (keys['A'])
-			_selectedLight->Position -= *(camera->Right) * speed;
+			_selectedLight->Transform->Position(-*(camera->Right) * speed);
 		if (keys['D'])
-			_selectedLight->Position += *(camera->Right) * speed;
+			_selectedLight->Transform->Position(*(camera->Right) * speed);
 		if (keys['E'])
-			_selectedLight->Position -= *(camera->Up) * speed;
+			_selectedLight->Transform->Position(-*(camera->Up) * speed);
 		if (keys['Q'])
-			_selectedLight->Position += *(camera->Up) * speed;
-
-		*_selectedLight->ModelMatrix = glm::scale(
+			_selectedLight->Transform->Position(*(camera->Up) * speed);
+		
+		/**_selectedLight->ModelMatrix = glm::scale(
 			glm::translate(glm::mat4(1.f), _selectedLight->Position), 
 			glm::vec3(0.2*_selectedLight->Configuration.GlobalStrength, 0.2*_selectedLight->Configuration.GlobalStrength, 0.2*_selectedLight->Configuration.GlobalStrength)
-		);
+		);*/
 		return false;
 	}
 	if (keys['K'] && keys['C'])

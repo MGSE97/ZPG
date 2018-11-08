@@ -25,6 +25,8 @@ namespace Engine
 				int SpecularSize;
 				bool UseLighting;
 
+				bool IsLight;
+
 				LightConfiguration();
 
 				void SetUniforms(Shader* shader, Program* program, std::string parentName) override;

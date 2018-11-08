@@ -15,14 +15,14 @@ Engine::Components::Light* Engine::Components::Light::Use(Engine::Components::Gr
 		new Engine::Components::Graphics::MaterialValue<glm::vec3>(
 			material->Program->Shaders->Get("fragment"), "lightColor", &Color)
 	);*/
-	material->Add(material->Program->Shaders->Get("fragment"), "lightPosition", &Position);
+	material->Add(material->Program->Shaders->Get("fragment"), "lightPosition", Transform->GetPosition());
 	material->Add(material->Program->Shaders->Get("vertex"), "light.configuration", &Configuration);
 	return this;
 }
 
 Engine::Components::Light::Light(Graphics::Program* program, glm::vec3 position, glm::vec4 color, Graphics::LightConfiguration* configuration) : Object(new Graphics::Material(program), sphere, 17280)
 {
-	Position = position;
+	//Position = position;
 	if (configuration != nullptr)
 	{
 		Configuration.AmbientColor = configuration->AmbientColor;
@@ -41,8 +41,11 @@ Engine::Components::Light::Light(Graphics::Program* program, glm::vec3 position,
 		Configuration.SpecularStrength = 1.f;
 	}
 	Configuration.UseLighting = true;
+	Configuration.IsLight = true;
 	Color = color;
-	*ModelMatrix = *(new glm::mat4(glm::scale(glm::translate(*ModelMatrix, position), glm::vec3(0.2*Configuration.GlobalStrength, 0.2*Configuration.GlobalStrength, 0.2*Configuration.GlobalStrength))));
+	Transform->Position(position, true);
+	Transform->Scale(0.2f*Configuration.GlobalStrength, true);
+	//*ModelMatrix = *(new glm::mat4(glm::scale(glm::translate(*ModelMatrix, position), glm::vec3(0.2*Configuration.GlobalStrength, 0.2*Configuration.GlobalStrength, 0.2*Configuration.GlobalStrength))));
 	Material->Add(program->Shaders->Get("fragment"), "material.color", &Color);
 	Material->Add(program->Shaders->Get("fragment"), "material.lightConfiguration.useLighting", new bool(false));
 }
