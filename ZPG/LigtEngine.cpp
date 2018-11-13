@@ -143,10 +143,10 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 	if (ActiveScene != nullptr && ActiveScene->Objects != nullptr && !ActiveScene->Objects->empty())
 		for (auto& it : *ActiveScene->Objects)
 		{
-			it.second->Material
+			/*it.second->Material
 				->Add(vertex, "viewMatrix", ActiveScene->ActiveCamera->Value)
 				->Add(vertex, "projectionMatrix", ActiveScene->ActiveCamera->Projection)
-				->Add(vertex, "cameraPos", ActiveScene->ActiveCamera->Position);
+				->Add(vertex, "cameraPos", ActiveScene->ActiveCamera->Position);*/
 			
 			if (ActiveScene != nullptr && ActiveScene->Lights != nullptr && !ActiveScene->Lights->empty() && 
 				strncmp(it.first.c_str(), lightPrefix.c_str(), lightPrefix.size()) != 0)

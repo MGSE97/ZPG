@@ -109,6 +109,11 @@ void Engine::BaseEngine::UpdateBegin(Components::Window* window)
 			break;
 	}
 	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), { 0,0 });
+
+	for (auto it : *Programs)
+	{
+		ActiveScene->ActiveCamera->Use(it.second);
+	}
 }
 
 void Engine::BaseEngine::Update(Components::Window* window)
@@ -125,23 +130,24 @@ void Engine::BaseEngine::UpdateEnd(Components::Window* window)
 	ActiveScene->FrameUpdate(this);
 
 	// ToggleClickedObjects
-	const int calculatedY = (int)window->Width - MouseY;
-	GLubyte color[4];
+	const int calculatedY = (int)window->Height - MouseY - 1;
+	//GLubyte color[4];
 	GLuint index;
 	GLfloat depth;
 	//glReadPixels(MouseX, calculatedY, 1, 1, GL_RGBA2, GL_UNSIGNED_BYTE, color);
-	glReadPixels(MouseX, MouseY, 1, 1, GL_RGBA, GL_UNSIGNED_BYTE, color);
-	glReadPixels(MouseX, MouseY, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &depth);
-	glReadPixels(MouseX, MouseY, 1, 1, GL_STENCIL_INDEX, GL_UNSIGNED_INT, &index);
-	glm::vec3 screenX = glm::vec3(MouseX, MouseY, depth);
+	//glReadPixels(MouseX, MouseY, 1, 1, GL_RGBA, GL_UNSIGNED_BYTE, color);
+	glReadPixels(MouseX, calculatedY, 1, 1, GL_DEPTH_COMPONENT, GL_FLOAT, &depth);
+	glReadPixels(MouseX, calculatedY, 1, 1, GL_STENCIL_INDEX, GL_UNSIGNED_INT, &index);
+	glm::vec3 screenX = glm::vec3(MouseX, calculatedY, depth);
 	glm::mat4* view = ActiveScene->ActiveCamera->Value;
 	glm::mat4* projection = ActiveScene->ActiveCamera->Projection;
 
 	glm::vec4 viewPort = glm::vec4(0, 0, (float)window->Width, (float)window->Height);
 	WorldPosition = glm::unProject(screenX, *view, *projection, viewPort);
-	WorldObject = glm::vec4(color[0] / 256.0, color[1] / 256.0, color[2] / 256.0, color[3] / 256.0);
+	WorldObjectId = index;
 
-	fprintf(_errorStream, "WP:\t%f, %f, %f\nWO:\t%.2f %.2f %.2f %.2f\t", WorldPosition.x, WorldPosition.y, WorldPosition.z, WorldObject.x, WorldObject.y, WorldObject.z, WorldObject.w);
+	fprintf(_errorStream, "WP:\t%f, %f, %f\n", WorldPosition.x, WorldPosition.y, WorldPosition.z);
+	fprintf(_errorStream, "WO:\t%d\t\t\n", index);
 	
 }
 

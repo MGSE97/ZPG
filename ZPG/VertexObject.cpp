@@ -69,8 +69,10 @@ Engine::Components::Objects::VertexObject::VertexObject(Graphics::Material* mate
 
 Engine::Components::Objects::VertexObject::~VertexObject()
 {
-	delete &_VBO;
-	delete &_VAO;
+	glDeleteVertexArrays(1, &_VAO);
+	glDeleteBuffers(1, &_VBO);
+	/*delete _VBO;
+	delete _VAO;*/
 	delete Material;
 }
 

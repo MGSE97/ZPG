@@ -9,6 +9,7 @@ namespace Application {
 			{
 			public:
 				bool HandleKeys(Engine::BaseEngine* engine, Engine::Components::Window* window, Engine::Components::Scene* scene, Generic::Dictionary<short, bool>& keys, int keysActive) override;
+				bool HandleMouse(Engine::BaseEngine* engine, Engine::Components::Window* window, Engine::Components::Scene* scene, double x, double y, Generic::Dictionary<short, bool>& keys, int keysActive) override;
 			private:
 				Engine::Components::Light* _selectedLight = nullptr;
 			};

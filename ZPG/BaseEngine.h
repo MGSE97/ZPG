@@ -35,7 +35,7 @@ namespace Engine
 		double MouseX;
 		double MouseY;
 		glm::vec3 WorldPosition;
-		glm::vec4 WorldObject;
+		GLuint WorldObjectId;
 
 	private:
 		BaseEngine* InitGLFW();

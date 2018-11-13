@@ -2,38 +2,30 @@
 #include "Program.h"
 #include "IInputHandler.h"
 
+int Engine::Objects::Object::_id = 0;
+
 Engine::Objects::Object::Object(Components::Graphics::Material* material, const float* points, int size, int dimensions, int startArrayIndex) :
 	VertexObject(material, points, size, dimensions, &((new Generic::Collection<Components::Objects::VAOConfig*>())
 		->Add(new Engine::Components::Objects::VAOConfig(0, startArrayIndex))
 		))
 {
 	Clicked = false;
+	Id = _id++;
 	/*ModelMatrix = new glm::mat4(1.f);
 	Material->Values->Add(new Engine::Components::Graphics::MaterialValue<glm::mat4>(
 		Material->Program->Shaders->Get("vertex"), "modelMatrix", ModelMatrix
 	));*/
-	_colorId = glm::vec4(
-		((_VAO & 0x000000FF) >> 0) / 255.0,
-		((_VAO & 0x0000FF00) >> 8) / 255.0,
-		((_VAO & 0x00FF0000) >> 16) / 255.0,
-	1);
-	Material->Add(Material->Program->Shaders->Get("fragment"), "colorId", &_colorId);
 }
 
 Engine::Objects::Object::Object(Components::Graphics::Material* material, const float* points, int size, int dimensions, Generic::Collection<Components::Objects::VAOConfig*> configs) :
 	VertexObject(material, points, size, dimensions, &configs)
 {
-	Clicked = false;
+	Clicked = false; 
+	Id = _id++;
 	/*ModelMatrix = new glm::mat4(1.f);
 	Material->Values->Add(new Engine::Components::Graphics::MaterialValue<glm::mat4>(
 		Material->Program->Shaders->Get("vertex"), "modelMatrix", ModelMatrix
 	));*/
-	_colorId = glm::vec4(
-		((_VAO & 0x000000FF) >> 0) / 255.0,
-		((_VAO & 0x0000FF00) >> 8) / 255.0,
-		((_VAO & 0x00FF0000) >> 16) / 255.0,
-	1);
-	Material->Add(Material->Program->Shaders->Get("fragment"), "colorId", &_colorId);
 }
 
 Engine::Objects::Object::~Object()
@@ -51,7 +43,7 @@ Engine::Objects::Object* Engine::Objects::Object::SetClicked(Generic::Dictionary
 	return this;
 }
 
-bool Engine::Objects::Object::IsClicked(glm::vec4 world_object)
+bool Engine::Objects::Object::IsClicked(GLuint* worldObjectId)
 {
-	return (_colorId == world_object);
+	return (_VBO == *worldObjectId);
 }

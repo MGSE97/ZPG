@@ -74,3 +74,15 @@ Engine::Components::Camera* Engine::Components::Camera::SetActive(Scene* scene)
 	scene->SetActiveCamera(this);
 	return this;
 }
+
+Engine::Components::Camera* Engine::Components::Camera::Use(Graphics::Program* program)
+{
+	auto shader = program->Shaders->Get("vertex");
+	if (shader != nullptr)
+	{
+		shader->SendUniform(program, "viewMatrix", Value);
+		shader->SendUniform(program, "projectionMatrix", Projection);
+		shader->SendUniform(program, "cameraPos", Position);
+	}
+	return this;
+}

@@ -2,6 +2,7 @@
 #include <glm/vec3.hpp>
 #include <glm/mat4x4.hpp>
 #include "Observable.h"
+#include <map>
 
 namespace Engine
 {
@@ -27,6 +28,7 @@ namespace Engine
 			Camera* SetDirection(glm::vec3* direction);
 			Camera* SetUp(glm::vec3* up);
 			Camera* SetActive(Scene* scene);
+			Camera* Use(Graphics::Program* program);
 			glm::mat4* Value;
 		};
 	}
