@@ -1,16 +1,29 @@
 #define GLM_ENABLE_EXPERIMENTAL
+//#define DEBUG
 #include "Shader.h"
 #include <cstddef>
 #include <glm/gtc/type_ptr.hpp> // glm::value_ptr
 #include <glm/gtx/string_cast.hpp>
 #include <cstdio>
-#include "Program.h"
-#include "MaterialValueType.h"
 #include <sstream>
 #include <fstream>
 #include <vector>
 
-Engine::Components::Graphics::Shader::Shader(int type, std::string filename)
+Engine::Components::Graphics::Shader::Shader()
+{
+	_compiled = false;
+	Shaders = new Generic::Dictionary<std::string, GLuint>();
+	_program = glCreateProgram();
+}
+
+Engine::Components::Graphics::Shader::~Shader()
+{
+	/*delete _code;
+	delete &_compiled;
+	delete &_shader;*/
+}
+
+Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::Add(std::string key, int type, std::string filename)
 {
 	_compiled = false;
 	std::ifstream file(filename, std::ios::in);
@@ -25,170 +38,178 @@ Engine::Components::Graphics::Shader::Shader(int type, std::string filename)
 
 		const char* shader = sh.data();
 
-		_shader = glCreateShader(type);
-		glShaderSource(_shader, 1, &shader, NULL);
-		glCompileShader(_shader);
-		/*
-		// Handle Error
-		GLint isCompiled = 0;
-		glGetShaderiv(_shader, GL_COMPILE_STATUS, &isCompiled);
-		if (isCompiled == GL_FALSE)
-		{
-			GLint maxLength = 0;
-			glGetShaderiv(_shader, GL_INFO_LOG_LENGTH, &maxLength);
-
-			std::vector<char> errorLog(maxLength);
-			glGetShaderInfoLog(_shader, maxLength, &maxLength, &errorLog[0]);
-
-			fprintf(stderr, "Shader %u Compilation failed:\nCode:\n%s\nErrors:\n%s\n", _shader, shader, errorLog.data());
-		}
-		_compiled = isCompiled != GL_FALSE;*/
+		Shaders->Add(key, glCreateShader(type));
+		glShaderSource(Shaders->Get(key), 1, &shader, NULL);
 	}
-}
-
-Engine::Components::Graphics::Shader::Shader(int type, const char* shader)
-{
-	_shader = glCreateShader(type);
-	glShaderSource(_shader, 1, &shader, NULL);
-}
-
-Engine::Components::Graphics::Shader::~Shader()
-{
-	/*delete _code;
-	delete &_compiled;
-	delete &_shader;*/
-}
-
-Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::Compile()
-{
-	glCompileShader(_shader);
-	GLint isCompiled = 0;
-	glGetShaderiv(_shader, GL_COMPILE_STATUS, &isCompiled);
-	if (isCompiled == GL_FALSE)
-	{
-		GLint maxLength = 0;
-		glGetShaderiv(_shader, GL_INFO_LOG_LENGTH, &maxLength);
-
-		// The maxLength includes the NULL character
-		std::vector<char> errorLog(maxLength);
-		glGetShaderInfoLog(_shader, maxLength, &maxLength, &errorLog[0]);
-
-		fprintf(stderr, "Shader %u Compilation failed:\nCode:\n%s\nErrors:\n%s\n", _shader, _code, errorLog.data());
-	}
-	_compiled = isCompiled != GL_FALSE;
 	return this;
 }
 
-GLuint* Engine::Components::Graphics::Shader::Get()
+Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::Add(std::string key, int type, const char* shader)
+{
+	Shaders->Add(key, glCreateShader(type));
+	glShaderSource(Shaders->Get(key), 1, &shader, NULL);
+	return this;
+}
+
+
+Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::Use()
+{
+	glUseProgram(Get());
+	return this;
+}
+
+bool Engine::Components::Graphics::Shader::Compile()
+{
+	bool failed = false;
+	GLint data = 0;
+	for (const auto& pair : *Shaders)
+	{
+		glCompileShader(pair.second);
+		glGetShaderiv(pair.second, GL_COMPILE_STATUS, &data);
+		if (data == GL_FALSE)
+		{
+			failed = true;
+			glGetShaderiv(pair.second, GL_INFO_LOG_LENGTH, &data);
+
+			// The maxLength includes the NULL character
+			std::vector<char> errorLog(data);
+			glGetShaderInfoLog(pair.second, data, &data, &errorLog[0]);
+
+			fprintf(stderr, "Shader %s Compilation failed:\nErrors:\n%s\n", pair.first.c_str(), errorLog.data());
+		}
+		else
+			glAttachShader(_program, pair.second);
+	}
+	if(!failed)
+	{
+		glLinkProgram(_program); 
+		glGetProgramiv(_program, GL_LINK_STATUS, &data);
+		if (data == GL_FALSE)
+		{
+			GLint infoLogLength;
+			glGetProgramiv(_program, GL_INFO_LOG_LENGTH, &infoLogLength);
+			GLchar *strInfoLog = new GLchar[infoLogLength + 1];
+			glGetProgramInfoLog(_program, infoLogLength, NULL, strInfoLog);
+			fprintf(stderr, "Linker failure: %s\n", strInfoLog);
+			delete[] strInfoLog;
+			failed = true;
+		}
+	}
+	_compiled = !failed;
+	return _compiled;
+}
+
+GLuint Engine::Components::Graphics::Shader::Get()
 {
 	if (!_compiled)
 		Compile();
-	return &_shader;
+	return _program;
 }
 
-Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, std::string name, IMaterialStructure* data)
+
+Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(std::string name, IMaterialStructure* data)
 {
 	#ifdef DEBUG
 		fprintf(stderr, "SET IMS: %s (0x%p)\n", name.c_str(), data);
 	#endif
 
-	data->SetUniforms(this, program, name);
+	data->SetUniforms(this, name);
 
 	return this;
 }
 
-Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, std::string name, glm::mat4* data)
+Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(std::string name, glm::mat4* data)
 {
 	#ifdef DEBUG
 		fprintf(stderr, "SET MAT4: %s (0x%p) value \n%s\n", name.c_str(), data, Mat4ToString(*data).c_str());
 	#endif
-	GLint uniformID = glGetUniformLocation(*(program->Get()), static_cast<const GLchar*>(name.c_str()));
+	GLint uniformID = glGetUniformLocation(Get(), static_cast<const GLchar*>(name.c_str()));
 	if (uniformID >= 0) {
 		glUniformMatrix4fv(uniformID, 1, GL_FALSE, value_ptr(*data));
 	}
 	else {
-		fprintf(stderr, "ERROR: program 0x%p:%u mat4 variable %s not found\n", program, *(program->Get()), name.c_str());
+		fprintf(stderr, "ERROR: program %u mat4 variable %s not found\n", _program, name.c_str());
 	}
 
 	return this;
 }
 
-Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, std::string name, glm::vec4* data)
+Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(std::string name, glm::vec4* data)
 {
 	#ifdef DEBUG
 		fprintf(stderr, "SET VEC4: %s (0x%p) value \n(%f, %f, %f, %f)\n", name.c_str(), data, data->x, data->y, data->z, data->w);
 	#endif
-	GLint uniformID = glGetUniformLocation(*(program->Get()), static_cast<const GLchar*>(name.c_str()));
+	GLint uniformID = glGetUniformLocation(Get(), static_cast<const GLchar*>(name.c_str()));
 	if (uniformID >= 0) {
 		glUniform4f(uniformID, data->x, data->y, data->z, data->w);
 	}
 	else {
-		fprintf(stderr, "ERROR: program 0x%p:%u vec4 variable %s not found\n", program, *(program->Get()), name.c_str());
+		fprintf(stderr, "ERROR: program %u vec4 variable %s not found\n", _program, name.c_str());
 	}
 
 	return this;
 }
 
-Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, std::string name, glm::vec3* data)
+Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(std::string name, glm::vec3* data)
 {
 	#ifdef DEBUG
 		fprintf(stderr, "SET VEC3: %s (0x%p) value \n(%f, %f, %f)\n", name.c_str(), data, data->x, data->y, data->z);
 	#endif
-	GLint uniformID = glGetUniformLocation(*(program->Get()), static_cast<const GLchar*>(name.c_str()));
+	GLint uniformID = glGetUniformLocation(Get(), static_cast<const GLchar*>(name.c_str()));
 	if (uniformID >= 0) {
 		glUniform3f(uniformID, data->x,data->y,data->z);
 	}
 	else {
-		fprintf(stderr, "ERROR: program 0x%p:%u vec3 variable %s not found\n", program, *(program->Get()), name.c_str());
+		fprintf(stderr, "ERROR: program %u vec3 variable %s not found\n", _program, name.c_str());
 	}
 
 	return this;
 }
 
 
-Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, std::string name, float* data)
+Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(std::string name, float* data)
 {
 	#ifdef DEBUG
 		fprintf(stderr, "SET FLOAT: %s (0x%x) value %f\n", name.c_str(), data, *data);
 	#endif
-	GLint uniformID = glGetUniformLocation(*(program->Get()), static_cast<const GLchar*>(name.c_str()));
+	GLint uniformID = glGetUniformLocation(Get(), static_cast<const GLchar*>(name.c_str()));
 	if (uniformID >= 0) {
 		glUniform1f(uniformID, *data);
 	}
 	else {
-		fprintf(stderr, "ERROR: program 0x%p:%u float variable %s not found\n", program, *(program->Get()), name.c_str());
+		fprintf(stderr, "ERROR: program %u float variable %s not found\n", _program, name.c_str());
 	}
 
 	return this;
 }
 
-Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, std::string name, int* data)
+Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(std::string name, int* data)
 {
 	#ifdef DEBUG
 		fprintf(stderr, "SET INT: %s (0x%p) value %d\n", name.c_str(), data, *data);
 	#endif
-	GLint uniformID = glGetUniformLocation(*(program->Get()), static_cast<const GLchar*>(name.c_str()));
+	GLint uniformID = glGetUniformLocation(Get(), static_cast<const GLchar*>(name.c_str()));
 	if (uniformID >= 0) {
 		glUniform1i(uniformID, *data);
 	}
 	else {
-		fprintf(stderr, "ERROR: program 0x%p:%u int variable %s not found\n", program, *(program->Get()), name.c_str());
+		fprintf(stderr, "ERROR: program %u int variable %s not found\n", _program, name.c_str());
 	}
 
 	return this;
 }
 
-Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(Program* program, std::string name, bool* data)
+Engine::Components::Graphics::Shader* Engine::Components::Graphics::Shader::SendUniform(std::string name, bool* data)
 {
 	#ifdef DEBUG
 		fprintf(stderr, "SET BOOL: %s (0x%p) value %b\n", name.c_str(), data, *data);
 	#endif
-	GLint uniformID = glGetUniformLocation(*(program->Get()), static_cast<const GLchar*>(name.c_str()));
+	GLint uniformID = glGetUniformLocation(Get(), static_cast<const GLchar*>(name.c_str()));
 	if (uniformID >= 0) {
 		glUniform1i(uniformID, *data);
 	}
 	else {
-		fprintf(stderr, "ERROR: program 0x%p:%u int variable %s not found\n", program, *(program->Get()), name.c_str());
+		fprintf(stderr, "ERROR: program %u int variable %s not found\n", _program, name.c_str());
 	}
 
 	return this;

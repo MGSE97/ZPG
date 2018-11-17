@@ -25,7 +25,6 @@ namespace Engine
 		//virtual void WindowKeyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
 
 		Generic::Dictionary<std::string, Components::Window*>* Windows;
-		Generic::Dictionary<std::string, Components::Graphics::Program*>* Programs;
 		Generic::Dictionary<std::string, Components::Graphics::Shader*>* Shaders;
 		Generic::Dictionary<std::string, Components::Scene*>* Scenes;
 		Generic::Collection<Components::IInputHandler*>* InputHandlers;

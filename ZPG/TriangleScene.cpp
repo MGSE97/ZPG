@@ -34,17 +34,8 @@ void Application::Scenes::TriangleScene::Load(Engine::BaseEngine* engine)
 	float* p = points;
 
 	// define material
-	Engine::Components::Graphics::Program* program = engine->Programs->Get("basic");
-	auto material = new Engine::Components::Graphics::Material(program);
-	material->Values/*
-	->Add(
-		new Engine::Components::Graphics::MaterialValue<glm::mat4>(
-		program->Shaders->Get("vertex"), "modelMatrix", modelMatrix)
-	)*/
-	->Add(
-		new Engine::Components::Graphics::MaterialValue<glm::vec4>(
-			program->Shaders->Get("fragment"), "color", new glm::vec4(1.0f, 1.0f, 1.0f, 1.0f))
-	);
+	auto material = new Engine::Components::Graphics::Material(engine->Shaders->First());
+	material->Add("color", new glm::vec4(1.0f, 1.0f, 1.0f, 1.0f));
 
 	// create object
 	Objects->Add("triangle", new ::Engine::Objects::Object(material, p, 9));

@@ -18,7 +18,7 @@ namespace Engine
 				bool _changed;
 			public:
 				Transform();
-				void Use(Graphics::Shader* shader, Graphics::Program* program);
+				void Use(Graphics::Shader* shader);
 				void Position(glm::vec3 position, bool set = false);
 				void Rotation(glm::vec3 rotation, bool set = false);
 				void Scale(glm::vec3 scale, bool set = false);

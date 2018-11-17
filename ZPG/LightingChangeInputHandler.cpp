@@ -148,7 +148,7 @@ bool Application::Input::Handlers::LightingChangeInputHandler::HandleMouse(Engin
 
 		if (keys[MK_C])
 		{
-			auto mat = new Materials::StandartMaterial(engine->Programs->Get("basic"), glm::vec4(0.f, 255.f, 0.f, 1.f));
+			auto mat = new Materials::StandartMaterial(engine->Shaders->First(), glm::vec4(0.f, 255.f, 0.f, 1.f));
 			auto obj = new Engine::Objects::Sphere(mat, sphere, 17280, 3);
 			obj->Transform->Position(engine->WorldPosition, true);
 			obj->Transform->Scale(0.1f, true);

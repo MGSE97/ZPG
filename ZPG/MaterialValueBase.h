@@ -10,15 +10,13 @@ namespace Engine
 			class MaterialValueBase
 			{
 			public:
-				MaterialValueBase(Shader* shader, std::string property)
+				MaterialValueBase(std::string property)
 				{
-					Shader = shader;
 					Property = property;
 				}
 				virtual ~MaterialValueBase() = default;
-				Shader* Shader;
 				std::string Property;
-				virtual void Set(Graphics::Program* program) = 0;
+				virtual void Set(Shader* shader) = 0;
 			};
 		}
 	}

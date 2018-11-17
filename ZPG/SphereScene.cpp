@@ -19,13 +19,13 @@ Application::Scenes::SphereScene::~SphereScene()
 void Application::Scenes::SphereScene::Load(Engine::BaseEngine* engine)
 {
 	// define material
-	Engine::Components::Graphics::Program* program = engine->Programs->Get("basic");
+	Engine::Components::Graphics::Shader* shader = engine->Shaders->First();
 
 	// create object
-	Objects->Add("sphere1", new ::Engine::Objects::Sphere(new Materials::StandartMaterial(program, glm::vec4(1.0f, 1.0f, 0.0f, 0.5f)), sphere, 17280, 3));
-	Objects->Add("sphere2", new ::Engine::Objects::Sphere(new Materials::StandartMaterial(program, glm::vec4(1.0f, 0.0f, 1.0f, 0.5f)), sphere, 17280, 3));
-	Objects->Add("sphere3", new ::Engine::Objects::Sphere(new Materials::StandartMaterial(program, glm::vec4(0.0f, 1.0f, 1.0f, 0.5f)), sphere, 17280, 3));
-	Objects->Add("sphere4", new ::Engine::Objects::Sphere(new Materials::StandartMaterial(program, glm::vec4(1.0f, 1.0f, 1.0f, 0.5f)), sphere, 17280, 3));
+	Objects->Add("sphere1", new ::Engine::Objects::Sphere(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 1.0f, 0.0f, 0.5f)), sphere, 17280, 3));
+	Objects->Add("sphere2", new ::Engine::Objects::Sphere(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 0.0f, 1.0f, 0.5f)), sphere, 17280, 3));
+	Objects->Add("sphere3", new ::Engine::Objects::Sphere(new Materials::StandartMaterial(shader, glm::vec4(0.0f, 1.0f, 1.0f, 0.5f)), sphere, 17280, 3));
+	Objects->Add("sphere4", new ::Engine::Objects::Sphere(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 1.0f, 1.0f, 0.5f)), sphere, 17280, 3));
 
 	Objects->Get("sphere1")->Transform->Position(-2,  0, 0, true);
 	Objects->Get("sphere2")->Transform->Position( 0,  2, 0, true);

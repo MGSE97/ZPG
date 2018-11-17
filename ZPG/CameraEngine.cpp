@@ -37,11 +37,11 @@ Application::Engines::CameraEngine* Application::Engines::CameraEngine::Init(std
 		->Info(std::cout)
 	);
 
-	auto* vertex = new Engine::Components::Graphics::Shader(GL_VERTEX_SHADER, Assets::ShadersVertex + "Camera.glsl");
+	/*auto* vertex = new Engine::Components::Graphics::Shader(GL_VERTEX_SHADER, Assets::ShadersVertex + "Camera.glsl");
 	Shaders->Add("vertex", vertex);
 	Shaders->Add("fragment", new Engine::Components::Graphics::Shader(GL_FRAGMENT_SHADER, Assets::ShadersFragment + "Basic.glsl"));
 
-	Programs->Add("basic", (new Engine::Components::Graphics::Program())->AddShaders(Shaders));
+	Programs->Add("basic", (new Engine::Components::Graphics::Program())->AddShaders(Shaders));*/
 
 	Scenes->Add("triangle", new Scenes::TriangleScene());
 	Scenes->Add("sphere", new Scenes::SphereScene());
@@ -55,20 +55,12 @@ Application::Engines::CameraEngine* Application::Engines::CameraEngine::Init(std
 		->SetPosition(new glm::vec3(0.f, 1.5f, 4.f))
 		->SetDirection(new glm::vec3(0.f, 0.f, 0.f))
 		->SetUp(new glm::vec3(0.f, 0.f, 1.f)));
+	ActiveScene->SetActiveCamera();
 
 	ActiveScene->Objects->First()
-		->Material->Values
-		->Add(
-			new Engine::Components::Graphics::MaterialValue<glm::mat4>(
-				vertex,
-				"viewMatrix",
-				ActiveScene->Cameras->First()->Value)
-		).Add(
-			new Engine::Components::Graphics::MaterialValue<glm::mat4>(
-				vertex,
-				"projectionMatrix",
-				new glm::mat4(glm::perspective(glm::radians(90.0f), 4.0f / 3.0f, 0.1f, 100.0f)))
-		);
+		->Material
+		->Add<glm::mat4>("viewMatrix", ActiveScene->ActiveCamera->Value)
+		->Add<glm::mat4>("projectionMatrix", ActiveScene->ActiveCamera->Projection);
 	return this;
 }
 

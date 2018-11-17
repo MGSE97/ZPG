@@ -28,7 +28,7 @@ namespace Engine
 			Camera* SetDirection(glm::vec3* direction);
 			Camera* SetUp(glm::vec3* up);
 			Camera* SetActive(Scene* scene);
-			Camera* Use(Graphics::Program* program);
+			Camera* Use(Graphics::Shader* program);
 			glm::mat4* Value;
 		};
 	}

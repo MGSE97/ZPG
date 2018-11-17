@@ -14,15 +14,17 @@ namespace Engine
 			class Material
 			{
 			public:
-				Program* Program;
-				Material(Graphics::Program* program);
+				Shader* Shader;
+				Material();
+				Material(Graphics::Shader* shader);
 				virtual ~Material();
+				Material* SetShader(Graphics::Shader* shader);
 				Material* Use();
 				Generic::Collection<MaterialValueBase*>* Values;
 				template<typename T>
-				Material* Add(Shader * shader, std::string property, T * value)
+				Material* Add(std::string property, T* value)
 				{
-					Values->Add(new MaterialValue<T>(shader, property, value));
+					Values->Add(new MaterialValue<T>(property, value));
 					return this;
 				}
 			};

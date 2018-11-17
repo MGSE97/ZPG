@@ -123,9 +123,6 @@
     <ClCompile Include="TriangleScene.cpp">
       <Filter>Zdrojové soubory\Application\Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="Program.cpp">
-      <Filter>Zdrojové soubory\Engine\Components\Graphics</Filter>
-    </ClCompile>
     <ClCompile Include="Shader.cpp">
       <Filter>Zdrojové soubory\Engine\Components\Graphics</Filter>
     </ClCompile>
@@ -217,9 +214,6 @@
     </ClInclude>
     <ClInclude Include="TriangleScene.h">
       <Filter>Hlavičkové soubory\Application\Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="Program.h">
-      <Filter>Hlavičkové soubory\Engine\Components\Graphics</Filter>
     </ClInclude>
     <ClInclude Include="Shader.h">
       <Filter>Hlavičkové soubory\Engine\Components\Graphics</Filter>

@@ -18,7 +18,7 @@ namespace Generic
 			return *this;
 		}
 
-		TValue& Get(const TKey key, TValue _default = nullptr)
+		TValue& Get(const TKey key, TValue _default = TValue())
 		{
 			auto r = this->find(key);
 			if(r != this->end())
@@ -26,9 +26,9 @@ namespace Generic
 			return _default;
 		}
 
-		TValue& First(TValue _default = nullptr)
+		TValue& First(TValue _default = TValue())
 		{
-			if (this->size() == 0)
+			if (this->empty())
 				return _default;
 			return this->begin()->second;
 		}

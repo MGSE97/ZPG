@@ -29,7 +29,7 @@ namespace Engine
 
 				LightConfiguration();
 
-				void SetUniforms(Shader* shader, Program* program, std::string parentName) override;
+				void SetUniforms(Shader* shader, std::string parentName) override;
 			};
 		}
 	}

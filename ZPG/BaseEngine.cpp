@@ -6,7 +6,6 @@
 Engine::BaseEngine::BaseEngine()
 {
 	Windows = new Generic::Dictionary<std::string, Components::Window*>();
-	Programs = new Generic::Dictionary<std::string, Components::Graphics::Program*>();
 	Shaders = new Generic::Dictionary<std::string, Components::Graphics::Shader*>();
 	Scenes = new Generic::Dictionary<std::string, Components::Scene*>();
 	Keys = *(new Generic::Dictionary<short, bool>());
@@ -20,11 +19,9 @@ Engine::BaseEngine::BaseEngine()
 Engine::BaseEngine::~BaseEngine()
 {
 	Windows->clear();
-	Programs->clear();
 	Shaders->clear();
 	Scenes->clear();
 	delete Windows;
-	delete Programs;
 	delete Shaders;
 	delete Scenes;
 }
@@ -83,8 +80,6 @@ void Engine::BaseEngine::UpdateBegin(Components::Window* window)
 			mouseKeysActive++;
 	}
 	short keysActive = 0;
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), { 40, keysActive });
-	fprintf(_errorStream, "                           ");
 	for (short i = 1; i < 512; i++)
 	{
 		const int state = glfwGetKey(window->Get(), i);
@@ -108,9 +103,9 @@ void Engine::BaseEngine::UpdateBegin(Components::Window* window)
 		if(!handleKeys && !handleMouse)
 			break;
 	}
-	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), { 0,0 });
+	//SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), { 40, 0 });
 
-	for (auto it : *Programs)
+	for (auto it : *Shaders)
 	{
 		ActiveScene->ActiveCamera->Use(it.second);
 	}
@@ -146,14 +141,14 @@ void Engine::BaseEngine::UpdateEnd(Components::Window* window)
 	WorldPosition = glm::unProject(screenX, *view, *projection, viewPort);
 	WorldObjectId = index;
 
-	fprintf(_errorStream, "WP:\t%f, %f, %f\n", WorldPosition.x, WorldPosition.y, WorldPosition.z);
-	fprintf(_errorStream, "WO:\t%d\t\t\n", index);
+	/*fprintf(_errorStream, "WP:\t%f, %f, %f\n", WorldPosition.x, WorldPosition.y, WorldPosition.z);
+	fprintf(_errorStream, "WO:\t%d\t\t\n", index);*/
 	
 }
 
 void Engine::BaseEngine::Start()
 {
-	system("cls");
+	//system("cls");
 	UpdateInternal();
 }
 

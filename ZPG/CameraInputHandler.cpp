@@ -67,7 +67,7 @@ bool Application::Input::Handlers::CameraInputHandler::HandleMouse(Engine::BaseE
 		diff.x = diff.x * sensitivity * fow / static_cast<float>(window->Width);
 		diff.y = diff.y * sensitivity * fow / static_cast<float>(window->Height);
 
-		fprintf(stderr, "Diff: %f, %f\t", diff.x, diff.y);
+		//fprintf(stderr, "Diff: %f, %f\t", diff.x, diff.y);
 
 		if (diff.x != 0 || diff.y != 0)
 		{
@@ -83,9 +83,9 @@ bool Application::Input::Handlers::CameraInputHandler::HandleMouse(Engine::BaseE
 	if (obj == nullptr)
 	{
 
-		auto mat = new Engine::Components::Graphics::Material(engine->Programs->Get("basic"));
-		mat->Add(engine->Shaders->Get("fragment"), "material.color", new glm::vec4(255.f, 0.f, 0.f, 1.f));
-		mat->Add(engine->Shaders->Get("fragment"), "material.lightConfiguration.useLighting", new bool(false));
+		auto mat = new Engine::Components::Graphics::Material(engine->Shaders->First());
+		mat->Add("material.color", new glm::vec4(255.f, 0.f, 0.f, 1.f));
+		mat->Add("material.lightConfiguration.useLighting", new bool(false));
 		obj = new Engine::Objects::Sphere(mat, sphere, 17280, 3);
 		obj->Transform->Position(*scene->ActiveCamera->Direction, true);
 		obj->Transform->Scale(0.1f, true);

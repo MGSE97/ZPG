@@ -144,7 +144,6 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Material.cpp" />
     <ClCompile Include="Object.cpp" />
-    <ClCompile Include="Program.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Sphere.cpp" />
@@ -189,7 +188,6 @@
     <ClInclude Include="Object.h" />
     <ClInclude Include="Observable.h" />
     <ClInclude Include="Observer.h" />
-    <ClInclude Include="Program.h" />
     <ClInclude Include="MaterialValue.h" />
     <ClInclude Include="Property.h" />
     <ClInclude Include="ReadOnlyProperty.h" />

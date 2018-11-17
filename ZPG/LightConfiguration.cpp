@@ -20,22 +20,22 @@ Engine::Components::Graphics::LightConfiguration::LightConfiguration()
 	IsLight = false;
 }
 
-void Engine::Components::Graphics::LightConfiguration::SetUniforms(Engine::Components::Graphics::Shader* shader, Engine::Components::Graphics::Program* program, std::string parentName)
+void Engine::Components::Graphics::LightConfiguration::SetUniforms(Engine::Components::Graphics::Shader* shader, std::string parentName)
 {
 	auto prefix = parentName + ".";
 
-	shader->SendUniform(program, prefix + "ambientColor", &AmbientColor);
-	shader->SendUniform(program, prefix + "diffuseColor", &DiffuseColor);
-	shader->SendUniform(program, prefix + "specularColor", &SpecularColor);
+	shader->SendUniform(prefix + "ambientColor", &AmbientColor);
+	shader->SendUniform(prefix + "diffuseColor", &DiffuseColor);
+	shader->SendUniform(prefix + "specularColor", &SpecularColor);
 
-	shader->SendUniform(program, prefix + "ambientStrength", &AmbientStrength);
-	shader->SendUniform(program, prefix + "diffuseStrength", &DiffuseStrength);
-	shader->SendUniform(program, prefix + "specularStrength", &SpecularStrength);
+	shader->SendUniform(prefix + "ambientStrength", &AmbientStrength);
+	shader->SendUniform(prefix + "diffuseStrength", &DiffuseStrength);
+	shader->SendUniform(prefix + "specularStrength", &SpecularStrength);
 
-	shader->SendUniform(program, prefix + "globalStrength", &GlobalStrength);
+	shader->SendUniform(prefix + "globalStrength", &GlobalStrength);
 	if(!IsLight)
 	{
-		shader->SendUniform(program, prefix + "specularSize", &SpecularSize);
-		shader->SendUniform(program, prefix + "useLighting", &UseLighting);
+		shader->SendUniform(prefix + "specularSize", &SpecularSize);
+		shader->SendUniform(prefix + "useLighting", &UseLighting);
 	}
 }

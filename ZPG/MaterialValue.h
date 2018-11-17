@@ -13,14 +13,14 @@ namespace Engine
 			class MaterialValue : public MaterialValueBase
 			{
 			public:
-				MaterialValue(Graphics::Shader* shader, std::string property, T* value) : MaterialValueBase(shader, property)
+				MaterialValue(std::string property, T* value) : MaterialValueBase(property)
 				{
 					Value = value;
 				}
 				T* Value;
-				void Set(Program* program) override
+				void Set(Shader* shader) override
 				{
-					Shader->SendUniform(program, Property, Value);
+					shader->SendUniform(Property, Value);
 				}
 			};
 		}

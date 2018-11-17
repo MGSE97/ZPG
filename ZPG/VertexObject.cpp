@@ -80,7 +80,7 @@ Engine::Components::Objects::VertexObject* Engine::Components::Objects::VertexOb
 {
 	// use material
 	Material->Use();
-	Transform->Use(Material->Program->Shaders->Get("vertex"), Material->Program);
+	Transform->Use(Material->Shader);
 
 	glStencilFunc(GL_ALWAYS, _VAO, 0xFF);
 	glBindVertexArray(_VAO);

@@ -9,7 +9,7 @@ Engine::Components::Objects::Transform::Transform()
 	_changed = true;
 }
 
-void Engine::Components::Objects::Transform::Use(Graphics::Shader* shader, Graphics::Program* program)
+void Engine::Components::Objects::Transform::Use(Graphics::Shader* shader)
 {
 	// Build new Model matrix
 	if(_changed)
@@ -26,7 +26,7 @@ void Engine::Components::Objects::Transform::Use(Graphics::Shader* shader, Graph
 			),	_scale
 		);
 
-	shader->SendUniform(program, "modelMatrix", &_modelMatrix);
+	shader->SendUniform("modelMatrix", &_modelMatrix);
 }
 
 void Engine::Components::Objects::Transform::Position(glm::vec3 position, bool set)

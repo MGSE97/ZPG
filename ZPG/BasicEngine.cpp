@@ -31,13 +31,23 @@ Application::Engines::BasicEngine* Application::Engines::BasicEngine::Init(std::
 		->Info(std::cout)
 	);
 
+	/*Shaders->Add("basic", (new Engine::Components::Graphics::Shader())
+		->Add("vertex", GL_VERTEX_SHADER, vertex_shader)
+		->Add("fragment", GL_FRAGMENT_SHADER, fragment_shader)
+	);*/
+
+	Shaders->Add("basic", (new Engine::Components::Graphics::Shader())
+		->Add("vertex", GL_VERTEX_SHADER, Assets::ShadersVertex + "Basic.glsl")
+		->Add("fragment", GL_FRAGMENT_SHADER, Assets::ShadersFragment + "Basic.glsl")
+	);
+	/*
 	Shaders->Add("vertex", new Engine::Components::Graphics::Shader(GL_VERTEX_SHADER, vertex_shader));
 	Shaders->Add("fragment", new Engine::Components::Graphics::Shader(GL_FRAGMENT_SHADER, fragment_shader));
 	
 	Shaders->Add("vertex", new Engine::Components::Graphics::Shader(GL_VERTEX_SHADER, Assets::ShadersVertex + "Basic.glsl"));
 	Shaders->Add("fragment", new Engine::Components::Graphics::Shader(GL_FRAGMENT_SHADER, Assets::ShadersFragment + "Basic.glsl"));
 
-	Programs->Add("basic", (new Engine::Components::Graphics::Program())->AddShaders(Shaders));
+	Programs->Add("basic", (new Engine::Components::Graphics::Program())->AddShaders(Shaders));*/
 
 	Scenes->Add("triangle", new Scenes::TriangleScene());
 	Scenes->Add("sphere", new Scenes::SphereScene());
