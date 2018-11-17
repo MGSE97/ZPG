@@ -22,25 +22,15 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 	Windows->Add("zpg", window);
 
 	auto* shader = (new Engine::Components::Graphics::Shader())
-		->Add("vertex", GL_VERTEX_SHADER, Assets::ShadersVertex + "Light.glsl")
-		->Add("fragment", GL_FRAGMENT_SHADER, Assets::ShadersFragment + "Light.glsl");
+		->Add("vertex", GL_VERTEX_SHADER, Assets::ShadersVertex + "Texture.glsl")
+		->Add("fragment", GL_FRAGMENT_SHADER, Assets::ShadersFragment + "Texture.glsl");
 
 	if (!shader->Compile())
 		throw (-1);
 
-	Shaders->Add("light", shader);
+	Shaders->Add("texture", shader);
 	
 	auto texture = new Engine::Components::Graphics::Texture(Assets::Textures + "blabla.png");
-
-	/*auto* vertex = new Engine::Components::Graphics::Shader(GL_VERTEX_SHADER, Assets::ShadersVertex + "Light.glsl");
-	auto* fragment = new Engine::Components::Graphics::Shader(GL_FRAGMENT_SHADER, Assets::ShadersFragment + "Light.glsl");*/
-
-	auto* vertex = new Engine::Components::Graphics::Shader(GL_VERTEX_SHADER, Assets::ShadersVertex + "Texture.glsl");
-	auto* fragment = new Engine::Components::Graphics::Shader(GL_FRAGMENT_SHADER, Assets::ShadersFragment + "Texture.glsl");
-	Shaders->Add("vertex", vertex);
-	Shaders->Add("fragment", fragment);
-
-	//Programs->Add("basic", (new Engine::Components::Graphics::Program())->AddShaders(Shaders));
 
 	Scenes->Add("triangle", new Scenes::TriangleScene());
 	Scenes->Add("sphere", new Scenes::SphereScene());
