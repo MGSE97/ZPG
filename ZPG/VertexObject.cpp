@@ -47,6 +47,9 @@ Engine::Components::Objects::VertexObject::VertexObject(Graphics::Material* mate
 	glEnableVertexAttribArray(1);
 	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (GLvoid*)(3*sizeof(float)));
 
+	glEnableVertexAttribArray(2);
+	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (GLvoid*)(6 * sizeof(float)));
+
 	/*VBO = new VertexBufferObject(points, size);
 	VAOs = new Generic::Collection<VertexAttributeObject*>();*/
 	/*if (configs != nullptr)

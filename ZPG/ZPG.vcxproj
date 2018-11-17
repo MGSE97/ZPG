@@ -82,8 +82,8 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>..\Libraries\glm;..\Libraries\glfw\lib-vc2015;..\Libraries\glew\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;glfw3.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\Libraries\glm;..\Libraries\glfw\lib-vc2015;..\Libraries\glew\lib\Release\Win32;..\Libraries\soil\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;glfw3.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ShowProgress>NotSet</ShowProgress>
       <LinkStatus>true</LinkStatus>
       <TurnOffAssemblyGeneration>false</TurnOffAssemblyGeneration>
@@ -144,12 +144,14 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Material.cpp" />
     <ClCompile Include="Object.cpp" />
+    <ClCompile Include="PlaneScene.cpp" />
     <ClCompile Include="Program.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Sphere.cpp" />
     <ClCompile Include="SphereScene.cpp" />
     <ClCompile Include="StandartMaterial.cpp" />
+    <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Transform.cpp" />
     <ClCompile Include="TriangleScene.cpp" />
     <ClCompile Include="VertexAttributeObject.cpp" />
@@ -159,6 +161,7 @@
     <ClCompile Include="BasicEngine.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Libraries\soil\src\SOIL.h" />
     <ClInclude Include="Assets\Models\2\plain.h" />
     <ClInclude Include="Assets\Models\2\spheref.h" />
     <ClInclude Include="Assets\Models\2\suzi_flat.h" />
@@ -189,6 +192,7 @@
     <ClInclude Include="Object.h" />
     <ClInclude Include="Observable.h" />
     <ClInclude Include="Observer.h" />
+    <ClInclude Include="PlaneScene.h" />
     <ClInclude Include="Program.h" />
     <ClInclude Include="MaterialValue.h" />
     <ClInclude Include="Property.h" />
@@ -200,6 +204,7 @@
     <ClInclude Include="Sphere.h" />
     <ClInclude Include="SphereScene.h" />
     <ClInclude Include="StandartMaterial.h" />
+    <ClInclude Include="Texture.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="TriangleScene.h" />
     <ClInclude Include="VertexAttributeObject.h" />

@@ -143,7 +143,11 @@ bool Application::Input::Handlers::LightingChangeInputHandler::HandleMouse(Engin
 				continue;
 
 			if (it.second->IsClicked(&engine->WorldObjectId) && keys[MK_L])
+			{
 				material->Color = glm::vec4(1) - material->Color;
+				it.second->Clicked = !it.second->Clicked;
+			}
+				
 		}
 
 		if (keys[MK_C])

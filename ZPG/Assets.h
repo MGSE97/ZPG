@@ -8,4 +8,5 @@
 		static const std::string Shaders;
 		static const std::string ShadersVertex;
 		static const std::string ShadersFragment;
+		static const std::string Textures;
 	};
