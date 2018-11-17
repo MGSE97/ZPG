@@ -91,6 +91,12 @@
     <Filter Include="Hlavičkové soubory\Application\Materials">
       <UniqueIdentifier>{0c334621-c27c-45ca-a82d-7e65fb982078}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Hlavičkové soubory\Extensions\SOIL">
+      <UniqueIdentifier>{0e1ba1fd-48a5-41b8-a7c0-6bc0ce8ebd12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zdrojové soubory\Extensions">
+      <UniqueIdentifier>{14903569-1b3a-43c1-bcb0-5448b878b7e0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Window.cpp">
@@ -173,6 +179,12 @@
     </ClCompile>
     <ClCompile Include="Transform.cpp">
       <Filter>Zdrojové soubory\Engine\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Zdrojové soubory\Engine\Components\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaneScene.cpp">
+      <Filter>Zdrojové soubory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -316,6 +328,15 @@
     </ClInclude>
     <ClInclude Include="Transform.h">
       <Filter>Hlavičkové soubory\Engine\Components\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Hlavičkové soubory\Engine\Components\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Libraries\soil\src\SOIL.h">
+      <Filter>Hlavičkové soubory\Extensions\SOIL</Filter>
+    </ClInclude>
+    <ClInclude Include="PlaneScene.h">
+      <Filter>Hlavičkové soubory\Application\Scenes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

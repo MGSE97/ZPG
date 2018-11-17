@@ -7,6 +7,8 @@
 #include "CameraInputHandler.h"
 #include "Assets.h"
 #include "LightingChangeInputHandler.h"
+#include "Texture.h"
+#include "PlaneScene.h"
 
 Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::FILE* errorStream)
 {
@@ -28,11 +30,21 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 
 	Shaders->Add("light", shader);
 	
+	auto texture = new Engine::Components::Graphics::Texture(Assets::Textures + "blabla.png");
+
+	/*auto* vertex = new Engine::Components::Graphics::Shader(GL_VERTEX_SHADER, Assets::ShadersVertex + "Light.glsl");
+	auto* fragment = new Engine::Components::Graphics::Shader(GL_FRAGMENT_SHADER, Assets::ShadersFragment + "Light.glsl");*/
+
+	auto* vertex = new Engine::Components::Graphics::Shader(GL_VERTEX_SHADER, Assets::ShadersVertex + "Texture.glsl");
+	auto* fragment = new Engine::Components::Graphics::Shader(GL_FRAGMENT_SHADER, Assets::ShadersFragment + "Texture.glsl");
+	Shaders->Add("vertex", vertex);
+	Shaders->Add("fragment", fragment);
 
 	//Programs->Add("basic", (new Engine::Components::Graphics::Program())->AddShaders(Shaders));
 
 	Scenes->Add("triangle", new Scenes::TriangleScene());
 	Scenes->Add("sphere", new Scenes::SphereScene());
+	Scenes->Add("plane", new Scenes::PlaneScene());
 
 	InputHandlers->Add(new Input::Handlers::LightingChangeInputHandler());
 	InputHandlers->Add(new Input::Handlers::CameraInputHandler());
@@ -66,7 +78,7 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 				->Add(vertex, "viewMatrix", ActiveScene->ActiveCamera->Value)
 				->Add(vertex, "projectionMatrix", ActiveScene->ActiveCamera->Projection)
 				->Add(vertex, "cameraPos", ActiveScene->ActiveCamera->Position);*/
-			
+			texture->Use(Programs->Get("basic"), fragment, "model.base");
 			if (ActiveScene != nullptr && ActiveScene->Lights != nullptr && !ActiveScene->Lights->empty() && 
 				strncmp(it.first.c_str(), lightPrefix.c_str(), lightPrefix.size()) != 0)
 				for (auto& light : *ActiveScene->Lights)
