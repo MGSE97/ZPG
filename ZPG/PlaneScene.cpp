@@ -13,10 +13,10 @@ Application::Scenes::PlaneScene::~PlaneScene()
 
 void Application::Scenes::PlaneScene::Load(Engine::BaseEngine* engine)
 {
-	Engine::Components::Graphics::Program* program = engine->Programs->Get("basic");
+	Engine::Components::Graphics::Shader* shader = engine->Shaders->First();
 
 	// create object
-	Objects->Add("plain", new ::Engine::Objects::Object(new Materials::StandartMaterial(program, glm::vec4(1.0f, 1.0f, 0.0f, 0.5f)), plain, 32, 3));
+	Objects->Add("plain", new ::Engine::Objects::Object(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 1.0f, 0.0f, 0.5f)), plain, 32, 3));
 }
 
 void Application::Scenes::PlaneScene::Unload(Engine::BaseEngine* engine)

@@ -2,7 +2,7 @@
 #include <GL/glew.h>
 #include <string>
 #include "../Libraries/soil/src/SOIL.h"
-#include "Program.h"
+#include "Shader.h"
 
 namespace Engine
 {
@@ -16,7 +16,7 @@ namespace Engine
 				GLuint _texture;
 			public:
 				Texture(std::string file, unsigned flags = SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT);
-				Texture* Use(Program* program, Shader* shader, std::string prefix);
+				Texture* Use(Shader* shader, std::string prefix);
 			};
 
 		}

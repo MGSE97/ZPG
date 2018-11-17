@@ -10,8 +10,8 @@ Engine::Components::Graphics::Texture::Texture(std::string file, unsigned int fl
 	}
 }
 
-Engine::Components::Graphics::Texture* Engine::Components::Graphics::Texture::Use(Program* program, Shader* shader, std::string prefix)
+Engine::Components::Graphics::Texture* Engine::Components::Graphics::Texture::Use(Shader* shader, std::string prefix)
 {
-	shader->SendUniform(program, prefix + "Texture", reinterpret_cast<int*>(&_texture));
+	shader->SendUniform(prefix + "Texture", reinterpret_cast<int*>(&_texture));
 	return this;
 }

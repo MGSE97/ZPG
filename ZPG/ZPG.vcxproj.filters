@@ -338,6 +338,9 @@
     <ClInclude Include="PlaneScene.h">
       <Filter>Hlavičkové soubory\Application\Scenes</Filter>
     </ClInclude>
+    <ClInclude Include="Program.h">
+      <Filter>Hlavičkové soubory</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="ZPG.rc">
