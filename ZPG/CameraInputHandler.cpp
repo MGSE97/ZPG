@@ -86,7 +86,7 @@ bool Application::Input::Handlers::CameraInputHandler::HandleMouse(Engine::BaseE
 		auto mat = new Engine::Components::Graphics::Material(engine->Shaders->First());
 		mat->Add("material.color", new glm::vec4(255.f, 0.f, 0.f, 1.f));
 		mat->Add("material.lightConfiguration.useLighting", new bool(false));
-		obj = new Engine::Objects::Sphere(mat, sphere, 17280, 3);
+		obj = new Engine::Objects::Object(mat, sphere, 2880, 3, true);
 		obj->Transform->Position(*scene->ActiveCamera->Direction, true);
 		obj->Transform->Scale(0.1f, true);
 		//*(object->ModelMatrix) = glm::scale(glm::translate(glm::mat4(1.f), *scene->ActiveCamera->Direction), glm::vec3(0.1f, 0.1f, 0.1f));

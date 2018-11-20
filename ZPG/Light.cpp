@@ -2,8 +2,10 @@
 #define GLM_ENABLE_EXPERIMENTAL
 #include <glm/gtx/transform.hpp>
 #include "Assets/Models/2/spheref.h"
+#include "Assets/Models/2/plain.h"
+#include "GenericSphere.h"
 
-Engine::Components::Light* Engine::Components::Light::Use(Engine::Components::Graphics::Material* material)
+Engine::Components::Light* Engine::Components::Light::Use(Engine::Components::Graphics::Material* material, unsigned int index)
 {
 	/*material->Values->Add(
 		new Engine::Components::Graphics::MaterialValue<glm::vec3>(
@@ -15,12 +17,13 @@ Engine::Components::Light* Engine::Components::Light::Use(Engine::Components::Gr
 		new Engine::Components::Graphics::MaterialValue<glm::vec3>(
 			material->Program->Shaders->Get("fragment"), "lightColor", &Color)
 	);*/
-	material->Add("lightPosition", Transform->GetPosition());
-	material->Add("light.configuration", &Configuration);
+	material->Add("light[" + std::to_string(index) + "].position", Transform->GetPosition());
+	material->Add("light[" + std::to_string(index) + "].configuration", &Configuration);
 	return this;
 }
 
-Engine::Components::Light::Light(Graphics::Shader* shader, glm::vec3 position, glm::vec4 color, Graphics::LightConfiguration* configuration) : Object(new Graphics::Material(shader), sphere, 17280)
+Engine::Components::Light::Light(Graphics::Shader* shader, glm::vec3 position, glm::vec4 color, Graphics::LightConfiguration* configuration) :
+	Object(new Graphics::Material(shader),(new Engine::Objects::GenericSphere(1.0f, 9, 9))->array, 3, true, true) //, sphere, 17280)// 
 {
 	//Position = position;
 	if (configuration != nullptr)
@@ -36,7 +39,7 @@ Engine::Components::Light::Light(Graphics::Shader* shader, glm::vec3 position, g
 	}
 	else
 	{
-		Configuration.AmbientStrength = 1.f;
+		Configuration.AmbientStrength = 0.f;
 		Configuration.DiffuseStrength = 1.f;
 		Configuration.SpecularStrength = 1.f;
 	}
@@ -44,7 +47,7 @@ Engine::Components::Light::Light(Graphics::Shader* shader, glm::vec3 position, g
 	Configuration.IsLight = true;
 	Color = color;
 	Transform->Position(position, true);
-	Transform->Scale(0.2f*Configuration.GlobalStrength, true);
+	Transform->Scale(0.2f * Configuration.GlobalStrength, true);
 	//*ModelMatrix = *(new glm::mat4(glm::scale(glm::translate(*ModelMatrix, position), glm::vec3(0.2*Configuration.GlobalStrength, 0.2*Configuration.GlobalStrength, 0.2*Configuration.GlobalStrength))));
 	Material->Add("material.color", &Color);
 	Material->Add("material.lightConfiguration.useLighting", new bool(false));

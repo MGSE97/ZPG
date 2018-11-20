@@ -19,7 +19,7 @@ namespace Engine {
 			glm::vec4 Color;
 			Light(Graphics::Shader* shader, glm::vec3 position, glm::vec4 color, Graphics::LightConfiguration* configuration);
 			~Light();
-			Light* Use(Graphics::Material* material);
+			Light* Use(Graphics::Material* material, unsigned int index);
 		};
 	}
 }

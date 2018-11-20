@@ -38,7 +38,7 @@ void Application::Scenes::TriangleScene::Load(Engine::BaseEngine* engine)
 	material->Add("color", new glm::vec4(1.0f, 1.0f, 1.0f, 1.0f));
 
 	// create object
-	Objects->Add("triangle", new ::Engine::Objects::Object(material, p, 9));
+	Objects->Add("triangle", new ::Engine::Objects::Object(material, p, 9, 3));
 }
 
 void Application::Scenes::TriangleScene::FrameUpdate(Engine::BaseEngine* engine)

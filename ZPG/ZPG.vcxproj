@@ -137,6 +137,7 @@
     <ClCompile Include="CameraEngine.cpp" />
     <ClCompile Include="CameraInputHandler.cpp" />
     <ClCompile Include="EngineRegistry.cpp" />
+    <ClCompile Include="GenericSphere.cpp" />
     <ClCompile Include="Light.cpp" />
     <ClCompile Include="LightConfiguration.cpp" />
     <ClCompile Include="LightingChangeInputHandler.cpp" />
@@ -178,6 +179,7 @@
     <ClInclude Include="CameraInputHandler.h" />
     <ClInclude Include="Dictionary.h" />
     <ClInclude Include="BaseEngine.h" />
+    <ClInclude Include="GenericSphere.h" />
     <ClInclude Include="gmlExtensions.h" />
     <ClInclude Include="IInputHandler.h" />
     <ClInclude Include="Light.h" />

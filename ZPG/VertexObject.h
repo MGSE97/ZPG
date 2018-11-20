@@ -27,8 +27,9 @@ namespace Engine
 				static int _object_id;
 				VertexObject* Add(int size, int offset);
 			public:
-				Transform* Transform;
-				VertexObject(Graphics::Material* material, const float* points, int size, int dimensions, Generic::Collection<VAOConfig*>* configs = nullptr);
+				Transform* Transform; 
+				VertexObject(Graphics::Material* material, const float* points, int size, int dimensions, bool normals = false, bool uvs = false);
+				//VertexObject(Graphics::Material* material, const float* points, int size, int dimensions, Generic::Collection<VAOConfig*>* configs = nullptr);
 				~VertexObject();
 				VertexObject* Draw();
 				Graphics::Material* Material;

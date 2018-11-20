@@ -16,12 +16,12 @@ Engine::Components::Objects::VertexObject* Engine::Components::Objects::VertexOb
 	return this;
 }
 
-Engine::Components::Objects::VertexObject::VertexObject(Graphics::Material* material, const float* points, int size, int dimensions, Generic::Collection<VAOConfig*>* configs)
+Engine::Components::Objects::VertexObject::VertexObject(Graphics::Material* material, const float* points, int size, int dimensions, bool normals, bool uvs)
 {
 	Transform = new Objects::Transform();
 	_attribute_id = 0;
 	Dimensions = dimensions;
-	Size = size/(dimensions*2);
+	Size = size;
 	_Id = ++_object_id;
 	/*glGenBuffers(1, &_VBO); // generate the VBO
 	glBindBuffer(GL_ARRAY_BUFFER, _VBO);
@@ -37,19 +37,27 @@ Engine::Components::Objects::VertexObject::VertexObject(Graphics::Material* mate
 	glGenVertexArrays(1, &_VAO);
 	glBindVertexArray(_VAO);
 
+	const int partSize = 3 + (normals ? 3 : 0) + (uvs ? 2 : 0);
+
 	glGenBuffers(1, &_VBO);
 	glBindBuffer(GL_ARRAY_BUFFER, _VBO);
-	glBufferData(GL_ARRAY_BUFFER, size * sizeof(float), points, GL_STATIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, size * partSize * sizeof(float), points, GL_STATIC_DRAW);
+
 
 	glEnableVertexAttribArray(0);
-	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (GLvoid*)0);
+	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, partSize * sizeof(float), (GLvoid*)0);
 
-	glEnableVertexAttribArray(1);
-	glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (GLvoid*)(3*sizeof(float)));
+	if (normals)
+	{
+		glEnableVertexAttribArray(1);
+		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, partSize * sizeof(float), (GLvoid*)(3 * sizeof(float)));
+	}
 
-	glEnableVertexAttribArray(2);
-	glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (GLvoid*)(6 * sizeof(float)));
-
+	if (uvs)
+	{
+		glEnableVertexAttribArray(2);
+		glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, partSize * sizeof(float), (GLvoid*)((partSize-2) * sizeof(float)));
+	}
 	/*VBO = new VertexBufferObject(points, size);
 	VAOs = new Generic::Collection<VertexAttributeObject*>();*/
 	/*if (configs != nullptr)

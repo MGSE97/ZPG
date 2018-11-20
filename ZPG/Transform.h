@@ -18,21 +18,25 @@ namespace Engine
 				bool _changed;
 			public:
 				Transform();
-				void Use(Graphics::Shader* shader);
-				void Position(glm::vec3 position, bool set = false);
-				void Rotation(glm::vec3 rotation, bool set = false);
-				void Scale(glm::vec3 scale, bool set = false);
-				void Position(int x, int y, int z, bool set = false);
-				void Rotation(int x, int y, int z, bool set = false);
-				void Scale(int x, int y, int z, bool set = false);
-				void Scale(int scale, bool set = false);
-				void Position(float x, float y, float z, bool set = false);
-				void Rotation(float x, float y, float z, bool set = false);
-				void Scale(float x, float y, float z, bool set = false);
-				void Scale(float scale, bool set = false);
+				Transform* Use(Graphics::Shader* shader);
+				Transform* Position(glm::vec3 position, bool set = false);
+				Transform* Rotation(glm::vec3 rotation, bool set = false);
+				Transform* Scale(glm::vec3 scale, bool set = false);
+				Transform* Position(int x, int y, int z, bool set = false);
+				Transform* Rotation(int x, int y, int z, bool set = false);
+				Transform* Scale(int x, int y, int z, bool set = false);
+				Transform* Scale(int scale, bool set = false);
+				Transform* Position(float x, float y, float z, bool set = false);
+				Transform* Rotation(float x, float y, float z, bool set = false);
+				Transform* Scale(float x, float y, float z, bool set = false);
+				Transform* Scale(float scale, bool set = false);
+				Transform* Position(double x, double y, double z, bool set = false);
+				Transform* Rotation(double x, double y, double z, bool set = false);
+				Transform* Scale(double x, double y, double z, bool set = false);
 				glm::vec3* GetPosition(); 
 				glm::vec3* GetRotation();
 				glm::vec3* GetScale();
+				Transform* RotateAround(glm::vec3 point, float angle, glm::vec3 normal);
 			};
 
 		}

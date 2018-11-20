@@ -6,6 +6,7 @@
 #include "Sphere.h"
 #include "Assets/Models/2/spheref.h"
 #include "StandartMaterial.h"
+#include "GenericSphere.h"
 
 Application::Scenes::SphereScene::SphereScene()
 {
@@ -22,10 +23,17 @@ void Application::Scenes::SphereScene::Load(Engine::BaseEngine* engine)
 	Engine::Components::Graphics::Shader* shader = engine->Shaders->First();
 
 	// create object
-	Objects->Add("sphere1", new ::Engine::Objects::Sphere(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 1.0f, 0.0f, 0.5f)), sphere, 17280, 3));
-	Objects->Add("sphere2", new ::Engine::Objects::Sphere(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 0.0f, 1.0f, 0.5f)), sphere, 17280, 3));
-	Objects->Add("sphere3", new ::Engine::Objects::Sphere(new Materials::StandartMaterial(shader, glm::vec4(0.0f, 1.0f, 1.0f, 0.5f)), sphere, 17280, 3));
-	Objects->Add("sphere4", new ::Engine::Objects::Sphere(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 1.0f, 1.0f, 0.5f)), sphere, 17280, 3));
+	auto gsphere = new Engine::Objects::GenericSphere(1.f, 9, 9);
+	/*Objects->Add("sphere1", new ::Engine::Objects::Object(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 1.0f, 0.0f, 0.5f)), sphere, 2880, 3, true));
+	Objects->Add("sphere2", new ::Engine::Objects::Object(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 0.0f, 1.0f, 0.5f)), sphere, 2880, 3, true));
+	Objects->Add("sphere3", new ::Engine::Objects::Object(new Materials::StandartMaterial(shader, glm::vec4(0.0f, 1.0f, 1.0f, 0.5f)), sphere, 2880, 3, true));
+	Objects->Add("sphere4", new ::Engine::Objects::Object(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 1.0f, 1.0f, 0.5f)), sphere, 2880, 3, true));*/
+
+
+	Objects->Add("sphere1", new ::Engine::Objects::Object(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 1.0f, 0.0f, 0.5f)), gsphere->array, 3, true, true));
+	Objects->Add("sphere2", new ::Engine::Objects::Object(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 0.0f, 1.0f, 0.5f)), gsphere->array, 3, true, true));
+	Objects->Add("sphere3", new ::Engine::Objects::Object(new Materials::StandartMaterial(shader, glm::vec4(0.0f, 1.0f, 1.0f, 0.5f)), gsphere->array, 3, true, true));
+	Objects->Add("sphere4", new ::Engine::Objects::Object(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 1.0f, 1.0f, 0.5f)), gsphere->array, 3, true, true));
 
 	Objects->Get("sphere1")->Transform->Position(-2,  0, 0, true);
 	Objects->Get("sphere2")->Transform->Position( 0,  2, 0, true);

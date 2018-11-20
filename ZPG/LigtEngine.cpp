@@ -9,6 +9,8 @@
 #include "LightingChangeInputHandler.h"
 #include "Texture.h"
 #include "PlaneScene.h"
+#include "StandartMaterial.h"
+#include "Assets/Models/2/plain.h"
 
 Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::FILE* errorStream)
 {
@@ -30,7 +32,7 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 
 	Shaders->Add("texture", shader);
 	
-	auto texture = new Engine::Components::Graphics::Texture(Assets::Textures + "blabla.png");
+	auto texture = new Engine::Components::Graphics::Texture(Assets::Models + "earth\\Albedo.jpg", SOIL_FLAG_INVERT_Y /* SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_MULTIPLY_ALPHA | SOIL_FLAG_TEXTURE_REPEATS*/);
 
 	Scenes->Add("triangle", new Scenes::TriangleScene());
 	Scenes->Add("sphere", new Scenes::SphereScene());
@@ -42,10 +44,23 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 	SetActiveScene(Scenes->Get("sphere"));
 
 	auto* lc = new Engine::Components::Graphics::LightConfiguration();
-	lc->AmbientStrength = 1.f;
+	lc->AmbientStrength = 0.f;
 	lc->DiffuseStrength = 1.f;
 	lc->SpecularStrength = 1.f;
-	ActiveScene->Lights->Add("light" , new Engine::Components::Light(shader, glm::vec3(0, 0, 0), glm::vec4(1), lc));
+	ActiveScene->Lights->Add("center", new Engine::Components::Light(shader, glm::vec3(0, 0, 0), glm::vec4(1), lc));
+	auto* lc2 = new Engine::Components::Graphics::LightConfiguration();
+	lc2->AmbientStrength = 0.f;
+	lc2->DiffuseStrength = 1.0f;
+	lc2->SpecularStrength = 1.0f;
+	lc2->GlobalStrength = 0.3f;
+	auto d = 3.f;
+	ActiveScene->Lights->Add("rotatingX", new Engine::Components::Light(shader, glm::vec3(0, d, 0), glm::vec4(1, 0, 0, 1), lc2));
+	ActiveScene->Lights->Add("rotatingY", new Engine::Components::Light(shader, glm::vec3(d, 0, 0), glm::vec4(0, 1, 0, 1), lc2));
+	ActiveScene->Lights->Add("rotatingZ", new Engine::Components::Light(shader, glm::vec3(d, d, 0), glm::vec4(0, 0, 1, 1), lc2));
+
+	ActiveScene->Lights->Add("rotatingXY", new Engine::Components::Light(shader, glm::vec3(0, 0, d), glm::vec4(1, 1, 0, 1), lc2));
+	ActiveScene->Lights->Add("rotatingXZ", new Engine::Components::Light(shader, glm::vec3(0, d, 0), glm::vec4(1, 0, 1, 1), lc2));
+	ActiveScene->Lights->Add("rotatingYZ", new Engine::Components::Light(shader, glm::vec3(d, 0, 0), glm::vec4(0, 1, 1, 1), lc2));
 
 	ActiveScene->Cameras->Add("main", (new Engine::Components::Camera())
 		//->SetPosition(new glm::vec3(2.5f, 2.5f, 2.f))
@@ -55,12 +70,22 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 	ActiveScene->Cameras->First()->Projection = new glm::mat4(glm::perspective(glm::radians(45.f), (float)window->Width / (float)window->Height, 0.1f, 100.0f));
 
 	ActiveScene->BeginLoad(this);
+
+	auto mat = new Materials::StandartMaterial(shader, glm::vec4(1.0f, 1.0f, 1.0f, 0.5f));
+	auto pl = new Engine::Objects::Object(mat, plain, 6, 3, true, true);
+	mat->Light.DiffuseStrength = 0.2f;
+	mat->Light.SpecularSize = 64;
+	pl->Transform->Position(0, -3, -3, true);
+	pl->Transform->Rotation(90, 0, -60, true);
+	pl->Transform->Rotation(0, 90, 0);
+	pl->Transform->Scale(1, 2, 2, true);
+	ActiveScene->Objects->Add("plain", pl);
+
 	std::string lightPrefix = "light_";
 	if (ActiveScene != nullptr && ActiveScene->Lights != nullptr && !ActiveScene->Lights->empty())
 		for (auto& it : *ActiveScene->Lights)
-		{
 			ActiveScene->Objects->Add(lightPrefix + it.first, it.second);
-		}
+
 	if (ActiveScene != nullptr && ActiveScene->Objects != nullptr && !ActiveScene->Objects->empty())
 		for (auto& it : *ActiveScene->Objects)
 		{
@@ -68,13 +93,20 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 				->Add(vertex, "viewMatrix", ActiveScene->ActiveCamera->Value)
 				->Add(vertex, "projectionMatrix", ActiveScene->ActiveCamera->Projection)
 				->Add(vertex, "cameraPos", ActiveScene->ActiveCamera->Position);*/
-			texture->Use(shader, "model.base");
-			if (ActiveScene != nullptr && ActiveScene->Lights != nullptr && !ActiveScene->Lights->empty() && 
-				strncmp(it.first.c_str(), lightPrefix.c_str(), lightPrefix.size()) != 0)
+			//it.second->Material->Add("lightCount", new int(ActiveScene->Lights->size()));
+			if (it.first.substr(0, lightPrefix.size()) != lightPrefix)
+				it.second->Material->Add("material.hasTexture", new bool(true));
+			else
+				it.second->Material->Add("material.hasTexture", new bool(false));
+			it.second->Transform->Rotation(-90, 0, 60);
+			if (ActiveScene != nullptr && ActiveScene->Lights != nullptr && !ActiveScene->Lights->empty() && strncmp(it.first.c_str(), lightPrefix.c_str(), lightPrefix.size()) != 0)
+			{
+				int i = 0;
 				for (auto& light : *ActiveScene->Lights)
 				{
-					light.second->Use(it.second->Material);
+					light.second->Use(it.second->Material, i++);
 				}
+			}
 		}
 	return this;
 }
@@ -82,7 +114,21 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 void Application::Engines::LightEngine::Update(::Engine::Components::Window* window)
 {
 	//std::cout << "PS: " << specularSize << "\nSS: " << specularStrength << "\nDS: " << diffuseStrength << "\nAS: " << ambientStrength << "\nLP: " << ActiveScene->Lights->First()->Configuration.GlobalStrength << std::endl;
-	
+
+	if (ActiveScene != nullptr && ActiveScene->Lights != nullptr && !ActiveScene->Lights->empty())
+	{
+		float speed = 1.f;
+		ActiveScene->Lights->Get("rotatingX")->Transform->RotateAround(glm::vec3(0, 0, 0), speed, glm::vec3(1, 0, 0));
+		ActiveScene->Lights->Get("rotatingY")->Transform->RotateAround(glm::vec3(0, 0, 0), speed, glm::vec3(0, 1, 0));
+		ActiveScene->Lights->Get("rotatingZ")->Transform->RotateAround(glm::vec3(0, 0, 0), speed, glm::vec3(0, 0, 1));
+		ActiveScene->Lights->Get("rotatingXY")->Transform->RotateAround(glm::vec3(0, 0, 0), speed, glm::vec3(1, 1, 0));
+		ActiveScene->Lights->Get("rotatingXZ")->Transform->RotateAround(glm::vec3(0, 0, 0), speed, glm::vec3(1, 0, 1));
+		ActiveScene->Lights->Get("rotatingYZ")->Transform->RotateAround(glm::vec3(0, 0, 0), speed, glm::vec3(0, 1, 1));
+
+		/*for (auto& it : *ActiveScene->Lights)
+			it.second->Draw();*/
+	}
+	//return;
 	if (ActiveScene != nullptr && ActiveScene->Objects != nullptr && !ActiveScene->Objects->empty())
 		for (auto& it : *ActiveScene->Objects)
 		{
@@ -95,7 +141,7 @@ void Application::Engines::LightEngine::Update(::Engine::Components::Window* win
 			//std::cout << "Object: " << it.first << (it.second->Clicked?" (CLICKED)":"                ") << std::endl;
 			auto object = it.second;
 			object->Draw();
-			
-			angle += 0.1f;
 		}
+			
+	//angle += 0.1f;
 }

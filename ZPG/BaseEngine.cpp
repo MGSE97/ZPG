@@ -38,6 +38,8 @@ Engine::BaseEngine* Engine::BaseEngine::Init(std::FILE* errorStream)
 	// Create keys
 	for (short i = 1; i < 512; i++)
 		Keys.Add(i, false);
+	//Disable VSync
+	glfwSwapInterval(0);
 	return this;
 }
 
@@ -104,11 +106,13 @@ void Engine::BaseEngine::UpdateBegin(Components::Window* window)
 			break;
 	}
 	//SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), { 40, 0 });
-
+	int lightCount = ActiveScene->Lights->size();
 	for (auto it : *Shaders)
-	{
-		ActiveScene->ActiveCamera->Use(it.second);
-	}
+		if (it.second != nullptr)
+		{
+			ActiveScene->ActiveCamera->Use(it.second);
+			it.second->SendUniform("lightCount", &lightCount);
+		}
 }
 
 void Engine::BaseEngine::Update(Components::Window* window)

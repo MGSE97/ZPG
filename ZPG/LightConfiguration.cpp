@@ -8,7 +8,7 @@ Engine::Components::Graphics::LightConfiguration::LightConfiguration()
 	SpecularColor = glm::vec3(1.f,1.f,1.f);
 
 	AmbientStrength = 0.1f;
-	DiffuseStrength = 0.5f;
+	DiffuseStrength = 0.3f;
 	SpecularStrength = 0.5f;
 
 	SpecularSize = 4;

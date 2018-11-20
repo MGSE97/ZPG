@@ -1,31 +1,20 @@
 ﻿#include "Object.h"
-#include "Program.h"
 #include "IInputHandler.h"
 
 int Engine::Objects::Object::_id = 0;
 
-Engine::Objects::Object::Object(Components::Graphics::Material* material, const float* points, int size, int dimensions, int startArrayIndex) :
-	VertexObject(material, points, size, dimensions, &((new Generic::Collection<Components::Objects::VAOConfig*>())
-		->Add(new Engine::Components::Objects::VAOConfig(0, startArrayIndex))
-		))
+Engine::Objects::Object::Object(Components::Graphics::Material* material, std::vector<float>* points, int dimensions, bool normals, bool uvs) :
+	VertexObject(material, points->data(), points->size()/(3+(normals?3:0)+(uvs?2:0)), dimensions, normals, uvs)
 {
 	Clicked = false;
 	Id = _id++;
-	/*ModelMatrix = new glm::mat4(1.f);
-	Material->Values->Add(new Engine::Components::Graphics::MaterialValue<glm::mat4>(
-		Material->Program->Shaders->Get("vertex"), "modelMatrix", ModelMatrix
-	));*/
 }
 
-Engine::Objects::Object::Object(Components::Graphics::Material* material, const float* points, int size, int dimensions, Generic::Collection<Components::Objects::VAOConfig*> configs) :
-	VertexObject(material, points, size, dimensions, &configs)
+Engine::Objects::Object::Object(Components::Graphics::Material* material, const float* points, int size, int dimensions, bool normals, bool uvs) :
+	VertexObject(material, points, size, dimensions, normals, uvs)
 {
 	Clicked = false; 
 	Id = _id++;
-	/*ModelMatrix = new glm::mat4(1.f);
-	Material->Values->Add(new Engine::Components::Graphics::MaterialValue<glm::mat4>(
-		Material->Program->Shaders->Get("vertex"), "modelMatrix", ModelMatrix
-	));*/
 }
 
 Engine::Objects::Object::~Object()

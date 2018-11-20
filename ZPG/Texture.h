@@ -14,6 +14,7 @@ namespace Engine
 			{
 			private:
 				GLuint _texture;
+				GLuint _unit;
 			public:
 				Texture(std::string file, unsigned flags = SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT);
 				Texture* Use(Shader* shader, std::string prefix);

@@ -70,9 +70,6 @@
     <Filter Include="Hlavičkové soubory\Application\Models">
       <UniqueIdentifier>{7ec238ca-fc30-4822-81c3-18a576abbb97}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Zdrojové soubory\Engine\Components\Graphics\Objects">
-      <UniqueIdentifier>{c4826fed-62b5-430a-83ec-fa0d787b2037}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Zdrojové soubory\Application\InputHandlers">
       <UniqueIdentifier>{2f0ca4e1-0572-4be8-8c49-105efb037497}</UniqueIdentifier>
     </Filter>
@@ -97,19 +94,13 @@
     <Filter Include="Zdrojové soubory\Extensions">
       <UniqueIdentifier>{14903569-1b3a-43c1-bcb0-5448b878b7e0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Zdrojové soubory\Engine\Components\Objects">
+      <UniqueIdentifier>{1d1730b2-d5f5-4b0f-ba7c-65c3c2d4517c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Window.cpp">
       <Filter>Zdrojové soubory\Engine\Components</Filter>
-    </ClCompile>
-    <ClCompile Include="VertexAttributeObject.cpp">
-      <Filter>Zdrojové soubory\Engine\Components\Graphics\Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="VertexBufferObject.cpp">
-      <Filter>Zdrojové soubory\Engine\Components\Graphics\Objects</Filter>
-    </ClCompile>
-    <ClCompile Include="VertexObject.cpp">
-      <Filter>Zdrojové soubory\Engine\Components\Graphics\Objects</Filter>
     </ClCompile>
     <ClCompile Include="Application.cpp">
       <Filter>Zdrojové soubory\Application</Filter>
@@ -177,14 +168,26 @@
     <ClCompile Include="StandartMaterial.cpp">
       <Filter>Zdrojové soubory\Application\Materials</Filter>
     </ClCompile>
-    <ClCompile Include="Transform.cpp">
-      <Filter>Zdrojové soubory\Engine\Objects</Filter>
-    </ClCompile>
     <ClCompile Include="Texture.cpp">
       <Filter>Zdrojové soubory\Engine\Components\Graphics</Filter>
     </ClCompile>
     <ClCompile Include="PlaneScene.cpp">
       <Filter>Zdrojové soubory</Filter>
+    </ClCompile>
+    <ClCompile Include="GenericSphere.cpp">
+      <Filter>Zdrojové soubory</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>Zdrojové soubory\Engine\Components\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexAttributeObject.cpp">
+      <Filter>Zdrojové soubory\Engine\Components\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexBufferObject.cpp">
+      <Filter>Zdrojové soubory\Engine\Components\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexObject.cpp">
+      <Filter>Zdrojové soubory\Engine\Components\Objects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -339,6 +342,9 @@
       <Filter>Hlavičkové soubory\Application\Scenes</Filter>
     </ClInclude>
     <ClInclude Include="Program.h">
+      <Filter>Hlavičkové soubory</Filter>
+    </ClInclude>
+    <ClInclude Include="GenericSphere.h">
       <Filter>Hlavičkové soubory</Filter>
     </ClInclude>
   </ItemGroup>
