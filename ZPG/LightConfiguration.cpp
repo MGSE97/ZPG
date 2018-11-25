@@ -7,11 +7,11 @@ Engine::Components::Graphics::LightConfiguration::LightConfiguration()
 	DiffuseColor = glm::vec3(1.f,1.f,1.f);
 	SpecularColor = glm::vec3(1.f,1.f,1.f);
 
-	AmbientStrength = 0.1f;
-	DiffuseStrength = 0.3f;
-	SpecularStrength = 0.5f;
+	AmbientStrength = 0.0f;
+	DiffuseStrength = 1.0f;//0.3f;
+	SpecularStrength = 1.5f;
 
-	SpecularSize = 4;
+	SpecularSize = 64;
 
 	GlobalStrength = 1.f;
 
