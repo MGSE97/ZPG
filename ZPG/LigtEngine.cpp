@@ -26,14 +26,15 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 
 	auto* shader = (new Engine::Components::Graphics::Shader())
 		->Add("vertex", GL_VERTEX_SHADER, Assets::ShadersVertex + "Texture.glsl")
-		->Add("fragment", GL_FRAGMENT_SHADER, Assets::ShadersFragment + "Texture.glsl");
+		->Add("fragment", GL_FRAGMENT_SHADER, Assets::ShadersFragment + "Volumetric.glsl");
+		//->Add("fragment", GL_FRAGMENT_SHADER, Assets::ShadersFragment + "Texture.glsl");
 
 	if (!shader->Compile())
 		throw (-1);
 
 	Shaders->Add("texture", shader);
 	
-	auto texture = new Engine::Components::Graphics::Texture(Assets::Models + "earth\\Albedo.jpg", SOIL_FLAG_INVERT_Y /* SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_MULTIPLY_ALPHA | SOIL_FLAG_TEXTURE_REPEATS*/);
+	auto texture = new Engine::Components::Graphics::Texture(Assets::Models + "earth\\Albedo.jpg",  SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_MULTIPLY_ALPHA | SOIL_FLAG_TEXTURE_REPEATS);
 
 	Scenes->Add("triangle", new Scenes::TriangleScene());
 	Scenes->Add("sphere", new Scenes::SphereScene());
@@ -53,8 +54,8 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 	ActiveScene->Lights->Add("center", new Engine::Components::Light(shader, glm::vec3(0, 0, 0), glm::vec4(1), lc));
 	auto* lc2 = new Engine::Components::Graphics::LightConfiguration();
 	lc2->AmbientStrength = 0.f;
-	lc2->DiffuseStrength = 1.0f;
-	lc2->SpecularStrength = 1.0f;
+	lc2->DiffuseStrength = 3.0f;
+	lc2->SpecularStrength = 6.0f;
 	lc2->GlobalStrength = 0.3f;
 	auto d = 3.f;
 	ActiveScene->Lights->Add("rotatingX", new Engine::Components::Light(shader, glm::vec3(0, d, 0), glm::vec4(1, 0, 0, 1), lc2));
