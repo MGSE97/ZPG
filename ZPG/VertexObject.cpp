@@ -78,6 +78,68 @@ Engine::Components::Objects::VertexObject::VertexObject(Graphics::Material* mate
 	Material = material;
 }
 
+Engine::Components::Objects::VertexObject::VertexObject(Graphics::Material* material, aiMesh* mesh, int dimensions)
+{
+	Transform = new Objects::Transform();
+	_attribute_id = 0;
+	Dimensions = dimensions;
+	Size = mesh->mNumVertices;
+	_Id = ++_object_id;
+
+	Vertex* pVertices = new Vertex[mesh->mNumVertices];
+	std::memset(pVertices, 0, sizeof(Vertex)* mesh->mNumVertices);
+
+	for (unsigned int i = 0; i < mesh->mNumVertices; i++)
+	{
+		if (mesh->HasPositions())
+		{
+			pVertices[i].Position[0] = mesh->mVertices[i].x;
+			pVertices[i].Position[1] = mesh->mVertices[i].y;
+			pVertices[i].Position[2] = mesh->mVertices[i].z;
+		}
+		if (mesh->HasNormals())
+		{
+			pVertices[i].Normal[0] = mesh->mNormals[i].x;
+			pVertices[i].Normal[1] = mesh->mNormals[i].y;
+			pVertices[i].Normal[2] = mesh->mNormals[i].z;
+		}
+		if (mesh->HasTextureCoords(0))
+		{
+			pVertices[i].UV[0] = mesh->mTextureCoords[0][i].x;
+			pVertices[i].UV[1] = mesh->mTextureCoords[0][i].y;
+		}
+	}
+
+	glGenVertexArrays(1, &_VAO);
+	glBindVertexArray(_VAO);
+
+	glGenBuffers(1, &_VBO);
+	glBindBuffer(GL_ARRAY_BUFFER, _VBO);
+	glBufferData(GL_ARRAY_BUFFER, mesh->mNumVertices * sizeof(Vertex), pVertices, GL_STATIC_DRAW);
+
+	if (mesh->HasPositions())
+	{
+		glEnableVertexAttribArray(0);
+		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)0);
+	}
+
+	if (mesh->HasNormals())
+	{
+		glEnableVertexAttribArray(1);
+		glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)(3 * sizeof(float)));
+	}
+
+	if (mesh->HasTextureCoords(0))
+	{
+		glEnableVertexAttribArray(2);
+		glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)(6 * sizeof(float)));
+	}
+
+	Material = material;
+
+	delete[] pVertices;
+}
+
 Engine::Components::Objects::VertexObject::~VertexObject()
 {
 	glDeleteVertexArrays(1, &_VAO);

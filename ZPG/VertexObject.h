@@ -4,6 +4,8 @@
 #include "Program.h"
 #include "Material.h"
 #include "Transform.h"
+#include "Vertex.h"
+#include <assimp/scene.h>
 
 namespace Engine
 {
@@ -29,6 +31,7 @@ namespace Engine
 			public:
 				Transform* Transform; 
 				VertexObject(Graphics::Material* material, const float* points, int size, int dimensions, bool normals = false, bool uvs = false);
+				VertexObject(Graphics::Material* material, aiMesh* mesh, int dimensions);
 				//VertexObject(Graphics::Material* material, const float* points, int size, int dimensions, Generic::Collection<VAOConfig*>* configs = nullptr);
 				~VertexObject();
 				VertexObject* Draw();

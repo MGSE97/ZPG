@@ -6,3 +6,4 @@ const std::string Assets::ShadersFragment =		std::string(R"(Assets\Shaders\Fragm
 const std::string Assets::ShadersVertex =		std::string(R"(Assets\Shaders\Vertex\)");
 const std::string Assets::Textures =			std::string(R"(Assets\Textures\)");
 const std::string Assets::Models =				std::string(R"(Assets\Models\)");
+const std::string Assets::Meshes =				std::string(R"(Assets\Models\Meshes\)");

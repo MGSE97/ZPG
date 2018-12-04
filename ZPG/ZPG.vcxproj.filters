@@ -97,6 +97,9 @@
     <Filter Include="Zdrojové soubory\Engine\Components\Objects">
       <UniqueIdentifier>{1d1730b2-d5f5-4b0f-ba7c-65c3c2d4517c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Hlavičkové soubory\Application\Models\Meshes">
+      <UniqueIdentifier>{c7bb8d7e-835f-487d-9230-328d9c80345e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Window.cpp">
@@ -187,6 +190,12 @@
       <Filter>Zdrojové soubory\Engine\Components\Objects</Filter>
     </ClCompile>
     <ClCompile Include="VertexObject.cpp">
+      <Filter>Zdrojové soubory\Engine\Components\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshScene.cpp">
+      <Filter>Zdrojové soubory\Application\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
       <Filter>Zdrojové soubory\Engine\Components\Objects</Filter>
     </ClCompile>
   </ItemGroup>
@@ -346,6 +355,15 @@
     </ClInclude>
     <ClInclude Include="GenericSphere.h">
       <Filter>Hlavičkové soubory</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>Hlavičkové soubory\Engine\Components\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Hlavičkové soubory</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshScene.h">
+      <Filter>Hlavičkové soubory\Application\Scenes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

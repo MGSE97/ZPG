@@ -10,4 +10,5 @@
 		static const std::string ShadersFragment;
 		static const std::string Textures;
 		static const std::string Models;
+		static const std::string Meshes;
 	};

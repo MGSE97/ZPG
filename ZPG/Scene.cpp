@@ -5,6 +5,7 @@
 Engine::Components::Scene::Scene()
 {
 	Objects = new Generic::Dictionary<std::string, Engine::Objects::Object*>();
+	Meshes = new Generic::Dictionary<std::basic_string<char>, Objects::Mesh*>();
 	Cameras = new Generic::Dictionary<std::string, Camera*>();
 	Lights = new Generic::Dictionary<std::string, Light*>();
 	Loaded = false;

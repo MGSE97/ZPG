@@ -11,6 +11,7 @@
 #include "PlaneScene.h"
 #include "StandartMaterial.h"
 #include "Assets/Models/2/plain.h"
+#include "MeshScene.h"
 
 Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::FILE* errorStream)
 {
@@ -37,11 +38,13 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 	Scenes->Add("triangle", new Scenes::TriangleScene());
 	Scenes->Add("sphere", new Scenes::SphereScene());
 	Scenes->Add("plane", new Scenes::PlaneScene());
+	Scenes->Add("mesh", new Scenes::MeshScene());
 
 	InputHandlers->Add(new Input::Handlers::LightingChangeInputHandler());
 	InputHandlers->Add(new Input::Handlers::CameraInputHandler());
 
-	SetActiveScene(Scenes->Get("sphere"));
+	//SetActiveScene(Scenes->Get("sphere"));
+	SetActiveScene(Scenes->Get("mesh"));
 
 	auto* lc = new Engine::Components::Graphics::LightConfiguration();
 	lc->AmbientStrength = 0.f;
@@ -108,6 +111,27 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 				}
 			}
 		}
+
+	if (ActiveScene != nullptr && ActiveScene->Meshes != nullptr && !ActiveScene->Meshes->empty())
+		for (auto& it : *ActiveScene->Meshes)
+		{
+			for (auto& object : *it.second->Components)
+			{
+				if (it.first.substr(0, lightPrefix.size()) != lightPrefix)
+					object->Material->Add("material.hasTexture", new bool(true));
+				else
+					object->Material->Add("material.hasTexture", new bool(false));
+				object->Transform->Rotation(-90, 0, 60);
+				if (ActiveScene != nullptr && ActiveScene->Lights != nullptr && !ActiveScene->Lights->empty() && strncmp(it.first.c_str(), lightPrefix.c_str(), lightPrefix.size()) != 0)
+				{
+					int i = 0;
+					for (auto& light : *ActiveScene->Lights)
+					{
+						light.second->Use(object->Material, i++);
+					}
+				}
+			}
+		}
 	return this;
 }
 
@@ -142,6 +166,14 @@ void Application::Engines::LightEngine::Update(::Engine::Components::Window* win
 			auto object = it.second;
 			object->Draw();
 		}
-			
+
+	if (ActiveScene != nullptr && ActiveScene->Meshes != nullptr && !ActiveScene->Meshes->empty())
+		for (auto& it : *ActiveScene->Meshes)
+		{
+			for(auto& object: *it.second->Components)
+			{
+				object->Draw();
+			}
+		}
 	//angle += 0.1f;
 }

@@ -77,13 +77,13 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>..\Libraries\glm;..\Libraries\glfw\include;..\Libraries\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Libraries\assimp\include;..\Libraries\glm;..\Libraries\glfw\include;..\Libraries\glew\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <BrowseInformation>true</BrowseInformation>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>..\Libraries\glm;..\Libraries\glfw\lib-vc2015;..\Libraries\glew\lib\Release\Win32;..\Libraries\soil\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;glfw3.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\Libraries\assimp\bin\Win32\v141\Release;..\Libraries\assimp\lib\Win32\v141\Release;..\Libraries\glm;..\Libraries\glfw\lib-vc2015;..\Libraries\glew\lib\Release\Win32;..\Libraries\soil\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glu32.lib;glew32.lib;glfw3.lib;SOIL.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ShowProgress>NotSet</ShowProgress>
       <LinkStatus>true</LinkStatus>
       <TurnOffAssemblyGeneration>false</TurnOffAssemblyGeneration>
@@ -144,6 +144,8 @@
     <ClCompile Include="LigtEngine.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Material.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="MeshScene.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="PlaneScene.cpp" />
     <ClCompile Include="Scene.cpp" />
@@ -190,6 +192,8 @@
     <ClInclude Include="MaterialBindedValue.h" />
     <ClInclude Include="MaterialValueBase.h" />
     <ClInclude Include="MaterialValueType.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="MeshScene.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Observable.h" />
     <ClInclude Include="Observer.h" />
@@ -208,6 +212,7 @@
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Transform.h" />
     <ClInclude Include="TriangleScene.h" />
+    <ClInclude Include="Vertex.h" />
     <ClInclude Include="VertexAttributeObject.h" />
     <ClInclude Include="VertexBufferObject.h" />
     <ClInclude Include="VertexObject.h" />
