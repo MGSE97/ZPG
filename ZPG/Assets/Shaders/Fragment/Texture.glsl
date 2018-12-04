@@ -28,7 +28,7 @@ struct Light {
 };
 
 #define M_PI 3.1415926535897932384626433832795
-#define MAX_DISTANCE 10.0
+#define MAX_DISTANCE 20.0
 
 uniform Material material;// = Material(vec4(1,1,1,1), LightConfiguration(vec3(1,1,1), 1, vec3(1,1,1), 1, vec3(1,1,1), 1, 8, 1, false));
 

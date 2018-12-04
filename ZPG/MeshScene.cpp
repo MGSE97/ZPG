@@ -1,6 +1,7 @@
 #include "MeshScene.h"
 #include "BaseEngine.h"
 #include "Assets.h"
+#include "StandartMaterial.h"
 
 void Application::Scenes::MeshScene::Load(Engine::BaseEngine* engine)
 {

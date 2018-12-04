@@ -28,6 +28,7 @@ Engine::Components::Objects::Mesh* Engine::Components::Objects::Mesh::Load(std::
 		{
 			aiMesh* mesh = scene->mMeshes[i];
 			Application::Materials::StandartMaterial* material = new Application::Materials::StandartMaterial();
+			material->Light.AmbientStrength = 0.2f;
 			Components->Add(new VertexObject(material, mesh, 3));
 		}
 	}
