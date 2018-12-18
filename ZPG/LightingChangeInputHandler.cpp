@@ -153,7 +153,7 @@ bool Application::Input::Handlers::LightingChangeInputHandler::HandleMouse(Engin
 		if (keys[MK_C])
 		{
 			auto mat = new Materials::StandartMaterial(engine->Shaders->First(), glm::vec4(0.f, 255.f, 0.f, 1.f));
-			auto obj = new Engine::Objects::Object(mat, sphere, 2880, 3, true);
+			auto obj = new Engine::Components::Objects::Object(mat, sphere, 2880, 3, true);
 			obj->Transform->Position(engine->WorldPosition, true);
 			obj->Transform->Scale(0.1f, true);
 			scene->Objects->Add("created_lchih_" + std::to_string(obj->Id), obj);

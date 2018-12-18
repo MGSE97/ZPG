@@ -114,9 +114,6 @@
     <ClCompile Include="BaseEngine.cpp">
       <Filter>Zdrojové soubory\Engine</Filter>
     </ClCompile>
-    <ClCompile Include="Object.cpp">
-      <Filter>Zdrojové soubory\Engine\Objects</Filter>
-    </ClCompile>
     <ClCompile Include="Scene.cpp">
       <Filter>Zdrojové soubory\Engine\Components</Filter>
     </ClCompile>
@@ -174,12 +171,6 @@
     <ClCompile Include="Texture.cpp">
       <Filter>Zdrojové soubory\Engine\Components\Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="PlaneScene.cpp">
-      <Filter>Zdrojové soubory</Filter>
-    </ClCompile>
-    <ClCompile Include="GenericSphere.cpp">
-      <Filter>Zdrojové soubory</Filter>
-    </ClCompile>
     <ClCompile Include="Transform.cpp">
       <Filter>Zdrojové soubory\Engine\Components\Objects</Filter>
     </ClCompile>
@@ -197,6 +188,18 @@
     </ClCompile>
     <ClCompile Include="Mesh.cpp">
       <Filter>Zdrojové soubory\Engine\Components\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="GenericSphere.cpp">
+      <Filter>Zdrojové soubory\Engine\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="GenericOctahedon.cpp">
+      <Filter>Zdrojové soubory\Engine\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Object.cpp">
+      <Filter>Zdrojové soubory\Engine\Components\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="PlaneScene.cpp">
+      <Filter>Zdrojové soubory\Application\Scenes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -229,9 +232,6 @@
     </ClInclude>
     <ClInclude Include="BaseEngine.h">
       <Filter>Hlavičkové soubory\Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="Object.h">
-      <Filter>Hlavičkové soubory\Engine\Objects</Filter>
     </ClInclude>
     <ClInclude Include="Scene.h">
       <Filter>Hlavičkové soubory\Engine\Components</Filter>
@@ -353,17 +353,23 @@
     <ClInclude Include="Program.h">
       <Filter>Hlavičkové soubory</Filter>
     </ClInclude>
-    <ClInclude Include="GenericSphere.h">
-      <Filter>Hlavičkové soubory</Filter>
-    </ClInclude>
     <ClInclude Include="Vertex.h">
       <Filter>Hlavičkové soubory\Engine\Components\Objects</Filter>
     </ClInclude>
-    <ClInclude Include="Mesh.h">
-      <Filter>Hlavičkové soubory</Filter>
-    </ClInclude>
     <ClInclude Include="MeshScene.h">
       <Filter>Hlavičkové soubory\Application\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>Hlavičkové soubory\Engine\Components\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Hlavičkové soubory\Engine\Components\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="GenericOctahedon.h">
+      <Filter>Hlavičkové soubory\Engine\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="GenericSphere.h">
+      <Filter>Hlavičkové soubory\Engine\Objects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

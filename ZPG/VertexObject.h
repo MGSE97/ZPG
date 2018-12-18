@@ -6,6 +6,7 @@
 #include "Transform.h"
 #include "Vertex.h"
 #include <assimp/scene.h>
+#include "StandartMaterial.h"
 
 namespace Engine
 {
@@ -21,6 +22,7 @@ namespace Engine
 				/*VertexBufferObject* VBO;
 				Generic::Collection<VertexAttributeObject*>* VAOs;*/
 				int Dimensions;
+				Generic::Collection<unsigned int>* _Indices;
 				GLuint _VBO = 0;
 				GLuint _VAO = 0;
 				int _Id;
@@ -30,12 +32,12 @@ namespace Engine
 				VertexObject* Add(int size, int offset);
 			public:
 				Transform* Transform; 
-				VertexObject(Graphics::Material* material, const float* points, int size, int dimensions, bool normals = false, bool uvs = false);
-				VertexObject(Graphics::Material* material, aiMesh* mesh, int dimensions);
+				VertexObject(Application::Materials::StandartMaterial* material, const float* points, int size, int dimensions, bool normals = false, bool uvs = false, bool faces = false, const unsigned int* indices = nullptr, int indicesSize = 0);
+				VertexObject(Application::Materials::StandartMaterial* material, aiMesh* mesh, int dimensions);
 				//VertexObject(Graphics::Material* material, const float* points, int size, int dimensions, Generic::Collection<VAOConfig*>* configs = nullptr);
 				~VertexObject();
 				VertexObject* Draw();
-				Graphics::Material* Material;
+				Application::Materials::StandartMaterial* Material;
 			};
 
 			struct VAOConfig

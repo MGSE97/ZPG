@@ -1,0 +1,41 @@
+newmtl Back
+	Ka 1 1 1
+	Kd 1 1 1
+	Ks 0 0 0
+	Ke 1 1 1
+	map_Ka -clamp on cubemap/negz.jpg
+
+newmtl Front
+	Ka 1 1 1
+	Kd 1 1 1
+	Ks 0 0 0
+	Ke 1 1 1
+	map_Ka -clamp on cubemap/posz.jpg
+
+newmtl Top
+	Ka 1 1 1
+	Kd 1 1 1
+	Ks 0 0 0
+	Ke 1 1 1
+	map_Ka -clamp on cubemap/posy.jpg
+
+newmtl Bottom
+	Ka 1 1 1
+	Kd 1 1 1
+	Ks 0 0 0
+	Ke 1 1 1
+	map_Ka -clamp on cubemap/negy.jpg
+
+newmtl Left
+	Ka 1 1 1
+	Kd 1 1 1
+	Ks 0 0 0
+	Ke 1 1 1
+	map_Ka -clamp on cubemap/negx.jpg
+
+newmtl Right
+	Ka 1 1 1
+	Kd 1 1 1
+	Ks 0 0 0
+	Ke 1 1 1
+	map_Ka -clamp on cubemap/posx.jpg

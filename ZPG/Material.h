@@ -19,7 +19,7 @@ namespace Engine
 				Material(Graphics::Shader* shader);
 				virtual ~Material();
 				Material* SetShader(Graphics::Shader* shader);
-				Material* Use();
+				virtual Material* Use();
 				Generic::Collection<MaterialValueBase*>* Values;
 				template<typename T>
 				Material* Add(std::string property, T* value)

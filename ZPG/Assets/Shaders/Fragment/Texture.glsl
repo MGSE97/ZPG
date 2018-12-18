@@ -17,8 +17,17 @@ struct LightConfiguration {
 
 struct Material {
 	vec4 color;
-	sampler2D baseTexture;
-	bool hasTexture;
+
+	sampler2D albedoTexture;
+	sampler2D diffuseTexture;
+	sampler2D specularTexture;
+	sampler2D emissionTexture;
+
+	bool hasAlbedoTexture;
+	bool hasDiffuseTexture;
+	bool hasSpecularTexture;
+	bool hasEmissionTexture;
+
 	LightConfiguration lightConfiguration;
 };
 
@@ -28,7 +37,7 @@ struct Light {
 };
 
 #define M_PI 3.1415926535897932384626433832795
-#define MAX_DISTANCE 20.0
+#define MAX_DISTANCE 100.0
 
 uniform Material material;// = Material(vec4(1,1,1,1), LightConfiguration(vec3(1,1,1), 1, vec3(1,1,1), 1, vec3(1,1,1), 1, 8, 1, false));
 
@@ -65,8 +74,8 @@ void main () {
 
 		frag_colour = vec4(result+ambient, 1.0) * material.color;
 	}
-	if(material.hasTexture)
-		frag_colour = frag_colour * texture(material.baseTexture, uvCoord);
+	if(material.hasAlbedoTexture)
+		frag_colour = frag_colour * texture(material.albedoTexture, uvCoord);
 	//frag_colour = vec4(uvCoord, 1, 1);
 }
 

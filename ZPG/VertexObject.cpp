@@ -1,5 +1,6 @@
 #include "VertexObject.h"
 #include <vector>
+#include <winerror.h>
 
 int Engine::Components::Objects::VertexObject::_object_id = 0;
 
@@ -16,9 +17,10 @@ Engine::Components::Objects::VertexObject* Engine::Components::Objects::VertexOb
 	return this;
 }
 
-Engine::Components::Objects::VertexObject::VertexObject(Graphics::Material* material, const float* points, int size, int dimensions, bool normals, bool uvs)
+Engine::Components::Objects::VertexObject::VertexObject(Application::Materials::StandartMaterial* material, const float* points, int size, int dimensions, bool normals, bool uvs, bool faces, const unsigned int* indices, int indicesSize)
 {
 	Transform = new Objects::Transform();
+	_Indices = new Generic::Collection<unsigned int>();
 	_attribute_id = 0;
 	Dimensions = dimensions;
 	Size = size;
@@ -58,6 +60,12 @@ Engine::Components::Objects::VertexObject::VertexObject(Graphics::Material* mate
 		glEnableVertexAttribArray(2);
 		glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, partSize * sizeof(float), (GLvoid*)((partSize-2) * sizeof(float)));
 	}
+
+	if(faces && indices != nullptr)
+	{
+		for (int i = 0; i < indicesSize; i++)
+			_Indices->Add(indices[i]);
+	}
 	/*VBO = new VertexBufferObject(points, size);
 	VAOs = new Generic::Collection<VertexAttributeObject*>();*/
 	/*if (configs != nullptr)
@@ -78,15 +86,16 @@ Engine::Components::Objects::VertexObject::VertexObject(Graphics::Material* mate
 	Material = material;
 }
 
-Engine::Components::Objects::VertexObject::VertexObject(Graphics::Material* material, aiMesh* mesh, int dimensions)
+Engine::Components::Objects::VertexObject::VertexObject(Application::Materials::StandartMaterial* material, aiMesh* mesh, int dimensions)
 {
-	Transform = new Objects::Transform();
+	Transform = new Objects::Transform(); 
+	_Indices = new Generic::Collection<unsigned int>();
 	_attribute_id = 0;
 	Dimensions = dimensions;
 	Size = mesh->mNumVertices;
 	_Id = ++_object_id;
 
-	Vertex* pVertices = new Vertex[mesh->mNumVertices];
+	Vertex* pVertices = new Vertex[mesh->mNumVertices]();
 	std::memset(pVertices, 0, sizeof(Vertex)* mesh->mNumVertices);
 
 	for (unsigned int i = 0; i < mesh->mNumVertices; i++)
@@ -107,6 +116,27 @@ Engine::Components::Objects::VertexObject::VertexObject(Graphics::Material* mate
 		{
 			pVertices[i].UV[0] = mesh->mTextureCoords[0][i].x;
 			pVertices[i].UV[1] = mesh->mTextureCoords[0][i].y;
+		}
+		if(mesh->HasTangentsAndBitangents())
+		{
+			pVertices[i].Tangent[0] = mesh->mTangents[i].x;
+			pVertices[i].Tangent[1] = mesh->mTangents[i].y;
+			pVertices[i].Tangent[2] = mesh->mTangents[i].z;
+
+
+			pVertices[i].Bitangent[0] = mesh->mTangents[i].x;
+			pVertices[i].Bitangent[1] = mesh->mTangents[i].y;
+			pVertices[i].Bitangent[2] = mesh->mTangents[i].z;
+		}
+	}
+
+	if(mesh->HasFaces())
+	{
+		for (unsigned int i = 0; i < mesh->mNumFaces; i++)
+		{
+			aiFace face = mesh->mFaces[i];
+			for (unsigned int j = 0; j < face.mNumIndices; j++)
+				_Indices->Add(face.mIndices[j]);
 		}
 	}
 
@@ -135,6 +165,15 @@ Engine::Components::Objects::VertexObject::VertexObject(Graphics::Material* mate
 		glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)(6 * sizeof(float)));
 	}
 
+	if(mesh->HasTangentsAndBitangents())
+	{
+		glEnableVertexAttribArray(3);
+		glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)(8 * sizeof(float)));
+
+		glEnableVertexAttribArray(4);
+		glVertexAttribPointer(4, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (GLvoid*)(11 * sizeof(float)));
+	}
+
 	Material = material;
 
 	delete[] pVertices;
@@ -157,8 +196,12 @@ Engine::Components::Objects::VertexObject* Engine::Components::Objects::VertexOb
 
 	glStencilFunc(GL_ALWAYS, _VAO, 0xFF);
 	glBindVertexArray(_VAO);
-	// draw triangles
-	glDrawArrays(GL_TRIANGLES, 0, Size);
+	if(_Indices == nullptr || _Indices->empty())
+		// draw triangles
+		glDrawArrays(GL_TRIANGLES, 0, Size);
+	else
+		// draw faces
+		glDrawElements(GL_TRIANGLES, _Indices->size(), GL_UNSIGNED_INT, _Indices->data());
 
 	return this;
 }

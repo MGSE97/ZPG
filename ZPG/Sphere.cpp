@@ -6,7 +6,7 @@ Engine::Objects::Sphere::~Sphere()
 	Object::~Object();
 }
 
-Engine::Objects::Sphere::Sphere(Components::Graphics::Material* material, const float* points, int size, int dimensions):
+Engine::Objects::Sphere::Sphere(Application::Materials::StandartMaterial* material, const float* points, int size, int dimensions):
 	Object(material, points, size, dimensions, true)
 {
 	

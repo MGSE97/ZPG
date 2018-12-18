@@ -29,9 +29,12 @@ Engine::BaseEngine::~BaseEngine()
 Engine::BaseEngine* Engine::BaseEngine::Init(std::FILE* errorStream)
 {
 	fprintf(errorStream, "Engine initialization started\n");
+	fprintf(errorStream, "Engine.Init %f s\t> Inicialization started\n", glfwGetTime());
 	_init = true;
 	_errorStream = errorStream;
+	fprintf(errorStream, "Engine.Init %f s\t> Inicialization GLFW started\n", glfwGetTime());
 	InitGLFW();
+	fprintf(errorStream, "Engine.Init %f s\t> Inicialization GLFW complete\n", glfwGetTime());
 	/*if(_init)
 		for(auto window: *Windows)
 			glfwSetKeyCallback(window.second->Get(), WindowKeyCallback);*/
@@ -40,6 +43,7 @@ Engine::BaseEngine* Engine::BaseEngine::Init(std::FILE* errorStream)
 		Keys.Add(i, false);
 	//Disable VSync
 	glfwSwapInterval(0);
+	fprintf(errorStream, "Engine.Init %f s\t> Inicialization complete\n", glfwGetTime());
 	return this;
 }
 
@@ -153,6 +157,7 @@ void Engine::BaseEngine::UpdateEnd(Components::Window* window)
 void Engine::BaseEngine::Start()
 {
 	//system("cls");
+	fprintf(_errorStream, "Engine.Start %f s\t> Started\n", glfwGetTime());
 	UpdateInternal();
 }
 

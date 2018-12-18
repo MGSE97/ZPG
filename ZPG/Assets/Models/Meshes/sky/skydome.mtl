@@ -1,0 +1,39 @@
+# newmtl Sky
+# 	Ka 1 1 1
+# 	Kd 1 1 1
+# 	Ks 0 0 0
+# 	Ke 1 1 1
+# 	illum 0
+# 	map_Kd fulldome3.jpg
+
+newmtl Galaxy
+	Ka 1 1 1
+	Kd 1 1 1
+	Ks 0 0 0
+	Ke 1 1 1
+	illum 0
+	map_Kd galaxy/antennae_coverta_1824.jpg
+
+newmtl Code
+	Ka 1 1 1
+	Kd 1 1 1
+	Ks 0 0 0
+	Ke 1 1 1
+	illum 0
+	map_Kd code/matrix_binary-1920x1080.jpg
+
+# newmtl Warp1
+# 	Ka 1 1 1
+# 	Kd 1 1 1
+# 	Ks 0 0 0
+# 	Ke 1 1 1
+# 	illum 0
+# 	map_Kd warp/w.jpg
+
+# newmtl Warp2
+# 	Ka 1 1 1
+# 	Kd 1 1 1
+# 	Ks 0 0 0
+# 	Ke 1 1 1
+# 	illum 0
+# 	map_Kd warp/w2.png

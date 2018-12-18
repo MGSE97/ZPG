@@ -4,6 +4,7 @@
 #include <cstdio>
 #include <GL/glew.h>
 #include <GLFW/glfw3.h>
+#include <iostream>
 
 Application::Application::Application()
 {
@@ -24,6 +25,8 @@ Application::Application* Application::Application::GetIntance()
 
 Application::Application* Application::Application::Init()
 {
+	std::cout << "Application.Init " << glfwGetTime() << " s\t> Registring Engines" << std::endl;
 	RegisterEngines();
+	std::cout << "Application.Init " << glfwGetTime() << " s\t> Registring Engines Complete" << std::endl;
 	return this;
 }

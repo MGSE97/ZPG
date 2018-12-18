@@ -8,11 +8,11 @@ namespace Engine
 {
 	namespace Objects
 	{
-		class Sphere : public Objects::Object
+		class Sphere : public Components::Objects::Object
 		{
 		public:
 			~Sphere();
-			Sphere(Components::Graphics::Material* material, const float* points, int size, int dimensions);
+			Sphere(Application::Materials::StandartMaterial* material, const float* points, int size, int dimensions);
 			Sphere* Draw();
 		};
 	}

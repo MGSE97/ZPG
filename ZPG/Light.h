@@ -10,7 +10,7 @@ namespace Engine {
 			class Material;
 		}
 
-		class Light : public Engine::Objects::Object
+		class Light : public Objects::Object
 		{
 		public:
 			//glm::vec3 Position;

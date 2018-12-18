@@ -16,6 +16,7 @@
 Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::FILE* errorStream)
 {
 	BaseEngine::Init(errorStream);
+	fprintf(errorStream, "Engine(Light).Init %f s\t> Inicialization started\n", glfwGetTime());
 
 	angle = 0.0f;
 
@@ -23,6 +24,7 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 		->Show()
 		->Info(std::cout);
 	Windows->Add("zpg", window);
+	fprintf(errorStream, "Engine(Light).Init %f s\t> Window created\n", glfwGetTime());
 
 	auto* shader = (new Engine::Components::Graphics::Shader())
 		->Add("vertex", GL_VERTEX_SHADER, Assets::ShadersVertex + "Texture.glsl")
@@ -33,20 +35,25 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 		throw (-1);
 
 	Shaders->Add("texture", shader);
+	fprintf(errorStream, "Engine(Light).Init %f s\t> Shaders compiled\n", glfwGetTime());
 	
-	auto texture = new Engine::Components::Graphics::Texture(Assets::Models + "earth\\Albedo.jpg",  SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_MULTIPLY_ALPHA | SOIL_FLAG_TEXTURE_REPEATS);
+	//auto texture = new Engine::Components::Graphics::Texture(Assets::Models + "earth\\Albedo.jpg",  SOIL_FLAG_MIPMAPS | SOIL_FLAG_INVERT_Y | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_MULTIPLY_ALPHA | SOIL_FLAG_TEXTURE_REPEATS);
 
+	fprintf(errorStream, "Engine(Light).Init %f s\t> Adding Scenes\n", glfwGetTime());
 	Scenes->Add("triangle", new Scenes::TriangleScene());
 	Scenes->Add("sphere", new Scenes::SphereScene());
 	Scenes->Add("plane", new Scenes::PlaneScene());
 	Scenes->Add("mesh", new Scenes::MeshScene());
 
+	fprintf(errorStream, "Engine(Light).Init %f s\t> Adding input handlers\n", glfwGetTime());
 	InputHandlers->Add(new Input::Handlers::LightingChangeInputHandler());
 	InputHandlers->Add(new Input::Handlers::CameraInputHandler());
 
 	//SetActiveScene(Scenes->Get("sphere"));
 	SetActiveScene(Scenes->Get("mesh"));
+	fprintf(errorStream, "Engine(Light).Init %f s\t> Active scene '%s'\n", glfwGetTime(), "mesh");
 
+	fprintf(errorStream, "Engine(Light).Init %f s\t> Adding lights\n", glfwGetTime());
 	auto* lc = new Engine::Components::Graphics::LightConfiguration();
 	lc->AmbientStrength = 0.f;
 	lc->DiffuseStrength = 1.f;
@@ -66,16 +73,18 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 	ActiveScene->Lights->Add("rotatingXZ", new Engine::Components::Light(shader, glm::vec3(0, d, 0), glm::vec4(1, 0, 1, 1), lc2));
 	ActiveScene->Lights->Add("rotatingYZ", new Engine::Components::Light(shader, glm::vec3(d, 0, 0), glm::vec4(0, 1, 1, 1), lc2));
 
+	fprintf(errorStream, "Engine(Light).Init %f s\t> Adding cameras\n", glfwGetTime());
 	ActiveScene->Cameras->Add("main", (new Engine::Components::Camera())
 		//->SetPosition(new glm::vec3(2.5f, 2.5f, 2.f))
 		->SetPosition(new glm::vec3(0.f, 0.f, -4.f))
 		->SetDirection(new glm::vec3(0.f, 0.f, 0.f))
 		->SetUp(new glm::vec3(0.f, 1.f, 0.f)));
-	ActiveScene->Cameras->First()->Projection = new glm::mat4(glm::perspective(glm::radians(45.f), (float)window->Width / (float)window->Height, 0.1f, 100.0f));
+	ActiveScene->Cameras->First()->Projection = new glm::mat4(glm::perspective(glm::radians(45.f), (float)window->Width / (float)window->Height, 0.1f, 1000.0f));
 
+	fprintf(errorStream, "Engine(Light).Init %f s\t> Loading active scene\n", glfwGetTime());
 	ActiveScene->BeginLoad(this);
 
-	auto mat = new Materials::StandartMaterial(shader, glm::vec4(1.0f, 1.0f, 1.0f, 0.5f));
+	/*auto mat = new Materials::StandartMaterial(shader, glm::vec4(1.0f, 1.0f, 1.0f, 0.5f));
 	auto pl = new Engine::Objects::Object(mat, plain, 6, 3, true, true);
 	mat->Light.DiffuseStrength = 0.2f;
 	mat->Light.SpecularSize = 64;
@@ -83,13 +92,15 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 	pl->Transform->Rotation(90, 0, -60, true);
 	pl->Transform->Rotation(0, 90, 0);
 	pl->Transform->Scale(1, 2, 2, true);
-	ActiveScene->Objects->Add("plain", pl);
+	ActiveScene->Objects->Add("plain", pl);*/
 
+	fprintf(errorStream, "Engine(Light).Init %f s\t> Adding lights to scene\n", glfwGetTime());
 	std::string lightPrefix = "light_";
 	if (ActiveScene != nullptr && ActiveScene->Lights != nullptr && !ActiveScene->Lights->empty())
 		for (auto& it : *ActiveScene->Lights)
 			ActiveScene->Objects->Add(lightPrefix + it.first, it.second);
 
+	fprintf(errorStream, "Engine(Light).Init %f s\t> Linking lights to objects\n", glfwGetTime());
 	if (ActiveScene != nullptr && ActiveScene->Objects != nullptr && !ActiveScene->Objects->empty())
 		for (auto& it : *ActiveScene->Objects)
 		{
@@ -98,11 +109,16 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 				->Add(vertex, "projectionMatrix", ActiveScene->ActiveCamera->Projection)
 				->Add(vertex, "cameraPos", ActiveScene->ActiveCamera->Position);*/
 			//it.second->Material->Add("lightCount", new int(ActiveScene->Lights->size()));
-			if (it.first.substr(0, lightPrefix.size()) != lightPrefix)
+			/*if (it.first.substr(0, lightPrefix.size()) != lightPrefix)
 				it.second->Material->Add("material.hasTexture", new bool(true));
 			else
-				it.second->Material->Add("material.hasTexture", new bool(false));
-			it.second->Transform->Rotation(-90, 0, 60);
+				it.second->Material->Add("material.hasTexture", new bool(false));*/
+			/*if (it.first.substr(0, lightPrefix.size()) != lightPrefix)
+			{
+				it.second->Material->HasAlbedoTexture = true;
+				it.second->Material->Textures->Add("albedo", texture);
+			}*/
+			//it.second->Transform->Rotation(-90, 0, 60);
 			if (ActiveScene != nullptr && ActiveScene->Lights != nullptr && !ActiveScene->Lights->empty() && strncmp(it.first.c_str(), lightPrefix.c_str(), lightPrefix.size()) != 0)
 			{
 				int i = 0;
@@ -113,16 +129,13 @@ Application::Engines::LightEngine* Application::Engines::LightEngine::Init(std::
 			}
 		}
 
+	fprintf(errorStream, "Engine(Light).Init %f s\t> Linking lights to meshes\n", glfwGetTime());
 	if (ActiveScene != nullptr && ActiveScene->Meshes != nullptr && !ActiveScene->Meshes->empty())
 		for (auto& it : *ActiveScene->Meshes)
 		{
 			for (auto& object : *it.second->Components)
 			{
-				if (it.first.substr(0, lightPrefix.size()) != lightPrefix)
-					object->Material->Add("material.hasTexture", new bool(true));
-				else
-					object->Material->Add("material.hasTexture", new bool(false));
-				object->Transform->Rotation(-90, 0, 60);
+				//object->Transform->Rotation(-90, 0, 60);
 				if (ActiveScene != nullptr && ActiveScene->Lights != nullptr && !ActiveScene->Lights->empty() && strncmp(it.first.c_str(), lightPrefix.c_str(), lightPrefix.size()) != 0)
 				{
 					int i = 0;

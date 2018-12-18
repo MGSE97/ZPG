@@ -30,10 +30,10 @@ void Application::Scenes::SphereScene::Load(Engine::BaseEngine* engine)
 	Objects->Add("sphere4", new ::Engine::Objects::Object(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 1.0f, 1.0f, 0.5f)), sphere, 2880, 3, true));*/
 
 
-	Objects->Add("sphere1", new ::Engine::Objects::Object(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 1.0f, 0.0f, 0.5f)), gsphere->array, 3, true, true));
-	Objects->Add("sphere2", new ::Engine::Objects::Object(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 0.0f, 1.0f, 0.5f)), gsphere->array, 3, true, true));
-	Objects->Add("sphere3", new ::Engine::Objects::Object(new Materials::StandartMaterial(shader, glm::vec4(0.0f, 1.0f, 1.0f, 0.5f)), gsphere->array, 3, true, true));
-	Objects->Add("sphere4", new ::Engine::Objects::Object(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 1.0f, 1.0f, 0.5f)), gsphere->array, 3, true, true));
+	Objects->Add("sphere1", new ::Engine::Components::Objects::Object(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 1.0f, 0.0f, 0.5f)), gsphere->array, 3, true, true));
+	Objects->Add("sphere2", new ::Engine::Components::Objects::Object(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 0.0f, 1.0f, 0.5f)), gsphere->array, 3, true, true));
+	Objects->Add("sphere3", new ::Engine::Components::Objects::Object(new Materials::StandartMaterial(shader, glm::vec4(0.0f, 1.0f, 1.0f, 0.5f)), gsphere->array, 3, true, true));
+	Objects->Add("sphere4", new ::Engine::Components::Objects::Object(new Materials::StandartMaterial(shader, glm::vec4(1.0f, 1.0f, 1.0f, 0.5f)), gsphere->array, 3, true, true));
 
 	Objects->Get("sphere1")->Transform->Position(-2,  0, 0, true);
 	Objects->Get("sphere2")->Transform->Position( 0,  2, 0, true);

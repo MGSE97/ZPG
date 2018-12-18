@@ -78,15 +78,15 @@ bool Application::Input::Handlers::CameraInputHandler::HandleMouse(Engine::BaseE
 	}
 
 	// Draw look point
-	auto name = "target";
+	/*auto name = "target";
 	auto obj = scene->Objects->Get(name);
 	if (obj == nullptr)
 	{
 
-		auto mat = new Engine::Components::Graphics::Material(engine->Shaders->First());
+		auto mat = new Materials::StandartMaterial(engine->Shaders->First());
 		mat->Add("material.color", new glm::vec4(255.f, 0.f, 0.f, 1.f));
 		mat->Add("material.lightConfiguration.useLighting", new bool(false));
-		obj = new Engine::Objects::Object(mat, sphere, 2880, 3, true);
+		obj = new Engine::Components::Objects::Object(mat, sphere, 2880, 3, true);
 		obj->Transform->Position(*scene->ActiveCamera->Direction, true);
 		obj->Transform->Scale(0.1f, true);
 		//*(object->ModelMatrix) = glm::scale(glm::translate(glm::mat4(1.f), *scene->ActiveCamera->Direction), glm::vec3(0.1f, 0.1f, 0.1f));
@@ -96,7 +96,7 @@ bool Application::Input::Handlers::CameraInputHandler::HandleMouse(Engine::BaseE
 	{
 		obj->Transform->Position(*scene->ActiveCamera->Direction, true);
 		//*(obj->ModelMatrix) = glm::scale(glm::translate(glm::mat4(1.f), *scene->ActiveCamera->Direction), glm::vec3(0.1f, 0.1f, 0.1f));
-	}
+	}*/
 
 	_lastMousePosition.x = x;
 	_lastMousePosition.y = y;

@@ -4,8 +4,9 @@
 #include "Assets/Models/2/spheref.h"
 #include "Assets/Models/2/plain.h"
 #include "GenericSphere.h"
+#include "GenericOctahedon.h"
 
-Engine::Components::Light* Engine::Components::Light::Use(Engine::Components::Graphics::Material* material, unsigned int index)
+Engine::Components::Light* Engine::Components::Light::Use(Graphics::Material* material, unsigned int index)
 {
 	/*material->Values->Add(
 		new Engine::Components::Graphics::MaterialValue<glm::vec3>(
@@ -23,7 +24,8 @@ Engine::Components::Light* Engine::Components::Light::Use(Engine::Components::Gr
 }
 
 Engine::Components::Light::Light(Graphics::Shader* shader, glm::vec3 position, glm::vec4 color, Graphics::LightConfiguration* configuration) :
-	Object(new Graphics::Material(shader),(new Engine::Objects::GenericSphere(1.0f, 9, 9))->array, 3, true, true) //, sphere, 17280)// 
+	Object(new Application::Materials::StandartMaterial(shader), Engine::Objects::GenericOctahedon::GetInstance()->vertices, 3, false, false, true, Engine::Objects::GenericOctahedon::GetInstance()->indices)
+	//Object(new Application::Materials::StandartMaterial(shader),(new Engine::Objects::GenericSphere(1.0f, 9, 9))->array, 3, true, true) //, sphere, 17280)// 
 {
 	//Position = position;
 	if (configuration != nullptr)
